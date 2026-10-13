@@ -1,0 +1,39 @@
+{
+  "english": "We got up early.",
+  "literal": "We us are raised early.",
+  "pronunciation": "noo noo sum luh-vay toh",
+  "cefr": "A2",
+  "cefrNote": "Reflexive verb in the past tense.",
+  "chunks": [
+    { "french": "Nous", "english": "we", "pos": "pronoun", "lemma": "nous" },
+    { "french": "nous", "english": "ourselves", "pos": "reflexive-pronoun", "lemma": "se" },
+    {
+      "french": "sommes levés",
+      "english": "got up",
+      "pos": "verb",
+      "lemma": "se lever",
+      "verb": {
+        "infinitive": "se lever",
+        "tense": "passe-compose",
+        "person": "1p",
+        "regularity": "regular",
+        "auxiliary": "être",
+        "reflexive": true
+      }
+    },
+    { "french": "tôt", "english": "early", "pos": "adverb", "lemma": "tôt" }
+  ],
+  "grammar": [
+    {
+      "topic": "reflexive",
+      "title": "Reflexive verbs use être in the past",
+      "explanation": "Reflexive verbs always build the passé composé with être, not avoir.",
+      "example": "je me suis levé(e)"
+    },
+    {
+      "topic": "agreement",
+      "title": "levés ends in -s",
+      "explanation": "With être the past participle agrees with the subject. Nous is plural, so levé takes an -s."
+    }
+  ]
+}

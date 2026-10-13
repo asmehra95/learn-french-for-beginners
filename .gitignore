@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+
+# TTS working directories
+tts-tools/work/
+tts-tools/native-audio/cache/
+
+# Voice reference audio (not redistributed)
+tts-tools/voices/*/reference.wav
+
+# Explainer runtime state
+explainer/.last-port
+
+# Agent scratch space
+.agents-scratch/
+
+# Node
+node_modules/
+
+# Archives
+*.zip

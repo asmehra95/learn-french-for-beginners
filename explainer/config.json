@@ -1,0 +1,32 @@
+{
+  "host": "127.0.0.1",
+  "port": 8765,
+  "provider": "ollama",
+  "allowedOrigins": [],
+  "ollama": {
+    "url": "http://127.0.0.1:11434",
+    "model": "mistral:latest",
+    "temperature": 0.1,
+    "numCtx": 8192,
+    "numPredict": 1800,
+    "keepAlive": "10m"
+  },
+  "limits": {
+    "maxChars": 2000,
+    "maxSentences": 8,
+    "maxBodyBytes": 16384,
+    "modelTimeoutMs": 120000,
+    "totalTimeoutMs": 300000,
+    "repairAttempts": 1
+  },
+  "rateLimit": {
+    "explainPerMinute": 10,
+    "explainBurst": 3,
+    "healthPerMinute": 60
+  },
+  "bedrock": {
+    "enabled": false
+  },
+  "logLevel": "info",
+  "serveSite": true
+}

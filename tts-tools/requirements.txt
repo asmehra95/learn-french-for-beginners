@@ -1,0 +1,14 @@
+# Python 3.11 (Apple Silicon). Direct dependencies of generate.py, pinned to the versions used for
+# the shipped clips. requirements-lock.txt is the full `pip freeze` of that venv (it also lists the
+# engines tried in the Phase 1 comparison, which generate.py does not need).
+mlx==0.32.3
+mlx-metal==0.32.3
+mlx-audio==0.5.8
+mlx-whisper==0.4.3
+transformers==5.19.0
+huggingface_hub==2.2.0
+jiwer==4.0.0
+numpy==2.4.6
+scipy==1.17.1
+soundfile==0.14.0
+torch==2.14.1

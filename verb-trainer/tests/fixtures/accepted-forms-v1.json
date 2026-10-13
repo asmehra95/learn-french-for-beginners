@@ -1,0 +1,1127 @@
+[
+  {
+    "key": "etre|1s",
+    "forms": [
+      "suis",
+      "je suis"
+    ]
+  },
+  {
+    "key": "etre|2s",
+    "forms": [
+      "es",
+      "tu es"
+    ]
+  },
+  {
+    "key": "etre|3s",
+    "forms": [
+      "est",
+      "il est",
+      "elle est",
+      "on est"
+    ]
+  },
+  {
+    "key": "etre|1p",
+    "forms": [
+      "sommes",
+      "nous sommes"
+    ]
+  },
+  {
+    "key": "etre|2p",
+    "forms": [
+      "êtes",
+      "vous êtes"
+    ]
+  },
+  {
+    "key": "etre|3p",
+    "forms": [
+      "sont",
+      "ils sont",
+      "elles sont"
+    ]
+  },
+  {
+    "key": "avoir|1s",
+    "forms": [
+      "ai",
+      "j'ai"
+    ]
+  },
+  {
+    "key": "avoir|2s",
+    "forms": [
+      "as",
+      "tu as"
+    ]
+  },
+  {
+    "key": "avoir|3s",
+    "forms": [
+      "a",
+      "il a",
+      "elle a",
+      "on a"
+    ]
+  },
+  {
+    "key": "avoir|1p",
+    "forms": [
+      "avons",
+      "nous avons"
+    ]
+  },
+  {
+    "key": "avoir|2p",
+    "forms": [
+      "avez",
+      "vous avez"
+    ]
+  },
+  {
+    "key": "avoir|3p",
+    "forms": [
+      "ont",
+      "ils ont",
+      "elles ont"
+    ]
+  },
+  {
+    "key": "aller|1s",
+    "forms": [
+      "vais",
+      "je vais"
+    ]
+  },
+  {
+    "key": "aller|2s",
+    "forms": [
+      "vas",
+      "tu vas"
+    ]
+  },
+  {
+    "key": "aller|3s",
+    "forms": [
+      "va",
+      "il va",
+      "elle va",
+      "on va"
+    ]
+  },
+  {
+    "key": "aller|1p",
+    "forms": [
+      "allons",
+      "nous allons"
+    ]
+  },
+  {
+    "key": "aller|2p",
+    "forms": [
+      "allez",
+      "vous allez"
+    ]
+  },
+  {
+    "key": "aller|3p",
+    "forms": [
+      "vont",
+      "ils vont",
+      "elles vont"
+    ]
+  },
+  {
+    "key": "faire|1s",
+    "forms": [
+      "fais",
+      "je fais"
+    ]
+  },
+  {
+    "key": "faire|2s",
+    "forms": [
+      "fais",
+      "tu fais"
+    ]
+  },
+  {
+    "key": "faire|3s",
+    "forms": [
+      "fait",
+      "il fait",
+      "elle fait",
+      "on fait"
+    ]
+  },
+  {
+    "key": "faire|1p",
+    "forms": [
+      "faisons",
+      "nous faisons"
+    ]
+  },
+  {
+    "key": "faire|2p",
+    "forms": [
+      "faites",
+      "vous faites"
+    ]
+  },
+  {
+    "key": "faire|3p",
+    "forms": [
+      "font",
+      "ils font",
+      "elles font"
+    ]
+  },
+  {
+    "key": "dire|1s",
+    "forms": [
+      "dis",
+      "je dis"
+    ]
+  },
+  {
+    "key": "dire|2s",
+    "forms": [
+      "dis",
+      "tu dis"
+    ]
+  },
+  {
+    "key": "dire|3s",
+    "forms": [
+      "dit",
+      "il dit",
+      "elle dit",
+      "on dit"
+    ]
+  },
+  {
+    "key": "dire|1p",
+    "forms": [
+      "disons",
+      "nous disons"
+    ]
+  },
+  {
+    "key": "dire|2p",
+    "forms": [
+      "dites",
+      "vous dites"
+    ]
+  },
+  {
+    "key": "dire|3p",
+    "forms": [
+      "disent",
+      "ils disent",
+      "elles disent"
+    ]
+  },
+  {
+    "key": "pouvoir|1s",
+    "forms": [
+      "peux",
+      "je peux"
+    ]
+  },
+  {
+    "key": "pouvoir|2s",
+    "forms": [
+      "peux",
+      "tu peux"
+    ]
+  },
+  {
+    "key": "pouvoir|3s",
+    "forms": [
+      "peut",
+      "il peut",
+      "elle peut",
+      "on peut"
+    ]
+  },
+  {
+    "key": "pouvoir|1p",
+    "forms": [
+      "pouvons",
+      "nous pouvons"
+    ]
+  },
+  {
+    "key": "pouvoir|2p",
+    "forms": [
+      "pouvez",
+      "vous pouvez"
+    ]
+  },
+  {
+    "key": "pouvoir|3p",
+    "forms": [
+      "peuvent",
+      "ils peuvent",
+      "elles peuvent"
+    ]
+  },
+  {
+    "key": "vouloir|1s",
+    "forms": [
+      "veux",
+      "je veux"
+    ]
+  },
+  {
+    "key": "vouloir|2s",
+    "forms": [
+      "veux",
+      "tu veux"
+    ]
+  },
+  {
+    "key": "vouloir|3s",
+    "forms": [
+      "veut",
+      "il veut",
+      "elle veut",
+      "on veut"
+    ]
+  },
+  {
+    "key": "vouloir|1p",
+    "forms": [
+      "voulons",
+      "nous voulons"
+    ]
+  },
+  {
+    "key": "vouloir|2p",
+    "forms": [
+      "voulez",
+      "vous voulez"
+    ]
+  },
+  {
+    "key": "vouloir|3p",
+    "forms": [
+      "veulent",
+      "ils veulent",
+      "elles veulent"
+    ]
+  },
+  {
+    "key": "savoir|1s",
+    "forms": [
+      "sais",
+      "je sais"
+    ]
+  },
+  {
+    "key": "savoir|2s",
+    "forms": [
+      "sais",
+      "tu sais"
+    ]
+  },
+  {
+    "key": "savoir|3s",
+    "forms": [
+      "sait",
+      "il sait",
+      "elle sait",
+      "on sait"
+    ]
+  },
+  {
+    "key": "savoir|1p",
+    "forms": [
+      "savons",
+      "nous savons"
+    ]
+  },
+  {
+    "key": "savoir|2p",
+    "forms": [
+      "savez",
+      "vous savez"
+    ]
+  },
+  {
+    "key": "savoir|3p",
+    "forms": [
+      "savent",
+      "ils savent",
+      "elles savent"
+    ]
+  },
+  {
+    "key": "voir|1s",
+    "forms": [
+      "vois",
+      "je vois"
+    ]
+  },
+  {
+    "key": "voir|2s",
+    "forms": [
+      "vois",
+      "tu vois"
+    ]
+  },
+  {
+    "key": "voir|3s",
+    "forms": [
+      "voit",
+      "il voit",
+      "elle voit",
+      "on voit"
+    ]
+  },
+  {
+    "key": "voir|1p",
+    "forms": [
+      "voyons",
+      "nous voyons"
+    ]
+  },
+  {
+    "key": "voir|2p",
+    "forms": [
+      "voyez",
+      "vous voyez"
+    ]
+  },
+  {
+    "key": "voir|3p",
+    "forms": [
+      "voient",
+      "ils voient",
+      "elles voient"
+    ]
+  },
+  {
+    "key": "venir|1s",
+    "forms": [
+      "viens",
+      "je viens"
+    ]
+  },
+  {
+    "key": "venir|2s",
+    "forms": [
+      "viens",
+      "tu viens"
+    ]
+  },
+  {
+    "key": "venir|3s",
+    "forms": [
+      "vient",
+      "il vient",
+      "elle vient",
+      "on vient"
+    ]
+  },
+  {
+    "key": "venir|1p",
+    "forms": [
+      "venons",
+      "nous venons"
+    ]
+  },
+  {
+    "key": "venir|2p",
+    "forms": [
+      "venez",
+      "vous venez"
+    ]
+  },
+  {
+    "key": "venir|3p",
+    "forms": [
+      "viennent",
+      "ils viennent",
+      "elles viennent"
+    ]
+  },
+  {
+    "key": "devoir|1s",
+    "forms": [
+      "dois",
+      "je dois"
+    ]
+  },
+  {
+    "key": "devoir|2s",
+    "forms": [
+      "dois",
+      "tu dois"
+    ]
+  },
+  {
+    "key": "devoir|3s",
+    "forms": [
+      "doit",
+      "il doit",
+      "elle doit",
+      "on doit"
+    ]
+  },
+  {
+    "key": "devoir|1p",
+    "forms": [
+      "devons",
+      "nous devons"
+    ]
+  },
+  {
+    "key": "devoir|2p",
+    "forms": [
+      "devez",
+      "vous devez"
+    ]
+  },
+  {
+    "key": "devoir|3p",
+    "forms": [
+      "doivent",
+      "ils doivent",
+      "elles doivent"
+    ]
+  },
+  {
+    "key": "prendre|1s",
+    "forms": [
+      "prends",
+      "je prends"
+    ]
+  },
+  {
+    "key": "prendre|2s",
+    "forms": [
+      "prends",
+      "tu prends"
+    ]
+  },
+  {
+    "key": "prendre|3s",
+    "forms": [
+      "prend",
+      "il prend",
+      "elle prend",
+      "on prend"
+    ]
+  },
+  {
+    "key": "prendre|1p",
+    "forms": [
+      "prenons",
+      "nous prenons"
+    ]
+  },
+  {
+    "key": "prendre|2p",
+    "forms": [
+      "prenez",
+      "vous prenez"
+    ]
+  },
+  {
+    "key": "prendre|3p",
+    "forms": [
+      "prennent",
+      "ils prennent",
+      "elles prennent"
+    ]
+  },
+  {
+    "key": "mettre|1s",
+    "forms": [
+      "mets",
+      "je mets"
+    ]
+  },
+  {
+    "key": "mettre|2s",
+    "forms": [
+      "mets",
+      "tu mets"
+    ]
+  },
+  {
+    "key": "mettre|3s",
+    "forms": [
+      "met",
+      "il met",
+      "elle met",
+      "on met"
+    ]
+  },
+  {
+    "key": "mettre|1p",
+    "forms": [
+      "mettons",
+      "nous mettons"
+    ]
+  },
+  {
+    "key": "mettre|2p",
+    "forms": [
+      "mettez",
+      "vous mettez"
+    ]
+  },
+  {
+    "key": "mettre|3p",
+    "forms": [
+      "mettent",
+      "ils mettent",
+      "elles mettent"
+    ]
+  },
+  {
+    "key": "donner|1s",
+    "forms": [
+      "donne",
+      "je donne"
+    ]
+  },
+  {
+    "key": "donner|2s",
+    "forms": [
+      "donnes",
+      "tu donnes"
+    ]
+  },
+  {
+    "key": "donner|3s",
+    "forms": [
+      "donne",
+      "il donne",
+      "elle donne",
+      "on donne"
+    ]
+  },
+  {
+    "key": "donner|1p",
+    "forms": [
+      "donnons",
+      "nous donnons"
+    ]
+  },
+  {
+    "key": "donner|2p",
+    "forms": [
+      "donnez",
+      "vous donnez"
+    ]
+  },
+  {
+    "key": "donner|3p",
+    "forms": [
+      "donnent",
+      "ils donnent",
+      "elles donnent"
+    ]
+  },
+  {
+    "key": "parler|1s",
+    "forms": [
+      "parle",
+      "je parle"
+    ]
+  },
+  {
+    "key": "parler|2s",
+    "forms": [
+      "parles",
+      "tu parles"
+    ]
+  },
+  {
+    "key": "parler|3s",
+    "forms": [
+      "parle",
+      "il parle",
+      "elle parle",
+      "on parle"
+    ]
+  },
+  {
+    "key": "parler|1p",
+    "forms": [
+      "parlons",
+      "nous parlons"
+    ]
+  },
+  {
+    "key": "parler|2p",
+    "forms": [
+      "parlez",
+      "vous parlez"
+    ]
+  },
+  {
+    "key": "parler|3p",
+    "forms": [
+      "parlent",
+      "ils parlent",
+      "elles parlent"
+    ]
+  },
+  {
+    "key": "aimer|1s",
+    "forms": [
+      "aime",
+      "j'aime"
+    ]
+  },
+  {
+    "key": "aimer|2s",
+    "forms": [
+      "aimes",
+      "tu aimes"
+    ]
+  },
+  {
+    "key": "aimer|3s",
+    "forms": [
+      "aime",
+      "il aime",
+      "elle aime",
+      "on aime"
+    ]
+  },
+  {
+    "key": "aimer|1p",
+    "forms": [
+      "aimons",
+      "nous aimons"
+    ]
+  },
+  {
+    "key": "aimer|2p",
+    "forms": [
+      "aimez",
+      "vous aimez"
+    ]
+  },
+  {
+    "key": "aimer|3p",
+    "forms": [
+      "aiment",
+      "ils aiment",
+      "elles aiment"
+    ]
+  },
+  {
+    "key": "trouver|1s",
+    "forms": [
+      "trouve",
+      "je trouve"
+    ]
+  },
+  {
+    "key": "trouver|2s",
+    "forms": [
+      "trouves",
+      "tu trouves"
+    ]
+  },
+  {
+    "key": "trouver|3s",
+    "forms": [
+      "trouve",
+      "il trouve",
+      "elle trouve",
+      "on trouve"
+    ]
+  },
+  {
+    "key": "trouver|1p",
+    "forms": [
+      "trouvons",
+      "nous trouvons"
+    ]
+  },
+  {
+    "key": "trouver|2p",
+    "forms": [
+      "trouvez",
+      "vous trouvez"
+    ]
+  },
+  {
+    "key": "trouver|3p",
+    "forms": [
+      "trouvent",
+      "ils trouvent",
+      "elles trouvent"
+    ]
+  },
+  {
+    "key": "passer|1s",
+    "forms": [
+      "passe",
+      "je passe"
+    ]
+  },
+  {
+    "key": "passer|2s",
+    "forms": [
+      "passes",
+      "tu passes"
+    ]
+  },
+  {
+    "key": "passer|3s",
+    "forms": [
+      "passe",
+      "il passe",
+      "elle passe",
+      "on passe"
+    ]
+  },
+  {
+    "key": "passer|1p",
+    "forms": [
+      "passons",
+      "nous passons"
+    ]
+  },
+  {
+    "key": "passer|2p",
+    "forms": [
+      "passez",
+      "vous passez"
+    ]
+  },
+  {
+    "key": "passer|3p",
+    "forms": [
+      "passent",
+      "ils passent",
+      "elles passent"
+    ]
+  },
+  {
+    "key": "penser|1s",
+    "forms": [
+      "pense",
+      "je pense"
+    ]
+  },
+  {
+    "key": "penser|2s",
+    "forms": [
+      "penses",
+      "tu penses"
+    ]
+  },
+  {
+    "key": "penser|3s",
+    "forms": [
+      "pense",
+      "il pense",
+      "elle pense",
+      "on pense"
+    ]
+  },
+  {
+    "key": "penser|1p",
+    "forms": [
+      "pensons",
+      "nous pensons"
+    ]
+  },
+  {
+    "key": "penser|2p",
+    "forms": [
+      "pensez",
+      "vous pensez"
+    ]
+  },
+  {
+    "key": "penser|3p",
+    "forms": [
+      "pensent",
+      "ils pensent",
+      "elles pensent"
+    ]
+  },
+  {
+    "key": "croire|1s",
+    "forms": [
+      "crois",
+      "je crois"
+    ]
+  },
+  {
+    "key": "croire|2s",
+    "forms": [
+      "crois",
+      "tu crois"
+    ]
+  },
+  {
+    "key": "croire|3s",
+    "forms": [
+      "croit",
+      "il croit",
+      "elle croit",
+      "on croit"
+    ]
+  },
+  {
+    "key": "croire|1p",
+    "forms": [
+      "croyons",
+      "nous croyons"
+    ]
+  },
+  {
+    "key": "croire|2p",
+    "forms": [
+      "croyez",
+      "vous croyez"
+    ]
+  },
+  {
+    "key": "croire|3p",
+    "forms": [
+      "croient",
+      "ils croient",
+      "elles croient"
+    ]
+  },
+  {
+    "key": "connaitre|1s",
+    "forms": [
+      "connais",
+      "je connais"
+    ]
+  },
+  {
+    "key": "connaitre|2s",
+    "forms": [
+      "connais",
+      "tu connais"
+    ]
+  },
+  {
+    "key": "connaitre|3s",
+    "forms": [
+      "connaît",
+      "il connaît",
+      "elle connaît",
+      "on connaît"
+    ]
+  },
+  {
+    "key": "connaitre|1p",
+    "forms": [
+      "connaissons",
+      "nous connaissons"
+    ]
+  },
+  {
+    "key": "connaitre|2p",
+    "forms": [
+      "connaissez",
+      "vous connaissez"
+    ]
+  },
+  {
+    "key": "connaitre|3p",
+    "forms": [
+      "connaissent",
+      "ils connaissent",
+      "elles connaissent"
+    ]
+  },
+  {
+    "key": "partir|1s",
+    "forms": [
+      "pars",
+      "je pars"
+    ]
+  },
+  {
+    "key": "partir|2s",
+    "forms": [
+      "pars",
+      "tu pars"
+    ]
+  },
+  {
+    "key": "partir|3s",
+    "forms": [
+      "part",
+      "il part",
+      "elle part",
+      "on part"
+    ]
+  },
+  {
+    "key": "partir|1p",
+    "forms": [
+      "partons",
+      "nous partons"
+    ]
+  },
+  {
+    "key": "partir|2p",
+    "forms": [
+      "partez",
+      "vous partez"
+    ]
+  },
+  {
+    "key": "partir|3p",
+    "forms": [
+      "partent",
+      "ils partent",
+      "elles partent"
+    ]
+  },
+  {
+    "key": "comprendre|1s",
+    "forms": [
+      "comprends",
+      "je comprends"
+    ]
+  },
+  {
+    "key": "comprendre|2s",
+    "forms": [
+      "comprends",
+      "tu comprends"
+    ]
+  },
+  {
+    "key": "comprendre|3s",
+    "forms": [
+      "comprend",
+      "il comprend",
+      "elle comprend",
+      "on comprend"
+    ]
+  },
+  {
+    "key": "comprendre|1p",
+    "forms": [
+      "comprenons",
+      "nous comprenons"
+    ]
+  },
+  {
+    "key": "comprendre|2p",
+    "forms": [
+      "comprenez",
+      "vous comprenez"
+    ]
+  },
+  {
+    "key": "comprendre|3p",
+    "forms": [
+      "comprennent",
+      "ils comprennent",
+      "elles comprennent"
+    ]
+  },
+  {
+    "key": "demander|1s",
+    "forms": [
+      "demande",
+      "je demande"
+    ]
+  },
+  {
+    "key": "demander|2s",
+    "forms": [
+      "demandes",
+      "tu demandes"
+    ]
+  },
+  {
+    "key": "demander|3s",
+    "forms": [
+      "demande",
+      "il demande",
+      "elle demande",
+      "on demande"
+    ]
+  },
+  {
+    "key": "demander|1p",
+    "forms": [
+      "demandons",
+      "nous demandons"
+    ]
+  },
+  {
+    "key": "demander|2p",
+    "forms": [
+      "demandez",
+      "vous demandez"
+    ]
+  },
+  {
+    "key": "demander|3p",
+    "forms": [
+      "demandent",
+      "ils demandent",
+      "elles demandent"
+    ]
+  },
+  {
+    "key": "manger|1s",
+    "forms": [
+      "mange",
+      "je mange"
+    ]
+  },
+  {
+    "key": "manger|2s",
+    "forms": [
+      "manges",
+      "tu manges"
+    ]
+  },
+  {
+    "key": "manger|3s",
+    "forms": [
+      "mange",
+      "il mange",
+      "elle mange",
+      "on mange"
+    ]
+  },
+  {
+    "key": "manger|1p",
+    "forms": [
+      "mangeons",
+      "nous mangeons"
+    ]
+  },
+  {
+    "key": "manger|2p",
+    "forms": [
+      "mangez",
+      "vous mangez"
+    ]
+  },
+  {
+    "key": "manger|3p",
+    "forms": [
+      "mangent",
+      "ils mangent",
+      "elles mangent"
+    ]
+  }
+]

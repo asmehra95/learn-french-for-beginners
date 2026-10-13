@@ -1,0 +1,14 @@
+{
+  "name": "french-explainer",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:live": "node tests/live/run-live.js",
+    "test:ui": "node tests/ui/headless-check.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

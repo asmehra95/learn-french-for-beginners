@@ -1,0 +1,1732 @@
+{
+  "etre|inf": {
+    "file": "audio/etre-infinitive.mp3",
+    "said": "être",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-%C3%AAtre.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-être.wav"
+  },
+  "etre|1s": {
+    "file": "audio/etre-present-1s.mp3",
+    "said": "je suis",
+    "exact": true,
+    "speaker": "Jérémy-Günther-Heinz Jähnick",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-J%C3%A9r%C3%A9my-G%C3%BCnther-Heinz_J%C3%A4hnick-je_suis.wav",
+    "title": "LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-je suis.wav"
+  },
+  "etre|3s": {
+    "file": "audio/etre-present-3s.mp3",
+    "said": "il est",
+    "exact": true,
+    "speaker": "Jérémy-Günther-Heinz Jähnick",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-J%C3%A9r%C3%A9my-G%C3%BCnther-Heinz_J%C3%A4hnick-il_est.wav",
+    "title": "LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-il est.wav"
+  },
+  "etre|1p": {
+    "file": "audio/etre-present-1p.mp3",
+    "said": "sommes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-sommes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-sommes.wav"
+  },
+  "etre|2p": {
+    "file": "audio/etre-present-2p.mp3",
+    "said": "êtes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-%C3%AAtes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-êtes.wav"
+  },
+  "etre|3p": {
+    "file": "audio/etre-present-3p.mp3",
+    "said": "sont",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-sont.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-sont.wav"
+  },
+  "avoir|inf": {
+    "file": "audio/avoir-infinitive.mp3",
+    "said": "avoir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-avoir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-avoir.wav"
+  },
+  "avoir|1s": {
+    "file": "audio/avoir-present-1s.mp3",
+    "said": "j’ai",
+    "exact": true,
+    "speaker": "Sartus85",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-j%E2%80%99ai.wav",
+    "title": "LL-Q150 (fra)-Sartus85-j’ai.wav"
+  },
+  "avoir|3s": {
+    "file": "audio/avoir-present-3s.mp3",
+    "said": "a",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-a.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-a.wav"
+  },
+  "avoir|1p": {
+    "file": "audio/avoir-present-1p.mp3",
+    "said": "avons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-avons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-avons.wav"
+  },
+  "avoir|2p": {
+    "file": "audio/avoir-present-2p.mp3",
+    "said": "avez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-avez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-avez.wav"
+  },
+  "avoir|3p": {
+    "file": "audio/avoir-present-3p.mp3",
+    "said": "ont",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-ont.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-ont.wav"
+  },
+  "aller|inf": {
+    "file": "audio/aller-infinitive.mp3",
+    "said": "aller",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aller.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aller.wav"
+  },
+  "aller|1s": {
+    "file": "audio/aller-present-1s.mp3",
+    "said": "vais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vais.wav"
+  },
+  "aller|2s": {
+    "file": "audio/aller-present-2s.mp3",
+    "said": "vas",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vas.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vas.wav"
+  },
+  "aller|3s": {
+    "file": "audio/aller-present-3s.mp3",
+    "said": "va",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-va.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-va.wav"
+  },
+  "aller|1p": {
+    "file": "audio/aller-present-1p.mp3",
+    "said": "allons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-allons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-allons.wav"
+  },
+  "aller|2p": {
+    "file": "audio/aller-present-2p.mp3",
+    "said": "allez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-allez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-allez.wav"
+  },
+  "aller|3p": {
+    "file": "audio/aller-present-3p.mp3",
+    "said": "vont",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vont.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vont.wav"
+  },
+  "faire|inf": {
+    "file": "audio/faire-infinitive.mp3",
+    "said": "faire",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-faire.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-faire.wav"
+  },
+  "faire|1s": {
+    "file": "audio/faire-present-1s.mp3",
+    "said": "fais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-fais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-fais.wav"
+  },
+  "faire|2s": {
+    "file": "audio/faire-present-2s.mp3",
+    "said": "fais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-fais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-fais.wav"
+  },
+  "faire|1p": {
+    "file": "audio/faire-present-1p.mp3",
+    "said": "faisons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-faisons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-faisons.wav"
+  },
+  "faire|2p": {
+    "file": "audio/faire-present-2p.mp3",
+    "said": "faites",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-faites.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-faites.wav"
+  },
+  "faire|3p": {
+    "file": "audio/faire-present-3p.mp3",
+    "said": "font",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-font.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-font.wav"
+  },
+  "dire|inf": {
+    "file": "audio/dire-infinitive.mp3",
+    "said": "dire",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dire.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dire.wav"
+  },
+  "dire|1s": {
+    "file": "audio/dire-present-1s.mp3",
+    "said": "dis",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dis.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dis.wav"
+  },
+  "dire|2s": {
+    "file": "audio/dire-present-2s.mp3",
+    "said": "dis",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dis.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dis.wav"
+  },
+  "dire|3s": {
+    "file": "audio/dire-present-3s.mp3",
+    "said": "dit",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dit.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dit.wav"
+  },
+  "dire|1p": {
+    "file": "audio/dire-present-1p.mp3",
+    "said": "disons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-disons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-disons.wav"
+  },
+  "dire|2p": {
+    "file": "audio/dire-present-2p.mp3",
+    "said": "dites",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dites.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dites.wav"
+  },
+  "dire|3p": {
+    "file": "audio/dire-present-3p.mp3",
+    "said": "disent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-disent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-disent.wav"
+  },
+  "dire|past": {
+    "file": "audio/dire-past.mp3",
+    "said": "j’ai dit",
+    "exact": true,
+    "speaker": "Jérémy-Günther-Heinz Jähnick",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-J%C3%A9r%C3%A9my-G%C3%BCnther-Heinz_J%C3%A4hnick-j%E2%80%99ai_dit.wav",
+    "title": "LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-j’ai dit.wav"
+  },
+  "pouvoir|inf": {
+    "file": "audio/pouvoir-infinitive.mp3",
+    "said": "pouvoir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pouvoir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pouvoir.wav"
+  },
+  "pouvoir|1s": {
+    "file": "audio/pouvoir-present-1s.mp3",
+    "said": "peux",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-peux.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-peux.wav"
+  },
+  "pouvoir|2s": {
+    "file": "audio/pouvoir-present-2s.mp3",
+    "said": "peux",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-peux.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-peux.wav"
+  },
+  "pouvoir|3s": {
+    "file": "audio/pouvoir-present-3s.mp3",
+    "said": "peut",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-peut.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-peut.wav"
+  },
+  "pouvoir|1p": {
+    "file": "audio/pouvoir-present-1p.mp3",
+    "said": "pouvons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pouvons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pouvons.wav"
+  },
+  "pouvoir|2p": {
+    "file": "audio/pouvoir-present-2p.mp3",
+    "said": "pouvez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pouvez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pouvez.wav"
+  },
+  "pouvoir|3p": {
+    "file": "audio/pouvoir-present-3p.mp3",
+    "said": "peuvent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-peuvent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-peuvent.wav"
+  },
+  "vouloir|inf": {
+    "file": "audio/vouloir-infinitive.mp3",
+    "said": "vouloir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vouloir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vouloir.wav"
+  },
+  "vouloir|1s": {
+    "file": "audio/vouloir-present-1s.mp3",
+    "said": "veux",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-veux.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-veux.wav"
+  },
+  "vouloir|2s": {
+    "file": "audio/vouloir-present-2s.mp3",
+    "said": "veux",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-veux.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-veux.wav"
+  },
+  "vouloir|3s": {
+    "file": "audio/vouloir-present-3s.mp3",
+    "said": "veut",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-veut.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-veut.wav"
+  },
+  "vouloir|1p": {
+    "file": "audio/vouloir-present-1p.mp3",
+    "said": "voulons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voulons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voulons.wav"
+  },
+  "vouloir|2p": {
+    "file": "audio/vouloir-present-2p.mp3",
+    "said": "voulez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voulez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voulez.wav"
+  },
+  "vouloir|3p": {
+    "file": "audio/vouloir-present-3p.mp3",
+    "said": "veulent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-veulent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-veulent.wav"
+  },
+  "savoir|inf": {
+    "file": "audio/savoir-infinitive.mp3",
+    "said": "savoir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-savoir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-savoir.wav"
+  },
+  "savoir|1s": {
+    "file": "audio/savoir-present-1s.mp3",
+    "said": "sais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-sais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-sais.wav"
+  },
+  "savoir|2s": {
+    "file": "audio/savoir-present-2s.mp3",
+    "said": "sais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-sais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-sais.wav"
+  },
+  "savoir|3s": {
+    "file": "audio/savoir-present-3s.mp3",
+    "said": "sait",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-sait.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-sait.wav"
+  },
+  "savoir|1p": {
+    "file": "audio/savoir-present-1p.mp3",
+    "said": "savons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-savons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-savons.wav"
+  },
+  "savoir|2p": {
+    "file": "audio/savoir-present-2p.mp3",
+    "said": "savez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-savez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-savez.wav"
+  },
+  "savoir|3p": {
+    "file": "audio/savoir-present-3p.mp3",
+    "said": "savent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-savent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-savent.wav"
+  },
+  "voir|inf": {
+    "file": "audio/voir-infinitive.mp3",
+    "said": "voir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voir.wav"
+  },
+  "voir|1s": {
+    "file": "audio/voir-present-1s.mp3",
+    "said": "vois",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vois.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vois.wav"
+  },
+  "voir|2s": {
+    "file": "audio/voir-present-2s.mp3",
+    "said": "tu vois",
+    "exact": true,
+    "speaker": "LoquaxFR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-LoquaxFR-tu_vois.wav",
+    "title": "LL-Q150 (fra)-LoquaxFR-tu vois.wav"
+  },
+  "voir|3s": {
+    "file": "audio/voir-present-3s.mp3",
+    "said": "voit",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voit.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voit.wav"
+  },
+  "voir|1p": {
+    "file": "audio/voir-present-1p.mp3",
+    "said": "voyons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voyons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voyons.wav"
+  },
+  "voir|2p": {
+    "file": "audio/voir-present-2p.mp3",
+    "said": "voyez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voyez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voyez.wav"
+  },
+  "voir|3p": {
+    "file": "audio/voir-present-3p.mp3",
+    "said": "voient",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-voient.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-voient.wav"
+  },
+  "venir|inf": {
+    "file": "audio/venir-infinitive.mp3",
+    "said": "venir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-venir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-venir.wav"
+  },
+  "venir|1s": {
+    "file": "audio/venir-present-1s.mp3",
+    "said": "viens",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-viens.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-viens.wav"
+  },
+  "venir|2s": {
+    "file": "audio/venir-present-2s.mp3",
+    "said": "viens",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-viens.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-viens.wav"
+  },
+  "venir|3s": {
+    "file": "audio/venir-present-3s.mp3",
+    "said": "vient",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-vient.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-vient.wav"
+  },
+  "venir|1p": {
+    "file": "audio/venir-present-1p.mp3",
+    "said": "venons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-venons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-venons.wav"
+  },
+  "venir|2p": {
+    "file": "audio/venir-present-2p.mp3",
+    "said": "venez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-venez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-venez.wav"
+  },
+  "venir|3p": {
+    "file": "audio/venir-present-3p.mp3",
+    "said": "viennent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-viennent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-viennent.wav"
+  },
+  "devoir|inf": {
+    "file": "audio/devoir-infinitive.mp3",
+    "said": "devoir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-devoir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-devoir.wav"
+  },
+  "devoir|1s": {
+    "file": "audio/devoir-present-1s.mp3",
+    "said": "dois",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dois.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dois.wav"
+  },
+  "devoir|2s": {
+    "file": "audio/devoir-present-2s.mp3",
+    "said": "dois",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-dois.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-dois.wav"
+  },
+  "devoir|3s": {
+    "file": "audio/devoir-present-3s.mp3",
+    "said": "doit",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-doit.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-doit.wav"
+  },
+  "devoir|1p": {
+    "file": "audio/devoir-present-1p.mp3",
+    "said": "devons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-devons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-devons.wav"
+  },
+  "devoir|2p": {
+    "file": "audio/devoir-present-2p.mp3",
+    "said": "devez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-devez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-devez.wav"
+  },
+  "devoir|3p": {
+    "file": "audio/devoir-present-3p.mp3",
+    "said": "doivent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-doivent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-doivent.wav"
+  },
+  "prendre|inf": {
+    "file": "audio/prendre-infinitive.mp3",
+    "said": "prendre",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prendre.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prendre.wav"
+  },
+  "prendre|1s": {
+    "file": "audio/prendre-present-1s.mp3",
+    "said": "prends",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prends.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prends.wav"
+  },
+  "prendre|2s": {
+    "file": "audio/prendre-present-2s.mp3",
+    "said": "prends",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prends.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prends.wav"
+  },
+  "prendre|3s": {
+    "file": "audio/prendre-present-3s.mp3",
+    "said": "prend",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prend.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prend.wav"
+  },
+  "prendre|1p": {
+    "file": "audio/prendre-present-1p.mp3",
+    "said": "prenons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prenons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prenons.wav"
+  },
+  "prendre|2p": {
+    "file": "audio/prendre-present-2p.mp3",
+    "said": "prenez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prenez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prenez.wav"
+  },
+  "prendre|3p": {
+    "file": "audio/prendre-present-3p.mp3",
+    "said": "prennent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-prennent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-prennent.wav"
+  },
+  "mettre|inf": {
+    "file": "audio/mettre-infinitive.mp3",
+    "said": "mettre",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mettre.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mettre.wav"
+  },
+  "mettre|1s": {
+    "file": "audio/mettre-present-1s.mp3",
+    "said": "mets",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mets.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mets.wav"
+  },
+  "mettre|2s": {
+    "file": "audio/mettre-present-2s.mp3",
+    "said": "mets",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mets.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mets.wav"
+  },
+  "mettre|3s": {
+    "file": "audio/mettre-present-3s.mp3",
+    "said": "met",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-met.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-met.wav"
+  },
+  "mettre|1p": {
+    "file": "audio/mettre-present-1p.mp3",
+    "said": "mettons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mettons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mettons.wav"
+  },
+  "mettre|2p": {
+    "file": "audio/mettre-present-2p.mp3",
+    "said": "mettez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mettez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mettez.wav"
+  },
+  "mettre|3p": {
+    "file": "audio/mettre-present-3p.mp3",
+    "said": "mettent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mettent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mettent.wav"
+  },
+  "donner|inf": {
+    "file": "audio/donner-infinitive.mp3",
+    "said": "donner",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donner.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donner.wav"
+  },
+  "donner|1s": {
+    "file": "audio/donner-present-1s.mp3",
+    "said": "donne",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donne.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donne.wav"
+  },
+  "donner|2s": {
+    "file": "audio/donner-present-2s.mp3",
+    "said": "donnes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donnes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donnes.wav"
+  },
+  "donner|3s": {
+    "file": "audio/donner-present-3s.mp3",
+    "said": "donne",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donne.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donne.wav"
+  },
+  "donner|1p": {
+    "file": "audio/donner-present-1p.mp3",
+    "said": "donnons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donnons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donnons.wav"
+  },
+  "donner|2p": {
+    "file": "audio/donner-present-2p.mp3",
+    "said": "donnez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donnez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donnez.wav"
+  },
+  "donner|3p": {
+    "file": "audio/donner-present-3p.mp3",
+    "said": "donnent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-donnent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-donnent.wav"
+  },
+  "parler|inf": {
+    "file": "audio/parler-infinitive.mp3",
+    "said": "parler",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parler.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parler.wav"
+  },
+  "parler|1s": {
+    "file": "audio/parler-present-1s.mp3",
+    "said": "parle",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parle.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parle.wav"
+  },
+  "parler|2s": {
+    "file": "audio/parler-present-2s.mp3",
+    "said": "tu parles",
+    "exact": true,
+    "speaker": "LoquaxFR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-LoquaxFR-tu_parles.wav",
+    "title": "LL-Q150 (fra)-LoquaxFR-tu parles.wav"
+  },
+  "parler|3s": {
+    "file": "audio/parler-present-3s.mp3",
+    "said": "parle",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parle.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parle.wav"
+  },
+  "parler|1p": {
+    "file": "audio/parler-present-1p.mp3",
+    "said": "parlons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parlons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parlons.wav"
+  },
+  "parler|2p": {
+    "file": "audio/parler-present-2p.mp3",
+    "said": "parlez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parlez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parlez.wav"
+  },
+  "parler|3p": {
+    "file": "audio/parler-present-3p.mp3",
+    "said": "parlent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-parlent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-parlent.wav"
+  },
+  "aimer|inf": {
+    "file": "audio/aimer-infinitive.mp3",
+    "said": "aimer",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aimer.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aimer.wav"
+  },
+  "aimer|1s": {
+    "file": "audio/aimer-present-1s.mp3",
+    "said": "aime",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aime.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aime.wav"
+  },
+  "aimer|2s": {
+    "file": "audio/aimer-present-2s.mp3",
+    "said": "aimes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aimes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aimes.wav"
+  },
+  "aimer|3s": {
+    "file": "audio/aimer-present-3s.mp3",
+    "said": "aime",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aime.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aime.wav"
+  },
+  "aimer|1p": {
+    "file": "audio/aimer-present-1p.mp3",
+    "said": "aimons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aimons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aimons.wav"
+  },
+  "aimer|2p": {
+    "file": "audio/aimer-present-2p.mp3",
+    "said": "aimez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aimez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aimez.wav"
+  },
+  "aimer|3p": {
+    "file": "audio/aimer-present-3p.mp3",
+    "said": "aiment",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-aiment.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-aiment.wav"
+  },
+  "trouver|inf": {
+    "file": "audio/trouver-infinitive.mp3",
+    "said": "trouver",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouver.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouver.wav"
+  },
+  "trouver|1s": {
+    "file": "audio/trouver-present-1s.mp3",
+    "said": "trouve",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouve.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouve.wav"
+  },
+  "trouver|2s": {
+    "file": "audio/trouver-present-2s.mp3",
+    "said": "trouves",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouves.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouves.wav"
+  },
+  "trouver|3s": {
+    "file": "audio/trouver-present-3s.mp3",
+    "said": "trouve",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouve.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouve.wav"
+  },
+  "trouver|1p": {
+    "file": "audio/trouver-present-1p.mp3",
+    "said": "trouvons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouvons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouvons.wav"
+  },
+  "trouver|2p": {
+    "file": "audio/trouver-present-2p.mp3",
+    "said": "trouvez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouvez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouvez.wav"
+  },
+  "trouver|3p": {
+    "file": "audio/trouver-present-3p.mp3",
+    "said": "trouvent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-trouvent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-trouvent.wav"
+  },
+  "passer|inf": {
+    "file": "audio/passer-infinitive.mp3",
+    "said": "passer",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passer.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passer.wav"
+  },
+  "passer|1s": {
+    "file": "audio/passer-present-1s.mp3",
+    "said": "passe",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passe.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passe.wav"
+  },
+  "passer|2s": {
+    "file": "audio/passer-present-2s.mp3",
+    "said": "passes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passes.wav"
+  },
+  "passer|3s": {
+    "file": "audio/passer-present-3s.mp3",
+    "said": "passe",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passe.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passe.wav"
+  },
+  "passer|1p": {
+    "file": "audio/passer-present-1p.mp3",
+    "said": "passons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passons.wav"
+  },
+  "passer|2p": {
+    "file": "audio/passer-present-2p.mp3",
+    "said": "passez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passez.wav"
+  },
+  "passer|3p": {
+    "file": "audio/passer-present-3p.mp3",
+    "said": "passent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-passent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-passent.wav"
+  },
+  "penser|inf": {
+    "file": "audio/penser-infinitive.mp3",
+    "said": "penser",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-penser.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-penser.wav"
+  },
+  "penser|1s": {
+    "file": "audio/penser-present-1s.mp3",
+    "said": "pense",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pense.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pense.wav"
+  },
+  "penser|2s": {
+    "file": "audio/penser-present-2s.mp3",
+    "said": "penses",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-penses.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-penses.wav"
+  },
+  "penser|3s": {
+    "file": "audio/penser-present-3s.mp3",
+    "said": "pense",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pense.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pense.wav"
+  },
+  "penser|1p": {
+    "file": "audio/penser-present-1p.mp3",
+    "said": "pensons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pensons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pensons.wav"
+  },
+  "penser|2p": {
+    "file": "audio/penser-present-2p.mp3",
+    "said": "pensez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pensez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pensez.wav"
+  },
+  "penser|3p": {
+    "file": "audio/penser-present-3p.mp3",
+    "said": "pensent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pensent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pensent.wav"
+  },
+  "croire|inf": {
+    "file": "audio/croire-infinitive.mp3",
+    "said": "croire",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-croire.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-croire.wav"
+  },
+  "croire|1s": {
+    "file": "audio/croire-present-1s.mp3",
+    "said": "crois",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-crois.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-crois.wav"
+  },
+  "croire|2s": {
+    "file": "audio/croire-present-2s.mp3",
+    "said": "crois",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-crois.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-crois.wav"
+  },
+  "croire|3s": {
+    "file": "audio/croire-present-3s.mp3",
+    "said": "croit",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-croit.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-croit.wav"
+  },
+  "croire|1p": {
+    "file": "audio/croire-present-1p.mp3",
+    "said": "croyons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-croyons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-croyons.wav"
+  },
+  "croire|2p": {
+    "file": "audio/croire-present-2p.mp3",
+    "said": "croyez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-croyez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-croyez.wav"
+  },
+  "croire|3p": {
+    "file": "audio/croire-present-3p.mp3",
+    "said": "croient",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-croient.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-croient.wav"
+  },
+  "connaitre|inf": {
+    "file": "audio/connaitre-infinitive.mp3",
+    "said": "connaître",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-conna%C3%AEtre.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connaître.wav"
+  },
+  "connaitre|1s": {
+    "file": "audio/connaitre-present-1s.mp3",
+    "said": "connais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-connais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connais.wav"
+  },
+  "connaitre|2s": {
+    "file": "audio/connaitre-present-2s.mp3",
+    "said": "connais",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-connais.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connais.wav"
+  },
+  "connaitre|3s": {
+    "file": "audio/connaitre-present-3s.mp3",
+    "said": "connaît",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-conna%C3%AEt.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connaît.wav"
+  },
+  "connaitre|1p": {
+    "file": "audio/connaitre-present-1p.mp3",
+    "said": "connaissons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-connaissons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connaissons.wav"
+  },
+  "connaitre|2p": {
+    "file": "audio/connaitre-present-2p.mp3",
+    "said": "connaissez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-connaissez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connaissez.wav"
+  },
+  "connaitre|3p": {
+    "file": "audio/connaitre-present-3p.mp3",
+    "said": "connaissent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-connaissent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-connaissent.wav"
+  },
+  "partir|inf": {
+    "file": "audio/partir-infinitive.mp3",
+    "said": "partir",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-partir.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-partir.wav"
+  },
+  "partir|1s": {
+    "file": "audio/partir-present-1s.mp3",
+    "said": "pars",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pars.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pars.wav"
+  },
+  "partir|2s": {
+    "file": "audio/partir-present-2s.mp3",
+    "said": "pars",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-pars.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-pars.wav"
+  },
+  "partir|3s": {
+    "file": "audio/partir-present-3s.mp3",
+    "said": "part",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-part.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-part.wav"
+  },
+  "partir|1p": {
+    "file": "audio/partir-present-1p.mp3",
+    "said": "partons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-partons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-partons.wav"
+  },
+  "partir|2p": {
+    "file": "audio/partir-present-2p.mp3",
+    "said": "partez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-partez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-partez.wav"
+  },
+  "partir|3p": {
+    "file": "audio/partir-present-3p.mp3",
+    "said": "partent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-partent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-partent.wav"
+  },
+  "comprendre|inf": {
+    "file": "audio/comprendre-infinitive.mp3",
+    "said": "comprendre",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprendre.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprendre.wav"
+  },
+  "comprendre|1s": {
+    "file": "audio/comprendre-present-1s.mp3",
+    "said": "comprends",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprends.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprends.wav"
+  },
+  "comprendre|2s": {
+    "file": "audio/comprendre-present-2s.mp3",
+    "said": "comprends",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprends.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprends.wav"
+  },
+  "comprendre|3s": {
+    "file": "audio/comprendre-present-3s.mp3",
+    "said": "comprend",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprend.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprend.wav"
+  },
+  "comprendre|1p": {
+    "file": "audio/comprendre-present-1p.mp3",
+    "said": "comprenons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprenons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprenons.wav"
+  },
+  "comprendre|2p": {
+    "file": "audio/comprendre-present-2p.mp3",
+    "said": "comprenez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprenez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprenez.wav"
+  },
+  "comprendre|3p": {
+    "file": "audio/comprendre-present-3p.mp3",
+    "said": "comprennent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-comprennent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-comprennent.wav"
+  },
+  "demander|inf": {
+    "file": "audio/demander-infinitive.mp3",
+    "said": "demander",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demander.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demander.wav"
+  },
+  "demander|1s": {
+    "file": "audio/demander-present-1s.mp3",
+    "said": "demande",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demande.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demande.wav"
+  },
+  "demander|2s": {
+    "file": "audio/demander-present-2s.mp3",
+    "said": "demandes",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demandes.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demandes.wav"
+  },
+  "demander|3s": {
+    "file": "audio/demander-present-3s.mp3",
+    "said": "demande",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demande.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demande.wav"
+  },
+  "demander|1p": {
+    "file": "audio/demander-present-1p.mp3",
+    "said": "demandons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demandons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demandons.wav"
+  },
+  "demander|2p": {
+    "file": "audio/demander-present-2p.mp3",
+    "said": "demandez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demandez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demandez.wav"
+  },
+  "demander|3p": {
+    "file": "audio/demander-present-3p.mp3",
+    "said": "demandent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-demandent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-demandent.wav"
+  },
+  "manger|inf": {
+    "file": "audio/manger-infinitive.mp3",
+    "said": "manger",
+    "exact": true,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-manger.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-manger.wav"
+  },
+  "manger|1s": {
+    "file": "audio/manger-present-1s.mp3",
+    "said": "mange",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mange.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mange.wav"
+  },
+  "manger|2s": {
+    "file": "audio/manger-present-2s.mp3",
+    "said": "manges",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-manges.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-manges.wav"
+  },
+  "manger|3s": {
+    "file": "audio/manger-present-3s.mp3",
+    "said": "mange",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mange.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mange.wav"
+  },
+  "manger|1p": {
+    "file": "audio/manger-present-1p.mp3",
+    "said": "mangeons",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mangeons.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mangeons.wav"
+  },
+  "manger|2p": {
+    "file": "audio/manger-present-2p.mp3",
+    "said": "mangez",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mangez.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mangez.wav"
+  },
+  "manger|3p": {
+    "file": "audio/manger-present-3p.mp3",
+    "said": "mangent",
+    "exact": false,
+    "speaker": "Guilhelma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Guilhelma-mangent.wav",
+    "title": "LL-Q150 (fra)-Guilhelma-mangent.wav"
+  }
+}
