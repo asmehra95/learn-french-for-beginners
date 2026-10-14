@@ -107,7 +107,7 @@
       .trim();
   }
 
-  function buildIndex(data, topicsData) {
+  function buildIndex(data, topicsData, referenceData) {
     var verbs = (data && data.verbs) || [];
     var lessons = (data && data.lessons) || [];
     var entries = [];
@@ -229,7 +229,68 @@
       });
     });
 
-    return { entries: entries, verbs: verbMeta, verbList: verbs, lessons: lessonInfo, topicDocs: topicDocs, verbCount: verbs.length };
+    return { entries: entries, verbs: verbMeta, verbList: verbs, lessons: lessonInfo, topicDocs: topicDocs,
+      tableDocs: buildTableDocs(referenceData === undefined ? root && root.VT_REFERENCE : referenceData), verbCount: verbs.length };
+  }
+
+  /* Grammar tables (reference-data.js): one doc per table. Keywords score highest, then the table title,
+     the category title, each French row (also split at commas and with " ... " removed: "ne ... pas" → "ne pas")
+     and the caption. Keys are compared both expanded and glued (l' / qu'est-ce que / quatre-vingts). */
+  function buildTableDocs(ref) {
+    var docs = [];
+    var cats = (ref && ref.categories) || [];
+    cats.forEach(function (cat, ci) {
+      (cat.tables || []).forEach(function (t, ti) {
+        var fields = [];
+        function field(text, weight, kind, detail) {
+          var k = normalizeKey(text);
+          if (!k) return;
+          fields.push({ k: k, g: glueKey(text), tokens: tokens(k), weight: weight, kind: kind, detail: detail || null });
+        }
+        field(t.title, 75, "title");
+        field(cat.title, 70, "category");
+        (t.keywords || []).forEach(function (w) { field(w, 85, "keyword"); });
+        function rowText(fr) {
+          var s = String(fr || "");
+          var alts = [s, s.replace(/\s*\.\.\.\s*/g, " ")];
+          if (s.indexOf(",") !== -1) alts = alts.concat(s.split(",").map(function (x) { return x.trim(); }));
+          alts.forEach(function (a) { field(a, 65, "row", s); });
+        }
+        (t.rows || []).forEach(function (row) {
+          if (row.cells) row.cells.forEach(function (c) { rowText(c.fr); });
+          else rowText(row.fr);
+        });
+        field(t.caption, 45, "line");
+        docs.push({
+          categoryId: cat.id, tableId: t.id, title: t.title, categoryTitle: cat.title,
+          href: "#tables/" + cat.id + "/" + t.id, order: ci * 100 + ti, fields: fields
+        });
+      });
+    });
+    return docs;
+  }
+
+  /* Best field per table: exact keyword / row / title match at its weight (keywords +5), otherwise every
+     query word starts a word of the field (2+ characters): rows and keywords at most 50, titles weight − 10. */
+  function searchTables(index, qk, qg, qt) {
+    var out = [];
+    (index.tableDocs || []).forEach(function (doc) {
+      var best = null;
+      doc.fields.forEach(function (f) {
+        var s = 0;
+        if (f.kind !== "line" && (f.k === qk || f.g === qg)) s = f.weight + (f.kind === "keyword" ? 5 : 0);
+        else if (qk.length >= 2 && everyTokenPrefixed(qt, f.tokens)) s = f.kind === "keyword" || f.kind === "row" ? Math.min(f.weight, 50) : f.weight - 10;
+        if (s && (!best || s > best.score)) best = { score: s, field: f };
+      });
+      if (!best) return;
+      var f = best.field;
+      var detail = f.kind === "title" ? "table title" : f.kind === "category" ? doc.categoryTitle
+        : f.kind === "row" ? "matches “" + f.detail + "”" : null;
+      out.push({ categoryId: doc.categoryId, tableId: doc.tableId, title: doc.title, categoryTitle: doc.categoryTitle,
+        href: doc.href, score: best.score, matchDetail: detail, order: doc.order });
+    });
+    out.sort(function (a, b) { return b.score - a.score || a.order - b.order; });
+    return out;
   }
 
   /* ---------- matching ---------- */
@@ -290,7 +351,7 @@
     opts = opts || {};
     var useSentences = opts.sentences !== false, useFuzzy = opts.fuzzy !== false;
     var qk = normalizeKey(query), qg = glueKey(query);
-    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], total: 0, suggestion: null };
+    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], tables: [], total: 0, suggestion: null };
     if (!qk) return res;
     var qt = tokens(qk);
     var best = {};
@@ -360,7 +421,8 @@
     res.verbs.sort(function (a, b) { return b.score - a.score || a._prio - b._prio || a.number - b.number; });
     res.verbs.forEach(function (r) { delete r._prio; });
     res.topics = qk.length >= 2 ? searchTopics(index, qk, qt) : [];
-    res.total = res.verbs.length + res.topics.length;
+    res.tables = searchTables(index, qk, qg, qt);
+    res.total = res.verbs.length + res.topics.length + res.tables.length;
     if (!res.total) res.suggestion = suggest(index, query);
     return res;
   }

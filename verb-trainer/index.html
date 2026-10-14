@@ -42,6 +42,8 @@
     <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></symbol>
     <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6.1H3"/><path d="M21 12.1H3"/><path d="M15.1 18H3"/></symbol>
     <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
     <symbol id="i-languages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
   </svg>
@@ -56,6 +58,7 @@
           <li><a class="nav-link" href="#practice" data-nav="practice"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg><span>Practice</span></a></li>
           <li><a class="nav-link" href="#review" data-nav="review"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rotate-ccw"></use></svg><span>Review</span></a></li>
           <li><a class="nav-link" href="#topics" data-nav="topics"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg><span>Topics</span></a></li>
+          <li><a class="nav-link" href="#tables" data-nav="tables"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-table"></use></svg><span>Tables</span></a></li>
           <li><a class="nav-link" href="#explain" data-nav="explain"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-languages"></use></svg><span>Explain</span></a></li>
           <li><a class="nav-link" href="#progress" data-nav="progress"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bar-chart"></use></svg><span>Progress</span></a></li>
         </ul>
@@ -340,6 +343,13 @@
       <div class="empty-msg" hidden></div>
     </section>
 
+    <!-- Grammar tables quick reference (views-tables.js + reference-data.js) -->
+    <section id="view-tables" class="view" data-view="tables" aria-labelledby="h-tables" hidden>
+      <h2 id="h-tables" tabindex="-1">Grammar tables</h2>
+      <div id="tables-body"></div>
+      <div class="empty-msg" hidden></div>
+    </section>
+
     <!-- Explain a French sentence (views-explain.js + the copied explainer.js module) -->
     <section id="view-explain" class="view" data-view="explain" aria-labelledby="h-explain" hidden>
       <h2 id="h-explain" tabindex="-1">Explain a French sentence</h2>
@@ -486,6 +496,7 @@
         <button type="button" class="btn-icon dlg-close" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg><span class="visually-hidden">Close</span></button>
       </div>
       <ul class="ref-jump">
+        <li><a href="#tables" data-close>Grammar tables (full reference)</a></li>
         <li><a href="#ref-pron" data-ref-jump="ref-pron">Pronunciation key</a></li>
         <li><a href="#ref-patterns" data-ref-jump="ref-patterns">Ending patterns</a></li>
         <li><a href="#ref-grammar" data-ref-jump="ref-grammar">Grammar notes</a></li>
@@ -530,7 +541,7 @@
             <tr><td><kbd>L</kbd> (<kbd>Alt</kbd>+<kbd>L</kbd> in a text box)</td><td>Any practice page</td><td>Listen to the current item</td></tr>
             <tr><td><kbd>S</kbd> (<kbd>Alt</kbd>+<kbd>S</kbd> in a text box)</td><td>Typed questions</td><td>Show the answer</td></tr>
             <tr><td><kbd>N</kbd> or <kbd>→</kbd></td><td>After answering</td><td>Next question</td></tr>
-            <tr><td><kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>⌘</kbd>+<kbd>K</kbd> on a Mac)</td><td>Anywhere outside a text box</td><td>Search all verbs and topics</td></tr>
+            <tr><td><kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>⌘</kbd>+<kbd>K</kbd> on a Mac)</td><td>Anywhere outside a text box</td><td>Search verbs, tables and topics</td></tr>
             <tr><td><kbd>↑</kbd> / <kbd>↓</kbd>, <kbd>Enter</kbd></td><td>Search</td><td>Move through the results, open one</td></tr>
             <tr><td><kbd>?</kbd></td><td>Anywhere outside a text box</td><td>Open this list</td></tr>
             <tr><td><kbd>Esc</kbd></td><td>Dialogs and search</td><td>Close</td></tr>
@@ -547,9 +558,9 @@
         <button type="button" class="btn-icon dlg-close" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg><span class="visually-hidden">Close</span></button>
       </div>
       <div class="search-field">
-        <label for="search-input" id="search-label">Search all verbs, every form, the English meanings and the topic lessons</label>
+        <label for="search-input" id="search-label">Search all verbs, every form, the English meanings, grammar tables and the topic lessons</label>
         <input type="search" id="search-input" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-listbox" aria-describedby="search-help" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" maxlength="80">
-        <p id="search-help" class="hint">Type a French form (suis, j'ai), an infinitive or English (to eat). Arrow keys move through the results, Enter opens one.</p>
+        <p id="search-help" class="hint">Type a French form (suis, j'ai), an infinitive, English (to eat) or a grammar word (cette). Arrow keys move through the results, Enter opens one.</p>
       </div>
       <div id="search-listbox" role="listbox" aria-label="Search results" class="search-results"></div>
       <div id="search-empty" class="search-empty" hidden></div>
@@ -565,6 +576,7 @@
       </div>
       <ul class="more-list">
         <li><a class="more-link" href="#topics" data-close data-nav="topics"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg><span>Topics</span></a></li>
+        <li><a class="more-link" href="#tables" data-close data-nav="tables"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-table"></use></svg><span>Grammar tables</span></a></li>
         <li><a class="more-link" href="#explain" data-close data-nav="explain"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-languages"></use></svg><span>Explain a sentence</span></a></li>
         <li><a class="more-link" href="#progress" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bar-chart"></use></svg><span>Progress</span></a></li>
         <li><a class="more-link" href="#credits" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"></use></svg><span>Credits</span></a></li>
@@ -585,6 +597,7 @@
   <script src="js/data-100.js"></script>
   <script src="js/verb-types.js"></script>
   <script src="js/topics-data.js"></script>
+  <script src="js/reference-data.js"></script>
   <script src="js/merge-data.js"></script>
   <script src="js/audio-manifest.js"></script>
   <script src="js/verb-meta.js"></script>
@@ -600,6 +613,7 @@
   <script src="js/views-home.js"></script>
   <script src="js/views-review.js"></script>
   <script src="js/views-topics.js"></script>
+  <script src="js/views-tables.js"></script>
   <script src="js/views-search.js"></script>
   <script src="js/explainer.js"></script>
   <script src="js/views-explain.js"></script>

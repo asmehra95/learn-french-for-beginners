@@ -1173,6 +1173,60 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   html:has(#view-flashcards:not([hidden]) .peek:not([hidden])) main { padding-bottom: calc(72px + var(--peek-h, 50vh) + env(safe-area-inset-bottom)); }
 }
 
+/* ---------- 11b. grammar tables (views-tables.js) ---------- */
+.tables-toolbar { margin: var(--s-3) 0 var(--s-4); }
+.tables-toolbar a.btn { text-decoration: none; }
+.tables-toc { margin: 0 0 var(--s-4); }
+.tables-toc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-1) var(--s-4); }
+.tables-toc li { max-width: none; }
+.tables-toc a { display: flex; flex-direction: column; justify-content: center; min-height: 44px; padding: var(--s-1) var(--s-2); border-radius: var(--r-sm); text-decoration: none; }
+.tables-toc a:hover { background: var(--primary-soft); }
+.tables-toc-title { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.tables-toc-sum { color: var(--muted); font-size: var(--fs-xs); }
+@media (min-width: 720px) { .tables-toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tables-cat { margin: var(--s-3) 0; }
+/* The scroll container is the containing block, so the "Listen" column's visually-hidden label
+   is clipped with the table instead of widening the page on a phone. */
+#view-tables .table-wrap { position: relative; }
+.tables-cat-body { padding-top: var(--s-3); }
+.tables-cat-body > .intro { margin-top: 0; }
+.ref-card {
+  min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-1); padding: var(--card-pad);
+}
+.ref-card h4 { margin: 0 0 var(--s-2); font-size: var(--fs-md); font-family: var(--font-display); display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); }
+.ref-card h4:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.tables-cat h3:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.ref-when { margin: 0 0 var(--s-2); color: var(--text); }
+.ref-label { font-weight: 700; }
+.ref-table th[scope="row"] { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-base); }
+.ref-table th[scope="row"] a { font-weight: 600; }
+.ref-info { font-size: var(--fs-xs); color: var(--muted); }
+.ref-grid-cell { vertical-align: top; }
+.ref-grid-cell .ref-grid-fr { display: block; font-family: var(--font-display); font-weight: 600; font-size: var(--fs-base); }
+.ref-grid-cell .pron { display: block; }
+.ref-preview {
+  display: inline-flex; align-items: center; padding: 0 var(--s-2); border: 1px solid var(--border-strong); border-radius: var(--r-pill);
+  background: var(--surface-2); color: var(--text); font-family: var(--font-ui); font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.02em;
+}
+.ref-examples { margin: var(--s-3) 0; padding-left: 1.2em; }
+.ref-examples li { margin: var(--s-1) 0; max-width: none; }
+.ref-examples .listen-group { margin: 0 var(--s-1); }
+.ref-en { color: var(--text); }
+.ref-watch { margin: var(--s-3) 0 0; padding: var(--s-2) var(--s-3); border-left: 4px solid var(--accent); background: var(--accent-soft); color: var(--text); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.ref-watch-h { margin: 0 0 var(--s-1); font-weight: 700; }
+.ref-watch ul { margin: 0; padding-left: 1.2em; }
+.ref-watch li { margin: var(--s-1) 0; max-width: none; }
+.ref-wrong { text-decoration: line-through; }
+.ref-watch .pron { color: var(--text); }
+.ref-links { margin: var(--s-3) 0 0; font-size: var(--fs-sm); }
+.ref-links a { display: inline-block; padding: var(--s-1) 0; }
+.tables-card h3 .icon { color: var(--primary); }
+@media (max-width: 720px) {
+  .ref-table { min-width: 34rem; }
+  .ref-grid { min-width: 30rem; }
+}
+
 /* ---------- 12. forced colours (§15.2) ---------- */
 @media (forced-colors: active) {
   .btn, .listen, .listen-word, .accent-btn, .nav-link, .btn-util, .btn-icon, .bottom-link, .verb-card, .practice-area, .panel, .totals > div, .type-badge, .choice label {
@@ -1196,4 +1250,32 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
     scroll-behavior: auto !important;
   }
   .flashcard.is-flipped { animation: none; }
+}
+/* ---------- 14. print (grammar tables; any page prints without the site chrome) ---------- */
+@media print {
+  .site-header, .bottom-nav, .site-footer, .skip-link, #notices, #import-hint, #announcer, .audio-status,
+  .listen-group, .tables-toolbar, .tables-toc, dialog { display: none !important; }
+  body:has(#view-tables:not([hidden])) .view:not(#view-tables) { display: none !important; }
+  html, body, main, .ref-card, .home-card { background: #fff !important; color: #000 !important; box-shadow: none !important; }
+  body::before { display: none !important; }
+  main { padding: 0 !important; max-width: none !important; }
+  #view-tables .muted, #view-tables .pron, #view-tables .ref-info, #view-tables caption, #view-tables .lesson-summary-count { color: #333 !important; }
+  #view-tables h2, #view-tables h3, #view-tables h4 { color: #000 !important; }
+  #view-tables a { color: #000 !important; text-decoration: none !important; }
+  .table-wrap { overflow: visible !important; }
+  .ref-table, .ref-grid { min-width: 0 !important; }
+  .cards { display: block !important; }
+  .ref-card { border: 1px solid #999 !important; border-radius: 0 !important; padding: 8pt 10pt !important; margin: 0 0 10pt !important; }
+  .ref-card, .ref-card table, .ref-examples, .ref-watch, tr { break-inside: avoid; page-break-inside: avoid; }
+  h3, h4 { break-after: avoid; page-break-after: avoid; }
+  .tables-cat { break-before: page; }
+  .tables-cat:first-of-type { break-before: auto; }
+  thead th { background: #e8e8e8 !important; color: #000 !important; }
+  th, td { border-bottom: 1px solid #999 !important; }
+  tbody tr:nth-child(even) { background: #f2f2f2 !important; }
+  .ref-watch { background: #fff !important; border-left: 3px solid #000 !important; color: #000 !important; }
+  .ref-preview { border: 1px solid #000 !important; background: #fff !important; color: #000 !important; }
+  .lesson-fold > summary { border-bottom: 1px solid #000 !important; }
+  .lesson-fold > summary::before { display: none !important; }
+  .tables-cat-body { display: block !important; }
 }

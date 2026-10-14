@@ -824,6 +824,14 @@
       if (seg.length === 2) return alias(info("topics", "topic", { topicId: seg[1] }));
       return /^[A-Za-z0-9-]+$/.test(seg[2]) ? alias(info("topics", "exercise", { topicId: seg[1], exerciseId: seg[2] })) : home;
     }
+    if (name === "tables") {
+      // #tables, #tables/<categoryId>, #tables/<categoryId>/<tableId>; views-tables.js checks the ids exist.
+      var TID = /^[a-z0-9-]+$/;
+      if (seg.length === 1) return info("tables", "all");
+      if (seg.length > 3 || !TID.test(seg[1])) return home;
+      if (seg.length === 2) return info("tables", "category", { categoryId: seg[1] });
+      return TID.test(seg[2]) ? info("tables", "table", { categoryId: seg[1], tableId: seg[2] }) : home;
+    }
     if (name === "review") {
       if (seg.length === 1) return info("review", "deck");
       if (seg.length === 2 && seg[1] === "session") return info("review", "session");

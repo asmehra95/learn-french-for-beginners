@@ -219,6 +219,17 @@
         })));
       }
 
+      // Grammar tables quick reference (views-tables.js).
+      if (window.VT_REFERENCE) {
+        body.appendChild(el("section", { className: "home-card tables-card", "aria-labelledby": "home-tables-h" }, [
+          el("h3", { id: "home-tables-h" }, [UI.icon("table"), el("span", { text: "Grammar tables" })]),
+          el("p", { text: "Articles, pronouns, possessives, ce/cette, question words, numbers and more, in one place." }),
+          el("div", { className: "actions" }, [
+            el("a", { className: "btn", id: "home-tables-link", href: "#tables" }, [el("span", { text: "Open the tables" }), UI.icon("arrow-right")])
+          ])
+        ]));
+      }
+
       // Explain entry point (views-explain.js). No network either way: only the link differs in wording.
       var helper = LEARN.explainMode(location.protocol) === "helper";
       body.appendChild(el("section", { className: "home-card explain-card", "aria-labelledby": "home-explain-h" }, [

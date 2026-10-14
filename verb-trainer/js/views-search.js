@@ -8,7 +8,7 @@
   window.VT_VIEWS = window.VT_VIEWS || {};
   function $(id) { return document.getElementById(id); }
 
-  var VERB_CAP = 20, TOPIC_CAP = 5;
+  var VERB_CAP = 20, TOPIC_CAP = 5, TABLE_CAP = 5;
   var C = null, S = null;
   var dlg, input, listbox, empty, status;
   var options = [];   // flat list: { node, act, data }
@@ -53,7 +53,8 @@
       if (text == null) {
         if (!last || !last.key) return;
         if (!last.total) text = "No results." + (last.suggestion ? " Closest verb: " + last.suggestion.infinitive + "." : "");
-        else text = last.verbs.length + (last.verbs.length === 1 ? " verb" : " verbs") + " and " + last.topics.length + (last.topics.length === 1 ? " topic" : " topics") + " found.";
+        else text = last.verbs.length + (last.verbs.length === 1 ? " verb, " : " verbs, ") + last.tables.length + (last.tables.length === 1 ? " table" : " tables") +
+          " and " + last.topics.length + (last.topics.length === 1 ? " topic" : " topics") + " found.";
       }
       status.textContent = text;
     }, 400);
@@ -111,6 +112,28 @@
     ]);
   }
 
+  /* A grammar-table result: the table title and its category ("Grammar tables: Demonstratives"). */
+  function tableRow(t, i) {
+    var why = t.matchDetail && t.matchDetail !== "table title" && t.matchDetail !== t.categoryTitle ? t.matchDetail : null;
+    return el("div", { role: "none", className: "search-row" }, [
+      option("sr-" + i, "table", t, { className: "search-main search-table" }, [
+        el("span", { className: "search-line" }, [
+          el("span", { className: "search-topic-title", text: t.title }), sep(),
+          el("span", { className: "search-meaning", text: "Grammar tables: " + t.categoryTitle })
+        ]),
+        why ? sep() : null,
+        why ? el("span", { className: "search-why", text: why }) : null
+      ])
+    ]);
+  }
+
+  /* Tables go first when a table matches strongly (a keyword or exact row, score >= 80) and no verb has an
+     exact infinitive or form match: "cette", "le mien" and "quatre-vingts" open the table with Enter, while
+     "du" (an exact form of devoir) keeps the verb first. */
+  function tablesFirst(res) {
+    return !!(res.tables.length && res.tables[0].score >= 80 && !(res.verbs[0] && res.verbs[0].score >= S.SCORES.form));
+  }
+
   function render(query) {
     var UI = C.UI;
     options = [];
@@ -127,9 +150,12 @@
     } else {
       var vs = showAll ? res.verbs : res.verbs.slice(0, VERB_CAP);
       var ts = showAll ? res.topics : res.topics.slice(0, TOPIC_CAP);
-      if (vs.length) kids.push(group("sg-verbs", "Verbs (" + res.verbs.length + ")", vs.map(verbRow)));
+      var tb = showAll ? res.tables : res.tables.slice(0, TABLE_CAP);
+      var verbGroup = vs.length ? function () { kids.push(group("sg-verbs", "Verbs (" + res.verbs.length + ")", vs.map(verbRow))); } : function () {};
+      var tableGroup = tb.length ? function () { kids.push(group("sg-tables", "Tables (" + res.tables.length + ")", tb.map(tableRow))); } : function () {};
+      if (tablesFirst(res)) { tableGroup(); verbGroup(); } else { verbGroup(); tableGroup(); }
       if (ts.length) kids.push(group("sg-topics", "Topics (" + res.topics.length + ")", ts.map(topicRow)));
-      if (vs.length < res.verbs.length || ts.length < res.topics.length) {
+      if (vs.length < res.verbs.length || ts.length < res.topics.length || tb.length < res.tables.length) {
         kids.push(el("div", { role: "none", className: "search-row" }, [
           option("so-all", "all", null, { className: "search-main search-all" }, [el("span", { text: "Show all " + res.total + " results" })])
         ]));
@@ -181,7 +207,7 @@
     var r = o.data;
     if (o.act === "open") go(r.href);
     else if (o.act === "lesson") go(r.lessonHref);
-    else if (o.act === "topic") go(r.href);
+    else if (o.act === "topic" || o.act === "table") go(r.href);
     else if (o.act === "listen") C.play(r.listenText, r.listenKey, false); // recorded clip first, then the device voice
     else if (o.act === "example") {
       input.value = r;
@@ -216,7 +242,10 @@
     } else if (k === "Enter") {
       ev.preventDefault();
       if (active !== -1) { activate(active); return; }
-      var i = firstOf("open");
+      // The first result of the first group shown (Tables first only when tablesFirst said so).
+      var i = last && last.key && tablesFirst(last) ? firstOf("table") : -1;
+      if (i === -1) i = firstOf("open");
+      if (i === -1) i = firstOf("table");
       if (i === -1) i = firstOf("topic");
       if (i !== -1) activate(i);
       else if (last && last.suggestion) applySuggestion();
@@ -263,7 +292,7 @@
       return;
     }
     var n = ctx.DATA.verbs.length;
-    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings and the topic lessons";
+    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings, grammar tables and the topic lessons";
     triggers.forEach(function (b) {
       if (b) b.addEventListener("click", function (ev) { open(ev.currentTarget); });
     });

@@ -14,12 +14,13 @@
   var TITLES = {
     home: "Home", lesson: "Lesson", browse: "Learn", practice: "Practice", flashcards: "Flashcards", conjugate: "Conjugate",
     sentences: "Sentences", choice: "Multiple choice", review: "Review my mistakes", progress: "Progress", credits: "Credits", topics: "Topics",
-    explain: "Explain"
+    explain: "Explain", tables: "Grammar tables"
   };
   /* Which nav item is current for each view (§4, §7.2). Credits has none. */
   var NAV_OF = {
     home: "home", lesson: "learn", browse: "learn", practice: "practice", flashcards: "practice", conjugate: "practice",
-    sentences: "practice", choice: "practice", review: "review", progress: "progress", topics: "topics", explain: "explain"
+    sentences: "practice", choice: "practice", review: "review", progress: "progress", topics: "topics", explain: "explain",
+    tables: "tables"
   };
   var ACCENTS = ["é", "è", "ê", "ë", "à", "â", "ç", "î", "ï", "ô", "û", "ù", "œ", "'"];
   var DECKS = ["inf-meaning", "meaning-inf", "conj"];
@@ -2212,7 +2213,7 @@
     lessonsById = LEARN.buildLessonsById(DATA.lessons);
     lessonOf = LEARN.buildLessonOf(DATA.lessons, DATA.verbs);
     try {
-      searchIndex = window.VT_SEARCH ? window.VT_SEARCH.buildIndex(DATA, window.TOPICS_DATA) : null;
+      searchIndex = window.VT_SEARCH ? window.VT_SEARCH.buildIndex(DATA, window.TOPICS_DATA, window.VT_REFERENCE) : null;
     } catch (err) {
       searchIndex = null;
       console.error(err);

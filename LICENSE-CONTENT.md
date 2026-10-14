@@ -8,6 +8,7 @@ licensed under the **Creative Commons Attribution-ShareAlike 4.0 International**
 - Extended verb guide and workbook (100-more-common-french-verbs.md/.pdf, 100-more-french-verbs-workbook.pdf)
 - Topic guides and workbooks (topics/01-asking-questions.*, topics/02-reflexive-verbs.*)
 - Topic lesson data and exercises (verb-trainer/js/topics-data.js)
+- Grammar tables (french-grammar-tables.md, verb-trainer/reference/french-grammar-tables.*, verb-trainer/js/reference-data.js)
 - Any other written instructional content authored by Avtar Singh in this repository
 
 **Deed:** <https://creativecommons.org/licenses/by-sa/4.0/>

@@ -40,10 +40,15 @@ native-speaker audio clips.
 - **Flashcard conjugation peek** — cards don't show whether a verb is regular or irregular, so you
   can guess first. The conjugation table opens only when you press the small button, and shows the
   verb type inside (e.g. "Regular -er", "Irregular · conjugates like venir", "Reflexive").
+- **Grammar tables** — one quick reference for articles, pronouns (including y/en and pronoun order),
+  possessives, ce/cette, question words, negation, adjectives, prepositions, a verb summary and
+  numbers, dates and the time. Each table says when to use it; every French item has a pronunciation
+  and a Listen button. Searchable (`cette`, `le mien`, `quatre-vingts`), printable, and available as a
+  PDF and as Markdown.
 - **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
   bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
-  ferai), English meanings ("to eat") and the topic lessons ("quel", "est-ce que"). Accent-, case-,
-  apostrophe- and typo-tolerant. From a result you can open the verb card, listen to the matched
+  ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts") and the topic
+  lessons ("quel", "est-ce que"). Accent-, case-, apostrophe- and typo-tolerant. From a result you can open the verb card, listen to the matched
   form, or go to its lesson. A verb's type only shows if you search for it ("irregular", "reflexive").
 - **Foldable Browse section** — every verb grouped by lesson, with present-tense tables, past, future,
   example sentences, pronunciation tips, and Regular / Irregular / Reflexive badges. Its search box
@@ -72,6 +77,8 @@ These PDFs are in the repo and served from the site:
 | [topics/01-asking-questions-workbook.pdf](topics/01-asking-questions-workbook.pdf) | Workbook: Asking Questions |
 | [topics/02-reflexive-verbs.pdf](topics/02-reflexive-verbs.pdf) | Topic guide: Reflexive Verbs |
 | [topics/02-reflexive-verbs-workbook.pdf](topics/02-reflexive-verbs-workbook.pdf) | Workbook: Reflexive Verbs |
+| [verb-trainer/reference/french-grammar-tables.pdf](verb-trainer/reference/french-grammar-tables.pdf) | Grammar tables quick reference (all 10 categories) |
+| [french-grammar-tables.md](french-grammar-tables.md) | Markdown source of the grammar tables |
 
 ## Audio
 
@@ -129,6 +136,11 @@ cd verb-trainer && node --test tests/*.test.js
 # Explainer unit + integration tests
 cd explainer && npm test
 ```
+
+## Regenerating the grammar tables
+The tables live in `verb-trainer/js/reference-data.js`. Regenerate the Markdown with
+`node tools/build-grammar-tables.js`; the PDF is printed from that script's `--html` output with
+headless Chrome (`--print-to-pdf`).
 
 ## Regenerating audio
 
