@@ -33,8 +33,24 @@
     };
   }
 
+  function EXPR() { return window.VT_EXPR; }
+  function isExprKey(k) { return !!EXPR() && EXPR().isKey(k); }
+
+  /* An everyday-expression key ("expr:<id>|flash-…|-"): a multiple-choice item, recorded against that key.
+     The question text comes from VT_EXPR.choiceItem as plain parts; the elements are built here. */
+  function expressionItem(origKey) {
+    var X = EXPR(), D = C.EXPRESSIONS;
+    if (!X || !D) return null;
+    var it = X.choiceItem(D, origKey, Math.random);
+    if (!it) return null;
+    var el = C.UI.el, g = it.legend;
+    it.legendParts = [g.before, el("strong", { lang: g.strongLang, text: g.strong }), g.after];
+    return it;
+  }
+
   /* Map an original key to an item per the §11.2 table, recorded against that key (AC13). null = unbuildable. */
   function buildItem(origKey) {
+    if (isExprKey(origKey)) return expressionItem(origKey);
     var k = parseKey(origKey);
     var verb = C.verbsById[k.id];
     if (!verb) return null;
@@ -75,9 +91,9 @@
     return function () {
       var keys;
       if (r.scope === "session") {
-        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id]; });
+        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k); });
       } else {
-        keys = C.LEARN.mistakesDeck(C.state(), C.DATA);
+        keys = C.LEARN.mistakesDeck(C.state(), C.DATA, C.EXPRESSIONS);
         if (r.lessonId != null) {
           var inLesson = verbInLesson(r.lessonId);
           keys = keys.filter(function (k) { return inLesson[parseKey(k).id]; });
@@ -129,7 +145,7 @@
     $("rev-typed").hidden = true;
     $("rev-choice").hidden = true;
     var r = routeNow;
-    var left = LEARN.mistakesDeck(state, C.DATA);
+    var left = LEARN.mistakesDeck(state, C.DATA, C.EXPRESSIONS);
     if (r.lessonId != null) {
       var inLesson = verbInLesson(r.lessonId);
       left = left.filter(function (k) { return inLesson[parseKey(k).id]; });
@@ -170,7 +186,7 @@
     var chip;
     if (r.scope === "session") chip = "Mistakes from your last session";
     else if (r.lessonId != null) chip = "Lesson " + r.lessonId + ": " + C.lessonsById[r.lessonId].title;
-    else chip = "All lessons";
+    else chip = "All lessons and expressions";
     $("review-scope").textContent = chip;
     // Steps 3–4.
     var k = sessionKeyFor(r);

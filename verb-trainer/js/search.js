@@ -4,7 +4,8 @@
    English meaning, each present-tense form with and without its pronouns, the past phrase and participle,
    the future form, the example sentence (ranked last), the lesson number and title, the verb type
    (only reachable with a type keyword such as "irregular"; results carry `type` only then, because the
-   flashcards deliberately hide the type) and the topic lessons (titles, can-do lines, exercise titles).
+   flashcards deliberately hide the type), the topic lessons (titles, can-do lines, exercise titles), the
+   grammar tables and the everyday expressions (French, keywords, English, literal meaning, example).
    Matching is case-, accent- and apostrophe-insensitive and elision-aware (j'ai = je ai = jai), with
    prefix-as-you-type and a one-edit typo tolerance for queries of 4+ characters. No DOM. */
 (function (root) {
@@ -107,7 +108,7 @@
       .trim();
   }
 
-  function buildIndex(data, topicsData, referenceData) {
+  function buildIndex(data, topicsData, referenceData, expressionsData) {
     var verbs = (data && data.verbs) || [];
     var lessons = (data && data.lessons) || [];
     var entries = [];
@@ -230,7 +231,67 @@
     });
 
     return { entries: entries, verbs: verbMeta, verbList: verbs, lessons: lessonInfo, topicDocs: topicDocs,
-      tableDocs: buildTableDocs(referenceData === undefined ? root && root.VT_REFERENCE : referenceData), verbCount: verbs.length };
+      tableDocs: buildTableDocs(referenceData === undefined ? root && root.VT_REFERENCE : referenceData),
+      exprDocs: buildExpressionDocs(expressionsData === undefined ? root && root.VT_EXPRESSIONS : expressionsData),
+      verbCount: verbs.length };
+  }
+
+  /* Everyday expressions (expressions-data.js): one doc per expression. French (and the filled-in Listen
+     text) 90, keywords 85, the whole English 80, each "/" part of the English 78 (so "excuse me" opens
+     Excusez-moi before Pardon's "Sorry? / Excuse me"), the literal meaning 60, the example 25. */
+  function buildExpressionDocs(ex) {
+    var docs = [];
+    if (!ex || !ex.expressions) return docs;
+    var EXPR = (root && root.VT_EXPR) || (typeof require === "function" ? require("./expressions.js") : null);
+    if (!EXPR) return docs;
+    var themeTitle = {};
+    ((ex && ex.themes) || []).forEach(function (t) { themeTitle[t.id] = t.title; });
+    ((ex && ex.expressions) || []).forEach(function (e, i) {
+      var fields = [];
+      function field(text, weight, kind) {
+        var k = normalizeKey(text);
+        if (!k) return;
+        fields.push({ k: k, g: glueKey(text), tokens: tokens(k), weight: weight, kind: kind });
+      }
+      field(e.fr, 90, "french");
+      if (e.say) field(e.say, 90, "french");
+      (e.keywords || []).forEach(function (w) { field(w, 85, "keyword"); });
+      field(e.en, 80, "english");
+      var parts = String(e.en || "").split("/");
+      if (parts.length > 1) parts.forEach(function (p) { field(p.trim().replace(/\s*[?!]+$/, ""), 78, "english"); });
+      if (e.literal) field(e.literal, 60, "literal");
+      if (e.example) field(e.example.fr + " " + e.example.en, 25, "example");
+      docs.push({
+        id: e.id, themeId: e.theme, fr: e.fr, en: e.en, register: e.register, themeTitle: themeTitle[e.theme] || "",
+        href: "#expressions/" + e.theme + "/" + e.id, listenText: EXPR.speakText(e), order: i, fields: fields
+      });
+    });
+    return docs;
+  }
+
+  /* Best field per expression: an exact match at its weight (keywords +5), otherwise every query word starts a
+     word of the field (2+ characters): French, keywords and English at most 50, literal and example weight − 10. */
+  function searchExpressions(index, qk, qg, qt) {
+    var out = [];
+    (index.exprDocs || []).forEach(function (doc) {
+      var best = null;
+      doc.fields.forEach(function (f) {
+        var s = 0;
+        if (f.kind !== "example" && (f.k === qk || f.g === qg)) s = f.weight + (f.kind === "keyword" ? 5 : 0);
+        else if (qk.length >= 2 && everyTokenPrefixed(qt, f.tokens)) {
+          s = f.kind === "french" || f.kind === "keyword" || f.kind === "english" ? Math.min(f.weight, 50) : f.weight - 10;
+        }
+        if (s && (!best || s > best.score)) best = { score: s, field: f };
+      });
+      if (!best) return;
+      var kind = best.field.kind;
+      out.push({ id: doc.id, themeId: doc.themeId, fr: doc.fr, en: doc.en, register: doc.register, themeTitle: doc.themeTitle,
+        href: doc.href, listenText: doc.listenText, score: best.score,
+        matchDetail: kind === "literal" ? "literal meaning" : kind === "example" ? "in the example" : kind === "keyword" ? "keyword" : null,
+        order: doc.order });
+    });
+    out.sort(function (a, b) { return b.score - a.score || a.order - b.order; });
+    return out;
   }
 
   /* Grammar tables (reference-data.js): one doc per table. Keywords score highest, then the table title,
@@ -351,7 +412,7 @@
     opts = opts || {};
     var useSentences = opts.sentences !== false, useFuzzy = opts.fuzzy !== false;
     var qk = normalizeKey(query), qg = glueKey(query);
-    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], tables: [], total: 0, suggestion: null };
+    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], tables: [], expressions: [], total: 0, suggestion: null };
     if (!qk) return res;
     var qt = tokens(qk);
     var best = {};
@@ -422,7 +483,8 @@
     res.verbs.forEach(function (r) { delete r._prio; });
     res.topics = qk.length >= 2 ? searchTopics(index, qk, qt) : [];
     res.tables = searchTables(index, qk, qg, qt);
-    res.total = res.verbs.length + res.topics.length + res.tables.length;
+    res.expressions = searchExpressions(index, qk, qg, qt);
+    res.total = res.verbs.length + res.topics.length + res.tables.length + res.expressions.length;
     if (!res.total) res.suggestion = suggest(index, query);
     return res;
   }

@@ -404,7 +404,7 @@
           wrote ? el("span", { className: "summary-wrote" }, ["You wrote: ", el("span", { lang: "fr", text: wrote })]) : null,
           d.pronunciation ? el("span", { className: "pron", text: " " + d.pronunciation }) : null,
           m.hinted ? el("span", { className: "hint", text: " (with a hint)" }) : null,
-          d.french ? listenButton(d.french, d.audioKey, { compact: true }) : null
+          d.french ? listenButton(d.listenText || d.french, d.audioKey, { compact: true }) : null
         ]);
       })));
     }

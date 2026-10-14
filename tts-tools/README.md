@@ -7,7 +7,7 @@ with the site; nobody who uses the site needs any of this.
 
 | File | What it does |
 |---|---|
-| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak (verbs, topics and the Grammar tables: list cells, grid cells and examples, `say` used instead of `fr` when a row has one), normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). Writes `corpus.json`. |
+| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak (verbs, topics and the Grammar tables: list cells, grid cells and examples, `say` used instead of `fr` when a row has one; the everyday expressions: `VT_EXPR.speakText` (the filled-in `say` for "…" phrases) and each example), normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). Writes `corpus.json`. |
 | `generate.py` | Builds whatever is missing or changed, with QA and retries, then writes the site manifest, `CREDITS.md` and a review page. Incremental and idempotent: a second run with no data change generates nothing. |
 | `ttsqa.py` | QA: Whisper large-v3-turbo transcription (French, temperature 0, no prompt), homophone-aware scoring, number / clock-time normalization, silence / clipping / truncation / runaway-length checks. |
 | `test_ttsqa.py` | Unit tests for the QA text rules: `python -m unittest -v test_ttsqa`. |
@@ -28,6 +28,10 @@ python generate.py --strict-short --max-retries-short 7 --review-dir <tts-env>/c
 Then reload the site. If you use the Explain helper (`explainer/start.sh`), restart it so it serves the new files.
 
 Texts with no clip keep working: the site falls back to the device voice for them.
+
+Coverage now: 2,188 of 2,196 Listen texts have a clip (all 198 everyday-expression texts passed QA on the
+first run). Left to the device voice (`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`,
+`cher, chère`, `ceux`, `longue`, `tes`. `je me suis assis` is excluded by the user (`excludedByUser`).
 
 ## What generate.py does per text
 

@@ -19,7 +19,7 @@ var LESSONS = LEARN.buildLessonsById(DATA.lessons);
 var VERBS = {};
 DATA.verbs.forEach(function (v) { VERBS[v.id] = v; });
 
-var PRON_RE = /^[A-Za-z \-\/'(),.?!…]+$/;
+var PRON_RE = require("./fixtures/respelling.js").PRON_RE;
 var IPA_RE = /[əʒɛɔœøŋɲʁːˈɑɐʃθðʊɪ]/;
 var ID_RE = /^[a-z0-9-]+$/;
 

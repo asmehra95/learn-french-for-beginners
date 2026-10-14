@@ -99,7 +99,7 @@
       }
 
       // Today card: suggestNext (§6.1 item 3).
-      var next = LEARN.suggestNext(state, DATA, now);
+      var next = LEARN.suggestNext(state, DATA, now, ctx.EXPRESSIONS);
       body.appendChild(el("section", { className: "home-card today-card", "aria-labelledby": "home-today-h" }, [
         el("p", { className: "home-kicker", text: "Today" }),
         el("h3", { id: "home-today-h", tabindex: "-1", text: next.title }),
@@ -143,7 +143,7 @@
       ]));
 
       // To review (§6.1 item 5).
-      var deck = LEARN.mistakesDeck(state, DATA).length;
+      var deck = LEARN.mistakesDeck(state, DATA, ctx.EXPRESSIONS).length;
       var weak = LEARN.weakestVerbs(state, DATA, 3);
       var reviewKids = [
         el("h3", { id: "home-review-h", text: "To review" }),
@@ -226,6 +226,18 @@
           el("p", { text: "Articles, pronouns, possessives, ce/cette, question words, numbers and more, in one place." }),
           el("div", { className: "actions" }, [
             el("a", { className: "btn", id: "home-tables-link", href: "#tables" }, [el("span", { text: "Open the tables" }), UI.icon("arrow-right")])
+          ])
+        ]));
+      }
+
+      // Everyday expressions (views-expressions.js).
+      if (ctx.EXPRESSIONS) {
+        body.appendChild(el("section", { className: "home-card expr-card-home", "aria-labelledby": "home-expr-h" }, [
+          el("h3", { id: "home-expr-h" }, [UI.icon("message-circle"), el("span", { text: "Everyday expressions" })]),
+          el("p", { text: ctx.EXPRESSIONS.expressions.length + " phrases for greetings, shops, directions, small talk, plans and a few idioms, with pronunciation and recordings." }),
+          el("div", { className: "actions" }, [
+            el("a", { className: "btn", id: "home-expr-link", href: "#expressions" }, [el("span", { text: "Browse the expressions" }), UI.icon("arrow-right")]),
+            el("a", { className: "text-link", href: "#flashcards/expressions", text: "Practise with flashcards" })
           ])
         ]));
       }
@@ -319,6 +331,7 @@
     { name: "Conjugate", icon: "pencil", href: "#conjugate", text: "Type the right form for a pronoun." },
     { name: "Sentences", icon: "text", href: "#sentences", text: "Fill in the missing verb in a real sentence." },
     { name: "Multiple choice", icon: "list", href: "#choice", text: "Pick the right answer from four options." },
+    { name: "Expression flashcards", icon: "message-circle", href: "#flashcards/expressions", text: "Everyday phrases: French → English, English → French, or listen first.", expressions: true },
     { name: "Review my mistakes", icon: "rotate-ccw", href: "#review", text: "Practise the items you missed until they stick.", review: true }
   ];
 
@@ -328,8 +341,9 @@
       var UI = ctx.UI, el = UI.el;
       var box = $("practice-cards");
       UI.clear(box);
-      var deck = ctx.LEARN.mistakesDeck(ctx.state(), ctx.DATA).length;
+      var deck = ctx.LEARN.mistakesDeck(ctx.state(), ctx.DATA, ctx.EXPRESSIONS).length;
       HUB.forEach(function (c, i) {
+        if (c.expressions && !ctx.EXPRESSIONS) return;
         var hid = "hub-h-" + i;
         var extra = c.review
           ? el("p", { className: "hub-count", text: deck === 0 ? "Nothing to review yet." : deck + (deck === 1 ? " item to review" : " items to review") })

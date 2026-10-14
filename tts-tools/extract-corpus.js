@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /* Build tts-tools/corpus.json: every French string a Listen button in the verb trainer can speak.
    Loads the real site scripts (no copies), enumerates the Listen call sites (verbs, topics and the
-   Grammar tables: list cells, grid cells, examples; `say` wins over `fr`), and normalizes with
+   Grammar tables: list cells, grid cells, examples; `say` wins over `fr`; the everyday expressions:
+   VT_EXPR.speakText and the example), and normalizes with
    VT_LOGIC.ttsSpeak / VT_LOGIC.ttsKey, the single source of truth shared with the browser.
    Usage: node tts-tools/extract-corpus.js [--out <file>] [--site <verb-trainer dir>]
    Exports collect(siteDir) for the site's Node tests. No dependencies. */
@@ -26,7 +27,8 @@ function loadSite(siteDir) {
   const sandbox = { console };
   sandbox.window = sandbox;
   vm.createContext(sandbox);
-  ["data.js", "data-100.js", "verb-types.js", "topics-data.js", "reference-data.js", "merge-data.js", "logic.js", "topics.js"].forEach(f => {
+  ["data.js", "data-100.js", "verb-types.js", "topics-data.js", "reference-data.js", "merge-data.js", "logic.js",
+    "expressions-data.js", "expressions.js", "topics.js"].forEach(f => {
     const file = path.join(siteDir, "js", f);
     vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: file });
   });
@@ -73,6 +75,10 @@ function collect(siteDir) {
     else t.rows.forEach(r => add("table-cell", r.say || r.fr));
     (t.examples || []).forEach(e => add("table-example", e.fr));
   }));
+  const EX = w.VT_EXPRESSIONS, XE = w.VT_EXPR;
+  if (!EX || !XE) throw new Error("VT_EXPRESSIONS missing: js/expressions-data.js did not load");
+  // Mirrors views-expressions.js: listen(EXPR.speakText(e)), listen(e.example.fr).
+  EX.expressions.forEach(e => { add("expression", XE.speakText(e)); add("expression-example", e.example.fr); });
   add("settings-preview", PREVIEW_TEXT);
 
   const items = [...map.values()].sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));

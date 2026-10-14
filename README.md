@@ -45,9 +45,16 @@ native-speaker audio clips.
   numbers, dates and the time. Each table says when to use it; every French item has a pronunciation
   and a Listen button. Searchable (`cette`, `le mien`, `quatre-vingts`), printable, and available as a
   PDF and as Markdown.
+- **Everyday expressions** — 100 useful phrases in 10 themes (greetings, politeness, getting by,
+  shops and restaurants, directions, small talk, opinions, plans, a few idioms such as *poser un lapin*,
+  and conversation fillers). Each has a pronunciation, a natural English meaning, the literal meaning
+  where it helps, its register (formal / neutral / informal, as text), an example, a note and links to
+  the related verbs and grammar tables, with Listen buttons. Practise them as flashcards (French →
+  English, English → French, or Listen → meaning) with the same spaced repetition as the verbs; misses
+  show up in Review my mistakes and Progress has their own totals. Printable as a PDF and as Markdown.
 - **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
   bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
-  ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts") and the topic
+  ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts"), the everyday expressions ("excuse me", "lapin") and the topic
   lessons ("quel", "est-ce que"). Accent-, case-, apostrophe- and typo-tolerant. From a result you can open the verb card, listen to the matched
   form, or go to its lesson. A verb's type only shows if you search for it ("irregular", "reflexive").
 - **Foldable Browse section** — every verb grouped by lesson, with present-tense tables, past, future,
@@ -79,15 +86,18 @@ These PDFs are in the repo and served from the site:
 | [topics/02-reflexive-verbs-workbook.pdf](topics/02-reflexive-verbs-workbook.pdf) | Workbook: Reflexive Verbs |
 | [verb-trainer/reference/french-grammar-tables.pdf](verb-trainer/reference/french-grammar-tables.pdf) | Grammar tables quick reference (all 10 categories) |
 | [french-grammar-tables.md](french-grammar-tables.md) | Markdown source of the grammar tables |
+| [verb-trainer/reference/french-expressions.pdf](verb-trainer/reference/french-expressions.pdf) | 100 everyday expressions in 10 themes |
+| [french-expressions.md](french-expressions.md) | Markdown version of the everyday expressions |
 
 ## Audio
 
 Three layers, selectable in Settings → Voice:
 
-1. **Pre-recorded synthetic voice (default)** — 1,990 phrases generated with the open-source
+1. **Pre-recorded synthetic voice (default)** — 2,188 of the site's 2,196 Listen texts generated with the open-source
    Qwen3-TTS 1.7B Base model (`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16`, Apache-2.0). One
    consistent designed voice (not a real person's voice). Covers every present-tense form, past,
-   future, example sentences, topic answers and the Grammar tables (cells and examples). The
+   future, example sentences, topic answers, the Grammar tables (cells and examples) and all 100 everyday expressions with
+   their examples. The
    Credits view has a download link for the native-speaker recordings zip.
 
 2. **869 Lingua Libre native-speaker clips** — recorded by volunteer native French speakers on
@@ -142,6 +152,10 @@ The tables live in `verb-trainer/js/reference-data.js`. Regenerate the Markdown 
 `node tools/build-grammar-tables.js`; the PDF is printed from that script's `--html` output with
 headless Chrome (`--print-to-pdf`).
 
+## Regenerating the expressions
+The expressions live in `verb-trainer/js/expressions-data.js`. Regenerate the Markdown with
+`node tools/build-expressions.js`; the PDF is printed from that script's `--html` output with
+headless Chrome (`--print-to-pdf`).
 ## Regenerating audio
 
 See [tts-tools/README.md](tts-tools/README.md). The short version: activate the Python venv and run

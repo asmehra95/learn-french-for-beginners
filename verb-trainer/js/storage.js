@@ -38,6 +38,19 @@
     return out;
   }
 
+  /* Everyday expressions (expressions-data.js): ids and theme ids, [] when the file isn't loaded. */
+  function allExpressionIds() {
+    var d = root.VT_EXPRESSIONS;
+    return d && d.expressions ? d.expressions.map(function (e) { return e.id; }) : [];
+  }
+  function allExpressionThemeIds() {
+    var d = root.VT_EXPRESSIONS;
+    return d && d.themes ? d.themes.map(function (t) { return t.id; }) : [];
+  }
+  var EXPR_ID_RE = /^[a-z0-9-]{1,60}$/;
+  var EXPR_THEME_RE = /^[a-z0-9-]{1,40}$/;
+  var EXPR_THEMES_MAX = 20;
+
   function defaults() {
     return {
       version: VERSION,
@@ -46,6 +59,7 @@
       settings: {
         accentTolerant: true,
         selectedVerbIds: allVerbIds(),
+        selectedExpressionThemes: allExpressionThemeIds(), // additive v2 field: expression flashcard themes
         flashDeck: "inf-meaning",
         voiceNoticeDismissed: false,
         voiceURI: "",       // chosen computer voice; "" = automatic
@@ -100,10 +114,19 @@
       var knownVerbs = {};
       allVerbIds().forEach(function (id) { knownVerbs[id] = true; });
       var checkVerbs = Object.keys(knownVerbs).length > 0;
+      // Expression keys are "expr:<id>|<mode>|-": a known id when expressions-data.js is loaded, else any safe id.
+      var knownExpr = {};
+      allExpressionIds().forEach(function (id) { knownExpr[id] = true; });
+      var checkExpr = Object.keys(knownExpr).length > 0;
       Object.keys(raw.stats).forEach(function (k) {
         var s = raw.stats[k];
         if (!isObject(s) || UNSAFE_KEYS[k] || k.length > STAT_KEY_MAX) return;
-        if (checkVerbs && !Object.prototype.hasOwnProperty.call(knownVerbs, k.split("|")[0])) return;
+        var head = k.split("|")[0];
+        if (head.indexOf("expr:") === 0) {
+          var xid = head.slice(5);
+          if (UNSAFE_KEYS[xid] || !EXPR_ID_RE.test(xid)) return;
+          if (checkExpr && !Object.prototype.hasOwnProperty.call(knownExpr, xid)) return;
+        } else if (checkVerbs && !Object.prototype.hasOwnProperty.call(knownVerbs, head)) return;
         var last = Number(s.last);
         d.stats[k] = {
           box: Math.max(0, Math.min(4, Math.floor(Number(s.box)) || 0)),
@@ -132,6 +155,22 @@
       if (Array.isArray(s.selectedVerbIds)) {
         var known = allVerbIds();
         ds.selectedVerbIds = s.selectedVerbIds.filter(function (id) { return known.indexOf(id) !== -1; });
+      }
+      // additive v2 field (expressions): absent in older saves/exports -> all themes (the default)
+      if (Array.isArray(s.selectedExpressionThemes)) {
+        var knownThemes = allExpressionThemeIds();
+        var picked = {};
+        s.selectedExpressionThemes.forEach(function (id) { if (typeof id === "string") picked[id] = true; });
+        if (knownThemes.length) {
+          ds.selectedExpressionThemes = knownThemes.filter(function (id) { return Object.prototype.hasOwnProperty.call(picked, id); });
+        } else {
+          var seenTheme = {};
+          ds.selectedExpressionThemes = s.selectedExpressionThemes.filter(function (id) {
+            if (typeof id !== "string" || !EXPR_THEME_RE.test(id) || UNSAFE_KEYS[id] || seenTheme[id]) return false;
+            seenTheme[id] = true;
+            return true;
+          }).slice(0, EXPR_THEMES_MAX);
+        }
       }
       // version 2 settings
       if (THEMES.indexOf(s.theme) !== -1) ds.theme = s.theme;

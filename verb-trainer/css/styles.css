@@ -249,6 +249,9 @@ main:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; box-s
 }
 .nav-link:hover, .btn-util:hover { background: var(--primary-soft); color: var(--text); }
 .nav-link[aria-current="page"] { background: var(--primary); color: var(--on-primary); }
+/* 9 nav links (Phrases added): the tighter pills at every width, so the row fits from ~1000px up;
+   below that the list wraps (still 44px targets). */
+.nav-link { padding: var(--s-2); gap: var(--s-1); }
 .utility { display: flex; align-items: center; gap: var(--s-1); margin-left: auto; flex: none; }
 .btn-util .btn-label { white-space: nowrap; }
 .btn-util { justify-content: center; border-color: var(--border-strong); padding: var(--s-2); }
@@ -1222,6 +1225,30 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 .ref-links { margin: var(--s-3) 0 0; font-size: var(--fs-sm); }
 .ref-links a { display: inline-block; padding: var(--s-1) 0; }
 .tables-card h3 .icon { color: var(--primary); }
+/* Everyday expressions (views-expressions.js) and the expression flashcards. The register pill is text in a
+   bordered pill (colour is decoration only), so it reads the same in light, dark and forced colours. */
+.expr-register {
+  display: inline-flex; align-items: center; padding: 0 var(--s-2); border: 1px solid var(--text); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--text); font-family: var(--font-ui); font-size: var(--fs-xs); font-weight: 700;
+  letter-spacing: 0.02em; line-height: 1.6; vertical-align: middle;
+}
+.expr-card .expr-say { margin: 0 0 var(--s-1); }
+.expr-card .expr-say .listen-group { margin-left: var(--s-1); }
+.expr-en { margin: 0 0 var(--s-1); font-weight: 600; color: var(--text); }
+.expr-literal, .expr-note { color: var(--muted); }
+.expr-literal { margin: 0 0 var(--s-2); font-style: italic; }
+.expr-example { margin: var(--s-2) 0 0; }
+.expr-example p { margin: 0; max-width: none; }
+.expr-example .listen-group { margin: 0 var(--s-1); }
+.expr-note { margin: var(--s-2) 0 0; }
+.expr-practise { margin: 0 0 var(--s-3); }
+.expr-theme { margin: var(--s-3) 0; }
+.expr-theme h3:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.expr-card-home h3 .icon { color: var(--primary); }
+.card-extra .card-line { display: block; }
+.card-front .expr-register { font-size: var(--fs-sm); }
+.flash-cue { margin: var(--s-1) auto 0; color: var(--muted); font-weight: 400; }
+.filter-themes .actions { margin: 0 0 var(--s-2); }
 @media (max-width: 720px) {
   .ref-table { min-width: 34rem; }
   .ref-grid { min-width: 30rem; }
@@ -1256,6 +1283,12 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   .site-header, .bottom-nav, .site-footer, .skip-link, #notices, #import-hint, #announcer, .audio-status,
   .listen-group, .tables-toolbar, .tables-toc, dialog { display: none !important; }
   body:has(#view-tables:not([hidden])) .view:not(#view-tables) { display: none !important; }
+  body:has(#view-expressions:not([hidden])) .view:not(#view-expressions) { display: none !important; }
+  #view-expressions .muted, #view-expressions .pron, #view-expressions .expr-literal, #view-expressions .expr-note, #view-expressions .lesson-summary-count { color: #333 !important; }
+  #view-expressions h2, #view-expressions h3, #view-expressions h4 { color: #000 !important; }
+  #view-expressions a { color: #000 !important; text-decoration: none !important; }
+  .expr-practise { display: none !important; }
+  .expr-register { border: 1px solid #000 !important; background: #fff !important; color: #000 !important; }
   html, body, main, .ref-card, .home-card { background: #fff !important; color: #000 !important; box-shadow: none !important; }
   body::before { display: none !important; }
   main { padding: 0 !important; max-width: none !important; }
@@ -1270,6 +1303,8 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   h3, h4 { break-after: avoid; page-break-after: avoid; }
   .tables-cat { break-before: page; }
   .tables-cat:first-of-type { break-before: auto; }
+  .expr-theme { break-before: page; }
+  .expr-theme:first-of-type { break-before: auto; }
   thead th { background: #e8e8e8 !important; color: #000 !important; }
   th, td { border-bottom: 1px solid #999 !important; }
   tbody tr:nth-child(even) { background: #f2f2f2 !important; }

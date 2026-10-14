@@ -14,16 +14,20 @@
   var TITLES = {
     home: "Home", lesson: "Lesson", browse: "Learn", practice: "Practice", flashcards: "Flashcards", conjugate: "Conjugate",
     sentences: "Sentences", choice: "Multiple choice", review: "Review my mistakes", progress: "Progress", credits: "Credits", topics: "Topics",
-    explain: "Explain", tables: "Grammar tables"
+    explain: "Explain", tables: "Grammar tables", expressions: "Everyday expressions"
   };
   /* Which nav item is current for each view (§4, §7.2). Credits has none. */
   var NAV_OF = {
     home: "home", lesson: "learn", browse: "learn", practice: "practice", flashcards: "practice", conjugate: "practice",
     sentences: "practice", choice: "practice", review: "review", progress: "progress", topics: "topics", explain: "explain",
-    tables: "tables"
+    tables: "tables", expressions: "expressions"
   };
   var ACCENTS = ["é", "è", "ê", "ë", "à", "â", "ç", "î", "ï", "ô", "û", "ù", "œ", "'"];
   var DECKS = ["inf-meaning", "meaning-inf", "conj"];
+  /* Everyday expressions (expressions-data.js + expressions.js); null when either file is missing. */
+  var EXPR = window.VT_EXPR || null;
+  var EXPR_DATA = EXPR && window.VT_EXPRESSIONS && window.VT_EXPRESSIONS.expressions ? window.VT_EXPRESSIONS : null;
+  var EXPR_DECKS = EXPR_DATA ? EXPR.DECKS : [];
 
   /* Nothing at this level may dereference DATA, STORE, L, SPEECH or state: init() checks them first (§16). */
   var LEARN = window.VT_LEARN;
@@ -36,6 +40,9 @@
   var views = {};          // per-view controllers; each mode controller holds shownKey (§12.1.1 rule 3)
   var filterKeys = [];     // session keys started with filter scope, dropped on a practice-set edit (rule 6)
   var selectAll = null;    // "Select all" for the empty practice-set message (set by buildFilter)
+  var selectAllThemes = null; // "Select all themes" for the empty expression practice set (set by buildFilter)
+  var syncFilter = null;   // the current filter's sync(), set at the end of every buildFilter()
+  var filterPlacedIn = null; // the view the practice-set filter sits in (null when hidden)
 
   /* ---------- small DOM helpers ---------- */
   function $(id) { return document.getElementById(id); }
@@ -65,10 +72,37 @@
     return selectedVerbs();
   }
 
+  function isExprDeck(deck) { return EXPR_DECKS.indexOf(deck) !== -1; }
+
+  /* Expression themes for the active flashcards route: the route's theme (or all), the practice set's themes, none for a lesson. */
+  function scopeThemeIds() {
+    var r = currentRouteInfo;
+    if (!EXPR_DATA || !r || r.scope === "lesson") return [];
+    if (r.scope === "expressions") return r.themeId ? [r.themeId] : EXPR.allThemeIds(EXPR_DATA);
+    return state.settings.selectedExpressionThemes.slice();
+  }
+  function scopeExpressions() {
+    var ids = scopeThemeIds();
+    return EXPR_DATA ? EXPR_DATA.expressions.filter(function (e) { return ids.indexOf(e.theme) !== -1; }) : [];
+  }
+
+  /* The deck the Flashcards view uses for a route: expression routes need an expression deck, lesson routes a verb deck. */
+  function effectiveDeck(info) {
+    var deck = state.settings.flashDeck;
+    var known = DECKS.indexOf(deck) !== -1 || isExprDeck(deck);
+    if (!known) deck = "inf-meaning";
+    if (info && info.scope === "expressions") return isExprDeck(deck) ? deck : "expr-fr-en";
+    if (info && info.scope === "lesson") return isExprDeck(deck) ? "inf-meaning" : deck;
+    return deck;
+  }
+
   /* Canonical route + scope signature (+ deck for flashcards). location.hash is read after any replaceState. */
   function sessionKey() {
+    var flash = currentRouteInfo && currentRouteInfo.name === "flashcards";
+    var deck = flash ? effectiveDeck(currentRouteInfo) : null;
+    if (flash && isExprDeck(deck)) return location.hash.slice(1) + "#expr:" + scopeThemeIds().slice().sort().join(",") + "|" + deck;
     var k = location.hash.slice(1) + "#" + scopeVerbs().map(function (v) { return v.id; }).sort().join(",");
-    if (currentRouteInfo && currentRouteInfo.name === "flashcards") k += "|" + state.settings.flashDeck;
+    if (flash) k += "|" + deck;
     return k;
   }
 
@@ -83,11 +117,17 @@
     return String(L.promptPronoun(r)).replace(/\s+(me|te|se|nous|vous|m'|t'|s')$/, "");
   }
 
-  /* "all {n} verbs" / "{k} of {n} verbs" / "no verbs selected", from the data (shared by the filter and the hub). */
-  function filterSummaryText() {
+  /* "all {n} verbs" / "{k} of {n} verbs" / "no verbs selected", from the data (shared by the filter and the hub).
+     opts.themes appends the expression themes (Flashcards and the Practice hub, where the theme filter shows). */
+  function filterSummaryText(opts) {
     var n = DATA.verbs.length;
     var k = state.settings.selectedVerbIds.length;
-    return k === n ? "all " + n + " verbs" : k === 0 ? "no verbs selected" : k + " of " + n + " verbs";
+    var text = k === n ? "all " + n + " verbs" : k === 0 ? "no verbs selected" : k + " of " + n + " verbs";
+    if (opts && opts.themes && EXPR_DATA) {
+      var tn = EXPR_DATA.themes.length, tk = state.settings.selectedExpressionThemes.length;
+      text += tk === tn ? ", all " + tn + " expression themes" : tk === 0 ? ", no expression themes" : ", " + tk + " of " + tn + " expression themes";
+    }
+    return text;
   }
 
   /* ---------- audio ---------- */
@@ -405,6 +445,46 @@
     });
     body.appendChild(grid);
 
+    // Expression themes (Flashcards and the Practice hub only; placeFilter toggles the fieldset).
+    var themeBoxes = [];
+    if (EXPR_DATA) {
+      var allThemes = el("button", { type: "button", className: "btn btn-small", text: "All themes" });
+      var noThemes = el("button", { type: "button", className: "btn btn-small", text: "No themes" });
+      var themeSet = el("fieldset", { className: "filter-themes", id: "filter-themes" }, [
+        el("legend", { text: "Expression themes" }),
+        el("div", { className: "actions" }, [allThemes, noThemes])
+      ]);
+      var counts = {};
+      EXPR_DATA.expressions.forEach(function (e) { counts[e.theme] = (counts[e.theme] || 0) + 1; });
+      EXPR_DATA.themes.forEach(function (t) {
+        var id = "flt-theme-" + t.id;
+        var cb = el("input", { type: "checkbox", id: id, "data-theme": t.id });
+        themeBoxes.push(cb);
+        themeSet.appendChild(el("div", { className: "check" }, [cb, el("label", { "for": id, text: t.title + " (" + (counts[t.id] || 0) + ")" })]));
+      });
+      themeSet.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
+      body.appendChild(themeSet);
+      var setThemes = function (ids) {
+        state.settings.selectedExpressionThemes = EXPR.allThemeIds(EXPR_DATA).filter(function (id) { return ids.indexOf(id) !== -1; });
+        save();
+        sync();
+        filterKeys.forEach(function (k) { window.VT_SESSION.drop(k); });
+        filterKeys = [];
+        if (PRACTICE.indexOf(currentRoute) !== -1) showMode(currentRoute);
+        if (currentRoute === "practice") showRegistered("practice");
+      };
+      selectAllThemes = function () { setThemes(EXPR.allThemeIds(EXPR_DATA)); };
+      allThemes.addEventListener("click", selectAllThemes);
+      noThemes.addEventListener("click", function () { setThemes([]); });
+      themeBoxes.forEach(function (cb) {
+        cb.addEventListener("change", function () {
+          var id = cb.getAttribute("data-theme");
+          var sel = state.settings.selectedExpressionThemes.filter(function (x) { return x !== id; });
+          setThemes(cb.checked ? sel.concat([id]) : sel);
+        });
+      });
+    }
+
     function sync() {
       var sel = state.settings.selectedVerbIds;
       verbBoxes.forEach(function (cb) { cb.checked = sel.indexOf(cb.getAttribute("data-verb")) !== -1; });
@@ -414,7 +494,8 @@
         cb.checked = n === ids.length;
         cb.indeterminate = n > 0 && n < ids.length;
       });
-      $("filter-summary").textContent = filterSummaryText();
+      themeBoxes.forEach(function (cb) { cb.checked = state.settings.selectedExpressionThemes.indexOf(cb.getAttribute("data-theme")) !== -1; });
+      $("filter-summary").textContent = filterSummaryText({ themes: filterPlacedIn === "flashcards" || filterPlacedIn === "practice" });
     }
 
     function setSelection(ids) {
@@ -447,16 +528,28 @@
       });
     });
     sync();
+    syncFilter = sync;
   }
 
   /* Show the question area or the scope-dependent empty message (§12.1.1 rule 2). Returns true when there are verbs. */
   function toggleEmpty(route) {
     var section = $("view-" + route);
-    var empty = scopeVerbs().length === 0;
+    var exprDeck = route === "flashcards" && isExprDeck(effectiveDeck(currentRouteInfo));
+    var empty = exprDeck ? scopeExpressions().length === 0 : scopeVerbs().length === 0;
     var box = section.querySelector(".empty-msg");
     section.querySelector(".practice-area").hidden = empty;
     clear(box);
-    if (empty) {
+    if (empty && exprDeck) {
+      if (!currentRouteInfo || currentRouteInfo.scope === "filter") {
+        var tbtn = el("button", { type: "button", className: "btn btn-primary", text: "Select all themes" });
+        tbtn.addEventListener("click", function () { if (selectAllThemes) selectAllThemes(); });
+        box.appendChild(el("p", { text: "Your practice set has no expression themes. Pick at least one theme above." }));
+        box.appendChild(tbtn);
+      } else {
+        box.appendChild(el("p", { text: "There are no expressions to practise here." }));
+        box.appendChild(el("a", { className: "btn", href: "#expressions", text: "Browse the expressions" }));
+      }
+    } else if (empty) {
       if (!currentRouteInfo || currentRouteInfo.scope === "filter") {
         var btn = el("button", { type: "button", className: "btn btn-primary", text: "Select all" });
         btn.addEventListener("click", function () { if (selectAll) selectAll(); });
@@ -475,6 +568,7 @@
   function showMode(name) {
     var view = views[name];
     if (!view) return;
+    if (name === "flashcards") syncDeckSelect();
     var k = sessionKey();
     if (!toggleEmpty(name)) return;
     var s = window.VT_SESSION.getOrStart(k, view.init);
@@ -494,6 +588,10 @@
     var isMode = PRACTICE.indexOf(name) !== -1;
     var showFilter = name === "practice" || (isMode && info.scope === "filter");
     var chip = isMode ? $(name + "-scope") : null;
+    filterPlacedIn = showFilter ? name : null;
+    var themes = $("filter-themes");
+    if (themes) themes.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
+    if (syncFilter) syncFilter();
     if (showFilter) {
       $("view-" + name).querySelector(".filter-slot").appendChild(filter);
       filter.hidden = false;
@@ -503,6 +601,13 @@
     filter.hidden = true;
     if (!chip) return;
     clear(chip);
+    if (info.scope === "expressions") {
+      var theme = info.themeId && EXPR_DATA ? EXPR.index(EXPR_DATA).themeById[info.themeId] : null;
+      chip.appendChild(document.createTextNode(theme ? "Expressions: " + theme.title + " · " : "All expressions · "));
+      chip.appendChild(el("a", { href: "#flashcards", text: "Use my practice set instead" }));
+      chip.hidden = false;
+      return;
+    }
     var lesson = info.lessonId != null ? lessonsById[info.lessonId] : null;
     if (info.scope === "lesson" && lesson && info.path) {
       chip.appendChild(document.createTextNode("Lesson " + lesson.id + " · " + (name === "choice" ? "Quiz" : "Practice step")));
@@ -983,7 +1088,7 @@
       var text = item.options[s.ui.selected];
       var ok = text === item.correct;
       var fam = item.family === "choice-infinitive" ? item.family : "choice-" + item.family;
-      var cls = ok ? null : safeClassify(text, item, fam);
+      var cls = ok || item.expr ? null : safeClassify(text, item, fam);
       record(item.key, ok);
       window.VT_SESSION.recordResult(s, item, ok, false);
       s.ui.answered = true;
@@ -1560,6 +1665,19 @@
   }
 
   /* ---------- Flashcards ---------- */
+  /* The deck <select> shows the route's effective deck; the other family's optgroup is disabled
+     (lesson routes: verbs only; expression routes: expressions only). */
+  function syncDeckSelect() {
+    var sel = $("flash-deck"), verbs = $("flash-deck-verbs"), expr = $("flash-deck-expr");
+    var scope = currentRouteInfo && currentRouteInfo.name === "flashcards" ? currentRouteInfo.scope : null;
+    if (expr) {
+      expr.hidden = !EXPR_DATA;
+      expr.disabled = !EXPR_DATA || scope === "lesson";
+    }
+    if (verbs) verbs.disabled = scope === "expressions";
+    sel.value = effectiveDeck(currentRouteInfo);
+  }
+
   function buildFlashcards() {
     var deckSel = $("flash-deck");
     var showBtn = $("flash-show");
@@ -1568,10 +1686,12 @@
     var back = $("flash-back");
     var card = $("flash-card");
     var feedback = $("flash-feedback");
-    deckSel.value = DECKS.indexOf(state.settings.flashDeck) !== -1 ? state.settings.flashDeck : "inf-meaning";
+    var autoPlayNext = false; // set only around view.advance() in grade(): the audio deck plays the next card once
+    syncDeckSelect();
 
     function items() {
-      var deck = deckSel.value;
+      var deck = effectiveDeck(currentRouteInfo);
+      if (isExprDeck(deck)) return EXPR.flashItems(EXPR_DATA, scopeThemeIds(), deck);
       var out = [];
       scopeVerbs().forEach(function (v) {
         if (deck === "conj") {
@@ -1581,6 +1701,52 @@
         }
       });
       return out;
+    }
+
+    function registerPill(e) {
+      return el("span", { className: "expr-register", "data-register": e.register, text: EXPR.REGISTER_LABEL[e.register] || e.register });
+    }
+    function cardLine(kids) { return el("span", { className: "card-line" }, kids); }
+
+    /* Expression decks: block lines in the #flash-extra paragraph are spans (phrasing content). */
+    function renderExpr(s, front, answer) {
+      var it = s.current, ui = s.ui, e = it.expr, deck = it.deck;
+      var extra = $("flash-extra");
+      clear(extra);
+      var literal = e.literal ? cardLine(["Literally: " + e.literal]) : null;
+      var register = cardLine(["Register: ", registerPill(e)]);
+      var example = cardLine(["Example: ", el("span", { lang: "fr", text: e.example.fr }), " — " + e.example.en]);
+      $("flash-pron").textContent = e.pron;
+      if (deck === "expr-fr-en") {
+        $("flash-front-label").textContent = "What does this expression mean?";
+        front.setAttribute("lang", "fr");
+        front.textContent = e.fr;
+        answer.textContent = e.en;
+        appendParts(extra, [literal, register, example].filter(Boolean));
+        setListen("flash-listen-slot", EXPR.speakText(e), null);
+      } else if (deck === "expr-en-fr") {
+        $("flash-front-label").textContent = "How do you say this in French?";
+        front.appendChild(document.createTextNode(e.en));
+        front.appendChild(document.createTextNode(" "));
+        front.appendChild(registerPill(e));
+        var cue = $("flash-cue");
+        cue.textContent = EXPR.cueText(e);
+        cue.hidden = !e.cue;
+        answer.appendChild(fr(e.fr));
+        appendParts(extra, [example]);
+        setListen("flash-listen-slot", ui.flipped ? EXPR.speakText(e) : null, null);
+      } else {
+        $("flash-front-label").textContent = "Listen. What does it mean?";
+        front.textContent = "Press Listen (L) to hear it.";
+        answer.appendChild(fr(e.fr));
+        answer.appendChild(document.createTextNode(" — " + e.en));
+        appendParts(extra, [literal, register].filter(Boolean));
+        setListen("flash-listen-slot", EXPR.speakText(e), null);
+      }
+      if (autoPlayNext && deck === "expr-audio" && !ui.flipped) {
+        autoPlayNext = false;
+        play(EXPR.speakText(e), null);
+      }
     }
 
     function render(s) {
@@ -1593,8 +1759,13 @@
       front.removeAttribute("lang");
       var answer = $("flash-answer");
       clear(answer);
+      var cueLine = $("flash-cue");
+      cueLine.textContent = "";
+      cueLine.hidden = true;
       // No verb type on either face (the learner guesses it); it is shown only inside the Conjugation peek.
-      if (deck === "inf-meaning") {
+      if (it.expr) {
+        renderExpr(s, front, answer);
+      } else if (deck === "inf-meaning") {
         $("flash-front-label").textContent = "What does this verb mean?";
         front.setAttribute("lang", "fr");
         front.textContent = v.infinitive;
@@ -1626,7 +1797,8 @@
       showBtn.setAttribute("aria-expanded", ui.flipped ? "true" : "false");
       knew.hidden = !ui.flipped;
       notYet.hidden = !ui.flipped;
-      peek.update(v, deck === "inf-meaning" || ui.flipped);
+      if (it.expr) peek.update(null, false);
+      else peek.update(v, deck === "inf-meaning" || ui.flipped);
       renderBar($("flash-bar"), s);
     }
 
@@ -1730,12 +1902,15 @@
       if (!s || !s.current || !s.ui.flipped) return;
       record(s.current.key, ok);
       window.VT_SESSION.recordResult(s, s.current, ok, false);
+      autoPlayNext = true;
       view.advance();
+      autoPlayNext = false;
       if (!s.done) setFeedback(feedback, ok ? "success" : "", ok ? "Marked as known. Next card." : "Marked “not yet”. You will see it again soon. Next card.");
     }
     knew.addEventListener("click", function () { grade(true); });
     notYet.addEventListener("click", function () { grade(false); });
     deckSel.addEventListener("change", function () {
+      if (!deckSel.value) return;
       state.settings.flashDeck = deckSel.value;
       save();
       showMode("flashcards"); // the deck is part of the session key, so this starts a new session
@@ -1916,6 +2091,32 @@
       });
     }
 
+    // Everyday expressions: their own totals (they are also part of the overall Answered / Accuracy above).
+    if (EXPR_DATA) {
+      var xs = EXPR.stats(state, EXPR_DATA);
+      body.appendChild(el("h3", { text: "Expressions" }));
+      body.appendChild(el("dl", { className: "totals" }, [
+        el("div", null, [el("dt", { text: "Expression answers" }), el("dd", { text: String(xs.answered) })]),
+        el("div", null, [el("dt", { text: "Expression accuracy" }), el("dd", { text: xs.answered ? Math.round((100 * xs.correct) / xs.answered) + "%" : "–" })]),
+        el("div", null, [el("dt", { text: "Cards mastered" }), el("dd", { text: xs.mastered + " of " + xs.total })])
+      ]));
+      body.appendChild(tableRegion("Accuracy by expression theme", el("table", { className: "stats-table" }, [
+        el("caption", { text: "Expression flashcard answers per theme, across the three decks" }),
+        el("thead", null, [el("tr", null, ["Theme", "Answered", "Correct", "Accuracy", "Mastered cards", "Practise"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+        el("tbody", null, EXPR_DATA.themes.map(function (th) {
+          var p = xs.byTheme[th.id];
+          return el("tr", null, [
+            el("th", { scope: "row", text: th.title }),
+            el("td", { text: String(p.answered) }),
+            el("td", { text: String(p.correct) }),
+            el("td", { text: p.answered ? Math.round((100 * p.correct) / p.answered) + "%" : "–" }),
+            el("td", { text: p.mastered + " of " + p.total }),
+            el("td", null, [el("a", { href: "#flashcards/expressions/" + th.id, "aria-label": "Practise " + th.title + " with flashcards", text: "Practise" })])
+          ]);
+        }))
+      ])));
+    }
+
     body.appendChild(el("h3", { text: "Accuracy by verb" }));
     var rows = DATA.verbs.map(function (v) {
       var p = perVerb[v.id];
@@ -1944,7 +2145,7 @@
     save();
     buildFilter();
     Array.prototype.forEach.call(document.querySelectorAll(".tolerant-toggle"), function (o) { o.checked = state.settings.accentTolerant; });
-    $("flash-deck").value = state.settings.flashDeck;
+    syncDeckSelect();
     voiceUI.reset();
     syncSettings(); // also re-applies the theme through VT_THEME.apply
     window.VT_SESSION.clearAll();
@@ -2130,6 +2331,11 @@
     if (location.hash === "#main") { $("main").focus(); return; } // skip link without JS handling
     var info = LEARN.parseRoute(location.hash, lessonsById);
     if (info.redirect) history.replaceState(null, "", info.redirect);
+    if (info.name === "flashcards" && info.scope === "expressions" && info.themeId &&
+        !(EXPR_DATA && EXPR.index(EXPR_DATA).themeById[info.themeId])) {
+      history.replaceState(null, "", "#flashcards/expressions"); // unknown theme: all expressions
+      info.themeId = null;
+    }
     var name = info.name;
     var first = currentRoute === null;
     currentRoute = name;
@@ -2242,6 +2448,7 @@
     // View context for the registered views (§3.1), including the panel factories and item builders (§11.3).
     ctx = {
       DATA: DATA, L: L, LEARN: LEARN, UI: window.VT_UI, SESSION: window.VT_SESSION, SPEECH: SPEECH,
+      EXPRESSIONS: EXPR_DATA,
       state: function () { return state; },
       save: save,
       record: record,
@@ -2255,7 +2462,7 @@
       makeTypedPanel: makeTypedPanel, makeChoicePanel: makeChoicePanel,
       buildTypedItem: buildTypedItem, buildChoiceItem: buildChoiceItem,
       buildToolbar: buildToolbar, bindTolerant: bindTolerant, recordDay: recordTopicAnswer,
-      filter: { summaryText: filterSummaryText }
+      filter: { summaryText: function () { return filterSummaryText({ themes: true }); } }
     };
     Object.keys(window.VT_VIEWS).forEach(function (n) {
       try { window.VT_VIEWS[n].build(ctx); } catch (err) { viewFailed(n, err); }

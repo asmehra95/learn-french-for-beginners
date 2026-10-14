@@ -651,9 +651,16 @@
     return set;
   }
 
-  /** Keys with a mistake that aren't mastered again, weakest and most recent first. */
-  function mistakesDeck(state, data) {
+  /* The expressions helper (expressions.js loads after this file in the browser): looked up on use. */
+  function EXPR() {
+    return (typeof window !== "undefined" && window.VT_EXPR) || (typeof require === "function" ? require("./expressions.js") : null);
+  }
+
+  /** Keys with a mistake that aren't mastered again, weakest and most recent first.
+      exprData (optional, VT_EXPRESSIONS) adds the everyday expressions' "expr:<id>" keys. */
+  function mistakesDeck(state, data, exprData) {
     var known = verbIdSet(data);
+    ((exprData && exprData.expressions) || []).forEach(function (e) { known["expr:" + e.id] = true; });
     var stats = state.stats || {};
     return Object.keys(stats).filter(function (k) {
       var s = stats[k];
@@ -700,9 +707,9 @@
   }
 
   /** { kind, title, reason, href } for Home's Today card (first matching rule, §6.1). */
-  function suggestNext(state, data, now) {
+  function suggestNext(state, data, now, exprData) {
     var lessons = (data && data.lessons) || [];
-    var deck = mistakesDeck(state, data);
+    var deck = mistakesDeck(state, data, exprData);
     var first = lessons[0];
     if (first && state.totals.answered === 0 && !lessonRecord(state, first.id).learned) {
       return { kind: "start", lessonId: first.id, title: "Start Lesson " + first.id + ": " + first.title,
@@ -804,6 +811,11 @@
       }
       return info("browse", "lesson", { lessonId: bid, redirect: "#browse/lesson/" + bid });
     }
+    if (name === "flashcards" && seg[1] === "expressions") {
+      // #flashcards/expressions, #flashcards/expressions/<themeId>; app.js checks the theme exists.
+      if (seg.length === 2) return info("flashcards", "expressions", { themeId: null });
+      return seg.length === 3 && /^[a-z0-9-]+$/.test(seg[2]) ? info("flashcards", "expressions", { themeId: seg[2] }) : home;
+    }
     if (MODES.indexOf(name) !== -1) {
       if (seg.length === 1) return info(name, "filter");
       if (name === "choice" && seg.length === 2 && seg[1] === "all") return info(name, "all");
@@ -831,6 +843,14 @@
       if (seg.length > 3 || !TID.test(seg[1])) return home;
       if (seg.length === 2) return info("tables", "category", { categoryId: seg[1] });
       return TID.test(seg[2]) ? info("tables", "table", { categoryId: seg[1], tableId: seg[2] }) : home;
+    }
+    if (name === "expressions") {
+      // #expressions, #expressions/<themeId>, #expressions/<themeId>/<exprId>; views-expressions.js checks the ids exist.
+      var XID = /^[a-z0-9-]+$/;
+      if (seg.length === 1) return info("expressions", "all");
+      if (seg.length > 3 || !XID.test(seg[1])) return home;
+      if (seg.length === 2) return info("expressions", "theme", { themeId: seg[1] });
+      return XID.test(seg[2]) ? info("expressions", "item", { themeId: seg[1], exprId: seg[2] }) : home;
     }
     if (name === "review") {
       if (seg.length === 1) return info("review", "deck");
@@ -861,6 +881,10 @@
 
   /** { french, pronunciation, audioKey } for the summary's "To review" list. */
   function displayFor(item) {
+    if (item.expr) {
+      var e = item.expr;
+      return { french: e.fr, pronunciation: e.pron, audioKey: null, listenText: EXPR().speakText(e) };
+    }
     var verb = item.verb;
     if (item.kind === "choice" && item.listen) {
       return { french: item.listen.text, pronunciation: pronunciationForKey(verb, item.listen.key), audioKey: item.listen.key };

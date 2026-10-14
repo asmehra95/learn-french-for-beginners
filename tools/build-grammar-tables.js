@@ -210,4 +210,8 @@ if (require.main === module) {
   }
 }
 
-module.exports = { markdown: markdown, printHtml: printHtml };
+module.exports = {
+  markdown: markdown, printHtml: printHtml,
+  // shared with tools/build-expressions.js
+  KEY_MD: KEY_MD, TIPS: TIPS, LICENCE: LICENCE, LIAISON_HTML: LIAISON_HTML, CSS: CSS, esc: esc, cell: cell
+};

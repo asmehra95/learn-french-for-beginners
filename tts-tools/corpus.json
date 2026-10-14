@@ -1,7 +1,7 @@
 {
  "normalization": "v1",
- "generatedAt": "2026-10-14T17:36:01.826Z",
- "count": 1998,
+ "generatedAt": "2026-10-14T19:33:19.222Z",
+ "count": 2196,
  "excluded": [
   "casual",
   "formal",
@@ -31,6 +31,28 @@
    "hash": "35fb755bf2152ed2"
   },
   {
+   "key": "Allez, un petit effort, ce n'est pas la mer à boire !",
+   "speak": "Allez, un petit effort, ce n'est pas la mer à boire !",
+   "texts": [
+    "Allez, un petit effort, ce n'est pas la mer à boire !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "286fefbd6c78a364"
+  },
+  {
+   "key": "Alors, tu viens ou pas ?",
+   "speak": "Alors, tu viens ou pas ?",
+   "texts": [
+    "Alors, tu viens ou pas ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a4eefdfae1f7d2d9"
+  },
+  {
    "key": "Amusez-vous bien !",
    "speak": "Amusez-vous bien !",
    "texts": [
@@ -41,6 +63,28 @@
     "topic-summary-answer"
    ],
    "hash": "f4150c098386a193"
+  },
+  {
+   "key": "Après vous",
+   "speak": "Après vous",
+   "texts": [
+    "Après vous"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "1545c061f53e88d5"
+  },
+  {
+   "key": "Après vous, madame.",
+   "speak": "Après vous, madame.",
+   "texts": [
+    "Après vous, madame."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a1fee11030323c3a"
   },
   {
    "key": "Asseyez-vous !",
@@ -65,6 +109,50 @@
     "topic-summary-answer"
    ],
    "hash": "81311bfc07db69c3"
+  },
+  {
+   "key": "Au feu rouge, tournez à droite.",
+   "speak": "Au feu rouge, tournez à droite.",
+   "texts": [
+    "Au feu rouge, tournez à droite."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "536685be77ea3f4d"
+  },
+  {
+   "key": "Au revoir",
+   "speak": "Au revoir",
+   "texts": [
+    "Au revoir"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "94fe11b9885e9259"
+  },
+  {
+   "key": "Au revoir, bonne soirée !",
+   "speak": "Au revoir, bonne soirée !",
+   "texts": [
+    "Au revoir, bonne soirée !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a2e42a61b15fea67"
+  },
+  {
+   "key": "Avec plaisir",
+   "speak": "Avec plaisir",
+   "texts": [
+    "Avec plaisir"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "1bcd42b6979858eb"
   },
   {
    "key": "Avec qui",
@@ -122,6 +210,72 @@
    "hash": "40f9ad25d233939b"
   },
   {
+   "key": "Bien sûr",
+   "speak": "Bien sûr",
+   "texts": [
+    "Bien sûr"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "8e0e878272cb29f4"
+  },
+  {
+   "key": "Bon appétit !",
+   "speak": "Bon appétit !",
+   "texts": [
+    "Bon appétit !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "2d26c47fd1e96a34"
+  },
+  {
+   "key": "Bon, je dois partir.",
+   "speak": "Bon, je dois partir.",
+   "texts": [
+    "Bon, je dois partir."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "89ec1387c672ef84"
+  },
+  {
+   "key": "Bon.",
+   "speak": "Bon.",
+   "texts": [
+    "Bon."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "823cd842fe5f42bf"
+  },
+  {
+   "key": "Bonjour",
+   "speak": "Bonjour",
+   "texts": [
+    "Bonjour"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9172e8eec99f144f"
+  },
+  {
+   "key": "Bonjour ! Vous parlez anglais ? Je parle un peu français.",
+   "speak": "Bonjour ! Vous parlez anglais ? Je parle un peu français.",
+   "texts": [
+    "Bonjour ! Vous parlez anglais ? Je parle un peu français."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "cd9291b8c5c8f639"
+  },
+  {
    "key": "Bonjour, je m'appelle Paul.",
    "speak": "Bonjour, je m'appelle Paul.",
    "texts": [
@@ -133,6 +287,39 @@
    "hash": "948671fff7c3e4a9"
   },
   {
+   "key": "Bonjour, je m'appelle Thomas. Et vous ?",
+   "speak": "Bonjour, je m'appelle Thomas. Et vous ?",
+   "texts": [
+    "Bonjour, je m'appelle Thomas. Et vous ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "3cc28078da8e6ce7"
+  },
+  {
+   "key": "Bonjour, madame !",
+   "speak": "Bonjour, madame !",
+   "texts": [
+    "Bonjour, madame !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "2730657e4f7ac126"
+  },
+  {
+   "key": "Bonjour, madame Martin. Comment allez-vous ?",
+   "speak": "Bonjour, madame Martin. Comment allez-vous ?",
+   "texts": [
+    "Bonjour, madame Martin. Comment allez-vous ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "f699eb6acc170330"
+  },
+  {
    "key": "Bonjour, nous avons deux frères.",
    "speak": "Bonjour, nous avons deux frères.",
    "texts": [
@@ -142,6 +329,94 @@
     "settings-preview"
    ],
    "hash": "ac742f86c538eafd"
+  },
+  {
+   "key": "Bonne journée",
+   "speak": "Bonne journée",
+   "texts": [
+    "Bonne journée"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9450d5c8f73e8105"
+  },
+  {
+   "key": "Bonne nuit",
+   "speak": "Bonne nuit",
+   "texts": [
+    "Bonne nuit"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "4f9fc57377ba5f11"
+  },
+  {
+   "key": "Bonne nuit, dors bien !",
+   "speak": "Bonne nuit, dors bien !",
+   "texts": [
+    "Bonne nuit, dors bien !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "cf437f6a3cf880dc"
+  },
+  {
+   "key": "Bonne nuit, à demain !",
+   "speak": "Bonne nuit, à demain !",
+   "texts": [
+    "Bonne nuit, à demain !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "6e626edb4f98a311"
+  },
+  {
+   "key": "Bonne soirée",
+   "speak": "Bonne soirée",
+   "texts": [
+    "Bonne soirée"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "42aac610d9842bd7"
+  },
+  {
+   "key": "Bonsoir",
+   "speak": "Bonsoir",
+   "texts": [
+    "Bonsoir"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "a31b2e7fc2ace72c"
+  },
+  {
+   "key": "Bonsoir, monsieur !",
+   "speak": "Bonsoir, monsieur !",
+   "texts": [
+    "Bonsoir, monsieur !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "acd4ecfbec605a74"
+  },
+  {
+   "key": "Bonsoir, vous avez une table pour quatre ?",
+   "speak": "Bonsoir, vous avez une table pour quatre ?",
+   "texts": [
+    "Bonsoir, vous avez une table pour quatre ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a5b2c864152a3da4"
   },
   {
    "key": "C'est beau !",
@@ -166,6 +441,28 @@
    "hash": "ae39fb953cba2484"
   },
   {
+   "key": "C'est combien ?",
+   "speak": "C'est combien ?",
+   "texts": [
+    "C'est combien ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "79b8e7f73b6e55ba"
+  },
+  {
+   "key": "C'est génial !",
+   "speak": "C'est génial !",
+   "texts": [
+    "C'est génial !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "925857efa652f4d2"
+  },
+  {
    "key": "C'est le deux mai.",
    "speak": "C'est le deux mai.",
    "texts": [
@@ -188,6 +485,17 @@
    "hash": "aeb5ff1bc5d21f65"
   },
   {
+   "key": "C'est loin ?",
+   "speak": "C'est loin ?",
+   "texts": [
+    "C'est loin ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9be6364150be0be6"
+  },
+  {
    "key": "C'est mon amie Claire.",
    "speak": "C'est mon amie Claire.",
    "texts": [
@@ -199,6 +507,17 @@
    "hash": "5106eeef66d19439"
   },
   {
+   "key": "C'est pas grave",
+   "speak": "C'est pas grave",
+   "texts": [
+    "C'est pas grave"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "29e5740886b772de"
+  },
+  {
    "key": "C'est pour lui.",
    "speak": "C'est pour lui.",
    "texts": [
@@ -208,6 +527,28 @@
     "table-example"
    ],
    "hash": "f902d84d45419e83"
+  },
+  {
+   "key": "C'est tout",
+   "speak": "C'est tout",
+   "texts": [
+    "C'est tout"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "125ac3637a860715"
+  },
+  {
+   "key": "C'est tout droit",
+   "speak": "C'est tout droit",
+   "texts": [
+    "C'est tout droit"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "60edea69d4e615f2"
   },
   {
    "key": "C'est un bel appartement.",
@@ -287,6 +628,17 @@
    "hash": "15b9f3965dea55b8"
   },
   {
+   "key": "Ce n'est pas la mer à boire",
+   "speak": "Ce n'est pas la mer à boire",
+   "texts": [
+    "Ce n'est pas la mer à boire"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "33824c81d37cab76"
+  },
+  {
    "key": "Ce n'est pas ton stylo, c'est le mien.",
    "speak": "Ce n'est pas ton stylo, c'est le mien.",
    "texts": [
@@ -307,6 +659,28 @@
     "table-example"
    ],
    "hash": "3dfc01eca658fe38"
+  },
+  {
+   "key": "Ce pull, c'est combien ?",
+   "speak": "Ce pull, c'est combien ?",
+   "texts": [
+    "Ce pull, c'est combien ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "6349085f98122751"
+  },
+  {
+   "key": "Ce sac coûte les yeux de la tête !",
+   "speak": "Ce sac coûte les yeux de la tête !",
+   "texts": [
+    "Ce sac coûte les yeux de la tête !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "e74449969b28d270"
   },
   {
    "key": "Ces films sont super. Lesquels préfères-tu ?",
@@ -476,6 +850,28 @@
    "hash": "0843ab0cf5754454"
   },
   {
+   "key": "Comment allez-vous ?",
+   "speak": "Comment allez-vous ?",
+   "texts": [
+    "Comment allez-vous ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "dd072d9d411f2c43"
+  },
+  {
+   "key": "Comment dit-on ça en français ?",
+   "speak": "Comment dit-on ça en français ?",
+   "texts": [
+    "Comment dit-on ça en français ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "573fb08c3ad923d2"
+  },
+  {
    "key": "Comment est-ce que tu t'appelles ?",
    "speak": "Comment est-ce que tu t'appelles ?",
    "texts": [
@@ -500,6 +896,17 @@
    "hash": "3a32f7894a7344fc"
   },
   {
+   "key": "Comment on dit « spoon » en français ?",
+   "speak": "Comment on dit « spoon » en français ?",
+   "texts": [
+    "Comment on dit « spoon » en français ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "5ff594996b593e29"
+  },
+  {
    "key": "Comment tu t'appelles ?",
    "speak": "Comment tu t'appelles ?",
    "texts": [
@@ -509,6 +916,17 @@
     "table-example"
    ],
    "hash": "58c9cd2c9d453607"
+  },
+  {
+   "key": "Comment ça s'écrit ?",
+   "speak": "Comment ça s'écrit ?",
+   "texts": [
+    "Comment ça s'écrit ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "c6b4ca91fecf4cc3"
   },
   {
    "key": "Couche-toi !",
@@ -521,6 +939,17 @@
     "topic-summary-answer"
    ],
    "hash": "ee4f98582f8c2fda"
+  },
+  {
+   "key": "D'accord",
+   "speak": "D'accord",
+   "texts": [
+    "D'accord"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "974eda2bc114425a"
   },
   {
    "key": "De quoi",
@@ -554,6 +983,28 @@
     "topic-listen"
    ],
    "hash": "bd6cbad1920f0b79"
+  },
+  {
+   "key": "De rien",
+   "speak": "De rien",
+   "texts": [
+    "De rien"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "a85d1112c76c9476"
+  },
+  {
+   "key": "Demain à huit heures ? Ça marche !",
+   "speak": "Demain à huit heures ? Ça marche !",
+   "texts": [
+    "Demain à huit heures ? Ça marche !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "4d84a70f1d4771c0"
   },
   {
    "key": "Demain, il fera beau.",
@@ -599,6 +1050,17 @@
     "topic-summary-answer"
    ],
    "hash": "74af2da269aa7ad9"
+  },
+  {
+   "key": "Désolée, je suis en retard ! Le bus n'est pas venu.",
+   "speak": "Désolée, je suis en retard ! Le bus n'est pas venu.",
+   "texts": [
+    "Désolée, je suis en retard ! Le bus n'est pas venu."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "9e1f97bbe89a29f1"
   },
   {
    "key": "Elle a une voiture.",
@@ -676,6 +1138,17 @@
     "topic-summary-joined"
    ],
    "hash": "33cbd4d6b6301b88"
+  },
+  {
+   "key": "Elle m'a posé un lapin hier soir.",
+   "speak": "Elle m'a posé un lapin hier soir.",
+   "texts": [
+    "Elle m'a posé un lapin hier soir."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "445a62a1534fe7dc"
   },
   {
    "key": "Elle m'écrit.",
@@ -943,6 +1416,39 @@
     "topic-summary-answer"
    ],
    "hash": "ee35851a0498aefe"
+  },
+  {
+   "key": "En fait, je ne suis pas d'ici.",
+   "speak": "En fait, je ne suis pas d'ici.",
+   "texts": [
+    "En fait, je ne suis pas d'ici."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "5cea32ae8dcc753b"
+  },
+  {
+   "key": "Enchanté",
+   "speak": "Enchanté",
+   "texts": [
+    "Enchanté(e)"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "072566dbb3cd7887"
+  },
+  {
+   "key": "Enchantée, je m'appelle Léa.",
+   "speak": "Enchantée, je m'appelle Léa.",
+   "texts": [
+    "Enchantée, je m'appelle Léa."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "7c097a9901136fda"
   },
   {
    "key": "Est-ce qu'elle habite ici ?",
@@ -1231,6 +1737,83 @@
    "hash": "2ca4f703b319dd24"
   },
   {
+   "key": "Et avec ceci ? — C'est tout, merci.",
+   "speak": "Et avec ceci ? — C'est tout, merci.",
+   "texts": [
+    "Et avec ceci ? — C'est tout, merci."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "9d316f80d24d2b34"
+  },
+  {
+   "key": "Et vous ?",
+   "speak": "Et vous ?",
+   "texts": [
+    "Et vous ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "c8ebb01f5e9e62a6"
+  },
+  {
+   "key": "Excusez-moi",
+   "speak": "Excusez-moi",
+   "texts": [
+    "Excusez-moi"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "3b1073b7e074af8e"
+  },
+  {
+   "key": "Excusez-moi, je suis perdue. La gare, c'est par où ?",
+   "speak": "Excusez-moi, je suis perdue. La gare, c'est par où ?",
+   "texts": [
+    "Excusez-moi, je suis perdue. La gare, c'est par où ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "bd534fefd3fa5fd4"
+  },
+  {
+   "key": "Excusez-moi, où est la gare ?",
+   "speak": "Excusez-moi, où est la gare ?",
+   "texts": [
+    "Excusez-moi, où est la gare ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "f598d0f62e31cd73"
+  },
+  {
+   "key": "Excusez-moi, pouvez-vous répéter le nom de la rue ?",
+   "speak": "Excusez-moi, pouvez-vous répéter le nom de la rue ?",
+   "texts": [
+    "Excusez-moi, pouvez-vous répéter le nom de la rue ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "14a3e7bbcc4aa8f7"
+  },
+  {
+   "key": "Excusez-moi, vous pouvez m'aider, s'il vous plaît ?",
+   "speak": "Excusez-moi, vous pouvez m'aider, s'il vous plaît ?",
+   "texts": [
+    "Excusez-moi, vous pouvez m'aider, s'il vous plaît ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a81a197b6a7263f1"
+  },
+  {
    "key": "Habillons-nous !",
    "speak": "Habillons-nous !",
    "texts": [
@@ -1320,6 +1903,17 @@
    "hash": "d18a47a12fc0486e"
   },
   {
+   "key": "Il dit que Paris est petit ? N'importe quoi !",
+   "speak": "Il dit que Paris est petit ? N'importe quoi !",
+   "texts": [
+    "Il dit que Paris est petit ? N'importe quoi !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "1c1db51e88f775e7"
+  },
+  {
    "key": "Il dit quoi ?",
    "speak": "Il dit quoi ?",
    "texts": [
@@ -1373,6 +1967,17 @@
     "table-cell"
    ],
    "hash": "ff324b9e65fe396c"
+  },
+  {
+   "key": "Il est grand, enfin, plus grand que moi.",
+   "speak": "Il est grand, enfin, plus grand que moi.",
+   "texts": [
+    "Il est grand, enfin, plus grand que moi."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "345db9bc62a021d0"
   },
   {
    "key": "Il est midi.",
@@ -1463,6 +2068,28 @@
    "hash": "1194b8e72406f41c"
   },
   {
+   "key": "Il fait beau",
+   "speak": "Il fait beau",
+   "texts": [
+    "Il fait beau"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "316ff650dc5ffc6f"
+  },
+  {
+   "key": "Il fait beau ! On va au parc ?",
+   "speak": "Il fait beau ! On va au parc ?",
+   "texts": [
+    "Il fait beau ! On va au parc ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "195af7fb2d547af9"
+  },
+  {
    "key": "Il fait beau aujourd'hui.",
    "speak": "Il fait beau aujourd'hui.",
    "texts": [
@@ -1483,6 +2110,17 @@
     "table-example"
    ],
    "hash": "6c14d24bdb4470bb"
+  },
+  {
+   "key": "Il fait un temps de chien",
+   "speak": "Il fait un temps de chien",
+   "texts": [
+    "Il fait un temps de chien"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "91b6bf2f35414f27"
   },
   {
    "key": "Il faut partir maintenant.",
@@ -1538,6 +2176,17 @@
     "table-example"
    ],
    "hash": "93bbbc9586ac8d61"
+  },
+  {
+   "key": "Il n'y a plus de pain ? Tant pis.",
+   "speak": "Il n'y a plus de pain ? Tant pis.",
+   "texts": [
+    "Il n'y a plus de pain ? Tant pis."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "871e245909471e00"
   },
   {
    "key": "Il ne boit pas d'alcool.",
@@ -1605,6 +2254,39 @@
     "verb-sentence"
    ],
    "hash": "532d3133b99e60b8"
+  },
+  {
+   "key": "Il pleut depuis une semaine, j'ai le cafard.",
+   "speak": "Il pleut depuis une semaine, j'ai le cafard.",
+   "texts": [
+    "Il pleut depuis une semaine, j'ai le cafard."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "17dc054b94b94337"
+  },
+  {
+   "key": "Il pleut, mais on sort quand même.",
+   "speak": "Il pleut, mais on sort quand même.",
+   "texts": [
+    "Il pleut, mais on sort quand même."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "c96af94744712e65"
+  },
+  {
+   "key": "Il pleuvait, du coup on est restés à la maison.",
+   "speak": "Il pleuvait, du coup on est restés à la maison.",
+   "texts": [
+    "Il pleuvait, du coup on est restés à la maison."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "abf38c022112aa1d"
   },
   {
    "key": "Il prend de l'eau.",
@@ -1729,6 +2411,28 @@
    "hash": "ed4f52664731296c"
   },
   {
+   "key": "Il y a un supermarché près d'ici ?",
+   "speak": "Il y a un supermarché près d'ici ?",
+   "texts": [
+    "Il y a un supermarché près d'ici ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "e0a0f5d3c162fa60"
+  },
+  {
+   "key": "Il y a une pharmacie près d'ici ?",
+   "speak": "Il y a une pharmacie près d'ici ?",
+   "texts": [
+    "Il y a une pharmacie près d'ici ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "2a3c593e058e5338"
+  },
+  {
    "key": "Il y en a trois.",
    "speak": "Il y en a trois.",
    "texts": [
@@ -1805,6 +2509,17 @@
     "topic-listen"
    ],
    "hash": "d66b24f0d3cae7f5"
+  },
+  {
+   "key": "Ils ont eu le coup de foudre à Paris.",
+   "speak": "Ils ont eu le coup de foudre à Paris.",
+   "texts": [
+    "Ils ont eu le coup de foudre à Paris."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "861a454f09b91283"
   },
   {
    "key": "Ils s'écrivent.",
@@ -1907,6 +2622,17 @@
    "hash": "01914b61618765d0"
   },
   {
+   "key": "J'adore le chocolat. — Moi aussi !",
+   "speak": "J'adore le chocolat. — Moi aussi !",
+   "texts": [
+    "J'adore le chocolat. — Moi aussi !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "14294c40a7f3a9b1"
+  },
+  {
    "key": "J'ai deux frères.",
    "speak": "J'ai deux frères.",
    "texts": [
@@ -1927,6 +2653,61 @@
     "topic-listen"
    ],
    "hash": "d47c7b3fef128886"
+  },
+  {
+   "key": "J'ai faim",
+   "speak": "J'ai faim",
+   "texts": [
+    "J'ai faim"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "94fefa25ce3c203f"
+  },
+  {
+   "key": "J'ai faim ! On mange quand ?",
+   "speak": "J'ai faim ! On mange quand ?",
+   "texts": [
+    "J'ai faim ! On mange quand ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "7590d13b462576a0"
+  },
+  {
+   "key": "J'ai hâte !",
+   "speak": "J'ai hâte !",
+   "texts": [
+    "J'ai hâte !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "daabf4d8050b5b61"
+  },
+  {
+   "key": "J'ai hâte de te voir !",
+   "speak": "J'ai hâte de te voir !",
+   "texts": [
+    "J'ai hâte de te voir !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "3517e57b77549750"
+  },
+  {
+   "key": "J'ai la flemme de faire la cuisine ce soir.",
+   "speak": "J'ai la flemme de faire la cuisine ce soir.",
+   "texts": [
+    "J'ai la flemme de faire la cuisine ce soir."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a14d2a8c951bc6ba"
   },
   {
    "key": "J'ai trois enfants.",
@@ -2061,6 +2842,17 @@
    "hash": "843a0d2ac350eae0"
   },
   {
+   "key": "J'arrive !",
+   "speak": "J'arrive !",
+   "texts": [
+    "J'arrive !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "41a3c49a5d15b363"
+  },
+  {
    "key": "J'attends le bus depuis dix minutes.",
    "speak": "J'attends le bus depuis dix minutes.",
    "texts": [
@@ -2070,6 +2862,28 @@
     "verb-sentence"
    ],
    "hash": "70164ad89b5bc35c"
+  },
+  {
+   "key": "J'en ai marre !",
+   "speak": "J'en ai marre !",
+   "texts": [
+    "J'en ai marre !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "e308d5546d8a67e8"
+  },
+  {
+   "key": "J'en ai marre d'attendre le bus !",
+   "speak": "J'en ai marre d'attendre le bus !",
+   "texts": [
+    "J'en ai marre d'attendre le bus !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "f1c4b66f5422ab3b"
   },
   {
    "key": "J'envoie un message à mon frère.",
@@ -2468,6 +3282,17 @@
    "hash": "2b1f2f634565785d"
   },
   {
+   "key": "Je m'appelle Léa.",
+   "speak": "Je m'appelle Léa.",
+   "texts": [
+    "Je m'appelle Léa."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "2ad2ed88c9c556e5"
+  },
+  {
    "key": "Je m'assieds près de la fenêtre.",
    "speak": "Je m'assieds près de la fenêtre.",
    "texts": [
@@ -2702,6 +3527,17 @@
    "hash": "f4a6c131629cc1c9"
   },
   {
+   "key": "Je ne comprends pas",
+   "speak": "Je ne comprends pas",
+   "texts": [
+    "Je ne comprends pas"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9f49afc6f6bf0099"
+  },
+  {
    "key": "Je ne comprends pas. Pouvez-vous répéter ?",
    "speak": "Je ne comprends pas. Pouvez-vous répéter ?",
    "texts": [
@@ -2711,6 +3547,17 @@
     "verb-sentence"
    ],
    "hash": "b498cd5b9b1270b2"
+  },
+  {
+   "key": "Je ne connais pas ce vin. Qu'est-ce que vous me conseillez ?",
+   "speak": "Je ne connais pas ce vin. Qu'est-ce que vous me conseillez ?",
+   "texts": [
+    "Je ne connais pas ce vin. Qu'est-ce que vous me conseillez ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a1335067d6914180"
   },
   {
    "key": "Je ne connais personne.",
@@ -2792,6 +3639,28 @@
    "hash": "c93a9e7990b04107"
   },
   {
+   "key": "Je ne parle pas bien français",
+   "speak": "Je ne parle pas bien français",
+   "texts": [
+    "Je ne parle pas bien français"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "cde2368d78e4a4bb"
+  },
+  {
+   "key": "Je ne parle pas bien français, mais j'apprends.",
+   "speak": "Je ne parle pas bien français, mais j'apprends.",
+   "texts": [
+    "Je ne parle pas bien français, mais j'apprends."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "85067c27fe32b820"
+  },
+  {
    "key": "Je ne parle pas espagnol.",
    "speak": "Je ne parle pas espagnol.",
    "texts": [
@@ -2812,6 +3681,17 @@
     "table-cell"
    ],
    "hash": "1651bf4663470a60"
+  },
+  {
+   "key": "Je ne sais pas",
+   "speak": "Je ne sais pas",
+   "texts": [
+    "Je ne sais pas"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "2fa28673e50805d9"
   },
   {
    "key": "Je ne sais pas où il habite.",
@@ -2902,6 +3782,17 @@
    "hash": "cb54f101d51a51bf"
   },
   {
+   "key": "Je pars demain, c'est-à-dire samedi.",
+   "speak": "Je pars demain, c'est-à-dire samedi.",
+   "texts": [
+    "Je pars demain, c'est-à-dire samedi."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "f720d8b80fcb7e27"
+  },
+  {
    "key": "Je pars en août.",
    "speak": "Je pars en août.",
    "texts": [
@@ -2911,6 +3802,28 @@
     "table-example"
    ],
    "hash": "14110d05f86a14a3"
+  },
+  {
+   "key": "Je pense que c'est une bonne idée.",
+   "speak": "Je pense que c'est une bonne idée.",
+   "texts": [
+    "Je pense que c'est une bonne idée."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "bc583e0788189f10"
+  },
+  {
+   "key": "Je pense que oui.",
+   "speak": "Je pense que oui.",
+   "texts": [
+    "Je pense que oui."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "b3b70e524e92c51a"
   },
   {
    "key": "Je pense à mon travail. J'y pense.",
@@ -2944,6 +3857,50 @@
     "verb-sentence"
    ],
    "hash": "6384cbeee176f2df"
+  },
+  {
+   "key": "Je peux m'asseoir ici ? — Bien sûr !",
+   "speak": "Je peux m'asseoir ici ? — Bien sûr !",
+   "texts": [
+    "Je peux m'asseoir ici ? — Bien sûr !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "449981e05a4eb51f"
+  },
+  {
+   "key": "Je peux payer par carte ?",
+   "speak": "Je peux payer par carte ?",
+   "texts": [
+    "Je peux payer par carte ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d06d44d7b65e8f5e"
+  },
+  {
+   "key": "Je peux payer par carte ou seulement en espèces ?",
+   "speak": "Je peux payer par carte ou seulement en espèces ?",
+   "texts": [
+    "Je peux payer par carte ou seulement en espèces ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "637ba31676bc046e"
+  },
+  {
+   "key": "Je peux vous aider ? — Je regarde, merci.",
+   "speak": "Je peux vous aider ? — Je regarde, merci.",
+   "texts": [
+    "Je peux vous aider ? — Je regarde, merci."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "7f0a9a61ca49adf8"
   },
   {
    "key": "Je pose une question au professeur.",
@@ -3034,6 +3991,17 @@
    "hash": "c6952c50eb860b81"
   },
   {
+   "key": "Je regarde, merci",
+   "speak": "Je regarde, merci",
+   "texts": [
+    "Je regarde, merci"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "fe194e7b6f26feb9"
+  },
+  {
    "key": "Je rencontre souvent mes amis au café.",
    "speak": "Je rencontre souvent mes amis au café.",
    "texts": [
@@ -3122,6 +4090,50 @@
    "hash": "12feb7dc315bc41e"
   },
   {
+   "key": "Je suis désolé",
+   "speak": "Je suis désolé",
+   "texts": [
+    "Je suis désolé(e)"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "526c578e8295e689"
+  },
+  {
+   "key": "Je suis désolé, je ne peux pas venir.",
+   "speak": "Je suis désolé, je ne peux pas venir.",
+   "texts": [
+    "Je suis désolé, je ne peux pas venir."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "28fa12823c53e477"
+  },
+  {
+   "key": "Je suis en retard",
+   "speak": "Je suis en retard",
+   "texts": [
+    "Je suis en retard"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9cf5cec138083fec"
+  },
+  {
+   "key": "Je suis fatigué",
+   "speak": "Je suis fatigué",
+   "texts": [
+    "Je suis fatigué(e)"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "cb8de4cd35007f08"
+  },
+  {
    "key": "Je suis fatigué aujourd'hui.",
    "speak": "Je suis fatigué aujourd'hui.",
    "texts": [
@@ -3131,6 +4143,28 @@
     "verb-sentence"
    ],
    "hash": "0806257d37080843"
+  },
+  {
+   "key": "Je suis fatigué, je vais me coucher.",
+   "speak": "Je suis fatigué, je vais me coucher.",
+   "texts": [
+    "Je suis fatigué, je vais me coucher."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "d1f23fce38beb67d"
+  },
+  {
+   "key": "Je suis perdu",
+   "speak": "Je suis perdu",
+   "texts": [
+    "Je suis perdu(e)"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "c5d81a5409fe65cf"
   },
   {
    "key": "Je suis professeur.",
@@ -3210,6 +4244,17 @@
    "hash": "16605cd2f90a28ab"
   },
   {
+   "key": "Je vais bien, merci. Et vous ?",
+   "speak": "Je vais bien, merci. Et vous ?",
+   "texts": [
+    "Je vais bien, merci. Et vous ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "80f673bd28e2924b"
+  },
+  {
    "key": "Je vais me réveiller tôt.",
    "speak": "Je vais me réveiller tôt.",
    "texts": [
@@ -3220,6 +4265,28 @@
     "topic-summary-answer"
    ],
    "hash": "9e7cd434cd87f469"
+  },
+  {
+   "key": "Je vais prendre le menu.",
+   "speak": "Je vais prendre le menu.",
+   "texts": [
+    "Je vais prendre le menu."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d2fbdd1e0f2856e3"
+  },
+  {
+   "key": "Je vais à la boulangerie. À tout à l'heure !",
+   "speak": "Je vais à la boulangerie. À tout à l'heure !",
+   "texts": [
+    "Je vais à la boulangerie. À tout à l'heure !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "edd1835e4d5c2732"
   },
   {
    "key": "Je veux apprendre le français.",
@@ -3255,6 +4322,61 @@
    "hash": "65a53ffac57fdc7a"
   },
   {
+   "key": "Je voudrais un café.",
+   "speak": "Je voudrais un café.",
+   "texts": [
+    "Je voudrais un café."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "7d70b10d7b51f112"
+  },
+  {
+   "key": "Je voudrais une baguette, s'il vous plaît.",
+   "speak": "Je voudrais une baguette, s'il vous plaît.",
+   "texts": [
+    "Je voudrais une baguette, s'il vous plaît."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "8239ac9e80d156ec"
+  },
+  {
+   "key": "Je vous apporte ça tout de suite.",
+   "speak": "Je vous apporte ça tout de suite.",
+   "texts": [
+    "Je vous apporte ça tout de suite."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "914c99d7be46697d"
+  },
+  {
+   "key": "Je vous en prie",
+   "speak": "Je vous en prie",
+   "texts": [
+    "Je vous en prie"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "0e835f3dcd0249af"
+  },
+  {
+   "key": "Je vous en prie, asseyez-vous.",
+   "speak": "Je vous en prie, asseyez-vous.",
+   "texts": [
+    "Je vous en prie, asseyez-vous."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "1225e95418d6c49a"
+  },
+  {
    "key": "Je vous en prie.",
    "speak": "Je vous en prie.",
    "texts": [
@@ -3276,6 +4398,17 @@
     "topic-summary-answer"
    ],
    "hash": "69496d01b936ec34"
+  },
+  {
+   "key": "L'addition, s'il vous plaît",
+   "speak": "L'addition, s'il vous plaît",
+   "texts": [
+    "L'addition, s'il vous plaît"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "bfde8a1c234ce517"
   },
   {
    "key": "L'homme qui parle est mon père.",
@@ -3309,6 +4442,17 @@
     "table-example"
    ],
    "hash": "030d4fd376fce785"
+  },
+  {
+   "key": "La gare ? C'est tout droit, puis à gauche.",
+   "speak": "La gare ? C'est tout droit, puis à gauche.",
+   "texts": [
+    "La gare ? C'est tout droit, puis à gauche."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a05697bd73dbf3fe"
   },
   {
    "key": "La gare est loin.",
@@ -3454,6 +4598,28 @@
    "hash": "8b1a193c89ffbea2"
   },
   {
+   "key": "Le dîner est prêt ! — J'arrive !",
+   "speak": "Le dîner est prêt ! — J'arrive !",
+   "texts": [
+    "Le dîner est prêt ! — J'arrive !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "4df7ed5deb2520d4"
+  },
+  {
+   "key": "Le film commence à huit heures. On y va ?",
+   "speak": "Le film commence à huit heures. On y va ?",
+   "texts": [
+    "Le film commence à huit heures. On y va ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "ebb26321f62f01f7"
+  },
+  {
    "key": "Le film commence à vingt heures.",
    "speak": "Le film commence à vingt heures.",
    "texts": [
@@ -3507,6 +4673,17 @@
     "topic-listen"
    ],
    "hash": "799256bc9927a2f9"
+  },
+  {
+   "key": "Le musée, c'est loin d'ici ?",
+   "speak": "Le musée, c'est loin d'ici ?",
+   "texts": [
+    "Le musée, c'est loin d'ici ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "8689279782eaeb68"
   },
   {
    "key": "Le professeur explique la grammaire.",
@@ -3832,6 +5009,72 @@
    "hash": "22ddd06146dbd0a0"
   },
   {
+   "key": "Merci ! — De rien.",
+   "speak": "Merci ! — De rien.",
+   "texts": [
+    "Merci ! — De rien."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "c8b196b56e9cb18c"
+  },
+  {
+   "key": "Merci beaucoup",
+   "speak": "Merci beaucoup",
+   "texts": [
+    "Merci beaucoup"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "de1089138d91894d"
+  },
+  {
+   "key": "Merci beaucoup pour votre aide !",
+   "speak": "Merci beaucoup pour votre aide !",
+   "texts": [
+    "Merci beaucoup pour votre aide !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "649ac1f0d37eeba1"
+  },
+  {
+   "key": "Merci pour tout, à bientôt !",
+   "speak": "Merci pour tout, à bientôt !",
+   "texts": [
+    "Merci pour tout, à bientôt !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "757959f8c295bd06"
+  },
+  {
+   "key": "Merci, au revoir !",
+   "speak": "Merci, au revoir !",
+   "texts": [
+    "Merci, au revoir !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "8fa294d665f52af1"
+  },
+  {
+   "key": "Merci, bonne journée !",
+   "speak": "Merci, bonne journée !",
+   "texts": [
+    "Merci, bonne journée !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "a88f269a54c9f75e"
+  },
+  {
    "key": "Mes parents me permettent de sortir le samedi.",
    "speak": "Mes parents me permettent de sortir le samedi.",
    "texts": [
@@ -3841,6 +5084,17 @@
     "verb-sentence"
    ],
    "hash": "7dcecb6cbe564215"
+  },
+  {
+   "key": "Moi aussi",
+   "speak": "Moi aussi",
+   "texts": [
+    "Moi aussi"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "0ce3aa69c339bef4"
   },
   {
    "key": "Moi, je préfère le thé.",
@@ -3940,6 +5194,17 @@
     "topic-part-answer"
    ],
    "hash": "4415ee16fc41cb53"
+  },
+  {
+   "key": "N'importe quoi !",
+   "speak": "N'importe quoi !",
+   "texts": [
+    "N'importe quoi !"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "0a4bc5946903c955"
   },
   {
    "key": "Ne comprends-tu pas ?",
@@ -4403,6 +5668,17 @@
    "hash": "ab3f6b7403245bb1"
   },
   {
+   "key": "On a raté le train, il pleuvait… bref, une journée horrible.",
+   "speak": "On a raté le train, il pleuvait… bref, une journée horrible.",
+   "texts": [
+    "On a raté le train, il pleuvait… bref, une journée horrible."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "1a52a97f7072927b"
+  },
+  {
    "key": "On change de train à Lyon.",
    "speak": "On change de train à Lyon.",
    "texts": [
@@ -4436,6 +5712,17 @@
    "hash": "34a1c5b01a5501a2"
   },
   {
+   "key": "On peut avoir l'addition, s'il vous plaît ?",
+   "speak": "On peut avoir l'addition, s'il vous plaît ?",
+   "texts": [
+    "On peut avoir l'addition, s'il vous plaît ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "5b62891c49c9a1b7"
+  },
+  {
    "key": "On retrouve nos amis au café.",
    "speak": "On retrouve nos amis au café.",
    "texts": [
@@ -4447,6 +5734,17 @@
    "hash": "01b3eed6273a74be"
   },
   {
+   "key": "On se retrouve à midi ? — D'accord !",
+   "speak": "On se retrouve à midi ? — D'accord !",
+   "texts": [
+    "On se retrouve à midi ? — D'accord !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "34abf6b15cd7f732"
+  },
+  {
    "key": "On se retrouve à midi et demi ?",
    "speak": "On se retrouve à midi et demi ?",
    "texts": [
@@ -4456,6 +5754,28 @@
     "table-example"
    ],
    "hash": "42f9b05d56ca6af7"
+  },
+  {
+   "key": "On se voit quand ?",
+   "speak": "On se voit quand ?",
+   "texts": [
+    "On se voit quand ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "38531a6a39c09e5c"
+  },
+  {
+   "key": "On se voit quand ? Samedi, ça te va ?",
+   "speak": "On se voit quand ? Samedi, ça te va ?",
+   "texts": [
+    "On se voit quand ? Samedi, ça te va ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "98461aff7cb180ab"
   },
   {
    "key": "On se voit samedi ?",
@@ -4480,6 +5800,17 @@
    "hash": "6eb942b13def956b"
   },
   {
+   "key": "On y va ?",
+   "speak": "On y va ?",
+   "texts": [
+    "On y va ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "53f0d677fa3fe44d"
+  },
+  {
    "key": "Où",
    "speak": "Où",
    "texts": [
@@ -4489,6 +5820,28 @@
     "topic-summary-answer"
    ],
    "hash": "709bfa4695449c5f"
+  },
+  {
+   "key": "Où est Paul ? — Je ne sais pas.",
+   "speak": "Où est Paul ? — Je ne sais pas.",
+   "texts": [
+    "Où est Paul ? — Je ne sais pas."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "484dcb9f4ec3517a"
+  },
+  {
+   "key": "Où est la gare ?",
+   "speak": "Où est la gare ?",
+   "texts": [
+    "Où est la gare ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "4fda60c624c30903"
   },
   {
    "key": "Où est-ce qu'elle travaille ?",
@@ -4514,6 +5867,83 @@
    "hash": "e3812f643866a6eb"
   },
   {
+   "key": "Où sont les toilettes ?",
+   "speak": "Où sont les toilettes ?",
+   "texts": [
+    "Où sont les toilettes ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "6558ada62c1b1e07"
+  },
+  {
+   "key": "Pardon",
+   "speak": "Pardon",
+   "texts": [
+    "Pardon"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "618dbfa4f2956de9"
+  },
+  {
+   "key": "Pardon ? Vous pouvez répéter ?",
+   "speak": "Pardon ? Vous pouvez répéter ?",
+   "texts": [
+    "Pardon ? Vous pouvez répéter ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "13536cf74d6860a5"
+  },
+  {
+   "key": "Pardon, je ne comprends pas. Vous pouvez répéter ?",
+   "speak": "Pardon, je ne comprends pas. Vous pouvez répéter ?",
+   "texts": [
+    "Pardon, je ne comprends pas. Vous pouvez répéter ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "d2509ae7fc519469"
+  },
+  {
+   "key": "Pardon, où est la station de métro ?",
+   "speak": "Pardon, où est la station de métro ?",
+   "texts": [
+    "Pardon, où est la station de métro ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "da6a8f920bc1726a"
+  },
+  {
+   "key": "Pardon, où sont les toilettes, s'il vous plaît ?",
+   "speak": "Pardon, où sont les toilettes, s'il vous plaît ?",
+   "texts": [
+    "Pardon, où sont les toilettes, s'il vous plaît ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "4417ee6978142dd4"
+  },
+  {
+   "key": "Pardon, à quelle heure part le prochain train pour Paris ?",
+   "speak": "Pardon, à quelle heure part le prochain train pour Paris ?",
+   "texts": [
+    "Pardon, à quelle heure part le prochain train pour Paris ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "439009778eef92b5"
+  },
+  {
    "key": "Parle-t-il espagnol ?",
    "speak": "Parle-t-il espagnol ?",
    "texts": [
@@ -4534,6 +5964,28 @@
     "topic-part-answer"
    ],
    "hash": "f985c92d19d9b99a"
+  },
+  {
+   "key": "Pas de problème",
+   "speak": "Pas de problème",
+   "texts": [
+    "Pas de problème"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "638a2436585a73e2"
+  },
+  {
+   "key": "Pas mal",
+   "speak": "Pas mal",
+   "texts": [
+    "Pas mal"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "43ff035aca6c40a4"
   },
   {
    "key": "Paul aime sa mère.",
@@ -4557,6 +6009,28 @@
     "topic-summary-answer"
    ],
    "hash": "ba89849ad1babc70"
+  },
+  {
+   "key": "Plus lentement, s'il vous plaît",
+   "speak": "Plus lentement, s'il vous plaît",
+   "texts": [
+    "Plus lentement, s'il vous plaît"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "54304e909b655f55"
+  },
+  {
+   "key": "Pour moi, je vais prendre le poulet, s'il vous plaît.",
+   "speak": "Pour moi, je vais prendre le poulet, s'il vous plaît.",
+   "texts": [
+    "Pour moi, je vais prendre le poulet, s'il vous plaît."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "27dcf977fc5ab9a5"
   },
   {
    "key": "Pour qui",
@@ -4613,6 +6087,17 @@
     "topic-summary-answer"
    ],
    "hash": "80da609f507d5d6c"
+  },
+  {
+   "key": "Pouvez-vous répéter, s'il vous plaît ?",
+   "speak": "Pouvez-vous répéter, s'il vous plaît ?",
+   "texts": [
+    "Pouvez-vous répéter, s'il vous plaît ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "dfffe76fbd606916"
   },
   {
    "key": "Qu'est-ce qu'il dit ?",
@@ -4683,6 +6168,28 @@
    "hash": "a18d70c4b69a6598"
   },
   {
+   "key": "Qu'est-ce que vous faites dans la vie ?",
+   "speak": "Qu'est-ce que vous faites dans la vie ?",
+   "texts": [
+    "Qu'est-ce que vous faites dans la vie ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "9c681bee13f1eef8"
+  },
+  {
+   "key": "Qu'est-ce que vous faites dans la vie ? — Je suis infirmière.",
+   "speak": "Qu'est-ce que vous faites dans la vie ? — Je suis infirmière.",
+   "texts": [
+    "Qu'est-ce que vous faites dans la vie ? — Je suis infirmière."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "2544c76307487afd"
+  },
+  {
    "key": "Qu'est-ce que vous faites le week-end ?",
    "speak": "Qu'est-ce que vous faites le week-end ?",
    "texts": [
@@ -4692,6 +6199,17 @@
     "topic-listen"
    ],
    "hash": "9d71eb5309671d70"
+  },
+  {
+   "key": "Qu'est-ce que vous me conseillez ?",
+   "speak": "Qu'est-ce que vous me conseillez ?",
+   "texts": [
+    "Qu'est-ce que vous me conseillez ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d51e0b7dacd35e72"
   },
   {
    "key": "Qu'est-ce que vous voulez ?",
@@ -4870,9 +6388,21 @@
    ],
    "categories": [
     "table-example",
-    "table-cell"
+    "table-cell",
+    "expression"
    ],
    "hash": "d593706bc8e3cd30"
+  },
+  {
+   "key": "Quelle heure est-il ? — Il est trois heures.",
+   "speak": "Quelle heure est-il ? — Il est trois heures.",
+   "texts": [
+    "Quelle heure est-il ? — Il est trois heures."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "65f51e097354ba40"
   },
   {
    "key": "Quelle musique aimes-tu ?",
@@ -4919,6 +6449,17 @@
    "hash": "ae4f7c9c4b180780"
   },
   {
+   "key": "Reste à la maison, il fait un temps de chien !",
+   "speak": "Reste à la maison, il fait un temps de chien !",
+   "texts": [
+    "Reste à la maison, il fait un temps de chien !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "ac96c3007ff87721"
+  },
+  {
    "key": "Rien ne va.",
    "speak": "Rien ne va.",
    "texts": [
@@ -4939,6 +6480,50 @@
     "topic-part-answer"
    ],
    "hash": "862a852b3d186582"
+  },
+  {
+   "key": "S'il vous plaît",
+   "speak": "S'il vous plaît",
+   "texts": [
+    "S'il vous plaît"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "31306fb78c47889a"
+  },
+  {
+   "key": "Salut",
+   "speak": "Salut",
+   "texts": [
+    "Salut"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "75c4ec0328d2ec2e"
+  },
+  {
+   "key": "Salut Marc ! Ça va ?",
+   "speak": "Salut Marc ! Ça va ?",
+   "texts": [
+    "Salut Marc ! Ça va ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "fc896638e3c6f72f"
+  },
+  {
+   "key": "Salut, Julie ! Tu vas bien ?",
+   "speak": "Salut, Julie ! Tu vas bien ?",
+   "texts": [
+    "Salut, Julie ! Tu vas bien ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "b54decd2c32d1ad3"
   },
   {
    "key": "Se dépêche-t-il ?",
@@ -5007,6 +6592,17 @@
    "hash": "bacde3340c28418c"
   },
   {
+   "key": "Sur place ou à emporter ?",
+   "speak": "Sur place ou à emporter ?",
+   "texts": [
+    "Sur place ou à emporter ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d6be51369bdd529f"
+  },
+  {
    "key": "T'amuses-tu ?",
    "speak": "T'amuses-tu ?",
    "texts": [
@@ -5039,6 +6635,17 @@
     "table-example"
    ],
    "hash": "bdae2f52677fe1e0"
+  },
+  {
+   "key": "Tant pis",
+   "speak": "Tant pis",
+   "texts": [
+    "Tant pis"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "ba7d037e8e33a23a"
   },
   {
    "key": "Te souviens-tu de Paul ?",
@@ -5075,6 +6682,17 @@
    "hash": "bc3a88711e16d473"
   },
   {
+   "key": "Thé ou café ? — Ça m'est égal.",
+   "speak": "Thé ou café ? — Ça m'est égal.",
+   "texts": [
+    "Thé ou café ? — Ça m'est égal."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "492b494063f6eebd"
+  },
+  {
    "key": "Ton fils devient grand.",
    "speak": "Ton fils devient grand.",
    "texts": [
@@ -5084,6 +6702,28 @@
     "verb-sentence"
    ],
    "hash": "94f30595b1fca94e"
+  },
+  {
+   "key": "Tournez à droite",
+   "speak": "Tournez à droite",
+   "texts": [
+    "Tournez à droite"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "390c96ed88c8ef61"
+  },
+  {
+   "key": "Tout de suite",
+   "speak": "Tout de suite",
+   "texts": [
+    "Tout de suite"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "aeb2c2126a265474"
   },
   {
    "key": "Tu aimes le chocolat ?",
@@ -5117,6 +6757,28 @@
     "topic-listen"
    ],
    "hash": "173213fa63a70ef8"
+  },
+  {
+   "key": "Tu as eu le poste ? C'est génial !",
+   "speak": "Tu as eu le poste ? C'est génial !",
+   "texts": [
+    "Tu as eu le poste ? C'est génial !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "82aefb436729a087"
+  },
+  {
+   "key": "Tu as oublié ? C'est pas grave !",
+   "speak": "Tu as oublié ? C'est pas grave !",
+   "texts": [
+    "Tu as oublié ? C'est pas grave !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "61ee2a83cfd7de62"
   },
   {
    "key": "Tu as un chien ? — non, je n'ai pas d'animal.",
@@ -5183,6 +6845,39 @@
     "verb-sentence"
    ],
    "hash": "c86e8800275b9cbf"
+  },
+  {
+   "key": "Tu es libre ce soir ?",
+   "speak": "Tu es libre ce soir ?",
+   "texts": [
+    "Tu es libre ce soir ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "4b75d86d47a7bb47"
+  },
+  {
+   "key": "Tu es libre ce soir ? On pourrait aller au cinéma.",
+   "speak": "Tu es libre ce soir ? On pourrait aller au cinéma.",
+   "texts": [
+    "Tu es libre ce soir ? On pourrait aller au cinéma."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "c5e6986cd0ad6182"
+  },
+  {
+   "key": "Tu es venu ! Ça me fait plaisir.",
+   "speak": "Tu es venu ! Ça me fait plaisir.",
+   "texts": [
+    "Tu es venu ! Ça me fait plaisir."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "aa7a83e8d305057a"
   },
   {
    "key": "Tu fais quoi ? — Je lis.",
@@ -5327,6 +7022,17 @@
     "topic-listen"
    ],
    "hash": "2d0bf1a897bfb2d7"
+  },
+  {
+   "key": "Tu peux m'aider ? — Pas de problème !",
+   "speak": "Tu peux m'aider ? — Pas de problème !",
+   "texts": [
+    "Tu peux m'aider ? — Pas de problème !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "daca95bad5171176"
   },
   {
    "key": "Tu prends quel bus ?",
@@ -5616,6 +7322,94 @@
    "hash": "6321c051452bc881"
   },
   {
+   "key": "Tu viens demain ? — Ça dépend de la météo.",
+   "speak": "Tu viens demain ? — Ça dépend de la météo.",
+   "texts": [
+    "Tu viens demain ? — Ça dépend de la météo."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "ddfdc8c0b68b9c17"
+  },
+  {
+   "key": "Tu viens dîner samedi ? — Avec plaisir !",
+   "speak": "Tu viens dîner samedi ? — Avec plaisir !",
+   "texts": [
+    "Tu viens dîner samedi ? — Avec plaisir !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "bf98a70e6d8b9730"
+  },
+  {
+   "key": "Un aller-retour pour Lyon, s'il vous plaît.",
+   "speak": "Un aller-retour pour Lyon, s'il vous plaît.",
+   "texts": [
+    "Un aller-retour pour Lyon, s'il vous plaît."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "20eb161ff7968a1c"
+  },
+  {
+   "key": "Un billet pour Lyon, s'il vous plaît.",
+   "speak": "Un billet pour Lyon, s'il vous plaît.",
+   "texts": [
+    "Un billet pour Lyon, s'il vous plaît."
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "092476ba158165e3"
+  },
+  {
+   "key": "Un café ? — Volontiers !",
+   "speak": "Un café ? — Volontiers !",
+   "texts": [
+    "Un café ? — Volontiers !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "ba84036addc82bad"
+  },
+  {
+   "key": "Un café, s'il vous plaît.",
+   "speak": "Un café, s'il vous plaît.",
+   "texts": [
+    "Un café, s'il vous plaît."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "abc92003d5103312"
+  },
+  {
+   "key": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
+   "speak": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
+   "texts": [
+    "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "35ed7e24389666a4"
+  },
+  {
+   "key": "Une table pour deux, s'il vous plaît",
+   "speak": "Une table pour deux, s'il vous plaît",
+   "texts": [
+    "Une table pour deux, s'il vous plaît"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "427ae63fabe380e1"
+  },
+  {
    "key": "Veux-tu un café ?",
    "speak": "Veux-tu un café ?",
    "texts": [
@@ -5649,6 +7443,39 @@
    "hash": "433ec2020be1162e"
   },
   {
+   "key": "Voilà vos pizzas. Bon appétit !",
+   "speak": "Voilà vos pizzas. Bon appétit !",
+   "texts": [
+    "Voilà vos pizzas. Bon appétit !"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "cc93f0e31aad927d"
+  },
+  {
+   "key": "Volontiers",
+   "speak": "Volontiers",
+   "texts": [
+    "Volontiers"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "e58cfcb134532c53"
+  },
+  {
+   "key": "Votre nom, comment ça s'écrit ?",
+   "speak": "Votre nom, comment ça s'écrit ?",
+   "texts": [
+    "Votre nom, comment ça s'écrit ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "2fbf396dad316ea4"
+  },
+  {
    "key": "Vous allez vous asseoir.",
    "speak": "Vous allez vous asseoir.",
    "texts": [
@@ -5659,6 +7486,28 @@
     "topic-summary-answer"
    ],
    "hash": "1c448b72ef77b762"
+  },
+  {
+   "key": "Vous avez des croissants aujourd'hui ?",
+   "speak": "Vous avez des croissants aujourd'hui ?",
+   "texts": [
+    "Vous avez des croissants aujourd'hui ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "5fbde291065c1fa9"
+  },
+  {
+   "key": "Vous avez du pain ?",
+   "speak": "Vous avez du pain ?",
+   "texts": [
+    "Vous avez du pain ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "594fad988c49206f"
   },
   {
    "key": "Vous couchez-vous tard ?",
@@ -5712,7 +7561,8 @@
     "Vous parlez anglais ?"
    ],
    "categories": [
-    "verb-sentence"
+    "verb-sentence",
+    "expression"
    ],
    "hash": "f62e50d63f1b0676"
   },
@@ -5739,6 +7589,28 @@
    "hash": "721b236a85ddd8f6"
   },
   {
+   "key": "Vous parlez vite ! Plus lentement, s'il vous plaît.",
+   "speak": "Vous parlez vite ! Plus lentement, s'il vous plaît.",
+   "texts": [
+    "Vous parlez vite ! Plus lentement, s'il vous plaît."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "8e63af3c55b7b5fa"
+  },
+  {
+   "key": "Vous pouvez m'aider ?",
+   "speak": "Vous pouvez m'aider ?",
+   "texts": [
+    "Vous pouvez m'aider ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "ecba332d9d8b39b1"
+  },
+  {
    "key": "Vous tournez à gauche après la banque.",
    "speak": "Vous tournez à gauche après la banque.",
    "texts": [
@@ -5748,6 +7620,28 @@
     "verb-sentence"
    ],
    "hash": "51762e93500570d1"
+  },
+  {
+   "key": "Vous venez d'où ?",
+   "speak": "Vous venez d'où ?",
+   "texts": [
+    "Vous venez d'où ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "b7adcbd3d99bd1b1"
+  },
+  {
+   "key": "Vous venez d'où ? — Je viens d'Australie.",
+   "speak": "Vous venez d'où ? — Je viens d'Australie.",
+   "texts": [
+    "Vous venez d'où ? — Je viens d'Australie."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "7a2150b54b9f159b"
   },
   {
    "key": "Vous voulez quoi ?",
@@ -5950,6 +7844,17 @@
    "hash": "b25974fb8efd13e9"
   },
   {
+   "key": "alors",
+   "speak": "alors",
+   "texts": [
+    "alors"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "0d3ad0c8565c2778"
+  },
+  {
    "key": "amusées",
    "speak": "amusées",
    "texts": [
@@ -6105,6 +8010,39 @@
    "hash": "fcf63b5aa7805a49"
   },
   {
+   "key": "avoir la flemme",
+   "speak": "avoir la flemme",
+   "texts": [
+    "avoir la flemme"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "20e42096f06ce063"
+  },
+  {
+   "key": "avoir le cafard",
+   "speak": "avoir le cafard",
+   "texts": [
+    "avoir le cafard"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d9d006a92033786c"
+  },
+  {
+   "key": "avoir le coup de foudre",
+   "speak": "avoir le coup de foudre",
+   "texts": [
+    "avoir le coup de foudre"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d3401686aad249a8"
+  },
+  {
    "key": "avril",
    "speak": "avril",
    "texts": [
@@ -6204,6 +8142,17 @@
    "hash": "fc56cb227cb25013"
   },
   {
+   "key": "bref",
+   "speak": "bref",
+   "texts": [
+    "bref"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "7a1aea65a2c840e8"
+  },
+  {
    "key": "brossé",
    "speak": "brossé",
    "texts": [
@@ -6224,6 +8173,17 @@
     "table-cell"
    ],
    "hash": "7718f861be8cdf6b"
+  },
+  {
+   "key": "c'est-à-dire",
+   "speak": "c'est-à-dire",
+   "texts": [
+    "c'est-à-dire"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "1d9e579e81b5fcb4"
   },
   {
    "key": "ce livre",
@@ -6691,6 +8651,17 @@
    "hash": "630e795894a95d57"
   },
   {
+   "key": "coûter les yeux de la tête",
+   "speak": "coûter les yeux de la tête",
+   "texts": [
+    "coûter les yeux de la tête"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "843b52275813b9a6"
+  },
+  {
    "key": "croire",
    "speak": "croire",
    "texts": [
@@ -7034,6 +9005,17 @@
    "hash": "0d918cdc39345c73"
   },
   {
+   "key": "du coup",
+   "speak": "du coup",
+   "texts": [
+    "du coup"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "52c8f13ea9e931c6"
+  },
+  {
    "key": "du, de la",
    "speak": "du, de la",
    "texts": [
@@ -7153,6 +9135,28 @@
     "table-cell"
    ],
    "hash": "9a78d03d268c48de"
+  },
+  {
+   "key": "en fait",
+   "speak": "en fait",
+   "texts": [
+    "en fait"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "036a7ce8573f4832"
+  },
+  {
+   "key": "enfin",
+   "speak": "enfin",
+   "texts": [
+    "enfin"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "d64a1b1737ddd2a9"
   },
   {
    "key": "ennuie",
@@ -17226,6 +19230,17 @@
    "hash": "b6f07e7a051aefe3"
   },
   {
+   "key": "poser un lapin",
+   "speak": "poser un lapin",
+   "texts": [
+    "poser un lapin"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "da3d5ac2e91d918d"
+  },
+  {
    "key": "pourquoi",
    "speak": "pourquoi",
    "texts": [
@@ -17458,6 +19473,17 @@
     "topic-listen"
    ],
    "hash": "4a4c9fce97fd2062"
+  },
+  {
+   "key": "quand même",
+   "speak": "quand même",
+   "texts": [
+    "quand même"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "bf398d380c47cb99"
   },
   {
    "key": "quand tu arrives",
@@ -21934,6 +23960,39 @@
    "hash": "a701a906308542ed"
   },
   {
+   "key": "« Bref », ça veut dire quoi ?",
+   "speak": "« Bref », ça veut dire quoi ?",
+   "texts": [
+    "« Bref », ça veut dire quoi ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "0b9555deef54462e"
+  },
+  {
+   "key": "À bientôt",
+   "speak": "À bientôt",
+   "texts": [
+    "À bientôt"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "ac5a3a5a6dfc5feb"
+  },
+  {
+   "key": "À demain",
+   "speak": "À demain",
+   "texts": [
+    "À demain"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "de0b380273b111c0"
+  },
+  {
    "key": "À quelle heure",
    "speak": "À quelle heure",
    "texts": [
@@ -21943,6 +24002,17 @@
     "topic-summary-answer"
    ],
    "hash": "78e255cb1eb172e7"
+  },
+  {
+   "key": "À quelle heure part le train ?",
+   "speak": "À quelle heure part le train ?",
+   "texts": [
+    "À quelle heure part le train ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "7c6439636433d59b"
   },
   {
    "key": "À qui",
@@ -22000,6 +24070,17 @@
    "hash": "166d642477ec9d87"
   },
   {
+   "key": "À tout à l'heure",
+   "speak": "À tout à l'heure",
+   "texts": [
+    "À tout à l'heure"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "ed7f5196db612460"
+  },
+  {
    "key": "Ça coûte soixante-quinze euros.",
    "speak": "Ça coûte soixante-quinze euros.",
    "texts": [
@@ -22011,6 +24092,72 @@
    "hash": "d84d432fedd61cbe"
   },
   {
+   "key": "Ça dépend",
+   "speak": "Ça dépend",
+   "texts": [
+    "Ça dépend"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "32e23557dad785b3"
+  },
+  {
+   "key": "Ça m'est égal",
+   "speak": "Ça m'est égal",
+   "texts": [
+    "Ça m'est égal"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "7992a2888229a2c1"
+  },
+  {
+   "key": "Ça marche",
+   "speak": "Ça marche",
+   "texts": [
+    "Ça marche"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "b08cefbea89123f2"
+  },
+  {
+   "key": "Ça me fait plaisir",
+   "speak": "Ça me fait plaisir",
+   "texts": [
+    "Ça me fait plaisir"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "05f178edffd9f13a"
+  },
+  {
+   "key": "Ça me plaît",
+   "speak": "Ça me plaît",
+   "texts": [
+    "Ça me plaît"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "fe4d81754f215f91"
+  },
+  {
+   "key": "Ça me plaît beaucoup, ce quartier.",
+   "speak": "Ça me plaît beaucoup, ce quartier.",
+   "texts": [
+    "Ça me plaît beaucoup, ce quartier."
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "1167d61f89f85167"
+  },
+  {
    "key": "Ça sent bon ici.",
    "speak": "Ça sent bon ici.",
    "texts": [
@@ -22020,6 +24167,39 @@
     "verb-sentence"
    ],
    "hash": "73f5ffe5dae2b506"
+  },
+  {
+   "key": "Ça va ?",
+   "speak": "Ça va ?",
+   "texts": [
+    "Ça va ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "22688b74284d5c73"
+  },
+  {
+   "key": "Ça va ? — Pas mal, et toi ?",
+   "speak": "Ça va ? — Pas mal, et toi ?",
+   "texts": [
+    "Ça va ? — Pas mal, et toi ?"
+   ],
+   "categories": [
+    "expression-example"
+   ],
+   "hash": "aab5aba815b36825"
+  },
+  {
+   "key": "Ça veut dire quoi ?",
+   "speak": "Ça veut dire quoi ?",
+   "texts": [
+    "Ça veut dire quoi ?"
+   ],
+   "categories": [
+    "expression"
+   ],
+   "hash": "001427c6745fbdc3"
   },
   {
    "key": "à Paris",

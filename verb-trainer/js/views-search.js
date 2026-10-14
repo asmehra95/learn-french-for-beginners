@@ -8,7 +8,7 @@
   window.VT_VIEWS = window.VT_VIEWS || {};
   function $(id) { return document.getElementById(id); }
 
-  var VERB_CAP = 20, TOPIC_CAP = 5, TABLE_CAP = 5;
+  var VERB_CAP = 20, TOPIC_CAP = 5, TABLE_CAP = 5, EXPR_CAP = 5;
   var C = null, S = null;
   var dlg, input, listbox, empty, status;
   var options = [];   // flat list: { node, act, data }
@@ -53,7 +53,8 @@
       if (text == null) {
         if (!last || !last.key) return;
         if (!last.total) text = "No results." + (last.suggestion ? " Closest verb: " + last.suggestion.infinitive + "." : "");
-        else text = last.verbs.length + (last.verbs.length === 1 ? " verb, " : " verbs, ") + last.tables.length + (last.tables.length === 1 ? " table" : " tables") +
+        else text = last.verbs.length + (last.verbs.length === 1 ? " verb, " : " verbs, ") + last.tables.length + (last.tables.length === 1 ? " table, " : " tables, ") +
+          last.expressions.length + (last.expressions.length === 1 ? " expression" : " expressions") +
           " and " + last.topics.length + (last.topics.length === 1 ? " topic" : " topics") + " found.";
       }
       status.textContent = text;
@@ -127,6 +128,31 @@
     ]);
   }
 
+  /* An everyday-expression result: the French, its English, the theme and the register (as text), plus Listen. */
+  var REGISTER = { formal: "Formal", neutral: "Neutral", informal: "Informal" };
+  function expressionRow(x, i) {
+    var speak = C.L.speakableText(x.listenText);
+    return el("div", { role: "none", className: "search-row" }, [
+      option("se-" + i, "expression", x, { className: "search-main search-expr" }, [
+        el("span", { className: "search-line" }, [
+          el("span", { className: "search-inf", lang: "fr", text: x.fr }), sep(),
+          el("span", { className: "search-meaning", text: x.en }), sep()
+        ]),
+        el("span", { className: "search-why", text: "Expressions: " + x.themeTitle + " · " + (REGISTER[x.register] || x.register) +
+          (x.matchDetail ? " · " + x.matchDetail : "") })
+      ]),
+      option("se-" + i + "-l", "listen", { listenText: x.listenText, listenKey: null }, { className: "search-listen", label: "Listen: " + speak }, [
+        C.UI.icon("volume-2"), el("span", { className: "search-act-text", "aria-hidden": "true", text: "Listen" })
+      ])
+    ]);
+  }
+
+  /* Expressions go first (before verbs and tables) when one matches strongly (score >= 80: French, a keyword or
+     the whole English) and no verb has an exact infinitive or form match: "excuse me", "bon", "en avoir marre". */
+  function expressionsFirst(res) {
+    return !!(res.expressions.length && res.expressions[0].score >= 80 && !(res.verbs[0] && res.verbs[0].score >= S.SCORES.form));
+  }
+
   /* Tables go first when a table matches strongly (a keyword or exact row, score >= 80) and no verb has an
      exact infinitive or form match: "cette", "le mien" and "quatre-vingts" open the table with Enter, while
      "du" (an exact form of devoir) keeps the verb first. */
@@ -151,11 +177,15 @@
       var vs = showAll ? res.verbs : res.verbs.slice(0, VERB_CAP);
       var ts = showAll ? res.topics : res.topics.slice(0, TOPIC_CAP);
       var tb = showAll ? res.tables : res.tables.slice(0, TABLE_CAP);
+      var xs = showAll ? res.expressions : res.expressions.slice(0, EXPR_CAP);
       var verbGroup = vs.length ? function () { kids.push(group("sg-verbs", "Verbs (" + res.verbs.length + ")", vs.map(verbRow))); } : function () {};
       var tableGroup = tb.length ? function () { kids.push(group("sg-tables", "Tables (" + res.tables.length + ")", tb.map(tableRow))); } : function () {};
-      if (tablesFirst(res)) { tableGroup(); verbGroup(); } else { verbGroup(); tableGroup(); }
+      var exprGroup = xs.length ? function () { kids.push(group("sg-expr", "Expressions (" + res.expressions.length + ")", xs.map(expressionRow))); } : function () {};
+      if (expressionsFirst(res)) { exprGroup(); verbGroup(); tableGroup(); }
+      else if (tablesFirst(res)) { tableGroup(); verbGroup(); exprGroup(); }
+      else { verbGroup(); tableGroup(); exprGroup(); }
       if (ts.length) kids.push(group("sg-topics", "Topics (" + res.topics.length + ")", ts.map(topicRow)));
-      if (vs.length < res.verbs.length || ts.length < res.topics.length || tb.length < res.tables.length) {
+      if (vs.length < res.verbs.length || ts.length < res.topics.length || tb.length < res.tables.length || xs.length < res.expressions.length) {
         kids.push(el("div", { role: "none", className: "search-row" }, [
           option("so-all", "all", null, { className: "search-main search-all" }, [el("span", { text: "Show all " + res.total + " results" })])
         ]));
@@ -207,7 +237,7 @@
     var r = o.data;
     if (o.act === "open") go(r.href);
     else if (o.act === "lesson") go(r.lessonHref);
-    else if (o.act === "topic" || o.act === "table") go(r.href);
+    else if (o.act === "topic" || o.act === "table" || o.act === "expression") go(r.href);
     else if (o.act === "listen") C.play(r.listenText, r.listenKey, false); // recorded clip first, then the device voice
     else if (o.act === "example") {
       input.value = r;
@@ -242,11 +272,12 @@
     } else if (k === "Enter") {
       ev.preventDefault();
       if (active !== -1) { activate(active); return; }
-      // The first result of the first group shown (Tables first only when tablesFirst said so).
-      var i = last && last.key && tablesFirst(last) ? firstOf("table") : -1;
-      if (i === -1) i = firstOf("open");
-      if (i === -1) i = firstOf("table");
-      if (i === -1) i = firstOf("topic");
+      // The first result of the first group shown (same order as render()).
+      var chain = !last || !last.key ? ["open", "table", "expression", "topic"]
+        : expressionsFirst(last) ? ["expression", "table", "open", "topic"]
+        : tablesFirst(last) ? ["table", "open", "expression", "topic"] : ["open", "table", "expression", "topic"];
+      var i = -1;
+      for (var c = 0; c < chain.length && i === -1; c++) i = firstOf(chain[c]);
       if (i !== -1) activate(i);
       else if (last && last.suggestion) applySuggestion();
     } else if (k === "Escape") {
@@ -292,7 +323,7 @@
       return;
     }
     var n = ctx.DATA.verbs.length;
-    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings, grammar tables and the topic lessons";
+    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings, grammar tables, everyday expressions and the topic lessons";
     triggers.forEach(function (b) {
       if (b) b.addEventListener("click", function (ev) { open(ev.currentTarget); });
     });
