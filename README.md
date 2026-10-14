@@ -84,11 +84,11 @@ These PDFs are in the repo and served from the site:
 
 Three layers, selectable in Settings → Voice:
 
-1. **Pre-recorded synthetic voice (default)** — 1,604 phrases generated with the open-source
+1. **Pre-recorded synthetic voice (default)** — 1,990 phrases generated with the open-source
    Qwen3-TTS 1.7B Base model (`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16`, Apache-2.0). One
    consistent designed voice (not a real person's voice). Covers every present-tense form, past,
-   future, example sentences and topic answers. The Credits view has a download link for the
-   native-speaker recordings zip.
+   future, example sentences, topic answers and the Grammar tables (cells and examples). The
+   Credits view has a download link for the native-speaker recordings zip.
 
 2. **869 Lingua Libre native-speaker clips** — recorded by volunteer native French speakers on
    [Lingua Libre](https://lingualibre.org/) / Wikimedia Commons, under CC0, CC BY, or CC BY-SA

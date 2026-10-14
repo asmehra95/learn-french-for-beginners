@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Build tts-tools/corpus.json: every French string a Listen button in the verb trainer can speak.
-   Loads the real site scripts (no copies), enumerates the Listen call sites, and normalizes with
+   Loads the real site scripts (no copies), enumerates the Listen call sites (verbs, topics and the
+   Grammar tables: list cells, grid cells, examples; `say` wins over `fr`), and normalizes with
    VT_LOGIC.ttsSpeak / VT_LOGIC.ttsKey, the single source of truth shared with the browser.
    Usage: node tts-tools/extract-corpus.js [--out <file>] [--site <verb-trainer dir>]
    Exports collect(siteDir) for the site's Node tests. No dependencies. */
@@ -25,7 +26,7 @@ function loadSite(siteDir) {
   const sandbox = { console };
   sandbox.window = sandbox;
   vm.createContext(sandbox);
-  ["data.js", "data-100.js", "verb-types.js", "topics-data.js", "merge-data.js", "logic.js", "topics.js"].forEach(f => {
+  ["data.js", "data-100.js", "verb-types.js", "topics-data.js", "reference-data.js", "merge-data.js", "logic.js", "topics.js"].forEach(f => {
     const file = path.join(siteDir, "js", f);
     vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: file });
   });
@@ -64,6 +65,14 @@ function collect(siteDir) {
       add("topic-summary-answer", TOP.answerText(item));
     }
   })));
+  const REF = w.VT_REFERENCE;
+  if (!REF || !REF.categories) throw new Error("VT_REFERENCE missing: js/reference-data.js did not load");
+  // Mirrors views-tables.js: listen(row.say || row.fr), listen(cell.say || cell.fr), listen(e.fr).
+  REF.categories.forEach(c => c.tables.forEach(t => {
+    if (t.kind === "grid") t.rows.forEach(r => r.cells.forEach(cell => add("table-grid", cell.say || cell.fr)));
+    else t.rows.forEach(r => add("table-cell", r.say || r.fr));
+    (t.examples || []).forEach(e => add("table-example", e.fr));
+  }));
   add("settings-preview", PREVIEW_TEXT);
 
   const items = [...map.values()].sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));

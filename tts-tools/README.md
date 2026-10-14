@@ -7,9 +7,11 @@ with the site; nobody who uses the site needs any of this.
 
 | File | What it does |
 |---|---|
-| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak, normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). Writes `corpus.json`. |
+| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak (verbs, topics and the Grammar tables: list cells, grid cells and examples, `say` used instead of `fr` when a row has one), normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). Writes `corpus.json`. |
 | `generate.py` | Builds whatever is missing or changed, with QA and retries, then writes the site manifest, `CREDITS.md` and a review page. Incremental and idempotent: a second run with no data change generates nothing. |
-| `ttsqa.py` | QA: Whisper large-v3-turbo transcription (French, temperature 0, no prompt), homophone-aware scoring, silence / clipping / truncation / runaway-length checks. |
+| `ttsqa.py` | QA: Whisper large-v3-turbo transcription (French, temperature 0, no prompt), homophone-aware scoring, number / clock-time normalization, silence / clipping / truncation / runaway-length checks. |
+| `test_ttsqa.py` | Unit tests for the QA text rules: `python -m unittest -v test_ttsqa`. |
+| `env.example.sh` | Template for the permanent environment (venv, model cache, pip cache) kept outside the repo. |
 | `engines/qwen3_tts.py` | The Qwen3-TTS adapter used in the Phase 1 comparison, unchanged. |
 | `voices/qwen3-fr-bf16/reference.wav` | The designed synthetic voice (no real person). Qwen3 Base clones it for every clip. **Don't regenerate it**, or the voice changes. |
 | `requirements.txt`, `requirements-lock.txt` | Pinned Python packages. |
@@ -18,9 +20,9 @@ with the site; nobody who uses the site needs any of this.
 
 ```sh
 cd tts-tools  # from the repo root
-source venv/bin/activate          # see "Setting up" below
-python generate.py --dry-run      # what would be generated
-python generate.py                # generate it (only new or changed texts)
+source <tts-env>/env.sh           # see "Setting up" below
+python generate.py --dry-run --strict-short --review-dir <tts-env>/clip-review   # what would be generated
+python generate.py --strict-short --max-retries-short 7 --review-dir <tts-env>/clip-review
 ```
 
 Then reload the site. If you use the Explain helper (`explainer/start.sh`), restart it so it serves the new files.
@@ -37,7 +39,15 @@ Texts with no clip keep working: the site falls back to the device voice for the
    - 2-3 words: loose CER ≤ 0.15 (or identical sound key);
    - 1 word (stricter): only an exact match or an identical sound key passes; anything else is
      "single word: listen";
+   - with `--strict-short`, any text without a space (`dix-sept`, `l'hôtel`, `celui-ci`) also counts as
+     one word (same rule and retry budget), and a single word Whisper still hasn't confirmed after all
+     retries is `failed-excluded` (flag `single-word-unverified`): not shipped, the site uses the device voice;
    - signal checks: silent, too short, clipping, internal gap, runaway length, last word missing.
+   Whisper often writes numbers and times as digits. Before scoring, its transcript is spelled out
+   (`21` → vingt et un, `3e` → troisième, `1er` → premier, `75 €` → soixante-quinze euros,
+   `18h30` / `18:30` / `18 h 30` → dix-huit heures trente), and a clock time is also tried in its other
+   correct readings (`4 h 15` = quatre heures et quart, `5 h 45` = six heures moins le quart,
+   `6 h 50` = sept heures moins dix, `12 h 30` = midi et demi); the best reading counts. Thresholds are unchanged.
    "Loose" means lowercase, no punctuation or accents. The "sound key" collapses silent endings and
    equal-sounding spellings (parle/parles/parlent, sait/c'est), so homophones are not counted as errors.
 3. A failed clip is regenerated with a new seed (`base + 7919·n`) and a different temperature
@@ -54,7 +64,8 @@ stopped (`work/inflight-<voice>.json`, and the voice manifest is saved every 25 
 
 ## Reviewing clips by ear
 
-`generate.py` writes `.agents/tts/clip-review/index.html` (or `--review-dir`). Open it as a file. It lists
+`generate.py` writes `.agents/tts/clip-review/index.html` by default; pass `--review-dir <folder outside
+the repo>` (for example `<tts-env>/clip-review`) so the page is never committed. Open it as a file. It lists
 every clip worst first, with what Whisper heard. Tick **Bad** on any clip that sounds wrong, press
 **Export marked** and save the JSON, then:
 
@@ -77,23 +88,25 @@ whose text left the site). `python generate.py --help` lists them all.
 - `verb-trainer/js/tts-manifest.js`: what the site loads. `window.VT_TTS.items` maps the normalized text to
   `{ file, voiceId, duration }`.
 
-## Setting up (recreating the deleted venv and model caches)
+## Setting up (a permanent environment outside the repo)
 
-After the first full run, the Python environment and the model downloads were deleted to free disk
-space. To recreate them (Apple Silicon Mac, about 8 GB of downloads and disk):
+The Python environment and the two model downloads (about 6 GB) live in one folder **outside the git
+repo**, so they survive between runs and can never be committed. Set it up once (Apple Silicon Mac):
 
 ```sh
-cd tts-tools  # from the repo root
-/opt/homebrew/bin/python3.11 -m venv venv       # Python 3.11 (brew install python@3.11 if missing)
-source venv/bin/activate
-pip install -r requirements.txt
-# keep the model caches next to the tools instead of ~/.cache (optional):
-export HF_HOME="$PWD/hf_home"
-python generate.py --dry-run                    # downloads nothing yet
-python generate.py --limit 1 --only <any hash>  # first real run downloads the two pinned models
+cp tts-tools/env.example.sh <tts-env>/env.sh   # then set TTS_ENV in it to the folder, e.g. /path/to/tts-env
+source <tts-env>/env.sh                        # exports TTS_VENV, HF_HOME, PIP_CACHE_DIR
+mkdir -p "$TTS_ENV/hf_home" "$TTS_ENV/pip_cache"
+/opt/homebrew/bin/python3.11 -m venv "$TTS_VENV"   # Python 3.11 (brew install python@3.11 if missing)
+source <tts-env>/env.sh                        # activates the new venv
+cd tts-tools && pip install -r requirements.txt -c requirements-lock.txt
 ```
 
-The two models are downloaded automatically, at pinned revisions, on the first run:
+After that, every session only needs `source <tts-env>/env.sh`. Keep the folder: deleting it means
+downloading the models again. `.gitignore` also ignores `.tts-env/`, `tts-tools/venv/` and
+`tts-tools/hf_home/` in case one is created inside the repo by mistake.
+
+The two models are downloaded into `$HF_HOME` automatically, at pinned revisions, on the first run:
 
 - `mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16` @ `a6eb4f68e4b056f1215157bb696209bc82a6db48` (≈ 4.2 GB, Apache-2.0)
 - `mlx-community/whisper-large-v3-turbo` @ `a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb` (≈ 1.6 GB, MIT)

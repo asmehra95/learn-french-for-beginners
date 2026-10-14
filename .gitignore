@@ -18,6 +18,11 @@ explainer/.last-port
 # Agent scratch space
 .agents-scratch/
 
+# TTS environment (keep outside the repo)
+.agents/
+tts-tools/venv/
+tts-tools/hf_home/
+.tts-env/
 # Node
 node_modules/
 

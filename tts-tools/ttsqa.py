@@ -105,7 +105,7 @@ def word_count(text):
 
 # ---------------------------------------------------------------------------------------------
 # Phase 2 additions: automatic homophone awareness for the full corpus (Phase 1 used a hand-made
-# "alt" list per test string; 1,608 strings need a rule instead).
+# "alt" list per test string; the full corpus needs a rule instead).
 # ---------------------------------------------------------------------------------------------
 _UNITS = ["zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze",
           "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit", "dix-neuf"]
@@ -129,9 +129,85 @@ def fr_number(n):
     return head + ("" if r == 0 else " " + fr_number(r))
 
 
+def fr_ordinal(n, fem=False):
+    """French ordinal words: 1 -> premier/première, 3 -> troisième, 21 -> vingt et unième."""
+    if n == 1:
+        return "première" if fem else "premier"
+    w = fr_number(n)
+    if w.endswith("cinq"):
+        w += "u"
+    elif w.endswith("neuf"):
+        w = w[:-1] + "v"
+    elif w.endswith("s") and (w.endswith("vingts") or w.endswith("cents")):
+        w = w[:-1]
+    if w.endswith("e"):
+        w = w[:-1]
+    return w + "ième"
+
+
+def _clock(s):
+    """Whisper's clock notations -> "<H> heures <MM>" / "<H> heures" (digits kept)."""
+    s = re.sub(r"\b(\d{1,2})\s*(?:h|:)\s*(\d{2})\b", r"\1 heures \2", s)  # 18h30, 18:30, 18 h 30
+    return re.sub(r"(\d)\s*h\b", r"\1 heures", s)  # "à 8 h" is read "à huit heures"
+
+
 def spell_numbers(s):
-    s = re.sub(r"(\d)\s*h\b", r"\1 heures", s)  # "à 8 h" is read "à huit heures"
+    s = re.sub(r"(\d)\s*€", r"\1 euros", s).replace("€", " euros ")
+    s = re.sub(r"\b(\d{1,3})(er|re|ère)\b", lambda m: " " + fr_ordinal(int(m.group(1)), m.group(2) != "er") + " ", s)
+    s = re.sub(r"\b(\d{1,3})(?:ème|eme|e|è|ᵉ)\b", lambda m: " " + fr_ordinal(int(m.group(1))) + " ", s)
+    s = _clock(s)
     return re.sub(r"\d{1,3}", lambda m: " " + fr_number(int(m.group(0))) + " ", s)
+
+
+def _hour_names(h):
+    """Ways to say hour h on the clock (digits for spell_numbers): 13 -> 13 heures; 12 -> midi too."""
+    names = [f"{h} heures"]
+    if h == 1 or h == 13:
+        names.append("une heure")
+    if h == 12:
+        names.append("midi")
+    if h in (0, 24):
+        names.append("minuit")
+    return names
+
+
+def clock_variants(transcript):
+    """Other correct readings of the clock times Whisper wrote as digits, spelled out:
+    "4 h 15" also matches "quatre heures et quart", "5 h 45" "six heures moins le quart",
+    "6 h 50" "sept heures moins dix", "12 h 30" "midi et demi(e)". The plain reading is not included."""
+    s = _clock(transcript)
+    pat = re.compile(r"\b(\d{1,2}) heures(?: (\d{1,2})\b)?")
+    m = pat.search(s)
+    if not m:
+        return []
+    h, mm = int(m.group(1)), int(m.group(2)) if m.group(2) else 0
+    alts = []
+    for name in _hour_names(h):
+        if mm == 0:
+            alts.append(name)
+        else:
+            alts.append(f"{name} {mm}")
+        if mm == 15:
+            alts.append(f"{name} et quart")
+        if mm == 30:
+            alts += [f"{name} et demie", f"{name} et demi"]
+    if 35 <= mm <= 55:
+        for name in _hour_names(h + 1):
+            alts.append(f"{name} moins {60 - mm}")
+            if mm == 45:
+                alts.append(f"{name} moins le quart")
+    plain = f"{h} heures" + (f" {mm}" if m.group(2) else "")
+    out = []
+    for a in alts:
+        if a == plain:
+            continue
+        v = re.sub(r"\s+", " ", spell_numbers(s[:m.start()] + a + s[m.end():])).strip()
+        if v not in out:
+            out.append(v)
+    return out
+
+
+_WORD_SOUNDS = {"sept": "set", "y": "i", "les": "lE", "des": "dE", "mes": "mE", "tes": "tE", "ses": "sE", "ces": "sE"}
 
 
 def sound_key(word):
@@ -141,6 +217,12 @@ def sound_key(word):
     w = word
     if not w:
         return w
+    # true homophones Whisper writes for isolated words (Grammar tables run): sept = cette, y = i,
+    # ses/ces/mes/... end in [e] (ses = c'est), "Allah" = "à la" (final h after a vowel is silent)
+    if w in _WORD_SOUNDS:
+        return _WORD_SOUNDS[w]
+    w = w.replace("ç", "s")  # ça = sa
+    w = re.sub(r"(?<=[aeiou])h$", "", w)
     w = re.sub(r"^h", "", w)
     w = w.replace("ph", "f").replace("qu", "k").replace("ch", "S")
     w = re.sub(r"(eau|au)", "o", w)
@@ -184,15 +266,38 @@ def phon_cer(target, hyp):
 HARD_FLAGS = {"silent", "too-short", "clipping", "internal-gap", "duration-outlier"}
 
 
-def evaluate_corpus(speak, wav_path, transcript, median_ratio):
+_RANK = {"pass": 0, "short-ok": 0, "short-unverified": 1, "fail": 2, "short-fail": 3}
+
+
+def is_single(speak, strict_single=False):
+    """One word for QA: one normalized word, or (strict) no whitespace at all ("dix-sept", "l'hôtel")."""
+    return word_count(speak) <= 1 or (strict_single and not re.search(r"\s", speak.strip()))
+
+
+def evaluate_corpus(speak, wav_path, transcript, median_ratio, strict_single=False):
+    """QA one corpus clip against Whisper's transcript and the other correct readings of any clock
+    time it wrote as digits (clock_variants); keeps the best-scoring reading. See _evaluate_one."""
+    best = None
+    for hyp in [spell_numbers(transcript)] + clock_variants(transcript):
+        q = _evaluate_one(speak, wav_path, hyp, median_ratio, strict_single)
+        if best is None or (_RANK[q["status"]], q["phon_cer"], q["loose_cer"], len(q["flags"])) < \
+                (_RANK[best["status"]], best["phon_cer"], best["loose_cer"], len(best["flags"])):
+            best = q
+    best["transcript"] = transcript
+    return best
+
+
+def _evaluate_one(speak, wav_path, transcript, median_ratio, strict_single=False):
     """QA one corpus clip (Phase 2). Same ASR, signal checks and thresholds as Phase 1, plus:
     - homophone-aware text score (`phon_cer`) replacing the hand-made alt lists;
     - stricter single-word rule: only an exact loose match or an identical sound key is "short-ok"
       (Phase 1 allowed loose CER <= 0.34); anything else is "short-unverified" and gets retried.
+      With strict_single, any string without whitespace ("dix-sept", "l'hôtel") counts as one word.
+    `transcript` is already number-spelled (spell_numbers / clock_variants).
     Returns a dict with scores, flags and status in {pass, fail, short-ok, short-unverified, short-fail}."""
     target = re.sub(r"\s+", " ", spell_numbers(speak)).strip()  # digits / "8 h" as they are read
     item = {"text": target, "speak": target, "category": "corpus"}
-    q = evaluate(item, wav_path, spell_numbers(transcript), median_ratio)
+    q = evaluate(item, wav_path, transcript, median_ratio)
     q["transcript"] = transcript
     pc = phon_cer(target, transcript)
     q["phon_cer"] = pc
@@ -209,7 +314,7 @@ def evaluate_corpus(speak, wav_path, transcript, median_ratio):
     wc = q["words"]
     lc = q["loose_cer"]
     signal_ok = not (HARD_FLAGS & set(flags))
-    if wc <= 1:
+    if wc <= 1 or is_single(speak, strict_single):
         exact = lc == 0.0 or pc == 0.0
         q["status"] = "short-fail" if not signal_ok else ("short-ok" if exact else "short-unverified")
         return q

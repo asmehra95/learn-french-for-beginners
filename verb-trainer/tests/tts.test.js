@@ -228,6 +228,60 @@ test("coverage: every Listen text from the live data is recorded or listed as fa
   assert.deepEqual(missing, []);
 });
 
+/* Every text a Grammar tables Listen button speaks, exactly as views-tables.js passes it. */
+function tablesListenTexts() {
+  var REF = require("../js/reference-data.js");
+  var out = [];
+  REF.categories.forEach(function (c) {
+    c.tables.forEach(function (t) {
+      if (t.kind === "grid") t.rows.forEach(function (r) { r.cells.forEach(function (cell) { out.push(cell.say || cell.fr); }); });
+      else t.rows.forEach(function (r) { out.push(r.say || r.fr); });
+      (t.examples || []).forEach(function (e) { out.push(e.fr); });
+    });
+  });
+  return out;
+}
+
+test("Grammar tables: every Listen text has a clip or is a documented failed/excluded entry, and is in the corpus", function () {
+  var T = loadShipped();
+  var corpus = require("../../tts-tools/extract-corpus.js").collect(ROOT).items;
+  var byKey = {};
+  corpus.forEach(function (it) { byKey[it.key] = it; });
+  var man = JSON.parse(fs.readFileSync(path.join(ROOT, "audio", "tts", T.defaultVoice, "manifest.json"), "utf8"));
+  var texts = tablesListenTexts();
+  assert.ok(texts.length > 400, "tables have " + texts.length + " Listen texts");
+  var missing = [], notInCorpus = [];
+  texts.forEach(function (text) {
+    var key = L.ttsKey(text);
+    var it = byKey[key];
+    if (!it || !it.categories.some(function (c) { return c.indexOf("table-") === 0; })) notInCorpus.push(key);
+    if (T.items[key]) return;
+    var hash = crypto.createHash("sha256").update(key, "utf8").digest("hex").slice(0, 16);
+    var rec = man.items[hash];
+    if (rec && (rec.status === "failed-excluded" || rec.excludedByUser)) return;
+    missing.push(key);
+  });
+  assert.deepEqual(notInCorpus, []);
+  assert.deepEqual(missing, []);
+});
+
+test("views-tables.js Listen call sites match the corpus extractor", function () {
+  var src = fs.readFileSync(path.join(ROOT, "js", "views-tables.js"), "utf8");
+  var calls = src.match(/\blisten\([^)]*\)/g).filter(function (c) { return c !== "listen(text)"; });
+  assert.deepEqual(calls, ["listen(row.say || row.fr)", "listen(cell.say || cell.fr)", "listen(e.fr)"]);
+});
+
+test("je me suis assis stays removed: no manifest entry, no clip, record kept as excludedByUser", function () {
+  var T = loadShipped();
+  var key = "je me suis assis";
+  assert.equal(T.items[key], undefined);
+  var hash = crypto.createHash("sha256").update(key, "utf8").digest("hex").slice(0, 16);
+  assert.equal(hash, "53492a77289c954c");
+  var man = JSON.parse(fs.readFileSync(path.join(ROOT, "audio", "tts", T.defaultVoice, "manifest.json"), "utf8"));
+  assert.equal(man.items[hash].excludedByUser, true);
+  assert.equal(fs.existsSync(path.join(ROOT, "audio", "tts", T.defaultVoice, hash + ".mp3")), false);
+});
+
 test("index.html loads tts-manifest.js before speech.js; the CSP is unchanged (media-src 'self')", function () {
   var html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
   var a = html.indexOf('<script src="js/tts-manifest.js"></script>');

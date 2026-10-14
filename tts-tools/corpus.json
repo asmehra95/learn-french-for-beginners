@@ -1,7 +1,7 @@
 {
  "normalization": "v1",
- "generatedAt": "2026-10-13T15:37:59.644Z",
- "count": 1608,
+ "generatedAt": "2026-10-14T17:36:01.826Z",
+ "count": 1998,
  "excluded": [
   "casual",
   "formal",
@@ -144,6 +144,138 @@
    "hash": "ac742f86c538eafd"
   },
   {
+   "key": "C'est beau !",
+   "speak": "C'est beau !",
+   "texts": [
+    "C'est beau !"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f97b019a1c6eb6a3"
+  },
+  {
+   "key": "C'est celle de ma sœur.",
+   "speak": "C'est celle de ma sœur.",
+   "texts": [
+    "C'est celle de ma sœur."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "ae39fb953cba2484"
+  },
+  {
+   "key": "C'est le deux mai.",
+   "speak": "C'est le deux mai.",
+   "texts": [
+    "C'est le deux mai."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "17b4dd1fb2f4276a"
+  },
+  {
+   "key": "C'est le premier mai.",
+   "speak": "C'est le premier mai.",
+   "texts": [
+    "C'est le premier mai."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "aeb5ff1bc5d21f65"
+  },
+  {
+   "key": "C'est mon amie Claire.",
+   "speak": "C'est mon amie Claire.",
+   "texts": [
+    "C'est mon amie Claire."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "5106eeef66d19439"
+  },
+  {
+   "key": "C'est pour lui.",
+   "speak": "C'est pour lui.",
+   "texts": [
+    "C'est pour lui."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f902d84d45419e83"
+  },
+  {
+   "key": "C'est un bel appartement.",
+   "speak": "C'est un bel appartement.",
+   "texts": [
+    "C'est un bel appartement."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "22a77158a5c4c5c5"
+  },
+  {
+   "key": "C'est un bon restaurant.",
+   "speak": "C'est un bon restaurant.",
+   "texts": [
+    "C'est un bon restaurant."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "72b8fc28b0c960c4"
+  },
+  {
+   "key": "C'est un médecin célèbre.",
+   "speak": "C'est un médecin célèbre.",
+   "texts": [
+    "C'est un médecin célèbre."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "b8646fa2ca57cbaa"
+  },
+  {
+   "key": "C'est un petit village.",
+   "speak": "C'est un petit village.",
+   "texts": [
+    "C'est un petit village."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f732674f8dd3daaf"
+  },
+  {
+   "key": "C'est une bonne idée.",
+   "speak": "C'est une bonne idée.",
+   "texts": [
+    "C'est une bonne idée."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "477b4039832aed44"
+  },
+  {
+   "key": "Ce café est délicieux.",
+   "speak": "Ce café est délicieux.",
+   "texts": [
+    "Ce café est délicieux."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "a96365beff9abb5f"
+  },
+  {
    "key": "Ce film ennuie les enfants.",
    "speak": "Ce film ennuie les enfants.",
    "texts": [
@@ -155,6 +287,28 @@
    "hash": "15b9f3965dea55b8"
   },
   {
+   "key": "Ce n'est pas ton stylo, c'est le mien.",
+   "speak": "Ce n'est pas ton stylo, c'est le mien.",
+   "texts": [
+    "Ce n'est pas ton stylo, c'est le mien."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "4c3f8969b91adc98"
+  },
+  {
+   "key": "Ce n'est pas un problème.",
+   "speak": "Ce n'est pas un problème.",
+   "texts": [
+    "Ce n'est pas un problème."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "3dfc01eca658fe38"
+  },
+  {
    "key": "Ces films sont super. Lesquels préfères-tu ?",
    "speak": "Ces films sont super. Lesquels préfères-tu ?",
    "texts": [
@@ -164,6 +318,39 @@
     "topic-listen"
    ],
    "hash": "6a3bbb6a61243266"
+  },
+  {
+   "key": "Cet hôtel est cher.",
+   "speak": "Cet hôtel est cher.",
+   "texts": [
+    "Cet hôtel est cher."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "1e6bc4013a7c46b1"
+  },
+  {
+   "key": "Cette semaine, je travaille.",
+   "speak": "Cette semaine, je travaille.",
+   "texts": [
+    "Cette semaine, je travaille."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "a1c777a22d95c6ff"
+  },
+  {
+   "key": "Ceux qui veulent venir sont les bienvenus.",
+   "speak": "Ceux qui veulent venir sont les bienvenus.",
+   "texts": [
+    "Ceux qui veulent venir sont les bienvenus."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "81d8b21242976489"
   },
   {
    "key": "Chez qui",
@@ -266,6 +453,17 @@
    "hash": "ce27db01ccf2921f"
   },
   {
+   "key": "Combien de frères as-tu ? J'en ai deux.",
+   "speak": "Combien de frères as-tu ? J'en ai deux.",
+   "texts": [
+    "Combien de frères as-tu ? J'en ai deux."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "158a6807a6bb055c"
+  },
+  {
    "key": "Combien de sœurs est-ce que tu as ?",
    "speak": "Combien de sœurs est-ce que tu as ?",
    "texts": [
@@ -300,6 +498,17 @@
     "topic-summary-answer"
    ],
    "hash": "3a32f7894a7344fc"
+  },
+  {
+   "key": "Comment tu t'appelles ?",
+   "speak": "Comment tu t'appelles ?",
+   "texts": [
+    "Comment tu t'appelles ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "58c9cd2c9d453607"
   },
   {
    "key": "Couche-toi !",
@@ -347,6 +556,17 @@
    "hash": "bd6cbad1920f0b79"
   },
   {
+   "key": "Demain, il fera beau.",
+   "speak": "Demain, il fera beau.",
+   "texts": [
+    "Demain, il fera beau."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "46df0b45cd69f10d"
+  },
+  {
    "key": "Demain, je me lèverai tôt.",
    "speak": "Demain, je me lèverai tôt.",
    "texts": [
@@ -381,6 +601,17 @@
    "hash": "74af2da269aa7ad9"
   },
   {
+   "key": "Elle a une voiture.",
+   "speak": "Elle a une voiture.",
+   "texts": [
+    "Elle a une voiture."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "5e0da1477b0779a2"
+  },
+  {
    "key": "Elle chante dans une chorale.",
    "speak": "Elle chante dans une chorale.",
    "texts": [
@@ -401,6 +632,28 @@
     "verb-sentence"
    ],
    "hash": "d63bbbb954a28f5c"
+  },
+  {
+   "key": "Elle est arrivée hier.",
+   "speak": "Elle est arrivée hier.",
+   "texts": [
+    "Elle est arrivée hier."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "7965b614e67ebb0f"
+  },
+  {
+   "key": "Elle est à la gare.",
+   "speak": "Elle est à la gare.",
+   "texts": [
+    "Elle est à la gare."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "582177492cd71287"
   },
   {
    "key": "Elle habite ici ?",
@@ -425,6 +678,17 @@
    "hash": "33cbd4d6b6301b88"
   },
   {
+   "key": "Elle m'écrit.",
+   "speak": "Elle m'écrit.",
+   "texts": [
+    "Elle m'écrit."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "86f1f0214547a1a6"
+  },
+  {
    "key": "Elle met son manteau.",
    "speak": "Elle met son manteau.",
    "texts": [
@@ -434,6 +698,17 @@
     "verb-sentence"
    ],
    "hash": "fb904c57cc8b7094"
+  },
+  {
+   "key": "Elle n'est pas encore arrivée.",
+   "speak": "Elle n'est pas encore arrivée.",
+   "texts": [
+    "Elle n'est pas encore arrivée."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "31e358e2fce5496c"
   },
   {
    "key": "Elle n'est pas française ? — si, elle est de Lyon !",
@@ -459,6 +734,17 @@
    "hash": "6d7cd43d12e8954f"
   },
   {
+   "key": "Elle porte une robe blanche.",
+   "speak": "Elle porte une robe blanche.",
+   "texts": [
+    "Elle porte une robe blanche."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "530c07a6652a0f3b"
+  },
+  {
    "key": "Elle porte une robe bleue.",
    "speak": "Elle porte une robe bleue.",
    "texts": [
@@ -468,6 +754,17 @@
     "verb-sentence"
    ],
    "hash": "531dc636796ef87b"
+  },
+  {
+   "key": "Elle revient des États-Unis.",
+   "speak": "Elle revient des États-Unis.",
+   "texts": [
+    "Elle revient des États-Unis."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "445eded32b6dd4df"
   },
   {
    "key": "Elle réussit toujours ses examens.",
@@ -623,6 +920,17 @@
     "topic-listen"
    ],
    "hash": "01d779b52764326b"
+  },
+  {
+   "key": "Elles sont heureuses.",
+   "speak": "Elles sont heureuses.",
+   "texts": [
+    "Elles sont heureuses."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "8f7d231271b03f93"
   },
   {
    "key": "Elles vont s'amuser.",
@@ -957,6 +1265,17 @@
    "hash": "1a83c40241cf9639"
   },
   {
+   "key": "Il a dix-huit ans.",
+   "speak": "Il a dix-huit ans.",
+   "texts": [
+    "Il a dix-huit ans."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "4454406e859812df"
+  },
+  {
    "key": "Il a une voiture ?",
    "speak": "Il a une voiture ?",
    "texts": [
@@ -977,6 +1296,28 @@
     "topic-summary-joined"
    ],
    "hash": "cf1320bb101fc3b7"
+  },
+  {
+   "key": "Il a une voiture noire.",
+   "speak": "Il a une voiture noire.",
+   "texts": [
+    "Il a une voiture noire."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "3bb58a8bfd35b79d"
+  },
+  {
+   "key": "Il attend le bus.",
+   "speak": "Il attend le bus.",
+   "texts": [
+    "Il attend le bus."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "d18a47a12fc0486e"
   },
   {
    "key": "Il dit quoi ?",
@@ -1001,6 +1342,127 @@
    "hash": "f8e4f2eef8094648"
   },
   {
+   "key": "Il est cinq heures et demie.",
+   "speak": "Il est cinq heures et demie.",
+   "texts": [
+    "Il est cinq heures et demie."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2ca1a0ad41331547"
+  },
+  {
+   "key": "Il est deux heures.",
+   "speak": "Il est deux heures.",
+   "texts": [
+    "Il est deux heures."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "48205d8f29d7a7c1"
+  },
+  {
+   "key": "Il est dix-huit heures trente.",
+   "speak": "Il est dix-huit heures trente.",
+   "texts": [
+    "Il est dix-huit heures trente."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ff324b9e65fe396c"
+  },
+  {
+   "key": "Il est midi.",
+   "speak": "Il est midi.",
+   "texts": [
+    "Il est midi."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ea54db53c9417edf"
+  },
+  {
+   "key": "Il est minuit.",
+   "speak": "Il est minuit.",
+   "texts": [
+    "Il est minuit."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0598f8736607bf7e"
+  },
+  {
+   "key": "Il est médecin.",
+   "speak": "Il est médecin.",
+   "texts": [
+    "Il est médecin."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "83b33787d8bbc462"
+  },
+  {
+   "key": "Il est quatre heures et quart.",
+   "speak": "Il est quatre heures et quart.",
+   "texts": [
+    "Il est quatre heures et quart."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f1cbda05f4b0f2d8"
+  },
+  {
+   "key": "Il est sept heures moins dix.",
+   "speak": "Il est sept heures moins dix.",
+   "texts": [
+    "Il est sept heures moins dix."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e1f29e116038d876"
+  },
+  {
+   "key": "Il est six heures moins le quart.",
+   "speak": "Il est six heures moins le quart.",
+   "texts": [
+    "Il est six heures moins le quart."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8f1f159b68de1724"
+  },
+  {
+   "key": "Il est trois heures cinq.",
+   "speak": "Il est trois heures cinq.",
+   "texts": [
+    "Il est trois heures cinq."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "911e1a1807a12606"
+  },
+  {
+   "key": "Il est une heure.",
+   "speak": "Il est une heure.",
+   "texts": [
+    "Il est une heure."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1194b8e72406f41c"
+  },
+  {
    "key": "Il fait beau aujourd'hui.",
    "speak": "Il fait beau aujourd'hui.",
    "texts": [
@@ -1010,6 +1472,17 @@
     "verb-sentence"
    ],
    "hash": "7e16128d83939c7f"
+  },
+  {
+   "key": "Il fait froid en décembre.",
+   "speak": "Il fait froid en décembre.",
+   "texts": [
+    "Il fait froid en décembre."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6c14d24bdb4470bb"
   },
   {
    "key": "Il faut partir maintenant.",
@@ -1032,6 +1505,61 @@
     "topic-listen"
    ],
    "hash": "306d66ef3235644d"
+  },
+  {
+   "key": "Il m'aime.",
+   "speak": "Il m'aime.",
+   "texts": [
+    "Il m'aime."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "9bc6d7c9060dbcd0"
+  },
+  {
+   "key": "Il me le donne.",
+   "speak": "Il me le donne.",
+   "texts": [
+    "Il me le donne."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "138f93abb857cc85"
+  },
+  {
+   "key": "Il n'y a personne.",
+   "speak": "Il n'y a personne.",
+   "texts": [
+    "Il n'y a personne."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "93bbbc9586ac8d61"
+  },
+  {
+   "key": "Il ne boit pas d'alcool.",
+   "speak": "Il ne boit pas d'alcool.",
+   "texts": [
+    "Il ne boit pas d'alcool."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "568441940856c99c"
+  },
+  {
+   "key": "Il ne mange jamais de viande.",
+   "speak": "Il ne mange jamais de viande.",
+   "texts": [
+    "Il ne mange jamais de viande."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "05c712f4a4eb289f"
   },
   {
    "key": "Il ne s'habille pas.",
@@ -1057,6 +1585,17 @@
    "hash": "adc6d03ebc154147"
   },
   {
+   "key": "Il parle aux enfants.",
+   "speak": "Il parle aux enfants.",
+   "texts": [
+    "Il parle aux enfants."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e2a759660811a0ab"
+  },
+  {
    "key": "Il pleut beaucoup à Paris en novembre.",
    "speak": "Il pleut beaucoup à Paris en novembre.",
    "texts": [
@@ -1066,6 +1605,17 @@
     "verb-sentence"
    ],
    "hash": "532d3133b99e60b8"
+  },
+  {
+   "key": "Il prend de l'eau.",
+   "speak": "Il prend de l'eau.",
+   "texts": [
+    "Il prend de l'eau."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "01dbd8106319029a"
   },
   {
    "key": "Il s'habillera vite.",
@@ -1134,6 +1684,17 @@
    "hash": "0039cae13ca24d50"
   },
   {
+   "key": "Il travaille au Portugal.",
+   "speak": "Il travaille au Portugal.",
+   "texts": [
+    "Il travaille au Portugal."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f5eb4d3d9ec83dda"
+  },
+  {
    "key": "Il va se dépêcher.",
    "speak": "Il va se dépêcher.",
    "texts": [
@@ -1144,6 +1705,50 @@
     "topic-summary-answer"
    ],
    "hash": "7a36148bdf400a86"
+  },
+  {
+   "key": "Il y a des pommes.",
+   "speak": "Il y a des pommes.",
+   "texts": [
+    "Il y a des pommes."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "1e34c4b3b37a5480"
+  },
+  {
+   "key": "Il y a trente et un jours en mai.",
+   "speak": "Il y a trente et un jours en mai.",
+   "texts": [
+    "Il y a trente et un jours en mai."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "ed4f52664731296c"
+  },
+  {
+   "key": "Il y en a trois.",
+   "speak": "Il y en a trois.",
+   "texts": [
+    "Il y en a trois."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c57546dd8ad07bab"
+  },
+  {
+   "key": "Ils arrivent demain.",
+   "speak": "Ils arrivent demain.",
+   "texts": [
+    "Ils arrivent demain."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "8a4d40b566f35897"
   },
   {
    "key": "Ils mangent quoi ?",
@@ -1269,6 +1874,17 @@
    "hash": "4e20e6f89ff29d80"
   },
   {
+   "key": "Ils vendent leur maison.",
+   "speak": "Ils vendent leur maison.",
+   "texts": [
+    "Ils vendent leur maison."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c5f342e1e6632fff"
+  },
+  {
    "key": "Ils vivent à Paris depuis deux ans.",
    "speak": "Ils vivent à Paris depuis deux ans.",
    "texts": [
@@ -1313,6 +1929,50 @@
    "hash": "d47c7b3fef128886"
   },
   {
+   "key": "J'ai trois enfants.",
+   "speak": "J'ai trois enfants.",
+   "texts": [
+    "J'ai trois enfants."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "3c24a7810dfa9751"
+  },
+  {
+   "key": "J'ai un bon ami.",
+   "speak": "J'ai un bon ami.",
+   "texts": [
+    "J'ai un bon ami."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "98ddaf2033d59ef8"
+  },
+  {
+   "key": "J'ai un frère.",
+   "speak": "J'ai un frère.",
+   "texts": [
+    "J'ai un frère."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e33038dccf3475fd"
+  },
+  {
+   "key": "J'ai un nouvel ordinateur.",
+   "speak": "J'ai un nouvel ordinateur.",
+   "texts": [
+    "J'ai un nouvel ordinateur."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "d030377c6e19f756"
+  },
+  {
    "key": "J'aime le chocolat.",
    "speak": "J'aime le chocolat.",
    "texts": [
@@ -1322,6 +1982,17 @@
     "verb-sentence"
    ],
    "hash": "bea10a88b81a8f2b"
+  },
+  {
+   "key": "J'aime les chats.",
+   "speak": "J'aime les chats.",
+   "texts": [
+    "J'aime les chats."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6f6e5832cdc8f04f"
   },
   {
    "key": "J'appelle",
@@ -1379,6 +2050,17 @@
    "hash": "0f06671b4d6fdbb1"
   },
   {
+   "key": "J'apprends le français depuis un an.",
+   "speak": "J'apprends le français depuis un an.",
+   "texts": [
+    "J'apprends le français depuis un an."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "843a0d2ac350eae0"
+  },
+  {
    "key": "J'attends le bus depuis dix minutes.",
    "speak": "J'attends le bus depuis dix minutes.",
    "texts": [
@@ -1421,6 +2103,39 @@
     "verb-sentence"
    ],
    "hash": "84c474ea7db8cdd6"
+  },
+  {
+   "key": "J'habite au troisième étage.",
+   "speak": "J'habite au troisième étage.",
+   "texts": [
+    "J'habite au troisième étage."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "56f4aee38a10383a"
+  },
+  {
+   "key": "J'habite près du parc.",
+   "speak": "J'habite près du parc.",
+   "texts": [
+    "J'habite près du parc."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "d9b7b51516a1d18e"
+  },
+  {
+   "key": "J'habite à Londres.",
+   "speak": "J'habite à Londres.",
+   "texts": [
+    "J'habite à Londres."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "41b5d2babe275347"
   },
   {
    "key": "J'habite à Paris depuis deux ans.",
@@ -1687,6 +2402,39 @@
    "hash": "8c4a8c78a2bf3f37"
   },
   {
+   "key": "Je le lui donne.",
+   "speak": "Je le lui donne.",
+   "texts": [
+    "Je le lui donne."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "4630e9321c450315"
+  },
+  {
+   "key": "Je le vois.",
+   "speak": "Je le vois.",
+   "texts": [
+    "Je le vois."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "dadfb3cb60781360"
+  },
+  {
+   "key": "Je les achète.",
+   "speak": "Je les achète.",
+   "texts": [
+    "Je les achète."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e5612ea12ff5c3d7"
+  },
+  {
    "key": "Je lis un livre le soir.",
    "speak": "Je lis un livre le soir.",
    "texts": [
@@ -1696,6 +2444,17 @@
     "verb-sentence"
    ],
    "hash": "38e0d38a103952a7"
+  },
+  {
+   "key": "Je lui parle.",
+   "speak": "Je lui parle.",
+   "texts": [
+    "Je lui parle."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "709181869388bfc0"
   },
   {
    "key": "Je m' appelle Marc.",
@@ -1782,7 +2541,8 @@
     "Je me lève à sept heures."
    ],
    "categories": [
-    "verb-sentence"
+    "verb-sentence",
+    "table-example"
    ],
    "hash": "8b56db5ce55ca7da"
   },
@@ -1832,6 +2592,17 @@
    "hash": "16d10958d689850c"
   },
   {
+   "key": "Je me suis levé à sept heures.",
+   "speak": "Je me suis levé à sept heures.",
+   "texts": [
+    "Je me suis levé à sept heures."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "392bc7968437b075"
+  },
+  {
    "key": "Je meurs de faim.",
    "speak": "Je meurs de faim.",
    "texts": [
@@ -1843,6 +2614,94 @@
    "hash": "8731b577ced8fb32"
   },
   {
+   "key": "Je n'ai jamais vu Paris.",
+   "speak": "Je n'ai jamais vu Paris.",
+   "texts": [
+    "Je n'ai jamais vu Paris."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "a0bbe0d72747001f"
+  },
+  {
+   "key": "Je n'ai pas de voiture.",
+   "speak": "Je n'ai pas de voiture.",
+   "texts": [
+    "Je n'ai pas de voiture."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6b86b6c791fa78cc"
+  },
+  {
+   "key": "Je n'ai pas mangé.",
+   "speak": "Je n'ai pas mangé.",
+   "texts": [
+    "Je n'ai pas mangé."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "963cac2433661875"
+  },
+  {
+   "key": "Je n'ai que dix euros.",
+   "speak": "Je n'ai que dix euros.",
+   "texts": [
+    "Je n'ai que dix euros."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "118b63b518ae20b6"
+  },
+  {
+   "key": "Je n'ai vu personne.",
+   "speak": "Je n'ai vu personne.",
+   "texts": [
+    "Je n'ai vu personne."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "95f6003c359397aa"
+  },
+  {
+   "key": "Je n'habite plus ici.",
+   "speak": "Je n'habite plus ici.",
+   "texts": [
+    "Je n'habite plus ici."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d0ded79dfa24408a"
+  },
+  {
+   "key": "Je ne bois ni thé ni café.",
+   "speak": "Je ne bois ni thé ni café.",
+   "texts": [
+    "Je ne bois ni thé ni café."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3d7f87b7e791e4de"
+  },
+  {
+   "key": "Je ne bois que de l'eau.",
+   "speak": "Je ne bois que de l'eau.",
+   "texts": [
+    "Je ne bois que de l'eau."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f4a6c131629cc1c9"
+  },
+  {
    "key": "Je ne comprends pas. Pouvez-vous répéter ?",
    "speak": "Je ne comprends pas. Pouvez-vous répéter ?",
    "texts": [
@@ -1852,6 +2711,39 @@
     "verb-sentence"
    ],
    "hash": "b498cd5b9b1270b2"
+  },
+  {
+   "key": "Je ne connais personne.",
+   "speak": "Je ne connais personne.",
+   "texts": [
+    "Je ne connais personne."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f257d82d1203d084"
+  },
+  {
+   "key": "Je ne l'ai jamais vu.",
+   "speak": "Je ne l'ai jamais vu.",
+   "texts": [
+    "Je ne l'ai jamais vu."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f8f3c95e3425b3e3"
+  },
+  {
+   "key": "Je ne le vois pas.",
+   "speak": "Je ne le vois pas.",
+   "texts": [
+    "Je ne le vois pas."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b267e673e2f8533e"
   },
   {
    "key": "Je ne m'assieds pas ici.",
@@ -1878,6 +2770,17 @@
    "hash": "5e6464149b1a6612"
   },
   {
+   "key": "Je ne me lève pas.",
+   "speak": "Je ne me lève pas.",
+   "texts": [
+    "Je ne me lève pas."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ba86a64bb9d84eb5"
+  },
+  {
    "key": "Je ne me suis pas réveillée ce matin.",
    "speak": "Je ne me suis pas réveillée ce matin.",
    "texts": [
@@ -1887,6 +2790,28 @@
     "topic-listen"
    ],
    "hash": "c93a9e7990b04107"
+  },
+  {
+   "key": "Je ne parle pas espagnol.",
+   "speak": "Je ne parle pas espagnol.",
+   "texts": [
+    "Je ne parle pas espagnol."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2a98698e34721178"
+  },
+  {
+   "key": "Je ne parle pas.",
+   "speak": "Je ne parle pas.",
+   "texts": [
+    "Je ne parle pas."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1651bf4663470a60"
   },
   {
    "key": "Je ne sais pas où il habite.",
@@ -1922,6 +2847,17 @@
    "hash": "ba72fd68dcd988b0"
   },
   {
+   "key": "Je ne suis pas allé.",
+   "speak": "Je ne suis pas allé.",
+   "texts": [
+    "Je ne suis pas allé."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9418b70bbbe56aea"
+  },
+  {
    "key": "Je ne trouve pas mes clés.",
    "speak": "Je ne trouve pas mes clés.",
    "texts": [
@@ -1933,6 +2869,28 @@
    "hash": "2e63f783bef7aabd"
   },
   {
+   "key": "Je ne veux pas partir.",
+   "speak": "Je ne veux pas partir.",
+   "texts": [
+    "Je ne veux pas partir."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8beb44b0210ac58a"
+  },
+  {
+   "key": "Je ne vois rien.",
+   "speak": "Je ne vois rien.",
+   "texts": [
+    "Je ne vois rien."
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cd3959fe04e4e2d7"
+  },
+  {
    "key": "Je paie par carte.",
    "speak": "Je paie par carte.",
    "texts": [
@@ -1942,6 +2900,28 @@
     "verb-sentence"
    ],
    "hash": "cb54f101d51a51bf"
+  },
+  {
+   "key": "Je pars en août.",
+   "speak": "Je pars en août.",
+   "texts": [
+    "Je pars en août."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "14110d05f86a14a3"
+  },
+  {
+   "key": "Je pense à mon travail. J'y pense.",
+   "speak": "Je pense à mon travail. J'y pense.",
+   "texts": [
+    "Je pense à mon travail. J'y pense."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "75989a70a1a0ebfe"
   },
   {
    "key": "Je pense à toi.",
@@ -1977,6 +2957,17 @@
    "hash": "a9f4470277957b65"
   },
   {
+   "key": "Je prends celui-ci.",
+   "speak": "Je prends celui-ci.",
+   "texts": [
+    "Je prends celui-ci."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "250ca70595082375"
+  },
+  {
    "key": "Je prends le métro tous les matins.",
    "speak": "Je prends le métro tous les matins.",
    "texts": [
@@ -1986,6 +2977,17 @@
     "verb-sentence"
    ],
    "hash": "4e33665281db4e09"
+  },
+  {
+   "key": "Je prends un café et de l'eau.",
+   "speak": "Je prends un café et de l'eau.",
+   "texts": [
+    "Je prends un café et de l'eau."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "d73a49be6f0f6fc5"
   },
   {
    "key": "Je promène le chien.",
@@ -2076,6 +3078,17 @@
    "hash": "be3347aa988d1553"
   },
   {
+   "key": "Je reviens du marché.",
+   "speak": "Je reviens du marché.",
+   "texts": [
+    "Je reviens du marché."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "70f2a544c618bd9f"
+  },
+  {
    "key": "Je réfléchis à ta question.",
    "speak": "Je réfléchis à ta question.",
    "texts": [
@@ -2098,6 +3111,17 @@
    "hash": "e5221f266aa82649"
   },
   {
+   "key": "Je suis arrivé il y a deux jours.",
+   "speak": "Je suis arrivé il y a deux jours.",
+   "texts": [
+    "Je suis arrivé il y a deux jours."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "12feb7dc315bc41e"
+  },
+  {
    "key": "Je suis fatigué aujourd'hui.",
    "speak": "Je suis fatigué aujourd'hui.",
    "texts": [
@@ -2107,6 +3131,17 @@
     "verb-sentence"
    ],
    "hash": "0806257d37080843"
+  },
+  {
+   "key": "Je suis professeur.",
+   "speak": "Je suis professeur.",
+   "texts": [
+    "Je suis professeur."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e111d801736189a2"
   },
   {
    "key": "Je suis un cours de français.",
@@ -2153,6 +3188,28 @@
    "hash": "b8433099d27f82ad"
   },
   {
+   "key": "Je travaille le lundi.",
+   "speak": "Je travaille le lundi.",
+   "texts": [
+    "Je travaille le lundi."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "7fe3e1cb27686a6e"
+  },
+  {
+   "key": "Je vais au cinéma.",
+   "speak": "Je vais au cinéma.",
+   "texts": [
+    "Je vais au cinéma."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "16605cd2f90a28ab"
+  },
+  {
    "key": "Je vais me réveiller tôt.",
    "speak": "Je vais me réveiller tôt.",
    "texts": [
@@ -2187,6 +3244,28 @@
    "hash": "2f5579b1ff20c114"
   },
   {
+   "key": "Je voudrais du pain.",
+   "speak": "Je voudrais du pain.",
+   "texts": [
+    "Je voudrais du pain."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "65a53ffac57fdc7a"
+  },
+  {
+   "key": "Je vous en prie.",
+   "speak": "Je vous en prie.",
+   "texts": [
+    "Je vous en prie."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "3df176092b982d29"
+  },
+  {
    "key": "Julie a-t-elle un chat ?",
    "speak": "Julie a-t-elle un chat ?",
    "texts": [
@@ -2199,6 +3278,61 @@
    "hash": "69496d01b936ec34"
   },
   {
+   "key": "L'homme qui parle est mon père.",
+   "speak": "L'homme qui parle est mon père.",
+   "texts": [
+    "L'homme qui parle est mon père."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "673236e9e63f0887"
+  },
+  {
+   "key": "L'hôtel est petit.",
+   "speak": "L'hôtel est petit.",
+   "texts": [
+    "L'hôtel est petit."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6fe41f8d7718600e"
+  },
+  {
+   "key": "La banque est à côté de la poste.",
+   "speak": "La banque est à côté de la poste.",
+   "texts": [
+    "La banque est à côté de la poste."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "030d4fd376fce785"
+  },
+  {
+   "key": "La gare est loin.",
+   "speak": "La gare est loin.",
+   "texts": [
+    "La gare est loin."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "2b6a54313dee4948"
+  },
+  {
+   "key": "La ville où j'habite est petite.",
+   "speak": "La ville où j'habite est petite.",
+   "texts": [
+    "La ville où j'habite est petite."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "45e7008069dbb252"
+  },
+  {
    "key": "Laquelle",
    "speak": "Laquelle",
    "texts": [
@@ -2208,6 +3342,17 @@
     "topic-summary-answer"
    ],
    "hash": "7b64a1e80d790da4"
+  },
+  {
+   "key": "Laquelle veux-tu ?",
+   "speak": "Laquelle veux-tu ?",
+   "texts": [
+    "Laquelle veux-tu ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e77e63caff36af5f"
   },
   {
    "key": "Le bus s'arrête devant l'école.",
@@ -2254,6 +3399,39 @@
    "hash": "0506cbe958e072b3"
   },
   {
+   "key": "Le café est chaud.",
+   "speak": "Le café est chaud.",
+   "texts": [
+    "Le café est chaud."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "2e2c328dc4e493ee"
+  },
+  {
+   "key": "Le café est en face de l'hôtel.",
+   "speak": "Le café est en face de l'hôtel.",
+   "texts": [
+    "Le café est en face de l'hôtel."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "b059ae6b53e3173e"
+  },
+  {
+   "key": "Le chat est sous la table.",
+   "speak": "Le chat est sous la table.",
+   "texts": [
+    "Le chat est sous la table."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "4ddce2c8c4d24835"
+  },
+  {
    "key": "Le cours commence à neuf heures.",
    "speak": "Le cours commence à neuf heures.",
    "texts": [
@@ -2274,6 +3452,39 @@
     "topic-listen"
    ],
    "hash": "8b1a193c89ffbea2"
+  },
+  {
+   "key": "Le film commence à vingt heures.",
+   "speak": "Le film commence à vingt heures.",
+   "texts": [
+    "Le film commence à vingt heures."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "85aec0a1f4878467"
+  },
+  {
+   "key": "Le film que je regarde est long.",
+   "speak": "Le film que je regarde est long.",
+   "texts": [
+    "Le film que je regarde est long."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "0187cc2875fb3063"
+  },
+  {
+   "key": "Le livre dont je parle est ici.",
+   "speak": "Le livre dont je parle est ici.",
+   "texts": [
+    "Le livre dont je parle est ici."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "5cd783669e784cd7"
   },
   {
    "key": "Le matin, je me lave.",
@@ -2354,6 +3565,17 @@
    "hash": "2052e08380606588"
   },
   {
+   "key": "Le train arrive.",
+   "speak": "Le train arrive.",
+   "texts": [
+    "Le train arrive."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "a19186eee5acca03"
+  },
+  {
    "key": "Le train part à huit heures.",
    "speak": "Le train part à huit heures.",
    "texts": [
@@ -2374,6 +3596,28 @@
     "topic-summary-answer"
    ],
    "hash": "aba3d6ab392b0924"
+  },
+  {
+   "key": "Lequel préfères-tu ?",
+   "speak": "Lequel préfères-tu ?",
+   "texts": [
+    "Lequel préfères-tu ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c1a5892767349775"
+  },
+  {
+   "key": "Les chaussures sont chères.",
+   "speak": "Les chaussures sont chères.",
+   "texts": [
+    "Les chaussures sont chères."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "b40dd613b9701004"
   },
   {
    "key": "Les enfants dorment-ils ?",
@@ -2465,6 +3709,17 @@
    "hash": "e3906615415188cb"
   },
   {
+   "key": "Lesquels sont à toi ?",
+   "speak": "Lesquels sont à toi ?",
+   "texts": [
+    "Lesquels sont à toi ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "962ad27ceb07994d"
+  },
+  {
    "key": "Levons-nous !",
    "speak": "Levons-nous !",
    "texts": [
@@ -2500,6 +3755,28 @@
    "hash": "cd086482e3cbc7ba"
   },
   {
+   "key": "Ma grand-mère a quatre-vingts ans.",
+   "speak": "Ma grand-mère a quatre-vingts ans.",
+   "texts": [
+    "Ma grand-mère a quatre-vingts ans."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e1bde064b4e37c59"
+  },
+  {
+   "key": "Ma grand-mère est une vieille dame.",
+   "speak": "Ma grand-mère est une vieille dame.",
+   "texts": [
+    "Ma grand-mère est une vieille dame."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c4de31242fe8b2d3"
+  },
+  {
    "key": "Ma grand-mère garde les enfants le mercredi.",
    "speak": "Ma grand-mère garde les enfants le mercredi.",
    "texts": [
@@ -2511,6 +3788,17 @@
    "hash": "c1dce01dd2f3cec4"
   },
   {
+   "key": "Ma sœur est grande.",
+   "speak": "Ma sœur est grande.",
+   "texts": [
+    "Ma sœur est grande."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "45709663ee99409c"
+  },
+  {
    "key": "Ma sœur et moi, nous nous sommes habillées vite.",
    "speak": "Ma sœur et moi, nous nous sommes habillées vite.",
    "texts": [
@@ -2520,6 +3808,17 @@
     "topic-listen"
    ],
    "hash": "fb04eac64631a51e"
+  },
+  {
+   "key": "Marie aime son père.",
+   "speak": "Marie aime son père.",
+   "texts": [
+    "Marie aime son père."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "9cf75e91b82fa99c"
   },
   {
    "key": "Marie s'est brossé les dents.",
@@ -2542,6 +3841,28 @@
     "verb-sentence"
    ],
    "hash": "7dcecb6cbe564215"
+  },
+  {
+   "key": "Moi, je préfère le thé.",
+   "speak": "Moi, je préfère le thé.",
+   "texts": [
+    "Moi, je préfère le thé."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "071c6ca35c78bfb9"
+  },
+  {
+   "key": "Mon anniversaire est en juillet.",
+   "speak": "Mon anniversaire est en juillet.",
+   "texts": [
+    "Mon anniversaire est en juillet."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e6412aa574b09d8f"
   },
   {
    "key": "Mon chien s'appelle Rex.",
@@ -2655,6 +3976,17 @@
    "hash": "7b192e548823751c"
   },
   {
+   "key": "Ne pas toucher.",
+   "speak": "Ne pas toucher.",
+   "texts": [
+    "Ne pas toucher."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "241474a61bf751a5"
+  },
+  {
    "key": "Ne t'assieds pas là !",
    "speak": "Ne t'assieds pas là !",
    "texts": [
@@ -2727,6 +4059,17 @@
    "hash": "7db7d0e831954ed7"
   },
   {
+   "key": "Nos enfants jouent avec les leurs.",
+   "speak": "Nos enfants jouent avec les leurs.",
+   "texts": [
+    "Nos enfants jouent avec les leurs."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "ac777b1d658c8334"
+  },
+  {
    "key": "Notre équipe gagne le match.",
    "speak": "Notre équipe gagne le match.",
    "texts": [
@@ -2758,6 +4101,17 @@
     "verb-sentence"
    ],
    "hash": "4e11288026b04fa3"
+  },
+  {
+   "key": "Nous allons en Espagne.",
+   "speak": "Nous allons en Espagne.",
+   "texts": [
+    "Nous allons en Espagne."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "8f62d4470afc6e01"
   },
   {
    "key": "Nous allons nous coucher.",
@@ -2816,6 +4170,39 @@
    "hash": "73155c3521f69d45"
   },
   {
+   "key": "Nous finissons à cinq heures.",
+   "speak": "Nous finissons à cinq heures.",
+   "texts": [
+    "Nous finissons à cinq heures."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "af0119cee2bb983f"
+  },
+  {
+   "key": "Nous irons en France.",
+   "speak": "Nous irons en France.",
+   "texts": [
+    "Nous irons en France."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "0ba8aa17f9ffa50a"
+  },
+  {
+   "key": "Nous mangeons des légumes.",
+   "speak": "Nous mangeons des légumes.",
+   "texts": [
+    "Nous mangeons des légumes."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "cfca90a1b89c4435"
+  },
+  {
    "key": "Nous montons dans le train.",
    "speak": "Nous montons dans le train.",
    "texts": [
@@ -2825,6 +4212,17 @@
     "verb-sentence"
    ],
    "hash": "7e8b5728e54b2100"
+  },
+  {
+   "key": "Nous n'avons plus de pain.",
+   "speak": "Nous n'avons plus de pain.",
+   "texts": [
+    "Nous n'avons plus de pain."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "51b29fc56ad39c2e"
   },
   {
    "key": "Nous ne nous couchons pas tard.",
@@ -2870,6 +4268,17 @@
     "topic-listen"
    ],
    "hash": "6fec334fa4985b92"
+  },
+  {
+   "key": "Nous nous habillons.",
+   "speak": "Nous nous habillons.",
+   "texts": [
+    "Nous nous habillons."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "be409e083f1a7462"
   },
   {
    "key": "Nous nous promenons dans le parc le dimanche.",
@@ -2972,6 +4381,17 @@
    "hash": "82747817bef5c373"
   },
   {
+   "key": "Nous sommes allés au cinéma.",
+   "speak": "Nous sommes allés au cinéma.",
+   "texts": [
+    "Nous sommes allés au cinéma."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "272972efc81998dc"
+  },
+  {
    "key": "Nous voyageons en train cet été.",
    "speak": "Nous voyageons en train cet été.",
    "texts": [
@@ -2994,6 +4414,17 @@
    "hash": "d65a63085f588827"
   },
   {
+   "key": "On mange chez eux.",
+   "speak": "On mange chez eux.",
+   "texts": [
+    "On mange chez eux."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "640befed1c36fca6"
+  },
+  {
    "key": "On mange ensemble ce soir ?",
    "speak": "On mange ensemble ce soir ?",
    "texts": [
@@ -3014,6 +4445,39 @@
     "verb-sentence"
    ],
    "hash": "01b3eed6273a74be"
+  },
+  {
+   "key": "On se retrouve à midi et demi ?",
+   "speak": "On se retrouve à midi et demi ?",
+   "texts": [
+    "On se retrouve à midi et demi ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "42f9b05d56ca6af7"
+  },
+  {
+   "key": "On se voit samedi ?",
+   "speak": "On se voit samedi ?",
+   "texts": [
+    "On se voit samedi ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "1f515e7fb71573e9"
+  },
+  {
+   "key": "On va au cinéma ?",
+   "speak": "On va au cinéma ?",
+   "texts": [
+    "On va au cinéma ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6eb942b13def956b"
   },
   {
    "key": "Où",
@@ -3039,6 +4503,17 @@
    "hash": "2a018e320cac319d"
   },
   {
+   "key": "Où est-ce que tu habites ?",
+   "speak": "Où est-ce que tu habites ?",
+   "texts": [
+    "Où est-ce que tu habites ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "e3812f643866a6eb"
+  },
+  {
    "key": "Parle-t-il espagnol ?",
    "speak": "Parle-t-il espagnol ?",
    "texts": [
@@ -3059,6 +4534,17 @@
     "topic-part-answer"
    ],
    "hash": "f985c92d19d9b99a"
+  },
+  {
+   "key": "Paul aime sa mère.",
+   "speak": "Paul aime sa mère.",
+   "texts": [
+    "Paul aime sa mère."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "64d45ef63f8ef19f"
   },
   {
    "key": "Paul aime-t-il le football ?",
@@ -3104,6 +4590,17 @@
     "topic-summary-answer"
    ],
    "hash": "d2b63ab064dad2d1"
+  },
+  {
+   "key": "Pourquoi est-ce que tu apprends le français ?",
+   "speak": "Pourquoi est-ce que tu apprends le français ?",
+   "texts": [
+    "Pourquoi est-ce que tu apprends le français ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "efb187a8c6255e91"
   },
   {
    "key": "Pourquoi est-ce que tu restes à la maison ?",
@@ -3157,7 +4654,8 @@
     "Qu'est-ce que c'est ?"
    ],
    "categories": [
-    "topic-listen"
+    "topic-listen",
+    "table-example"
    ],
    "hash": "4a9a999c21ae0793"
   },
@@ -3227,7 +4725,8 @@
    ],
    "categories": [
     "topic-listen",
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-example"
    ],
    "hash": "9ee8cd0d990cc1c4"
   },
@@ -3298,6 +4797,17 @@
    "hash": "b8861610cdd2ec44"
   },
   {
+   "key": "Quel est ton nom ?",
+   "speak": "Quel est ton nom ?",
+   "texts": [
+    "Quel est ton nom ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "a5119dafca217c0d"
+  },
+  {
    "key": "Quel est ton numéro ?",
    "speak": "Quel est ton numéro ?",
    "texts": [
@@ -3318,6 +4828,17 @@
     "topic-listen"
    ],
    "hash": "6f5d0772737b7d0e"
+  },
+  {
+   "key": "Quel âge as-tu ?",
+   "speak": "Quel âge as-tu ?",
+   "texts": [
+    "Quel âge as-tu ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "725af19c76722f3a"
   },
   {
    "key": "Quelle",
@@ -3342,6 +4863,18 @@
    "hash": "a5e9a9b42f306228"
   },
   {
+   "key": "Quelle heure est-il ?",
+   "speak": "Quelle heure est-il ?",
+   "texts": [
+    "Quelle heure est-il ?"
+   ],
+   "categories": [
+    "table-example",
+    "table-cell"
+   ],
+   "hash": "d593706bc8e3cd30"
+  },
+  {
    "key": "Quelle musique aimes-tu ?",
    "speak": "Quelle musique aimes-tu ?",
    "texts": [
@@ -3353,6 +4886,28 @@
    "hash": "e72f9b42deb4f455"
   },
   {
+   "key": "Quelle robe ? Celle que tu portes.",
+   "speak": "Quelle robe ? Celle que tu portes.",
+   "texts": [
+    "Quelle robe ? Celle que tu portes."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "85432c299b8bb219"
+  },
+  {
+   "key": "Quels amis viennent ?",
+   "speak": "Quels amis viennent ?",
+   "texts": [
+    "Quels amis viennent ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "fb5f5d5ca6bf6a35"
+  },
+  {
    "key": "Regarde ces chaussures ! Lesquelles achètes-tu ?",
    "speak": "Regarde ces chaussures ! Lesquelles achètes-tu ?",
    "texts": [
@@ -3362,6 +4917,17 @@
     "topic-listen"
    ],
    "hash": "ae4f7c9c4b180780"
+  },
+  {
+   "key": "Rien ne va.",
+   "speak": "Rien ne va.",
+   "texts": [
+    "Rien ne va."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "3858f6fbabd5b5f1"
   },
   {
    "key": "S'habille-t-elle vite ?",
@@ -3464,6 +5030,17 @@
    "hash": "9ef252fbae590a87"
   },
   {
+   "key": "Ta voiture est rouge, la mienne est bleue.",
+   "speak": "Ta voiture est rouge, la mienne est bleue.",
+   "texts": [
+    "Ta voiture est rouge, la mienne est bleue."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "bdae2f52677fe1e0"
+  },
+  {
    "key": "Te souviens-tu de Paul ?",
    "speak": "Te souviens-tu de Paul ?",
    "texts": [
@@ -3553,6 +5130,17 @@
    "hash": "84bd720a0bde79c1"
   },
   {
+   "key": "Tu bois de la bière ?",
+   "speak": "Tu bois de la bière ?",
+   "texts": [
+    "Tu bois de la bière ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "9883e0d5d638c05f"
+  },
+  {
    "key": "Tu cherches quoi ?",
    "speak": "Tu cherches quoi ?",
    "texts": [
@@ -3617,6 +5205,28 @@
     "verb-sentence"
    ],
    "hash": "ab86e52c33ae2e0f"
+  },
+  {
+   "key": "Tu la connais ?",
+   "speak": "Tu la connais ?",
+   "texts": [
+    "Tu la connais ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "0f83d3bc40ef26fa"
+  },
+  {
+   "key": "Tu leur téléphones ?",
+   "speak": "Tu leur téléphones ?",
+   "texts": [
+    "Tu leur téléphones ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "6b011507732c269a"
   },
   {
    "key": "Tu lis quoi ?",
@@ -3728,6 +5338,17 @@
     "topic-listen"
    ],
    "hash": "8e89e4799fd38bdf"
+  },
+  {
+   "key": "Tu préfères cette robe-ci ou cette robe-là ?",
+   "speak": "Tu préfères cette robe-ci ou cette robe-là ?",
+   "texts": [
+    "Tu préfères cette robe-ci ou cette robe-là ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f96e43757ee677f1"
   },
   {
    "key": "Tu sais comment il s'appelle ?",
@@ -3918,6 +5539,28 @@
    "hash": "83fb7d81072ea24c"
   },
   {
+   "key": "Tu vas à Paris ? Oui, j'y vais.",
+   "speak": "Tu vas à Paris ? Oui, j'y vais.",
+   "texts": [
+    "Tu vas à Paris ? Oui, j'y vais."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "f10908f387cfb434"
+  },
+  {
+   "key": "Tu veux du café ? Oui, j'en veux.",
+   "speak": "Tu veux du café ? Oui, j'en veux.",
+   "texts": [
+    "Tu veux du café ? Oui, j'en veux."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "fdb8c0dcfd569b64"
+  },
+  {
    "key": "Tu veux un café ? — oui, avec plaisir.",
    "speak": "Tu veux un café ? — oui, avec plaisir.",
    "texts": [
@@ -3949,6 +5592,17 @@
     "topic-summary-joined"
    ],
    "hash": "f1e41098bcf9cdb4"
+  },
+  {
+   "key": "Tu viens avec moi ?",
+   "speak": "Tu viens avec moi ?",
+   "texts": [
+    "Tu viens avec moi ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c0c368acedb09632"
   },
   {
    "key": "Tu viens avec nous ?",
@@ -4196,6 +5850,17 @@
    "hash": "ea9692a483e1b24c"
   },
   {
+   "key": "Vous êtes prêts ?",
+   "speak": "Vous êtes prêts ?",
+   "texts": [
+    "Vous êtes prêts ?"
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "c4250d0371fdfc5c"
+  },
+  {
    "key": "a-t-elle",
    "speak": "a-t-elle",
    "texts": [
@@ -4279,7 +5944,8 @@
     "aller"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "b25974fb8efd13e9"
   },
@@ -4293,6 +5959,17 @@
     "topic-summary-answer"
    ],
    "hash": "d7afc7621494a626"
+  },
+  {
+   "key": "août",
+   "speak": "août",
+   "texts": [
+    "août"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8643090c123bcb35"
   },
   {
    "key": "appeler",
@@ -4334,7 +6011,8 @@
     "arriver"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "351f2bcba3fba21b"
   },
@@ -4350,6 +6028,72 @@
    "hash": "3f5f9f80f7d64c93"
   },
   {
+   "key": "au",
+   "speak": "au",
+   "texts": [
+    "au"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "632cd2fea71dcde0"
+  },
+  {
+   "key": "au Canada",
+   "speak": "au Canada",
+   "texts": [
+    "au Canada"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1c5f2761a3e97d42"
+  },
+  {
+   "key": "au Japon",
+   "speak": "au Japon",
+   "texts": [
+    "au Japon"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c1b3291fd2435bdc"
+  },
+  {
+   "key": "aujourd'hui",
+   "speak": "aujourd'hui",
+   "texts": [
+    "aujourd'hui"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "074f3b0225ccaa3e"
+  },
+  {
+   "key": "aux",
+   "speak": "aux",
+   "texts": [
+    "aux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "321f68140efca2b3"
+  },
+  {
+   "key": "aux États-Unis",
+   "speak": "aux États-Unis",
+   "texts": [
+    "aux États-Unis"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fff944666b1d62dc"
+  },
+  {
    "key": "avoir",
    "speak": "avoir",
    "texts": [
@@ -4359,6 +6103,72 @@
     "verb-infinitive"
    ],
    "hash": "fcf63b5aa7805a49"
+  },
+  {
+   "key": "avril",
+   "speak": "avril",
+   "texts": [
+    "avril"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "13a86fa9ec44433d"
+  },
+  {
+   "key": "beau",
+   "speak": "beau",
+   "texts": [
+    "beau"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a6ac558e3cc659a5"
+  },
+  {
+   "key": "beau, joli",
+   "speak": "beau, joli",
+   "texts": [
+    "beau, joli"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5e0d6e522f4b6ae7"
+  },
+  {
+   "key": "belle",
+   "speak": "belle",
+   "texts": [
+    "belle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0fe7c9ef9683fcb8"
+  },
+  {
+   "key": "blanc",
+   "speak": "blanc",
+   "texts": [
+    "blanc"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2985d9fa958f4aff"
+  },
+  {
+   "key": "blanche",
+   "speak": "blanche",
+   "texts": [
+    "blanche"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "446acc36bce9a33c"
   },
   {
    "key": "boire",
@@ -4372,6 +6182,28 @@
    "hash": "293562e3d393ffaa"
   },
   {
+   "key": "bon, bonne",
+   "speak": "bon, bonne",
+   "texts": [
+    "bon, bonne"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d2d2809be53dcc9b"
+  },
+  {
+   "key": "bon, mauvais",
+   "speak": "bon, mauvais",
+   "texts": [
+    "bon, mauvais"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fc56cb227cb25013"
+  },
+  {
    "key": "brossé",
    "speak": "brossé",
    "texts": [
@@ -4381,6 +6213,204 @@
     "topic-summary-answer"
    ],
    "hash": "806713cfa5ce21e1"
+  },
+  {
+   "key": "c'est",
+   "speak": "c'est",
+   "texts": [
+    "c'est"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7718f861be8cdf6b"
+  },
+  {
+   "key": "ce livre",
+   "speak": "ce livre",
+   "texts": [
+    "ce livre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1dfd769e64ba8446"
+  },
+  {
+   "key": "ce livre-ci",
+   "speak": "ce livre-ci",
+   "texts": [
+    "ce livre-ci"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f5da40b193387acd"
+  },
+  {
+   "key": "ce livre-là",
+   "speak": "ce livre-là",
+   "texts": [
+    "ce livre-là"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2be8747ab384db7b"
+  },
+  {
+   "key": "ce matin",
+   "speak": "ce matin",
+   "texts": [
+    "ce matin"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "30f02d330c01766a"
+  },
+  {
+   "key": "ce soir",
+   "speak": "ce soir",
+   "texts": [
+    "ce soir"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3cbc16c722aa9858"
+  },
+  {
+   "key": "ce sont",
+   "speak": "ce sont",
+   "texts": [
+    "ce sont"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f2867a2effb46f5c"
+  },
+  {
+   "key": "celle",
+   "speak": "celle",
+   "texts": [
+    "celle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d7b041cb7e45a0ac"
+  },
+  {
+   "key": "celle-là",
+   "speak": "celle-là",
+   "texts": [
+    "celle-là"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b6f78c62f559252b"
+  },
+  {
+   "key": "celles",
+   "speak": "celles",
+   "texts": [
+    "celles"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "404ad447f6e0091b"
+  },
+  {
+   "key": "celui",
+   "speak": "celui",
+   "texts": [
+    "celui"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8b7c47622afa14f3"
+  },
+  {
+   "key": "celui-ci",
+   "speak": "celui-ci",
+   "texts": [
+    "celui-ci"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7f1be91dfa317efd"
+  },
+  {
+   "key": "cent",
+   "speak": "cent",
+   "texts": [
+    "cent"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c388fa9a52705a2c"
+  },
+  {
+   "key": "ces",
+   "speak": "ces",
+   "texts": [
+    "ces"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "48dd969488eb543b"
+  },
+  {
+   "key": "cet hôtel",
+   "speak": "cet hôtel",
+   "texts": [
+    "cet hôtel"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3e907604d635787a"
+  },
+  {
+   "key": "cette",
+   "speak": "cette",
+   "texts": [
+    "cette"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "14831aec4cee0b32"
+  },
+  {
+   "key": "cette semaine",
+   "speak": "cette semaine",
+   "texts": [
+    "cette semaine"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8d20b2169be440be"
+  },
+  {
+   "key": "ceux",
+   "speak": "ceux",
+   "texts": [
+    "ceux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "13c1217c69cb48cc"
   },
   {
    "key": "changer",
@@ -4405,6 +6435,17 @@
    "hash": "94c8bcf55d4bc323"
   },
   {
+   "key": "cher, chère",
+   "speak": "cher, chère",
+   "texts": [
+    "cher, chère"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6f57bc6ea9e909b6"
+  },
+  {
    "key": "chercher",
    "speak": "chercher",
    "texts": [
@@ -4427,13 +6468,47 @@
    "hash": "334c4c610a71a5a9"
   },
   {
+   "key": "cinq",
+   "speak": "cinq",
+   "texts": [
+    "cinq"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ab8bf5eb55640552"
+  },
+  {
+   "key": "cinquante",
+   "speak": "cinquante",
+   "texts": [
+    "cinquante"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b71229986c7d8a7b"
+  },
+  {
+   "key": "cinquième",
+   "speak": "cinquième",
+   "texts": [
+    "cinquième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e8aa2b1732dbf972"
+  },
+  {
    "key": "combien",
    "speak": "combien",
    "texts": [
     "combien"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "5b62d9f168e0f71b"
   },
@@ -4455,7 +6530,8 @@
     "combien de"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "7c2a081c62e87645"
   },
@@ -4488,7 +6564,8 @@
     "comment"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "c44bb2fd516909da"
   },
@@ -4625,6 +6702,83 @@
    "hash": "f3f3bfcd3d45c5ac"
   },
   {
+   "key": "dans",
+   "speak": "dans",
+   "texts": [
+    "dans"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0b135e8de8f42b4b"
+  },
+  {
+   "key": "de",
+   "speak": "de",
+   "texts": [
+    "de"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "959a45d44e6fcf58"
+  },
+  {
+   "key": "de France",
+   "speak": "de France",
+   "texts": [
+    "de France"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "08355d098a75cb07"
+  },
+  {
+   "key": "de l'eau",
+   "speak": "de l'eau",
+   "texts": [
+    "de l'eau"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a94f57f942311e33"
+  },
+  {
+   "key": "de l'hôtel",
+   "speak": "de l'hôtel",
+   "texts": [
+    "de l'hôtel"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "12296af5cfb50002"
+  },
+  {
+   "key": "de la",
+   "speak": "de la",
+   "texts": [
+    "de la"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "288001cf7a9dde28"
+  },
+  {
+   "key": "demain",
+   "speak": "demain",
+   "texts": [
+    "demain"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8d87f74739c36a01"
+  },
+  {
    "key": "demander",
    "speak": "demander",
    "texts": [
@@ -4636,15 +6790,82 @@
    "hash": "1ff1f040b6369230"
   },
   {
+   "key": "depuis",
+   "speak": "depuis",
+   "texts": [
+    "depuis"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b4ec6788ab04da10"
+  },
+  {
+   "key": "derrière",
+   "speak": "derrière",
+   "texts": [
+    "derrière"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4103972208ac7de3"
+  },
+  {
+   "key": "des",
+   "speak": "des",
+   "texts": [
+    "des"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7b24c1ad239d4a6b"
+  },
+  {
    "key": "descendre",
    "speak": "descendre",
    "texts": [
     "descendre"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "74ddec40e21b3d07"
+  },
+  {
+   "key": "deux",
+   "speak": "deux",
+   "texts": [
+    "deux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "62007886b7f3c832"
+  },
+  {
+   "key": "deuxième",
+   "speak": "deuxième",
+   "texts": [
+    "deuxième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "40344065bbec044d"
+  },
+  {
+   "key": "devant",
+   "speak": "devant",
+   "texts": [
+    "devant"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5d9028089d1bf771"
   },
   {
    "key": "devenir",
@@ -4653,7 +6874,8 @@
     "devenir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "2d027cac1d0b79b1"
   },
@@ -4669,6 +6891,17 @@
    "hash": "e313e381220b562a"
   },
   {
+   "key": "dimanche",
+   "speak": "dimanche",
+   "texts": [
+    "dimanche"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "19a8459b679be65e"
+  },
+  {
    "key": "dire",
    "speak": "dire",
    "texts": [
@@ -4678,6 +6911,61 @@
     "verb-infinitive"
    ],
    "hash": "49025f2f8f541495"
+  },
+  {
+   "key": "dix",
+   "speak": "dix",
+   "texts": [
+    "dix"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1828cb7d38ef0139"
+  },
+  {
+   "key": "dix-huit",
+   "speak": "dix-huit",
+   "texts": [
+    "dix-huit"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6ee16012ca5ae97f"
+  },
+  {
+   "key": "dix-neuf",
+   "speak": "dix-neuf",
+   "texts": [
+    "dix-neuf"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d471e6959c91c257"
+  },
+  {
+   "key": "dix-sept",
+   "speak": "dix-sept",
+   "texts": [
+    "dix-sept"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "de0d6b76c1d2b23c"
+  },
+  {
+   "key": "dixième",
+   "speak": "dixième",
+   "texts": [
+    "dixième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6636b4a71f6d8d7e"
   },
   {
    "key": "donner",
@@ -4691,6 +6979,17 @@
    "hash": "bf3a4b89f937367e"
   },
   {
+   "key": "dont",
+   "speak": "dont",
+   "texts": [
+    "dont"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f9e0a37fc2800a62"
+  },
+  {
    "key": "dormir",
    "speak": "dormir",
    "texts": [
@@ -4700,6 +6999,61 @@
     "verb-infinitive"
    ],
    "hash": "931bd8c8cce91233"
+  },
+  {
+   "key": "douze",
+   "speak": "douze",
+   "texts": [
+    "douze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4175ad0322256c95"
+  },
+  {
+   "key": "du",
+   "speak": "du",
+   "texts": [
+    "du"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "601b2c2473811afe"
+  },
+  {
+   "key": "du Canada",
+   "speak": "du Canada",
+   "texts": [
+    "du Canada"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0d918cdc39345c73"
+  },
+  {
+   "key": "du, de la",
+   "speak": "du, de la",
+   "texts": [
+    "du, de la"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "72e4791babcb28cf"
+  },
+  {
+   "key": "décembre",
+   "speak": "décembre",
+   "texts": [
+    "décembre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4c33d0ec59afc610"
   },
   {
    "key": "décider",
@@ -4724,6 +7078,83 @@
    "hash": "ff8d77053e634312"
   },
   {
+   "key": "elle",
+   "speak": "elle",
+   "texts": [
+    "elle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "18ae79fac1952555"
+  },
+  {
+   "key": "elle est",
+   "speak": "elle est",
+   "texts": [
+    "elle est"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fcbd447c06bf0c7d"
+  },
+  {
+   "key": "elles",
+   "speak": "elles",
+   "texts": [
+    "elles"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "caf38f4cbc7f886b"
+  },
+  {
+   "key": "en",
+   "speak": "en",
+   "texts": [
+    "en"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "dbd3a49d0d906b4e"
+  },
+  {
+   "key": "en France",
+   "speak": "en France",
+   "texts": [
+    "en France"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "21c24cdb69e20ffa"
+  },
+  {
+   "key": "en Italie",
+   "speak": "en Italie",
+   "texts": [
+    "en Italie"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e76bf8eae62b5e37"
+  },
+  {
+   "key": "en face de",
+   "speak": "en face de",
+   "texts": [
+    "en face de"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9a78d03d268c48de"
+  },
+  {
    "key": "ennuie",
    "speak": "ennuie",
    "texts": [
@@ -4746,13 +7177,25 @@
    "hash": "80fe115fe23aae14"
   },
   {
+   "key": "entre",
+   "speak": "entre",
+   "texts": [
+    "entre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5239d9e7ada97912"
+  },
+  {
    "key": "entrer",
    "speak": "entrer",
    "texts": [
     "entrer"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "fc0fc34b4318e41f"
   },
@@ -4812,6 +7255,17 @@
    "hash": "7ca70dbd1a99b856"
   },
   {
+   "key": "eux",
+   "speak": "eux",
+   "texts": [
+    "eux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1f54ae63b1a34e69"
+  },
+  {
    "key": "expliquer",
    "speak": "expliquer",
    "texts": [
@@ -4867,6 +7321,17 @@
    "hash": "d68b385de734c4a4"
   },
   {
+   "key": "février",
+   "speak": "février",
+   "texts": [
+    "février"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "31a8d44abceb4e98"
+  },
+  {
    "key": "gagner",
    "speak": "gagner",
    "texts": [
@@ -4889,6 +7354,61 @@
    "hash": "373fdcfed665539c"
   },
   {
+   "key": "gentil",
+   "speak": "gentil",
+   "texts": [
+    "gentil"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f9ce3d2ed39c6cc9"
+  },
+  {
+   "key": "gentille",
+   "speak": "gentille",
+   "texts": [
+    "gentille"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d5d83ec814917cbc"
+  },
+  {
+   "key": "grand, grande",
+   "speak": "grand, grande",
+   "texts": [
+    "grand, grande"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3936004db86fb6d9"
+  },
+  {
+   "key": "grand, petit, gros",
+   "speak": "grand, petit, gros",
+   "texts": [
+    "grand, petit, gros"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2e190b1411a6a0c9"
+  },
+  {
+   "key": "grands, grandes",
+   "speak": "grands, grandes",
+   "texts": [
+    "grands, grandes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "79fe2006ee59d991"
+  },
+  {
    "key": "habiter",
    "speak": "habiter",
    "texts": [
@@ -4898,6 +7418,50 @@
     "verb-infinitive"
    ],
    "hash": "96b42153d4daca53"
+  },
+  {
+   "key": "heureux, heureuse",
+   "speak": "heureux, heureuse",
+   "texts": [
+    "heureux, heureuse"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "af3e6d37b5702f64"
+  },
+  {
+   "key": "hier",
+   "speak": "hier",
+   "texts": [
+    "hier"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "529cbc8f212773f2"
+  },
+  {
+   "key": "huit",
+   "speak": "huit",
+   "texts": [
+    "huit"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "42761d9a2ec4d85c"
+  },
+  {
+   "key": "il",
+   "speak": "il",
+   "texts": [
+    "il"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a0fb903525dc10dc"
   },
   {
    "key": "il a",
@@ -5013,10 +7577,12 @@
    "key": "il attend",
    "speak": "il attend",
    "texts": [
-    "il/elle attend"
+    "il/elle attend",
+    "il attend"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "59482e6e28bbeb39"
   },
@@ -5321,10 +7887,12 @@
    "key": "il est",
    "speak": "il est",
    "texts": [
-    "il/elle est"
+    "il/elle est",
+    "il est"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-cell"
    ],
    "hash": "c8a9a33281e4c47c"
   },
@@ -5357,7 +7925,8 @@
     "il faudra"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "633b12ec47d6c956"
   },
@@ -5387,10 +7956,12 @@
    "key": "il finit",
    "speak": "il finit",
    "texts": [
-    "il/elle finit"
+    "il/elle finit",
+    "il finit"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "29f527c4301142b9"
   },
@@ -5607,12 +8178,25 @@
    "key": "il parle",
    "speak": "il parle",
    "texts": [
-    "il/elle parle"
+    "il/elle parle",
+    "il parle"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "9c4e20403d99a544"
+  },
+  {
+   "key": "il parlera",
+   "speak": "il parlera",
+   "texts": [
+    "il parlera"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0ade23d526fca769"
   },
   {
    "key": "il part",
@@ -5709,7 +8293,8 @@
     "il pleuvra"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "aa18057c9caebee7"
   },
@@ -6286,6 +8871,28 @@
    "hash": "7a52e477d67dc7cb"
   },
   {
+   "key": "il y a",
+   "speak": "il y a",
+   "texts": [
+    "il y a"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "88c2bb94308b5442"
+  },
+  {
+   "key": "il y a deux jours",
+   "speak": "il y a deux jours",
+   "texts": [
+    "il y a deux jours"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "475bdff7356c6f8f"
+  },
+  {
    "key": "il écoute",
    "speak": "il écoute",
    "texts": [
@@ -6317,6 +8924,17 @@
     "verb-present"
    ],
    "hash": "7c55830800ca03af"
+  },
+  {
+   "key": "ils",
+   "speak": "ils",
+   "texts": [
+    "ils"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8e3e571b623b3f84"
   },
   {
    "key": "ils achètent",
@@ -6399,10 +9017,12 @@
    "key": "ils attendent",
    "speak": "ils attendent",
    "texts": [
-    "ils/elles attendent"
+    "ils/elles attendent",
+    "ils attendent"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "d19aa03793ef6470"
   },
@@ -6729,10 +9349,12 @@
    "key": "ils finissent",
    "speak": "ils finissent",
    "texts": [
-    "ils/elles finissent"
+    "ils/elles finissent",
+    "ils finissent"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "29ac5c6ae2261a21"
   },
@@ -6971,12 +9593,25 @@
    "key": "ils parlent",
    "speak": "ils parlent",
    "texts": [
-    "ils/elles parlent"
+    "ils/elles parlent",
+    "ils parlent"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "d499cc8ef499a295"
+  },
+  {
+   "key": "ils parleront",
+   "speak": "ils parleront",
+   "texts": [
+    "ils parleront"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f2eb77ae539934f3"
   },
   {
    "key": "ils partent",
@@ -7681,6 +10316,17 @@
     "verb-infinitive"
    ],
    "hash": "024bed24f05b33e9"
+  },
+  {
+   "key": "italien, italienne",
+   "speak": "italien, italienne",
+   "texts": [
+    "italien, italienne"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cd9401869610ba8d"
   },
   {
    "key": "j'achète",
@@ -8943,7 +11589,8 @@
     "j'attends"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "1fddf80cee1fee58"
   },
@@ -8954,9 +11601,32 @@
     "j'aurai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "410894d4798b7f85"
+  },
+  {
+   "key": "j'en ai deux",
+   "speak": "j'en ai deux",
+   "texts": [
+    "j'en ai deux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "71fd64a52be0f73a"
+  },
+  {
+   "key": "j'en veux",
+   "speak": "j'en veux",
+   "texts": [
+    "j'en veux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7f5d5bd417ef77d0"
   },
   {
    "key": "j'entendrai",
@@ -9009,7 +11679,8 @@
     "j'enverrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "82d04ca608b99601"
   },
@@ -9141,7 +11812,8 @@
     "j'irai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "cb7ab5fe51f8fd48"
   },
@@ -9234,6 +11906,17 @@
    "hash": "d09b059bae977a37"
   },
   {
+   "key": "j'y vais",
+   "speak": "j'y vais",
+   "texts": [
+    "j'y vais"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "516d229c72e1986c"
+  },
+  {
    "key": "j'écoute",
    "speak": "j'écoute",
    "texts": [
@@ -9298,6 +11981,39 @@
     "verb-future"
    ],
    "hash": "4a9c80951a447f62"
+  },
+  {
+   "key": "jamais de viande",
+   "speak": "jamais de viande",
+   "texts": [
+    "jamais de viande"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "197c2f3dcd604e93"
+  },
+  {
+   "key": "janvier",
+   "speak": "janvier",
+   "texts": [
+    "janvier"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "201f33e6faca9fe2"
+  },
+  {
+   "key": "je",
+   "speak": "je",
+   "texts": [
+    "je"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9e507a6dfbf98393"
   },
   {
    "key": "je boirai",
@@ -9548,7 +12264,8 @@
     "je courrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "c33c453a83054000"
   },
@@ -9658,7 +12375,8 @@
     "je devrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "69ca047d6652ca62"
   },
@@ -9801,7 +12519,8 @@
     "je ferai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "2b1cda18075d24f5"
   },
@@ -9845,7 +12564,8 @@
     "je finis"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "1a9fae66dabc4d47"
   },
@@ -10439,7 +13159,8 @@
     "je mourrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "1ddc7db0bdf1c4c5"
   },
@@ -10494,7 +13215,8 @@
     "je parle"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "93fdbf64d943cc6c"
   },
@@ -10505,7 +13227,8 @@
     "je parlerai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "5c5500c192cbd702"
   },
@@ -10703,7 +13426,8 @@
     "je pourrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "a644f34e65d5716f"
   },
@@ -10846,7 +13570,8 @@
     "je recevrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "5df44242a9bbe9ac"
   },
@@ -11165,7 +13890,8 @@
     "je saurai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "c9b1c21829a7d274"
   },
@@ -11220,7 +13946,8 @@
     "je serai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "e5ea39e938784cb4"
   },
@@ -11462,7 +14189,8 @@
     "je tiendrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "cda0531a2360c5c9"
   },
@@ -11627,7 +14355,8 @@
     "je verrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "35a52fc6d128f30d"
   },
@@ -11649,7 +14378,8 @@
     "je viendrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "534d28477cd8f85c"
   },
@@ -11704,7 +14434,8 @@
     "je voudrai"
    ],
    "categories": [
-    "verb-future"
+    "verb-future",
+    "table-cell"
    ],
    "hash": "b88d0ddff7458a69"
   },
@@ -11742,6 +14473,39 @@
    "hash": "2285d23670a15d82"
   },
   {
+   "key": "jeudi",
+   "speak": "jeudi",
+   "texts": [
+    "jeudi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1b855bb06439bae2"
+  },
+  {
+   "key": "jeune",
+   "speak": "jeune",
+   "texts": [
+    "jeune"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e59a124f26231910"
+  },
+  {
+   "key": "jeune, vieux, nouveau",
+   "speak": "jeune, vieux, nouveau",
+   "texts": [
+    "jeune, vieux, nouveau"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a54eb874bcc8f434"
+  },
+  {
    "key": "jouer",
    "speak": "jouer",
    "texts": [
@@ -11753,15 +14517,137 @@
    "hash": "afb63b89736af83b"
   },
   {
+   "key": "juillet",
+   "speak": "juillet",
+   "texts": [
+    "juillet"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c45ca44e0fe890fe"
+  },
+  {
+   "key": "juin",
+   "speak": "juin",
+   "texts": [
+    "juin"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2ec2c7eef805f9fa"
+  },
+  {
+   "key": "l'année dernière",
+   "speak": "l'année dernière",
+   "texts": [
+    "l'année dernière"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3ef0a9c3ac707592"
+  },
+  {
+   "key": "l'hôtel",
+   "speak": "l'hôtel",
+   "texts": [
+    "l'hôtel"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2357650d9bb683f0"
+  },
+  {
    "key": "la",
    "speak": "la",
    "texts": [
     "la"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "b737ca7ee563ae80"
+  },
+  {
+   "key": "la leur",
+   "speak": "la leur",
+   "texts": [
+    "la leur"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c67296fe5677bb72"
+  },
+  {
+   "key": "la mienne",
+   "speak": "la mienne",
+   "texts": [
+    "la mienne"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f2e70a30065ed74c"
+  },
+  {
+   "key": "la nôtre",
+   "speak": "la nôtre",
+   "texts": [
+    "la nôtre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "499fa68da8a2571c"
+  },
+  {
+   "key": "la semaine prochaine",
+   "speak": "la semaine prochaine",
+   "texts": [
+    "la semaine prochaine"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3c0eb519e7a1566e"
+  },
+  {
+   "key": "la sienne",
+   "speak": "la sienne",
+   "texts": [
+    "la sienne"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "11f4b47cbd34eb4a"
+  },
+  {
+   "key": "la tienne",
+   "speak": "la tienne",
+   "texts": [
+    "la tienne"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b9aea7e0481d1613"
+  },
+  {
+   "key": "la vôtre",
+   "speak": "la vôtre",
+   "texts": [
+    "la vôtre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "141eebee27a45b95"
   },
   {
    "key": "laisser",
@@ -11773,6 +14659,17 @@
     "verb-infinitive"
    ],
    "hash": "c004da0d35e56eb5"
+  },
+  {
+   "key": "laquelle",
+   "speak": "laquelle",
+   "texts": [
+    "laquelle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cb7d9f9e90c5259d"
   },
   {
    "key": "lave",
@@ -11803,9 +14700,109 @@
     "le"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "61098a4bf2a5e216"
+  },
+  {
+   "key": "le leur",
+   "speak": "le leur",
+   "texts": [
+    "le leur"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9bb4644839098e0f"
+  },
+  {
+   "key": "le mien",
+   "speak": "le mien",
+   "texts": [
+    "le mien"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f6ff0ef7a832ec22"
+  },
+  {
+   "key": "le nôtre",
+   "speak": "le nôtre",
+   "texts": [
+    "le nôtre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9c6da39b768fb8ae"
+  },
+  {
+   "key": "le sien",
+   "speak": "le sien",
+   "texts": [
+    "le sien"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1b984cd9f54ec278"
+  },
+  {
+   "key": "le tien",
+   "speak": "le tien",
+   "texts": [
+    "le tien"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4bd30bc0e8c1050e"
+  },
+  {
+   "key": "le vôtre",
+   "speak": "le vôtre",
+   "texts": [
+    "le vôtre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1896ed7b8ab37c4b"
+  },
+  {
+   "key": "le week-end",
+   "speak": "le week-end",
+   "texts": [
+    "le week-end"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e7772ceb18b76905"
+  },
+  {
+   "key": "le, la, les",
+   "speak": "le, la, les",
+   "texts": [
+    "le, la, les"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "405ff503ef9ce5b9"
+  },
+  {
+   "key": "lequel",
+   "speak": "lequel",
+   "texts": [
+    "lequel"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d3045aa4db62efab"
   },
   {
    "key": "les",
@@ -11814,9 +14811,153 @@
     "les"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "7b5454f75089acf2"
+  },
+  {
+   "key": "les leurs",
+   "speak": "les leurs",
+   "texts": [
+    "les leurs"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c847c1ec280c3726"
+  },
+  {
+   "key": "les miennes",
+   "speak": "les miennes",
+   "texts": [
+    "les miennes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fca9e22184ffb1dd"
+  },
+  {
+   "key": "les miens",
+   "speak": "les miens",
+   "texts": [
+    "les miens"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "874a1d0c59f3f51a"
+  },
+  {
+   "key": "les nôtres",
+   "speak": "les nôtres",
+   "texts": [
+    "les nôtres"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "bdeaa435ab33bc5f"
+  },
+  {
+   "key": "les siennes",
+   "speak": "les siennes",
+   "texts": [
+    "les siennes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b81207121ba45f0b"
+  },
+  {
+   "key": "les siens",
+   "speak": "les siens",
+   "texts": [
+    "les siens"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b5f5f898932b4ad0"
+  },
+  {
+   "key": "les tiennes",
+   "speak": "les tiennes",
+   "texts": [
+    "les tiennes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c8ffd2799480a68c"
+  },
+  {
+   "key": "les tiens",
+   "speak": "les tiens",
+   "texts": [
+    "les tiens"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "223413723067fbf0"
+  },
+  {
+   "key": "les vôtres",
+   "speak": "les vôtres",
+   "texts": [
+    "les vôtres"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "02dc520a065b9902"
+  },
+  {
+   "key": "lesquelles",
+   "speak": "lesquelles",
+   "texts": [
+    "lesquelles"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a266a0b3c24b56c2"
+  },
+  {
+   "key": "lesquels",
+   "speak": "lesquels",
+   "texts": [
+    "lesquels"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a2f049cb4b0c8a9a"
+  },
+  {
+   "key": "leur",
+   "speak": "leur",
+   "texts": [
+    "leur"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "eddf10476adf72db"
+  },
+  {
+   "key": "leurs",
+   "speak": "leurs",
+   "texts": [
+    "leurs"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "23332fe8b2464bfd"
   },
   {
    "key": "levée",
@@ -11839,6 +14980,72 @@
     "verb-infinitive"
    ],
    "hash": "47af944d945116a3"
+  },
+  {
+   "key": "loin de",
+   "speak": "loin de",
+   "texts": [
+    "loin de"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "86ea09b32055b97e"
+  },
+  {
+   "key": "long",
+   "speak": "long",
+   "texts": [
+    "long"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fc66f021c67d064c"
+  },
+  {
+   "key": "longue",
+   "speak": "longue",
+   "texts": [
+    "longue"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "95be775656230941"
+  },
+  {
+   "key": "lui",
+   "speak": "lui",
+   "texts": [
+    "lui"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b66e2f869620e9d3"
+  },
+  {
+   "key": "lui, leur",
+   "speak": "lui, leur",
+   "texts": [
+    "lui, leur"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "736f6a564e7bc4ff"
+  },
+  {
+   "key": "lundi",
+   "speak": "lundi",
+   "texts": [
+    "lundi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b255c0e109f4dbce"
   },
   {
    "key": "lève",
@@ -11885,6 +15092,39 @@
    "hash": "d53eaadfd62c4ed1"
   },
   {
+   "key": "ma",
+   "speak": "ma",
+   "texts": [
+    "ma"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3c44c3e1b8b78447"
+  },
+  {
+   "key": "mai",
+   "speak": "mai",
+   "texts": [
+    "mai"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7d980bbde514db41"
+  },
+  {
+   "key": "maintenant",
+   "speak": "maintenant",
+   "texts": [
+    "maintenant"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5382d606a8f48af8"
+  },
+  {
    "key": "manger",
    "speak": "manger",
    "texts": [
@@ -11907,13 +15147,36 @@
    "hash": "99ccb0d2625ca915"
   },
   {
+   "key": "mardi",
+   "speak": "mardi",
+   "texts": [
+    "mardi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "41559c72e9fb9d40"
+  },
+  {
+   "key": "mars",
+   "speak": "mars",
+   "texts": [
+    "mars"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d158be41db87d705"
+  },
+  {
    "key": "me",
    "speak": "me",
    "texts": [
     "me"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "2744ccd10c7533bd"
   },
@@ -11962,6 +15225,39 @@
    "hash": "caed74c60e418806"
   },
   {
+   "key": "me, te, se, nous, vous",
+   "speak": "me, te, se, nous, vous",
+   "texts": [
+    "me, te, se, nous, vous"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7f76f065e7428cab"
+  },
+  {
+   "key": "mercredi",
+   "speak": "mercredi",
+   "texts": [
+    "mercredi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ee966d44471cb15b"
+  },
+  {
+   "key": "mes",
+   "speak": "mes",
+   "texts": [
+    "mes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f1308241eb024180"
+  },
+  {
    "key": "mettre",
    "speak": "mettre",
    "texts": [
@@ -11973,13 +15269,36 @@
    "hash": "4658a34c5c5e8cc3"
   },
   {
+   "key": "moi",
+   "speak": "moi",
+   "texts": [
+    "moi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a4f0e1d1b5eb23e3"
+  },
+  {
+   "key": "mon",
+   "speak": "mon",
+   "texts": [
+    "mon"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e6d3efc6abfd85ce"
+  },
+  {
    "key": "monter",
    "speak": "monter",
    "texts": [
     "monter"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "e474a3f7d2ed60ea"
   },
@@ -12001,9 +15320,21 @@
     "mourir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "e59ef83dbd780f9c"
+  },
+  {
+   "key": "naturel, naturelle",
+   "speak": "naturel, naturelle",
+   "texts": [
+    "naturel, naturelle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "df93fa8f9b4292f9"
   },
   {
    "key": "naître",
@@ -12012,7 +15343,8 @@
     "naître"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "ecf4f0b5cac4dab8"
   },
@@ -12039,6 +15371,28 @@
    "hash": "89c873f509bd1ee0"
   },
   {
+   "key": "neuf",
+   "speak": "neuf",
+   "texts": [
+    "neuf"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a0ad1f02374f9314"
+  },
+  {
+   "key": "neuvième",
+   "speak": "neuvième",
+   "texts": [
+    "neuvième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "eaae2db34bfafce1"
+  },
+  {
    "key": "non",
    "speak": "non",
    "texts": [
@@ -12050,13 +15404,36 @@
    "hash": "bcee72e6df5d5631"
   },
   {
+   "key": "nos",
+   "speak": "nos",
+   "texts": [
+    "nos"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2c9e378375ea5c03"
+  },
+  {
+   "key": "notre",
+   "speak": "notre",
+   "texts": [
+    "notre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6d495bc91a9592bf"
+  },
+  {
    "key": "nous",
    "speak": "nous",
    "texts": [
     "nous"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "60dc2d5aede9c753"
   },
@@ -12155,7 +15532,8 @@
     "nous attendons"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "1747f7abc64a493d"
   },
@@ -12529,7 +15907,8 @@
     "nous finissons"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "0734550a0977d032"
   },
@@ -12842,13 +16221,25 @@
    "hash": "856adcc65ed5760d"
   },
   {
+   "key": "nous parlerons",
+   "speak": "nous parlerons",
+   "texts": [
+    "nous parlerons"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cdb6752209ba0cc4"
+  },
+  {
    "key": "nous parlons",
    "speak": "nous parlons",
    "texts": [
     "nous parlons"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "3a6d1fb4b5ade72a"
   },
@@ -13458,6 +16849,50 @@
    "hash": "1ec40e998d177ddb"
   },
   {
+   "key": "nouveau",
+   "speak": "nouveau",
+   "texts": [
+    "nouveau"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "79b996059587d5c6"
+  },
+  {
+   "key": "nouvelle",
+   "speak": "nouvelle",
+   "texts": [
+    "nouvelle"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "828b8445a5101550"
+  },
+  {
+   "key": "novembre",
+   "speak": "novembre",
+   "texts": [
+    "novembre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cf27de0dc0016684"
+  },
+  {
+   "key": "octobre",
+   "speak": "octobre",
+   "texts": [
+    "octobre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "68e717c9943a783e"
+  },
+  {
    "key": "offrir",
    "speak": "offrir",
    "texts": [
@@ -13467,6 +16902,17 @@
     "verb-infinitive"
    ],
    "hash": "e4e04bd76aa0ed12"
+  },
+  {
+   "key": "on",
+   "speak": "on",
+   "texts": [
+    "on"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b8d31e852725afb1"
   },
   {
    "key": "ont-ils",
@@ -13489,6 +16935,17 @@
     "topic-listen"
    ],
    "hash": "fd04bc557f333f75"
+  },
+  {
+   "key": "onze",
+   "speak": "onze",
+   "texts": [
+    "onze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4042e47beee1e16e"
   },
   {
    "key": "oublier",
@@ -13530,7 +16987,8 @@
     "où"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "e4e8fba406532123"
   },
@@ -13555,6 +17013,28 @@
     "topic-summary-answer"
    ],
    "hash": "5d0a05ce24089534"
+  },
+  {
+   "key": "parce que",
+   "speak": "parce que",
+   "texts": [
+    "parce que"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1cd2d210c78aee5e"
+  },
+  {
+   "key": "parfois",
+   "speak": "parfois",
+   "texts": [
+    "parfois"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a421dec18e6bab39"
   },
   {
    "key": "parle-t-il",
@@ -13596,9 +17076,32 @@
     "partir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "bca0201624d7aed7"
+  },
+  {
+   "key": "pas d'alcool",
+   "speak": "pas d'alcool",
+   "texts": [
+    "pas d'alcool"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a5f9ddb7ce9620af"
+  },
+  {
+   "key": "pas de voiture",
+   "speak": "pas de voiture",
+   "texts": [
+    "pas de voiture"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "99765af6cd1e0a99"
   },
   {
    "key": "passer",
@@ -13607,7 +17110,8 @@
     "passer"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "d9c7abd2f526dde6"
   },
@@ -13656,6 +17160,17 @@
    "hash": "0cf550396ac53225"
   },
   {
+   "key": "petit, petite",
+   "speak": "petit, petite",
+   "texts": [
+    "petit, petite"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6f3c49b761a69e00"
+  },
+  {
    "key": "pleurer",
    "speak": "pleurer",
    "texts": [
@@ -13676,6 +17191,17 @@
     "verb-infinitive"
    ],
    "hash": "20b16f49365f3bf2"
+  },
+  {
+   "key": "plus de pain",
+   "speak": "plus de pain",
+   "texts": [
+    "plus de pain"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5d64d9d82464ccc7"
   },
   {
    "key": "porter",
@@ -13706,7 +17232,8 @@
     "pourquoi"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "64cc85c348a67755"
   },
@@ -13753,6 +17280,39 @@
     "verb-infinitive"
    ],
    "hash": "c6c84e31dfeb2de8"
+  },
+  {
+   "key": "premier",
+   "speak": "premier",
+   "texts": [
+    "premier"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "672a81ef923ec75d"
+  },
+  {
+   "key": "premier, première",
+   "speak": "premier, première",
+   "texts": [
+    "premier, première"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fcb0a2595de1beae"
+  },
+  {
+   "key": "première",
+   "speak": "première",
+   "texts": [
+    "première"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d0d3ea699edbfa52"
   },
   {
    "key": "prend-il",
@@ -13810,6 +17370,17 @@
    "hash": "75b222e6a9a26aa5"
   },
   {
+   "key": "près de",
+   "speak": "près de",
+   "texts": [
+    "près de"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f9769c57c99d7114"
+  },
+  {
    "key": "préférer",
    "speak": "préférer",
    "texts": [
@@ -13838,7 +17409,8 @@
     "qu'est-ce que"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "6643220c047b90b8"
   },
@@ -13871,7 +17443,8 @@
     "quand"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "c45f177e1672b216"
   },
@@ -13898,13 +17471,113 @@
    "hash": "9276235103d2c1c8"
   },
   {
+   "key": "quarante",
+   "speak": "quarante",
+   "texts": [
+    "quarante"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a5990e1e0920ca0d"
+  },
+  {
+   "key": "quatorze",
+   "speak": "quatorze",
+   "texts": [
+    "quatorze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cdd265288b2041d7"
+  },
+  {
+   "key": "quatre",
+   "speak": "quatre",
+   "texts": [
+    "quatre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a8dbf0437f641177"
+  },
+  {
+   "key": "quatre-vingt-dix",
+   "speak": "quatre-vingt-dix",
+   "texts": [
+    "quatre-vingt-dix"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8c76f471e803a78b"
+  },
+  {
+   "key": "quatre-vingt-dix-neuf",
+   "speak": "quatre-vingt-dix-neuf",
+   "texts": [
+    "quatre-vingt-dix-neuf"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "03bb15204122b39d"
+  },
+  {
+   "key": "quatre-vingt-onze",
+   "speak": "quatre-vingt-onze",
+   "texts": [
+    "quatre-vingt-onze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "1368effccf7be1df"
+  },
+  {
+   "key": "quatre-vingt-un",
+   "speak": "quatre-vingt-un",
+   "texts": [
+    "quatre-vingt-un"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "756ce65bab16ff7e"
+  },
+  {
+   "key": "quatre-vingts",
+   "speak": "quatre-vingts",
+   "texts": [
+    "quatre-vingts"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "0ffa02f827065dbe"
+  },
+  {
+   "key": "quatrième",
+   "speak": "quatrième",
+   "texts": [
+    "quatrième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "242697c857437fb1"
+  },
+  {
    "key": "que",
    "speak": "que",
    "texts": [
     "que"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "c57b7501cd843672"
   },
@@ -13953,6 +17626,17 @@
    "hash": "28848d8a8d5b33e4"
   },
   {
+   "key": "quel film",
+   "speak": "quel film",
+   "texts": [
+    "quel film"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "f2ec77ca5338de16"
+  },
+  {
    "key": "quel âge as-tu ?",
    "speak": "quel âge as-tu ?",
    "texts": [
@@ -13986,6 +17670,17 @@
    "hash": "8cf2fc5c6e133fe4"
   },
   {
+   "key": "quelle heure",
+   "speak": "quelle heure",
+   "texts": [
+    "quelle heure"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "960ad29b1b0e79de"
+  },
+  {
    "key": "quelle heure est-il ?",
    "speak": "quelle heure est-il ?",
    "texts": [
@@ -14006,6 +17701,17 @@
     "topic-summary-answer"
    ],
    "hash": "df38ef339a17b82d"
+  },
+  {
+   "key": "quelles idées",
+   "speak": "quelles idées",
+   "texts": [
+    "quelles idées"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "057935d5dac00c54"
   },
   {
    "key": "quelles idées as-tu ?",
@@ -14052,6 +17758,17 @@
    "hash": "71af53e218a575b5"
   },
   {
+   "key": "quels amis",
+   "speak": "quels amis",
+   "texts": [
+    "quels amis"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "83186fcf394f5eed"
+  },
+  {
    "key": "quels amis viennent ce soir ?",
    "speak": "quels amis viennent ce soir ?",
    "texts": [
@@ -14080,7 +17797,8 @@
     "qui"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "760176194068f302"
   },
@@ -14107,6 +17825,17 @@
    "hash": "fa2c8ffefa71c3f0"
   },
   {
+   "key": "quinze",
+   "speak": "quinze",
+   "texts": [
+    "quinze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2ad2eebb37252dab"
+  },
+  {
    "key": "quitter",
    "speak": "quitter",
    "texts": [
@@ -14124,7 +17853,8 @@
     "quoi"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "2584ff3432de0477"
   },
@@ -14201,7 +17931,8 @@
     "rentrer"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "80d6d96bc6f59cb8"
   },
@@ -14212,9 +17943,21 @@
     "rester"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "d005f22f52016f57"
+  },
+  {
+   "key": "retourner",
+   "speak": "retourner",
+   "texts": [
+    "retourner"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2da38b9c4678f6c8"
   },
   {
    "key": "retrouver",
@@ -14234,7 +17977,8 @@
     "revenir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "adb2ed2f9406f7e1"
   },
@@ -14437,6 +18181,28 @@
    "hash": "8d75728fce97ac56"
   },
   {
+   "key": "sa",
+   "speak": "sa",
+   "texts": [
+    "sa"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4cf6829aa93728e8"
+  },
+  {
+   "key": "samedi",
+   "speak": "samedi",
+   "texts": [
+    "samedi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "6e4f8414f1d7936e"
+  },
+  {
    "key": "savoir",
    "speak": "savoir",
    "texts": [
@@ -14454,7 +18220,8 @@
     "se"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "ad9a67fefa847de8"
   },
@@ -14509,7 +18276,8 @@
     "se lever"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "717257e6fdb91b99"
   },
@@ -14569,6 +18337,17 @@
    "hash": "b0fd68ff020eaed3"
   },
   {
+   "key": "seize",
+   "speak": "seize",
+   "texts": [
+    "seize"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "313fac0832f7f979"
+  },
+  {
    "key": "sembler",
    "speak": "sembler",
    "texts": [
@@ -14591,6 +18370,28 @@
    "hash": "3619d970f737f21d"
   },
   {
+   "key": "sept",
+   "speak": "sept",
+   "texts": [
+    "sept"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5ba6561e1125c27a"
+  },
+  {
+   "key": "septembre",
+   "speak": "septembre",
+   "texts": [
+    "septembre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d7ffcba6a9518657"
+  },
+  {
    "key": "servir",
    "speak": "servir",
    "texts": [
@@ -14600,6 +18401,17 @@
     "verb-infinitive"
    ],
    "hash": "14ca9fc831810f77"
+  },
+  {
+   "key": "ses",
+   "speak": "ses",
+   "texts": [
+    "ses"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7d3af7203e8d568a"
   },
   {
    "key": "si",
@@ -14613,15 +18425,115 @@
    "hash": "97a62ad21d79c01c"
   },
   {
+   "key": "six",
+   "speak": "six",
+   "texts": [
+    "six"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "44778d82365e4af6"
+  },
+  {
+   "key": "soixante",
+   "speak": "soixante",
+   "texts": [
+    "soixante"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "15bc210013d3661f"
+  },
+  {
+   "key": "soixante et onze",
+   "speak": "soixante et onze",
+   "texts": [
+    "soixante et onze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "859b00d644bb33fc"
+  },
+  {
+   "key": "soixante-dix",
+   "speak": "soixante-dix",
+   "texts": [
+    "soixante-dix"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ed551a2bf5d673b6"
+  },
+  {
+   "key": "soixante-douze",
+   "speak": "soixante-douze",
+   "texts": [
+    "soixante-douze"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8a4ca475de84bcba"
+  },
+  {
+   "key": "son",
+   "speak": "son",
+   "texts": [
+    "son"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "98aa667548255288"
+  },
+  {
    "key": "sortir",
    "speak": "sortir",
    "texts": [
     "sortir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "9f97c70fe3c120a0"
+  },
+  {
+   "key": "sous",
+   "speak": "sous",
+   "texts": [
+    "sous"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "aa32b653a9dfd018"
+  },
+  {
+   "key": "souvent",
+   "speak": "souvent",
+   "texts": [
+    "souvent"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c6b6182bc1a2b373"
+  },
+  {
+   "key": "sportif, sportive",
+   "speak": "sportif, sportive",
+   "texts": [
+    "sportif, sportive"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "cf20f823532b3977"
   },
   {
    "key": "suivre",
@@ -14633,6 +18545,17 @@
     "verb-infinitive"
    ],
    "hash": "b9cd45589a259895"
+  },
+  {
+   "key": "sur",
+   "speak": "sur",
+   "texts": [
+    "sur"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c89b6c3d164a6509"
   },
   {
    "key": "t'",
@@ -14657,13 +18580,25 @@
    "hash": "9f2e386d1da9af65"
   },
   {
+   "key": "ta",
+   "speak": "ta",
+   "texts": [
+    "ta"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "76592b9de6d38238"
+  },
+  {
    "key": "te",
    "speak": "te",
    "texts": [
     "te"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "2d6c9a90dd38f685"
   },
@@ -14712,15 +18647,49 @@
    "hash": "992c73543de978a6"
   },
   {
+   "key": "tes",
+   "speak": "tes",
+   "texts": [
+    "tes"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "ce0f6c28b5869ff1"
+  },
+  {
+   "key": "toi",
+   "speak": "toi",
+   "texts": [
+    "toi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d19cc6e906a11f97"
+  },
+  {
    "key": "tomber",
    "speak": "tomber",
    "texts": [
     "tomber"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "975d7180e286efcb"
+  },
+  {
+   "key": "ton",
+   "speak": "ton",
+   "texts": [
+    "ton"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d537bc9c04d322df"
   },
   {
    "key": "toucher",
@@ -14734,6 +18703,17 @@
    "hash": "b6997273fd036f6c"
   },
   {
+   "key": "toujours",
+   "speak": "toujours",
+   "texts": [
+    "toujours"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "5c4a8145c8f1dc05"
+  },
+  {
    "key": "tourner",
    "speak": "tourner",
    "texts": [
@@ -14743,6 +18723,17 @@
     "verb-infinitive"
    ],
    "hash": "bab35e4b2dc4a948"
+  },
+  {
+   "key": "tous les jours",
+   "speak": "tous les jours",
+   "texts": [
+    "tous les jours"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "caa081872ba4c5c1"
   },
   {
    "key": "travailler",
@@ -14756,6 +18747,61 @@
    "hash": "55c286af7ef60ef5"
   },
   {
+   "key": "treize",
+   "speak": "treize",
+   "texts": [
+    "treize"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "9553dc446f6338b7"
+  },
+  {
+   "key": "trente",
+   "speak": "trente",
+   "texts": [
+    "trente"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "18d8c00eece4f59e"
+  },
+  {
+   "key": "trente et un",
+   "speak": "trente et un",
+   "texts": [
+    "trente et un"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "41a563fd36ae6a20"
+  },
+  {
+   "key": "trois",
+   "speak": "trois",
+   "texts": [
+    "trois"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a69cf3d89f86a833"
+  },
+  {
+   "key": "troisième",
+   "speak": "troisième",
+   "texts": [
+    "troisième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4f978a113d7a1c3a"
+  },
+  {
    "key": "trouver",
    "speak": "trouver",
    "texts": [
@@ -14765,6 +18811,17 @@
     "verb-infinitive"
    ],
    "hash": "7029e52a82225ea7"
+  },
+  {
+   "key": "tu",
+   "speak": "tu",
+   "texts": [
+    "tu"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "764c4c7b78d6fd3b"
   },
   {
    "key": "tu achètes",
@@ -14861,7 +18918,8 @@
     "tu attends"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "1ed6d8f3afc8c2e4"
   },
@@ -15213,7 +19271,8 @@
     "tu finis"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "f574ac8337a2be3b"
   },
@@ -15427,13 +19486,25 @@
    "hash": "0e21f906dec5cdcf"
   },
   {
+   "key": "tu parleras",
+   "speak": "tu parleras",
+   "texts": [
+    "tu parleras"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4324c80a68bd3b6d"
+  },
+  {
    "key": "tu parles",
    "speak": "tu parles",
    "texts": [
     "tu parles"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "0aab9a496c695bbb"
   },
@@ -16120,6 +20191,105 @@
    "hash": "e7049498aa84090a"
   },
   {
+   "key": "un",
+   "speak": "un",
+   "texts": [
+    "un"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "68bca10eea2ba33f"
+  },
+  {
+   "key": "un bel homme",
+   "speak": "un bel homme",
+   "texts": [
+    "un bel homme"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "792838da2162b50c"
+  },
+  {
+   "key": "un film intéressant",
+   "speak": "un film intéressant",
+   "texts": [
+    "un film intéressant"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fc7ff584d6a04da7"
+  },
+  {
+   "key": "un nouvel ami",
+   "speak": "un nouvel ami",
+   "texts": [
+    "un nouvel ami"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "e37a3af3c73f056e"
+  },
+  {
+   "key": "un vieil homme",
+   "speak": "un vieil homme",
+   "texts": [
+    "un vieil homme"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "b93f47662391c7a7"
+  },
+  {
+   "key": "un, une",
+   "speak": "un, une",
+   "texts": [
+    "un, une"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8a033effc07d72de"
+  },
+  {
+   "key": "une",
+   "speak": "une",
+   "texts": [
+    "une"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "52597892af72166c"
+  },
+  {
+   "key": "une jolie maison",
+   "speak": "une jolie maison",
+   "texts": [
+    "une jolie maison"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "7d5f4c168de017ff"
+  },
+  {
+   "key": "une voiture rouge",
+   "speak": "une voiture rouge",
+   "texts": [
+    "une voiture rouge"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "75f12f6b4860f013"
+  },
+  {
    "key": "utiliser",
    "speak": "utiliser",
    "texts": [
@@ -16164,15 +20334,93 @@
    "hash": "6a4435dcf2970871"
   },
   {
+   "key": "vendredi",
+   "speak": "vendredi",
+   "texts": [
+    "vendredi"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "2cc4748227ea32ef"
+  },
+  {
    "key": "venir",
    "speak": "venir",
    "texts": [
     "venir"
    ],
    "categories": [
-    "verb-infinitive"
+    "verb-infinitive",
+    "table-cell"
    ],
    "hash": "4e467f2a4278b3bf"
+  },
+  {
+   "key": "vieille",
+   "speak": "vieille",
+   "texts": [
+    "vieille"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "c2d5f0584aaf9ff0"
+  },
+  {
+   "key": "vieux",
+   "speak": "vieux",
+   "texts": [
+    "vieux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "652b49a42f52a6d1"
+  },
+  {
+   "key": "vingt",
+   "speak": "vingt",
+   "texts": [
+    "vingt"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d98bf86d96758db3"
+  },
+  {
+   "key": "vingt et un",
+   "speak": "vingt et un",
+   "texts": [
+    "vingt et un"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "988aabef4b885275"
+  },
+  {
+   "key": "vingt-deux",
+   "speak": "vingt-deux",
+   "texts": [
+    "vingt-deux"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "258a9f20342d6447"
+  },
+  {
+   "key": "vingtième",
+   "speak": "vingtième",
+   "texts": [
+    "vingtième"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "fccb8cd83ca0fe7e"
   },
   {
    "key": "vivre",
@@ -16195,6 +20443,28 @@
     "verb-infinitive"
    ],
    "hash": "0d55c38b93669650"
+  },
+  {
+   "key": "vos",
+   "speak": "vos",
+   "texts": [
+    "vos"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "d6c1aaf96588e292"
+  },
+  {
+   "key": "votre",
+   "speak": "votre",
+   "texts": [
+    "votre"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "4127e7bd33f10997"
   },
   {
    "key": "voulez-vous",
@@ -16236,7 +20506,8 @@
     "vous"
    ],
    "categories": [
-    "topic-summary-answer"
+    "topic-summary-answer",
+    "table-cell"
    ],
    "hash": "aa2f27e353bb4f78"
   },
@@ -16335,7 +20606,8 @@
     "vous attendez"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "8ac6e1e0e429619d"
   },
@@ -16687,7 +20959,8 @@
     "vous finissez"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "98cd01a776142d3e"
   },
@@ -16901,13 +21174,25 @@
    "hash": "1a6263efcd0fea1e"
   },
   {
+   "key": "vous parlerez",
+   "speak": "vous parlerez",
+   "texts": [
+    "vous parlerez"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "212d73f53d1a7cae"
+  },
+  {
    "key": "vous parlez",
    "speak": "vous parlez",
    "texts": [
     "vous parlez"
    ],
    "categories": [
-    "verb-present"
+    "verb-present",
+    "table-grid"
    ],
    "hash": "41b24f59e3fb50e6"
   },
@@ -17627,6 +21912,28 @@
    "hash": "e6e62ee55819cdc1"
   },
   {
+   "key": "y",
+   "speak": "y",
+   "texts": [
+    "y"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a1fce4363854ff88"
+  },
+  {
+   "key": "zéro",
+   "speak": "zéro",
+   "texts": [
+    "zéro"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "a701a906308542ed"
+  },
+  {
    "key": "À quelle heure",
    "speak": "À quelle heure",
    "texts": [
@@ -17693,6 +22000,17 @@
    "hash": "166d642477ec9d87"
   },
   {
+   "key": "Ça coûte soixante-quinze euros.",
+   "speak": "Ça coûte soixante-quinze euros.",
+   "texts": [
+    "Ça coûte soixante-quinze euros."
+   ],
+   "categories": [
+    "table-example"
+   ],
+   "hash": "d84d432fedd61cbe"
+  },
+  {
    "key": "Ça sent bon ici.",
    "speak": "Ça sent bon ici.",
    "texts": [
@@ -17702,6 +22020,61 @@
     "verb-sentence"
    ],
    "hash": "73f5ffe5dae2b506"
+  },
+  {
+   "key": "à Paris",
+   "speak": "à Paris",
+   "texts": [
+    "à Paris"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "8f2c8092e0157343"
+  },
+  {
+   "key": "à côté de",
+   "speak": "à côté de",
+   "texts": [
+    "à côté de"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "91ee7be6b5262a72"
+  },
+  {
+   "key": "à huit heures",
+   "speak": "à huit heures",
+   "texts": [
+    "à huit heures"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "3fd6d837846cfffb"
+  },
+  {
+   "key": "à l'hôtel",
+   "speak": "à l'hôtel",
+   "texts": [
+    "à l'hôtel"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "032699fd341b7d49"
+  },
+  {
+   "key": "à la",
+   "speak": "à la",
+   "texts": [
+    "à la"
+   ],
+   "categories": [
+    "table-cell"
+   ],
+   "hash": "255a29c41f7ed9a6"
   },
   {
    "key": "écouter",

@@ -75,7 +75,7 @@ The header's **Theme** button cycles System → Light → Dark (also under Setti
 
 ### Recorded voice (default)
 
-**Listen** now plays a **recorded voice** first: a natural-sounding French clip of the full phrase ("vous avez", "j'ai", "je me lève", every example sentence and topic answer), made in advance and shipped in `audio/tts/qwen3-fr-bf16/`. The voice is **synthetic**: it was generated on this Mac with the open text-to-speech model Qwen3-TTS 1.7B (Apache-2.0), using one designed voice (no real person was cloned). The Listen button is outlined in blue when it will play a recording, and the message at the bottom of the screen says "Recorded voice (synthetic)".
+**Listen** now plays a **recorded voice** first: a natural-sounding French clip of the full phrase ("vous avez", "j'ai", "je me lève", every example sentence and topic answer, and the Grammar tables: each table word and example), made in advance and shipped in `audio/tts/qwen3-fr-bf16/`. The voice is **synthetic**: it was generated on this Mac with the open text-to-speech model Qwen3-TTS 1.7B (Apache-2.0), using one designed voice (no real person was cloned). The Listen button is outlined in blue when it will play a recording, and the message at the bottom of the screen says "Recorded voice (synthetic)".
 
 - The order is: (1) the recorded clip for exactly that text, (2) otherwise the **device voice**, the computer voice described below, exactly as before. Texts without a clip (and any clip that fails to load) fall back to the device voice automatically. The "Native speaker (word only)" button is unchanged.
 - **Settings → Voice → Listen plays**: **Recorded voice (recommended)** or **Device voice** (everything with the browser's computer voice, as in earlier versions). The choice is saved with your other settings (a new `voiceSource` field in schema version 2; older saved progress and export files get the recorded voice).
@@ -85,7 +85,7 @@ The header's **Theme** button cycles System → Light → Dark (also under Setti
 
 Where the rest of this section says "computer voice", it applies to texts without a recording, or to everything when Device voice is chosen.
 
-To add or regenerate recordings after the verb or topic data changes, see `../tts-tools/README.md` (`python generate.py` only makes the clips that are missing or whose text changed; it checks each clip with speech recognition and lists doubtful ones on a review page). The recorded voice's credits are in `audio/tts/qwen3-fr-bf16/CREDITS.md` and the Credits view.
+To add or regenerate recordings after the verb, topic or Grammar tables data changes, see `../tts-tools/README.md` (`python generate.py` only makes the clips that are missing or whose text changed; it checks each clip with speech recognition and lists doubtful ones on a review page). The recorded voice's credits are in `audio/tts/qwen3-fr-bf16/CREDITS.md` and the Credits view.
 
 ### Computer voice and native recordings
 

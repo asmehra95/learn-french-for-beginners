@@ -21,6 +21,8 @@ Usage (after `source <venv>/bin/activate`, see README.md):
   python generate.py --only <hash> [<hash> ...]          # force regeneration of these hashes
   python generate.py --report-only                       # rebuild tts-manifest.js, credits, review page
   python generate.py --prune                             # delete mp3s no longer in the corpus
+  python generate.py --strict-short                      # one-token strings ("dix-sept", "l'hôtel") use the
+                                                         # single-word rule; unverified ones are not shipped
 """
 import argparse
 import datetime as dt
@@ -200,12 +202,13 @@ def encode(trimmed_wav, out_mp3):
 
 
 # ------------------------------------------------------------------ generation
-def final_status(q):
+def final_status(q, strict_short=False):
     st = q["status"]
     if st in ("pass", "short-ok"):
         return "pass"
     if st == "short-unverified":
-        return "short-unverified"
+        # --strict-short: never ship a single word Whisper did not confirm (the site uses the device voice)
+        return "failed-excluded" if strict_short else "short-unverified"
     severe = {"silent", "too-short"} & set(q["flags"]) or "last-word-missing" in q["flags"] \
         or min(q["loose_cer"], q["phon_cer"]) > 0.5 or st == "short-fail"
     return "failed-excluded" if severe else "failed-kept"
@@ -220,7 +223,7 @@ def attempt_summary(n, seed, temp, q, wall):
 
 def new_job(item, position, prev, reason, args):
     """In-flight state of one corpus item across rounds (persisted in work/inflight-<voice>.json)."""
-    single = ttsqa.word_count(item["speak"]) <= 1
+    single = ttsqa.is_single(item["speak"], args.strict_short)
     cont = bool(prev) and reason in ("retry", "marked")
     # re-runs (retry / user marks) continue the seed ladder instead of repeating earlier seeds
     first_n = len(prev.get("attempts", [])) if cont else 0
@@ -257,7 +260,7 @@ def qa_pending(ctx, job):
     """Transcribe + score the pending attempt; keep it if it beats the best so far. True when the job is done."""
     v, item, p = ctx["voice"], job["item"], job["pending"]
     transcript = ctx["asr"].transcribe(p["raw"])
-    q = ttsqa.evaluate_corpus(item["speak"], p["raw"], transcript, v["median_ratio"])
+    q = ttsqa.evaluate_corpus(item["speak"], p["raw"], transcript, v["median_ratio"], ctx["args"].strict_short)
     job["attempts"].append(attempt_summary(p["n"], p["seed"], p["temperature"], q, p["wall"]))
     best = job["best"]
     better = best is None or (RANK[q["status"]], q["phon_cer"], q["loose_cer"], len(q["flags"])) < \
@@ -278,7 +281,8 @@ def qa_pending(ctx, job):
 def finalize(ctx, job):
     """Post-process the best attempt and return the manifest record."""
     item, best, best_wav = job["item"], job["best"], job["bestWav"]
-    status = final_status(best)
+    strict = ctx["args"].strict_short
+    status = final_status(best, strict)
     rec = {
         "hash": item["hash"], "key": item["key"], "speak": item["speak"], "genText": gen_text(item["speak"]),
         "texts": item["texts"], "categories": item["categories"], "words": best["words"], "status": status,
@@ -288,6 +292,8 @@ def finalize(ctx, job):
         "chosenAttempt": int(re.search(r"-a(\d+)\.wav$", best_wav).group(1)),
         "settingsId": ctx["sid"], "generatedAt": now(), "reason": job["reason"],
     }
+    if strict and best["status"] == "short-unverified":
+        rec["flags"] = best["flags"] + ["single-word-unverified"]
     if job.get("userMarked"):
         rec["userMarked"] = job["userMarked"]
     mp3 = os.path.join(ctx["audio_dir"], item["hash"] + ".mp3")
@@ -319,8 +325,11 @@ def rescore(ctx, man, live):
         wav = os.path.join(REPO, rec["reviewWav"])
         if not os.path.exists(wav):
             continue
-        q = ttsqa.evaluate_corpus(rec["speak"], wav, rec["transcript"], ctx["voice"]["median_ratio"])
-        status = final_status(q)
+        strict = ctx.get("strict_short", False)
+        q = ttsqa.evaluate_corpus(rec["speak"], wav, rec["transcript"], ctx["voice"]["median_ratio"], strict)
+        status = final_status(q, strict)
+        if strict and q["status"] == "short-unverified":
+            q["flags"] = q["flags"] + ["single-word-unverified"]
         if status == rec["status"]:
             continue
         print(f"  rescore {rec['status']} -> {status} {rec['key']!r} heard={rec['transcript']!r}", flush=True)
@@ -607,6 +616,9 @@ def main():
     ap.add_argument("--exclude-marked", action="store_true", help="with --marks: drop instead of regenerate")
     ap.add_argument("--max-retries", type=int, default=3)
     ap.add_argument("--max-retries-short", type=int, default=5, help="retries for single words (stricter QA)")
+    ap.add_argument("--strict-short", action="store_true",
+                    help="strings without whitespace use the single-word QA rule and retry budget; a single word "
+                         "Whisper still has not confirmed after all retries is not shipped (failed-excluded)")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--report-only", action="store_true")
     ap.add_argument("--rescore", action="store_true", help="re-apply the QA rules to non-pass clips (stored transcripts, no model)")
@@ -647,7 +659,7 @@ def main():
             marked = set()
 
     if args.rescore and not args.dry_run:
-        n = rescore({"voice": v, "audio_dir": audio_dir}, man, live)
+        n = rescore({"voice": v, "audio_dir": audio_dir, "strict_short": args.strict_short}, man, live)
         man["updatedAt"] = now()
         write_json_atomic(man_path, man)
         print(f"rescored: {n} clip(s) changed status", flush=True)
