@@ -28,6 +28,7 @@
   var LEARN = window.VT_LEARN;
   var state;
   var verbsById = {}, lessonsById = {}, lessonOf = {};
+  var searchIndex = null; // VT_SEARCH index, built once in init() (null: search disabled)
   var ctx = null; // view context (§3.1), assigned in init() once the registered views exist
   var currentRoute = null;
   var currentRouteInfo = null; // VT_LEARN.parseRoute result (item 11)
@@ -1404,22 +1405,30 @@
     return card;
   }
 
+  /* While there is a query, Browse searches every lesson, also in a lesson's scoped Learn step
+     (matching out-of-scope groups are revealed with data-search-hit), and matches any form, meaning,
+     type keyword or lesson number through the search index as well as the plain substring test. */
   function filterBrowse(q) {
     var needle = L.stripAccents(L.normalize(q));
+    var searching = !!needle;
+    var hits = searching && searchIndex ? window.VT_SEARCH.matchVerbIds(searchIndex, q) : null;
     var shown = 0, total = 0;
     var firstCard = null;
     Array.prototype.forEach.call(document.querySelectorAll("#browse-list .lesson-group"), function (group) {
-      var inScope = group.getAttribute("data-out-of-scope") !== "true";
+      var outOfScope = group.getAttribute("data-out-of-scope") === "true";
+      var eligible = searching || !outOfScope;
       var any = false;
       Array.prototype.forEach.call(group.querySelectorAll(".verb-card"), function (card) {
-        var v = verbsById[card.getAttribute("data-verb")];
+        var id = card.getAttribute("data-verb");
+        var v = verbsById[id];
         var hay = L.stripAccents(L.normalize(v.infinitive + " " + v.meaning));
-        var match = inScope && (!needle || hay.indexOf(needle) !== -1);
-        if (inScope) total += 1;
+        var match = eligible && (!needle || hay.indexOf(needle) !== -1 || !!(hits && hits[id]));
+        if (eligible) total += 1;
         card.hidden = !match;
         if (match) { any = true; shown += 1; if (!firstCard) firstCard = card; }
       });
       group.hidden = !any;
+      group.setAttribute("data-search-hit", searching && any && outOfScope ? "true" : "false");
       if (needle && any) group.querySelector("details").open = true;
     });
     // The stem · ending legend shows on the first visible card of the view only (§6.3).
@@ -1427,8 +1436,8 @@
       p.hidden = !firstCard || !firstCard.contains(p);
     });
     var none = !!needle && shown === 0;
-    $("browse-count").textContent = none ? "No verbs match “" + q.trim() + "”."
-      : needle ? "Showing " + shown + " of " + total + " verbs." : "Showing all " + total + " verbs.";
+    $("browse-count").textContent = none ? "No verbs match “" + q.trim() + "”." + (searchIndex ? " Tip: press / or Ctrl+K to search everything, including topics." : "")
+      : needle ? "Showing " + shown + " of " + total + " verbs" + (browseScope !== null ? " from all lessons." : ".") : "Showing all " + total + " verbs.";
     $("browse-clear").hidden = !none; // §12.4 empty state
   }
 
@@ -2141,6 +2150,11 @@
     if (info.verbId) {
       // Verb deep link (§4): focus and instantly scroll to the card, also on first load.
       var card = $("verb-" + info.verbId);
+      if (card && (card.hidden || card.closest(".lesson-group").hidden)) {
+        // A search jump always lands on a visible card: drop a Browse filter that hides it.
+        $("browse-search").value = "";
+        filterBrowse("");
+      }
       if (card) {
         card.setAttribute("tabindex", "-1");
         card.focus({ preventScroll: true });
@@ -2197,6 +2211,12 @@
     DATA.verbs.forEach(function (v) { verbsById[v.id] = v; });
     lessonsById = LEARN.buildLessonsById(DATA.lessons);
     lessonOf = LEARN.buildLessonOf(DATA.lessons, DATA.verbs);
+    try {
+      searchIndex = window.VT_SEARCH ? window.VT_SEARCH.buildIndex(DATA, window.TOPICS_DATA) : null;
+    } catch (err) {
+      searchIndex = null;
+      console.error(err);
+    }
     fillDataCopy();
 
     voiceUI = buildVoiceSettings(); // first, so Listen buttons follow the saved preferences
@@ -2228,6 +2248,8 @@
       verbsById: verbsById, lessonsById: lessonsById, lessonOf: lessonOf,
       scopeVerbs: scopeVerbs, selectedVerbs: selectedVerbs, sessionKey: sessionKey, lengthFor: lengthFor,
       navigate: function (hash) { location.hash = hash; },
+      go: function (hash) { if (location.hash === hash) route(); else location.hash = hash; },
+      searchIndex: searchIndex, isTypingTarget: isTypingTarget, anyDialogOpen: anyDialogOpen,
       onVoiceChange: function (fn) { if (typeof fn === "function") voiceListeners.push(fn); },
       makeTypedPanel: makeTypedPanel, makeChoicePanel: makeChoicePanel,
       buildTypedItem: buildTypedItem, buildChoiceItem: buildChoiceItem,

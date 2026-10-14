@@ -42,6 +42,7 @@
     <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></symbol>
     <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6.1H3"/><path d="M21 12.1H3"/><path d="M15.1 18H3"/></symbol>
     <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
     <symbol id="i-languages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
   </svg>
 
@@ -60,6 +61,7 @@
         </ul>
       </nav>
       <div class="utility">
+        <button type="button" class="btn-util search-trigger" id="btn-search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" title="Search (/ or Ctrl+K)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg><span class="btn-label">Search verbs</span><kbd class="search-kbd" aria-hidden="true">/</kbd></button>
         <button type="button" class="btn-util" id="btn-reference" title="Reference"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book-open"></use></svg><span class="btn-label">Reference</span></button>
         <button type="button" class="btn-util" id="btn-settings" title="Settings"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-settings"></use></svg><span class="btn-label">Settings</span><span class="voice-summary" id="voice-summary"></span></button>
         <button type="button" class="btn-util" id="btn-theme" title="Theme"><svg class="icon" id="theme-icon" aria-hidden="true" focusable="false"><use href="#i-monitor"></use></svg><span class="btn-label" id="theme-label">Theme: System</span></button>
@@ -76,6 +78,7 @@
           <li><a class="bottom-link" href="#browse" data-nav="learn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book-open"></use></svg><span>Learn</span></a></li>
           <li><a class="bottom-link" href="#practice" data-nav="practice"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg><span>Practice</span></a></li>
           <li><a class="bottom-link" href="#review" data-nav="review"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rotate-ccw"></use></svg><span>Review</span></a></li>
+          <li><button type="button" class="bottom-link" id="btn-search-bottom" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg><span>Search</span></button></li>
       <li><button type="button" class="bottom-link" id="btn-more" aria-haspopup="dialog"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg><span>More</span></button></li>
     </ul>
   </nav>
@@ -164,7 +167,7 @@
       </div>
       <nav class="jump-bar" id="browse-jump" aria-label="Jump to a lesson"></nav>
       <div class="search">
-        <label for="browse-search">Search by infinitive or meaning</label>
+        <label for="browse-search">Search all verbs: infinitive, any form or English meaning</label>
         <input type="search" id="browse-search" autocomplete="off" spellcheck="false" aria-describedby="browse-count">
         <p id="browse-count" class="hint" role="status" aria-live="polite"></p>
         <button type="button" class="btn btn-small" id="browse-clear" hidden>Clear search</button>
@@ -461,7 +464,7 @@
         </div>
         <div class="field-check">
           <input type="checkbox" id="settings-single-key" aria-describedby="settings-single-key-hint">
-          <label for="settings-single-key">Single-key shortcuts (H, L, S, N, F, 1–4, Space, ?)</label>
+          <label for="settings-single-key">Single-key shortcuts (H, L, S, N, F, 1–4, Space, ?, /)</label>
         </div>
         <p class="hint" id="settings-single-key-hint">Turn off if you use speech input or a switch device.</p>
       </section>
@@ -515,7 +518,7 @@
       </div>
       <div class="table-wrap" role="region" tabindex="0" aria-label="Keyboard shortcuts">
         <table class="shortcuts-table">
-          <caption>Shortcuts work on the practice pages. Single-key shortcuts can be turned off in Settings.</caption>
+          <caption>Most shortcuts work on the practice pages. Single-key shortcuts can be turned off in Settings.</caption>
           <thead><tr><th scope="col">Key</th><th scope="col">Where</th><th scope="col">Action</th></tr></thead>
           <tbody>
             <tr><td><kbd>Enter</kbd></td><td>Typed questions</td><td>Check; after checking, next question</td></tr>
@@ -527,11 +530,30 @@
             <tr><td><kbd>L</kbd> (<kbd>Alt</kbd>+<kbd>L</kbd> in a text box)</td><td>Any practice page</td><td>Listen to the current item</td></tr>
             <tr><td><kbd>S</kbd> (<kbd>Alt</kbd>+<kbd>S</kbd> in a text box)</td><td>Typed questions</td><td>Show the answer</td></tr>
             <tr><td><kbd>N</kbd> or <kbd>→</kbd></td><td>After answering</td><td>Next question</td></tr>
+            <tr><td><kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>⌘</kbd>+<kbd>K</kbd> on a Mac)</td><td>Anywhere outside a text box</td><td>Search all verbs and topics</td></tr>
+            <tr><td><kbd>↑</kbd> / <kbd>↓</kbd>, <kbd>Enter</kbd></td><td>Search</td><td>Move through the results, open one</td></tr>
             <tr><td><kbd>?</kbd></td><td>Anywhere outside a text box</td><td>Open this list</td></tr>
-            <tr><td><kbd>Esc</kbd></td><td>Dialogs</td><td>Close</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Dialogs and search</td><td>Close</td></tr>
           </tbody>
         </table>
       </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-search" class="dlg dlg-search" aria-labelledby="dlg-search-h">
+    <div class="dlg-body">
+      <div class="dlg-head">
+        <h2 id="dlg-search-h">Search</h2>
+        <button type="button" class="btn-icon dlg-close" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg><span class="visually-hidden">Close</span></button>
+      </div>
+      <div class="search-field">
+        <label for="search-input" id="search-label">Search all verbs, every form, the English meanings and the topic lessons</label>
+        <input type="search" id="search-input" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-listbox" aria-describedby="search-help" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" maxlength="80">
+        <p id="search-help" class="hint">Type a French form (suis, j'ai), an infinitive or English (to eat). Arrow keys move through the results, Enter opens one.</p>
+      </div>
+      <div id="search-listbox" role="listbox" aria-label="Search results" class="search-results"></div>
+      <div id="search-empty" class="search-empty" hidden></div>
+      <p id="search-status" class="visually-hidden" role="status" aria-live="polite"></p>
     </div>
   </dialog>
 
@@ -568,6 +590,7 @@
   <script src="js/verb-meta.js"></script>
   <script src="js/logic.js"></script>
   <script src="js/learn.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/topics.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/tts-manifest.js"></script>
@@ -577,6 +600,7 @@
   <script src="js/views-home.js"></script>
   <script src="js/views-review.js"></script>
   <script src="js/views-topics.js"></script>
+  <script src="js/views-search.js"></script>
   <script src="js/explainer.js"></script>
   <script src="js/views-explain.js"></script>
   <script src="js/app.js"></script>

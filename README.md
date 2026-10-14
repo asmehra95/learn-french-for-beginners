@@ -40,8 +40,14 @@ native-speaker audio clips.
 - **Flashcard conjugation peek** — cards don't show whether a verb is regular or irregular, so you
   can guess first. The conjugation table opens only when you press the small button, and shows the
   verb type inside (e.g. "Regular -er", "Irregular · conjugates like venir", "Reflexive").
+- **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
+  bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
+  ferai), English meanings ("to eat") and the topic lessons ("quel", "est-ce que"). Accent-, case-,
+  apostrophe- and typo-tolerant. From a result you can open the verb card, listen to the matched
+  form, or go to its lesson. A verb's type only shows if you search for it ("irregular", "reflexive").
 - **Foldable Browse section** — every verb grouped by lesson, with present-tense tables, past, future,
-  example sentences, pronunciation tips, and Regular / Irregular / Reflexive badges.
+  example sentences, pronunciation tips, and Regular / Irregular / Reflexive badges. Its search box
+  matches any form or meaning and always covers all lessons, also inside a lesson's Learn step.
 - **Learn → Practice → Quiz flow** — each lesson guides you through three steps: Browse the tables,
   Practice conjugations, then take a Quiz (pass at 80% to complete the lesson).
 - **Review my mistakes** — items you got wrong come back until you answer them correctly three times.

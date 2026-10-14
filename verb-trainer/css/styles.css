@@ -264,7 +264,7 @@ main:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; box-s
 }
 
 .bottom-nav { display: none; }
-.bottom-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.bottom-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .bottom-link {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
   width: 100%; min-height: 56px; padding: var(--s-1) 0;
@@ -624,7 +624,8 @@ input[type="range"] {
 .lesson-summary-count { color: var(--muted); font-size: var(--fs-sm); }
 .lesson-path-link { margin: var(--s-2) 0 var(--s-3); }
 .lesson-path-link a { display: inline-flex; align-items: center; gap: var(--s-1); min-height: 44px; font-weight: 600; }
-.lesson-group[data-out-of-scope="true"] { display: none; }
+/* A lesson's Learn step shows only that lesson, except groups revealed by a search (data-search-hit). */
+.lesson-group[data-out-of-scope="true"]:not([data-search-hit="true"]) { display: none; }
 .is-scoped .lesson-path-link { display: none; } /* the scoped footer already links back to the lesson */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: var(--s-4); }
 .verb-card {
@@ -1067,6 +1068,58 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 
 .site-footer { border-top: 1px solid var(--border); background: var(--surface); color: var(--muted); font-size: var(--fs-sm); padding: var(--s-3) 0 var(--s-8); }
 
+/* ---------- 10b. global search (views-search.js) ---------- */
+.search-trigger { gap: var(--s-2); }
+.search-kbd { font-size: var(--fs-xs); color: var(--muted); }
+@media (min-width: 1024px) {
+  .search-trigger {
+    min-width: 14rem; justify-content: flex-start; padding: var(--s-2) var(--s-3);
+    border: 1px solid var(--border-strong); border-radius: var(--r-pill); background: var(--surface-2);
+  }
+  .search-trigger .btn-label { color: var(--muted); font-weight: 400; margin-right: auto; }
+}
+@media (max-width: 1023px) { .search-trigger .search-kbd { display: none; } }
+.dlg.dlg-search { margin: 8vh auto auto; width: min(42rem, calc(100% - 2rem)); }
+.dlg-search .dlg-body { display: flex; flex-direction: column; max-height: 84vh; overflow: hidden; }
+.dlg-search .dlg-head { position: static; }
+.search-field { flex: none; }
+.search-field label { display: block; }
+.dlg-search #search-input { max-width: none; font-size: var(--fs-md); min-height: 48px; }
+.dlg-search #search-help { margin-bottom: var(--s-2); }
+.search-results { flex: 1 1 auto; min-height: 0; overflow-y: auto; margin: 0 calc(-1 * var(--s-2)); padding: 2px var(--s-2) var(--s-2); }
+.search-group + .search-group, .search-results > .search-row { margin-top: var(--s-3); }
+.search-group-h {
+  margin: 0 0 var(--s-1); padding-top: var(--s-2); color: var(--muted);
+  font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.search-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--s-1); align-items: stretch; margin: 0 0 var(--s-1); }
+.search-opt {
+  display: flex; align-items: center; min-height: 44px; padding: var(--s-2) var(--s-3);
+  border: 1px solid transparent; border-radius: var(--r-md); color: var(--text); cursor: pointer;
+}
+.search-opt:hover { background: var(--surface-2); }
+.search-opt[aria-selected="true"] { background: var(--primary-soft); outline: 2px solid var(--focus); outline-offset: -2px; }
+.search-main { flex-wrap: wrap; column-gap: var(--s-3); row-gap: 2px; }
+.search-row .search-main { grid-column: 1; }
+.search-results > .search-row .search-main, .search-example, .search-topic { grid-column: 1 / -1; }
+.search-line { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--s-2); min-width: 0; flex: 1 1 100%; }
+.search-inf { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 600; }
+.search-topic-title { font-weight: 600; }
+.search-meaning, .search-why, .search-lesson-num { color: var(--muted); font-size: var(--fs-sm); }
+.search-why { flex: 1 1 auto; min-width: 0; }
+.search-lesson-num { white-space: nowrap; margin-left: auto; }
+.search-listen, .search-lesson {
+  justify-content: center; gap: var(--s-1); min-width: 44px; min-height: 44px; padding: var(--s-1) var(--s-3);
+  border-color: var(--border-strong); border-radius: var(--r-pill); font-weight: 600; font-size: var(--fs-sm); align-self: center;
+}
+.search-lesson { min-width: 3.5rem; } /* same width for L1 and L10, so the rows line up */
+.search-all, .search-example { color: var(--primary); font-weight: 600; }
+.search-empty { padding: var(--s-2) 0; }
+.search-empty p { margin: var(--s-1) 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .search-opt { transition: background-color var(--dur-fast) var(--ease); }
+}
+
 /* ---------- 11. small screens ---------- */
 @media (max-width: 720px) {
   .wrap { padding: 0 var(--s-4); }
@@ -1088,6 +1141,14 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   html:has(#view-flashcards:not([hidden]) .peek:not([hidden])) .audio-status { bottom: calc(57px + var(--peek-h, 50vh) + var(--s-2) + env(safe-area-inset-bottom)); }
   .dlg { width: 100%; max-width: 100%; max-height: 90vh; margin: auto 0 0; border-radius: var(--r-lg) var(--r-lg) 0 0; }
   .dlg-body { max-height: 90vh; padding: var(--s-3) var(--s-4) var(--s-5); }
+  .search-trigger { display: none; } /* the bottom nav has Search */
+  /* Search is a full-screen sheet on phones */
+  .dlg.dlg-search { width: 100%; max-width: 100%; height: 100vh; height: 100dvh; max-height: 100vh; max-height: 100dvh; margin: 0; border: 0; border-radius: 0; }
+  .dlg-search .dlg-body { height: 100%; max-height: none; padding: var(--s-2) var(--s-4) calc(var(--s-3) + env(safe-area-inset-bottom)); }
+  .search-listen .search-act-text { display: none; } /* icon only; the option keeps its aria-label */
+  .search-listen, .search-lesson { padding: var(--s-1) var(--s-2); }
+  .search-main { padding: var(--s-2); }
+  .search-lesson-num { margin-left: 0; }
   .cards { grid-template-columns: minmax(0, 1fr); }
   .table-wrap { overflow-x: auto; }
   .conj-table { font-size: 0.88rem; }
@@ -1118,6 +1179,8 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
     border: 1px solid CanvasText;
   }
   .choice input:checked + label, .nav-link[aria-current="page"], .bottom-link[aria-current="page"] { border-color: Highlight; outline: 2px solid Highlight; }
+  .search-opt[aria-selected="true"] { outline: 2px solid Highlight; }
+  .search-listen, .search-lesson { border: 1px solid CanvasText; }
   .ending { color: CanvasText; text-decoration-color: CanvasText; }
   body::before { background: CanvasText; }
   :focus-visible { outline-color: Highlight; }

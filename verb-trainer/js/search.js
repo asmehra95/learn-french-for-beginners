@@ -1,0 +1,398 @@
+/* Global search index: window.VT_SEARCH (and module.exports for the tests).
+   Built once at startup from VERB_DATA (after merge-data.js) and TOPICS_DATA; nothing here is generated
+   or stored. It indexes every verb's infinitive (pronominal ones as written, "se lever", "s'appeler"),
+   English meaning, each present-tense form with and without its pronouns, the past phrase and participle,
+   the future form, the example sentence (ranked last), the lesson number and title, the verb type
+   (only reachable with a type keyword such as "irregular"; results carry `type` only then, because the
+   flashcards deliberately hide the type) and the topic lessons (titles, can-do lines, exercise titles).
+   Matching is case-, accent- and apostrophe-insensitive and elision-aware (j'ai = je ai = jai), with
+   prefix-as-you-type and a one-edit typo tolerance for queries of 4+ characters. No DOM. */
+(function (root) {
+  "use strict";
+
+  var SCORES = {
+    infinitive: 100, form: 90, type: 85, meaning: 80, lesson: 75,
+    prefixInfinitive: 60, prefixForm: 55, prefixMeaning: 50, lessonWord: 45,
+    fuzzy: 30, sentence: 20
+  };
+  var KIND_PRIO = { infinitive: 0, form: 1, meaning: 2, lesson: 3, type: 4, sentence: 5 };
+  var EXAMPLES = ["suis", "to eat", "se lever"];
+  var PERSON_LABEL = {
+    "1s": "1st person singular", "2s": "2nd person singular", "3s": "3rd person singular",
+    "1p": "1st person plural", "2p": "2nd person plural", "3p": "3rd person plural"
+  };
+  var CATEGORY_LABEL = { regular: "Regular", "regular-spelling-change": "Regular (spelling change)", irregular: "Irregular" };
+  /* Type keywords → predicate on a verb. "regular" includes the spelling-change verbs. */
+  var TYPE_KEYWORDS = {
+    irregular: function (v) { return v.typeCategory === "irregular"; },
+    regular: function (v) { return v.typeCategory === "regular" || v.typeCategory === "regular-spelling-change"; },
+    "spelling change": function (v) { return v.typeCategory === "regular-spelling-change"; },
+    reflexive: function (v) { return !!v.pronominal; },
+    pronominal: function (v) { return !!v.pronominal; }
+  };
+  /* Words that reveal a verb's type; lesson titles containing them are not shown in a result. */
+  var TYPE_WORDS = /\b(ir)?regular\b|reflexive|pronominal|spelling change/i;
+  var MEANING_STOP = { to: 1, a: 1, an: 1, the: 1, of: 1, or: 1, and: 1, "for": 1, at: 1, on: 1, up: 1, in: 1, with: 1 };
+  var SUBJECTS = { je: "1s", j: "1s", tu: "2s", il: "3s", elle: "3s", on: "3s", nous: "1p", vous: "2p", ils: "3p", elles: "3p" };
+
+  /* ---------- normalization ---------- */
+  function base(s) {
+    s = String(s == null ? "" : s);
+    if (s.normalize) s = s.normalize("NFC");
+    s = s.toLowerCase().replace(/[\u2019\u2018\u02bc\u00b4`]/g, "'").replace(/\u0153/g, "oe").replace(/\u00e6/g, "ae");
+    if (s.normalize) s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return s.replace(/\((e|s|es)\)/g, "");
+  }
+  function finish(s) { return s.replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim(); }
+  /* "J’ai" → "je ai", "s'appeler" → "se appeler", "est-ce que" → "est ce que", "être" → "etre". */
+  function normalizeKey(s) {
+    return finish(base(s).replace(/\bqu'\s*/g, "que ").replace(/\b([jmtsldnc])'\s*/g, "$1e "));
+  }
+  /* Same, apostrophes deleted instead of expanded: "j'ai" → "jai", "s'appeler" → "sappeler". */
+  function glueKey(s) { return finish(base(s).replace(/'\s*/g, "")); }
+  function tokens(key) { return key ? key.split(" ") : []; }
+
+  /* Bounded optimal-string-alignment (Damerau) distance; returns max + 1 once it can't be <= max. */
+  function distance(a, b, max) {
+    if (max == null) max = Infinity;
+    if (a === b) return 0;
+    var la = a.length, lb = b.length;
+    if (Math.abs(la - lb) > max) return max + 1;
+    if (!la) return lb;
+    if (!lb) return la;
+    var prev2 = null, prev = new Array(lb + 1), cur;
+    for (var j = 0; j <= lb; j++) prev[j] = j;
+    for (var i = 1; i <= la; i++) {
+      cur = new Array(lb + 1);
+      cur[0] = i;
+      var rowMin = cur[0];
+      for (j = 1; j <= lb; j++) {
+        var cost = a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1;
+        var d = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+        if (prev2 && i > 1 && j > 1 && a.charCodeAt(i - 1) === b.charCodeAt(j - 2) && a.charCodeAt(i - 2) === b.charCodeAt(j - 1)) {
+          d = Math.min(d, prev2[j - 2] + 1);
+        }
+        cur[j] = d;
+        if (d < rowMin) rowMin = d;
+      }
+      if (rowMin > max) return max + 1;
+      prev2 = prev;
+      prev = cur;
+    }
+    return prev[lb];
+  }
+
+  /* ---------- index ---------- */
+  function joinParts(a, b) {
+    if (!a) return b;
+    if (!b) return a;
+    return /'$/.test(a) ? a + b : a + " " + b;
+  }
+
+  function typeLabel(v) {
+    var t = CATEGORY_LABEL[v.typeCategory] || "Irregular";
+    return v.pronominal ? t + " · Reflexive" : t;
+  }
+
+  function subjectPerson(phrase, fallback) {
+    var first = normalizeKey(phrase).split(" ")[0];
+    return SUBJECTS[first] || fallback;
+  }
+
+  /* The phrase minus its subject and reflexive pronoun: "je me lèverai" → "lèverai". */
+  function bareForm(phrase) {
+    return String(phrase).trim().replace(/\u2019/g, "'")
+      .replace(/^(ils\/elles|il\/elle|je|tu|il|elle|on|nous|vous|ils|elles)\s+/i, "").replace(/^j'/i, "")
+      .replace(/^(me|te|se|nous|vous)\s+/i, "").replace(/^[mts]'/i, "")
+      .trim();
+  }
+
+  function buildIndex(data, topicsData) {
+    var verbs = (data && data.verbs) || [];
+    var lessons = (data && data.lessons) || [];
+    var entries = [];
+    var lessonOf = {};
+    var lessonInfo = [];
+    lessons.forEach(function (l) {
+      (l.verbIds || []).forEach(function (id) { if (lessonOf[id] == null) lessonOf[id] = l.id; });
+    });
+
+    function add(v, kind, text, label, detail, listenText, listenKey, extra) {
+      var k = normalizeKey(text), g = glueKey(text);
+      if (!k) return;
+      var e = { verbId: v.id, kind: kind, k: k, g: g, label: label, detail: detail, listenText: listenText, listenKey: listenKey };
+      if (extra) Object.keys(extra).forEach(function (x) { e[x] = extra[x]; });
+      entries.push(e);
+    }
+
+    var verbMeta = {};
+    verbs.forEach(function (v) {
+      var lessonId = lessonOf[v.id] != null ? lessonOf[v.id] : v.lesson;
+      verbMeta[v.id] = { v: v, lessonId: lessonId };
+      var inf = v.infinitive, infKey = v.id + "|inf";
+      add(v, "infinitive", inf, inf, "infinitive", inf, infKey, { lang: "fr" });
+
+      // English meaning: each segment ("to eat"), also without a leading "to " ("eat"); words for the 50-tier.
+      var meaning = String(v.meaning || "");
+      var segs = meaning.replace(/\([^)]*\)/g, " ").split(/\/|,|;|\bor\b/).map(function (s) { return s.trim(); }).filter(Boolean);
+      var words = tokens(normalizeKey(meaning)).filter(function (w) { return !MEANING_STOP[w]; });
+      var seenSeg = {};
+      segs.concat([meaning]).forEach(function (seg) {
+        var variants = [seg];
+        if (/^to\s+/i.test(seg)) variants.push(seg.replace(/^to\s+/i, ""));
+        variants.forEach(function (t) {
+          var key = normalizeKey(t);
+          if (!key || seenSeg[key]) return;
+          seenSeg[key] = true;
+          add(v, "meaning", t, seg, "English meaning", inf, infKey, { lang: "en", words: words });
+        });
+      });
+
+      // Present tense: subject(s) + reflexive pronoun + form, reflexive + form, bare form, the row as written.
+      (v.present || []).forEach(function (row) {
+        var pron = String(row.pronoun || "").trim();
+        var sp = pron.indexOf(" ");
+        var subject = sp === -1 ? pron : pron.slice(0, sp);
+        var refl = sp === -1 ? "" : pron.slice(sp + 1).trim();
+        var forms = String(row.form || "").split(/\s*\/\s*|\s+or\s+/).filter(Boolean);
+        var detail = "present, " + (PERSON_LABEL[row.person] || row.person);
+        var seen = {};
+        function variant(t) {
+          var key = normalizeKey(t) + "|" + glueKey(t);
+          if (seen[key]) return;
+          seen[key] = true;
+          add(v, "form", t, row.french, detail, row.french, v.id + "|" + row.person, { lang: "fr" });
+        }
+        variant(row.french);
+        forms.forEach(function (form) {
+          subject.split("/").forEach(function (s) { variant(joinParts(joinParts(s, refl), form)); });
+          if (refl) variant(joinParts(refl, form));
+          variant(form);
+        });
+      });
+
+      // Past: the phrase with and without the (e) agreement, and the participle.
+      if (v.past && v.past.french) {
+        var pf = v.past.french, pk = v.id + "|past";
+        add(v, "form", pf, pf, "past (passé composé)", pf, pk, { lang: "fr" });
+        if (/\(e\)/.test(pf)) add(v, "form", pf.replace(/\(e\)/g, "e"), pf, "past (passé composé)", pf, pk, { lang: "fr" });
+        if (v.past.participle) add(v, "form", v.past.participle, v.past.participle, "past participle", pf, pk, { lang: "fr" });
+      }
+      // Future: only the form in the data (other persons aren't derived).
+      if (v.future && v.future.french) {
+        var ff = v.future.french, fk = v.id + "|future";
+        var fdetail = "future, " + PERSON_LABEL[subjectPerson(ff, "1s")];
+        add(v, "form", ff, ff, fdetail, ff, fk, { lang: "fr" });
+        var bare = bareForm(ff);
+        if (bare && normalizeKey(bare) !== normalizeKey(ff)) add(v, "form", bare, ff, fdetail, ff, fk, { lang: "fr" });
+      }
+      // Example sentence: token match only, lowest rank.
+      if (v.sentence && v.sentence.french) {
+        var st = tokens(normalizeKey(v.sentence.french + " " + (v.sentence.english || "")));
+        entries.push({ verbId: v.id, kind: "sentence", k: "", g: "", tokens: st, label: v.sentence.french, detail: "example sentence",
+          listenText: v.sentence.french, listenKey: v.id + "|sentence", lang: "fr" });
+      }
+    });
+
+    lessons.forEach(function (l) {
+      var title = String(l.title || "");
+      var titleKey = normalizeKey(title);
+      lessonInfo.push({
+        id: l.id, title: title, titleKey: titleKey, titleTokens: tokens(titleKey),
+        keys: ["lesson " + l.id, "lesson" + l.id, "lecon " + l.id, "lecon" + l.id],
+        verbIds: (l.verbIds || []).filter(function (id) { return verbMeta[id]; }),
+        revealsType: TYPE_WORDS.test(title)
+      });
+    });
+
+    var topicDocs = [];
+    var topics = (topicsData && topicsData.topics) || [];
+    topics.forEach(function (topic, ti) {
+      (topic.lessons || []).forEach(function (tl, li) {
+        var fields = [
+          { text: tl.title, weight: 70, kind: "title" },
+          { text: topic.title, weight: 65, kind: "topic" }
+        ];
+        (tl.canDo || []).forEach(function (c) { fields.push({ text: c, weight: 45, kind: "line" }); });
+        (topic.exercises || []).forEach(function (ex) {
+          if (ex.lesson !== tl.id) return;
+          if (ex.title) fields.push({ text: ex.title, weight: 40, kind: "line" });
+          if (ex.instructions) fields.push({ text: ex.instructions, weight: 40, kind: "line" });
+        });
+        fields.forEach(function (f) { f.key = normalizeKey(f.text); f.tokens = tokens(f.key); });
+        var all = [];
+        fields.forEach(function (f) { all = all.concat(f.tokens); });
+        topicDocs.push({
+          topicId: topic.id, lessonId: tl.id, title: tl.title, topicTitle: topic.title,
+          href: "#topics/" + topic.id + "/" + tl.id, order: ti * 100 + li, fields: fields, tokens: all
+        });
+      });
+    });
+
+    return { entries: entries, verbs: verbMeta, verbList: verbs, lessons: lessonInfo, topicDocs: topicDocs, verbCount: verbs.length };
+  }
+
+  /* ---------- matching ---------- */
+  /* Only a full keyword (optionally + "verb"/"verbs") is a type query. Prefixes such as "refl" or "pron"
+     are ordinary words in progress ("réfléchir", "pronoun") and must not reveal any verb's type. */
+  function typeKeyword(key) {
+    var k = key.replace(/\s+verbs?$/, "");
+    return Object.prototype.hasOwnProperty.call(TYPE_KEYWORDS, k) ? k : null;
+  }
+
+  function everyTokenPrefixed(qt, list) {
+    for (var i = 0; i < qt.length; i++) {
+      var ok = false;
+      for (var j = 0; j < list.length; j++) if (list[j].indexOf(qt[i]) === 0) { ok = true; break; }
+      if (!ok) return false;
+    }
+    return true;
+  }
+
+  function truncate(s, n) {
+    s = String(s);
+    return s.length > n ? s.slice(0, n - 1).trim() + "…" : s;
+  }
+
+  function searchTopics(index, qk, qt) {
+    var out = [];
+    index.topicDocs.forEach(function (doc) {
+      if (!everyTokenPrefixed(qt, doc.tokens)) return;
+      var best = null;
+      doc.fields.forEach(function (f) {
+        if (!everyTokenPrefixed(qt, f.tokens)) return;
+        var s = f.weight + ((" " + f.key + " ").indexOf(" " + qk) !== -1 ? 10 : 0);
+        if (!best || s > best.score) best = { score: s, field: f };
+      });
+      var score = best ? best.score : 35;
+      var detail = !best ? doc.topicTitle : best.field.kind === "title" ? "lesson title" : best.field.kind === "topic" ? doc.topicTitle : truncate(best.field.text, 90);
+      out.push({ topicId: doc.topicId, lessonId: doc.lessonId, title: doc.title, topicTitle: doc.topicTitle, href: doc.href,
+        score: score, matchDetail: detail, order: doc.order });
+    });
+    out.sort(function (a, b) { return b.score - a.score || a.order - b.order; });
+    return out;
+  }
+
+  function resultFor(index, verbId, m, typeQuery) {
+    var meta = index.verbs[verbId], v = meta.v;
+    var r = {
+      verbId: v.id, infinitive: v.infinitive, meaning: v.meaning, lessonId: meta.lessonId, number: v.number,
+      score: m.score, matchKind: m.matchKind, matchLabel: m.label, matchLang: m.lang || null, matchDetail: m.detail,
+      listenText: m.listenText || v.infinitive, listenKey: m.listenKey || v.id + "|inf",
+      href: "#browse/lesson/" + meta.lessonId + "/" + v.id, lessonHref: "#lesson/" + meta.lessonId
+    };
+    if (typeQuery) r.type = typeLabel(v);
+    return r;
+  }
+
+  /* opts: { sentences: true, fuzzy: true }. Returns { query, key, typeQuery, verbs[], topics[], total, suggestion }. */
+  function search(index, query, opts) {
+    opts = opts || {};
+    var useSentences = opts.sentences !== false, useFuzzy = opts.fuzzy !== false;
+    var qk = normalizeKey(query), qg = glueKey(query);
+    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], total: 0, suggestion: null };
+    if (!qk) return res;
+    var qt = tokens(qk);
+    var best = {};
+    function offer(verbId, m) {
+      var cur = best[verbId];
+      if (!cur || m.score > cur.score || (m.score === cur.score && m.prio < cur.prio)) best[verbId] = m;
+    }
+    function fromEntry(e, score, matchKind) {
+      return { score: score, prio: KIND_PRIO[e.kind], matchKind: matchKind, label: e.label, lang: e.lang, detail: e.detail,
+        listenText: e.listenText, listenKey: e.listenKey };
+    }
+
+    var tq = typeKeyword(qk);
+    if (tq) {
+      res.typeQuery = tq;
+      index.verbList.forEach(function (v) {
+        if (!TYPE_KEYWORDS[tq](v)) return;
+        offer(v.id, { score: SCORES.type, prio: KIND_PRIO.type, matchKind: "type", label: "", lang: null, detail: typeLabel(v) });
+      });
+    } else {
+      var fuzzyOk = useFuzzy && qk.length >= 4;
+      var fuzzyCand = [];
+      index.entries.forEach(function (e) {
+        if (e.kind === "sentence") {
+          if (useSentences && qk.length >= 2 && everyTokenPrefixed(qt, e.tokens)) offer(e.verbId, fromEntry(e, SCORES.sentence, "sentence"));
+          return;
+        }
+        if (e.k === qk || e.g === qg) {
+          offer(e.verbId, fromEntry(e, SCORES[e.kind], e.kind));
+          return;
+        }
+        if (e.k.indexOf(qk) === 0 || e.g.indexOf(qg) === 0) {
+          var ps = e.kind === "infinitive" ? SCORES.prefixInfinitive : e.kind === "form" ? SCORES.prefixForm : SCORES.prefixMeaning;
+          offer(e.verbId, fromEntry(e, ps, "prefix"));
+          return;
+        }
+        if (e.kind === "meaning" && e.words && e.words.indexOf(qk) !== -1) {
+          offer(e.verbId, fromEntry(e, SCORES.prefixMeaning, "meaning"));
+          return;
+        }
+        if (fuzzyOk) fuzzyCand.push(e);
+      });
+      fuzzyCand.forEach(function (e) {
+        var cur = best[e.verbId];
+        if (cur && cur.score >= SCORES.fuzzy) return;
+        if (distance(qk, e.k, 1) <= 1 || distance(qg, e.g, 1) <= 1) offer(e.verbId, fromEntry(e, SCORES.fuzzy, "fuzzy"));
+      });
+      // Lessons: "lesson 3" / "leçon 3", or the lesson title.
+      index.lessons.forEach(function (l) {
+        var score = 0;
+        if (l.keys.indexOf(qk) !== -1 || l.titleKey === qk) score = SCORES.lesson;
+        else if (qk.length >= 3 && everyTokenPrefixed(qt, l.titleTokens)) score = SCORES.lessonWord;
+        if (!score) return;
+        var detail = l.revealsType ? "in Lesson " + l.id : "in Lesson " + l.id + ": " + l.title;
+        l.verbIds.forEach(function (id) {
+          offer(id, { score: score, prio: KIND_PRIO.lesson, matchKind: "lesson", label: "", lang: null, detail: detail });
+        });
+      });
+    }
+
+    res.verbs = Object.keys(best).map(function (id) {
+      var m = best[id];
+      var r = resultFor(index, id, m, tq);
+      r._prio = m.prio;
+      return r;
+    });
+    res.verbs.sort(function (a, b) { return b.score - a.score || a._prio - b._prio || a.number - b.number; });
+    res.verbs.forEach(function (r) { delete r._prio; });
+    res.topics = qk.length >= 2 ? searchTopics(index, qk, qt) : [];
+    res.total = res.verbs.length + res.topics.length;
+    if (!res.total) res.suggestion = suggest(index, query);
+    return res;
+  }
+
+  /* Browse filter: exact, prefix, type and lesson matches (no typos, no sentences). */
+  function matchVerbIds(index, query) {
+    var out = {};
+    search(index, query, { sentences: false, fuzzy: false }).verbs.forEach(function (r) { out[r.verbId] = true; });
+    return out;
+  }
+
+  /* Closest verb by edit distance over infinitives and forms, for "Did you mean …?". */
+  function suggest(index, query) {
+    var qk = normalizeKey(query);
+    if (!qk) return null;
+    var bestD = Infinity, bestId = null;
+    index.entries.forEach(function (e) {
+      if (e.kind !== "infinitive" && e.kind !== "form") return;
+      var d = distance(qk, e.k, bestD);
+      if (d < bestD || (d === bestD && bestId && index.verbs[e.verbId].v.number < index.verbs[bestId].v.number)) {
+        bestD = d;
+        bestId = e.verbId;
+      }
+    });
+    return bestId ? { verbId: bestId, infinitive: index.verbs[bestId].v.infinitive } : null;
+  }
+
+  var api = {
+    normalizeKey: normalizeKey, glueKey: glueKey, distance: distance,
+    buildIndex: buildIndex, search: search, matchVerbIds: matchVerbIds, suggest: suggest,
+    EXAMPLES: EXAMPLES, PERSON_LABEL: PERSON_LABEL, SCORES: SCORES
+  };
+  if (typeof module !== "undefined" && module.exports) module.exports = api;
+  if (root) root.VT_SEARCH = api;
+})(typeof window !== "undefined" ? window : null);

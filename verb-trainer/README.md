@@ -19,7 +19,8 @@ The helper serves this folder read-only on 127.0.0.1 only. It has no login, so d
 
 - **Home**: today's suggestion ("Today"), your daily goal and day streak, how many items are waiting in Review, every lesson as a card with a progress ring, and the topic lessons.
 - **Lesson path** (`#lesson/<n>`): each lesson walks you through three steps, **Learn → Practice → Quiz**, with a "Recommended next" marker and the patterns the lesson's verbs share.
-- **Learn** (Browse): every verb grouped by lesson, with the present-tense table (stems and endings marked), past, future, example sentence, pronunciation, tips and a **Regular / Regular (spelling change) / Irregular** badge, plus a separate **Reflexive** badge for pronominal verbs. Search by infinitive or English meaning, or jump to a lesson.
+- **Learn** (Browse): every verb grouped by lesson, with the present-tense table (stems and endings marked), past, future, example sentence, pronunciation, tips and a **Regular / Regular (spelling change) / Irregular** badge, plus a separate **Reflexive** badge for pronominal verbs. Search by infinitive, any form (`prennent`, `j'ai`) or English meaning, or jump to a lesson. In a lesson's Learn step the search still covers all lessons; clearing it shows that lesson again.
+- **Search** (`/` or Ctrl/⌘+K anywhere outside a text box, the Search button in the header, or Search in the bottom bar on phones): one box for all verbs and the topic lessons. It finds infinitives (`se lever`, `s'appeler`), every present-tense form with or without the pronouns (`suis`, `je suis`, `j'ai`, `me lève`, `nous nous levons`), the past participle and phrase (`allé`, `je suis allé`), the future form in the tables (`ferai`), English meanings (`to eat`, `eat`), lesson numbers (`lesson 3`), example sentences and topic-lesson titles and lines (`quel`, `est-ce que`). Accents, capitals and straight or curly apostrophes don't matter, results update as you type, and one typo is forgiven in words of four letters or more. Ranking: exact infinitive, then exact form, English meaning, beginnings of words, near misses, and example sentences last. Each verb result shows the infinitive, the meaning, why it matched (for example "je suis · present, 1st person singular") and the lesson, with **Listen** (the matched form, recorded voice first, then the device voice) and **Go to lesson**; choosing the result opens the verb card. Results are grouped into Verbs and Topics, 20 shown with "Show all". Like the flashcards, results never show a verb's type unless you search for one by its full name (`irregular`, `regular`, `spelling change`, `reflexive`, optionally followed by "verbs"); a partial word such as `refl` is searched as an ordinary word. Arrow keys move through the results, Enter opens one, Escape closes. On phones it opens as a full-screen sheet.
 - **Practice** hub: Flashcards, Conjugate, Sentences and Multiple choice, each limited to a **Practice set** (tick whole lessons or single verbs; the lesson list folds so all lessons fit).
   - **Flashcards**: three decks (infinitive → meaning, meaning → infinitive, pronoun + verb → conjugation). The cards don't show whether a verb is regular or irregular, so you can guess it first. To check, press the small **Conjugation** button: it opens the present-tense table with one quiet line above it giving the type (for example "Irregular · conjugates like venir", "Regular -er · spelling change (g→ge before o)", "… · Reflexive"). The table opens only from that button, not on hover. Escape, the close button or a click outside closes it. On the meaning → infinitive and conjugation decks the button appears after you flip, because the table would give the answer away. Flip with Space (or the Show answer button), then "I knew it" or "Not yet".
   - **Conjugate**: type the present-tense form, for example `nous · (parler)`. `parlons` or `nous parlons` both work. For reflexive verbs the reflexive pronoun is part of the answer: `je me lève` or `me lève`, not `lève`. *falloir* and *pleuvoir* are only asked in the *il* form.
@@ -53,8 +54,10 @@ Press `?` (outside a text box) to see this list in the site. Single-key shortcut
 | L (Alt+L in a text box) | Any practice page | Listen to the current item |
 | S (Alt+S in a text box) | Typed questions | Show the answer |
 | N or → | After answering | Next question |
+| / or Ctrl+K (⌘+K on a Mac) | Anywhere outside a text box | Search all verbs and topics |
+| ↑ / ↓, Enter | Search | Move through the results, open one |
 | ? | Anywhere outside a text box | Open the list |
-| Esc | Dialogs | Close |
+| Esc | Dialogs and search | Close |
 
 Everything also works with Tab, Shift+Tab, Enter and Space. A **Skip to main content** link is the first Tab stop.
 
@@ -169,6 +172,8 @@ node --test tests/*.test.js
 ```
 
 The tests cover the answer checking, the mistake classifier, stems and endings for all 125 verbs, sessions, streaks and the daily goal, the storage upgrade, the merged data (125 verbs, 25 lessons, type badges), the topic exercise grading, the routes (including `#explain` and the `#topic` alias) and the progress Export/Import checks.
+
+`tests/search.test.js` covers the global search: forms, meanings, accents, apostrophes, typos, type and topic queries, ranking, coverage of all 125 verbs and that results never reveal a verb's type unless asked.
 
 `tests/tts.test.js` covers the recorded voice: text normalization, the clip lookup, the Listen order (recording, then device voice, including when a file fails), and that every Listen text on the site either has a clip on disk or is listed as excluded in `audio/tts/qwen3-fr-bf16/manifest.json`.
 
