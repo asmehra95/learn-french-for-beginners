@@ -198,9 +198,9 @@ test("static: views-tables.js uses no innerHTML or inline style; index.html load
   assert.ok(view.indexOf("innerHTML") === -1);
   assert.ok(!/setAttribute\(\s*["']style/.test(view));
   var html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-  var ref = html.indexOf('<script src="js/reference-data.js"></script>');
-  var view2 = html.indexOf('<script src="js/views-tables.js"></script>');
-  var app = html.indexOf('<script src="js/app.js"></script>');
+  var ref = html.indexOf('<script src="js/reference-data.js?v=__BUILD__"></script>');
+  var view2 = html.indexOf('<script src="js/views-tables.js?v=__BUILD__"></script>');
+  var app = html.indexOf('<script src="js/app.js?v=__BUILD__"></script>');
   assert.ok(ref !== -1 && view2 !== -1 && ref < app && view2 < app);
   assert.match(html, /id="view-tables"[^>]*data-view="tables"/);
   assert.match(html, /class="nav-link" href="#tables" data-nav="tables"/);

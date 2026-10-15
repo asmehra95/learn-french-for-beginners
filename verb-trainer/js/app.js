@@ -132,7 +132,15 @@
 
   /* ---------- audio ---------- */
   /* #audio-status is written through VT_UI.toast (icon + text, §7.5). */
-  function toast(text, kind) { window.VT_UI.toast(text, kind); }
+  function toast(text, kind, opts) { return window.VT_UI.toast(text, kind, opts); }
+
+  /* Expected length of a sound in ms, for the toast's safety timer when the end event never comes:
+     recorded clips carry their duration; device voice is estimated from the text (~75 ms a character). */
+  function soundMs(res, text) {
+    if (res.source === "recorded" && res.entry && res.entry.duration) return (res.entry.duration * 1000) / SPEECH.playbackRate();
+    if (res.source === "computer") return (String(text || "").length * 75 * SPEECH.RATE_DEFAULT) / (SPEECH.preferences().rate || SPEECH.RATE_DEFAULT);
+    return 0;
+  }
 
   function refreshListenButtons() {
     window.VT_UI.setShowWords(state.settings.preferNative);
@@ -145,21 +153,23 @@
      button also falls back to the native clip when one exists. */
   function play(text, key, word) {
     var native = word || (!SPEECH.synthSupported() && !SPEECH.recordedToPlay(text));
+    var id = 0; // the toast for this click; a fallback re-toasts and updates it
     SPEECH.play(text, native ? key : null, function (res) {
       var shown = L.speakableText(text);
+      var opts = { awaitEnd: res.source !== "none", durationMs: soundMs(res, shown) };
       if (res.source === "recorded") {
-        toast("Recorded voice (synthetic): " + shown + ".", "recorded");
+        id = toast("Recorded voice (synthetic): " + shown + ".", "recorded", opts);
       } else if (res.source === "native") {
         var e = res.entry;
         var phrase = e.scope === "phrase";
         var says = L.normalize(e.said) !== L.normalize(shown) ? (phrase ? " (the recording says “" : " (the recording says only “") + e.said + "”)" : "";
-        toast((phrase ? "Native speaker: " : "Native speaker, word only: ") + e.speaker + ", " + e.license + says + ".", "native");
+        id = toast((phrase ? "Native speaker: " : "Native speaker, word only: ") + e.speaker + ", " + e.license + says + ".", "native", opts);
       } else if (res.source === "computer") {
-        toast("Device voice" + (res.failed ? " (the recording could not be played)" : "") + ": " + shown + ".", "computer");
+        id = toast("Device voice" + (res.failed ? " (the recording could not be played)" : "") + ": " + shown + ".", "computer", opts);
       } else {
-        toast("Audio isn't available in this browser.", null);
+        id = toast("Audio isn't available in this browser.", null, opts);
       }
-    });
+    }, function () { window.VT_UI.toastEnded(id); });
   }
 
   document.addEventListener("click", function (ev) {
@@ -311,10 +321,12 @@
     });
     rate.addEventListener("change", save);
     previewBtn.addEventListener("click", function () {
-      var u = SPEECH.preview();
+      var id = 0;
+      var u = SPEECH.preview(function () { window.VT_UI.toastEnded(id); });
       var v = SPEECH.activeVoice();
       if (u) {
-        toast("Preview" + (v ? " (" + SPEECH.describe(v) + ")" : "") + ", rate " + rateText(state.settings.speechRate) + ": " + SPEECH.PREVIEW_TEXT, "computer");
+        id = toast("Preview" + (v ? " (" + SPEECH.describe(v) + ")" : "") + ", rate " + rateText(state.settings.speechRate) + ": " + SPEECH.PREVIEW_TEXT, "computer",
+          { awaitEnd: true, durationMs: soundMs({ source: "computer" }, SPEECH.PREVIEW_TEXT) });
       } else {
         toast("Audio isn't available in this browser.", null);
       }

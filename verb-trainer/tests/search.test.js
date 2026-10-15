@@ -212,10 +212,10 @@ test("performance: 500 mixed queries in under 1.5 s", function () {
 
 /* ---------- static: markup and controller ---------- */
 test("static: script order, CSP unchanged", function () {
-  var merge = HTML.indexOf('<script src="js/merge-data.js"></script>');
-  var search = HTML.indexOf('<script src="js/search.js"></script>');
-  var view = HTML.indexOf('<script src="js/views-search.js"></script>');
-  var app = HTML.indexOf('<script src="js/app.js"></script>');
+  var merge = HTML.indexOf('<script src="js/merge-data.js?v=__BUILD__"></script>');
+  var search = HTML.indexOf('<script src="js/search.js?v=__BUILD__"></script>');
+  var view = HTML.indexOf('<script src="js/views-search.js?v=__BUILD__"></script>');
+  var app = HTML.indexOf('<script src="js/app.js?v=__BUILD__"></script>');
   assert.ok(merge !== -1 && search > merge && view !== -1 && view < app && search < app);
   assert.ok(HTML.indexOf("<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'\">") !== -1);
 });

@@ -575,7 +575,7 @@ test("static: views-expressions.js uses textContent only and exactly the two Lis
 
 test("static: index.html loads the expression scripts in order, links the view in the nav and More, keeps the CSP", function () {
   var html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-  function at(f) { var i = html.indexOf('<script src="js/' + f + '"></script>'); assert.ok(i !== -1, f); return i; }
+  function at(f) { var i = html.indexOf('<script src="js/' + f + '?v=__BUILD__"></script>'); assert.ok(i !== -1, f); return i; }
   assert.ok(at("reference-data.js") < at("expressions-data.js") && at("expressions-data.js") < at("merge-data.js"));
   assert.ok(at("learn.js") < at("expressions.js") && at("expressions.js") < at("search.js") && at("expressions.js") < at("storage.js"));
   assert.ok(at("views-tables.js") < at("views-expressions.js") && at("views-expressions.js") < at("app.js"));

@@ -190,8 +190,19 @@
     if (synth) synth.cancel();
   }
 
-  /** Speak with the chosen voice and rate. Returns the utterance, or null when unsupported. */
-  function speakComputer(text) {
+  /** fn wrapped so it runs at most once. */
+  function once(fn) {
+    var called = false;
+    return function () {
+      if (called) return;
+      called = true;
+      fn();
+    };
+  }
+
+  /** Speak with the chosen voice and rate; onEnd (optional) runs on the utterance's end or error.
+      Returns the utterance, or null when unsupported. */
+  function speakComputer(text, onEnd) {
     if (!synth) return null;
     var u = new root.SpeechSynthesisUtterance(L.speakableText(text));
     var v = activeVoice();
@@ -202,6 +213,11 @@
       u.lang = "fr-FR";
     }
     u.rate = prefs.rate;
+    if (typeof onEnd === "function") {
+      var end = once(onEnd);
+      u.onend = end;
+      u.onerror = end;
+    }
     synth.speak(u);
     return u;
   }
@@ -212,12 +228,17 @@
    * when "Recorded voice" is on and one exists for exactly this text; (3) the device (computer) voice.
    * Calls done({ source: "native" | "recorded" | "computer" | "none", entry }) when playback starts, and
    * again with source "computer" (and `failed`) if a file then fails to play.
+   * onEnd() (optional) is called once when the sound finishes or fails for good (right away when nothing
+   * can play); never for a play() that a newer play()/preview() has replaced.
    */
   var playToken = 0; // increments on every play(); stale callbacks from earlier clicks are ignored
 
-  function play(text, key, done) {
+  function play(text, key, done, onEnd) {
     var report = typeof done === "function" ? done : function () {};
     var token = ++playToken;
+    var finish = once(function () {
+      if (token === playToken && typeof onEnd === "function") onEnd();
+    });
     stop();
     var entry = nativeToPlay(key);
     var source = "native";
@@ -226,7 +247,9 @@
       source = "recorded";
     }
     if (!entry) {
-      report({ source: speakComputer(text) ? "computer" : "none", entry: null });
+      var u = speakComputer(text, finish);
+      report({ source: u ? "computer" : "none", entry: null });
+      if (!u) finish();
       return;
     }
     var audio = new root.Audio(entry.file);
@@ -237,9 +260,12 @@
       if (settled || token !== playToken) return;
       settled = true;
       if (current === audio) current = null;
-      report({ source: speakComputer(text) ? "computer" : "none", entry: null, failed: entry });
+      var u = speakComputer(text, finish);
+      report({ source: u ? "computer" : "none", entry: null, failed: entry });
+      if (!u) finish();
     }
     audio.addEventListener("error", fallback);
+    audio.addEventListener("ended", finish);
     // Report right away so the indicator is instant; if the file then fails to play,
     // fallback() reports a second time with source "computer".
     report({ source: source, entry: entry });
@@ -253,11 +279,13 @@
     }
   }
 
-  /** Speak the sample sentence with the computer voice. Returns the utterance or null. */
-  function preview() {
-    ++playToken;
+  /** Speak the sample sentence with the computer voice; onEnd as in play(). Returns the utterance or null. */
+  function preview(onEnd) {
+    var token = ++playToken;
     stop();
-    return speakComputer(PREVIEW_TEXT);
+    return speakComputer(PREVIEW_TEXT, function () {
+      if (token === playToken && typeof onEnd === "function") onEnd();
+    });
   }
 
   /** Update preferences ({ voiceURI, voiceName, rate, preferNative, voiceSource }); missing fields are kept. */

@@ -178,7 +178,9 @@ The tests cover the answer checking, the mistake classifier, stems and endings f
 
 `tests/search.test.js` covers the global search: forms, meanings, accents, apostrophes, typos, type and topic queries, ranking, coverage of all 125 verbs and that results never reveal a verb's type unless asked.
 
-`tests/tts.test.js` covers the recorded voice: text normalization, the clip lookup, the Listen order (recording, then device voice, including when a file fails), and that every Listen text on the site either has a clip on disk or is listed as excluded in `audio/tts/qwen3-fr-bf16/manifest.json`.
+`tests/tts.test.js` covers the recorded voice: text normalization, the clip lookup, the Listen order (recording, then device voice, including when a file fails), and that every Listen text on the site either has a clip on disk or is listed as excluded in `audio/tts/qwen3-fr-bf16/manifest.json`. It also checks the end signal that hides the audio message.
+
+`tests/audio-status.test.js` covers when the audio message hides (after the end, safety timeout, new Listen, hover/focus, Escape). `tests/cache-busting.test.js` covers the `?v=__BUILD__` asset URLs, the deploy stamp in `pages.yml` and `js/build-check.js`.
 
 ## Security
 
@@ -188,6 +190,9 @@ The page's Content-Security-Policy allows only this site's own scripts, styles, 
 
 - At phone width, the "Native speaker / Computer voice" message now sits above the sticky "Practice them now" bar and above the open conjugation sheet, instead of covering them.
 - The Topics summary lists the question, the answer and what you wrote for each item to review.
+- The audio message (native speaker name, "Recorded voice" or "Device voice") now hides about 3 seconds after the sound ends, or after a few seconds if the browser never reports the end. Error messages hide after 4 seconds. Pointing at it with a mouse keeps it; Escape closes it.
+- Phones showing an old version after an update: every script and stylesheet is now loaded as `file.js?v=<commit>`. The token `__BUILD__` in `index.html` is replaced with the short commit id by the deploy (`.github/workflows/pages.yml`), so each deploy gets new URLs (it stays `__BUILD__` when opened as a file or through the helper, where the query is ignored). `js/build-check.js` also reloads a tab restored from the back/forward cache when a newer version has been opened in the same browser, or when it is over an hour old (never offline, no network request). GitHub Pages caches every file for 10 minutes and ignores `<meta>` cache tags, so none are used. Audio and PDFs keep plain URLs: recorded clips are named by a content hash, and the rest rarely change.
+- One-time fix on a phone that still shows the old site: close the tab and open the site again, or clear the site's data (iPhone: Settings › Safari › Advanced › Website Data; Android Chrome: the site settings › Clear & reset). Your progress is in the site's storage, so export it first (Progress › Export) if you clear site data. After this version, new deploys appear on the next reload.
 
 ## Licences
 

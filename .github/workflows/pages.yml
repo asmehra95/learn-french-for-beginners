@@ -20,6 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # Cache busting: stamp the short commit id into the ?v= asset queries and the vt-build meta of the
+      # checked-out copy only (nothing is committed back). Fails if the token is missing or left over.
+      - name: Stamp build id
+        shell: bash
+        run: |
+          grep -q '__BUILD__' verb-trainer/index.html
+          sed -i "s/__BUILD__/${GITHUB_SHA::7}/g" verb-trainer/index.html
+          if grep -q '__BUILD__' verb-trainer/index.html; then echo "__BUILD__ left in index.html" >&2; exit 1; fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './verb-trainer'

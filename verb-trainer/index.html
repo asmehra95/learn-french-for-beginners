@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'">
+  <!-- Build id, stamped with the commit at deploy (pages.yml); js/build-check.js reloads stale restored tabs. -->
+  <meta name="vt-build" content="__BUILD__">
   <title>French Verb Trainer</title>
   <!-- Empty icon: stops the browser asking the helper for /favicon.ico (a 404 console error over http). -->
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/explainer.css">
-  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=__BUILD__">
+  <link rel="stylesheet" href="css/explainer.css?v=__BUILD__">
+  <script src="js/theme.js?v=__BUILD__"></script>
+  <script src="js/build-check.js?v=__BUILD__"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" id="skip-link">Skip to main content</a>
@@ -611,33 +614,33 @@
     </div>
   </footer>
 
-  <script src="js/data.js"></script>
-  <script src="js/data-100.js"></script>
-  <script src="js/verb-types.js"></script>
-  <script src="js/topics-data.js"></script>
-  <script src="js/reference-data.js"></script>
-  <script src="js/expressions-data.js"></script>
-  <script src="js/merge-data.js"></script>
-  <script src="js/audio-manifest.js"></script>
-  <script src="js/verb-meta.js"></script>
-  <script src="js/logic.js"></script>
-  <script src="js/learn.js"></script>
-  <script src="js/expressions.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/topics.js"></script>
-  <script src="js/storage.js"></script>
-  <script src="js/tts-manifest.js"></script>
-  <script src="js/speech.js"></script>
-  <script src="js/ui.js"></script>
-  <script src="js/session.js"></script>
-  <script src="js/views-home.js"></script>
-  <script src="js/views-review.js"></script>
-  <script src="js/views-topics.js"></script>
-  <script src="js/views-tables.js"></script>
-  <script src="js/views-expressions.js"></script>
-  <script src="js/views-search.js"></script>
-  <script src="js/explainer.js"></script>
-  <script src="js/views-explain.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/data.js?v=__BUILD__"></script>
+  <script src="js/data-100.js?v=__BUILD__"></script>
+  <script src="js/verb-types.js?v=__BUILD__"></script>
+  <script src="js/topics-data.js?v=__BUILD__"></script>
+  <script src="js/reference-data.js?v=__BUILD__"></script>
+  <script src="js/expressions-data.js?v=__BUILD__"></script>
+  <script src="js/merge-data.js?v=__BUILD__"></script>
+  <script src="js/audio-manifest.js?v=__BUILD__"></script>
+  <script src="js/verb-meta.js?v=__BUILD__"></script>
+  <script src="js/logic.js?v=__BUILD__"></script>
+  <script src="js/learn.js?v=__BUILD__"></script>
+  <script src="js/expressions.js?v=__BUILD__"></script>
+  <script src="js/search.js?v=__BUILD__"></script>
+  <script src="js/topics.js?v=__BUILD__"></script>
+  <script src="js/storage.js?v=__BUILD__"></script>
+  <script src="js/tts-manifest.js?v=__BUILD__"></script>
+  <script src="js/speech.js?v=__BUILD__"></script>
+  <script src="js/ui.js?v=__BUILD__"></script>
+  <script src="js/session.js?v=__BUILD__"></script>
+  <script src="js/views-home.js?v=__BUILD__"></script>
+  <script src="js/views-review.js?v=__BUILD__"></script>
+  <script src="js/views-topics.js?v=__BUILD__"></script>
+  <script src="js/views-tables.js?v=__BUILD__"></script>
+  <script src="js/views-expressions.js?v=__BUILD__"></script>
+  <script src="js/views-search.js?v=__BUILD__"></script>
+  <script src="js/explainer.js?v=__BUILD__"></script>
+  <script src="js/views-explain.js?v=__BUILD__"></script>
+  <script src="js/app.js?v=__BUILD__"></script>
 </body>
 </html>

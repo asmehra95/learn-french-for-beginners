@@ -782,6 +782,8 @@ tbody tr:nth-child(even) { background: var(--surface-2); }
   transition: opacity var(--dur) var(--ease);
 }
 .audio-status.is-visible { opacity: 1; }
+/* Mouse users can hover the message to keep it (ui.js pauses hiding); touch still taps through it. */
+@media (hover: hover) { .audio-status.is-visible { pointer-events: auto; } }
 
 /* ---------- 9. practice views ---------- */
 .practice-area {

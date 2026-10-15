@@ -47,7 +47,7 @@ test("speakableText (device voice path) is unchanged by the recorded-voice work"
 /* ---------- speech.js with fakes ---------- */
 function loadSpeech(opts) {
   opts = opts || {};
-  var log = { audios: [], utterances: [] };
+  var log = { audios: [], utterances: [], utts: [] };
   function FakeAudio(src) {
     this.src = src;
     this.listeners = {};
@@ -78,7 +78,7 @@ function loadSpeech(opts) {
     w.SpeechSynthesisUtterance = function (t) { this.text = t; };
     w.speechSynthesis = {
       getVoices: function () { return []; },
-      speak: function (u) { log.utterances.push(u.text); },
+      speak: function (u) { log.utterances.push(u.text); log.utts.push(u); },
       cancel: function () {},
       addEventListener: function () {}
     };
@@ -185,6 +185,84 @@ test("no tts-manifest.js: everything uses the device voice as before", function 
   assert.equal(playOnce(t.S, "vous avez")[0].source, "computer");
 });
 
+/* ---------- end signal (onEnd): lets the audio message hide after the sound ---------- */
+function playEnd(S, text, key) {
+  var r = { calls: [], ends: 0 };
+  S.play(text, key || null, function (x) { r.calls.push(x); }, function () { r.ends += 1; });
+  return r;
+}
+
+test("onEnd: a recorded clip ends once on its ended event, not before", function () {
+  var t = loadSpeech();
+  var r = playEnd(t.S, "vous avez");
+  assert.equal(r.ends, 0);
+  t.log.audios[0].fire("ended");
+  t.log.audios[0].fire("ended");
+  assert.equal(r.ends, 1);
+});
+
+test("onEnd: the device voice ends once on end or on error", function () {
+  var t = loadSpeech();
+  var r = playEnd(t.S, "nous avons");
+  assert.equal(r.calls[0].source, "computer");
+  assert.equal(r.ends, 0);
+  t.log.utts[0].onend();
+  t.log.utts[0].onerror();
+  assert.equal(r.ends, 1);
+  var r2 = playEnd(t.S, "nous avons");
+  t.log.utts[1].onerror();
+  assert.equal(r2.ends, 1);
+});
+
+test("onEnd: a replaced play() never reports its end; the newer one still does", function () {
+  var t = loadSpeech();
+  var a = playEnd(t.S, "vous avez");
+  var b = playEnd(t.S, "nous avons");
+  t.log.audios[0].fire("ended");
+  assert.equal(a.ends, 0, "stale clip end ignored");
+  t.log.utts[0].onend();
+  assert.equal(b.ends, 1);
+  var c = playEnd(t.S, "il est");
+  t.log.utts[0].onerror(); // the cancelled utterance of b fires late
+  assert.equal(c.ends, 0);
+  t.log.audios[1].fire("ended");
+  assert.equal(c.ends, 1);
+});
+
+test("onEnd: nothing can play -> called right away (after the report)", function () {
+  var t = loadSpeech({ noSynth: true });
+  var order = [];
+  t.S.play("nous avons", null, function (x) { order.push(x.source); }, function () { order.push("end"); });
+  assert.deepEqual(order, ["none", "end"]);
+});
+
+test("onEnd: a clip that fails falls back to the device voice, whose end is the end", function () {
+  var t = loadSpeech();
+  var r = playEnd(t.S, "il/elle est");
+  t.log.audios[0].fire("error");
+  assert.equal(r.calls[1].source, "computer");
+  assert.equal(r.ends, 0);
+  t.log.utts[0].onend();
+  assert.equal(r.ends, 1);
+  var t2 = loadSpeech({ noSynth: true });
+  var r2 = playEnd(t2.S, "vous avez");
+  t2.log.audios[0].fire("error");
+  assert.equal(r2.calls[1].source, "none");
+  assert.equal(r2.ends, 1, "no device voice: ends at once");
+});
+
+test("onEnd: preview(onEnd) fires on the utterance end; a newer play() silences it", function () {
+  var t = loadSpeech();
+  var ends = 0;
+  t.S.preview(function () { ends += 1; });
+  t.log.utts[0].onend();
+  assert.equal(ends, 1);
+  t.S.preview(function () { ends += 10; });
+  playEnd(t.S, "nous avons");
+  t.log.utts[1].onend();
+  assert.equal(ends, 1);
+});
+
 /* ---------- the shipped manifest ---------- */
 function loadShipped() {
   global.window = {};
@@ -284,8 +362,8 @@ test("je me suis assis stays removed: no manifest entry, no clip, record kept as
 
 test("index.html loads tts-manifest.js before speech.js; the CSP is unchanged (media-src 'self')", function () {
   var html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-  var a = html.indexOf('<script src="js/tts-manifest.js"></script>');
-  var b = html.indexOf('<script src="js/speech.js"></script>');
+  var a = html.indexOf('<script src="js/tts-manifest.js?v=__BUILD__"></script>');
+  var b = html.indexOf('<script src="js/speech.js?v=__BUILD__"></script>');
   assert.ok(a !== -1 && a < b);
   assert.ok(html.indexOf("<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'\">") !== -1);
 });

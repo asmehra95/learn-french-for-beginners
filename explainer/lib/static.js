@@ -115,6 +115,13 @@ function addTopics(map, topicsRoot) {
   }
 }
 
+/** The request target without its query string ("/a.js?v=1" -> "/a.js"). */
+function pathOnly(urlPath) {
+  const s = String(urlPath);
+  const q = s.indexOf("?");
+  return q === -1 ? s : s.slice(0, q);
+}
+
 /**
  * Parse a Range header against a file size.
  * @returns {null | {start: number, end: number} | "unsatisfiable"}  null = no usable Range (send 200)
@@ -154,11 +161,15 @@ function createStatic({ root = ROOT, siteRoot = SITE_ROOT, topicsRoot = TOPICS_R
     addTopics(map, topicsRoot);
   }
 
-  /** Exact lookup: decode once (malformed -> miss), refuse NUL and backslash, NFC, then Map.get. */
+  /**
+   * Exact lookup: drop the query (everything from the first literal "?", so cache-busting ?v= asset URLs
+   * work; an encoded %3F stays part of the path), decode once (malformed -> miss), refuse NUL and
+   * backslash, NFC, then Map.get. The query never reaches the map, so it can't widen what is served.
+   */
   function lookup(urlPath) {
     let p;
     try {
-      p = decodeURIComponent(String(urlPath));
+      p = decodeURIComponent(pathOnly(urlPath));
     } catch {
       return null;
     }
@@ -194,7 +205,7 @@ function createStatic({ root = ROOT, siteRoot = SITE_ROOT, topicsRoot = TOPICS_R
       if (data.length > entry.max) return sendError(res, new AppError("INTERNAL"));
       res.setHeader("Cache-Control", "no-cache");
       res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
-      if (urlPath === "/") res.setHeader("Content-Security-Policy", DEMO_CSP);
+      if (pathOnly(urlPath) === "/") res.setHeader("Content-Security-Policy", DEMO_CSP);
       let body = data;
       res.statusCode = 200;
       if (entry.range) {

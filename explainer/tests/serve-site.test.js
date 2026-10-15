@@ -144,6 +144,40 @@ test("traversal, encoding tricks, dotfiles, tests/, symlinks, unknown types and 
   }
 });
 
+test("cache-busting ?v= queries: served by path; the query can't reach another file", async () => {
+  // Through the server (which also strips the query before routing).
+  assert.equal((await get(srv, "/trainer/js/a.js?v=__BUILD__")).body, "var a = 1;");
+  assert.equal((await get(srv, "/trainer/js/a.js?v=abc1234&x=1")).body, "var a = 1;");
+  assert.equal((await get(srv, "/trainer/css/s.css?v=abc1234")).status, 200);
+  const q = await get(srv, "/trainer/?v=../../secret.txt");
+  assert.equal(q.status, 200);
+  assert.doesNotMatch(q.body, /TOP SECRET/);
+  for (const p of ["/trainer/../secret.txt?v=1", "/trainer/%2e%2e/secret.txt?v=1", "/trainer/js/a.js%3Fv=1",
+    "/trainer/js/a.js%00?v=1", "/trainer//etc/passwd?v=1", "/trainer/..%5csecret.txt?v=1", "/secret.txt?v=../trainer/js/a.js"]) {
+    const r = await get(srv, p);
+    assert.equal(r.status, 404, p);
+    assert.doesNotMatch(r.body, /TOP SECRET/, p);
+  }
+});
+
+test("lib/static.js lookup itself drops the query before the exact Map.get", () => {
+  const { createStatic } = require("../lib/static");
+  const s = createStatic({ siteRoot: path.join(tmp, "site"), topicsRoot: path.join(tmp, "topics"), serveSite: true });
+  assert.equal(s.has("/trainer/js/a.js?v=abc"), true);
+  assert.equal(s.has("/trainer/js/a.js?v=../../x"), true, "the file is a.js; the query is ignored, not resolved");
+  assert.equal(s.has("/trainer/js/éte.js?v=1".normalize("NFD")), true);
+  for (const p of ["/trainer/../secret.txt?v=1", "/trainer/%2e%2e/secret.txt?v=1", "/trainer/%2E%2E%2Fsecret.txt?v=1",
+    "/trainer//etc/passwd?v=1", "/trainer/..%5Csecret.txt?v=1", "/trainer/js%5ca.js?v=1", "/trainer/js/a.js%3Fv=1",
+    "/trainer/js/a.js%00?v=1", "/trainer/%E0%A4%A?v=1", "/trainer/.secret?v=1", "/trainer/tests/t.test.js?v=1",
+    "/trainer/link.txt?v=1", "/secret.txt?v=1", "/unknown.js?v=/trainer/js/a.js", "?/trainer/js/a.js", "/trainer/js/?v=a.js"]) {
+    assert.equal(s.has(p), false, p);
+  }
+  // Without serveSite the query doesn't open the site either.
+  const off2 = createStatic({ siteRoot: path.join(tmp, "site"), topicsRoot: path.join(tmp, "topics") });
+  assert.equal(off2.has("/trainer/js/a.js?v=1"), false);
+  assert.equal(off2.has("/explainer.js?v=1"), true);
+});
+
 test("absolute-form request target -> 404", async () => {
   for (const p of [`http://127.0.0.1:${srv.port}/trainer/../secret.txt`, `http://127.0.0.1:${srv.port}/trainer/js/a.js`]) {
     const r = await get(srv, p);

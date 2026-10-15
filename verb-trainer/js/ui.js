@@ -123,16 +123,81 @@
   }
 
   /* ---------- toast: the shared #audio-status live region ----------
-     kind: "recorded" | "native" | "computer" | null. The icon is aria-hidden; the text is what screen readers get. */
-  function toast(text, kind) {
+     kind: "recorded" | "native" | "computer" | null. The icon is aria-hidden; the text is what screen readers get.
+     opts.awaitEnd: a sound is playing; the message hides TOAST_TIMING.afterEnd ms after toastEnded(id), or after
+     the safety time (safetyBase + opts.durationMs, capped) if the end never arrives (iOS can drop it). Without
+     awaitEnd it hides after noAudio ms. Pointer over / focus inside pauses hiding (WCAG 2.2.1); Escape hides it.
+     Hiding removes is-visible, then empties the box after the fade, so nothing is announced again.
+     Returns the toast id for toastEnded(). Timers use window.setTimeout looked up at call time (tests fake it). */
+  var TOAST_TIMING = Object.freeze({ afterEnd: 3000, noAudio: 4000, safetyBase: 4000, safetyCap: 15000, fade: 250 });
+  var ts = { id: 0, awaitEnd: false, ended: false, waitMs: 0, visible: false, paused: false, hideTimer: null, fadeTimer: null, bound: false };
+
+  function cancelTimer(name) {
+    if (ts[name] != null) window.clearTimeout(ts[name]);
+    ts[name] = null;
+  }
+
+  function scheduleHide() {
+    cancelTimer("hideTimer");
+    if (!ts.visible || ts.paused) return;
+    ts.hideTimer = window.setTimeout(function () { ts.hideTimer = null; hideToast(); }, ts.ended ? TOAST_TIMING.afterEnd : ts.waitMs);
+  }
+
+  function hideToast() {
     var box = document.getElementById("audio-status");
+    cancelTimer("hideTimer");
+    cancelTimer("fadeTimer");
+    ts.visible = false;
+    ts.paused = false; // hidden = pointer-events: none, so no pointerleave may follow
     if (!box) return;
+    box.classList.remove("is-visible");
+    ts.fadeTimer = window.setTimeout(function () { ts.fadeTimer = null; if (!ts.visible) clear(box); }, TOAST_TIMING.fade);
+  }
+
+  function bindToast(box) {
+    if (ts.bound) return;
+    ts.bound = true;
+    function pause() { ts.paused = true; cancelTimer("hideTimer"); }
+    function resume() { ts.paused = false; scheduleHide(); }
+    box.addEventListener("pointerenter", pause);
+    box.addEventListener("pointerleave", resume);
+    box.addEventListener("focusin", pause);
+    box.addEventListener("focusout", resume);
+    // No preventDefault/stopPropagation: the conjugation sheet and search keep their own Escape.
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && ts.visible) hideToast();
+    });
+  }
+
+  function toast(text, kind, opts) {
+    var box = document.getElementById("audio-status");
+    if (!box) return 0;
+    var o = opts || {};
+    bindToast(box);
+    cancelTimer("hideTimer");
+    cancelTimer("fadeTimer");
     clear(box);
     if (kind === "recorded") box.appendChild(icon("audio-lines"));
     else if (kind === "native") box.appendChild(icon("mic"));
     else if (kind === "computer") box.appendChild(icon("cpu"));
     box.appendChild(el("span", { text: text }));
     box.className = "audio-status" + (kind ? " is-" + kind : "") + " is-visible";
+    ts.id += 1;
+    ts.visible = true;
+    ts.ended = false;
+    ts.awaitEnd = !!o.awaitEnd;
+    ts.waitMs = ts.awaitEnd
+      ? Math.min(TOAST_TIMING.safetyCap, TOAST_TIMING.safetyBase + Math.max(0, Number(o.durationMs) || 0))
+      : TOAST_TIMING.noAudio;
+    scheduleHide();
+    return ts.id;
+  }
+
+  /** The sound behind toast `id` has finished: hide afterEnd ms from now. Stale ids are ignored. */
+  function toastEnded(id) {
+    if (id !== ts.id || !ts.visible || !ts.awaitEnd || ts.ended) return;
+    ts.ended = true;
+    scheduleHide();
   }
 
   /* ---------- dialogs (§7.4) ---------- */
@@ -422,7 +487,7 @@
   window.VT_UI = {
     el: el, fr: fr, clear: clear, tableRegion: tableRegion, icon: icon,
     listenButton: listenButton, decorateListen: decorateListen, setShowWords: setShowWords, nativeLabel: nativeLabel,
-    toast: toast, openDialog: openDialog, closeDialog: closeDialog,
+    toast: toast, toastEnded: toastEnded, hideToast: hideToast, TOAST_TIMING: TOAST_TIMING, openDialog: openDialog, closeDialog: closeDialog,
     ring: ring, badge: badge, BADGE_TEXT: BADGE_TEXT, parts: parts,
     sessionBar: sessionBar, feedbackPanel: feedbackPanel, summaryCard: summaryCard, CORRECT_COPY: CORRECT_COPY
   };
