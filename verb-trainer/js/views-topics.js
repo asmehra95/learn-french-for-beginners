@@ -23,7 +23,7 @@
   function setHeading(text) {
     var h = $("h-topics");
     h.textContent = text;
-    document.title = text + " · French Verb Trainer";
+    document.title = text + " · Learn French for Beginners";
   }
   function pdfLinks(topic) {
     return el("p", { className: "topic-pdfs" }, [

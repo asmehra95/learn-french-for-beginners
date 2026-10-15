@@ -97,7 +97,7 @@ function markdown(data, verbsById, tableById) {
     });
   });
   out.push("---", "");
-  out.push(G.LICENCE + ". Part of *Say it in French*.");
+  out.push(G.LICENCE + ". Part of *Learn French for Beginners*.");
   return out.join("\n") + "\n";
 }
 
@@ -120,7 +120,7 @@ function printHtml(data, verbsById, tableById, keyRows) {
   var esc = G.esc;
   var h = [];
   h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>French Everyday Expressions</title><style>" + CSS + "</style></head><body>");
-  h.push("<section class=\"title-page\"><p class=\"brand\">Say it in French</p><h1>French Everyday Expressions</h1>" +
+  h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1>French Everyday Expressions</h1>" +
     "<p class=\"sub\">" + data.expressions.length + " useful phrases for English speakers, A1–B1</p><p class=\"lic\">" + esc(G.LICENCE) + "</p></section>");
   h.push("<section class=\"page toc\"><h2>Contents</h2><p class=\"intro\">" + esc(data.intro) + "</p><ol>");
   data.themes.forEach(function (t) {
@@ -152,7 +152,7 @@ function printHtml(data, verbsById, tableById, keyRows) {
     });
     h.push("</section>");
   });
-  h.push("<p class=\"also\">" + esc(G.LICENCE) + ". Part of <i>Say it in French</i>.</p>");
+  h.push("<p class=\"also\">" + esc(G.LICENCE) + ". Part of <i>Learn French for Beginners</i>.</p>");
   h.push("</body></html>");
   return h.join("\n") + "\n";
 }

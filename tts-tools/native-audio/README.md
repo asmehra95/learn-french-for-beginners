@@ -1,6 +1,6 @@
 # native-audio: Lingua Libre recordings for the verb trainer
 
-Dev-only tool (not part of the site; project: https://github.com/asmehra95/say-it-in-french). `fetch-lingualibre.mjs` finds native-speaker recordings from [Lingua Libre](https://lingualibre.org/) on Wikimedia Commons for the 125 verbs in `../../verb-trainer`. It downloads them into `verb-trainer/audio/` and regenerates `verb-trainer/js/audio-manifest.js` and `verb-trainer/audio/CREDITS.md`. The site plays only these bundled files and makes no runtime requests.
+Dev-only tool (not part of the site; project: https://github.com/asmehra95/learn-french-for-beginners). `fetch-lingualibre.mjs` finds native-speaker recordings from [Lingua Libre](https://lingualibre.org/) on Wikimedia Commons for the 125 verbs in `../../verb-trainer`. It downloads them into `verb-trainer/audio/` and regenerates `verb-trainer/js/audio-manifest.js` and `verb-trainer/audio/CREDITS.md`. The site plays only these bundled files and makes no runtime requests.
 
 ## Sources and licences
 
@@ -20,7 +20,7 @@ For every verb: the infinitive, each present form, the past (passé composé), t
 
 ## Politeness
 
-- One request at a time, at least 1 s apart. The User-Agent is `FrenchVerbTrainer/1.0 (https://github.com/asmehra95/say-it-in-french; <contact>) node-fetch`. There is no default contact; set one with `--contact` or `LL_CONTACT` to get a higher Wikimedia rate limit.
+- One request at a time, at least 1 s apart. The User-Agent is `LearnFrenchForBeginners/1.0 (https://github.com/asmehra95/learn-french-for-beginners; <contact>) node-fetch`. There is no default contact; set one with `--contact` or `LL_CONTACT` to get a higher Wikimedia rate limit.
 - Wikimedia's 2026 limits allow 200 requests/min only with a contact email or URL in the User-Agent, and 10/min without one. If the contact is not an email or URL, requests are spaced 6.5 s apart.
 - Every API call sends `maxlag=5`. On `maxlag`, 429 or 503 the script waits for `Retry-After` (or backs off 2, 4, 8, 16, 32 s), with at most 6 attempts. A 429 also doubles that host's gap for a while.
 - Searches are cached in `cache/search.json` and speaker regions in `cache/speakers.json`.

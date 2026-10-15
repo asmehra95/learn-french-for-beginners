@@ -1,4 +1,4 @@
-# Push Say it in French to GitHub
+# Push Learn French for Beginners to GitHub
 
 Run these commands in your terminal, in order:
 
@@ -12,11 +12,11 @@ Follow the prompts — choose **GitHub.com**, **HTTPS**, and authenticate via br
 
 ## 2. Create the repo and push (first time)
 
-If the repo `say-it-in-french` does **not** exist yet under your account:
+If the repo `learn-french-for-beginners` does **not** exist yet under your account:
 
 ```sh
-cd say-it-in-french   # or wherever you placed the repo folder
-gh repo create say-it-in-french \
+cd learn-french-for-beginners   # or wherever you placed the repo folder
+gh repo create learn-french-for-beginners \
   --public \
   --source=. \
   --remote=origin \
@@ -26,13 +26,13 @@ gh repo create say-it-in-french \
 
 ## 3. Push to an existing repo (if you already created it)
 
-If the repo already exists at https://github.com/asmehra95/say-it-in-french, run:
+If the repo already exists at https://github.com/asmehra95/learn-french-for-beginners, run:
 
 ```sh
-cd say-it-in-french   # or the folder name you used
-git remote add origin https://github.com/asmehra95/say-it-in-french.git
+cd learn-french-for-beginners   # or the folder name you used
+git remote add origin https://github.com/asmehra95/learn-french-for-beginners.git
 # or, if origin already exists:
-# git remote set-url origin https://github.com/asmehra95/say-it-in-french.git
+# git remote set-url origin https://github.com/asmehra95/learn-french-for-beginners.git
 git push -u origin main
 ```
 
@@ -40,9 +40,9 @@ git push -u origin main
 
 After the push succeeds:
 
-1. Open https://github.com/asmehra95/say-it-in-french
+1. Open https://github.com/asmehra95/learn-french-for-beginners
 2. Go to **Settings → Pages**
 3. Under **Source**, select **GitHub Actions**
 4. Save — Pages will deploy within a couple of minutes
 
-Your site will be live at: **https://asmehra95.github.io/say-it-in-french/**
+Your site will be live at: **https://asmehra95.github.io/learn-french-for-beginners/**

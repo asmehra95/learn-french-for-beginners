@@ -74,8 +74,8 @@ function writeJsonAtomic(file, obj) {
 }
 
 /* ---------- b. HTTP client (one serial queue, >= 1 s between request starts) ---------- */
-const PROJECT_URL = "https://github.com/asmehra95/say-it-in-french";
-const UA = `FrenchVerbTrainer/1.0 (${PROJECT_URL}; ${opts.contact}) node-fetch`;
+const PROJECT_URL = "https://github.com/asmehra95/learn-french-for-beginners";
+const UA = `LearnFrenchForBeginners/1.0 (${PROJECT_URL}; ${opts.contact}) node-fetch`;
 /* Wikimedia's 2026 API rate limits: 200 req/min with a compliant User-Agent (contact email or URL),
    10 req/min without one. Without a real --contact the script stays under 10/min. */
 const HAS_CONTACT = /@|https?:\/\//.test(opts.contact);

@@ -1,4 +1,4 @@
-# French Verb Trainer
+# Learn French for Beginners
 
 A small offline website for learning 125 common French verbs in 25 lessons, lesson by lesson, plus grammar topic lessons (asking questions, reflexive verbs).
 

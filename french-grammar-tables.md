@@ -833,4 +833,4 @@ See also: Asking questions, lesson 5 (Quelle heure est-il ?).
 > **Watch out**
 > - ✗ *J'apprends le français pour un an.* → ✓ **J'apprends le français depuis un an.** (zhah-prahN luh frahN-seh duh-pwee uhN nahN) — depuis + present for something still going on.
 ---
-© 2026 Avtar Singh, CC BY-SA 4.0. Part of *Say it in French*.
+© 2026 Avtar Singh, CC BY-SA 4.0. Part of *Learn French for Beginners*.

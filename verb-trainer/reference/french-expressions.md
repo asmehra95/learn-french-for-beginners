@@ -1157,4 +1157,4 @@ See also: *dire* · *partir*.
 
 ---
 
-© 2026 Avtar Singh, CC BY-SA 4.0. Part of *Say it in French*.
+© 2026 Avtar Singh, CC BY-SA 4.0. Part of *Learn French for Beginners*.

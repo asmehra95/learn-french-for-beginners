@@ -82,7 +82,7 @@ function markdown(ref) {
     });
   });
   out.push("---");
-  out.push(LICENCE + ". Part of *Say it in French*.");
+  out.push(LICENCE + ". Part of *Learn French for Beginners*.");
   return out.join("\n") + "\n";
 }
 
@@ -129,7 +129,7 @@ var CSS = [
 function printHtml(ref, keyRows) {
   var h = [];
   h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>French Grammar Tables</title><style>" + CSS + "</style></head><body>");
-  h.push("<section class=\"title-page\"><p class=\"brand\">Say it in French</p><h1>French Grammar Tables</h1>" +
+  h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1>French Grammar Tables</h1>" +
     "<p class=\"sub\">Quick reference for English speakers, A1–B1</p><p class=\"lic\">" + esc(LICENCE) + "</p></section>");
   h.push("<section class=\"page toc\"><h2>Contents</h2><p class=\"intro\">" + esc(ref.intro) + "</p><ol>");
   ref.categories.forEach(function (c) {

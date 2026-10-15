@@ -1,4 +1,4 @@
-# Say it in French
+# Learn French for Beginners
 
 A free, open-source French learning suite for English speakers. It covers 125 common French verbs
 across 25 lessons, with flashcards, conjugation practice, quizzes, grammar topic lessons, an
@@ -7,7 +7,7 @@ native-speaker audio clips.
 
 ## Live demo
 
-[https://asmehra95.github.io/say-it-in-french/](https://asmehra95.github.io/say-it-in-french/)
+[https://asmehra95.github.io/learn-french-for-beginners/](https://asmehra95.github.io/learn-french-for-beginners/)
 <!-- TODO: update username if different -->
 
 ## Three ways to use it
@@ -20,7 +20,7 @@ native-speaker audio clips.
    folder intact; everything except Explain works without an internet connection.
 
    ```sh
-   git clone https://github.com/asmehra95/say-it-in-french.git
+   git clone https://github.com/asmehra95/learn-french-for-beginners.git
    # then open verb-trainer/index.html in your browser
    ```
 

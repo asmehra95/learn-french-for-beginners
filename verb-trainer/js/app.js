@@ -2170,9 +2170,9 @@
   }
 
   var IMPORT_ERRORS = {
-    "too-large": "This file is too large to be a Verb Trainer progress export (the limit is 1 MB). Nothing was changed.",
-    "not-json": "This file isn't a Verb Trainer progress export (it isn't readable JSON). Nothing was changed.",
-    "not-an-export": "This file isn't a Verb Trainer progress export. Nothing was changed.",
+    "too-large": "This file is too large to be a Learn French for Beginners progress export (the limit is 1 MB). Nothing was changed.",
+    "not-json": "This file isn't a Learn French for Beginners progress export (it isn't readable JSON). Nothing was changed.",
+    "not-an-export": "This file isn't a Learn French for Beginners progress export. Nothing was changed.",
     "unsupported-version": "This progress file comes from a newer or unknown version of the trainer, so it can't be imported. Nothing was changed.",
     "read-failed": "The file couldn't be read. Nothing was changed."
   };
@@ -2359,7 +2359,7 @@
       else a.removeAttribute("aria-current");
     });
     var title = name === "lesson" ? "Lesson " + info.lessonId : TITLES[name];
-    document.title = title + " · French Verb Trainer";
+    document.title = title + " · Learn French for Beginners";
     placeFilter(name, info);
     if (PRACTICE.indexOf(name) !== -1) showMode(name);
     if (name === "progress") renderProgress();
