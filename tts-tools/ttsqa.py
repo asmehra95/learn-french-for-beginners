@@ -86,6 +86,45 @@ def signal_stats(path):
             "clip_frac": clip_frac, "peak_db": 20 * math.log10(peak + 1e-12)}
 
 
+def median_f0(path_or_array, sr=None, fmin=70.0, fmax=300.0, frame=0.04):
+    """Median fundamental frequency (Hz) over voiced 40 ms frames, by normalized autocorrelation in the
+    fmin..fmax range. A frame is voiced when its RMS is above the silence floor (SIL_DB) and its best
+    autocorrelation peak is clear (>= 0.5). Returns None when no frame is voiced. Pure numpy."""
+    if isinstance(path_or_array, str):
+        a, sr = sf.read(path_or_array, dtype="float32", always_2d=True)
+        a = a.mean(axis=1)
+    else:
+        a = np.asarray(path_or_array, dtype=np.float32).reshape(-1)
+    if not sr:
+        raise ValueError("median_f0: sr is required for an array")
+    n = int(frame * sr)
+    lo, hi = int(sr / fmax), int(sr / fmin)
+    if n <= hi or len(a) < n:
+        return None
+    f0s = []
+    for i in range(len(a) // n):
+        x = a[i * n:(i + 1) * n].astype(np.float64)
+        if 20 * math.log10(math.sqrt(float(np.mean(x ** 2))) + 1e-12) <= SIL_DB:
+            continue
+        x = x - x.mean()
+        ac = np.correlate(x, x, mode="full")[n - 1:]
+        if ac[0] <= 0:
+            continue
+        ac = ac / ac[0]
+        seg = ac[lo:hi + 1]
+        k = int(np.argmax(seg))
+        if seg[k] < 0.5:
+            continue
+        lag = lo + k
+        # parabolic interpolation around the peak for sub-sample precision
+        if 0 < lag < len(ac) - 1:
+            y0, y1, y2 = ac[lag - 1], ac[lag], ac[lag + 1]
+            d = y0 - 2 * y1 + y2
+            lag = lag + (0.5 * (y0 - y2) / d if d != 0 else 0.0)
+        f0s.append(sr / lag)
+    return float(np.median(f0s)) if f0s else None
+
+
 class ASR:
     """repo may be an HF repo id or a local snapshot directory (generate.py passes the pinned snapshot)."""
     def __init__(self, repo=ASR_REPO):

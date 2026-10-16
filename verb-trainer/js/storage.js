@@ -51,6 +51,30 @@
   var EXPR_THEME_RE = /^[a-z0-9-]{1,40}$/;
   var EXPR_THEMES_MAX = 20;
 
+  /* Dialogues (dialogues-data.js): ids and speaker ids, [] when the file isn't loaded. storage.js must not
+     depend on dialogues.js, so the known quiz heads are built inline here. */
+  function allDialogueIds() {
+    var d = root.VT_DIALOGUES;
+    return d && d.dialogues ? d.dialogues.map(function (x) { return x.id; }) : [];
+  }
+  function dialogueSpeakers(id) {
+    var d = root.VT_DIALOGUES;
+    var x = d && d.dialogues ? d.dialogues.filter(function (y) { return y.id === id; })[0] : null;
+    return x && x.speakers ? x.speakers.map(function (sp) { return sp.id; }) : [];
+  }
+  function dialogueHeads() {
+    var d = root.VT_DIALOGUES, out = {};
+    ((d && d.dialogues) || []).forEach(function (x) {
+      (x.questions || []).forEach(function (q) { out["dlg:" + x.id + "." + q.id] = true; });
+    });
+    return out;
+  }
+  var DLG_ID_RE = /^[a-z0-9-]{1,40}$/;
+  var DLG_SPEAKER_RE = /^[a-z0-9-]{1,20}$/;
+  var DLG_STAT_RE = /^dlg:([a-z0-9-]{1,40})\.(q\d)$/;
+  var DIALOGUES_MAX = 50;
+  var ROLES_MAX = 4;
+
   function defaults() {
     return {
       version: VERSION,
@@ -71,13 +95,15 @@
         dailyGoal: 20,
         sessionLength: 10,
         autoPlayWrong: false,
-        singleKeyShortcuts: true
+        singleKeyShortcuts: true,
+        dialogueShowEnglish: true // additive v2 field: Dialogues "Show English"
       },
       daily: { date: "", answered: 0, correct: 0, goalMet: false },
       streak: { current: 0, best: 0, lastDate: "" },
       history: {},
       lessons: {},          // "<lessonId>": lesson record, created lazily
       topics: {},           // "<exerciseId>": { best: 0..100, attempts }, topic-lesson exercises (views-topics.js)
+      dialogues: {},        // additive v2 field: "<dialogueId>": { listened, quizBest, quizAttempts, roles, lastDate }
       onboarding: { welcomeDismissed: false, typingTipSeen: false, importHintDismissed: false }
     };
   }
@@ -118,11 +144,17 @@
       var knownExpr = {};
       allExpressionIds().forEach(function (id) { knownExpr[id] = true; });
       var checkExpr = Object.keys(knownExpr).length > 0;
+      // Dialogue quiz keys are "dlg:<dialogue>.<question>|dlg-quiz|-": a known head when dialogues-data.js is loaded.
+      var knownDlg = dialogueHeads();
+      var checkDlg = Object.keys(knownDlg).length > 0;
       Object.keys(raw.stats).forEach(function (k) {
         var s = raw.stats[k];
         if (!isObject(s) || UNSAFE_KEYS[k] || k.length > STAT_KEY_MAX) return;
         var head = k.split("|")[0];
-        if (head.indexOf("expr:") === 0) {
+        if (head.indexOf("dlg:") === 0) {
+          if (!DLG_STAT_RE.test(head) || UNSAFE_KEYS[head.slice(4).split(".")[0]]) return;
+          if (checkDlg && !Object.prototype.hasOwnProperty.call(knownDlg, head)) return;
+        } else if (head.indexOf("expr:") === 0) {
           var xid = head.slice(5);
           if (UNSAFE_KEYS[xid] || !EXPR_ID_RE.test(xid)) return;
           if (checkExpr && !Object.prototype.hasOwnProperty.call(knownExpr, xid)) return;
@@ -180,6 +212,7 @@
       bool(ds, s, "singleKeyShortcuts");
       // additive v2 field (recorded voice): absent in v1 data and older v2 saves/exports -> default "recorded"
       if (VOICE_SOURCES.indexOf(s.voiceSource) !== -1) ds.voiceSource = s.voiceSource;
+      bool(ds, s, "dialogueShowEnglish");
     }
     if (isObject(raw.daily)) {
       var dl = raw.daily;
@@ -221,6 +254,35 @@
         var best = r.best;
         if (typeof best !== "number" || Math.floor(best) !== best || best < 0 || best > 100) return;
         d.topics[k] = { best: best, attempts: count(r.attempts, 0) };
+      });
+    }
+    if (isObject(raw.dialogues)) {
+      var dlgIds = allDialogueIds();
+      var nDlg = 0;
+      Object.keys(raw.dialogues).forEach(function (k) {
+        var r = raw.dialogues[k];
+        if (nDlg >= DIALOGUES_MAX || UNSAFE_KEYS[k] || !DLG_ID_RE.test(k) || !isObject(r)) return;
+        if (dlgIds.length && dlgIds.indexOf(k) === -1) return;
+        var out = { listened: false, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "" };
+        bool(out, r, "listened");
+        if (typeof r.quizBest === "number" && Math.floor(r.quizBest) === r.quizBest && r.quizBest >= -1 && r.quizBest <= 100) out.quizBest = r.quizBest;
+        out.quizAttempts = count(r.quizAttempts, 0);
+        out.lastDate = dateOr(r.lastDate, "");
+        if (isObject(r.roles)) {
+          var speakers = dlgIds.length ? dialogueSpeakers(k) : null;
+          var nRoles = 0;
+          Object.keys(r.roles).forEach(function (sid) {
+            var role = r.roles[sid];
+            if (nRoles >= ROLES_MAX || UNSAFE_KEYS[sid] || !DLG_SPEAKER_RE.test(sid) || !isObject(role)) return;
+            if (speakers && speakers.indexOf(sid) === -1) return;
+            var best = role.best;
+            if (typeof best !== "number" || Math.floor(best) !== best || best < 0 || best > 100) return;
+            out.roles[sid] = { best: best, attempts: count(role.attempts, 0) };
+            nRoles++;
+          });
+        }
+        d.dialogues[k] = out;
+        nDlg++;
       });
     }
     if (isObject(raw.onboarding)) {
@@ -328,12 +390,13 @@
     return { ok: true, state: sanitize(parsed.data) };
   }
 
-  /** True once anything was practised or recorded: answers, verb stats, lessons, topic exercises or day history. */
+  /** True once anything was practised or recorded: answers, verb stats, lessons, topic exercises, dialogues or day history. */
   function hasProgress(state) {
     if (!isObject(state)) return false;
     var nonEmpty = function (o) { return isObject(o) && Object.keys(o).length > 0; };
     return (isObject(state.totals) && state.totals.answered > 0) ||
-      nonEmpty(state.stats) || nonEmpty(state.lessons) || nonEmpty(state.topics) || nonEmpty(state.history);
+      nonEmpty(state.stats) || nonEmpty(state.lessons) || nonEmpty(state.topics) || nonEmpty(state.history) ||
+      nonEmpty(state.dialogues);
   }
 
   /** The "No progress at this address yet. Import a backup?" note: only over http(s) (the helper's address,

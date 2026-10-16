@@ -48,9 +48,25 @@
     return it;
   }
 
+  function isDlgKey(k) { return !!window.VT_DLG && window.VT_DLG.isKey(k); }
+
+  /* A dialogue comprehension question ("dlg:<dialogue>.<question>|dlg-quiz|-"): the same multiple-choice item
+     the dialogue's quiz uses, with "At the café: " leading the question for context. */
+  function dialogueItem(origKey) {
+    var D = C.DIALOGUES;
+    if (!window.VT_DLG || !D) return null;
+    var it = window.VT_DLG.choiceItem(D, origKey, Math.random);
+    if (!it) return null;
+    var el = C.UI.el, g = it.legend;
+    it.legendParts = [g.before, el("strong", { lang: g.strongLang, text: g.strong }), g.after];
+    it.key = origKey;
+    return it;
+  }
+
   /* Map an original key to an item per the §11.2 table, recorded against that key (AC13). null = unbuildable. */
   function buildItem(origKey) {
     if (isExprKey(origKey)) return expressionItem(origKey);
+    if (isDlgKey(origKey)) return dialogueItem(origKey);
     var k = parseKey(origKey);
     var verb = C.verbsById[k.id];
     if (!verb) return null;
@@ -91,9 +107,9 @@
     return function () {
       var keys;
       if (r.scope === "session") {
-        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k); });
+        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k) || isDlgKey(k); });
       } else {
-        keys = C.LEARN.mistakesDeck(C.state(), C.DATA, C.EXPRESSIONS);
+        keys = C.LEARN.mistakesDeck(C.state(), C.DATA, C.EXPRESSIONS, C.DIALOGUES);
         if (r.lessonId != null) {
           var inLesson = verbInLesson(r.lessonId);
           keys = keys.filter(function (k) { return inLesson[parseKey(k).id]; });
@@ -145,7 +161,7 @@
     $("rev-typed").hidden = true;
     $("rev-choice").hidden = true;
     var r = routeNow;
-    var left = LEARN.mistakesDeck(state, C.DATA, C.EXPRESSIONS);
+    var left = LEARN.mistakesDeck(state, C.DATA, C.EXPRESSIONS, C.DIALOGUES);
     if (r.lessonId != null) {
       var inLesson = verbInLesson(r.lessonId);
       left = left.filter(function (k) { return inLesson[parseKey(k).id]; });
@@ -186,7 +202,7 @@
     var chip;
     if (r.scope === "session") chip = "Mistakes from your last session";
     else if (r.lessonId != null) chip = "Lesson " + r.lessonId + ": " + C.lessonsById[r.lessonId].title;
-    else chip = "All lessons and expressions";
+    else chip = "All lessons, expressions and dialogues";
     $("review-scope").textContent = chip;
     // Steps 3–4.
     var k = sessionKeyFor(r);

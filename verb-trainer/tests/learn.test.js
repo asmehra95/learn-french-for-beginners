@@ -659,3 +659,66 @@ test("static: no literal 25-verb / 5-lesson copy in app.js, views-*.js or index.
     assert.ok(!m, path.basename(f) + " contains " + (m && JSON.stringify(m[0])));
   });
 });
+
+/* ---------- Dialogues (design §3.1, §7) ---------- */
+var DLG_DATA = require("../js/dialogues-data.js");
+test("parseRoute: #dialogues, a dialogue, its modes, the /listen and unknown-mode redirects, bad ids and too many segments", function () {
+  function pr(h) { return LEARN.parseRoute(h, {}); }
+  var r = pr("#dialogues");
+  assert.equal(r.name, "dialogues"); assert.equal(r.scope, "all");
+  r = pr("#dialogues/at-the-cafe");
+  assert.equal(r.scope, "dialogue"); assert.equal(r.dialogueId, "at-the-cafe"); assert.equal(r.mode, "listen"); assert.equal(r.redirect, null);
+  assert.equal(pr("#dialogues/at-the-cafe/roleplay").mode, "roleplay");
+  assert.equal(pr("#dialogues/at-the-cafe/quiz").mode, "quiz");
+  r = pr("#dialogues/at-the-cafe/listen");
+  assert.equal(r.mode, "listen"); assert.equal(r.redirect, "#dialogues/at-the-cafe");
+  r = pr("#dialogues/at-the-cafe/karaoke");
+  assert.equal(r.mode, "listen"); assert.equal(r.redirect, "#dialogues/at-the-cafe");
+  ["#dialogues/At-The-Cafe", "#dialogues/a b", "#dialogues/" + "x".repeat(41), "#dialogues/at-the-cafe/quiz/1"].forEach(function (h) {
+    assert.equal(pr(h).name, "home", h);
+  });
+  assert.equal(pr("#dialogues/unknown-one").dialogueId, "unknown-one", "the view checks that the id exists");
+});
+test("mistakesDeck: dlg keys are included (sorted with the rest) with dlgData and excluded without it", function () {
+  var st = { stats: {
+    "etre|conjugate|1s": { box: 1, seen: 2, correct: 1, wrong: 1, last: 100 },
+    "dlg:at-the-cafe.q3|dlg-quiz|-": { box: 0, seen: 1, correct: 0, wrong: 1, last: 50 },
+    "dlg:at-the-cafe.q1|dlg-quiz|-": { box: 0, seen: 1, correct: 0, wrong: 1, last: 200 },
+    "dlg:gone.q1|dlg-quiz|-": { box: 0, seen: 1, correct: 0, wrong: 1, last: 300 },
+    "dlg:at-the-cafe.q2|dlg-quiz|-": { box: 3, seen: 4, correct: 3, wrong: 1, last: 400 }
+  } };
+  assert.deepEqual(LEARN.mistakesDeck(st, DATA, null, DLG_DATA),
+    ["dlg:at-the-cafe.q1|dlg-quiz|-", "dlg:at-the-cafe.q3|dlg-quiz|-", "etre|conjugate|1s"]);
+  assert.deepEqual(LEARN.mistakesDeck(st, DATA, null), ["etre|conjugate|1s"]);
+  assert.deepEqual(LEARN.mistakesDeck(st, DATA), ["etre|conjugate|1s"]);
+});
+test("displayFor: a dialogue item returns its display", function () {
+  var DLG = require("../js/dialogues.js");
+  var it = DLG.choiceItem(DLG_DATA, "dlg:at-the-cafe.q4|dlg-quiz|-", Math.random);
+  assert.deepEqual(LEARN.displayFor(it), it.display);
+  assert.equal(LEARN.displayFor(it).voiceId, "qwen3-fr-bf16");
+});
+test("call sites: every mistakesDeck( outside learn.js has 4 arguments and every suggestNext( has 5", function () {
+  var dir = path.join(__dirname, "..", "js");
+  var n = 0;
+  fs.readdirSync(dir).filter(function (f) { return /\.js$/.test(f) && f !== "learn.js"; }).forEach(function (f) {
+    var src = fs.readFileSync(path.join(dir, f), "utf8");
+    [["mistakesDeck(", 4], ["suggestNext(", 5]].forEach(function (pair) {
+      var at = 0;
+      while ((at = src.indexOf(pair[0], at)) !== -1) {
+        var i = at + pair[0].length, depth = 1, args = 1, any = false;
+        for (; i < src.length && depth; i++) {
+          var c = src[i];
+          if (c === "(" || c === "[" || c === "{") depth++;
+          else if (c === ")" || c === "]" || c === "}") depth--;
+          else if (c === "," && depth === 1) args++;
+          else if (!/\s/.test(c)) any = true;
+        }
+        assert.equal(any ? args : 0, pair[1], f + ": " + src.slice(at, i));
+        n++;
+        at = i;
+      }
+    });
+  });
+  assert.ok(n >= 5, "found " + n + " call sites");
+});

@@ -249,16 +249,16 @@ main:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; box-s
 }
 .nav-link:hover, .btn-util:hover { background: var(--primary-soft); color: var(--text); }
 .nav-link[aria-current="page"] { background: var(--primary); color: var(--on-primary); }
-/* 9 nav links (Phrases added): the tighter pills at every width, so the row fits from ~1000px up;
+/* 10 nav links (Dialogues added): the tighter pills (6px sides) at every width, so the row fits from ~1070px up (measured);
    below that the list wraps (still 44px targets). */
-.nav-link { padding: var(--s-2); gap: var(--s-1); }
+.nav-link { padding: var(--s-2) 6px; gap: var(--s-1); }
 .utility { display: flex; align-items: center; gap: var(--s-1); margin-left: auto; flex: none; }
 .btn-util .btn-label { white-space: nowrap; }
 .btn-util { justify-content: center; border-color: var(--border-strong); padding: var(--s-2); }
 .btn-util .voice-summary { font-weight: 400; color: var(--muted); max-width: 16rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 @media (max-width: 1023px) {
-  /* 7 nav links: tighter pills so they fit one row from ~800px; below that the list wraps (still 44px targets). */
-  .nav-link { padding: var(--s-2); gap: var(--s-1); }
+  /* 10 nav links: below ~1070px the list wraps to a second row (still 44px targets). */
+  .nav-link { padding: var(--s-2) 6px; gap: var(--s-1); }
   /* Labels stay in the accessibility tree (clip, not display:none) so names come from content (§7.1). */
   .btn-util .btn-label, .btn-util .voice-summary {
     position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
@@ -1176,6 +1176,11 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   }
   /* While the sheet is open the page can scroll the card's controls clear of it */
   html:has(#view-flashcards:not([hidden]) .peek:not([hidden])) main { padding-bottom: calc(72px + var(--peek-h, 50vh) + env(safe-area-inset-bottom)); }
+  /* Dialogues at 390px: bubbles keep their side at 88%, the controls wrap, the vocab table scrolls in its region */
+  .dia-bubble { max-width: 88%; }
+  .dia-avatar { width: 32px; height: 32px; font-size: var(--fs-sm); }
+  .dia-controls { flex-wrap: wrap; }
+  .dia-vocab { min-width: 30rem; }
 }
 
 /* ---------- 11b. grammar tables (views-tables.js) ---------- */
@@ -1256,6 +1261,74 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   .ref-grid { min-width: 30rem; }
 }
 
+/* ---------- 11c. Dialogues (views-dialogues.js). Every class uses dia- (diaq- for the quiz): .dlg is the modal.
+   Speakers never differ by colour alone: name + role, an initial avatar, the side, and a border on that side. */
+.dia-grid { margin: var(--s-4) 0; }
+.dia-card h3 { margin: 0 0 var(--s-1); }
+.dia-card-meta, .dia-status, .dia-card-modes { margin: 0 0 var(--s-2); }
+.dia-status { font-weight: 600; }
+.dia-level {
+  display: inline-block; padding: 0 var(--s-2); border: 1px solid var(--border-strong); border-radius: var(--r-pill);
+  font-size: var(--fs-xs); font-weight: 600; color: var(--text); background: var(--surface); vertical-align: middle;
+}
+.dia h3 .dia-title-fr { font-weight: 400; color: var(--muted); }
+.dia-scene, .dia-cast { margin: 0 0 var(--s-2); }
+.dia-cast { color: var(--muted); }
+.dia-modes ul { display: flex; flex-wrap: wrap; gap: var(--s-2); list-style: none; margin: var(--s-3) 0; padding: 0; }
+.dia-modes a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-3); border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill); text-decoration: none; font-weight: 600; color: var(--text); background: var(--surface);
+}
+.dia-modes a:hover { background: var(--surface-2); }
+.dia-modes a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; border-width: 2px; }
+.dia-mode { margin: var(--s-3) 0 var(--s-4); }
+.dia-mode h4:focus-visible, .dia h3:focus-visible, .dia-turn h5:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.dia-controls { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; margin: 0 0 var(--s-2); }
+.dia-controls .field-check { margin: 0; }
+.dia-play-status { margin: 0 0 var(--s-2); color: var(--muted); min-height: 1.5em; }
+.dia-lines { list-style: none; margin: var(--s-3) 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-3); }
+.dia-line { display: flex; align-items: flex-start; gap: var(--s-2); }
+.dia-line[data-side="end"] { flex-direction: row-reverse; margin-inline-start: auto; }
+.dia-avatar {
+  flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--border-strong); font-weight: 700;
+}
+.dia-bubble { max-width: 75%; padding: var(--s-2) var(--s-3); border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); }
+.dia-line[data-side="start"] .dia-bubble { border-inline-start: 4px solid var(--border-strong); }
+.dia-line[data-side="end"] .dia-bubble { border-inline-end: 4px solid var(--border-strong); background: var(--surface-2); }
+.dia-line[aria-current="true"] .dia-bubble { outline: 3px solid var(--primary); outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) {
+  .dia-bubble { transition: outline-color var(--dur-fast) var(--ease); }
+}
+.dia-bubble p { margin: 0; max-width: none; }
+.dia-who { font-size: var(--fs-sm); }
+.dia-name { font-weight: 700; }
+.dia-role { color: var(--muted); }
+.dia-bubble .dia-fr { font-weight: 600; margin-top: var(--s-1); }
+.dia-fr .listen-group { margin-left: var(--s-1); }
+.dia-pron { color: var(--muted); font-size: var(--fs-sm); }
+.dia-bubble .dia-en { margin-top: var(--s-1); }
+.dia-hide-en .dia-en { display: none; }
+.dia-now, .dia-mine {
+  display: inline-block; padding: 0 var(--s-2); border: 1px solid var(--border-strong); border-radius: var(--r-pill);
+  font-size: var(--fs-xs); font-weight: 600; color: var(--text); background: var(--surface);
+}
+.dia-now { margin-top: var(--s-1); }
+.dia-now[hidden] { display: none; }
+.dia-setup fieldset { margin: 0 0 var(--s-3); }
+.dia-rp-head { margin: 0 0 var(--s-2); }
+.dia-turn { margin: var(--s-4) 0; padding: var(--s-3) var(--s-4); border: 1px solid var(--border-strong); border-radius: var(--r-md); background: var(--surface); }
+.dia-turn h5 { margin: 0 0 var(--s-2); font-size: var(--fs-base); }
+.dia-rp-form label[for="dia-rp-input"] { display: block; font-weight: 600; margin: 0 0 var(--s-1); }
+.dia-rp-form input[type="text"] { width: 100%; max-width: 36rem; }
+.dia-alts, .dia-wrote { margin: var(--s-2) 0 0; }
+.dia-alts { color: var(--muted); }
+.dia-notice { margin: var(--s-4) 0; padding: var(--s-3) var(--s-4); border-left: 4px solid var(--border-strong); background: var(--surface-2); border-radius: var(--r-md); }
+.dia-notice h4 { margin: 0 0 var(--s-2); }
+.dia-notice-examples { margin: var(--s-2) 0; padding-left: var(--s-4); }
+.dia-vocab th[scope="row"] { font-weight: 600; }
+.dia-card-home h3 .icon { color: var(--primary); }
+.diaq-panel { margin: var(--s-3) 0; }
 /* ---------- 12. forced colours (§15.2) ---------- */
 @media (forced-colors: active) {
   .btn, .listen, .listen-word, .accent-btn, .nav-link, .btn-util, .btn-icon, .bottom-link, .verb-card, .practice-area, .panel, .totals > div, .type-badge, .choice label {
@@ -1286,6 +1359,16 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   .listen-group, .tables-toolbar, .tables-toc, dialog { display: none !important; }
   body:has(#view-tables:not([hidden])) .view:not(#view-tables) { display: none !important; }
   body:has(#view-expressions:not([hidden])) .view:not(#view-expressions) { display: none !important; }
+  body:has(#view-dialogues:not([hidden])) .view:not(#view-dialogues) { display: none !important; }
+  .dia-controls, .dia-play-status, .dia-modes, .dia-turn, .dia-setup, .diaq-panel, .dia-back, .dia-now { display: none !important; }
+  .dia-hide-en .dia-en { display: block !important; }
+  .dia-line, .dia-line[data-side="end"] { display: block !important; margin: 0 0 6pt !important; break-inside: avoid; page-break-inside: avoid; }
+  .dia-avatar { display: none !important; }
+  .dia-bubble { max-width: none !important; border: 0 !important; border-left: 2px solid #000 !important; border-radius: 0 !important; background: #fff !important; color: #000 !important; outline: 0 !important; padding: 2pt 8pt !important; }
+  #view-dialogues .dia-pron, #view-dialogues .dia-role, #view-dialogues .muted, #view-dialogues .dia-cast { color: #333 !important; }
+  #view-dialogues h2, #view-dialogues h3, #view-dialogues h4 { color: #000 !important; }
+  #view-dialogues a { color: #000 !important; text-decoration: none !important; }
+  .dia-notice { background: #fff !important; border-left: 3px solid #000 !important; color: #000 !important; }
   #view-expressions .muted, #view-expressions .pron, #view-expressions .expr-literal, #view-expressions .expr-note, #view-expressions .lesson-summary-count { color: #333 !important; }
   #view-expressions h2, #view-expressions h3, #view-expressions h4 { color: #000 !important; }
   #view-expressions a { color: #000 !important; text-decoration: none !important; }

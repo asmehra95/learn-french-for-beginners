@@ -361,3 +361,107 @@ test("recorded voice setting: 'device' survives save/load and export/import; inv
     assert.equal(STORE.sanitize({ version: 2, settings: { voiceSource: bad } }).settings.voiceSource, "recorded", String(bad));
   });
 });
+
+/* ---------- Dialogues (additive v2: state.dialogues, settings.dialogueShowEnglish, dlg: stats) ---------- */
+var PRE_DLG = require("./fixtures/v2-pre-dialogues-state.js");
+var DLG_DATA = require("../js/dialogues-data.js");
+function loadFull(fake, withDialogues) {
+  global.window = {};
+  ["data", "data-100", "verb-types", "topics-data", "merge-data", "expressions-data"].forEach(function (f) {
+    delete require.cache[require.resolve("../js/" + f + ".js")];
+    require("../js/" + f + ".js");
+  });
+  var w = global.window;
+  w.localStorage = fake || fakeStorage();
+  if (withDialogues !== false) w.VT_DIALOGUES = DLG_DATA;
+  delete require.cache[require.resolve("../js/storage.js")];
+  require("../js/storage.js");
+  return w.VT_STORAGE;
+}
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+test("dialogues: a pre-dialogues v2 save loads unchanged plus exactly the two new defaults", function () {
+  var STORE = loadFull(fakeStorage({ "verbTrainer.v1": JSON.stringify(PRE_DLG) }));
+  var state = STORE.load();
+  var want = clone(PRE_DLG);
+  want.settings.dialogueShowEnglish = true;
+  want.dialogues = {};
+  assert.deepEqual(state, want);
+  assert.equal(STORE.wasMigrated(), false);
+  assert.equal(state.version, 2);
+});
+test("dialogues: defaults gain dialogues {} and dialogueShowEnglish true; reset returns them", function () {
+  var STORE = loadFull();
+  var d = STORE.defaults();
+  assert.deepEqual(d.dialogues, {});
+  assert.equal(d.settings.dialogueShowEnglish, true);
+  assert.deepEqual(STORE.reset().dialogues, {});
+});
+test("dialogues: dlg stat keys survive sanitize with the data loaded and with only the regex", function () {
+  var raw = clone(PRE_DLG);
+  raw.stats["dlg:at-the-cafe.q1|dlg-quiz|-"] = { box: 2, seen: 3, correct: 2, wrong: 1, last: 1760000400000 };
+  raw.stats["dlg:other-dialogue.q2|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1760000500000 };
+  raw.stats["dlg:at-the-cafe.q9|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1 };
+  raw.stats["dlg:__proto__.q1|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1 };
+  raw.stats["dlg:Bad.q1|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1 };
+  var withData = loadFull(null, true).sanitize(raw);
+  assert.deepEqual(withData.stats["dlg:at-the-cafe.q1|dlg-quiz|-"], raw.stats["dlg:at-the-cafe.q1|dlg-quiz|-"]);
+  assert.equal(withData.stats["dlg:other-dialogue.q2|dlg-quiz|-"], undefined, "unknown dialogue dropped when data is loaded");
+  assert.equal(withData.stats["dlg:at-the-cafe.q9|dlg-quiz|-"], undefined);
+  var regexOnly = loadFull(null, false).sanitize(raw);
+  assert.ok(regexOnly.stats["dlg:at-the-cafe.q1|dlg-quiz|-"]);
+  assert.ok(regexOnly.stats["dlg:other-dialogue.q2|dlg-quiz|-"], "any safe id kept without the data");
+  assert.ok(regexOnly.stats["dlg:at-the-cafe.q9|dlg-quiz|-"]);
+  [withData, regexOnly].forEach(function (s) {
+    assert.equal(Object.prototype.hasOwnProperty.call(s.stats, "dlg:__proto__.q1|dlg-quiz|-"), false);
+    assert.equal(s.stats["dlg:Bad.q1|dlg-quiz|-"], undefined);
+    assert.ok(s.stats["etre|conjugate|1s"], "verb stats untouched");
+  });
+});
+test("dialogues: records sanitized: unknown dialogue/speaker ids dropped, malformed fields default, __proto__ ignored, caps", function () {
+  var STORE = loadFull();
+  var raw = clone(PRE_DLG);
+  raw.dialogues = JSON.parse('{"__proto__": {"listened": true}}');
+  raw.dialogues["at-the-cafe"] = { listened: true, quizBest: 75, quizAttempts: 2, lastDate: "2026-10-16",
+    roles: { customer: { best: 83, attempts: 1 }, server: { best: 101, attempts: 1 }, ghost: { best: 50, attempts: 1 } } };
+  raw.dialogues["unknown-one"] = { listened: true, quizBest: 10, quizAttempts: 1, roles: {}, lastDate: "" };
+  var s = STORE.sanitize(raw);
+  assert.deepEqual(Object.keys(s.dialogues), ["at-the-cafe"]);
+  assert.deepEqual(s.dialogues["at-the-cafe"], { listened: true, quizBest: 75, quizAttempts: 2, roles: { customer: { best: 83, attempts: 1 } }, lastDate: "2026-10-16" });
+  raw.dialogues = { "at-the-cafe": { listened: "yes", quizBest: 7.5, quizAttempts: -1, lastDate: "yesterday", roles: [1, 2] } };
+  assert.deepEqual(STORE.sanitize(raw).dialogues["at-the-cafe"], { listened: false, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "" });
+  raw.dialogues = "nope";
+  assert.deepEqual(STORE.sanitize(raw).dialogues, {});
+  // caps, with only the regexes (no data loaded): 50 dialogues, 4 roles
+  var bare = loadFull(null, false);
+  raw.dialogues = {};
+  for (var i = 0; i < 60; i++) raw.dialogues["d-" + i] = { listened: true, quizBest: 1, quizAttempts: 1, lastDate: "", roles: {} };
+  raw.dialogues["d-0"].roles = { a: { best: 1, attempts: 1 }, b: { best: 2, attempts: 1 }, c: { best: 3, attempts: 1 }, d: { best: 4, attempts: 1 }, e: { best: 5, attempts: 1 } };
+  var capped = bare.sanitize(raw);
+  assert.equal(Object.keys(capped.dialogues).length, 50);
+  assert.equal(Object.keys(capped.dialogues["d-0"].roles).length, 4);
+});
+test("dialogues: export → parseImport round trip keeps dialogues, dlg stats and dialogueShowEnglish; hasProgress", function () {
+  var STORE = loadFull();
+  var state = STORE.sanitize(clone(PRE_DLG));
+  state.stats["dlg:at-the-cafe.q2|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1760000600000 };
+  state.dialogues["at-the-cafe"] = { listened: true, quizBest: 50, quizAttempts: 1, roles: { server: { best: 67, attempts: 2 } }, lastDate: "2026-10-16" };
+  state.settings.dialogueShowEnglish = false;
+  var back = STORE.parseImport(STORE.exportText(state, 1760000000000));
+  assert.equal(back.ok, true);
+  assert.deepEqual(back.state, state);
+  var fresh = STORE.defaults();
+  assert.equal(STORE.hasProgress(fresh), false);
+  fresh.dialogues["at-the-cafe"] = { listened: true, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "2026-10-16" };
+  assert.equal(STORE.hasProgress(fresh), true);
+});
+test("dialogues: dialogueShowEnglish survives save/load; invalid values fall back to true", function () {
+  var fake = fakeStorage();
+  var STORE = loadFull(fake);
+  var st = STORE.defaults();
+  st.settings.dialogueShowEnglish = false;
+  STORE.save(st);
+  assert.equal(STORE.load().settings.dialogueShowEnglish, false);
+  var raw = clone(PRE_DLG);
+  raw.settings.dialogueShowEnglish = "no";
+  assert.equal(STORE.sanitize(raw).settings.dialogueShowEnglish, true);
+});

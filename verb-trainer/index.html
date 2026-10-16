@@ -50,6 +50,7 @@
     <symbol id="i-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
     <symbol id="i-languages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+    <symbol id="i-messages-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -64,6 +65,7 @@
           <li><a class="nav-link" href="#topics" data-nav="topics"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg><span>Topics</span></a></li>
           <li><a class="nav-link" href="#tables" data-nav="tables"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-table"></use></svg><span>Tables</span></a></li>
           <li><a class="nav-link" href="#expressions" data-nav="expressions"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message-circle"></use></svg><span>Phrases</span></a></li>
+          <li><a class="nav-link" href="#dialogues" data-nav="dialogues"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-messages-square"></use></svg><span>Dialogues</span></a></li>
           <li><a class="nav-link" href="#explain" data-nav="explain"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-languages"></use></svg><span>Explain</span></a></li>
           <li><a class="nav-link" href="#progress" data-nav="progress"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bar-chart"></use></svg><span>Progress</span></a></li>
         </ul>
@@ -369,6 +371,29 @@
       <div id="expressions-body"></div>
       <div class="empty-msg" hidden></div>
     </section>
+    <!-- Dialogues (views-dialogues.js + dialogues-data.js + dialogues.js) -->
+    <section id="view-dialogues" class="view" data-view="dialogues" aria-labelledby="h-dialogues" hidden>
+      <h2 id="h-dialogues" tabindex="-1">Dialogues</h2>
+      <div id="dialogues-body"></div>
+      <div class="practice-area diaq-panel" id="diaq-area" hidden>
+        <div class="session-bar" id="diaq-bar"></div>
+        <form class="answer-form" id="diaq-form" novalidate>
+          <fieldset class="choices" aria-describedby="diaq-keys">
+            <legend id="diaq-legend"></legend>
+            <p class="visually-hidden" id="diaq-keys">Press 1 to 4 to choose.</p>
+            <div id="diaq-options"></div>
+          </fieldset>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary" id="diaq-check">Check</button>
+            <button type="button" class="btn btn-primary" id="diaq-next" aria-keyshortcuts="N ArrowRight" hidden>Next →</button>
+            <span class="listen-slot" id="diaq-listen-slot"></span>
+          </div>
+          <p class="feedback" id="diaq-feedback" role="status" aria-live="polite"></p>
+        </form>
+        <div class="summary-slot" id="diaq-summary" hidden></div>
+      </div>
+      <div class="empty-msg" hidden></div>
+    </section>
 
     <!-- Explain a French sentence (views-explain.js + the copied explainer.js module) -->
     <section id="view-explain" class="view" data-view="explain" aria-labelledby="h-explain" hidden>
@@ -452,6 +477,7 @@
             <label for="voice-prefer-native">Show native-speaker word recordings</label>
           </div>
           <p class="hint" id="voice-native-hint">Listen always speaks the full phrase (for example “vous avez”) with the recorded voice or the device voice. When a native-speaker recording exists, a smaller “Native speaker (word only)” button plays it; most of those recordings say only the verb form. Turn this off to hide those buttons.</p>
+          <p class="hint" id="voice-dialogue-note" hidden></p>
         </div>
       </section>
       <section class="dlg-section" aria-labelledby="set-appearance-h">
@@ -557,6 +583,7 @@
             <tr><td><kbd>1</kbd>–<kbd>4</kbd></td><td>Multiple choice</td><td>Pick option 1–4 and check it</td></tr>
             <tr><td><kbd>Space</kbd> or <kbd>F</kbd></td><td>Flashcards</td><td>Flip the card</td></tr>
             <tr><td><kbd>1</kbd> / <kbd>2</kbd></td><td>Flashcard back</td><td>Not yet / I knew it</td></tr>
+            <tr><td><kbd>1</kbd> / <kbd>2</kbd></td><td>Role-play (speaking)</td><td>Not yet / I got it</td></tr>
             <tr><td><kbd>H</kbd> (<kbd>Alt</kbd>+<kbd>H</kbd> in a text box)</td><td>Typed questions</td><td>Hint</td></tr>
             <tr><td><kbd>L</kbd> (<kbd>Alt</kbd>+<kbd>L</kbd> in a text box)</td><td>Any practice page</td><td>Listen to the current item</td></tr>
             <tr><td><kbd>S</kbd> (<kbd>Alt</kbd>+<kbd>S</kbd> in a text box)</td><td>Typed questions</td><td>Show the answer</td></tr>
@@ -578,7 +605,7 @@
         <button type="button" class="btn-icon dlg-close" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg><span class="visually-hidden">Close</span></button>
       </div>
       <div class="search-field">
-        <label for="search-input" id="search-label">Search all verbs, every form, the English meanings, grammar tables, everyday expressions and the topic lessons</label>
+        <label for="search-input" id="search-label">Search all verbs, every form, the English meanings, grammar tables, everyday expressions, dialogues and the topic lessons</label>
         <input type="search" id="search-input" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-listbox" aria-describedby="search-help" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" maxlength="80">
         <p id="search-help" class="hint">Type a French form (suis, j'ai), an infinitive, English (to eat), a grammar word (cette) or a phrase (excuse me). Arrow keys move through the results, Enter opens one.</p>
       </div>
@@ -598,6 +625,7 @@
         <li><a class="more-link" href="#topics" data-close data-nav="topics"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg><span>Topics</span></a></li>
         <li><a class="more-link" href="#tables" data-close data-nav="tables"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-table"></use></svg><span>Grammar tables</span></a></li>
         <li><a class="more-link" href="#expressions" data-close data-nav="expressions"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message-circle"></use></svg><span>Everyday expressions</span></a></li>
+        <li><a class="more-link" href="#dialogues" data-close data-nav="dialogues"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-messages-square"></use></svg><span>Dialogues</span></a></li>
         <li><a class="more-link" href="#explain" data-close data-nav="explain"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-languages"></use></svg><span>Explain a sentence</span></a></li>
         <li><a class="more-link" href="#progress" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bar-chart"></use></svg><span>Progress</span></a></li>
         <li><a class="more-link" href="#credits" data-close><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"></use></svg><span>Credits</span></a></li>
@@ -620,16 +648,19 @@
   <script src="js/topics-data.js?v=__BUILD__"></script>
   <script src="js/reference-data.js?v=__BUILD__"></script>
   <script src="js/expressions-data.js?v=__BUILD__"></script>
+  <script src="js/dialogues-data.js?v=__BUILD__"></script>
   <script src="js/merge-data.js?v=__BUILD__"></script>
   <script src="js/audio-manifest.js?v=__BUILD__"></script>
   <script src="js/verb-meta.js?v=__BUILD__"></script>
   <script src="js/logic.js?v=__BUILD__"></script>
   <script src="js/learn.js?v=__BUILD__"></script>
   <script src="js/expressions.js?v=__BUILD__"></script>
+  <script src="js/dialogues.js?v=__BUILD__"></script>
   <script src="js/search.js?v=__BUILD__"></script>
   <script src="js/topics.js?v=__BUILD__"></script>
   <script src="js/storage.js?v=__BUILD__"></script>
   <script src="js/tts-manifest.js?v=__BUILD__"></script>
+  <script src="js/tts-manifest-qwen3-fr-m-bf16.js?v=__BUILD__"></script>
   <script src="js/speech.js?v=__BUILD__"></script>
   <script src="js/ui.js?v=__BUILD__"></script>
   <script src="js/session.js?v=__BUILD__"></script>
@@ -638,6 +669,7 @@
   <script src="js/views-topics.js?v=__BUILD__"></script>
   <script src="js/views-tables.js?v=__BUILD__"></script>
   <script src="js/views-expressions.js?v=__BUILD__"></script>
+  <script src="js/views-dialogues.js?v=__BUILD__"></script>
   <script src="js/views-search.js?v=__BUILD__"></script>
   <script src="js/explainer.js?v=__BUILD__"></script>
   <script src="js/views-explain.js?v=__BUILD__"></script>

@@ -231,3 +231,54 @@ test("README native-audio figures match the manifest", function () {
     assert.ok(line.indexOf("| " + r.forms.found + " / " + r.forms.total + " |") >= 0, r.label + " present forms");
   });
 });
+
+/* ---------- recorded-voice corpora per voice (tts-tools/extract-corpus.js, design §5.3) ---------- */
+var CORPUS = require("../../tts-tools/extract-corpus.js");
+var DLG_DATA = require("../js/dialogues-data.js");
+var DLG = require("../js/dialogues.js");
+var L_TTS = require("../js/logic.js");
+function dedupe(texts) {
+  var seen = {}, out = [];
+  texts.forEach(function (t) { var k = L_TTS.ttsKey(t); if (!seen[k]) { seen[k] = true; out.push(k); } });
+  return out;
+}
+test("corpus: each non-default voice gets exactly its speakers' dialogue lines (derived from listenEntries)", function () {
+  var entries = DLG.listenEntries(DLG_DATA);
+  var voices = {};
+  DLG_DATA.dialogues.forEach(function (d) { d.speakers.forEach(function (s) { if (s.voice !== CORPUS.DEFAULT_VOICE) voices[s.voice] = true; }); });
+  assert.ok(Object.keys(voices).length >= 1);
+  Object.keys(voices).forEach(function (v) {
+    var got = CORPUS.collect(path.join(__dirname, ".."), { voice: v }).items.map(function (it) { return it.key; }).sort();
+    var want = dedupe(entries.filter(function (e) { return e.voice === v; }).map(function (e) { return e.text; })).sort();
+    assert.deepEqual(got, want, v);
+  });
+});
+test("corpus: the default voice has every default-voice dialogue text and no other voice's line (unless shared)", function () {
+  var items = CORPUS.collect(path.join(__dirname, "..")).items;
+  var keys = {};
+  items.forEach(function (it) { keys[it.key] = it; });
+  var entries = DLG.listenEntries(DLG_DATA);
+  var defaultKeys = {};
+  entries.filter(function (e) { return e.voice === null || e.voice === CORPUS.DEFAULT_VOICE; }).forEach(function (e) {
+    var k = L_TTS.ttsKey(e.text);
+    defaultKeys[k] = true;
+    assert.ok(keys[k], "default corpus has " + k);
+  });
+  entries.filter(function (e) { return e.voice && e.voice !== CORPUS.DEFAULT_VOICE; }).forEach(function (e) {
+    var k = L_TTS.ttsKey(e.text);
+    var it = keys[k];
+    if (!it) return;
+    var other = it.categories.some(function (c) { return c.indexOf("dialogue-") !== 0; });
+    assert.ok(other || defaultKeys[k], "a male-only line leaked into the default corpus: " + k);
+  });
+});
+test("corpus: the existing (non-dialogue) categories are unchanged: every such text was already in the female manifest", function () {
+  var items = CORPUS.collect(path.join(__dirname, "..")).items;
+  var man = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "audio", "tts", "qwen3-fr-bf16", "manifest.json"), "utf8"));
+  var nonDia = items.filter(function (it) { return it.categories.some(function (c) { return c.indexOf("dialogue-") !== 0; }); });
+  nonDia.forEach(function (it) { assert.ok(man.items[it.hash], "pre-existing record for " + it.key); });
+  var diaOnlyHashes = {};
+  items.forEach(function (it) { if (!it.categories.some(function (c) { return c.indexOf("dialogue-") !== 0; })) diaOnlyHashes[it.hash] = true; });
+  var preexisting = Object.keys(man.items).filter(function (h) { return !diaOnlyHashes[h]; });
+  assert.equal(nonDia.length, preexisting.length);
+});

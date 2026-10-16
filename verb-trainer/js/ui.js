@@ -67,7 +67,9 @@
       type: "button",
       className: "listen" + (compact ? " listen-compact" : ""),
       "data-text": text,
-      "data-key": key
+      "data-key": key,
+      "data-voice": (opts && opts.voice) || null,   // another recorded voice (Dialogues speakers)
+      "data-who": (opts && opts.who) || null        // the speaker's name, leads the label and the toast
     }, [
       icon("volume-2", "listen-icon"),
       el("span", { className: "listen-text", "aria-hidden": "true", text: compact ? "" : "Listen" })
@@ -104,15 +106,18 @@
     }
     // Three states: pre-recorded voice (full phrase), device voice (full phrase), native speaker (word only,
     // only when there is neither a recording nor a device voice).
-    var recorded = !!SPEECH.recordedToPlay(btn.getAttribute("data-text"));
+    var voice = btn.getAttribute("data-voice") || null, who = btn.getAttribute("data-who") || "";
+    var rec = SPEECH.recordedToPlay(btn.getAttribute("data-text"), voice);
+    var recorded = !!rec;
+    var second = recorded && !!voice && typeof SPEECH.defaultVoiceId === "function" && voice !== SPEECH.defaultVoiceId();
     var synth = SPEECH.synthSupported();
     var fbEntry = SPEECH.nativeFor(key);
     var fbPhrase = !!fbEntry && fbEntry.scope === "phrase";
     var fallback = !recorded && !synth && !!fbEntry;
-    var label = "Listen: " + text + (recorded ? " (recorded voice)" : fallback ? " (native speaker" + (fbPhrase ? ")" : ", word only)") : " (device voice)");
+    var label = (who ? "Listen to " + who + ": " : "Listen: ") + text + (recorded ? " (recorded voice)" : fallback ? " (native speaker" + (fbPhrase ? ")" : ", word only)") : " (device voice)");
     btn.classList.toggle("listen-recorded", recorded);
     btn.classList.toggle("listen-native", fallback);
-    btn.title = recorded ? "Recorded voice, full phrase" : fallback ? (fbPhrase ? "Native speaker recording" : "Native speaker recording (word only)") : "Device voice, full phrase";
+    btn.title = second ? "Second recorded voice, full phrase" : recorded ? "Recorded voice, full phrase" : fallback ? (fbPhrase ? "Native speaker recording" : "Native speaker recording (word only)") : "Device voice, full phrase";
     var can = recorded || synth || fallback;
     btn.disabled = !can;
     btn.setAttribute("aria-label", can ? label : label + ", unavailable in this browser");
@@ -129,6 +134,21 @@
      awaitEnd it hides after noAudio ms. Pointer over / focus inside pauses hiding (WCAG 2.2.1); Escape hides it.
      Hiding removes is-visible, then empties the box after the fade, so nothing is announced again.
      Returns the toast id for toastEnded(). Timers use window.setTimeout looked up at call time (tests fake it). */
+  /* The toast text for a recorded or device-voice Listen (null for the native / none branches, which app.js
+     builds inline). Without `who` the strings are exactly the pre-dialogue ones; with it the speaker leads. */
+  function listenToastText(res, shown, who, defaultVoiceId) {
+    var second = !!(res.entry && res.entry.voiceId && res.entry.voiceId !== defaultVoiceId);
+    if (res.source === "recorded") {
+      return who ? who + " (recorded voice" + (second ? " 2" : "") + ", synthetic): " + shown + "."
+        : "Recorded voice" + (second ? " 2" : "") + " (synthetic): " + shown + ".";
+    }
+    if (res.source === "computer") {
+      return who ? who + " (device voice" + (res.failed ? ", the recording could not be played" : "") + "): " + shown + "."
+        : "Device voice" + (res.failed ? " (the recording could not be played)" : "") + ": " + shown + ".";
+    }
+    return null;
+  }
+
   var TOAST_TIMING = Object.freeze({ afterEnd: 3000, noAudio: 4000, safetyBase: 4000, safetyCap: 15000, fade: 250 });
   var ts = { id: 0, awaitEnd: false, ended: false, waitMs: 0, visible: false, paused: false, hideTimer: null, fadeTimer: null, bound: false };
 
@@ -376,7 +396,7 @@
         cls && cls.category === "accent-note" && result.correct && !result.hinted ? el("span", null, [parts(cls.parts)]) : el("span", { lang: headLang, text: head })])
     ]);
     var answerRow = el("p", { className: "fb-answer" }, [a.formNode || el("strong", { lang: "fr", text: a.french || "" })]);
-    if (a.listenText) answerRow.appendChild(listenButton(a.listenText, a.listenKey));
+    if (a.listenText) answerRow.appendChild(listenButton(a.listenText, a.listenKey, a.listenVoice ? { voice: a.listenVoice } : undefined));
     panel.appendChild(answerRow);
     if (a.pronunciation) panel.appendChild(el("p", { className: "fb-pron", text: a.pronunciation }));
     if (a.english) panel.appendChild(el("p", { className: "fb-english", text: a.english }));
@@ -465,11 +485,11 @@
           d.prompt ? el("span", { className: "summary-prompt", lang: d.promptLang === "en" ? "en" : "fr", text: String(d.prompt) }) : null,
           d.prompt ? el("span", { className: "summary-arrow", "aria-hidden": "true", text: " → " }) : null,
           d.prompt ? el("span", { className: "visually-hidden", text: " Answer: " }) : null,
-          el("strong", { lang: "fr", text: d.french || "" }),
+          el("strong", { lang: d.answerLang === "en" ? null : "fr", text: d.french || "" }),
           wrote ? el("span", { className: "summary-wrote" }, ["You wrote: ", el("span", { lang: "fr", text: wrote })]) : null,
           d.pronunciation ? el("span", { className: "pron", text: " " + d.pronunciation }) : null,
           m.hinted ? el("span", { className: "hint", text: " (with a hint)" }) : null,
-          d.french ? listenButton(d.listenText || d.french, d.audioKey, { compact: true }) : null
+          d.french ? listenButton(d.listenText || d.french, d.audioKey, { compact: true, voice: d.voiceId || null }) : null
         ]);
       })));
     }
@@ -487,7 +507,7 @@
   window.VT_UI = {
     el: el, fr: fr, clear: clear, tableRegion: tableRegion, icon: icon,
     listenButton: listenButton, decorateListen: decorateListen, setShowWords: setShowWords, nativeLabel: nativeLabel,
-    toast: toast, toastEnded: toastEnded, hideToast: hideToast, TOAST_TIMING: TOAST_TIMING, openDialog: openDialog, closeDialog: closeDialog,
+    toast: toast, toastEnded: toastEnded, listenToastText: listenToastText, hideToast: hideToast, TOAST_TIMING: TOAST_TIMING, openDialog: openDialog, closeDialog: closeDialog,
     ring: ring, badge: badge, BADGE_TEXT: BADGE_TEXT, parts: parts,
     sessionBar: sessionBar, feedbackPanel: feedbackPanel, summaryCard: summaryCard, CORRECT_COPY: CORRECT_COPY
   };

@@ -103,5 +103,22 @@ class Evaluate(unittest.TestCase):
             self.assertEqual(self.status("Je vais au cinéma.", "Je vais à la plage.", strict), "fail")
 
 
+class MedianF0(unittest.TestCase):
+    def test_sine_120(self):
+        t = np.arange(24000) / 24000.0
+        f0 = ttsqa.median_f0((0.3 * np.sin(2 * np.pi * 120 * t)).astype(np.float32), 24000)
+        self.assertIsNotNone(f0)
+        self.assertAlmostEqual(f0, 120.0, delta=5.0)
+
+    def test_sine_wav_220(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "t.wav")
+            tone(p, 1.0)
+            self.assertAlmostEqual(ttsqa.median_f0(p), 220.0, delta=5.0)
+
+    def test_silence(self):
+        self.assertIsNone(ttsqa.median_f0(np.zeros(24000, dtype=np.float32), 24000))
+
+
 if __name__ == "__main__":
     unittest.main()

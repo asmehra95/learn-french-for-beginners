@@ -41,7 +41,7 @@ test("one vt-build meta, CSP unchanged, build-check.js in <head> after theme.js"
 });
 
 test("media is not versioned: no ?v= on mp3/pdf references", function () {
-  ["index.html", "js/app.js", "js/audio-manifest.js", "js/tts-manifest.js", "js/views-tables.js", "js/views-topics.js"].forEach(function (f) {
+  ["index.html", "js/app.js", "js/audio-manifest.js", "js/tts-manifest.js", "js/tts-manifest-qwen3-fr-m-bf16.js", "js/views-tables.js", "js/views-topics.js", "js/views-dialogues.js"].forEach(function (f) {
     var s = fs.readFileSync(path.join(ROOT, f), "utf8");
     assert.ok(!/\.(mp3|pdf)\?v=/.test(s), f);
   });

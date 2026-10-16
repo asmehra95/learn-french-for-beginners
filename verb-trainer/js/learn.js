@@ -658,9 +658,13 @@
 
   /** Keys with a mistake that aren't mastered again, weakest and most recent first.
       exprData (optional, VT_EXPRESSIONS) adds the everyday expressions' "expr:<id>" keys. */
-  function mistakesDeck(state, data, exprData) {
+  function mistakesDeck(state, data, exprData, dlgData) {
     var known = verbIdSet(data);
     ((exprData && exprData.expressions) || []).forEach(function (e) { known["expr:" + e.id] = true; });
+    // Dialogue comprehension questions ("dlg:<dialogue>.<question>"), built inline so learn.js needs no dialogues.js.
+    ((dlgData && dlgData.dialogues) || []).forEach(function (d) {
+      (d.questions || []).forEach(function (q) { known["dlg:" + d.id + "." + q.id] = true; });
+    });
     var stats = state.stats || {};
     return Object.keys(stats).filter(function (k) {
       var s = stats[k];
@@ -707,9 +711,9 @@
   }
 
   /** { kind, title, reason, href } for Home's Today card (first matching rule, §6.1). */
-  function suggestNext(state, data, now, exprData) {
+  function suggestNext(state, data, now, exprData, dlgData) {
     var lessons = (data && data.lessons) || [];
-    var deck = mistakesDeck(state, data, exprData);
+    var deck = mistakesDeck(state, data, exprData, dlgData);
     var first = lessons[0];
     if (first && state.totals.answered === 0 && !lessonRecord(state, first.id).learned) {
       return { kind: "start", lessonId: first.id, title: "Start Lesson " + first.id + ": " + first.title,
@@ -852,6 +856,16 @@
       if (seg.length === 2) return info("expressions", "theme", { themeId: seg[1] });
       return XID.test(seg[2]) ? info("expressions", "item", { themeId: seg[1], exprId: seg[2] }) : home;
     }
+    if (name === "dialogues") {
+      // #dialogues, #dialogues/<id>, #dialogues/<id>/<mode>; views-dialogues.js checks the id exists.
+      var DID = /^[a-z0-9-]{1,40}$/, MODES_D = ["listen", "roleplay", "quiz"];
+      if (seg.length === 1) return info("dialogues", "all");
+      if (seg.length > 3 || !DID.test(seg[1])) return home;
+      if (seg.length === 2) return info("dialogues", "dialogue", { dialogueId: seg[1], mode: "listen" });
+      if (seg[2] === "listen") return info("dialogues", "dialogue", { dialogueId: seg[1], mode: "listen", redirect: "#dialogues/" + seg[1] });
+      return MODES_D.indexOf(seg[2]) !== -1 ? info("dialogues", "dialogue", { dialogueId: seg[1], mode: seg[2] })
+        : info("dialogues", "dialogue", { dialogueId: seg[1], mode: "listen", redirect: "#dialogues/" + seg[1] });
+    }
     if (name === "review") {
       if (seg.length === 1) return info("review", "deck");
       if (seg.length === 2 && seg[1] === "session") return info("review", "session");
@@ -881,6 +895,7 @@
 
   /** { french, pronunciation, audioKey } for the summary's "To review" list. */
   function displayFor(item) {
+    if (item.dialogue) return item.display;
     if (item.expr) {
       var e = item.expr;
       return { french: e.fr, pronunciation: e.pron, audioKey: null, listenText: EXPR().speakText(e) };

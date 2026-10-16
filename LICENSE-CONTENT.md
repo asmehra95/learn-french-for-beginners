@@ -10,6 +10,7 @@ licensed under the **Creative Commons Attribution-ShareAlike 4.0 International**
 - Topic lesson data and exercises (verb-trainer/js/topics-data.js)
 - Grammar tables (french-grammar-tables.md, verb-trainer/reference/french-grammar-tables.*, verb-trainer/js/reference-data.js)
 - Everyday expressions (french-expressions.md, verb-trainer/reference/french-expressions.*, verb-trainer/js/expressions-data.js)
+- Dialogues (french-dialogues.md, verb-trainer/reference/french-dialogues.*, verb-trainer/js/dialogues-data.js)
 - Any other written instructional content authored by Avtar Singh in this repository
 
 **Deed:** <https://creativecommons.org/licenses/by-sa/4.0/>
@@ -27,8 +28,8 @@ keep their original per-clip licences: CC0, CC BY 4.0, CC BY-SA 3.0, or CC BY-SA
 by volunteer contributors on Lingua Libre / Wikimedia Commons. Full attribution — speaker names,
 licence per clip, and source URLs — is in **verb-trainer/audio/CREDITS.md**.
 
-**Qwen3-TTS synthetic voice clips** (files in verb-trainer/audio/tts/qwen3-fr-bf16/) were generated
-with the open text-to-speech model `mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16` (Qwen3-TTS 1.7B Base,
-Qwen team / Alibaba Cloud) and are provided under the **Apache License 2.0**, as stated in
-**verb-trainer/audio/tts/qwen3-fr-bf16/CREDITS.md**. These clips are NOT a recording of any real
-person's voice.
+**Qwen3-TTS synthetic voice clips** (files in verb-trainer/audio/tts/qwen3-fr-bf16/ and
+verb-trainer/audio/tts/qwen3-fr-m-bf16/) were generated with the open text-to-speech model
+`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16` (Qwen3-TTS 1.7B Base, Qwen team / Alibaba Cloud) and are
+provided under the **Apache License 2.0**, as stated in each folder's **CREDITS.md**. The second (male)
+voice was designed from a text description; neither voice is a recording or clone of a real person.

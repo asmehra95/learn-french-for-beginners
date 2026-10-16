@@ -107914,6 +107914,557 @@
    "input_lufs": -19.57,
    "bytes": 12288,
    "reviewWav": null
+  },
+  "3cddddc8cc4d882b": {
+   "hash": "3cddddc8cc4d882b",
+   "key": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
+   "speak": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
+   "genText": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
+   "texts": [
+    "Bonjour ! Oui, je voudrais un café, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour. Oui, je voudrais un café, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1257,
+   "position": 23,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour. Oui, je voudrais un café, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.68,
+     "ratio": 1.1870967741935483,
+     "flags": [],
+     "n": 0,
+     "seed": 1257,
+     "temperature": 0.7,
+     "wall": 5.443
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:49+00:00",
+   "reason": "new",
+   "durationSec": 3.26,
+   "input_lufs": -24.35,
+   "bytes": 26688,
+   "reviewWav": null
+  },
+  "00ddd5eecc9d8573": {
+   "hash": "00ddd5eecc9d8573",
+   "key": "Excusez-moi ! L'addition, s'il vous plaît.",
+   "speak": "Excusez-moi ! L'addition, s'il vous plaît.",
+   "genText": "Excusez-moi ! L'addition, s'il vous plaît.",
+   "texts": [
+    "Excusez-moi ! L'addition, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Excusez-moi l'addition, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1394,
+   "position": 160,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Excusez-moi l'addition, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.04,
+     "ratio": 1.1805825242718448,
+     "flags": [],
+     "n": 0,
+     "seed": 1394,
+     "temperature": 0.7,
+     "wall": 3.483
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:50+00:00",
+   "reason": "new",
+   "durationSec": 2.56,
+   "input_lufs": -21.91,
+   "bytes": 21120,
+   "reviewWav": null
+  },
+  "43f86acf24e17f64": {
+   "hash": "43f86acf24e17f64",
+   "key": "Sur place, merci.",
+   "speak": "Sur place, merci.",
+   "genText": "Sur place, merci.",
+   "texts": [
+    "Sur place, merci."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 3,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Sur place, merci.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1831,
+   "position": 597,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Sur place, merci.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.92,
+     "ratio": 1.5673469387755101,
+     "flags": [],
+     "n": 0,
+     "seed": 1831,
+     "temperature": 0.7,
+     "wall": 2.204
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:51+00:00",
+   "reason": "new",
+   "durationSec": 1.58,
+   "input_lufs": -23.07,
+   "bytes": 13248,
+   "reviewWav": null
+  },
+  "d9af4a6e94b5cdc3": {
+   "hash": "d9af4a6e94b5cdc3",
+   "key": "Tu as choisi ?",
+   "speak": "Tu as choisi ?",
+   "genText": "Tu as choisi ?",
+   "texts": [
+    "Tu as choisi ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "words": 3,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Tu as choisi ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1846,
+   "position": 612,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Tu as choisi ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.36,
+     "ratio": 1.36,
+     "flags": [],
+     "n": 0,
+     "seed": 1846,
+     "temperature": 0.7,
+     "wall": 1.655
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:52+00:00",
+   "reason": "new",
+   "durationSec": 0.84,
+   "input_lufs": -22.28,
+   "bytes": 7296,
+   "reviewWav": null
+  },
+  "bab0598fa105667e": {
+   "hash": "bab0598fa105667e",
+   "key": "Un croissant aussi, s'il vous plaît.",
+   "speak": "Un croissant aussi, s'il vous plaît.",
+   "genText": "Un croissant aussi, s'il vous plaît.",
+   "texts": [
+    "Un croissant aussi, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Un croissant aussi, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1904,
+   "position": 670,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Un croissant aussi, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.08,
+     "ratio": 0.8851063829787233,
+     "flags": [],
+     "n": 0,
+     "seed": 1904,
+     "temperature": 0.7,
+     "wall": 2.228
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:53+00:00",
+   "reason": "new",
+   "durationSec": 1.64,
+   "input_lufs": -22.34,
+   "bytes": 13824,
+   "reviewWav": null
+  },
+  "41e37084dd70a7c9": {
+   "hash": "41e37084dd70a7c9",
+   "key": "Vous avez choisi ?",
+   "speak": "Vous avez choisi ?",
+   "genText": "Vous avez choisi ?",
+   "texts": [
+    "Vous avez choisi ?"
+   ],
+   "categories": [
+    "dialogue-vocab",
+    "dialogue-example"
+   ],
+   "words": 3,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Vous avez choisi ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1914,
+   "position": 680,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Vous avez choisi ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.2,
+     "ratio": 0.923076923076923,
+     "flags": [],
+     "n": 0,
+     "seed": 1914,
+     "temperature": 0.7,
+     "wall": 1.771
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:54:54+00:00",
+   "reason": "new",
+   "durationSec": 0.84,
+   "input_lufs": -19.83,
+   "bytes": 7296,
+   "reviewWav": null
+  },
+  "a34b11de469c1d71": {
+   "hash": "a34b11de469c1d71",
+   "key": "je voudrais",
+   "speak": "je voudrais",
+   "genText": "je voudrais.",
+   "texts": [
+    "je voudrais"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "words": 2,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je voudrais.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 2725,
+   "position": 1491,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je voudrais.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.36,
+     "ratio": 1.36,
+     "flags": [],
+     "n": 0,
+     "seed": 2725,
+     "temperature": 0.7,
+     "wall": 3.126
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:55:13+00:00",
+   "reason": "new",
+   "durationSec": 0.7,
+   "input_lufs": -24.31,
+   "bytes": 6336,
+   "reviewWav": null
+  },
+  "bb5249f134d735c7": {
+   "hash": "bb5249f134d735c7",
+   "key": "je vous apporte",
+   "speak": "je vous apporte",
+   "genText": "je vous apporte.",
+   "texts": [
+    "je vous apporte"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "words": 3,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je vous apporte.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 2726,
+   "position": 1492,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je vous apporte.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.36,
+     "ratio": 1.110204081632653,
+     "flags": [],
+     "n": 0,
+     "seed": 2726,
+     "temperature": 0.7,
+     "wall": 2.082
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:55:13+00:00",
+   "reason": "new",
+   "durationSec": 0.94,
+   "input_lufs": -22.41,
+   "bytes": 8256,
+   "reviewWav": null
+  },
+  "8b64682e0084922a": {
+   "hash": "8b64682e0084922a",
+   "key": "l'addition",
+   "speak": "l'addition",
+   "genText": "l'addition.",
+   "texts": [
+    "l'addition"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "words": 2,
+   "status": "pass",
+   "qaStatus": "short-ok",
+   "transcript": "L'addition.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 2736,
+   "position": 1502,
+   "attempts": [
+    {
+     "status": "short-ok",
+     "transcript": "L'addition.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.36,
+     "ratio": 1.4702702702702706,
+     "flags": [],
+     "n": 0,
+     "seed": 2736,
+     "temperature": 0.7,
+     "wall": 1.87
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:55:14+00:00",
+   "reason": "new",
+   "durationSec": 0.78,
+   "input_lufs": -24.4,
+   "bytes": 6912,
+   "reviewWav": null
+  },
+  "2a5ec4ab9b799752": {
+   "hash": "2a5ec4ab9b799752",
+   "key": "un café",
+   "speak": "un café",
+   "genText": "un café.",
+   "texts": [
+    "un café"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "words": 2,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Un café.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 3253,
+   "position": 2019,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Un café.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.04,
+     "ratio": 1.4857142857142858,
+     "flags": [],
+     "n": 0,
+     "seed": 3253,
+     "temperature": 0.7,
+     "wall": 1.437
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:55:16+00:00",
+   "reason": "new",
+   "durationSec": 0.66,
+   "input_lufs": -24.36,
+   "bytes": 5952,
+   "reviewWav": null
+  },
+  "5643ae5f09ae4c9d": {
+   "hash": "5643ae5f09ae4c9d",
+   "key": "six euros cinquante",
+   "speak": "six euros cinquante",
+   "genText": "six euros cinquante.",
+   "texts": [
+    "six euros cinquante"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "words": 3,
+   "status": "failed-excluded",
+   "qaStatus": "fail",
+   "transcript": "6,50 euros.",
+   "loose_cer": 0.631578947368421,
+   "phon_cer": 0.6153846153846154,
+   "flags": [],
+   "seedBase": 3091,
+   "position": 1857,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "6,50 euros.",
+     "loose_cer": 0.631578947368421,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.631578947368421,
+     "phon_cer": 0.6153846153846154,
+     "duration": 1.76,
+     "ratio": 1.1540983606557378,
+     "flags": [],
+     "n": 0,
+     "seed": 3091,
+     "temperature": 0.7,
+     "wall": 2.079
+    },
+    {
+     "status": "fail",
+     "transcript": "6,50 euros.",
+     "loose_cer": 0.631578947368421,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.631578947368421,
+     "phon_cer": 0.6153846153846154,
+     "duration": 1.52,
+     "ratio": 0.9967213114754099,
+     "flags": [],
+     "n": 1,
+     "seed": 11010,
+     "temperature": 0.6,
+     "wall": 2.639
+    },
+    {
+     "status": "fail",
+     "transcript": "6,50 euros",
+     "loose_cer": 0.631578947368421,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.631578947368421,
+     "phon_cer": 0.6153846153846154,
+     "duration": 1.92,
+     "ratio": 1.259016393442623,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 2,
+     "seed": 18929,
+     "temperature": 0.5,
+     "wall": 2.668
+    },
+    {
+     "status": "fail",
+     "transcript": "6,50 euros.",
+     "loose_cer": 0.631578947368421,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.631578947368421,
+     "phon_cer": 0.6153846153846154,
+     "duration": 1.84,
+     "ratio": 1.2065573770491804,
+     "flags": [],
+     "n": 3,
+     "seed": 26848,
+     "temperature": 0.8,
+     "wall": 2.625
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "65d9391b04cd",
+   "generatedAt": "2026-10-16T06:55:33+00:00",
+   "reason": "new",
+   "reviewWav": "tts-tools/work/qwen3-fr-bf16/5643ae5f09ae4c9d-a0.wav"
   }
  },
  "runs": [
@@ -108000,8 +108551,22 @@
    "synthWallSec": 119.8,
    "wallSec": 171.5,
    "finished": "2026-10-14T19:33:17+00:00"
+  },
+  {
+   "started": "2026-10-16T06:54:25+00:00",
+   "items": 6,
+   "synthWallSec": 16.8,
+   "wallSec": 28.4,
+   "finished": "2026-10-16T06:54:54+00:00"
+  },
+  {
+   "started": "2026-10-16T06:54:55+00:00",
+   "items": 5,
+   "synthWallSec": 18.5,
+   "wallSec": 38.2,
+   "finished": "2026-10-16T06:55:33+00:00"
   }
  ],
- "updatedAt": "2026-10-14T19:33:17+00:00",
+ "updatedAt": "2026-10-16T06:55:33+00:00",
  "settingsId": "65d9391b04cd"
 }

@@ -3,6 +3,9 @@
       passes its key (the "Native speaker (word only)" button), played with an <audio> element.
    2. A pre-recorded full-phrase clip (audio/tts/<voice>/, see js/tts-manifest.js) when "Recorded voice"
       is chosen in Settings and a clip exists for exactly this text (works from file://, no fetch).
+      An optional voiceId picks another recorded voice (js/tts-manifest-<id>.js, window.VT_TTS_VOICES): the
+      Dialogues pass their speaker's voice; a missing clip for that voice uses the device voice, never the
+      default voice's clip.
    3. Otherwise the device's computer voice (Web Speech API): the voice picked in Voice settings,
       or the best French voice found automatically. */
 (function (root) {
@@ -13,6 +16,7 @@
   // Pre-recorded full-phrase clips (js/tts-manifest.js, made by tts-tools/generate.py): ttsKey(text) -> { file, voiceId, duration }.
   var tts = root.VT_TTS && root.VT_TTS.items ? root.VT_TTS : null;
   var ttsItems = tts ? tts.items : {};
+  var extra = root.VT_TTS_VOICES || {};   // other recorded voices (js/tts-manifest-<id>.js)
   var synth = "speechSynthesis" in root && typeof root.SpeechSynthesisUtterance === "function" ? root.speechSynthesis : null;
 
   var RATE_MIN = 0.6;
@@ -34,6 +38,8 @@
   var checkedListeners = [];
   var changeListeners = [];
   var current = null;        // currently playing HTMLAudioElement
+  var shared = null;         // the one HTMLAudioElement, created lazily on the first play() (a click)
+  var detachPrev = null;     // removes the previous play()'s listeners
 
   /* ---------- voice helpers (pure; exported for tests) ---------- */
   function normLang(v) { return String((v && v.lang) || "").replace(/_/g, "-"); }
@@ -164,18 +170,29 @@
   /** Native recording that Listen would play for `key`, honouring the user's preference. */
   function nativeToPlay(key) { return prefs.preferNative ? nativeFor(key) : null; }
 
-  /** The pre-recorded clip for exactly this text (after ttsKey normalization), or null. */
-  function recordedFor(text) {
-    if (!tts || text == null) return null;
+  /** { items, voice } of a recorded voice: the default voice for no id (or its own id), an extra voice's
+      manifest otherwise; null when that voice isn't loaded. */
+  function manifestFor(voiceId) {
+    if (!voiceId || (tts && voiceId === tts.defaultVoice)) {
+      return tts ? { items: ttsItems, voice: (tts.voices && tts.voices[tts.defaultVoice]) || null } : null;
+    }
+    var m = Object.prototype.hasOwnProperty.call(extra, voiceId) ? extra[voiceId] : null;
+    return m && m.items ? m : null;
+  }
+
+  /** The pre-recorded clip for exactly this text (after ttsKey normalization) in that voice, or null. */
+  function recordedFor(text, voiceId) {
+    var m = manifestFor(voiceId);
+    if (!m || text == null) return null;
     var key = L.ttsKey(text);
-    if (!key || !Object.prototype.hasOwnProperty.call(ttsItems, key)) return null;
-    var it = ttsItems[key];
-    var voice = (tts.voices && tts.voices[it.voiceId]) || null;
+    if (!key || !Object.prototype.hasOwnProperty.call(m.items, key)) return null;
+    var it = m.items[key];
+    var voice = m === extra[voiceId] ? (m.voice || null) : ((tts.voices && tts.voices[it.voiceId]) || null);
     return { file: it.file, voiceId: it.voiceId, duration: it.duration, key: key, voice: voice };
   }
 
   /** The clip Listen plays for `text` with the current setting: null when "Device voice" is chosen. */
-  function recordedToPlay(text) { return prefs.voiceSource === "recorded" ? recordedFor(text) : null; }
+  function recordedToPlay(text, voiceId) { return prefs.voiceSource === "recorded" ? recordedFor(text, voiceId) : null; }
 
   /** Recorded clips follow the rate slider: the default rate (0.85) is the clip's natural speed. */
   function playbackRate() {
@@ -233,17 +250,30 @@
    */
   var playToken = 0; // increments on every play(); stale callbacks from earlier clicks are ignored
 
-  function play(text, key, done, onEnd) {
+  /* One shared <audio> element for every clip: WebKit lets an element that has played from a gesture keep
+     playing new sources started from timers (Dialogues Play all). Rate is set per call (the load algorithm
+     resets playbackRate to defaultPlaybackRate). */
+  function audioFor(file, rate) {
+    if (!shared) shared = new root.Audio();
+    shared.src = file;
+    shared.defaultPlaybackRate = rate;
+    shared.playbackRate = rate;
+    return shared;
+  }
+
+  function play(text, key, done, onEnd, opts) {
     var report = typeof done === "function" ? done : function () {};
     var token = ++playToken;
+    var detach = function () {};
     var finish = once(function () {
+      detach();
       if (token === playToken && typeof onEnd === "function") onEnd();
     });
     stop();
     var entry = nativeToPlay(key);
     var source = "native";
     if (!entry) {
-      entry = recordedToPlay(text);
+      entry = recordedToPlay(text, opts && opts.voiceId);
       source = "recorded";
     }
     if (!entry) {
@@ -252,11 +282,13 @@
       if (!u) finish();
       return;
     }
-    var audio = new root.Audio(entry.file);
-    if (source === "recorded") audio.playbackRate = playbackRate();
+    // listeners of the previous play() go before the src swap, so its abort/error can't reach this call
+    if (detachPrev) { detachPrev(); detachPrev = null; }
+    var audio = audioFor(entry.file, source === "recorded" ? playbackRate() : 1);
     current = audio;
     var settled = false;
     function fallback() {
+      detach();
       if (settled || token !== playToken) return;
       settled = true;
       if (current === audio) current = null;
@@ -264,8 +296,14 @@
       report({ source: u ? "computer" : "none", entry: null, failed: entry });
       if (!u) finish();
     }
+    detach = function () {
+      audio.removeEventListener("error", fallback);
+      audio.removeEventListener("ended", finish);
+      if (detachPrev === detach) detachPrev = null;
+    };
     audio.addEventListener("error", fallback);
     audio.addEventListener("ended", finish);
+    detachPrev = detach;
     // Report right away so the indicator is instant; if the file then fails to play,
     // fallback() reports a second time with source "computer".
     report({ source: source, entry: entry });
@@ -310,6 +348,19 @@
     return tts.voices[tts.defaultVoice] || null;
   }
 
+  /** Metadata of any recorded voice (default or extra), or null. */
+  function voiceMeta(voiceId) {
+    var m = manifestFor(voiceId);
+    if (!m) return null;
+    return m.voice || null;
+  }
+
+  /** Metadata of the extra recorded voices (Settings and Credits), in load order. */
+  function extraVoices() {
+    return Object.keys(extra).filter(function (id) { return extra[id] && extra[id].items && extra[id].voice; })
+      .map(function (id) { return extra[id].voice; });
+  }
+
   root.VT_SPEECH = {
     play: play,
     stop: stop,
@@ -324,9 +375,12 @@
     recordedToPlay: recordedToPlay,
     recordedCoverage: recordedCoverage,
     recordedVoice: recordedVoice,
+    voiceMeta: voiceMeta,
+    extraVoices: extraVoices,
+    defaultVoiceId: function () { return tts ? tts.defaultVoice : null; },
     playbackRate: playbackRate,
     /** True when this item can be played at all (native recording, recorded clip or computer voice). */
-    canPlay: function (key, text) { return !!nativeToPlay(key) || !!recordedToPlay(text) || !!synth; },
+    canPlay: function (key, text, voiceId) { return !!nativeToPlay(key) || !!recordedToPlay(text, voiceId) || !!synth; },
     synthSupported: function () { return !!synth; },
     /** null until known; then true/false. */
     hasFrenchVoice: function () { return voicesChecked ? voices.length > 0 : null; },

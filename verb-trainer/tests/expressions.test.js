@@ -582,6 +582,9 @@ test("static: index.html loads the expression scripts in order, links the view i
   assert.match(html, /id="view-expressions"[^>]*data-view="expressions"/);
   assert.match(html, /class="nav-link" href="#expressions" data-nav="expressions"/);
   assert.match(html, /class="more-link" href="#expressions" data-close data-nav="expressions"/);
+  // Dialogues (added after Phrases in the top nav and after Everyday expressions in More)
+  assert.match(html, /class="nav-link" href="#expressions" data-nav="expressions">[\s\S]*?<\/li>\s*<li><a class="nav-link" href="#dialogues" data-nav="dialogues">/);
+  assert.match(html, /class="more-link" href="#expressions" data-close data-nav="expressions">[\s\S]*?<\/li>\s*<li><a class="more-link" href="#dialogues" data-close data-nav="dialogues">/);
   assert.match(html, /<symbol id="i-message-circle"/);
   assert.match(html, /<p class="flash-cue" id="flash-cue" hidden><\/p>/);
   assert.match(html, /<optgroup label="Expressions" id="flash-deck-expr">[\s\S]*value="expr-fr-en"[\s\S]*value="expr-en-fr"[\s\S]*value="expr-audio"[\s\S]*<\/optgroup>/);

@@ -1,7 +1,7 @@
 {
  "normalization": "v1",
- "generatedAt": "2026-10-14T19:33:19.222Z",
- "count": 2196,
+ "generatedAt": "2026-10-16T06:55:34.987Z",
+ "count": 2207,
  "excluded": [
   "casual",
   "formal",
@@ -263,6 +263,17 @@
     "expression"
    ],
    "hash": "9172e8eec99f144f"
+  },
+  {
+   "key": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
+   "speak": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
+   "texts": [
+    "Bonjour ! Oui, je voudrais un café, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3cddddc8cc4d882b"
   },
   {
    "key": "Bonjour ! Vous parlez anglais ? Je parle un peu français.",
@@ -1765,9 +1776,21 @@
     "Excusez-moi"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "3b1073b7e074af8e"
+  },
+  {
+   "key": "Excusez-moi ! L'addition, s'il vous plaît.",
+   "speak": "Excusez-moi ! L'addition, s'il vous plaît.",
+   "texts": [
+    "Excusez-moi ! L'addition, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "00ddd5eecc9d8573"
   },
   {
    "key": "Excusez-moi, je suis perdue. La gare, c'est par où ?",
@@ -3876,7 +3899,9 @@
     "Je peux payer par carte ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-line",
+    "dialogue-vocab"
    ],
    "hash": "d06d44d7b65e8f5e"
   },
@@ -5059,7 +5084,8 @@
     "Merci, au revoir !"
    ],
    "categories": [
-    "expression-example"
+    "expression-example",
+    "dialogue-line"
    ],
    "hash": "8fa294d665f52af1"
   },
@@ -6598,9 +6624,21 @@
     "Sur place ou à emporter ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "d6be51369bdd529f"
+  },
+  {
+   "key": "Sur place, merci.",
+   "speak": "Sur place, merci.",
+   "texts": [
+    "Sur place, merci."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "43f86acf24e17f64"
   },
   {
    "key": "T'amuses-tu ?",
@@ -6757,6 +6795,17 @@
     "topic-listen"
    ],
    "hash": "173213fa63a70ef8"
+  },
+  {
+   "key": "Tu as choisi ?",
+   "speak": "Tu as choisi ?",
+   "texts": [
+    "Tu as choisi ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "d9af4a6e94b5cdc3"
   },
   {
    "key": "Tu as eu le poste ? C'est génial !",
@@ -7388,6 +7437,17 @@
    "hash": "abc92003d5103312"
   },
   {
+   "key": "Un croissant aussi, s'il vous plaît.",
+   "speak": "Un croissant aussi, s'il vous plaît.",
+   "texts": [
+    "Un croissant aussi, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bab0598fa105667e"
+  },
+  {
    "key": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
    "speak": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
    "texts": [
@@ -7486,6 +7546,18 @@
     "topic-summary-answer"
    ],
    "hash": "1c448b72ef77b762"
+  },
+  {
+   "key": "Vous avez choisi ?",
+   "speak": "Vous avez choisi ?",
+   "texts": [
+    "Vous avez choisi ?"
+   ],
+   "categories": [
+    "dialogue-vocab",
+    "dialogue-example"
+   ],
+   "hash": "41e37084dd70a7c9"
   },
   {
    "key": "Vous avez des croissants aujourd'hui ?",
@@ -16444,6 +16516,28 @@
    "hash": "b88d0ddff7458a69"
   },
   {
+   "key": "je voudrais",
+   "speak": "je voudrais",
+   "texts": [
+    "je voudrais"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "a34b11de469c1d71"
+  },
+  {
+   "key": "je vous apporte",
+   "speak": "je vous apporte",
+   "texts": [
+    "je vous apporte"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "bb5249f134d735c7"
+  },
+  {
    "key": "je voyage",
    "speak": "je voyage",
    "texts": [
@@ -16541,6 +16635,17 @@
     "table-cell"
    ],
    "hash": "2ec2c7eef805f9fa"
+  },
+  {
+   "key": "l'addition",
+   "speak": "l'addition",
+   "texts": [
+    "l'addition"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "8b64682e0084922a"
   },
   {
    "key": "l'année dernière",
@@ -20462,6 +20567,17 @@
    "hash": "44778d82365e4af6"
   },
   {
+   "key": "six euros cinquante",
+   "speak": "six euros cinquante",
+   "texts": [
+    "six euros cinquante"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5643ae5f09ae4c9d"
+  },
+  {
    "key": "soixante",
    "speak": "soixante",
    "texts": [
@@ -22237,6 +22353,17 @@
     "table-cell"
    ],
    "hash": "792838da2162b50c"
+  },
+  {
+   "key": "un café",
+   "speak": "un café",
+   "texts": [
+    "un café"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2a5ec4ab9b799752"
   },
   {
    "key": "un film intéressant",

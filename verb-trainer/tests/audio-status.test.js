@@ -205,7 +205,28 @@ test("CSS: 390px placement above the sticky bar and the sheet is kept; hover-onl
 test("app.js passes the end signal for every Listen and the Preview", function () {
   var app = fs.readFileSync(path.join(ROOT, "js", "app.js"), "utf8");
   assert.match(app, /SPEECH\.play\(text, native \? key : null, function \(res\) \{/);
-  assert.match(app, /\}, function \(\) \{ window\.VT_UI\.toastEnded\(id\); \}\);/);
+  // Dialogues (design §5.5): the end callback also forwards the player's onEnd, and play() passes the voice.
+  assert.match(app, /\}, function \(\) \{ window\.VT_UI\.toastEnded\(id\); if \(typeof onEnd === "function"\) onEnd\(\); \}, \{ voiceId: voiceId \|\| null \}\);/);
   assert.match(app, /SPEECH\.preview\(function \(\) \{ window\.VT_UI\.toastEnded\(id\); \}\)/);
   assert.equal((app.match(/VT_UI\.toast\(/g) || []).length, 1, "one toast wrapper; no other writer of #audio-status");
+});
+
+/* ---------- toast text (VT_UI.listenToastText, design §5.5) ---------- */
+test("listenToastText: without who the two existing strings are byte-identical; with who the speaker leads", function () {
+  var t = setup();
+  var T = t.UI.listenToastText;
+  var rec = { source: "recorded", entry: { voiceId: "qwen3-fr-bf16" } };
+  var rec2 = { source: "recorded", entry: { voiceId: "qwen3-fr-m-bf16" } };
+  var dev = { source: "computer", entry: null };
+  var failed = { source: "computer", entry: null, failed: { file: "x.mp3" } };
+  assert.equal(T(rec, "Vous avez", undefined, "qwen3-fr-bf16"), "Recorded voice (synthetic): Vous avez.");
+  assert.equal(T(dev, "Vous avez", undefined, "qwen3-fr-bf16"), "Device voice: Vous avez.");
+  assert.equal(T(failed, "Vous avez", undefined, "qwen3-fr-bf16"), "Device voice (the recording could not be played): Vous avez.");
+  assert.equal(T(rec2, "Bonjour, madame ! Vous avez choisi ?", "Julien", "qwen3-fr-bf16"),
+    "Julien (recorded voice 2, synthetic): Bonjour, madame ! Vous avez choisi ?.");
+  assert.equal(T(rec, "Merci, au revoir !", "Camille", "qwen3-fr-bf16"), "Camille (recorded voice, synthetic): Merci, au revoir !.");
+  assert.equal(T(dev, "Bonjour !", "Camille", "qwen3-fr-bf16"), "Camille (device voice): Bonjour !.");
+  assert.equal(T(failed, "Bonjour !", "Julien", "qwen3-fr-bf16"), "Julien (device voice, the recording could not be played): Bonjour !.");
+  assert.equal(T({ source: "native", entry: {} }, "x", "Julien", "qwen3-fr-bf16"), null);
+  assert.equal(T({ source: "none", entry: null }, "x", null, "qwen3-fr-bf16"), null);
 });

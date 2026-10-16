@@ -7,13 +7,15 @@ with the site; nobody who uses the site needs any of this.
 
 | File | What it does |
 |---|---|
-| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak (verbs, topics and the Grammar tables: list cells, grid cells and examples, `say` used instead of `fr` when a row has one; the everyday expressions: `VT_EXPR.speakText` (the filled-in `say` for "…" phrases) and each example), normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). Writes `corpus.json`. |
+| `extract-corpus.js` | Loads the live site data (`verb-trainer/js/*.js`) in Node and lists every French string a Listen button can speak (verbs, topics and the Grammar tables: list cells, grid cells and examples, `say` used instead of `fr` when a row has one; the everyday expressions: `VT_EXPR.speakText` (the filled-in `say` for "…" phrases) and each example; the dialogues: `VT_DLG.listenEntries`), normalized with `VT_LOGIC.ttsSpeak` / `VT_LOGIC.ttsKey` (rule `v1`, the same code the browser uses). One corpus per voice: writes `corpus.json` for the default voice and, with `--voice <id>`, `corpus-<id>.json` (only the dialogue lines of the speakers mapped to that voice). |
 | `generate.py` | Builds whatever is missing or changed, with QA and retries, then writes the site manifest, `CREDITS.md` and a review page. Incremental and idempotent: a second run with no data change generates nothing. |
 | `ttsqa.py` | QA: Whisper large-v3-turbo transcription (French, temperature 0, no prompt), homophone-aware scoring, number / clock-time normalization, silence / clipping / truncation / runaway-length checks. |
-| `test_ttsqa.py` | Unit tests for the QA text rules: `python -m unittest -v test_ttsqa`. |
+| `test_ttsqa.py` | Unit tests for the QA text rules and `median_f0`: `python -m unittest -v test_ttsqa`. |
+| `test_manifest_js.py` | Unit tests for the site manifest writer (default voice byte-identical, extra voices register into `VT_TTS_VOICES`): `python -m unittest -v test_manifest_js`. |
 | `env.example.sh` | Template for the permanent environment (venv, model cache, pip cache) kept outside the repo. |
-| `engines/qwen3_tts.py` | The Qwen3-TTS adapter used in the Phase 1 comparison, unchanged. |
+| `engines/qwen3_tts.py` | The Qwen3-TTS adapter used in the Phase 1 comparison, plus `design()` (VoiceDesign from a pinned local snapshot, used only by `--design-candidates`); `load()` never designs a voice implicitly. |
 | `voices/qwen3-fr-bf16/reference.wav` | The designed synthetic voice (no real person). Qwen3 Base clones it for every clip. **Don't regenerate it**, or the voice changes. |
+| `voices/qwen3-fr-m-bf16/reference.wav` | The second designed synthetic voice (male, Dialogues speakers; no real person). Same rule: **don't regenerate it**. |
 | `requirements.txt`, `requirements-lock.txt` | Pinned Python packages. |
 
 ## When the site's text changes
@@ -29,9 +31,12 @@ Then reload the site. If you use the Explain helper (`explainer/start.sh`), rest
 
 Texts with no clip keep working: the site falls back to the device voice for them.
 
-Coverage now: 2,188 of 2,196 Listen texts have a clip (all 198 everyday-expression texts passed QA on the
-first run). Left to the device voice (`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`,
-`cher, chère`, `ceux`, `longue`, `tes`. `je me suis assis` is excluded by the user (`excludedByUser`).
+Coverage now: 2,198 of 2,207 Listen texts have a clip in the default voice (all 198 everyday-expression texts
+passed QA on the first run; 10 of the 11 dialogue texts it speaks passed). Left to the device voice
+(`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`, `cher, chère`, `ceux`, `longue`, `tes`, and the
+dialogue vocabulary item `six euros cinquante` (Whisper hears "6,50 euros", which the scorer can't match).
+`je me suis assis` is excluded by the user (`excludedByUser`). The second voice covers 6 of 6 dialogue lines
+(one, `Oui, bien sûr. Ça fait six euros cinquante.`, is `failed-kept` for the same digits reason and shipped).
 
 ## What generate.py does per text
 
@@ -91,6 +96,49 @@ whose text left the site). `python generate.py --help` lists them all.
 - `verb-trainer/audio/tts/<voice-id>/CREDITS.md`: model, license and the synthetic-speech statement.
 - `verb-trainer/js/tts-manifest.js`: what the site loads. `window.VT_TTS.items` maps the normalized text to
   `{ file, voiceId, duration }`.
+- `verb-trainer/js/tts-manifest-<id>.js`: the same for every other voice, registered as
+  `window.VT_TTS_VOICES["<id>"] = { version, normalization, voice, coverage, items }`. `index.html` loads it
+  right after `tts-manifest.js` and before `speech.js`.
+
+## Multiple voices
+
+The default voice (`qwen3-fr-bf16`, `"default": True` in `VOICES` in `generate.py`) speaks everything. A
+second voice, `qwen3-fr-m-bf16` (a synthetic male French voice), speaks the Dialogues lines of the speakers
+mapped to it. The mapping is data: `speakers[].voice` in `verb-trainer/js/dialogues-data.js`. Vocabulary and
+"Notice this" examples always use the default voice.
+
+- Each voice has a `VOICES` entry (same Base model and revision, its own `settings.ref_dir`, label, voiceNote,
+  `median_ratio`, and for a designed voice a `design` block with the VoiceDesign repo, revision, instruction
+  and seed).
+- One corpus per voice: `python generate.py --voice qwen3-fr-m-bf16 …` extracts `corpus-qwen3-fr-m-bf16.json`
+  (the default voice keeps `corpus.json`), writes the clips to `verb-trainer/audio/tts/qwen3-fr-m-bf16/`, its
+  own `manifest.json` and `CREDITS.md`, `verb-trainer/js/tts-manifest-qwen3-fr-m-bf16.js`, and its review page
+  to `<review-dir>/qwen3-fr-m-bf16/index.html` (so the default voice's page is never overwritten).
+- A text spoken by both a male and a female speaker gets one clip per voice. A missing clip for a voice is
+  spoken by the device voice, never by the other voice.
+
+Designing a new voice (VoiceDesign, then Whisper; one model in memory at a time):
+
+```sh
+python generate.py --voice <id> --design-candidates 3 --design-out <tts-env>/voice-compare   # seeds 7, 11, 23
+python generate.py --voice <id> --design-candidates 6 --design-out <tts-env>/voice-compare   # adds 13, 29, 31
+python generate.py --voice <id> --design-pick <seed> --design-out <tts-env>/voice-compare    # copies it to voices/<id>/reference.wav
+```
+
+`--design-candidates` prints duration, Whisper CER and median pitch (F0) per candidate and writes
+`candidates.json` with a recommendation (F0 under 160 Hz for a male voice, then the lowest CER).
+`--design-pick` refuses to overwrite an existing reference (`--force` replaces it) and prints the
+`seed_ratio`: copy the seed into `design.seed` and the ratio into `median_ratio`, then run the first
+generation. Afterwards recalibrate `median_ratio` to the median actual/expected duration of the voice's
+`pass` clips and re-apply the QA rules with `python generate.py --voice <id> --rescore --no-extract
+--strict-short` (no model). As with the first voice, **don't regenerate a reference** once clips exist: a
+new VoiceDesign run gives a different voice, and every clip of that voice would be regenerated.
+
+The second voice was designed with `mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit` @
+`f90d617701d9f7f4ca499291e0b57f2b3c2fd2ee`, seed 7, from the instruction "Voix masculine native de Paris,
+chaleureuse et posée, la trentaine, diction claire et naturelle, accent standard de France, débit modéré."
+No real person was recorded or cloned. A third voice needs a `VOICES` entry, a design and pick, a generation
+run, one `<script src="js/tts-manifest-<id>.js?v=__BUILD__">` in `index.html` and the id in the dialogue data.
 
 ## Setting up (a permanent environment outside the repo)
 

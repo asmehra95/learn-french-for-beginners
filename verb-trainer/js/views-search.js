@@ -8,7 +8,7 @@
   window.VT_VIEWS = window.VT_VIEWS || {};
   function $(id) { return document.getElementById(id); }
 
-  var VERB_CAP = 20, TOPIC_CAP = 5, TABLE_CAP = 5, EXPR_CAP = 5;
+  var VERB_CAP = 20, TOPIC_CAP = 5, TABLE_CAP = 5, EXPR_CAP = 5, DLG_CAP = 5;
   var C = null, S = null;
   var dlg, input, listbox, empty, status;
   var options = [];   // flat list: { node, act, data }
@@ -54,7 +54,8 @@
         if (!last || !last.key) return;
         if (!last.total) text = "No results." + (last.suggestion ? " Closest verb: " + last.suggestion.infinitive + "." : "");
         else text = last.verbs.length + (last.verbs.length === 1 ? " verb, " : " verbs, ") + last.tables.length + (last.tables.length === 1 ? " table, " : " tables, ") +
-          last.expressions.length + (last.expressions.length === 1 ? " expression" : " expressions") +
+          last.expressions.length + (last.expressions.length === 1 ? " expression, " : " expressions, ") +
+          (last.dialogues || []).length + ((last.dialogues || []).length === 1 ? " dialogue" : " dialogues") +
           " and " + last.topics.length + (last.topics.length === 1 ? " topic" : " topics") + " found.";
       }
       status.textContent = text;
@@ -147,6 +148,31 @@
     ]);
   }
 
+  /* A dialogue result: the title (French and English) and "Dialogues: A1 · Julien and Camille". No Listen
+     option: the dialogue page has its own. */
+  function dialogueRow(x, i) {
+    return el("div", { role: "none", className: "search-row" }, [
+      option("sd-" + i, "dialogue", x, { className: "search-main search-dia" }, [
+        el("span", { className: "search-line" }, [
+          el("span", { className: "search-inf", lang: "fr", text: x.titleFr }), sep(),
+          el("span", { className: "search-meaning", text: x.title }), sep()
+        ]),
+        el("span", { className: "search-why" }, ["Dialogues: " + x.level + " · " + x.speakers.join(" and ")].concat(
+          x.matchDetail ? [" · ", x.matchDetail.indexOf("line: ") === 0 ? el("span", { lang: "fr", text: x.matchDetail }) : x.matchDetail] : []))
+      ])
+    ]);
+  }
+
+  /* Dialogues go first when one matches strongly (score >= 85: its French title, title or a keyword such as
+     "dialogue"), no verb has an exact infinitive or form match and no expression matches at all: so "dialogue"
+     opens the dialogue with Enter while "l'addition" (the expression "L'addition, s'il vous plaît" matches it by
+     prefix, score 50) keeps the expression first. */
+  function dialoguesFirst(res) {
+    var ds = res.dialogues || [];
+    return !!(ds.length && ds[0].score >= 85 && !(res.verbs[0] && res.verbs[0].score >= S.SCORES.form) &&
+      !res.expressions.length);
+  }
+
   /* Expressions go first (before verbs and tables) when one matches strongly (score >= 80: French, a keyword or
      the whole English) and no verb has an exact infinitive or form match: "excuse me", "bon", "en avoir marre". */
   function expressionsFirst(res) {
@@ -178,14 +204,18 @@
       var ts = showAll ? res.topics : res.topics.slice(0, TOPIC_CAP);
       var tb = showAll ? res.tables : res.tables.slice(0, TABLE_CAP);
       var xs = showAll ? res.expressions : res.expressions.slice(0, EXPR_CAP);
+      var dlgs = res.dialogues || [];
+      var ds = showAll ? dlgs : dlgs.slice(0, DLG_CAP);
       var verbGroup = vs.length ? function () { kids.push(group("sg-verbs", "Verbs (" + res.verbs.length + ")", vs.map(verbRow))); } : function () {};
       var tableGroup = tb.length ? function () { kids.push(group("sg-tables", "Tables (" + res.tables.length + ")", tb.map(tableRow))); } : function () {};
       var exprGroup = xs.length ? function () { kids.push(group("sg-expr", "Expressions (" + res.expressions.length + ")", xs.map(expressionRow))); } : function () {};
-      if (expressionsFirst(res)) { exprGroup(); verbGroup(); tableGroup(); }
-      else if (tablesFirst(res)) { tableGroup(); verbGroup(); exprGroup(); }
-      else { verbGroup(); tableGroup(); exprGroup(); }
+      var diaGroup = ds.length ? function () { kids.push(group("sg-dia", "Dialogues (" + dlgs.length + ")", ds.map(dialogueRow))); } : function () {};
+      if (dialoguesFirst(res))        { diaGroup(); verbGroup(); tableGroup(); exprGroup(); }
+      else if (expressionsFirst(res)) { exprGroup(); verbGroup(); tableGroup(); diaGroup(); }
+      else if (tablesFirst(res))      { tableGroup(); verbGroup(); exprGroup(); diaGroup(); }
+      else                            { verbGroup(); tableGroup(); exprGroup(); diaGroup(); }
       if (ts.length) kids.push(group("sg-topics", "Topics (" + res.topics.length + ")", ts.map(topicRow)));
-      if (vs.length < res.verbs.length || ts.length < res.topics.length || tb.length < res.tables.length || xs.length < res.expressions.length) {
+      if (vs.length < res.verbs.length || ts.length < res.topics.length || tb.length < res.tables.length || xs.length < res.expressions.length || ds.length < dlgs.length) {
         kids.push(el("div", { role: "none", className: "search-row" }, [
           option("so-all", "all", null, { className: "search-main search-all" }, [el("span", { text: "Show all " + res.total + " results" })])
         ]));
@@ -237,7 +267,7 @@
     var r = o.data;
     if (o.act === "open") go(r.href);
     else if (o.act === "lesson") go(r.lessonHref);
-    else if (o.act === "topic" || o.act === "table" || o.act === "expression") go(r.href);
+    else if (o.act === "topic" || o.act === "table" || o.act === "expression" || o.act === "dialogue") go(r.href);
     else if (o.act === "listen") C.play(r.listenText, r.listenKey, false); // recorded clip first, then the device voice
     else if (o.act === "example") {
       input.value = r;
@@ -273,9 +303,11 @@
       ev.preventDefault();
       if (active !== -1) { activate(active); return; }
       // The first result of the first group shown (same order as render()).
-      var chain = !last || !last.key ? ["open", "table", "expression", "topic"]
-        : expressionsFirst(last) ? ["expression", "table", "open", "topic"]
-        : tablesFirst(last) ? ["table", "open", "expression", "topic"] : ["open", "table", "expression", "topic"];
+      var chain = !last || !last.key ? ["open", "table", "expression", "dialogue", "topic"]
+        : dialoguesFirst(last)   ? ["dialogue", "open", "table", "expression", "topic"]
+        : expressionsFirst(last) ? ["expression", "table", "open", "dialogue", "topic"]
+        : tablesFirst(last)      ? ["table", "open", "expression", "dialogue", "topic"]
+        :                          ["open", "table", "expression", "dialogue", "topic"];
       var i = -1;
       for (var c = 0; c < chain.length && i === -1; c++) i = firstOf(chain[c]);
       if (i !== -1) activate(i);
@@ -323,7 +355,7 @@
       return;
     }
     var n = ctx.DATA.verbs.length;
-    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings, grammar tables, everyday expressions and the topic lessons";
+    $("search-label").textContent = "Search all " + n + " verbs, every form, the English meanings, grammar tables, everyday expressions, dialogues and the topic lessons";
     triggers.forEach(function (b) {
       if (b) b.addEventListener("click", function (ev) { open(ev.currentTarget); });
     });

@@ -99,7 +99,7 @@
       }
 
       // Today card: suggestNext (§6.1 item 3).
-      var next = LEARN.suggestNext(state, DATA, now, ctx.EXPRESSIONS);
+      var next = LEARN.suggestNext(state, DATA, now, ctx.EXPRESSIONS, ctx.DIALOGUES);
       body.appendChild(el("section", { className: "home-card today-card", "aria-labelledby": "home-today-h" }, [
         el("p", { className: "home-kicker", text: "Today" }),
         el("h3", { id: "home-today-h", tabindex: "-1", text: next.title }),
@@ -143,7 +143,7 @@
       ]));
 
       // To review (§6.1 item 5).
-      var deck = LEARN.mistakesDeck(state, DATA, ctx.EXPRESSIONS).length;
+      var deck = LEARN.mistakesDeck(state, DATA, ctx.EXPRESSIONS, ctx.DIALOGUES).length;
       var weak = LEARN.weakestVerbs(state, DATA, 3);
       var reviewKids = [
         el("h3", { id: "home-review-h", text: "To review" }),
@@ -242,6 +242,18 @@
         ]));
       }
 
+      // Dialogues (views-dialogues.js).
+      if (ctx.DIALOGUES && window.VT_DLG) {
+        var dlgList = window.VT_DLG.index(ctx.DIALOGUES).list, nDlg = dlgList.length;
+        body.appendChild(el("section", { className: "home-card dia-card-home", "aria-labelledby": "home-dia-h" }, [
+          el("h3", { id: "home-dia-h" }, [UI.icon("messages-square"), el("span", { text: "Dialogues" })]),
+          el("p", { text: nDlg + (nDlg === 1 ? " short conversation" : " short conversations") + " between two speakers. Listen and read, take a role, then check you understood." }),
+          el("div", { className: "actions" }, [
+            el("a", { className: "btn", id: "home-dia-link", href: "#dialogues" }, [el("span", { text: "Open the dialogues" }), UI.icon("arrow-right")]),
+            dlgList[0] ? el("a", { className: "text-link", href: "#dialogues/" + dlgList[0].id, text: "Start: " + dlgList[0].title }) : null
+          ])
+        ]));
+      }
       // Explain entry point (views-explain.js). No network either way: only the link differs in wording.
       var helper = LEARN.explainMode(location.protocol) === "helper";
       body.appendChild(el("section", { className: "home-card explain-card", "aria-labelledby": "home-explain-h" }, [
@@ -341,7 +353,7 @@
       var UI = ctx.UI, el = UI.el;
       var box = $("practice-cards");
       UI.clear(box);
-      var deck = ctx.LEARN.mistakesDeck(ctx.state(), ctx.DATA, ctx.EXPRESSIONS).length;
+      var deck = ctx.LEARN.mistakesDeck(ctx.state(), ctx.DATA, ctx.EXPRESSIONS, ctx.DIALOGUES).length;
       HUB.forEach(function (c, i) {
         if (c.expressions && !ctx.EXPRESSIONS) return;
         var hid = "hub-h-" + i;

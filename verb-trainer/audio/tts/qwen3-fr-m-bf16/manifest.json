@@ -1,0 +1,363 @@
+{
+ "voice": "qwen3-fr-m-bf16",
+ "normalization": "v1",
+ "items": {
+  "35b47dfa0263fe07": {
+   "hash": "35b47dfa0263fe07",
+   "key": "Bonjour, madame ! Vous avez choisi ?",
+   "speak": "Bonjour, madame ! Vous avez choisi ?",
+   "genText": "Bonjour, madame ! Vous avez choisi ?",
+   "texts": [
+    "Bonjour, madame ! Vous avez choisi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour madame. Vous avez choisi ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1234,
+   "position": 0,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour madame. Vous avez choisi ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.32,
+     "ratio": 1.0197802197802197,
+     "flags": [],
+     "n": 0,
+     "seed": 1234,
+     "temperature": 0.7,
+     "wall": 5.198
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:51:51+00:00",
+   "reason": "new",
+   "durationSec": 2.04,
+   "input_lufs": -17.11,
+   "bytes": 16896,
+   "reviewWav": null
+  },
+  "6fe654be97da27d4": {
+   "hash": "6fe654be97da27d4",
+   "key": "Oui, pas de problème. Voilà. Bonne journée !",
+   "speak": "Oui, pas de problème. Voilà. Bonne journée !",
+   "genText": "Oui, pas de problème. Voilà. Bonne journée !",
+   "texts": [
+    "Oui, pas de problème. Voilà. Bonne journée !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, pas de problème. Voilà. Bonne journée.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1236,
+   "position": 2,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, pas de problème. Voilà. Bonne journée.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.0,
+     "ratio": 1.4678899082568806,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1236,
+     "temperature": 0.7,
+     "wall": 4.177
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:51:53+00:00",
+   "reason": "new",
+   "durationSec": 3.0,
+   "input_lufs": -20.05,
+   "bytes": 24576,
+   "reviewWav": null
+  },
+  "d6be51369bdd529f": {
+   "hash": "d6be51369bdd529f",
+   "key": "Sur place ou à emporter ?",
+   "speak": "Sur place ou à emporter ?",
+   "genText": "Sur place ou à emporter ?",
+   "texts": [
+    "Sur place ou à emporter ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Sur place ou à emporter ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1237,
+   "position": 3,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Sur place ou à emporter ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.16,
+     "ratio": 1.2895522388059701,
+     "flags": [],
+     "n": 0,
+     "seed": 1237,
+     "temperature": 0.7,
+     "wall": 2.371
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:51:54+00:00",
+   "reason": "new",
+   "durationSec": 1.58,
+   "input_lufs": -18.8,
+   "bytes": 13248,
+   "reviewWav": null
+  },
+  "3bc6f048cff8a4d7": {
+   "hash": "3bc6f048cff8a4d7",
+   "key": "Très bien. Je vous apporte ça tout de suite.",
+   "speak": "Très bien. Je vous apporte ça tout de suite.",
+   "genText": "Très bien. Je vous apporte ça tout de suite.",
+   "texts": [
+    "Très bien. Je vous apporte ça tout de suite."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Très bien, je vous apporte ça tout de suite.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1238,
+   "position": 4,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Très bien, je vous apporte ça tout de suite.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.0285714285714287,
+     "flags": [],
+     "n": 0,
+     "seed": 1238,
+     "temperature": 0.7,
+     "wall": 3.033
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:51:55+00:00",
+   "reason": "new",
+   "durationSec": 2.62,
+   "input_lufs": -22.77,
+   "bytes": 21696,
+   "reviewWav": null
+  },
+  "e90992791f657abc": {
+   "hash": "e90992791f657abc",
+   "key": "Un café. Et avec ça ?",
+   "speak": "Un café. Et avec ça ?",
+   "genText": "Un café. Et avec ça ?",
+   "texts": [
+    "Un café. Et avec ça ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Un café. Et avec ça ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1239,
+   "position": 5,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Un café. Et avec ça?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.8,
+     "ratio": 2.1538461538461537,
+     "flags": [
+      "lead-silence",
+      "internal-gap",
+      "duration-outlier"
+     ],
+     "n": 0,
+     "seed": 1239,
+     "temperature": 0.7,
+     "wall": 3.005
+    },
+    {
+     "status": "pass",
+     "transcript": "Un café. Et avec ça ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.16,
+     "ratio": 1.6615384615384616,
+     "flags": [],
+     "n": 1,
+     "seed": 9158,
+     "temperature": 0.6,
+     "wall": 2.934
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:52:11+00:00",
+   "reason": "new",
+   "durationSec": 1.68,
+   "input_lufs": -25.51,
+   "bytes": 14016,
+   "reviewWav": null
+  },
+  "523350cb697fa4af": {
+   "hash": "523350cb697fa4af",
+   "key": "Oui, bien sûr. Ça fait six euros cinquante.",
+   "speak": "Oui, bien sûr. Ça fait six euros cinquante.",
+   "genText": "Oui, bien sûr. Ça fait six euros cinquante.",
+   "texts": [
+    "Oui, bien sûr. Ça fait six euros cinquante."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "failed-kept",
+   "qaStatus": "fail",
+   "transcript": "Oui, bien sûr. Ça fait 6,50 euros.",
+   "loose_cer": 0.3,
+   "phon_cer": 0.2962962962962963,
+   "flags": [],
+   "seedBase": 1235,
+   "position": 1,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Oui, bien sûr. Ça fait 6,50 euros.",
+     "loose_cer": 0.3,
+     "loose_wer": 0.25,
+     "strict_cer": 0.3,
+     "phon_cer": 0.2962962962962963,
+     "duration": 3.2,
+     "ratio": 1.1743119266055047,
+     "flags": [],
+     "n": 0,
+     "seed": 1235,
+     "temperature": 0.7,
+     "wall": 3.739
+    },
+    {
+     "status": "fail",
+     "transcript": "Oui, bien sûr. Ça fait 6,50 euros.",
+     "loose_cer": 0.3,
+     "loose_wer": 0.25,
+     "strict_cer": 0.3,
+     "phon_cer": 0.2962962962962963,
+     "duration": 3.28,
+     "ratio": 1.203669724770642,
+     "flags": [],
+     "n": 1,
+     "seed": 9154,
+     "temperature": 0.6,
+     "wall": 5.787
+    },
+    {
+     "status": "fail",
+     "transcript": "Oui, bien sûr. Ça fait 6,50 euros.",
+     "loose_cer": 0.3,
+     "loose_wer": 0.25,
+     "strict_cer": 0.3,
+     "phon_cer": 0.2962962962962963,
+     "duration": 3.44,
+     "ratio": 1.2623853211009173,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 2,
+     "seed": 17073,
+     "temperature": 0.5,
+     "wall": 4.251
+    },
+    {
+     "status": "fail",
+     "transcript": "Oui, bien sûr. Ça fait 6,50 euros.",
+     "loose_cer": 0.3,
+     "loose_wer": 0.25,
+     "strict_cer": 0.3,
+     "phon_cer": 0.2962962962962963,
+     "duration": 3.36,
+     "ratio": 1.2330275229357797,
+     "flags": [],
+     "n": 3,
+     "seed": 24992,
+     "temperature": 0.8,
+     "wall": 4.325
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T06:52:26+00:00",
+   "reason": "new",
+   "durationSec": 2.76,
+   "input_lufs": -18.1,
+   "bytes": 22656,
+   "reviewWav": "tts-tools/work/qwen3-fr-m-bf16/523350cb697fa4af-a0.wav"
+  }
+ },
+ "runs": [
+  {
+   "started": "2026-10-16T06:51:48+00:00",
+   "items": 6,
+   "synthWallSec": 17.3,
+   "wallSec": 38.3,
+   "finished": "2026-10-16T06:52:27+00:00"
+  }
+ ],
+ "updatedAt": "2026-10-16T06:54:12+00:00",
+ "settingsId": "409b95e83be4"
+}

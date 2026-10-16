@@ -5,7 +5,8 @@
    the future form, the example sentence (ranked last), the lesson number and title, the verb type
    (only reachable with a type keyword such as "irregular"; results carry `type` only then, because the
    flashcards deliberately hide the type), the topic lessons (titles, can-do lines, exercise titles), the
-   grammar tables and the everyday expressions (French, keywords, English, literal meaning, example).
+   grammar tables, the everyday expressions (French, keywords, English, literal meaning, example) and the
+   dialogues (titles, keywords, vocabulary, lines).
    Matching is case-, accent- and apostrophe-insensitive and elision-aware (j'ai = je ai = jai), with
    prefix-as-you-type and a one-edit typo tolerance for queries of 4+ characters. No DOM. */
 (function (root) {
@@ -108,7 +109,7 @@
       .trim();
   }
 
-  function buildIndex(data, topicsData, referenceData, expressionsData) {
+  function buildIndex(data, topicsData, referenceData, expressionsData, dialoguesData) {
     var verbs = (data && data.verbs) || [];
     var lessons = (data && data.lessons) || [];
     var entries = [];
@@ -233,7 +234,53 @@
     return { entries: entries, verbs: verbMeta, verbList: verbs, lessons: lessonInfo, topicDocs: topicDocs,
       tableDocs: buildTableDocs(referenceData === undefined ? root && root.VT_REFERENCE : referenceData),
       exprDocs: buildExpressionDocs(expressionsData === undefined ? root && root.VT_EXPRESSIONS : expressionsData),
+      dlgDocs: buildDialogueDocs(dialoguesData === undefined ? root && root.VT_DIALOGUES : dialoguesData),
       verbCount: verbs.length };
+  }
+
+  /* Dialogues (dialogues-data.js): one doc per dialogue. French title 90, English title 85, keywords (plus the
+     words "dialogue", "conversation", "role-play") 85, vocabulary 70, each line's French 60 and English 45,
+     summary and scene 40. Same scoring rule as the expressions. */
+  var DLG_GLOBAL_KEYWORDS = ["dialogue", "dialogues", "conversation", "conversations", "role-play", "role play"];
+  function buildDialogueDocs(dd) {
+    var docs = [];
+    ((dd && dd.dialogues) || []).slice().sort(function (a, b) { return a.number - b.number; }).forEach(function (d, i) {
+      var fields = [];
+      function field(text, weight, kind, fr) {
+        var k = normalizeKey(text);
+        if (!k) return;
+        fields.push({ k: k, g: glueKey(text), tokens: tokens(k), weight: weight, kind: kind, fr: fr || null });
+      }
+      field(d.titleFr, 90, "french");
+      field(d.title, 85, "title");
+      (d.keywords || []).concat(DLG_GLOBAL_KEYWORDS).forEach(function (w) { field(w, 85, "keyword"); });
+      (d.vocab || []).forEach(function (v) { field(v.fr, 70, "vocab", v.fr); });
+      (d.lines || []).forEach(function (l) { field(l.fr, 60, "line", l.fr); field(l.en, 45, "line", l.fr); });
+      field(d.summary + " " + d.scene, 40, "scene");
+      docs.push({ id: d.id, title: d.title, titleFr: d.titleFr, level: d.level,
+        speakers: (d.speakers || []).map(function (sp) { return sp.name; }), href: "#dialogues/" + d.id, order: i, fields: fields });
+    });
+    return docs;
+  }
+  function searchDialogues(index, qk, qg, qt) {
+    var out = [];
+    (index.dlgDocs || []).forEach(function (doc) {
+      var best = null;
+      doc.fields.forEach(function (f) {
+        var s = 0;
+        if (f.k === qk || f.g === qg) s = f.weight + (f.kind === "keyword" ? 5 : 0);
+        else if (qk.length >= 2 && everyTokenPrefixed(qt, f.tokens)) {
+          s = f.kind === "french" || f.kind === "title" || f.kind === "keyword" ? Math.min(f.weight, 50) : f.weight - 10;
+        }
+        if (s && (!best || s > best.score)) best = { score: s, field: f };
+      });
+      if (!best) return;
+      var kind = best.field.kind;
+      out.push({ id: doc.id, title: doc.title, titleFr: doc.titleFr, level: doc.level, speakers: doc.speakers, href: doc.href,
+        score: best.score, matchDetail: best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order });
+    });
+    out.sort(function (a, b) { return b.score - a.score || a.order - b.order; });
+    return out;
   }
 
   /* Everyday expressions (expressions-data.js): one doc per expression. French (and the filled-in Listen
@@ -412,7 +459,7 @@
     opts = opts || {};
     var useSentences = opts.sentences !== false, useFuzzy = opts.fuzzy !== false;
     var qk = normalizeKey(query), qg = glueKey(query);
-    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], tables: [], expressions: [], total: 0, suggestion: null };
+    var res = { query: String(query == null ? "" : query), key: qk, typeQuery: null, verbs: [], topics: [], tables: [], expressions: [], dialogues: [], total: 0, suggestion: null };
     if (!qk) return res;
     var qt = tokens(qk);
     var best = {};
@@ -484,7 +531,8 @@
     res.topics = qk.length >= 2 ? searchTopics(index, qk, qt) : [];
     res.tables = searchTables(index, qk, qg, qt);
     res.expressions = searchExpressions(index, qk, qg, qt);
-    res.total = res.verbs.length + res.topics.length + res.tables.length + res.expressions.length;
+    res.dialogues = searchDialogues(index, qk, qg, qt);
+    res.total = res.verbs.length + res.topics.length + res.tables.length + res.expressions.length + res.dialogues.length;
     if (!res.total) res.suggestion = suggest(index, query);
     return res;
   }

@@ -14,13 +14,13 @@
   var TITLES = {
     home: "Home", lesson: "Lesson", browse: "Learn", practice: "Practice", flashcards: "Flashcards", conjugate: "Conjugate",
     sentences: "Sentences", choice: "Multiple choice", review: "Review my mistakes", progress: "Progress", credits: "Credits", topics: "Topics",
-    explain: "Explain", tables: "Grammar tables", expressions: "Everyday expressions"
+    explain: "Explain", tables: "Grammar tables", expressions: "Everyday expressions", dialogues: "Dialogues"
   };
   /* Which nav item is current for each view (§4, §7.2). Credits has none. */
   var NAV_OF = {
     home: "home", lesson: "learn", browse: "learn", practice: "practice", flashcards: "practice", conjugate: "practice",
     sentences: "practice", choice: "practice", review: "review", progress: "progress", topics: "topics", explain: "explain",
-    tables: "tables", expressions: "expressions"
+    tables: "tables", expressions: "expressions", dialogues: "dialogues"
   };
   var ACCENTS = ["é", "è", "ê", "ë", "à", "â", "ç", "î", "ï", "ô", "û", "ù", "œ", "'"];
   var DECKS = ["inf-meaning", "meaning-inf", "conj"];
@@ -28,6 +28,8 @@
   var EXPR = window.VT_EXPR || null;
   var EXPR_DATA = EXPR && window.VT_EXPRESSIONS && window.VT_EXPRESSIONS.expressions ? window.VT_EXPRESSIONS : null;
   var EXPR_DECKS = EXPR_DATA ? EXPR.DECKS : [];
+  /* Dialogues (dialogues-data.js + dialogues.js); null when either file is missing. */
+  var DLG_DATA = window.VT_DLG && window.VT_DIALOGUES && window.VT_DIALOGUES.dialogues ? window.VT_DIALOGUES : null;
 
   /* Nothing at this level may dereference DATA, STORE, L, SPEECH or state: init() checks them first (§16). */
   var LEARN = window.VT_LEARN;
@@ -151,38 +153,46 @@
      exists, else the device (computer) voice. word = true plays the native clip (the secondary
      "Native speaker (word only)" button); with neither a recording nor speechSynthesis the main
      button also falls back to the native clip when one exists. */
-  function play(text, key, word) {
-    var native = word || (!SPEECH.synthSupported() && !SPEECH.recordedToPlay(text));
+  var lastToastId = 0; // the most recent Listen toast (ctx.stopAudio marks it ended)
+  /* voiceId (optional): another recorded voice (Dialogues speakers); onEnd / onStart(ms) (optional): the
+     Dialogues player's callbacks; who (optional): the speaker's name, leads the toast. Every other caller
+     passes (text, key, word) only, so its toast text is unchanged. */
+  function play(text, key, word, voiceId, onEnd, onStart, who) {
+    var native = word || (!SPEECH.synthSupported() && !SPEECH.recordedToPlay(text, voiceId || null));
     var id = 0; // the toast for this click; a fallback re-toasts and updates it
     SPEECH.play(text, native ? key : null, function (res) {
       var shown = L.speakableText(text);
-      var opts = { awaitEnd: res.source !== "none", durationMs: soundMs(res, shown) };
-      if (res.source === "recorded") {
-        id = toast("Recorded voice (synthetic): " + shown + ".", "recorded", opts);
+      var ms = soundMs(res, shown);
+      var opts = { awaitEnd: res.source !== "none", durationMs: ms };
+      var said = window.VT_UI.listenToastText(res, shown, who, SPEECH.defaultVoiceId());
+      if (said !== null) {
+        id = toast(said, res.source, opts);
       } else if (res.source === "native") {
         var e = res.entry;
         var phrase = e.scope === "phrase";
         var says = L.normalize(e.said) !== L.normalize(shown) ? (phrase ? " (the recording says “" : " (the recording says only “") + e.said + "”)" : "";
         id = toast((phrase ? "Native speaker: " : "Native speaker, word only: ") + e.speaker + ", " + e.license + says + ".", "native", opts);
-      } else if (res.source === "computer") {
-        id = toast("Device voice" + (res.failed ? " (the recording could not be played)" : "") + ": " + shown + ".", "computer", opts);
       } else {
         id = toast("Audio isn't available in this browser.", null, opts);
       }
-    }, function () { window.VT_UI.toastEnded(id); });
+      lastToastId = id;
+      // may run twice (recorded → device fallback); the Dialogues player re-arms its watchdog
+      if (typeof onStart === "function") onStart(ms);
+    }, function () { window.VT_UI.toastEnded(id); if (typeof onEnd === "function") onEnd(); }, { voiceId: voiceId || null });
   }
 
   document.addEventListener("click", function (ev) {
     var btn = ev.target.closest ? ev.target.closest("button.listen, button.listen-word") : null;
     if (!btn || btn.disabled) return;
-    play(btn.getAttribute("data-text"), btn.getAttribute("data-key"), btn.classList.contains("listen-word"));
+    play(btn.getAttribute("data-text"), btn.getAttribute("data-key"), btn.classList.contains("listen-word"),
+      btn.getAttribute("data-voice"), null, null, btn.getAttribute("data-who"));
   });
 
-  function setListen(slotId, text, key) {
+  function setListen(slotId, text, key, voice) {
     var slot = $(slotId);
     clear(slot);
     if (!text) return;
-    var g = listenButton(text, key);
+    var g = listenButton(text, key, voice ? { voice: voice } : undefined);
     g.querySelector("button.listen").setAttribute("aria-keyshortcuts", "Alt+L L"); // §15.1
     slot.appendChild(g);
   }
@@ -274,6 +284,15 @@
       var note = $("voice-accent-note");
       note.textContent = SPEECH.accentNote(active);
       note.hidden = !note.textContent;
+      // Dialogues: a second recorded voice for some speakers (hidden when no extra voice is loaded).
+      var dn = $("voice-dialogue-note");
+      if (dn) {
+        var extraOn = SPEECH.extraVoices().length > 0;
+        dn.textContent = !extraOn ? "" : s.voiceSource === "device"
+          ? "With Device voice on, every speaker in the dialogues uses your device voice."
+          : "Dialogues use a second recorded voice (a synthetic male French voice) for some speakers, so you can tell who is talking. Everything else uses the voice above.";
+        dn.hidden = !extraOn;
+      }
       // Short header summary ("Amélie (Premium)") so the quality marker never gets cut off; the full name is in Settings.
       var q = active ? SPEECH.quality(active) : "";
       if (recCov && recCov.recorded && s.voiceSource === "recorded") $("voice-summary").textContent = " · Recorded voice";
@@ -726,7 +745,7 @@
   function renderBar(node, s) { window.VT_UI.sessionBar(node, s, openShortcuts); }
 
   /* ---------- keyboard shortcuts (§15.1): one document listener ---------- */
-  var SHORTCUT_VIEWS = ["flashcards", "conjugate", "sentences", "choice", "review"];
+  var SHORTCUT_VIEWS = ["flashcards", "conjugate", "sentences", "choice", "review", "dialogues"];
   var ALT_CODES = { KeyH: "h", KeyL: "l", KeyS: "s" };
 
   function isShown(node) { return !!node && !node.hidden && !node.disabled && node.getClientRects().length > 0; }
@@ -783,7 +802,9 @@
     var section = $("view-" + currentRoute);
     if (!section || section.hidden) return;
     var done = false;
-    if (currentRoute === "flashcards") {
+    if (currentRoute === "dialogues") {
+      done = !!(window.VT_VIEWS.dialogues && window.VT_VIEWS.dialogues.onKey && window.VT_VIEWS.dialogues.onKey(k, ev));
+    } else if (currentRoute === "flashcards") {
       if (k === "space" || k === "f") {
         if (isInteractive(ev.target)) return; // Space keeps its native action on controls
         done = clickIfShown($("flash-show"));
@@ -853,8 +874,8 @@
     if (panel && panel.scrollIntoView) panel.scrollIntoView({ block: "nearest" });
   }
 
-  function maybeAutoPlay(text, key) {
-    if (state.settings.autoPlayWrong && text) play(text, key);
+  function maybeAutoPlay(text, key, voice) {
+    if (state.settings.autoPlayWrong && text) play(text, key, false, voice || null);
   }
 
   function nextLabel(s) { return s.index + 1 >= s.length ? "See results" : "Next →"; }
@@ -1077,7 +1098,7 @@
         panelBox.appendChild(fp.node);
         n.feedback.className = "feedback visually-hidden " + (ui.result.correct ? "is-success" : "is-error");
         n.feedback.textContent = fp.live;
-        setListen(n.listen, item.listen.text, item.listen.key);
+        setListen(n.listen, item.listen.text, item.listen.key, item.listen.voice);
       } else {
         setFeedback(n.feedback, "", "");
         setListen(n.listen, null);
@@ -1100,7 +1121,7 @@
       var text = item.options[s.ui.selected];
       var ok = text === item.correct;
       var fam = item.family === "choice-infinitive" ? item.family : "choice-" + item.family;
-      var cls = ok || item.expr ? null : safeClassify(text, item, fam);
+      var cls = ok || item.expr || item.dialogue ? null : safeClassify(text, item, fam);
       record(item.key, ok);
       window.VT_SESSION.recordResult(s, item, ok, false);
       s.ui.answered = true;
@@ -1108,7 +1129,7 @@
       renderItem(s);
       n.next.focus();
       revealFeedback(n.form);
-      if (!ok) maybeAutoPlay(item.listen.text, item.listen.key);
+      if (!ok) maybeAutoPlay(item.listen.text, item.listen.key, item.listen.voice);
     });
     n.next.addEventListener("click", function () {
       var s = cfg.getSession();
@@ -2128,6 +2149,34 @@
         }))
       ])));
     }
+    // Dialogues: comprehension-quiz answers (dlg: stats) plus the listened / role-play records (state.dialogues).
+    if (DLG_DATA) {
+      var ds = window.VT_DLG.stats(state, DLG_DATA);
+      body.appendChild(el("h3", { text: "Dialogues" }));
+      body.appendChild(el("dl", { className: "totals" }, [
+        el("div", null, [el("dt", { text: "Quiz answers" }), el("dd", { text: String(ds.answered) })]),
+        el("div", null, [el("dt", { text: "Quiz accuracy" }), el("dd", { text: ds.answered ? Math.round((100 * ds.correct) / ds.answered) + "%" : "–" })]),
+        el("div", null, [el("dt", { text: "Questions mastered" }), el("dd", { text: ds.mastered + " of " + ds.total })])
+      ]));
+      body.appendChild(tableRegion("Dialogues", el("table", { className: "stats-table" }, [
+        el("caption", { text: "Listened, role-play and comprehension-quiz results per dialogue" }),
+        el("thead", null, [el("tr", null, ["Dialogue", "Listened", "Role-play best", "Quiz best", "Open"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+        el("tbody", null, window.VT_DLG.index(DLG_DATA).list.map(function (d) {
+          var b = ds.byDialogue[d.id];
+          var roles = d.speakers.map(function (sp) {
+            var r = Object.prototype.hasOwnProperty.call(b.roles, sp.id) ? b.roles[sp.id] : null;
+            return sp.name + " " + (r ? r.best + "%" : "–");
+          }).join(", ");
+          return el("tr", null, [
+            el("th", { scope: "row", text: d.number + ". " + d.title }),
+            el("td", { text: b.listened ? "Yes" : "–" }),
+            el("td", { text: roles }),
+            el("td", { text: b.quizBest >= 0 ? b.quizBest + "%" : "–" }),
+            el("td", null, [el("a", { href: "#dialogues/" + d.id, "aria-label": "Open the dialogue " + d.title, text: "Open" })])
+          ]);
+        }))
+      ])));
+    }
 
     body.appendChild(el("h3", { text: "Accuracy by verb" }));
     var rows = DATA.verbs.map(function (v) {
@@ -2164,6 +2213,7 @@
     filterKeys = [];
     PRACTICE.forEach(function (r) { if (views[r]) views[r].shownKey = null; });
     renderProgress();
+    if (window.VT_VIEWS.dialogues && window.VT_VIEWS.dialogues.onStateReplaced) window.VT_VIEWS.dialogues.onStateReplaced();
     showRegistered(currentRoute); // §3.1 rule 3 (no-op unless the visible view is registered)
     renderNotices();
     setFeedback($("progress-feedback"), "success", message);
@@ -2246,6 +2296,16 @@
         el("span", { className: "filename", text: recV.credits }), "."
       ]));
     }
+    // Other recorded voices (js/tts-manifest-<id>.js): the Dialogues speakers mapped to them.
+    SPEECH.extraVoices().forEach(function (xv) {
+      body.appendChild(el("h3", { text: xv.label }));
+      body.appendChild(el("p", null, [
+        "Some speakers in the Dialogues use a second recorded voice, also synthetic speech generated in advance with ",
+        el("a", { href: xv.modelUrl, text: xv.model }), ", licensed under ",
+        el("a", { href: xv.licenseUrl, text: xv.license }), ". It is not a recording of a person. " + xv.note + " Details are in ",
+        el("a", { href: xv.credits, text: xv.credits }), "."
+      ]));
+    });
     body.appendChild(el("h3", { text: "Native-speaker recordings" }));
     var keys = Object.keys(AUDIO);
     if (!keys.length) {
@@ -2431,7 +2491,7 @@
     lessonsById = LEARN.buildLessonsById(DATA.lessons);
     lessonOf = LEARN.buildLessonOf(DATA.lessons, DATA.verbs);
     try {
-      searchIndex = window.VT_SEARCH ? window.VT_SEARCH.buildIndex(DATA, window.TOPICS_DATA, window.VT_REFERENCE) : null;
+      searchIndex = window.VT_SEARCH ? window.VT_SEARCH.buildIndex(DATA, window.TOPICS_DATA, window.VT_REFERENCE, undefined, window.VT_DIALOGUES) : null;
     } catch (err) {
       searchIndex = null;
       console.error(err);
@@ -2461,10 +2521,15 @@
     ctx = {
       DATA: DATA, L: L, LEARN: LEARN, UI: window.VT_UI, SESSION: window.VT_SESSION, SPEECH: SPEECH,
       EXPRESSIONS: EXPR_DATA,
+      DIALOGUES: DLG_DATA,
       state: function () { return state; },
       save: save,
       record: record,
       play: play, listenButton: listenButton,
+      /* Dialogues: one line in a speaker's voice (cb: { onEnd, onStart, who }); stopAudio stops the sound and
+         marks its toast ended so it hides ~3 s later. */
+      playLine: function (text, voiceId, cb) { play(text, null, false, voiceId, cb && cb.onEnd, cb && cb.onStart, cb && cb.who); },
+      stopAudio: function () { SPEECH.stop(); window.VT_UI.toastEnded(lastToastId); },
       verbsById: verbsById, lessonsById: lessonsById, lessonOf: lessonOf,
       scopeVerbs: scopeVerbs, selectedVerbs: selectedVerbs, sessionKey: sessionKey, lengthFor: lengthFor,
       navigate: function (hash) { location.hash = hash; },

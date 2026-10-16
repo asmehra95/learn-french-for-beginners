@@ -1,0 +1,74 @@
+{
+ "normalization": "v1",
+ "generatedAt": "2026-10-16T06:54:12.821Z",
+ "count": 6,
+ "excluded": [],
+ "items": [
+  {
+   "key": "Bonjour, madame ! Vous avez choisi ?",
+   "speak": "Bonjour, madame ! Vous avez choisi ?",
+   "texts": [
+    "Bonjour, madame ! Vous avez choisi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "35b47dfa0263fe07"
+  },
+  {
+   "key": "Oui, bien sûr. Ça fait six euros cinquante.",
+   "speak": "Oui, bien sûr. Ça fait six euros cinquante.",
+   "texts": [
+    "Oui, bien sûr. Ça fait six euros cinquante."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "523350cb697fa4af"
+  },
+  {
+   "key": "Oui, pas de problème. Voilà. Bonne journée !",
+   "speak": "Oui, pas de problème. Voilà. Bonne journée !",
+   "texts": [
+    "Oui, pas de problème. Voilà. Bonne journée !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6fe654be97da27d4"
+  },
+  {
+   "key": "Sur place ou à emporter ?",
+   "speak": "Sur place ou à emporter ?",
+   "texts": [
+    "Sur place ou à emporter ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d6be51369bdd529f"
+  },
+  {
+   "key": "Très bien. Je vous apporte ça tout de suite.",
+   "speak": "Très bien. Je vous apporte ça tout de suite.",
+   "texts": [
+    "Très bien. Je vous apporte ça tout de suite."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3bc6f048cff8a4d7"
+  },
+  {
+   "key": "Un café. Et avec ça ?",
+   "speak": "Un café. Et avec ça ?",
+   "texts": [
+    "Un café. Et avec ça ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e90992791f657abc"
+  }
+ ]
+}

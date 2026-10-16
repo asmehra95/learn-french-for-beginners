@@ -239,3 +239,43 @@ test("static: views-search.js uses no innerHTML, no inline style attribute, and 
   assert.ok(!/setAttribute\(\s*["']style/.test(VIEW));
   assert.ok(!/typeLine|typeBadges|typeCategory|pronominal/.test(VIEW));
 });
+
+/* ---------- Dialogues (design §6) ---------- */
+var DLG_DATA = require("../js/dialogues-data.js");
+var EXPR_DATA = require("../js/expressions-data.js");
+global.window.VT_EXPR = require("../js/expressions.js");
+var FULL = S.buildIndex(DATA, TOPICS, require("../js/reference-data.js"), EXPR_DATA, DLG_DATA);
+function qd(text) { return S.search(FULL, text); }
+function dialogueOk(r) {
+  return !!(r.dialogues.length && r.dialogues[0].score >= 85 && !(r.verbs[0] && r.verbs[0].score >= S.SCORES.form) &&
+    !r.expressions.length);
+}
+test("dialogues: cafe / café / l'addition / laddition / addition / dialogue / conversation find at-the-cafe", function () {
+  ["cafe", "café", "l'addition", "laddition", "addition", "dialogue", "conversation", "au café", "role-play"].forEach(function (t) {
+    var r = qd(t);
+    assert.ok(r.dialogues.some(function (d) { return d.id === "at-the-cafe"; }), t);
+    assert.equal(r.dialogues[0].href, "#dialogues/at-the-cafe");
+    assert.equal(r.total, r.verbs.length + r.topics.length + r.tables.length + r.expressions.length + r.dialogues.length);
+  });
+  assert.equal(qd("addition").dialogues[0].matchDetail, "line: l'addition");
+});
+test("dialogues: 'dialogue' and 'conversation' put Dialogues first; 'l'addition' keeps the expression first; 'cafe' includes it", function () {
+  assert.equal(dialogueOk(qd("dialogue")), true);
+  assert.equal(dialogueOk(qd("conversation")), true);
+  var add = qd("l'addition");
+  assert.equal(dialogueOk(add), false);
+  assert.equal(add.expressions[0].id, "laddition");
+  assert.ok(qd("cafe").dialogues.length >= 1);
+});
+test("dialogues: a verb query (parler) is unchanged and the 4-argument index has no dialogues", function () {
+  assert.deepEqual(ids(qd("parler")), ids(q("parler")));
+  assert.equal(qd("parler").dialogues.length, 0);
+  assert.deepEqual(q("cafe").dialogues, []);
+});
+test("static: views-search.js renders sg-dia in the §6 order and Enter chains include dialogue", function () {
+  assert.ok(VIEW.indexOf('group("sg-dia", "Dialogues ("') !== -1);
+  assert.ok(VIEW.indexOf("if (dialoguesFirst(res))        { diaGroup(); verbGroup(); tableGroup(); exprGroup(); }") !== -1);
+  assert.ok(VIEW.indexOf('dialoguesFirst(last)   ? ["dialogue", "open", "table", "expression", "topic"]') !== -1);
+  assert.ok(VIEW.indexOf('expressionsFirst(last) ? ["expression", "table", "open", "dialogue", "topic"]') !== -1);
+  assert.ok(HTML.indexOf("everyday expressions, dialogues and the topic lessons</label>") !== -1);
+});

@@ -2,10 +2,14 @@
 /* Build tts-tools/corpus.json: every French string a Listen button in the verb trainer can speak.
    Loads the real site scripts (no copies), enumerates the Listen call sites (verbs, topics and the
    Grammar tables: list cells, grid cells, examples; `say` wins over `fr`; the everyday expressions:
-   VT_EXPR.speakText and the example), and normalizes with
+   VT_EXPR.speakText and the example; the dialogues: VT_DLG.listenEntries), and normalizes with
    VT_LOGIC.ttsSpeak / VT_LOGIC.ttsKey, the single source of truth shared with the browser.
-   Usage: node tts-tools/extract-corpus.js [--out <file>] [--site <verb-trainer dir>]
-   Exports collect(siteDir) for the site's Node tests. No dependencies. */
+   One corpus per voice: the default voice (qwen3-fr-bf16) gets every category plus the dialogue texts with
+   no voice or the default voice; another voice (--voice <id>) gets only the dialogue lines of the speakers
+   mapped to it (speakers[].voice in js/dialogues-data.js).
+   Usage: node tts-tools/extract-corpus.js [--voice <id>] [--out <file>] [--site <verb-trainer dir>]
+     (default --out: corpus.json for the default voice, corpus-<id>.json for any other voice)
+   Exports collect(siteDir, opts) for the site's Node tests. No dependencies. */
 "use strict";
 const fs = require("fs");
 const path = require("path");
@@ -13,6 +17,7 @@ const crypto = require("crypto");
 
 const DEFAULT_SITE = path.join(__dirname, "..", "verb-trainer");
 const NORMALIZATION = "v1";
+const DEFAULT_VOICE = "qwen3-fr-bf16";
 // English-only topic answers: never spoken by a French voice.
 const EXCLUDED = new Set(["formal", "standard", "casual"]);
 const PREVIEW_TEXT = "Bonjour, nous avons deux frères."; // speech.js PREVIEW_TEXT
@@ -28,7 +33,7 @@ function loadSite(siteDir) {
   sandbox.window = sandbox;
   vm.createContext(sandbox);
   ["data.js", "data-100.js", "verb-types.js", "topics-data.js", "reference-data.js", "merge-data.js", "logic.js",
-    "expressions-data.js", "expressions.js", "topics.js"].forEach(f => {
+    "expressions-data.js", "expressions.js", "dialogues-data.js", "dialogues.js", "topics.js"].forEach(f => {
     const file = path.join(siteDir, "js", f);
     vm.runInContext(fs.readFileSync(file, "utf8"), sandbox, { filename: file });
   });
@@ -36,7 +41,8 @@ function loadSite(siteDir) {
 }
 
 /** Returns { items:[{key, speak, texts, categories, hash}], excluded:[...] } sorted by key. */
-function collect(siteDir) {
+function collect(siteDir, opts) {
+  const voice = (opts && opts.voice) || DEFAULT_VOICE;
   const w = loadSite(siteDir || DEFAULT_SITE);
   const D = w.VERB_DATA, T = w.TOPICS_DATA, L = w.VT_LOGIC, TOP = w.VT_TOPICS;
   const map = new Map();
@@ -50,6 +56,14 @@ function collect(siteDir) {
     if (!it) { it = { key, speak: L.ttsSpeak(raw), texts: [], categories: [] }; map.set(key, it); }
     if (it.texts.indexOf(String(raw)) === -1) it.texts.push(String(raw));
     if (it.categories.indexOf(cat) === -1) it.categories.push(cat);
+  }
+  const DIA = w.VT_DIALOGUES, DLG = w.VT_DLG;
+  if (!DIA || !DLG) throw new Error("VT_DIALOGUES missing: js/dialogues-data.js did not load");
+  // Mirrors views-dialogues.js: one Listen per line (its speaker's voice), vocab item and notice example (default voice).
+  const dialogueEntries = DLG.listenEntries(DIA);
+  if (voice !== DEFAULT_VOICE) {
+    dialogueEntries.filter(e => e.voice === voice).forEach(e => add(e.category, e.text));
+    return finish(map, excluded);
   }
   D.verbs.forEach(v => {
     add("verb-infinitive", v.infinitive);
@@ -80,7 +94,10 @@ function collect(siteDir) {
   // Mirrors views-expressions.js: listen(EXPR.speakText(e)), listen(e.example.fr).
   EX.expressions.forEach(e => { add("expression", XE.speakText(e)); add("expression-example", e.example.fr); });
   add("settings-preview", PREVIEW_TEXT);
-
+  dialogueEntries.filter(e => e.voice === null || e.voice === DEFAULT_VOICE).forEach(e => add(e.category, e.text));
+  return finish(map, excluded);
+}
+function finish(map, excluded) {
   const items = [...map.values()].sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
   const seen = new Map();
   items.forEach(it => {
@@ -95,8 +112,9 @@ function main() {
   const args = process.argv.slice(2);
   const opt = (name, def) => { const i = args.indexOf(name); return i === -1 ? def : args[i + 1]; };
   const site = path.resolve(opt("--site", DEFAULT_SITE));
-  const out = path.resolve(opt("--out", path.join(__dirname, "corpus.json")));
-  const { items, excluded } = collect(site);
+  const voice = opt("--voice", DEFAULT_VOICE);
+  const out = path.resolve(opt("--out", path.join(__dirname, voice === DEFAULT_VOICE ? "corpus.json" : "corpus-" + voice + ".json")));
+  const { items, excluded } = collect(site, { voice });
   const byCat = {};
   items.forEach(it => { byCat[it.categories[0]] = (byCat[it.categories[0]] || 0) + 1; });
   const doc = { normalization: NORMALIZATION, generatedAt: new Date().toISOString(), count: items.length, excluded, items };
@@ -105,5 +123,5 @@ function main() {
     chars: items.reduce((a, it) => a + it.key.length, 0) }, null, 1));
 }
 
-module.exports = { collect, hashKey, NORMALIZATION, EXCLUDED };
+module.exports = { collect, hashKey, NORMALIZATION, EXCLUDED, DEFAULT_VOICE };
 if (require.main === module) main();

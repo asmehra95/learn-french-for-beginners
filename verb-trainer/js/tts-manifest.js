@@ -16,13 +16,25 @@ window.VT_TTS = {
    "synthetic": true,
    "note": "One synthetic voice designed from a text description with Qwen3-TTS VoiceDesign (\"native Parisian female voice, clear and calm, teacher's diction\"); no real person was cloned.",
    "credits": "audio/tts/qwen3-fr-bf16/CREDITS.md",
-   "generatedAt": "2026-10-14T19:33:17+00:00"
+   "generatedAt": "2026-10-16T06:55:33+00:00"
   }
  },
  "coverage": {
-  "total": 2196,
-  "recorded": 2188,
+  "total": 2207,
+  "recorded": 2198,
   "byCategory": {
+   "dialogue-example": {
+    "recorded": 1,
+    "total": 1
+   },
+   "dialogue-line": {
+    "recorded": 4,
+    "total": 4
+   },
+   "dialogue-vocab": {
+    "recorded": 5,
+    "total": 6
+   },
    "expression": {
     "recorded": 98,
     "total": 98
@@ -196,6 +208,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/9172e8eec99f144f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.58
+  },
+  "Bonjour ! Oui, je voudrais un café, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-bf16/3cddddc8cc4d882b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.26
   },
   "Bonjour ! Vous parlez anglais ? Je parle un peu français.": {
    "file": "audio/tts/qwen3-fr-bf16/cd9291b8c5c8f639.mp3",
@@ -876,6 +893,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/3b1073b7e074af8e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
+  },
+  "Excusez-moi ! L'addition, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-bf16/00ddd5eecc9d8573.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.56
   },
   "Excusez-moi, je suis perdue. La gare, c'est par où ?": {
    "file": "audio/tts/qwen3-fr-bf16/bd534fefd3fa5fd4.mp3",
@@ -3057,6 +3079,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.66
   },
+  "Sur place, merci.": {
+   "file": "audio/tts/qwen3-fr-bf16/43f86acf24e17f64.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.58
+  },
   "T'amuses-tu ?": {
    "file": "audio/tts/qwen3-fr-bf16/8560946046fa6c95.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3126,6 +3153,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/173213fa63a70ef8.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.9
+  },
+  "Tu as choisi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/d9af4a6e94b5cdc3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
   },
   "Tu as eu le poste ? C'est génial !": {
    "file": "audio/tts/qwen3-fr-bf16/82aefb436729a087.mp3",
@@ -3412,6 +3444,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.56
   },
+  "Un croissant aussi, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-bf16/bab0598fa105667e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.64
+  },
   "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.": {
    "file": "audio/tts/qwen3-fr-bf16/35ed7e24389666a4.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3456,6 +3493,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/1c448b72ef77b762.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.06
+  },
+  "Vous avez choisi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/41e37084dd70a7c9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
   },
   "Vous avez des croissants aujourd'hui ?": {
    "file": "audio/tts/qwen3-fr-bf16/5fbde291065c1fa9.mp3",
@@ -7487,6 +7529,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
   },
+  "je voudrais": {
+   "file": "audio/tts/qwen3-fr-bf16/a34b11de469c1d71.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
+  "je vous apporte": {
+   "file": "audio/tts/qwen3-fr-bf16/bb5249f134d735c7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
   "je voyage": {
    "file": "audio/tts/qwen3-fr-bf16/4aa83031fef35b66.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7531,6 +7583,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/2ec2c7eef805f9fa.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.54
+  },
+  "l'addition": {
+   "file": "audio/tts/qwen3-fr-bf16/8b64682e0084922a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "l'année dernière": {
    "file": "audio/tts/qwen3-fr-bf16/3ef0a9c3ac707592.mp3",
@@ -10086,6 +10143,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/792838da2162b50c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
+  },
+  "un café": {
+   "file": "audio/tts/qwen3-fr-bf16/2a5ec4ab9b799752.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
   },
   "un film intéressant": {
    "file": "audio/tts/qwen3-fr-bf16/fc7ff584d6a04da7.mp3",
