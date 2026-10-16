@@ -1,7 +1,7 @@
 {
  "normalization": "v1",
- "generatedAt": "2026-10-16T06:55:34.987Z",
- "count": 2207,
+ "generatedAt": "2026-10-16T16:42:35.244Z",
+ "count": 2515,
  "excluded": [
   "casual",
   "formal",
@@ -18,6 +18,17 @@
     "topic-part-answer"
    ],
    "hash": "c7ae6b9a5af1ce2e"
+  },
+  {
+   "key": "Ah, voilà mon bus ! Bonne journée, monsieur Petit.",
+   "speak": "Ah, voilà mon bus ! Bonne journée, monsieur Petit.",
+   "texts": [
+    "Ah, voilà mon bus ! Bonne journée, monsieur Petit."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ff5e8cebef5bf7b2"
   },
   {
    "key": "Aimes-tu le chocolat ?",
@@ -40,6 +51,39 @@
     "expression-example"
    ],
    "hash": "286fefbd6c78a364"
+  },
+  {
+   "key": "Alors",
+   "speak": "Alors",
+   "texts": [
+    "Alors"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "dd946d7b765d0cc3"
+  },
+  {
+   "key": "Alors, prenez ces pastilles. Vous en prenez une toutes les trois heures.",
+   "speak": "Alors, prenez ces pastilles. Vous en prenez une toutes les trois heures.",
+   "texts": [
+    "Alors, prenez ces pastilles. Vous en prenez une toutes les trois heures."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "355b7b6197e690be"
+  },
+  {
+   "key": "Alors, qu'est-ce que tu fais pendant ton temps libre ?",
+   "speak": "Alors, qu'est-ce que tu fais pendant ton temps libre ?",
+   "texts": [
+    "Alors, qu'est-ce que tu fais pendant ton temps libre ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ec0dae5ade1ecc2f"
   },
   {
    "key": "Alors, tu viens ou pas ?",
@@ -111,6 +155,17 @@
    "hash": "81311bfc07db69c3"
   },
   {
+   "key": "Attendez un instant",
+   "speak": "Attendez un instant",
+   "texts": [
+    "Attendez un instant"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5dc01e27729aabc5"
+  },
+  {
    "key": "Au feu rouge, tournez à droite.",
    "speak": "Au feu rouge, tournez à droite.",
    "texts": [
@@ -150,7 +205,8 @@
     "Avec plaisir"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "1bcd42b6979858eb"
   },
@@ -221,13 +277,58 @@
    "hash": "8e0e878272cb29f4"
   },
   {
+   "key": "Bien sûr : à dix heures ou à seize heures.",
+   "speak": "Bien sûr : à dix heures ou à seize heures.",
+   "texts": [
+    "Bien sûr : à dix heures ou à seize heures."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5db3612ec70ca9cc"
+  },
+  {
+   "key": "Bien sûr, viens. Voici Paul. C'est notre développeur.",
+   "speak": "Bien sûr, viens. Voici Paul. C'est notre développeur.",
+   "texts": [
+    "Bien sûr, viens. Voici Paul. C'est notre développeur."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "37f91bdff23cc7db"
+  },
+  {
+   "key": "Bien sûr. Je peux vous proposer mardi ou jeudi.",
+   "speak": "Bien sûr. Je peux vous proposer mardi ou jeudi.",
+   "texts": [
+    "Bien sûr. Je peux vous proposer mardi ou jeudi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "776aa610ba423453"
+  },
+  {
+   "key": "Bienvenue ! Ici, tout le monde se tutoie. Ça te va ?",
+   "speak": "Bienvenue ! Ici, tout le monde se tutoie. Ça te va ?",
+   "texts": [
+    "Bienvenue ! Ici, tout le monde se tutoie. Ça te va ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "afce5d0210dc4e78"
+  },
+  {
    "key": "Bon appétit !",
    "speak": "Bon appétit !",
    "texts": [
     "Bon appétit !"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "2d26c47fd1e96a34"
   },
@@ -265,6 +366,17 @@
    "hash": "9172e8eec99f144f"
   },
   {
+   "key": "Bonjour ! Je voudrais un kilo de tomates, s'il vous plaît.",
+   "speak": "Bonjour ! Je voudrais un kilo de tomates, s'il vous plaît.",
+   "texts": [
+    "Bonjour ! Je voudrais un kilo de tomates, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "129ba373381cd725"
+  },
+  {
    "key": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
    "speak": "Bonjour ! Oui, je voudrais un café, s'il vous plaît.",
    "texts": [
@@ -274,6 +386,17 @@
     "dialogue-line"
    ],
    "hash": "3cddddc8cc4d882b"
+  },
+  {
+   "key": "Bonjour ! Tu es Mehdi ? Moi, c'est Aurélie, je suis responsable de l'équipe.",
+   "speak": "Bonjour ! Tu es Mehdi ? Moi, c'est Aurélie, je suis responsable de l'équipe.",
+   "texts": [
+    "Bonjour ! Tu es Mehdi ? Moi, c'est Aurélie, je suis responsable de l'équipe."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "060883e2476a75b2"
   },
   {
    "key": "Bonjour ! Vous parlez anglais ? Je parle un peu français.",
@@ -331,6 +454,83 @@
    "hash": "f699eb6acc170330"
   },
   {
+   "key": "Bonjour, monsieur ! Qu'est-ce que je vous sers ?",
+   "speak": "Bonjour, monsieur ! Qu'est-ce que je vous sers ?",
+   "texts": [
+    "Bonjour, monsieur ! Qu'est-ce que je vous sers ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d4da906e623baf7c"
+  },
+  {
+   "key": "Bonjour, monsieur Petit ! Comment allez-vous ?",
+   "speak": "Bonjour, monsieur Petit ! Comment allez-vous ?",
+   "texts": [
+    "Bonjour, monsieur Petit ! Comment allez-vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d4d8f10525151974"
+  },
+  {
+   "key": "Bonjour, monsieur. Asseyez-vous. Qu'est-ce qui ne va pas ?",
+   "speak": "Bonjour, monsieur. Asseyez-vous. Qu'est-ce qui ne va pas ?",
+   "texts": [
+    "Bonjour, monsieur. Asseyez-vous. Qu'est-ce qui ne va pas ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d1d0f1eb7a0e5364"
+  },
+  {
+   "key": "Bonjour, monsieur. Excusez-moi, je voudrais voir le responsable.",
+   "speak": "Bonjour, monsieur. Excusez-moi, je voudrais voir le responsable.",
+   "texts": [
+    "Bonjour, monsieur. Excusez-moi, je voudrais voir le responsable."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ca7384b6c6c11768"
+  },
+  {
+   "key": "Bonjour, monsieur. Je peux vous aider ?",
+   "speak": "Bonjour, monsieur. Je peux vous aider ?",
+   "texts": [
+    "Bonjour, monsieur. Je peux vous aider ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "443de5fed8775491"
+  },
+  {
+   "key": "Bonjour, monsieur. Qu'est-ce que je peux faire pour vous ?",
+   "speak": "Bonjour, monsieur. Qu'est-ce que je peux faire pour vous ?",
+   "texts": [
+    "Bonjour, monsieur. Qu'est-ce que je peux faire pour vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "aec6831596cf616f"
+  },
+  {
+   "key": "Bonjour, monsieur. Vous partez quand ?",
+   "speak": "Bonjour, monsieur. Vous partez quand ?",
+   "texts": [
+    "Bonjour, monsieur. Vous partez quand ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7bc68a3010e684bc"
+  },
+  {
    "key": "Bonjour, nous avons deux frères.",
    "speak": "Bonjour, nous avons deux frères.",
    "texts": [
@@ -342,13 +542,36 @@
    "hash": "ac742f86c538eafd"
   },
   {
+   "key": "Bonne idée. Après, je t'explique ton premier projet.",
+   "speak": "Bonne idée. Après, je t'explique ton premier projet.",
+   "texts": [
+    "Bonne idée. Après, je t'explique ton premier projet."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a5038725fb5ee6b6"
+  },
+  {
+   "key": "Bonne idée. Je vais réserver une table pour vingt heures.",
+   "speak": "Bonne idée. Je vais réserver une table pour vingt heures.",
+   "texts": [
+    "Bonne idée. Je vais réserver une table pour vingt heures."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "92c28eaeb3b5acc1"
+  },
+  {
    "key": "Bonne journée",
    "speak": "Bonne journée",
    "texts": [
     "Bonne journée"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "9450d5c8f73e8105"
   },
@@ -392,7 +615,8 @@
     "Bonne soirée"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "42aac610d9842bd7"
   },
@@ -403,9 +627,21 @@
     "Bonsoir"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "a31b2e7fc2ace72c"
+  },
+  {
+   "key": "Bonsoir ! Je m'appelle Léa. Et vous ?",
+   "speak": "Bonsoir ! Je m'appelle Léa. Et vous ?",
+   "texts": [
+    "Bonsoir ! Je m'appelle Léa. Et vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "91cd23c7753f65db"
   },
   {
    "key": "Bonsoir, monsieur !",
@@ -419,6 +655,17 @@
    "hash": "acd4ecfbec605a74"
   },
   {
+   "key": "Bonsoir, monsieur ! Bienvenue à l'hôtel.",
+   "speak": "Bonsoir, monsieur ! Bienvenue à l'hôtel.",
+   "texts": [
+    "Bonsoir, monsieur ! Bienvenue à l'hôtel."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e8bcb4464fe966a0"
+  },
+  {
    "key": "Bonsoir, vous avez une table pour quatre ?",
    "speak": "Bonsoir, vous avez une table pour quatre ?",
    "texts": [
@@ -428,6 +675,50 @@
     "expression-example"
    ],
    "hash": "a5b2c864152a3da4"
+  },
+  {
+   "key": "Bref",
+   "speak": "Bref",
+   "texts": [
+    "Bref"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "6a91945f8cebeb47"
+  },
+  {
+   "key": "Buvez-en beaucoup.",
+   "speak": "Buvez-en beaucoup.",
+   "texts": [
+    "Buvez-en beaucoup."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "8dbed208e00ed675"
+  },
+  {
+   "key": "C'est Sarah. Elle est ingénieure, elle vient de Lyon.",
+   "speak": "C'est Sarah. Elle est ingénieure, elle vient de Lyon.",
+   "texts": [
+    "C'est Sarah. Elle est ingénieure, elle vient de Lyon."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ae6aff84f1d42aaa"
+  },
+  {
+   "key": "C'est assez long. Pourriez-vous plutôt me l'échanger ou me rembourser ?",
+   "speak": "C'est assez long. Pourriez-vous plutôt me l'échanger ou me rembourser ?",
+   "texts": [
+    "C'est assez long. Pourriez-vous plutôt me l'échanger ou me rembourser ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "96c76aa9c3bba375"
   },
   {
    "key": "C'est beau !",
@@ -458,9 +749,21 @@
     "C'est combien ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "79b8e7f73b6e55ba"
+  },
+  {
+   "key": "C'est génial",
+   "speak": "C'est génial",
+   "texts": [
+    "C'est génial"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "b1bf17821df4cfde"
   },
   {
    "key": "C'est génial !",
@@ -472,6 +775,61 @@
     "expression"
    ],
    "hash": "925857efa652f4d2"
+  },
+  {
+   "key": "C'est génial ! Ma grand-mère aussi habite à la campagne.",
+   "speak": "C'est génial ! Ma grand-mère aussi habite à la campagne.",
+   "texts": [
+    "C'est génial ! Ma grand-mère aussi habite à la campagne."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6a9ca298425a3bd1"
+  },
+  {
+   "key": "C'est génial ! Moi, j'adore la lecture et je cours trois fois par semaine.",
+   "speak": "C'est génial ! Moi, j'adore la lecture et je cours trois fois par semaine.",
+   "texts": [
+    "C'est génial ! Moi, j'adore la lecture et je cours trois fois par semaine."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0705340ecc009b50"
+  },
+  {
+   "key": "C'est l'appartement que j'ai vu.",
+   "speak": "C'est l'appartement que j'ai vu.",
+   "texts": [
+    "C'est l'appartement que j'ai vu."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "707bff270356d52b"
+  },
+  {
+   "key": "C'est la chambre qui donne sur la cour.",
+   "speak": "C'est la chambre qui donne sur la cour.",
+   "texts": [
+    "C'est la chambre qui donne sur la cour."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "ce89a7a1b4223f07"
+  },
+  {
+   "key": "C'est la grippe. Vous devez rester au lit pendant trois jours.",
+   "speak": "C'est la grippe. Vous devez rester au lit pendant trois jours.",
+   "texts": [
+    "C'est la grippe. Vous devez rester au lit pendant trois jours."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "05a860565c625d00"
   },
   {
    "key": "C'est le deux mai.",
@@ -496,6 +854,17 @@
    "hash": "aeb5ff1bc5d21f65"
   },
   {
+   "key": "C'est le quartier où j'habite.",
+   "speak": "C'est le quartier où j'habite.",
+   "texts": [
+    "C'est le quartier où j'habite."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "a1c0dc36f4ced314"
+  },
+  {
    "key": "C'est loin ?",
    "speak": "C'est loin ?",
    "texts": [
@@ -507,6 +876,28 @@
    "hash": "9be6364150be0be6"
   },
   {
+   "key": "C'est loin d'ici ?",
+   "speak": "C'est loin d'ici ?",
+   "texts": [
+    "C'est loin d'ici ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "34979dc273b07a9a"
+  },
+  {
+   "key": "C'est ma sœur et son mari.",
+   "speak": "C'est ma sœur et son mari.",
+   "texts": [
+    "C'est ma sœur et son mari."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "e4fd358d8a0fd75e"
+  },
+  {
    "key": "C'est mon amie Claire.",
    "speak": "C'est mon amie Claire.",
    "texts": [
@@ -516,6 +907,50 @@
     "table-example"
    ],
    "hash": "5106eeef66d19439"
+  },
+  {
+   "key": "C'est mon frère et sa femme.",
+   "speak": "C'est mon frère et sa femme.",
+   "texts": [
+    "C'est mon frère et sa femme."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "d1bea27633581925"
+  },
+  {
+   "key": "C'est mon frère, Karim, et sa femme, Julie.",
+   "speak": "C'est mon frère, Karim, et sa femme, Julie.",
+   "texts": [
+    "C'est mon frère, Karim, et sa femme, Julie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "be1e9f8dd7b9fc8c"
+  },
+  {
+   "key": "C'est notre développeur.",
+   "speak": "C'est notre développeur.",
+   "texts": [
+    "C'est notre développeur."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "2ec0ce3906cb3bd1"
+  },
+  {
+   "key": "C'est noté. C'est à quel nom ?",
+   "speak": "C'est noté. C'est à quel nom ?",
+   "texts": [
+    "C'est noté. C'est à quel nom ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "82fb4ca5a19e2e7d"
   },
   {
    "key": "C'est pas grave",
@@ -538,6 +973,17 @@
     "table-example"
    ],
    "hash": "f902d84d45419e83"
+  },
+  {
+   "key": "C'est quand même cher. Il faut payer une caution ?",
+   "speak": "C'est quand même cher. Il faut payer une caution ?",
+   "texts": [
+    "C'est quand même cher. Il faut payer une caution ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a48adc41bb077f0d"
   },
   {
    "key": "C'est tout",
@@ -617,6 +1063,17 @@
    "hash": "477b4039832aed44"
   },
   {
+   "key": "C'est à quel nom ?",
+   "speak": "C'est à quel nom ?",
+   "texts": [
+    "C'est à quel nom ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f90af6a96242d026"
+  },
+  {
    "key": "Ce café est délicieux.",
    "speak": "Ce café est délicieux.",
    "texts": [
@@ -637,6 +1094,17 @@
     "topic-listen"
    ],
    "hash": "15b9f3965dea55b8"
+  },
+  {
+   "key": "Ce médicament, trois fois par jour. Et buvez beaucoup d'eau.",
+   "speak": "Ce médicament, trois fois par jour. Et buvez beaucoup d'eau.",
+   "texts": [
+    "Ce médicament, trois fois par jour. Et buvez beaucoup d'eau."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c7282c1dda15490e"
   },
   {
    "key": "Ce n'est pas la mer à boire",
@@ -692,6 +1160,17 @@
     "expression-example"
    ],
    "hash": "e74449969b28d270"
+  },
+  {
+   "key": "Ce sont tes parents ?",
+   "speak": "Ce sont tes parents ?",
+   "texts": [
+    "Ce sont tes parents ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "e901c40cfc895c30"
   },
   {
    "key": "Ces films sont super. Lesquels préfères-tu ?",
@@ -867,7 +1346,8 @@
     "Comment allez-vous ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "dd072d9d411f2c43"
   },
@@ -935,9 +1415,21 @@
     "Comment ça s'écrit ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "c6b4ca91fecf4cc3"
+  },
+  {
+   "key": "Continuez tout droit",
+   "speak": "Continuez tout droit",
+   "texts": [
+    "Continuez tout droit"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "9322f690b4edda8e"
   },
   {
    "key": "Couche-toi !",
@@ -961,6 +1453,39 @@
     "expression"
    ],
    "hash": "974eda2bc114425a"
+  },
+  {
+   "key": "D'accord. Je vais réfléchir et je vous rappelle demain.",
+   "speak": "D'accord. Je vais réfléchir et je vous rappelle demain.",
+   "texts": [
+    "D'accord. Je vais réfléchir et je vous rappelle demain."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5381bcff75be9e22"
+  },
+  {
+   "key": "D'accord. Je vais vous examiner. Respirez fort… Vous dormez bien ?",
+   "speak": "D'accord. Je vais vous examiner. Respirez fort… Vous dormez bien ?",
+   "texts": [
+    "D'accord. Je vais vous examiner. Respirez fort… Vous dormez bien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "06999e61c31d1f96"
+  },
+  {
+   "key": "D'accord. Je voudrais le même modèle, s'il vous plaît.",
+   "speak": "D'accord. Je voudrais le même modèle, s'il vous plaît.",
+   "texts": [
+    "D'accord. Je voudrais le même modèle, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2db28ec42cdb05e1"
   },
   {
    "key": "De quoi",
@@ -1002,7 +1527,8 @@
     "De rien"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "a85d1112c76c9476"
   },
@@ -1051,6 +1577,29 @@
    "hash": "b20e88dc55daff36"
   },
   {
+   "key": "Du coup",
+   "speak": "Du coup",
+   "texts": [
+    "Du coup"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "a55400a6b838ec04"
+  },
+  {
+   "key": "Du coup, tu pourrais me jouer quelque chose un jour ?",
+   "speak": "Du coup, tu pourrais me jouer quelque chose un jour ?",
+   "texts": [
+    "Du coup, tu pourrais me jouer quelque chose un jour ?"
+   ],
+   "categories": [
+    "dialogue-line",
+    "dialogue-example"
+   ],
+   "hash": "d789797016640b52"
+  },
+  {
    "key": "Dépêchez-vous !",
    "speak": "Dépêchez-vous !",
    "texts": [
@@ -1072,6 +1621,17 @@
     "expression-example"
    ],
    "hash": "9e1f97bbe89a29f1"
+  },
+  {
+   "key": "Elle a quatre ans",
+   "speak": "Elle a quatre ans",
+   "texts": [
+    "Elle a quatre ans"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "89921e3e5d358304"
   },
   {
    "key": "Elle a une voiture.",
@@ -1116,6 +1676,39 @@
     "table-example"
    ],
    "hash": "7965b614e67ebb0f"
+  },
+  {
+   "key": "Elle est ingénieure",
+   "speak": "Elle est ingénieure",
+   "texts": [
+    "Elle est ingénieure"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2ade0175b5f5311f"
+  },
+  {
+   "key": "Elle est ingénieure.",
+   "speak": "Elle est ingénieure.",
+   "texts": [
+    "Elle est ingénieure."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "09a99e8d51cbfb25"
+  },
+  {
+   "key": "Elle est mignonne",
+   "speak": "Elle est mignonne",
+   "texts": [
+    "Elle est mignonne"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1d0637efc20f55e7"
   },
   {
    "key": "Elle est à la gare.",
@@ -1204,6 +1797,17 @@
     "topic-listen"
    ],
    "hash": "ca7f759fff350740"
+  },
+  {
+   "key": "Elle ne marche plus.",
+   "speak": "Elle ne marche plus.",
+   "texts": [
+    "Elle ne marche plus."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "c9990e0d47b28337"
   },
   {
    "key": "Elle ne se souvient pas de moi.",
@@ -1429,6 +2033,28 @@
    "hash": "ee35851a0498aefe"
   },
   {
+   "key": "En bleu, non, désolée. Mais je l'ai en L en noir.",
+   "speak": "En bleu, non, désolée. Mais je l'ai en L en noir.",
+   "texts": [
+    "En bleu, non, désolée. Mais je l'ai en L en noir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c89b9dff8872b78c"
+  },
+  {
+   "key": "En face de la poste. Merci beaucoup, monsieur !",
+   "speak": "En face de la poste. Merci beaucoup, monsieur !",
+   "texts": [
+    "En face de la poste. Merci beaucoup, monsieur !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f5638cca034e8526"
+  },
+  {
    "key": "En fait, je ne suis pas d'ici.",
    "speak": "En fait, je ne suis pas d'ici.",
    "texts": [
@@ -1443,12 +2069,25 @@
    "key": "Enchanté",
    "speak": "Enchanté",
    "texts": [
-    "Enchanté(e)"
+    "Enchanté(e)",
+    "Enchanté"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "072566dbb3cd7887"
+  },
+  {
+   "key": "Enchantée ! Vous habitez dans l'immeuble ?",
+   "speak": "Enchantée ! Vous habitez dans l'immeuble ?",
+   "texts": [
+    "Enchantée ! Vous habitez dans l'immeuble ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "00d13a987ad142c6"
   },
   {
    "key": "Enchantée, je m'appelle Léa.",
@@ -1460,6 +2099,17 @@
     "expression-example"
    ],
    "hash": "7c097a9901136fda"
+  },
+  {
+   "key": "Entrez",
+   "speak": "Entrez",
+   "texts": [
+    "Entrez"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2e05f6b7c16f70a9"
   },
   {
    "key": "Est-ce qu'elle habite ici ?",
@@ -1759,6 +2409,84 @@
    "hash": "9d316f80d24d2b34"
   },
   {
+   "key": "Et cet été, quelle chaleur ! Trente-cinq degrés en août !",
+   "speak": "Et cet été, quelle chaleur ! Trente-cinq degrés en août !",
+   "texts": [
+    "Et cet été, quelle chaleur ! Trente-cinq degrés en août !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "48f3fd8b1306178d"
+  },
+  {
+   "key": "Et la guitare, ça te plaît ?",
+   "speak": "Et la guitare, ça te plaît ?",
+   "texts": [
+    "Et la guitare, ça te plaît ?"
+   ],
+   "categories": [
+    "dialogue-line",
+    "dialogue-example"
+   ],
+   "hash": "a54112c088b82f1f"
+  },
+  {
+   "key": "Et le loyer, c'est combien par mois ?",
+   "speak": "Et le loyer, c'est combien par mois ?",
+   "texts": [
+    "Et le loyer, c'est combien par mois ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2048c25026c23ab0"
+  },
+  {
+   "key": "Et qu'est-ce que vous faites dans la vie ?",
+   "speak": "Et qu'est-ce que vous faites dans la vie ?",
+   "texts": [
+    "Et qu'est-ce que vous faites dans la vie ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0ca42834a0bdef35"
+  },
+  {
+   "key": "Et tes grands-parents, ils vivent où ?",
+   "speak": "Et tes grands-parents, ils vivent où ?",
+   "texts": [
+    "Et tes grands-parents, ils vivent où ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3772a52df3a36ea8"
+  },
+  {
+   "key": "Et ton équipe a gagné ?",
+   "speak": "Et ton équipe a gagné ?",
+   "texts": [
+    "Et ton équipe a gagné ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0e0d530c0f78d336"
+  },
+  {
+   "key": "Et vous",
+   "speak": "Et vous",
+   "texts": [
+    "Et vous"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "08b540d52dac9b68"
+  },
+  {
    "key": "Et vous ?",
    "speak": "Et vous ?",
    "texts": [
@@ -1793,6 +2521,17 @@
    "hash": "00ddd5eecc9d8573"
   },
   {
+   "key": "Excusez-moi, il y a du poulet dans mon assiette.",
+   "speak": "Excusez-moi, il y a du poulet dans mon assiette.",
+   "texts": [
+    "Excusez-moi, il y a du poulet dans mon assiette."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ec65fd56b4d37323"
+  },
+  {
    "key": "Excusez-moi, je suis perdue. La gare, c'est par où ?",
    "speak": "Excusez-moi, je suis perdue. La gare, c'est par où ?",
    "texts": [
@@ -1802,6 +2541,17 @@
     "expression-example"
    ],
    "hash": "bd534fefd3fa5fd4"
+  },
+  {
+   "key": "Excusez-moi, monsieur. Je suis perdue.",
+   "speak": "Excusez-moi, monsieur. Je suis perdue.",
+   "texts": [
+    "Excusez-moi, monsieur. Je suis perdue."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "616fbba4c0c573d1"
   },
   {
    "key": "Excusez-moi, où est la gare ?",
@@ -1915,6 +2665,17 @@
    "hash": "3bb58a8bfd35b79d"
   },
   {
+   "key": "Il arrive à Lyon",
+   "speak": "Il arrive à Lyon",
+   "texts": [
+    "Il arrive à Lyon"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "3c6f7f6db4f87cc2"
+  },
+  {
    "key": "Il attend le bus.",
    "speak": "Il attend le bus.",
    "texts": [
@@ -1970,6 +2731,17 @@
    "hash": "2ca1a0ad41331547"
   },
   {
+   "key": "Il est clair ! Et la chambre, elle est où ?",
+   "speak": "Il est clair ! Et la chambre, elle est où ?",
+   "texts": [
+    "Il est clair ! Et la chambre, elle est où ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0db2534e94ce4af5"
+  },
+  {
    "key": "Il est deux heures.",
    "speak": "Il est deux heures.",
    "texts": [
@@ -1990,6 +2762,17 @@
     "table-cell"
    ],
    "hash": "ff324b9e65fe396c"
+  },
+  {
+   "key": "Il est en face de la poste.",
+   "speak": "Il est en face de la poste.",
+   "texts": [
+    "Il est en face de la poste."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "7299f095c2ca9ea2"
   },
   {
    "key": "Il est grand, enfin, plus grand que moi.",
@@ -2080,6 +2863,17 @@
    "hash": "911e1a1807a12606"
   },
   {
+   "key": "Il est très sympa.",
+   "speak": "Il est très sympa.",
+   "texts": [
+    "Il est très sympa."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "b898666088b2f9b1"
+  },
+  {
    "key": "Il est une heure.",
    "speak": "Il est une heure.",
    "texts": [
@@ -2141,7 +2935,8 @@
     "Il fait un temps de chien"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "91b6bf2f35414f27"
   },
@@ -2188,6 +2983,17 @@
     "table-example"
    ],
    "hash": "138f93abb857cc85"
+  },
+  {
+   "key": "Il n'y a pas de pain.",
+   "speak": "Il n'y a pas de pain.",
+   "texts": [
+    "Il n'y a pas de pain."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "6bd5bcfa92f06613"
   },
   {
    "key": "Il n'y a personne.",
@@ -2279,6 +3085,17 @@
    "hash": "532d3133b99e60b8"
   },
   {
+   "key": "Il pleut depuis ce matin",
+   "speak": "Il pleut depuis ce matin",
+   "texts": [
+    "Il pleut depuis ce matin"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "990f44e940a0f8e6"
+  },
+  {
    "key": "Il pleut depuis une semaine, j'ai le cafard.",
    "speak": "Il pleut depuis une semaine, j'ai le cafard.",
    "texts": [
@@ -2321,6 +3138,28 @@
     "table-example"
    ],
    "hash": "01dbd8106319029a"
+  },
+  {
+   "key": "Il reste",
+   "speak": "Il reste",
+   "texts": [
+    "Il reste"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "af944be4155bd7d9"
+  },
+  {
+   "key": "Il reste seulement cette tarte aux pommes.",
+   "speak": "Il reste seulement cette tarte aux pommes.",
+   "texts": [
+    "Il reste seulement cette tarte aux pommes."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c13b268816ff766d"
   },
   {
    "key": "Il s'habillera vite.",
@@ -2423,6 +3262,17 @@
    "hash": "1e34c4b3b37a5480"
   },
   {
+   "key": "Il y a du pain.",
+   "speak": "Il y a du pain.",
+   "texts": [
+    "Il y a du pain."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "67fd1534e866aa7c"
+  },
+  {
    "key": "Il y a trente et un jours en mai.",
    "speak": "Il y a trente et un jours en mai.",
    "texts": [
@@ -2434,6 +3284,17 @@
    "hash": "ed4f52664731296c"
   },
   {
+   "key": "Il y a un ascenseur ?",
+   "speak": "Il y a un ascenseur ?",
+   "texts": [
+    "Il y a un ascenseur ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "7bdb39342d86fbb6"
+  },
+  {
    "key": "Il y a un supermarché près d'ici ?",
    "speak": "Il y a un supermarché près d'ici ?",
    "texts": [
@@ -2443,6 +3304,62 @@
     "expression-example"
    ],
    "hash": "e0a0f5d3c162fa60"
+  },
+  {
+   "key": "Il y a un train direct à huit heures quinze.",
+   "speak": "Il y a un train direct à huit heures quinze.",
+   "texts": [
+    "Il y a un train direct à huit heures quinze."
+   ],
+   "categories": [
+    "dialogue-line",
+    "dialogue-example"
+   ],
+   "hash": "69fa5fac15fca0a0"
+  },
+  {
+   "key": "Il y a un train à dix-neuf heures quarante.",
+   "speak": "Il y a un train à dix-neuf heures quarante.",
+   "texts": [
+    "Il y a un train à dix-neuf heures quarante."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "6df3958b90f773d5"
+  },
+  {
+   "key": "Il y a un train à dix-neuf heures quarante. Ça vous va ?",
+   "speak": "Il y a un train à dix-neuf heures quarante. Ça vous va ?",
+   "texts": [
+    "Il y a un train à dix-neuf heures quarante. Ça vous va ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "aaddbb64169c5952"
+  },
+  {
+   "key": "Il y a une boulangerie près d'ici ?",
+   "speak": "Il y a une boulangerie près d'ici ?",
+   "texts": [
+    "Il y a une boulangerie près d'ici ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "0e77e95c7125ff04"
+  },
+  {
+   "key": "Il y a une heure.",
+   "speak": "Il y a une heure.",
+   "texts": [
+    "Il y a une heure."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "b927083a69a05ed9"
   },
   {
    "key": "Il y a une pharmacie près d'ici ?",
@@ -2476,6 +3393,17 @@
     "table-example"
    ],
    "hash": "8a4d40b566f35897"
+  },
+  {
+   "key": "Ils habitent à Lyon",
+   "speak": "Ils habitent à Lyon",
+   "texts": [
+    "Ils habitent à Lyon"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1d94c157b9cb4e4b"
   },
   {
    "key": "Ils mangent quoi ?",
@@ -2656,6 +3584,28 @@
    "hash": "14294c40a7f3a9b1"
   },
   {
+   "key": "J'ai acheté",
+   "speak": "J'ai acheté",
+   "texts": [
+    "J'ai acheté"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "558650b783768255"
+  },
+  {
+   "key": "J'ai acheté cette bouilloire la semaine dernière, et elle ne marche plus.",
+   "speak": "J'ai acheté cette bouilloire la semaine dernière, et elle ne marche plus.",
+   "texts": [
+    "J'ai acheté cette bouilloire la semaine dernière, et elle ne marche plus."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b15b0b25b82aebe0"
+  },
+  {
    "key": "J'ai deux frères.",
    "speak": "J'ai deux frères.",
    "texts": [
@@ -2700,6 +3650,17 @@
    "hash": "7590d13b462576a0"
   },
   {
+   "key": "J'ai hâte",
+   "speak": "J'ai hâte",
+   "texts": [
+    "J'ai hâte"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "45a7e7d7d239e439"
+  },
+  {
    "key": "J'ai hâte !",
    "speak": "J'ai hâte !",
    "texts": [
@@ -2731,6 +3692,50 @@
     "expression-example"
    ],
    "hash": "a14d2a8c951bc6ba"
+  },
+  {
+   "key": "J'ai mal à la gorge",
+   "speak": "J'ai mal à la gorge",
+   "texts": [
+    "J'ai mal à la gorge"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "83fd17c98293ff1b"
+  },
+  {
+   "key": "J'ai mal à la tête",
+   "speak": "J'ai mal à la tête",
+   "texts": [
+    "J'ai mal à la tête"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e37669aeb6a151df"
+  },
+  {
+   "key": "J'ai mal à la tête depuis trois jours.",
+   "speak": "J'ai mal à la tête depuis trois jours.",
+   "texts": [
+    "J'ai mal à la tête depuis trois jours."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "69aaeac3c0660783"
+  },
+  {
+   "key": "J'ai regardé le match.",
+   "speak": "J'ai regardé le match.",
+   "texts": [
+    "J'ai regardé le match."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "934f50151a02e99c"
   },
   {
    "key": "J'ai trois enfants.",
@@ -2775,6 +3780,17 @@
     "table-example"
    ],
    "hash": "d030377c6e19f756"
+  },
+  {
+   "key": "J'ai une réservation",
+   "speak": "J'ai une réservation",
+   "texts": [
+    "J'ai une réservation"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "bd0df3bcaf180659"
   },
   {
    "key": "J'aime le chocolat.",
@@ -2909,6 +3925,17 @@
    "hash": "f1c4b66f5422ab3b"
   },
   {
+   "key": "J'en prends cinq cents grammes",
+   "speak": "J'en prends cinq cents grammes",
+   "texts": [
+    "J'en prends cinq cents grammes"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "63640fba6e205f58"
+  },
+  {
    "key": "J'envoie un message à mon frère.",
    "speak": "J'envoie un message à mon frère.",
    "texts": [
@@ -2918,6 +3945,17 @@
     "verb-sentence"
    ],
    "hash": "98ccc1234328e236"
+  },
+  {
+   "key": "J'espère",
+   "speak": "J'espère",
+   "texts": [
+    "J'espère"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f26791636f2834aa"
   },
   {
    "key": "J'espère que tu vas bien.",
@@ -3030,6 +4068,17 @@
    "hash": "9e2e9ddf9f787ac9"
   },
   {
+   "key": "J'y vais.",
+   "speak": "J'y vais.",
+   "texts": [
+    "J'y vais."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "6d6e1e4a7f26ce16"
+  },
+  {
    "key": "J'écoute de la musique dans le métro.",
    "speak": "J'écoute de la musique dans le métro.",
    "texts": [
@@ -3094,6 +4143,17 @@
     "verb-sentence"
    ],
    "hash": "2b2f89b1f9a73f8f"
+  },
+  {
+   "key": "Je commence",
+   "speak": "Je commence",
+   "texts": [
+    "Je commence"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "12092c006780ff27"
   },
   {
    "key": "Je compte partir en juillet.",
@@ -3162,6 +4222,17 @@
    "hash": "643a5e25e36dd6c0"
   },
   {
+   "key": "Je dois boire",
+   "speak": "Je dois boire",
+   "texts": [
+    "Je dois boire"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "05307f888fcf6e3b"
+  },
+  {
    "key": "Je dois partir maintenant.",
    "speak": "Je dois partir maintenant.",
    "texts": [
@@ -3215,6 +4286,17 @@
     "verb-sentence"
    ],
    "hash": "dc7b272d2a456d32"
+  },
+  {
+   "key": "Je joue au foot",
+   "speak": "Je joue au foot",
+   "texts": [
+    "Je joue au foot"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "036f9eff2c7d9031"
   },
   {
    "key": "Je laisse mes clés sur la table.",
@@ -3289,7 +4371,8 @@
     "Je lui parle."
    ],
    "categories": [
-    "table-example"
+    "table-example",
+    "dialogue-example"
    ],
    "hash": "709181869388bfc0"
   },
@@ -3305,13 +4388,25 @@
    "hash": "2b1f2f634565785d"
   },
   {
+   "key": "Je m'appelle Léa",
+   "speak": "Je m'appelle Léa",
+   "texts": [
+    "Je m'appelle Léa"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "6036833bfb1ba3b6"
+  },
+  {
    "key": "Je m'appelle Léa.",
    "speak": "Je m'appelle Léa.",
    "texts": [
     "Je m'appelle Léa."
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-example"
    ],
    "hash": "2ad2ed88c9c556e5"
   },
@@ -3451,6 +4546,17 @@
    "hash": "392bc7968437b075"
   },
   {
+   "key": "Je me suis promenée",
+   "speak": "Je me suis promenée",
+   "texts": [
+    "Je me suis promenée"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "44cdec5cc1f5802c"
+  },
+  {
    "key": "Je meurs de faim.",
    "speak": "Je meurs de faim.",
    "texts": [
@@ -3506,6 +4612,28 @@
    "hash": "118b63b518ae20b6"
   },
   {
+   "key": "Je n'ai rien fait",
+   "speak": "Je n'ai rien fait",
+   "texts": [
+    "Je n'ai rien fait"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "6313ea891b78d7b6"
+  },
+  {
+   "key": "Je n'ai rien fait.",
+   "speak": "Je n'ai rien fait.",
+   "texts": [
+    "Je n'ai rien fait."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "284ac7a0c6e7c670"
+  },
+  {
    "key": "Je n'ai vu personne.",
    "speak": "Je n'ai vu personne.",
    "texts": [
@@ -3556,7 +4684,8 @@
     "Je ne comprends pas"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "9f49afc6f6bf0099"
   },
@@ -3594,6 +4723,17 @@
    "hash": "f257d82d1203d084"
   },
   {
+   "key": "Je ne l'ai jamais utilisée.",
+   "speak": "Je ne l'ai jamais utilisée.",
+   "texts": [
+    "Je ne l'ai jamais utilisée."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "e16909a6d12ca684"
+  },
+  {
    "key": "Je ne l'ai jamais vu.",
    "speak": "Je ne l'ai jamais vu.",
    "texts": [
@@ -3626,6 +4766,39 @@
     "topic-summary-answer"
    ],
    "hash": "1610995b5cd3536b"
+  },
+  {
+   "key": "Je ne mange pas de viande",
+   "speak": "Je ne mange pas de viande",
+   "texts": [
+    "Je ne mange pas de viande"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "862ba762b3b4bcdb"
+  },
+  {
+   "key": "Je ne mange pas de viande.",
+   "speak": "Je ne mange pas de viande.",
+   "texts": [
+    "Je ne mange pas de viande."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "e7b5be7250ad9765"
+  },
+  {
+   "key": "Je ne mange pas de viande. Vous avez un plat végétarien ?",
+   "speak": "Je ne mange pas de viande. Vous avez un plat végétarien ?",
+   "texts": [
+    "Je ne mange pas de viande. Vous avez un plat végétarien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0e4a0728ea295a64"
   },
   {
    "key": "Je ne me lève pas tôt.",
@@ -3827,6 +5000,17 @@
    "hash": "14110d05f86a14a3"
   },
   {
+   "key": "Je pense que",
+   "speak": "Je pense que",
+   "texts": [
+    "Je pense que"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "917c5ee5b23279ce"
+  },
+  {
    "key": "Je pense que c'est une bonne idée.",
    "speak": "Je pense que c'est une bonne idée.",
    "texts": [
@@ -3836,6 +5020,17 @@
     "expression-example"
    ],
    "hash": "bc583e0788189f10"
+  },
+  {
+   "key": "Je pense que courir, c'est le meilleur moyen de se détendre.",
+   "speak": "Je pense que courir, c'est le meilleur moyen de se détendre.",
+   "texts": [
+    "Je pense que courir, c'est le meilleur moyen de se détendre."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "60d22b40d06da629"
   },
   {
    "key": "Je pense que oui.",
@@ -3917,6 +5112,17 @@
    "hash": "637ba31676bc046e"
   },
   {
+   "key": "Je peux vous aider ?",
+   "speak": "Je peux vous aider ?",
+   "texts": [
+    "Je peux vous aider ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "6cda103ad79ef24e"
+  },
+  {
    "key": "Je peux vous aider ? — Je regarde, merci.",
    "speak": "Je peux vous aider ? — Je regarde, merci.",
    "texts": [
@@ -3983,6 +5189,28 @@
    "hash": "d98cd559fda20126"
   },
   {
+   "key": "Je préfère jeudi",
+   "speak": "Je préfère jeudi",
+   "texts": [
+    "Je préfère jeudi"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "be37f787f84d5801"
+  },
+  {
+   "key": "Je préfère jeudi.",
+   "speak": "Je préfère jeudi.",
+   "texts": [
+    "Je préfère jeudi."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "9d64d009e83d5ca6"
+  },
+  {
    "key": "Je préfère le thé au café.",
    "speak": "Je préfère le thé au café.",
    "texts": [
@@ -3992,6 +5220,17 @@
     "verb-sentence"
    ],
    "hash": "9f23e9c1e30f2043"
+  },
+  {
+   "key": "Je préfère les sports d'équipe",
+   "speak": "Je préfère les sports d'équipe",
+   "texts": [
+    "Je préfère les sports d'équipe"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "4ed788eca30a3e42"
   },
   {
    "key": "Je prépare le dîner ce soir.",
@@ -4104,6 +5343,17 @@
    "hash": "e5221f266aa82649"
   },
   {
+   "key": "Je réserverai une table.",
+   "speak": "Je réserverai une table.",
+   "texts": [
+    "Je réserverai une table."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "2fb158cc6f2540c8"
+  },
+  {
    "key": "Je suis arrivé il y a deux jours.",
    "speak": "Je suis arrivé il y a deux jours.",
    "texts": [
@@ -4118,10 +5368,12 @@
    "key": "Je suis désolé",
    "speak": "Je suis désolé",
    "texts": [
-    "Je suis désolé(e)"
+    "Je suis désolé(e)",
+    "Je suis désolé"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "526c578e8295e689"
   },
@@ -4151,10 +5403,12 @@
    "key": "Je suis fatigué",
    "speak": "Je suis fatigué",
    "texts": [
-    "Je suis fatigué(e)"
+    "Je suis fatigué(e)",
+    "Je suis fatigué"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "cb8de4cd35007f08"
   },
@@ -4181,6 +5435,28 @@
    "hash": "d1f23fce38beb67d"
   },
   {
+   "key": "Je suis partie samedi matin, très tôt, et je suis rentrée dimanche soir.",
+   "speak": "Je suis partie samedi matin, très tôt, et je suis rentrée dimanche soir.",
+   "texts": [
+    "Je suis partie samedi matin, très tôt, et je suis rentrée dimanche soir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "619cea07db84a085"
+  },
+  {
+   "key": "Je suis partie samedi matin.",
+   "speak": "Je suis partie samedi matin.",
+   "texts": [
+    "Je suis partie samedi matin."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "54fbc3638839cdff"
+  },
+  {
    "key": "Je suis perdu",
    "speak": "Je suis perdu",
    "texts": [
@@ -4192,6 +5468,17 @@
    "hash": "c5d81a5409fe65cf"
   },
   {
+   "key": "Je suis perdue",
+   "speak": "Je suis perdue",
+   "texts": [
+    "Je suis perdue"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "67a04536182546bd"
+  },
+  {
    "key": "Je suis professeur.",
    "speak": "Je suis professeur.",
    "texts": [
@@ -4201,6 +5488,17 @@
     "table-example"
    ],
    "hash": "e111d801736189a2"
+  },
+  {
+   "key": "Je suis resté à la maison.",
+   "speak": "Je suis resté à la maison.",
+   "texts": [
+    "Je suis resté à la maison."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "5a87a47583c8a9ac"
   },
   {
    "key": "Je suis un cours de français.",
@@ -4234,6 +5532,17 @@
     "verb-sentence"
    ],
    "hash": "4902271fd51fec8e"
+  },
+  {
+   "key": "Je travaille",
+   "speak": "Je travaille",
+   "texts": [
+    "Je travaille"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ab794e5741c0302c"
   },
   {
    "key": "Je travaille dans un bureau.",
@@ -4280,6 +5589,28 @@
    "hash": "80f673bd28e2924b"
   },
   {
+   "key": "Je vais inviter",
+   "speak": "Je vais inviter",
+   "texts": [
+    "Je vais inviter"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "eb5b637710f0c2b9"
+  },
+  {
+   "key": "Je vais lui dire bonjour",
+   "speak": "Je vais lui dire bonjour",
+   "texts": [
+    "Je vais lui dire bonjour"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "41c91f45205d7a51"
+  },
+  {
    "key": "Je vais me réveiller tôt.",
    "speak": "Je vais me réveiller tôt.",
    "texts": [
@@ -4301,6 +5632,28 @@
     "expression"
    ],
    "hash": "d2fbdd1e0f2856e3"
+  },
+  {
+   "key": "Je vais réfléchir",
+   "speak": "Je vais réfléchir",
+   "texts": [
+    "Je vais réfléchir"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "43dfa97997a611aa"
+  },
+  {
+   "key": "Je vais réserver une table.",
+   "speak": "Je vais réserver une table.",
+   "texts": [
+    "Je vais réserver une table."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "a1a46b09d5eedcb8"
   },
   {
    "key": "Je vais à la boulangerie. À tout à l'heure !",
@@ -4325,6 +5678,17 @@
    "hash": "2eb6a97949ac5570"
   },
   {
+   "key": "Je viens de Lyon",
+   "speak": "Je viens de Lyon",
+   "texts": [
+    "Je viens de Lyon"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "aa04fdb5243458b2"
+  },
+  {
    "key": "Je vois la tour Eiffel d'ici.",
    "speak": "Je vois la tour Eiffel d'ici.",
    "texts": [
@@ -4347,6 +5711,17 @@
    "hash": "65a53ffac57fdc7a"
   },
   {
+   "key": "Je voudrais prendre rendez-vous",
+   "speak": "Je voudrais prendre rendez-vous",
+   "texts": [
+    "Je voudrais prendre rendez-vous"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "d001b182aa130632"
+  },
+  {
    "key": "Je voudrais un café.",
    "speak": "Je voudrais un café.",
    "texts": [
@@ -4356,6 +5731,28 @@
     "expression"
    ],
    "hash": "7d70b10d7b51f112"
+  },
+  {
+   "key": "Je voudrais un kilo de tomates.",
+   "speak": "Je voudrais un kilo de tomates.",
+   "texts": [
+    "Je voudrais un kilo de tomates."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "1438ea9120563090"
+  },
+  {
+   "key": "Je voudrais une baguette",
+   "speak": "Je voudrais une baguette",
+   "texts": [
+    "Je voudrais une baguette"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f8eabd84adcf315c"
   },
   {
    "key": "Je voudrais une baguette, s'il vous plaît.",
@@ -4378,6 +5775,28 @@
     "expression-example"
    ],
    "hash": "914c99d7be46697d"
+  },
+  {
+   "key": "Je vous choisis",
+   "speak": "Je vous choisis",
+   "texts": [
+    "Je vous choisis"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1837d92fb4e5230a"
+  },
+  {
+   "key": "Je vous dois combien ?",
+   "speak": "Je vous dois combien ?",
+   "texts": [
+    "Je vous dois combien ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "de8b2eb0c7fbc158"
   },
   {
    "key": "Je vous en prie",
@@ -4413,6 +5832,39 @@
    "hash": "3df176092b982d29"
   },
   {
+   "key": "Je vous fais un arrêt de travail. Et prenez ce médicament matin, midi et soir.",
+   "speak": "Je vous fais un arrêt de travail. Et prenez ce médicament matin, midi et soir.",
+   "texts": [
+    "Je vous fais un arrêt de travail. Et prenez ce médicament matin, midi et soir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d3b2a7b97f97fbac"
+  },
+  {
+   "key": "Je vous mets autre chose ?",
+   "speak": "Je vous mets autre chose ?",
+   "texts": [
+    "Je vous mets autre chose ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "af9648d001c6031c"
+  },
+  {
+   "key": "Jeudi, j'ai de la place à dix heures ou à seize heures.",
+   "speak": "Jeudi, j'ai de la place à dix heures ou à seize heures.",
+   "texts": [
+    "Jeudi, j'ai de la place à dix heures ou à seize heures."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "769c99a7c7398867"
+  },
+  {
    "key": "Julie a-t-elle un chat ?",
    "speak": "Julie a-t-elle un chat ?",
    "texts": [
@@ -4423,6 +5875,28 @@
     "topic-summary-answer"
    ],
    "hash": "69496d01b936ec34"
+  },
+  {
+   "key": "Jusqu'à la place, d'accord. Et après ?",
+   "speak": "Jusqu'à la place, d'accord. Et après ?",
+   "texts": [
+    "Jusqu'à la place, d'accord. Et après ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a31aa93911b0b332"
+  },
+  {
+   "key": "Juste là, au fond à gauche. Prenez votre temps.",
+   "speak": "Juste là, au fond à gauche. Prenez votre temps.",
+   "texts": [
+    "Juste là, au fond à gauche. Prenez votre temps."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2da32bf7ad77d094"
   },
   {
    "key": "L'addition, s'il vous plaît",
@@ -4469,6 +5943,17 @@
    "hash": "030d4fd376fce785"
   },
   {
+   "key": "La deuxième à gauche. Et le musée est où ?",
+   "speak": "La deuxième à gauche. Et le musée est où ?",
+   "texts": [
+    "La deuxième à gauche. Et le musée est où ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b1725cdf96c25b60"
+  },
+  {
    "key": "La gare ? C'est tout droit, puis à gauche.",
    "speak": "La gare ? C'est tout droit, puis à gauche.",
    "texts": [
@@ -4489,6 +5974,17 @@
     "table-example"
    ],
    "hash": "2b6a54313dee4948"
+  },
+  {
+   "key": "La poste est à côté du musée.",
+   "speak": "La poste est à côté du musée.",
+   "texts": [
+    "La poste est à côté du musée."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "3ebba9eaf14ea013"
   },
   {
    "key": "La ville où j'habite est petite.",
@@ -4522,6 +6018,17 @@
     "table-example"
    ],
    "hash": "e77e63caff36af5f"
+  },
+  {
+   "key": "Laurent… Comment ça s'écrit, s'il vous plaît ?",
+   "speak": "Laurent… Comment ça s'écrit, s'il vous plaît ?",
+   "texts": [
+    "Laurent… Comment ça s'écrit, s'il vous plaît ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8bd07de2d4e4a4d9"
   },
   {
    "key": "Le bus s'arrête devant l'école.",
@@ -4601,6 +6108,17 @@
    "hash": "4ddce2c8c4d24835"
   },
   {
+   "key": "Le code est sur cette carte. Et voici votre clé.",
+   "speak": "Le code est sur cette carte. Et voici votre clé.",
+   "texts": [
+    "Le code est sur cette carte. Et voici votre clé."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0fc07c619158d268"
+  },
+  {
    "key": "Le cours commence à neuf heures.",
    "speak": "Le cours commence à neuf heures.",
    "texts": [
@@ -4667,6 +6185,17 @@
    "hash": "0187cc2875fb3063"
   },
   {
+   "key": "Le jeudi, le salon ferme à dix-neuf heures.",
+   "speak": "Le jeudi, le salon ferme à dix-neuf heures.",
+   "texts": [
+    "Le jeudi, le salon ferme à dix-neuf heures."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "f9b391f0894ebf36"
+  },
+  {
    "key": "Le livre dont je parle est ici.",
    "speak": "Le livre dont je parle est ici.",
    "texts": [
@@ -4700,6 +6229,17 @@
    "hash": "799256bc9927a2f9"
   },
   {
+   "key": "Le musée des Beaux-Arts. C'est loin d'ici ?",
+   "speak": "Le musée des Beaux-Arts. C'est loin d'ici ?",
+   "texts": [
+    "Le musée des Beaux-Arts. C'est loin d'ici ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "902e4254477221a2"
+  },
+  {
    "key": "Le musée, c'est loin d'ici ?",
    "speak": "Le musée, c'est loin d'ici ?",
    "texts": [
@@ -4731,6 +6271,17 @@
     "verb-sentence"
    ],
    "hash": "c31d2dd2e1bf8337"
+  },
+  {
+   "key": "Le quai est affiché vingt minutes avant le départ. Bon voyage !",
+   "speak": "Le quai est affiché vingt minutes avant le départ. Bon voyage !",
+   "texts": [
+    "Le quai est affiché vingt minutes avant le départ. Bon voyage !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8800bf731a1d0e12"
   },
   {
    "key": "Le restaurant sert le déjeuner à midi.",
@@ -4889,6 +6440,28 @@
    "hash": "e29b11ff0607c63e"
   },
   {
+   "key": "Les pastilles et le spray, ça fait douze euros quarante.",
+   "speak": "Les pastilles et le spray, ça fait douze euros quarante.",
+   "texts": [
+    "Les pastilles et le spray, ça fait douze euros quarante."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f058cfa9a8bfa5d4"
+  },
+  {
+   "key": "Les vestes sont ici. Quelle taille faites-vous ?",
+   "speak": "Les vestes sont ici. Quelle taille faites-vous ?",
+   "texts": [
+    "Les vestes sont ici. Quelle taille faites-vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "06cc2499fe0c431b"
+  },
+  {
    "key": "Lesquelles",
    "speak": "Lesquelles",
    "texts": [
@@ -4932,6 +6505,17 @@
     "topic-summary-answer"
    ],
    "hash": "fdd45afa89997319"
+  },
+  {
+   "key": "Lui, il adore",
+   "speak": "Lui, il adore",
+   "texts": [
+    "Lui, il adore"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "b71a3ef9bfbafa12"
   },
   {
    "key": "Lève-toi !",
@@ -5051,7 +6635,8 @@
     "Merci beaucoup"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "de1089138d91894d"
   },
@@ -5065,6 +6650,17 @@
     "expression-example"
    ],
    "hash": "649ac1f0d37eeba1"
+  },
+  {
+   "key": "Merci beaucoup, c'est très gentil.",
+   "speak": "Merci beaucoup, c'est très gentil.",
+   "texts": [
+    "Merci beaucoup, c'est très gentil."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7daa76c03338e5f9"
   },
   {
    "key": "Merci pour tout, à bientôt !",
@@ -5101,6 +6697,94 @@
    "hash": "a88f269a54c9f75e"
   },
   {
+   "key": "Merci, monsieur. Bonne journée !",
+   "speak": "Merci, monsieur. Bonne journée !",
+   "texts": [
+    "Merci, monsieur. Bonne journée !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "80e27f131c75f8f0"
+  },
+  {
+   "key": "Merci, à vous aussi ! Au revoir.",
+   "speak": "Merci, à vous aussi ! Au revoir.",
+   "texts": [
+    "Merci, à vous aussi ! Au revoir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1b291372531820a5"
+  },
+  {
+   "key": "Merci. C'est l'appartement que j'ai vu sur Internet ?",
+   "speak": "Merci. C'est l'appartement que j'ai vu sur Internet ?",
+   "texts": [
+    "Merci. C'est l'appartement que j'ai vu sur Internet ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8f99993b182ee966"
+  },
+  {
+   "key": "Merci. Et il n'y a pas de pain sur la table.",
+   "speak": "Merci. Et il n'y a pas de pain sur la table.",
+   "texts": [
+    "Merci. Et il n'y a pas de pain sur la table."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "646658cd7e9ceef5"
+  },
+  {
+   "key": "Merci. Notre numéro, c'est le zéro un, quarante-deux, dix-huit, trente, douze.",
+   "speak": "Merci. Notre numéro, c'est le zéro un, quarante-deux, dix-huit, trente, douze.",
+   "texts": [
+    "Merci. Notre numéro, c'est le zéro un, quarante-deux, dix-huit, trente, douze."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d41613a97aee6328"
+  },
+  {
+   "key": "Merci. Qu'est-ce que vous me conseillez ce soir ?",
+   "speak": "Merci. Qu'est-ce que vous me conseillez ce soir ?",
+   "texts": [
+    "Merci. Qu'est-ce que vous me conseillez ce soir ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8328a12e61df329a"
+  },
+  {
+   "key": "Merci. Voilà, deux nuits. Vous avez la chambre trente-deux, au troisième étage.",
+   "speak": "Merci. Voilà, deux nuits. Vous avez la chambre trente-deux, au troisième étage.",
+   "texts": [
+    "Merci. Voilà, deux nuits. Vous avez la chambre trente-deux, au troisième étage."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "64699ccd7e9f4894"
+  },
+  {
+   "key": "Merci. Vous avez des cerises ?",
+   "speak": "Merci. Vous avez des cerises ?",
+   "texts": [
+    "Merci. Vous avez des cerises ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "61840bebfa702a0c"
+  },
+  {
    "key": "Mes parents me permettent de sortir le samedi.",
    "speak": "Mes parents me permettent de sortir le samedi.",
    "texts": [
@@ -5112,15 +6796,49 @@
    "hash": "7dcecb6cbe564215"
   },
   {
+   "key": "Mmm, elles sont délicieuses ! J'en prends cinq cents grammes.",
+   "speak": "Mmm, elles sont délicieuses ! J'en prends cinq cents grammes.",
+   "texts": [
+    "Mmm, elles sont délicieuses ! J'en prends cinq cents grammes."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "824d2aa4b5f1c598"
+  },
+  {
    "key": "Moi aussi",
    "speak": "Moi aussi",
    "texts": [
     "Moi aussi"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "0ce3aa69c339bef4"
+  },
+  {
+   "key": "Moi aussi ! Bonne soirée, à samedi !",
+   "speak": "Moi aussi ! Bonne soirée, à samedi !",
+   "texts": [
+    "Moi aussi ! Bonne soirée, à samedi !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "519a2ef1d4d7be1a"
+  },
+  {
+   "key": "Moi, au deuxième. Vous venez d'où ?",
+   "speak": "Moi, au deuxième. Vous venez d'où ?",
+   "texts": [
+    "Moi, au deuxième. Vous venez d'où ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0ee0459cf74f5796"
   },
   {
    "key": "Moi, je préfère le thé.",
@@ -5132,6 +6850,28 @@
     "table-example"
    ],
    "hash": "071c6ca35c78bfb9"
+  },
+  {
+   "key": "Moi, je suis allée à la mer, à Étretat.",
+   "speak": "Moi, je suis allée à la mer, à Étretat.",
+   "texts": [
+    "Moi, je suis allée à la mer, à Étretat."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d1eb918c9dd6257b"
+  },
+  {
+   "key": "Moi, je suis professeure d'anglais au lycée.",
+   "speak": "Moi, je suis professeure d'anglais au lycée.",
+   "texts": [
+    "Moi, je suis professeure d'anglais au lycée."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f076d581bb497e2c"
   },
   {
    "key": "Mon anniversaire est en juillet.",
@@ -5760,6 +7500,17 @@
    "hash": "01b3eed6273a74be"
   },
   {
+   "key": "On se retrouve",
+   "speak": "On se retrouve",
+   "texts": [
+    "On se retrouve"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1360bf75f9b9a2cf"
+  },
+  {
    "key": "On se retrouve à midi ? — D'accord !",
    "speak": "On se retrouve à midi ? — D'accord !",
    "texts": [
@@ -5826,6 +7577,39 @@
    "hash": "6eb942b13def956b"
   },
   {
+   "key": "On va voir un film",
+   "speak": "On va voir un film",
+   "texts": [
+    "On va voir un film"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "89f3d15d87432d21"
+  },
+  {
+   "key": "On va voir un film au cinéma ?",
+   "speak": "On va voir un film au cinéma ?",
+   "texts": [
+    "On va voir un film au cinéma ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "61cfdaeb76f1de94"
+  },
+  {
+   "key": "On va voir un film.",
+   "speak": "On va voir un film.",
+   "texts": [
+    "On va voir un film."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "a32548ca3b5693ba"
+  },
+  {
    "key": "On y va ?",
    "speak": "On y va ?",
    "texts": [
@@ -5835,6 +7619,160 @@
     "expression"
    ],
    "hash": "53f0d677fa3fe44d"
+  },
+  {
+   "key": "Oui, bien sûr ! Lui, il adore le cinéma.",
+   "speak": "Oui, bien sûr ! Lui, il adore le cinéma.",
+   "texts": [
+    "Oui, bien sûr ! Lui, il adore le cinéma."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "584fcd11fc195216"
+  },
+  {
+   "key": "Oui, bien sûr, à droite. Le petit déjeuner est servi de sept heures à dix heures.",
+   "speak": "Oui, bien sûr, à droite. Le petit déjeuner est servi de sept heures à dix heures.",
+   "texts": [
+    "Oui, bien sûr, à droite. Le petit déjeuner est servi de sept heures à dix heures."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3a17eaa62f039675"
+  },
+  {
+   "key": "Oui, buvez-en beaucoup et dormez bien. Si ça dure, allez chez le médecin.",
+   "speak": "Oui, buvez-en beaucoup et dormez bien. Si ça dure, allez chez le médecin.",
+   "texts": [
+    "Oui, buvez-en beaucoup et dormez bien. Si ça dure, allez chez le médecin."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2a98a127864434b2"
+  },
+  {
+   "key": "Oui, c'est ma nièce, Léna. Elle a quatre ans.",
+   "speak": "Oui, c'est ma nièce, Léna. Elle a quatre ans.",
+   "texts": [
+    "Oui, c'est ma nièce, Léna. Elle a quatre ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4752d67f6b49d2a8"
+  },
+  {
+   "key": "Oui, c'est tout, merci. Je vous dois combien ?",
+   "speak": "Oui, c'est tout, merci. Je vous dois combien ?",
+   "texts": [
+    "Oui, c'est tout, merci. Je vous dois combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dd6b2d1c7f351b89"
+  },
+  {
+   "key": "Oui, ce spray. Mettez-en deux fois par jour, matin et soir.",
+   "speak": "Oui, ce spray. Mettez-en deux fois par jour, matin et soir.",
+   "texts": [
+    "Oui, ce spray. Mettez-en deux fois par jour, matin et soir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f578559ea051f8cd"
+  },
+  {
+   "key": "Oui, d'accord ! Tu veux un verre, Thomas ?",
+   "speak": "Oui, d'accord ! Tu veux un verre, Thomas ?",
+   "texts": [
+    "Oui, d'accord ! Tu veux un verre, Thomas ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "aa85b7dc0c8f63e5"
+  },
+  {
+   "key": "Oui, il est très sympa. En fait, il est là depuis cinq ans.",
+   "speak": "Oui, il est très sympa. En fait, il est là depuis cinq ans.",
+   "texts": [
+    "Oui, il est très sympa. En fait, il est là depuis cinq ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "50e327ee492d0fa5"
+  },
+  {
+   "key": "Oui, la voilà, en bleu et en M. Vous voulez l'essayer ?",
+   "speak": "Oui, la voilà, en bleu et en M. Vous voulez l'essayer ?",
+   "texts": [
+    "Oui, la voilà, en bleu et en M. Vous voulez l'essayer ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7345eb63d3170c2d"
+  },
+  {
+   "key": "Oui, le voilà. Je n'ai rien fait de spécial, je l'ai juste utilisée deux fois.",
+   "speak": "Oui, le voilà. Je n'ai rien fait de spécial, je l'ai juste utilisée deux fois.",
+   "texts": [
+    "Oui, le voilà. Je n'ai rien fait de spécial, je l'ai juste utilisée deux fois."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5405a68a39969f57"
+  },
+  {
+   "key": "Oui, mes parents. Ils habitent à Lyon. Et toi, tu as des frères et sœurs ?",
+   "speak": "Oui, mes parents. Ils habitent à Lyon. Et toi, tu as des frères et sœurs ?",
+   "texts": [
+    "Oui, mes parents. Ils habitent à Lyon. Et toi, tu as des frères et sœurs ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7f49b8e98be517e7"
+  },
+  {
+   "key": "Oui, sans problème, à la réception. Bonne soirée, monsieur !",
+   "speak": "Oui, sans problème, à la réception. Bonne soirée, monsieur !",
+   "texts": [
+    "Oui, sans problème, à la réception. Bonne soirée, monsieur !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b255a92d7db77797"
+  },
+  {
+   "key": "Oui, très beau ! Je me suis promenée sur la plage. Et toi ?",
+   "speak": "Oui, très beau ! Je me suis promenée sur la plage. Et toi ?",
+   "texts": [
+    "Oui, très beau ! Je me suis promenée sur la plage. Et toi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "fad09730b54f764f"
+  },
+  {
+   "key": "Oui, une demi-douzaine d'œufs, s'il vous plaît.",
+   "speak": "Oui, une demi-douzaine d'œufs, s'il vous plaît.",
+   "texts": [
+    "Oui, une demi-douzaine d'œufs, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a214abb722169336"
   },
   {
    "key": "Où",
@@ -5970,6 +7908,17 @@
    "hash": "439009778eef92b5"
   },
   {
+   "key": "Parfait, je vais prendre ça. Et une carafe d'eau, s'il vous plaît.",
+   "speak": "Parfait, je vais prendre ça. Et une carafe d'eau, s'il vous plaît.",
+   "texts": [
+    "Parfait, je vais prendre ça. Et une carafe d'eau, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6045ffb5b94d9341"
+  },
+  {
    "key": "Parle-t-il espagnol ?",
    "speak": "Parle-t-il espagnol ?",
    "texts": [
@@ -6001,6 +7950,17 @@
     "expression"
    ],
    "hash": "638a2436585a73e2"
+  },
+  {
+   "key": "Pas de problème. Merci beaucoup !",
+   "speak": "Pas de problème. Merci beaucoup !",
+   "texts": [
+    "Pas de problème. Merci beaucoup !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "738d0ace31cc3a28"
   },
   {
    "key": "Pas mal",
@@ -6043,7 +8003,8 @@
     "Plus lentement, s'il vous plaît"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "54304e909b655f55"
   },
@@ -6115,13 +8076,25 @@
    "hash": "80da609f507d5d6c"
   },
   {
+   "key": "Pourriez-vous",
+   "speak": "Pourriez-vous",
+   "texts": [
+    "Pourriez-vous"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1afaf0973f1d2cfa"
+  },
+  {
    "key": "Pouvez-vous répéter, s'il vous plaît ?",
    "speak": "Pouvez-vous répéter, s'il vous plaît ?",
    "texts": [
     "Pouvez-vous répéter, s'il vous plaît ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "dfffe76fbd606916"
   },
@@ -6171,6 +8144,17 @@
    "hash": "4a9a999c21ae0793"
   },
   {
+   "key": "Qu'est-ce que je vous sers ?",
+   "speak": "Qu'est-ce que je vous sers ?",
+   "texts": [
+    "Qu'est-ce que je vous sers ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e51a0adb5d6b19e0"
+  },
+  {
    "key": "Qu'est-ce que tu cherches ?",
    "speak": "Qu'est-ce que tu cherches ?",
    "texts": [
@@ -6194,13 +8178,25 @@
    "hash": "a18d70c4b69a6598"
   },
   {
+   "key": "Qu'est-ce que vous cherchez ?",
+   "speak": "Qu'est-ce que vous cherchez ?",
+   "texts": [
+    "Qu'est-ce que vous cherchez ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c3d4e8972a4b3741"
+  },
+  {
    "key": "Qu'est-ce que vous faites dans la vie ?",
    "speak": "Qu'est-ce que vous faites dans la vie ?",
    "texts": [
     "Qu'est-ce que vous faites dans la vie ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "9c681bee13f1eef8"
   },
@@ -6233,7 +8229,8 @@
     "Qu'est-ce que vous me conseillez ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "d51e0b7dacd35e72"
   },
@@ -6248,6 +8245,17 @@
     "topic-listen"
    ],
    "hash": "059e31546a69972d"
+  },
+  {
+   "key": "Qu'est-ce qui ne va pas ?",
+   "speak": "Qu'est-ce qui ne va pas ?",
+   "texts": [
+    "Qu'est-ce qui ne va pas ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "89bb87ba71039c3b"
   },
   {
    "key": "Quand est-ce qu'ils viennent ?",
@@ -6374,6 +8382,28 @@
    "hash": "6f5d0772737b7d0e"
   },
   {
+   "key": "Quel temps !",
+   "speak": "Quel temps !",
+   "texts": [
+    "Quel temps !"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "dc3b179978c5debc"
+  },
+  {
+   "key": "Quel temps fait-il ?",
+   "speak": "Quel temps fait-il ?",
+   "texts": [
+    "Quel temps fait-il ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "79847eecd6b9732f"
+  },
+  {
    "key": "Quel âge as-tu ?",
    "speak": "Quel âge as-tu ?",
    "texts": [
@@ -6394,6 +8424,17 @@
     "topic-summary-answer"
    ],
    "hash": "0378894a522e5f07"
+  },
+  {
+   "key": "Quelle chaleur !",
+   "speak": "Quelle chaleur !",
+   "texts": [
+    "Quelle chaleur !"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "c10f44bf3af7fda6"
   },
   {
    "key": "Quelle est ton adresse ?",
@@ -6453,6 +8494,17 @@
    "hash": "85432c299b8bb219"
   },
   {
+   "key": "Quelle taille faites-vous ?",
+   "speak": "Quelle taille faites-vous ?",
+   "texts": [
+    "Quelle taille faites-vous ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f891f85c2446a4b3"
+  },
+  {
    "key": "Quels amis viennent ?",
    "speak": "Quels amis viennent ?",
    "texts": [
@@ -6473,6 +8525,17 @@
     "topic-listen"
    ],
    "hash": "ae4f7c9c4b180780"
+  },
+  {
+   "key": "Regarde, ce sont les photos de la fête de famille.",
+   "speak": "Regarde, ce sont les photos de la fête de famille.",
+   "texts": [
+    "Regarde, ce sont les photos de la fête de famille."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "451dcbda1540b2a5"
   },
   {
    "key": "Reste à la maison, il fait un temps de chien !",
@@ -6519,6 +8582,17 @@
    "hash": "31306fb78c47889a"
   },
   {
+   "key": "Salon Élégance, bonjour !",
+   "speak": "Salon Élégance, bonjour !",
+   "texts": [
+    "Salon Élégance, bonjour !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8810476f09ab35a7"
+  },
+  {
    "key": "Salut",
    "speak": "Salut",
    "texts": [
@@ -6539,6 +8613,28 @@
     "expression-example"
    ],
    "hash": "fc896638e3c6f72f"
+  },
+  {
+   "key": "Salut Maxime ! Tu es libre samedi ?",
+   "speak": "Salut Maxime ! Tu es libre samedi ?",
+   "texts": [
+    "Salut Maxime ! Tu es libre samedi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "69347a63576ea2ff"
+  },
+  {
+   "key": "Salut Nicolas ! Ça va ? Tu as passé un bon week-end ?",
+   "speak": "Salut Nicolas ! Ça va ? Tu as passé un bon week-end ?",
+   "texts": [
+    "Salut Nicolas ! Ça va ? Tu as passé un bon week-end ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "74ec2739553ba6c9"
   },
   {
    "key": "Salut, Julie ! Tu vas bien ?",
@@ -6607,6 +8703,17 @@
    "hash": "243a7b77913ebb81"
   },
   {
+   "key": "Soixante-dix euros. Elle est en laine, elle est très chaude.",
+   "speak": "Soixante-dix euros. Elle est en laine, elle est très chaude.",
+   "texts": [
+    "Soixante-dix euros. Elle est en laine, elle est très chaude."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8343217bd936b6bd"
+  },
+  {
    "key": "Sont-ils prêts ?",
    "speak": "Sont-ils prêts ?",
    "texts": [
@@ -6616,6 +8723,28 @@
     "topic-part-answer"
    ],
    "hash": "bacde3340c28418c"
+  },
+  {
+   "key": "Super ! Du coup, tu as passé un bon dimanche quand même.",
+   "speak": "Super ! Du coup, tu as passé un bon dimanche quand même.",
+   "texts": [
+    "Super ! Du coup, tu as passé un bon dimanche quand même."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "486b679493f5fead"
+  },
+  {
+   "key": "Super ! Je vais par où ?",
+   "speak": "Super ! Je vais par où ?",
+   "texts": [
+    "Super ! Je vais par où ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "02aa54d92bb4e0f5"
   },
   {
    "key": "Sur place ou à emporter ?",
@@ -6675,13 +8804,25 @@
    "hash": "bdae2f52677fe1e0"
   },
   {
+   "key": "Tant mieux ! Et demain matin ?",
+   "speak": "Tant mieux ! Et demain matin ?",
+   "texts": [
+    "Tant mieux ! Et demain matin ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "89da88c6a5b2216e"
+  },
+  {
    "key": "Tant pis",
    "speak": "Tant pis",
    "texts": [
     "Tant pis"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "ba7d037e8e33a23a"
   },
@@ -6918,6 +9059,17 @@
    "hash": "c5e6986cd0ad6182"
   },
   {
+   "key": "Tu es libre samedi ?",
+   "speak": "Tu es libre samedi ?",
+   "texts": [
+    "Tu es libre samedi ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "4e469667e13cb7ff"
+  },
+  {
    "key": "Tu es venu ! Ça me fait plaisir.",
    "speak": "Tu es venu ! Ça me fait plaisir.",
    "texts": [
@@ -7084,6 +9236,17 @@
    "hash": "daca95bad5171176"
   },
   {
+   "key": "Tu peux me montrer",
+   "speak": "Tu peux me montrer",
+   "texts": [
+    "Tu peux me montrer"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "6aaea863160b0e1e"
+  },
+  {
    "key": "Tu prends quel bus ?",
    "speak": "Tu prends quel bus ?",
    "texts": [
@@ -7181,6 +9344,17 @@
     "topic-summary-joined"
    ],
    "hash": "4bbec43632a7379a"
+  },
+  {
+   "key": "Tu t'appelles comment ?",
+   "speak": "Tu t'appelles comment ?",
+   "texts": [
+    "Tu t'appelles comment ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "49e6d6a479478bb7"
   },
   {
    "key": "Tu t'es assise où, Sophie ?",
@@ -7393,6 +9567,17 @@
    "hash": "bf98a70e6d8b9730"
   },
   {
+   "key": "Un aller-retour pour Lyon, s'il vous plaît",
+   "speak": "Un aller-retour pour Lyon, s'il vous plaît",
+   "texts": [
+    "Un aller-retour pour Lyon, s'il vous plaît"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e06c8baff1182075"
+  },
+  {
    "key": "Un aller-retour pour Lyon, s'il vous plaît.",
    "speak": "Un aller-retour pour Lyon, s'il vous plaît.",
    "texts": [
@@ -7448,6 +9633,17 @@
    "hash": "bab0598fa105667e"
   },
   {
+   "key": "Un euro vingt pièce.",
+   "speak": "Un euro vingt pièce.",
+   "texts": [
+    "Un euro vingt pièce."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d5d54e633d282c2d"
+  },
+  {
    "key": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
    "speak": "Un sandwich, s'il vous plaît. — Sur place ou à emporter ? — À emporter.",
    "texts": [
@@ -7457,6 +9653,28 @@
     "expression-example"
    ],
    "hash": "35ed7e24389666a4"
+  },
+  {
+   "key": "Une baguette, une tarte et deux pains au chocolat. C'est tout ?",
+   "speak": "Une baguette, une tarte et deux pains au chocolat. C'est tout ?",
+   "texts": [
+    "Une baguette, une tarte et deux pains au chocolat. C'est tout ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "08e833389f8ae475"
+  },
+  {
+   "key": "Une baguette, voilà. Vous désirez autre chose ?",
+   "speak": "Une baguette, voilà. Vous désirez autre chose ?",
+   "texts": [
+    "Une baguette, voilà. Vous désirez autre chose ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f45be10f3f4d844b"
   },
   {
    "key": "Une table pour deux, s'il vous plaît",
@@ -7501,6 +9719,17 @@
     "topic-listen"
    ],
    "hash": "433ec2020be1162e"
+  },
+  {
+   "key": "Voilà dix euros.",
+   "speak": "Voilà dix euros.",
+   "texts": [
+    "Voilà dix euros."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "75c30803a332de00"
   },
   {
    "key": "Voilà vos pizzas. Bon appétit !",
@@ -7548,6 +9777,17 @@
    "hash": "1c448b72ef77b762"
   },
   {
+   "key": "Vous avez cette veste en bleu ?",
+   "speak": "Vous avez cette veste en bleu ?",
+   "texts": [
+    "Vous avez cette veste en bleu ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ed2cc90ffc132f3c"
+  },
+  {
    "key": "Vous avez choisi ?",
    "speak": "Vous avez choisi ?",
    "texts": [
@@ -7558,6 +9798,18 @@
     "dialogue-example"
    ],
    "hash": "41e37084dd70a7c9"
+  },
+  {
+   "key": "Vous avez des cerises ?",
+   "speak": "Vous avez des cerises ?",
+   "texts": [
+    "Vous avez des cerises ?"
+   ],
+   "categories": [
+    "dialogue-vocab",
+    "dialogue-example"
+   ],
+   "hash": "433facc738e93651"
   },
   {
    "key": "Vous avez des croissants aujourd'hui ?",
@@ -7571,6 +9823,17 @@
    "hash": "5fbde291065c1fa9"
   },
   {
+   "key": "Vous avez des tartes aux fruits ?",
+   "speak": "Vous avez des tartes aux fruits ?",
+   "texts": [
+    "Vous avez des tartes aux fruits ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2e71a1e044541481"
+  },
+  {
    "key": "Vous avez du pain ?",
    "speak": "Vous avez du pain ?",
    "texts": [
@@ -7582,6 +9845,17 @@
    "hash": "594fad988c49206f"
   },
   {
+   "key": "Vous avez pris votre température ce matin ?",
+   "speak": "Vous avez pris votre température ce matin ?",
+   "texts": [
+    "Vous avez pris votre température ce matin ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "65ef0860f4a05205"
+  },
+  {
    "key": "Vous couchez-vous tard ?",
    "speak": "Vous couchez-vous tard ?",
    "texts": [
@@ -7591,6 +9865,61 @@
     "topic-part-answer"
    ],
    "hash": "802d6c8c292bd607"
+  },
+  {
+   "key": "Vous devez rester au lit",
+   "speak": "Vous devez rester au lit",
+   "texts": [
+    "Vous devez rester au lit"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "8278517a4da58ba2"
+  },
+  {
+   "key": "Vous dormez bien ?",
+   "speak": "Vous dormez bien ?",
+   "texts": [
+    "Vous dormez bien ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "d5688383ed8aeb95"
+  },
+  {
+   "key": "Vous en prenez une",
+   "speak": "Vous en prenez une",
+   "texts": [
+    "Vous en prenez une"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "8d37abd969aa9692"
+  },
+  {
+   "key": "Vous en prenez une.",
+   "speak": "Vous en prenez une.",
+   "texts": [
+    "Vous en prenez une."
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "4d29df105ce9d43b"
+  },
+  {
+   "key": "Vous habitez",
+   "speak": "Vous habitez",
+   "texts": [
+    "Vous habitez"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "83b4292626de36b6"
   },
   {
    "key": "Vous habitez ici ? — oui, depuis trois ans.",
@@ -7613,6 +9942,17 @@
     "topic-listen"
    ],
    "hash": "2a0b987c1a9e192c"
+  },
+  {
+   "key": "Vous ne changez pas",
+   "speak": "Vous ne changez pas",
+   "texts": [
+    "Vous ne changez pas"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "9ddceb6f1e07734d"
   },
   {
    "key": "Vous ne vous amusez pas.",
@@ -7672,15 +10012,49 @@
    "hash": "8e63af3c55b7b5fa"
   },
   {
+   "key": "Vous partez quand ?",
+   "speak": "Vous partez quand ?",
+   "texts": [
+    "Vous partez quand ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c09b682ee508e04f"
+  },
+  {
+   "key": "Vous payez comment ?",
+   "speak": "Vous payez comment ?",
+   "texts": [
+    "Vous payez comment ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "405ed8cc56b62f45"
+  },
+  {
    "key": "Vous pouvez m'aider ?",
    "speak": "Vous pouvez m'aider ?",
    "texts": [
     "Vous pouvez m'aider ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "ecba332d9d8b39b1"
+  },
+  {
+   "key": "Vous savez quel temps il va faire demain ?",
+   "speak": "Vous savez quel temps il va faire demain ?",
+   "texts": [
+    "Vous savez quel temps il va faire demain ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "92562a25c7901b68"
   },
   {
    "key": "Vous tournez à gauche après la banque.",
@@ -7694,13 +10068,25 @@
    "hash": "51762e93500570d1"
   },
   {
+   "key": "Vous toussez ? Vous avez de la fièvre ?",
+   "speak": "Vous toussez ? Vous avez de la fièvre ?",
+   "texts": [
+    "Vous toussez ? Vous avez de la fièvre ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "37e754fed0257b50"
+  },
+  {
    "key": "Vous venez d'où ?",
    "speak": "Vous venez d'où ?",
    "texts": [
     "Vous venez d'où ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "b7adcbd3d99bd1b1"
   },
@@ -7736,6 +10122,17 @@
     "topic-summary-joined"
    ],
    "hash": "bb6ee07a68f7f424"
+  },
+  {
+   "key": "Vous vous appelez comment ?",
+   "speak": "Vous vous appelez comment ?",
+   "texts": [
+    "Vous vous appelez comment ?"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "9dc50ab9d9e0c746"
   },
   {
    "key": "Vous vous asseyez ici ?",
@@ -7825,6 +10222,17 @@
     "table-example"
    ],
    "hash": "c4250d0371fdfc5c"
+  },
+  {
+   "key": "Zéro un… quarante-deux… dix-huit… trente… douze. À jeudi, monsieur !",
+   "speak": "Zéro un… quarante-deux… dix-huit… trente… douze. À jeudi, monsieur !",
+   "texts": [
+    "Zéro un… quarante-deux… dix-huit… trente… douze. À jeudi, monsieur !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e5c2767cb4808c22"
   },
   {
    "key": "a-t-elle",
@@ -8038,6 +10446,40 @@
    "hash": "c1b3291fd2435bdc"
   },
   {
+   "key": "au bout de la rue",
+   "speak": "au bout de la rue",
+   "texts": [
+    "au bout de la rue"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "fc553a6d83a5ec47"
+  },
+  {
+   "key": "au premier étage",
+   "speak": "au premier étage",
+   "texts": [
+    "au premier étage"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "9cdc397b078ff3ae"
+  },
+  {
+   "key": "au troisième étage",
+   "speak": "au troisième étage",
+   "texts": [
+    "au troisième étage"
+   ],
+   "categories": [
+    "dialogue-vocab",
+    "dialogue-example"
+   ],
+   "hash": "17f6b30944b7da9c"
+  },
+  {
    "key": "aujourd'hui",
    "speak": "aujourd'hui",
    "texts": [
@@ -8159,6 +10601,17 @@
    "hash": "0fe7c9ef9683fcb8"
   },
   {
+   "key": "bien sûr",
+   "speak": "bien sûr",
+   "texts": [
+    "bien sûr"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "521df442e58dec4b"
+  },
+  {
    "key": "blanc",
    "speak": "blanc",
    "texts": [
@@ -8247,6 +10700,28 @@
    "hash": "7718f861be8cdf6b"
   },
   {
+   "key": "c'est combien ?",
+   "speak": "c'est combien ?",
+   "texts": [
+    "c'est combien ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "71fa9d0bea31a383"
+  },
+  {
+   "key": "c'est tout",
+   "speak": "c'est tout",
+   "texts": [
+    "c'est tout"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "db693b5d6f385616"
+  },
+  {
    "key": "c'est-à-dire",
    "speak": "c'est-à-dire",
    "texts": [
@@ -8256,6 +10731,17 @@
     "expression"
    ],
    "hash": "1d9e579e81b5fcb4"
+  },
+  {
+   "key": "ce gâteau",
+   "speak": "ce gâteau",
+   "texts": [
+    "ce gâteau"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "b1db17d31b5b3b33"
   },
   {
    "key": "ce livre",
@@ -8401,6 +10887,17 @@
    "hash": "48dd969488eb543b"
   },
   {
+   "key": "ces pains au chocolat",
+   "speak": "ces pains au chocolat",
+   "texts": [
+    "ces pains au chocolat"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "287343e1527b1e14"
+  },
+  {
    "key": "cet hôtel",
    "speak": "cet hôtel",
    "texts": [
@@ -8432,6 +10929,18 @@
     "table-cell"
    ],
    "hash": "8d20b2169be440be"
+  },
+  {
+   "key": "cette tarte aux pommes",
+   "speak": "cette tarte aux pommes",
+   "texts": [
+    "cette tarte aux pommes"
+   ],
+   "categories": [
+    "dialogue-vocab",
+    "dialogue-example"
+   ],
+   "hash": "6b05eb6c1750e5e0"
   },
   {
    "key": "ceux",
@@ -8509,6 +11018,17 @@
     "table-cell"
    ],
    "hash": "ab8bf5eb55640552"
+  },
+  {
+   "key": "cinq cents grammes de fraises",
+   "speak": "cinq cents grammes de fraises",
+   "texts": [
+    "cinq cents grammes de fraises"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "42eeea7d7201ea7e"
   },
   {
    "key": "cinquante",
@@ -8745,6 +11265,17 @@
    "hash": "f3f3bfcd3d45c5ac"
   },
   {
+   "key": "d'accord",
+   "speak": "d'accord",
+   "texts": [
+    "d'accord"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "9883b0dd038720e3"
+  },
+  {
    "key": "dans",
    "speak": "dans",
    "texts": [
@@ -8811,6 +11342,17 @@
    "hash": "288001cf7a9dde28"
   },
   {
+   "key": "de sept heures à dix heures",
+   "speak": "de sept heures à dix heures",
+   "texts": [
+    "de sept heures à dix heures"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "96be17464ddf8f93"
+  },
+  {
    "key": "demain",
    "speak": "demain",
    "texts": [
@@ -8844,6 +11386,17 @@
    "hash": "b4ec6788ab04da10"
   },
   {
+   "key": "depuis trois jours",
+   "speak": "depuis trois jours",
+   "texts": [
+    "depuis trois jours"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "629c209340e07630"
+  },
+  {
    "key": "derrière",
    "speak": "derrière",
    "texts": [
@@ -8864,6 +11417,17 @@
     "table-cell"
    ],
    "hash": "7b24c1ad239d4a6b"
+  },
+  {
+   "key": "des chaussures marron",
+   "speak": "des chaussures marron",
+   "texts": [
+    "des chaussures marron"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "38ee683a1de27b86"
   },
   {
    "key": "descendre",
@@ -8887,6 +11451,17 @@
     "table-cell"
    ],
    "hash": "62007886b7f3c832"
+  },
+  {
+   "key": "deux fois par jour",
+   "speak": "deux fois par jour",
+   "texts": [
+    "deux fois par jour"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c1450d9b0d1da8fa"
   },
   {
    "key": "deuxième",
@@ -8973,7 +11548,8 @@
     "dix-huit"
    ],
    "categories": [
-    "table-cell"
+    "table-cell",
+    "dialogue-vocab"
    ],
    "hash": "6ee16012ca5ae97f"
   },
@@ -9154,6 +11730,39 @@
    "hash": "fcbd447c06bf0c7d"
   },
   {
+   "key": "elle ne marche plus",
+   "speak": "elle ne marche plus",
+   "texts": [
+    "elle ne marche plus"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "9edefc1950407567"
+  },
+  {
+   "key": "elle travaille",
+   "speak": "elle travaille",
+   "texts": [
+    "elle travaille"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "055f9bb7dda27251"
+  },
+  {
+   "key": "elle vient de Lyon",
+   "speak": "elle vient de Lyon",
+   "texts": [
+    "elle vient de Lyon"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "1350ad6a8efd7aef"
+  },
+  {
    "key": "elles",
    "speak": "elles",
    "texts": [
@@ -9198,6 +11807,17 @@
    "hash": "e76bf8eae62b5e37"
   },
   {
+   "key": "en août",
+   "speak": "en août",
+   "texts": [
+    "en août"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "a080fcf18617fdb5"
+  },
+  {
    "key": "en face de",
    "speak": "en face de",
    "texts": [
@@ -9209,13 +11829,25 @@
    "hash": "9a78d03d268c48de"
   },
   {
+   "key": "en face de la poste",
+   "speak": "en face de la poste",
+   "texts": [
+    "en face de la poste"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "74fc663e01c414ff"
+  },
+  {
    "key": "en fait",
    "speak": "en fait",
    "texts": [
     "en fait"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "036a7ce8573f4832"
   },
@@ -9307,6 +11939,28 @@
     "verb-infinitive"
    ],
    "hash": "c34c62aae11d5dad"
+  },
+  {
+   "key": "est né",
+   "speak": "est né",
+   "texts": [
+    "est né"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "d08529a5ed93a5a5"
+  },
+  {
+   "key": "est servi",
+   "speak": "est servi",
+   "texts": [
+    "est servi"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "16c6a7a18e149cb7"
   },
   {
    "key": "est-elle",
@@ -10848,6 +13502,17 @@
    "hash": "cd20d2992284cc03"
   },
   {
+   "key": "il travaille ici",
+   "speak": "il travaille ici",
+   "texts": [
+    "il travaille ici"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e99ec16eaeae00fd"
+  },
+  {
    "key": "il trouve",
    "speak": "il trouve",
    "texts": [
@@ -10879,6 +13544,17 @@
     "verb-present"
    ],
    "hash": "fc482d911f843a21"
+  },
+  {
+   "key": "il va faire beau",
+   "speak": "il va faire beau",
+   "texts": [
+    "il va faire beau"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5516602ef27f85c6"
   },
   {
    "key": "il vend",
@@ -10967,6 +13643,17 @@
     "table-cell"
    ],
    "hash": "475bdff7356c6f8f"
+  },
+  {
+   "key": "il y a du poulet",
+   "speak": "il y a du poulet",
+   "texts": [
+    "il y a du poulet"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "b439fc83130ed71a"
   },
   {
    "key": "il écoute",
@@ -12317,6 +15004,17 @@
    "hash": "0df0b74f0630e881"
   },
   {
+   "key": "ils vivent où",
+   "speak": "ils vivent où",
+   "texts": [
+    "ils vivent où"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "be7f6d9bfd6ef25a"
+  },
+  {
    "key": "ils voient",
    "speak": "ils voient",
    "texts": [
@@ -12425,6 +15123,17 @@
     "verb-future"
    ],
    "hash": "06931f5a6e0650ec"
+  },
+  {
+   "key": "j'adore la lecture",
+   "speak": "j'adore la lecture",
+   "texts": [
+    "j'adore la lecture"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ace2f7b2968ee975"
   },
   {
    "key": "j'ai",
@@ -12983,7 +15692,8 @@
     "j'ai oublié"
    ],
    "categories": [
-    "verb-past"
+    "verb-past",
+    "dialogue-vocab"
    ],
    "hash": "6645df38b6f50952"
   },
@@ -13192,7 +15902,8 @@
     "j'ai regardé"
    ],
    "categories": [
-    "verb-past"
+    "verb-past",
+    "dialogue-vocab"
    ],
    "hash": "4626ec9e58e19f14"
   },
@@ -13327,6 +16038,17 @@
     "verb-past"
    ],
    "hash": "2c268af0e69a8afb"
+  },
+  {
+   "key": "j'ai souvent la flemme",
+   "speak": "j'ai souvent la flemme",
+   "texts": [
+    "j'ai souvent la flemme"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "dd319129bf138d92"
   },
   {
    "key": "j'ai su",
@@ -13626,6 +16348,17 @@
    "hash": "9d715b6cebc8e8ee"
   },
   {
+   "key": "j'apprends la guitare",
+   "speak": "j'apprends la guitare",
+   "texts": [
+    "j'apprends la guitare"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "8d3a48ca17d40333"
+  },
+  {
    "key": "j'arrive",
    "speak": "j'arrive",
    "texts": [
@@ -13849,6 +16582,17 @@
    "hash": "8ab7268c9591d49e"
   },
   {
+   "key": "j'habite à Paris",
+   "speak": "j'habite à Paris",
+   "texts": [
+    "j'habite à Paris"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "640b05ead5fe8455"
+  },
+  {
    "key": "j'habiterai",
    "speak": "j'habiterai",
    "texts": [
@@ -13988,7 +16732,8 @@
     "j'y vais"
    ],
    "categories": [
-    "table-cell"
+    "table-cell",
+    "dialogue-vocab"
    ],
    "hash": "516d229c72e1986c"
   },
@@ -14167,6 +16912,17 @@
     "verb-present"
    ],
    "hash": "f29fd2783786ddee"
+  },
+  {
+   "key": "je cherche une veste",
+   "speak": "je cherche une veste",
+   "texts": [
+    "je cherche une veste"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ac5afdfe18aef798"
   },
   {
    "key": "je chercherai",
@@ -14534,6 +17290,17 @@
    "hash": "ab43495f3218a71b"
   },
   {
+   "key": "je dors mal",
+   "speak": "je dors mal",
+   "texts": [
+    "je dors mal"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e6137d1a6d519d24"
+  },
+  {
    "key": "je décide",
    "speak": "je décide",
    "texts": [
@@ -14732,6 +17499,17 @@
     "verb-future"
    ],
    "hash": "5f50ea5cd9881620"
+  },
+  {
+   "key": "je la prends",
+   "speak": "je la prends",
+   "texts": [
+    "je la prends"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "fe0107a0f030cd7e"
   },
   {
    "key": "je laisse",
@@ -15020,6 +17798,17 @@
    "hash": "6ec598835ff50d3d"
   },
   {
+   "key": "je me sens faible",
+   "speak": "je me sens faible",
+   "texts": [
+    "je me sens faible"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e35dffd5e8c87dbb"
+  },
+  {
    "key": "je me souviendrai",
    "speak": "je me souviendrai",
    "texts": [
@@ -15241,6 +18030,17 @@
    "hash": "1ddc7db0bdf1c4c5"
   },
   {
+   "key": "je n'ai plus de cerises",
+   "speak": "je n'ai plus de cerises",
+   "texts": [
+    "je n'ai plus de cerises"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "b945e20064e54926"
+  },
+  {
    "key": "je nais",
    "speak": "je nais",
    "texts": [
@@ -15261,6 +18061,17 @@
     "verb-future"
    ],
    "hash": "9bba27ddb816119a"
+  },
+  {
+   "key": "je ne peux pas",
+   "speak": "je ne peux pas",
+   "texts": [
+    "je ne peux pas"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "eb14ff4cd6f85115"
   },
   {
    "key": "je paie",
@@ -16094,6 +18905,17 @@
    "hash": "16eb933357572061"
   },
   {
+   "key": "je suis allée",
+   "speak": "je suis allée",
+   "texts": [
+    "je suis allée"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2ba0807a94463d1c"
+  },
+  {
    "key": "je suis arrivé",
    "speak": "je suis arrivé",
    "texts": [
@@ -16127,6 +18949,17 @@
    "hash": "762c8f5d5ea1139e"
   },
   {
+   "key": "je suis désolé",
+   "speak": "je suis désolé",
+   "texts": [
+    "je suis désolé"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "82ae0215887121b8"
+  },
+  {
    "key": "je suis entré",
    "speak": "je suis entré",
    "texts": [
@@ -16136,6 +18969,17 @@
     "verb-past"
    ],
    "hash": "e7f33bc5c2a9295f"
+  },
+  {
+   "key": "je suis fatigué",
+   "speak": "je suis fatigué",
+   "texts": [
+    "je suis fatigué"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2b50f8a62fdca700"
   },
   {
    "key": "je suis monté",
@@ -16193,13 +19037,26 @@
    "hash": "1a4bc2fbed43cf6c"
   },
   {
+   "key": "je suis rentrée",
+   "speak": "je suis rentrée",
+   "texts": [
+    "je suis rentrée"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "bdefcf7953c09442"
+  },
+  {
    "key": "je suis resté",
    "speak": "je suis resté",
    "texts": [
-    "je suis resté(e)"
+    "je suis resté(e)",
+    "je suis resté"
    ],
    "categories": [
-    "verb-past"
+    "verb-past",
+    "dialogue-vocab"
    ],
    "hash": "54961e225af096e6"
   },
@@ -16257,6 +19114,17 @@
     "verb-future"
    ],
    "hash": "47ffba15a93999fb"
+  },
+  {
+   "key": "je t'explique",
+   "speak": "je t'explique",
+   "texts": [
+    "je t'explique"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5d294d9dcdf3c8ea"
   },
   {
    "key": "je tiendrai",
@@ -16403,6 +19271,28 @@
    "hash": "2d6231a5ab4be8c2"
   },
   {
+   "key": "je vais prendre",
+   "speak": "je vais prendre",
+   "texts": [
+    "je vais prendre"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "be3bd10350571e24"
+  },
+  {
+   "key": "je vais réserver",
+   "speak": "je vais réserver",
+   "texts": [
+    "je vais réserver"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "7cf600cb53434f9b"
+  },
+  {
    "key": "je vendrai",
    "speak": "je vendrai",
    "texts": [
@@ -16527,6 +19417,17 @@
    "hash": "a34b11de469c1d71"
   },
   {
+   "key": "je voudrais voir le responsable",
+   "speak": "je voudrais voir le responsable",
+   "texts": [
+    "je voudrais voir le responsable"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e562ba51bbd13cd2"
+  },
+  {
    "key": "je vous apporte",
    "speak": "je vous apporte",
    "texts": [
@@ -16637,6 +19538,17 @@
    "hash": "2ec2c7eef805f9fa"
   },
   {
+   "key": "juste en face",
+   "speak": "juste en face",
+   "texts": [
+    "juste en face"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "914caa1b438c8d52"
+  },
+  {
    "key": "l'addition",
    "speak": "l'addition",
    "texts": [
@@ -16657,6 +19569,28 @@
     "table-cell"
    ],
    "hash": "3ef0a9c3ac707592"
+  },
+  {
+   "key": "l'appartement que j'ai vu",
+   "speak": "l'appartement que j'ai vu",
+   "texts": [
+    "l'appartement que j'ai vu"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c1afe764fe18abac"
+  },
+  {
+   "key": "l'essayer",
+   "speak": "l'essayer",
+   "texts": [
+    "l'essayer"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "cfe439fb3e83904e"
   },
   {
    "key": "l'hôtel",
@@ -16682,6 +19616,17 @@
    "hash": "b737ca7ee563ae80"
   },
   {
+   "key": "la chambre qui donne sur la cour",
+   "speak": "la chambre qui donne sur la cour",
+   "texts": [
+    "la chambre qui donne sur la cour"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "63cf2318f0f2ba7e"
+  },
+  {
    "key": "la leur",
    "speak": "la leur",
    "texts": [
@@ -16702,6 +19647,17 @@
     "table-cell"
    ],
    "hash": "f2e70a30065ed74c"
+  },
+  {
+   "key": "la noire me va bien",
+   "speak": "la noire me va bien",
+   "texts": [
+    "la noire me va bien"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "d2cc9f18a6b173c5"
   },
   {
    "key": "la nôtre",
@@ -16768,6 +19724,17 @@
     "verb-infinitive"
    ],
    "hash": "c004da0d35e56eb5"
+  },
+  {
+   "key": "laisser ma valise",
+   "speak": "laisser ma valise",
+   "texts": [
+    "laisser ma valise"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "0a61ce226df0a8c7"
   },
   {
    "key": "laquelle",
@@ -16846,6 +19813,39 @@
     "table-cell"
    ],
    "hash": "9c6da39b768fb8ae"
+  },
+  {
+   "key": "le plat du jour",
+   "speak": "le plat du jour",
+   "texts": [
+    "le plat du jour"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ec50efb9aa69c320"
+  },
+  {
+   "key": "le quartier où j'habite",
+   "speak": "le quartier où j'habite",
+   "texts": [
+    "le quartier où j'habite"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2d5dfac4b63acf7b"
+  },
+  {
+   "key": "le rez-de-chaussée",
+   "speak": "le rez-de-chaussée",
+   "texts": [
+    "le rez-de-chaussée"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "15e5418f056d7bca"
   },
   {
    "key": "le sien",
@@ -17058,6 +20058,17 @@
    "hash": "eddf10476adf72db"
   },
   {
+   "key": "leur fille",
+   "speak": "leur fille",
+   "texts": [
+    "leur fille"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "b13795137481942e"
+  },
+  {
    "key": "leurs",
    "speak": "leurs",
    "texts": [
@@ -17212,6 +20223,17 @@
    "hash": "3c44c3e1b8b78447"
   },
   {
+   "key": "ma sœur est venue",
+   "speak": "ma sœur est venue",
+   "texts": [
+    "ma sœur est venue"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f5c3672133593566"
+  },
+  {
    "key": "mai",
    "speak": "mai",
    "texts": [
@@ -17267,6 +20289,17 @@
    "hash": "41559c72e9fb9d40"
   },
   {
+   "key": "mardi ou jeudi",
+   "speak": "mardi ou jeudi",
+   "texts": [
+    "mardi ou jeudi"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "d8dcc7ee886bd185"
+  },
+  {
    "key": "mars",
    "speak": "mars",
    "texts": [
@@ -17288,6 +20321,17 @@
     "table-cell"
    ],
    "hash": "2744ccd10c7533bd"
+  },
+  {
+   "key": "me l'échanger",
+   "speak": "me l'échanger",
+   "texts": [
+    "me l'échanger"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e2a467bb991bdc8b"
   },
   {
    "key": "me lave",
@@ -17400,6 +20444,17 @@
    "hash": "e6d3efc6abfd85ce"
   },
   {
+   "key": "mon frère",
+   "speak": "mon frère",
+   "texts": [
+    "mon frère"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "47ba0bae6fd70ce7"
+  },
+  {
    "key": "monter",
    "speak": "monter",
    "texts": [
@@ -17489,6 +20544,17 @@
     "table-cell"
    ],
    "hash": "a0ad1f02374f9314"
+  },
+  {
+   "key": "neuf euros cinquante",
+   "speak": "neuf euros cinquante",
+   "texts": [
+    "neuf euros cinquante"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "48d53bdb06149a12"
   },
   {
    "key": "neuvième",
@@ -19024,6 +22090,17 @@
    "hash": "b8d31e852725afb1"
   },
   {
+   "key": "on se tutoie",
+   "speak": "on se tutoie",
+   "texts": [
+    "on se tutoie"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f5af754230b55618"
+  },
+  {
    "key": "ont-ils",
    "speak": "ont-ils",
    "texts": [
@@ -19468,6 +22545,17 @@
    "hash": "319814994806e48b"
   },
   {
+   "key": "prenez la deuxième rue à gauche",
+   "speak": "prenez la deuxième rue à gauche",
+   "texts": [
+    "prenez la deuxième rue à gauche"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "a1f1efef3010ebf6"
+  },
+  {
    "key": "promettre",
    "speak": "promettre",
    "texts": [
@@ -19586,7 +22674,8 @@
     "quand même"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "bf398d380c47cb99"
   },
@@ -19613,6 +22702,28 @@
    "hash": "a5990e1e0920ca0d"
   },
   {
+   "key": "quarante mètres carrés",
+   "speak": "quarante mètres carrés",
+   "texts": [
+    "quarante mètres carrés"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "41c89e0d36490ee8"
+  },
+  {
+   "key": "quarante-deux",
+   "speak": "quarante-deux",
+   "texts": [
+    "quarante-deux"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f9c38c3145659819"
+  },
+  {
    "key": "quatorze",
    "speak": "quatorze",
    "texts": [
@@ -19622,6 +22733,17 @@
     "table-cell"
    ],
    "hash": "cdd265288b2041d7"
+  },
+  {
+   "key": "quatorze euros dix",
+   "speak": "quatorze euros dix",
+   "texts": [
+    "quatorze euros dix"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "e638c950a27f198e"
   },
   {
    "key": "quatre",
@@ -19644,6 +22766,17 @@
     "table-cell"
    ],
    "hash": "8c76f471e803a78b"
+  },
+  {
+   "key": "quatre-vingt-dix-huit euros",
+   "speak": "quatre-vingt-dix-huit euros",
+   "texts": [
+    "quatre-vingt-dix-huit euros"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "87c84976f3a25bcc"
   },
   {
    "key": "quatre-vingt-dix-neuf",
@@ -19766,6 +22899,17 @@
     "table-cell"
    ],
    "hash": "f2ec77ca5338de16"
+  },
+  {
+   "key": "quel temps",
+   "speak": "quel temps",
+   "texts": [
+    "quel temps"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "8bd3d31465940da4"
   },
   {
    "key": "quel âge as-tu ?",
@@ -20323,6 +23467,17 @@
    "hash": "4cf6829aa93728e8"
   },
   {
+   "key": "sa femme",
+   "speak": "sa femme",
+   "texts": [
+    "sa femme"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c2bad1ce7a59c66f"
+  },
+  {
    "key": "samedi",
    "speak": "samedi",
    "texts": [
@@ -20876,6 +24031,28 @@
     "table-cell"
    ],
    "hash": "caa081872ba4c5c1"
+  },
+  {
+   "key": "tout de suite",
+   "speak": "tout de suite",
+   "texts": [
+    "tout de suite"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "c2c7f6dd2d3f9855"
+  },
+  {
+   "key": "toutes les trois heures",
+   "speak": "toutes les trois heures",
+   "texts": [
+    "toutes les trois heures"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f7789cdcbd1c5a23"
   },
   {
    "key": "travailler",
@@ -22344,6 +25521,17 @@
    "hash": "68bca10eea2ba33f"
   },
   {
+   "key": "un arrêt de travail",
+   "speak": "un arrêt de travail",
+   "texts": [
+    "un arrêt de travail"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "a24117f4f942d569"
+  },
+  {
    "key": "un bel homme",
    "speak": "un bel homme",
    "texts": [
@@ -22377,6 +25565,17 @@
    "hash": "fc7ff584d6a04da7"
   },
   {
+   "key": "un kilo de tomates",
+   "speak": "un kilo de tomates",
+   "texts": [
+    "un kilo de tomates"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "2702b5f2d992f374"
+  },
+  {
    "key": "un nouvel ami",
    "speak": "un nouvel ami",
    "texts": [
@@ -22386,6 +25585,28 @@
     "table-cell"
    ],
    "hash": "e37a3af3c73f056e"
+  },
+  {
+   "key": "un peu petite",
+   "speak": "un peu petite",
+   "texts": [
+    "un peu petite"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "cdd46e77086c1fbf"
+  },
+  {
+   "key": "un pull noir",
+   "speak": "un pull noir",
+   "texts": [
+    "un pull noir"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "2f91e1d32d91eb1f"
   },
   {
    "key": "un vieil homme",
@@ -22421,6 +25642,17 @@
    "hash": "52597892af72166c"
   },
   {
+   "key": "une demi-douzaine d'œufs",
+   "speak": "une demi-douzaine d'œufs",
+   "texts": [
+    "une demi-douzaine d'œufs"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5ddfa3e3fcd2a831"
+  },
+  {
    "key": "une jolie maison",
    "speak": "une jolie maison",
    "texts": [
@@ -22430,6 +25662,28 @@
     "table-cell"
    ],
    "hash": "7d5f4c168de017ff"
+  },
+  {
+   "key": "une tarte",
+   "speak": "une tarte",
+   "texts": [
+    "une tarte"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "ed7c89666147e2dd"
+  },
+  {
+   "key": "une veste noire",
+   "speak": "une veste noire",
+   "texts": [
+    "une veste noire"
+   ],
+   "categories": [
+    "dialogue-example"
+   ],
+   "hash": "11c1b78cf36e94b0"
   },
   {
    "key": "une voiture rouge",
@@ -23581,6 +26835,17 @@
    "hash": "6187db21b93a5d83"
   },
   {
+   "key": "vous rendre l'argent",
+   "speak": "vous rendre l'argent",
+   "texts": [
+    "vous rendre l'argent"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "378816ba4d9190f7"
+  },
+  {
    "key": "vous rentrez",
    "speak": "vous rentrez",
    "texts": [
@@ -24104,7 +27369,8 @@
     "À bientôt"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "ac5a3a5a6dfc5feb"
   },
@@ -24118,6 +27384,28 @@
     "expression"
    ],
    "hash": "de0b380273b111c0"
+  },
+  {
+   "key": "À dix heures vingt-cinq. Vous ne changez pas.",
+   "speak": "À dix heures vingt-cinq. Vous ne changez pas.",
+   "texts": [
+    "À dix heures vingt-cinq. Vous ne changez pas."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ee3826ea6d95f6e0"
+  },
+  {
+   "key": "À dix-sept heures trente. On se retrouve devant le cinéma ?",
+   "speak": "À dix-sept heures trente. On se retrouve devant le cinéma ?",
+   "texts": [
+    "À dix-sept heures trente. On se retrouve devant le cinéma ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2c354373827f6f52"
   },
   {
    "key": "À quelle heure",
@@ -24137,7 +27425,8 @@
     "À quelle heure part le train ?"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "7c6439636433d59b"
   },
@@ -24203,7 +27492,8 @@
     "À tout à l'heure"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "ed7f5196db612460"
   },
@@ -24225,9 +27515,32 @@
     "Ça dépend"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "32e23557dad785b3"
+  },
+  {
+   "key": "Ça fait quatorze euros dix, s'il vous plaît.",
+   "speak": "Ça fait quatorze euros dix, s'il vous plaît.",
+   "texts": [
+    "Ça fait quatorze euros dix, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "076ff3de46da3279"
+  },
+  {
+   "key": "Ça fait quatre-vingt-dix-huit euros. Vous payez comment ?",
+   "speak": "Ça fait quatre-vingt-dix-huit euros. Vous payez comment ?",
+   "texts": [
+    "Ça fait quatre-vingt-dix-huit euros. Vous payez comment ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bfb9edaede03c23b"
   },
   {
    "key": "Ça m'est égal",
@@ -24247,9 +27560,21 @@
     "Ça marche"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "b08cefbea89123f2"
+  },
+  {
+   "key": "Ça marche ! Mais je cours vite, tu sais.",
+   "speak": "Ça marche ! Mais je cours vite, tu sais.",
+   "texts": [
+    "Ça marche ! Mais je cours vite, tu sais."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e8ca0e9fc57a3efc"
   },
   {
    "key": "Ça me fait plaisir",
@@ -24258,7 +27583,8 @@
     "Ça me fait plaisir"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "05f178edffd9f13a"
   },
@@ -24269,7 +27595,8 @@
     "Ça me plaît"
    ],
    "categories": [
-    "expression"
+    "expression",
+    "dialogue-vocab"
    ],
    "hash": "fe4d81754f215f91"
   },
@@ -24285,6 +27612,28 @@
    "hash": "1167d61f89f85167"
   },
   {
+   "key": "Ça me plaît. Il y a une boulangerie près d'ici ?",
+   "speak": "Ça me plaît. Il y a une boulangerie près d'ici ?",
+   "texts": [
+    "Ça me plaît. Il y a une boulangerie près d'ici ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7ee5fea82659e27c"
+  },
+  {
+   "key": "Ça prendrait combien de temps ?",
+   "speak": "Ça prendrait combien de temps ?",
+   "texts": [
+    "Ça prendrait combien de temps ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "26453e63cfd5643c"
+  },
+  {
    "key": "Ça sent bon ici.",
    "speak": "Ça sent bon ici.",
    "texts": [
@@ -24294,6 +27643,17 @@
     "verb-sentence"
    ],
    "hash": "73f5ffe5dae2b506"
+  },
+  {
+   "key": "Ça va",
+   "speak": "Ça va",
+   "texts": [
+    "Ça va"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "5448f478b6e7eb8f"
   },
   {
    "key": "Ça va ?",
@@ -24318,6 +27678,17 @@
    "hash": "aab5aba815b36825"
   },
   {
+   "key": "Ça va, merci. Mais quel temps ! Il pleut depuis ce matin.",
+   "speak": "Ça va, merci. Mais quel temps ! Il pleut depuis ce matin.",
+   "texts": [
+    "Ça va, merci. Mais quel temps ! Il pleut depuis ce matin."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "99a6d11c2ab7eddc"
+  },
+  {
    "key": "Ça veut dire quoi ?",
    "speak": "Ça veut dire quoi ?",
    "texts": [
@@ -24329,6 +27700,17 @@
    "hash": "001427c6745fbdc3"
   },
   {
+   "key": "Ça vous va ?",
+   "speak": "Ça vous va ?",
+   "texts": [
+    "Ça vous va ?"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "f7508d0d5517b69c"
+  },
+  {
    "key": "à Paris",
    "speak": "à Paris",
    "texts": [
@@ -24338,6 +27720,17 @@
     "table-cell"
    ],
    "hash": "8f2c8092e0157343"
+  },
+  {
+   "key": "à cinq minutes à pied",
+   "speak": "à cinq minutes à pied",
+   "texts": [
+    "à cinq minutes à pied"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "eebba91a8cf523e3"
   },
   {
    "key": "à côté de",
@@ -24362,6 +27755,17 @@
    "hash": "3fd6d837846cfffb"
   },
   {
+   "key": "à huit heures quinze",
+   "speak": "à huit heures quinze",
+   "texts": [
+    "à huit heures quinze"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "35c634216c03de81"
+  },
+  {
    "key": "à l'hôtel",
    "speak": "à l'hôtel",
    "texts": [
@@ -24382,6 +27786,39 @@
     "table-cell"
    ],
    "hash": "255a29c41f7ed9a6"
+  },
+  {
+   "key": "à quelle heure",
+   "speak": "à quelle heure",
+   "texts": [
+    "à quelle heure"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "0ac52d9a37392704"
+  },
+  {
+   "key": "à seize heures",
+   "speak": "à seize heures",
+   "texts": [
+    "à seize heures"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "da1580b6468b0cf7"
+  },
+  {
+   "key": "à Étretat",
+   "speak": "à Étretat",
+   "texts": [
+    "à Étretat"
+   ],
+   "categories": [
+    "dialogue-vocab"
+   ],
+   "hash": "851c46ea4ddd7859"
   },
   {
    "key": "écouter",

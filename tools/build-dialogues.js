@@ -66,6 +66,17 @@ function options(site, q) {
   });
 }
 var LETTERS = ["a", "b", "c", "d"];
+var LEVELS = ["A1", "A2", "B1"];
+// "Title." but "Title?" stays "Title?" (no doubled end punctuation).
+function endStop(t) { return /[.?!…]$/.test(t) ? t : t + "."; }
+function heading(d) { return d.number + ". " + d.title + " (" + d.titleFr + ") · " + d.level; }
+/* GitHub's heading anchor: lowercase, drop everything but letters, digits, spaces, "-" and "_", spaces to "-". */
+function slug(text) { return text.toLowerCase().replace(/[^\p{L}\p{N} _-]/gu, "").replace(/ /g, "-"); }
+/* Table of contents: the dialogues grouped by level, in number order. */
+function byLevel(list) {
+  return LEVELS.map(function (lv) { return { level: lv, list: list.filter(function (d) { return d.level === lv; }) }; })
+    .filter(function (g) { return g.list.length; });
+}
 var LIAISON_LINE = "In the dialogues, **‿** marks a liaison inside a respelling (*vous avez* = voo‿zah-vay): the linked consonant starts the next word. It never appears in the French text.";
 
 /* ---------- Markdown ---------- */
@@ -81,10 +92,16 @@ function markdown(site) {
   out.push("## Pronunciation key", "");
   out = out.concat(G.KEY_MD);
   out.push("", G.TIPS, "", LIAISON_LINE, "");
+  out.push("## Contents", "");
+  byLevel(sorted(site)).forEach(function (g) {
+    out.push("### " + g.level, "");
+    g.list.forEach(function (d) { out.push("- [" + d.number + ". " + d.title + " (" + d.titleFr + ")](#" + slug(heading(d)) + ")"); });
+    out.push("");
+  });
   out.push("---", "");
   var answers = [];
   sorted(site).forEach(function (d) {
-    out.push("## " + d.number + ". " + d.title + " (" + d.titleFr + ") · " + d.level, "");
+    out.push("## " + heading(d), "");
     out.push("*Scene:* " + d.scene, "");
     out.push("Speakers: " + d.speakers.map(function (s) { return "**" + s.name + "**, " + s.role; }).join(" · "), "");
     out.push("| Speaker | French | Pronunciation | English |");
@@ -102,7 +119,7 @@ function markdown(site) {
     out.push("", "### Notice this: " + d.notice.title, "");
     out.push(d.notice.text, "");
     d.notice.examples.forEach(function (x) { out.push("- **" + x.fr + "** (" + x.pron + ") — *" + x.en + "*"); });
-    if (d.notice.table) out.push("", "See the table: Grammar tables, " + site.refs.tableById[d.notice.table].title + ".");
+    if (d.notice.table) out.push("", "See the table: Grammar tables, " + endStop(site.refs.tableById[d.notice.table].title));
     out.push("", "### Comprehension questions", "");
     d.questions.forEach(function (q, qi) {
       var opts = options(site, q);
@@ -121,7 +138,7 @@ function markdown(site) {
 
 /* ---------- print HTML ---------- */
 var CSS = G.CSS + "\n" + [
-  ".dia { margin-top: 0; } .dia + .dia { page-break-before: always; }",
+  ".dia { margin-top: 0; } .dia + .dia, .toc + .dia { page-break-before: always; }",
   ".scene { margin: 0 0 4pt; } .cast { margin: 0 0 6pt; color: #444; }",
   "table.lines td { vertical-align: top; } table.lines tr { break-inside: avoid; page-break-inside: avoid; }",
   "table.lines td.who { width: 18%; font-weight: 700; white-space: nowrap; }",
@@ -131,7 +148,9 @@ var CSS = G.CSS + "\n" + [
   ".notice p { margin: 1pt 0; }",
   "ol.qs { padding-left: 16pt; } ol.qs > li { margin: 0 0 4pt; break-inside: avoid; page-break-inside: avoid; }",
   "ol.qs ol { list-style: lower-alpha; padding-left: 16pt; margin: 1pt 0 0; }",
-  ".answers { page-break-before: always; }"
+  ".answers { page-break-before: always; }",
+  ".toc { page-break-before: always; } .toc h3 { margin: 8pt 0 2pt; } .toc ul { list-style: none; padding-left: 0; margin: 0; }",
+  ".toc li { margin: 1pt 0; } .toc a { color: inherit; text-decoration: none; }"
 ].join("\n");
 
 function printHtml(site) {
@@ -149,9 +168,16 @@ function printHtml(site) {
   // keyRows are VERB_DATA.pronunciationKey: generator-escaped HTML from the verb guide, inserted as is.
   site.keyRows.concat([G.LIAISON_HTML]).forEach(function (k) { h.push("<tr><td>" + k.spellingHtml + "</td><td>" + k.soundsLikeHtml + "</td></tr>"); });
   h.push("</tbody></table><p>" + esc(D.respellingNote) + "</p></section>");
+  h.push("<nav class=\"toc\" aria-labelledby=\"toc-h\"><h2 id=\"toc-h\">Contents</h2>");
+  byLevel(list).forEach(function (g) {
+    h.push("<h3>" + esc(g.level) + "</h3><ul>" + g.list.map(function (d) {
+      return "<li><a href=\"#d-" + esc(d.id) + "\">" + d.number + ". " + esc(d.title) + " <span lang=\"fr\">(" + esc(d.titleFr) + ")</span></a></li>";
+    }).join("") + "</ul>");
+  });
+  h.push("</nav>");
   var answers = [];
   list.forEach(function (d) {
-    h.push("<section class=\"dia\"><h2>" + d.number + ". " + esc(d.title) + " <span lang=\"fr\">(" + esc(d.titleFr) + ")</span> · " + esc(d.level) + "</h2>");
+    h.push("<section class=\"dia\" id=\"d-" + esc(d.id) + "\"><h2>" + d.number + ". " + esc(d.title) + " <span lang=\"fr\">(" + esc(d.titleFr) + ")</span> · " + esc(d.level) + "</h2>");
     h.push("<p class=\"scene\"><b>Scene:</b> " + esc(d.scene) + "</p>");
     h.push("<p class=\"cast\">" + d.speakers.map(function (s) { return "<b>" + esc(s.name) + "</b>, " + esc(s.role); }).join(" · ") + "</p>");
     h.push("<table class=\"lines\"><thead><tr><th>Speaker</th><th>Line</th></tr></thead><tbody>");
@@ -172,7 +198,7 @@ function printHtml(site) {
     d.notice.examples.forEach(function (x) {
       h.push("<li><b lang=\"fr\">" + esc(x.fr) + "</b> <span class=\"pron\">(" + esc(x.pron) + ")</span> — <i>" + esc(x.en) + "</i></li>");
     });
-    h.push("</ul>" + (d.notice.table ? "<p class=\"also\">See the table: Grammar tables, " + esc(site.refs.tableById[d.notice.table].title) + ".</p>" : "") + "</div>");
+    h.push("</ul>" + (d.notice.table ? "<p class=\"also\">See the table: Grammar tables, " + esc(endStop(site.refs.tableById[d.notice.table].title)) + "</p>" : "") + "</div>");
     h.push("<h3>Comprehension questions</h3><ol class=\"qs\">");
     d.questions.forEach(function (q, qi) {
       var opts = options(site, q);

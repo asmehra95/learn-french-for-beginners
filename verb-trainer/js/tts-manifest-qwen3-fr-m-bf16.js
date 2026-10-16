@@ -15,48 +15,638 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
   "synthetic": true,
   "note": "One synthetic male voice designed from a text description with Qwen3-TTS VoiceDesign (\"Voix masculine native de Paris, chaleureuse et posée, la trentaine, diction claire et naturelle, accent standard de France, débit modéré.\"); no real person was recorded or cloned.",
   "credits": "audio/tts/qwen3-fr-m-bf16/CREDITS.md",
-  "generatedAt": "2026-10-16T06:54:12+00:00"
+  "generatedAt": "2026-10-16T15:38:03+00:00"
  },
  "coverage": {
-  "total": 6,
-  "recorded": 6,
+  "total": 124,
+  "recorded": 124,
   "byCategory": {
    "dialogue-line": {
-    "recorded": 6,
-    "total": 6
+    "recorded": 124,
+    "total": 124
    }
   }
  },
  "items": {
+  "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9e9e3b0b17dd4ed3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.14
+  },
+  "Ah, la noire me va bien. Ça me plaît. C'est combien ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6abe05d76d385f86.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.34
+  },
+  "Ah, super ! Dites, on se tutoie ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/53543ac84ab07b74.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.92
+  },
+  "Alors, ça vous fait neuf euros cinquante.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1880a25e69fb6ac0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.64
+  },
+  "Après, prenez la deuxième rue à gauche.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/37f9e1702a8bac6f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.86
+  },
+  "Avec plaisir ! Et après, on va dîner ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ee9610269f7545d3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.2
+  },
+  "Bien sûr. Attendez un instant, je vais la chercher en réserve.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6038383c852e778d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.1
+  },
+  "Bonjour ! Qu'est-ce que vous cherchez ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d282ad727d69ae8f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.08
+  },
+  "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/4a13174d6f8e6697.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.6
+  },
   "Bonjour, madame ! Vous avez choisi ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/35b47dfa0263fe07.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.04
+  },
+  "Bonjour, madame. Entrez, je vous en prie.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2c77735319f23216.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.24
+  },
+  "Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/603e15f0f1615351.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.04
+  },
+  "Bonjour, madame. Je voudrais une baguette, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b6e3c5d0f3873d6f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.74
+  },
+  "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7abbbb672b3d49e0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.98
+  },
+  "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/4fc926185d39d147.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.42
+  },
+  "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0dde9d8299331d35.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.42
+  },
+  "Bonsoir, madame. Voici la carte.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f72b1a5a77773c71.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.28
+  },
+  "C'est génial ! Tu es partie quand ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ff5dc35a2a88aea2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.32
+  },
+  "C'est moi. Qu'est-ce que je peux faire pour vous ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/41546d5a73c9bea0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.52
+  },
+  "C'est vrai, il a fait très chaud. J'espère un automne plus doux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/70eafc56a9ff6fc5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.1
+  },
+  "Cinq cents grammes de fraises. Je vous mets autre chose ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7f8f76ac55d45de9.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.2
+  },
+  "Continuez tout droit jusqu'à la place.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/03140d395af1e06b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.98
+  },
+  "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bb4899c3ca9184d9.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.28
+  },
+  "D'accord, mais alors, tu m'emmènes courir dimanche.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/10e862e1519847a2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.42
+  },
+  "D'accord, merci, docteur. Au revoir !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/cb4883ed62023fe0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.2
+  },
+  "D'accord. Et pour le nez, vous avez quelque chose ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/05f9b7a14dd08ed8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.24
+  },
+  "De rien. Bonne visite !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c00cfd33cecdeb55.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.72
+  },
+  "Demain matin. À quelle heure part le train ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/59e8d08bedbff782.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.72
+  },
+  "Elle est mignonne ! Et là, ce sont tes parents ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/637d5e8b38cd72fe.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.18
+  },
+  "Elle est un peu petite. Vous l'avez en L ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/eb0c3f4d939f9722.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.44
+  },
+  "Enchanté, Léa. Moi, c'est Thomas.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/be8089b6f923dd72.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.78
+  },
+  "Et la femme à côté de la fenêtre, c'est qui ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7fbe7d10d76619fb.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.28
+  },
+  "Et la petite fille, c'est leur fille ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/18959209a35b988b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.9
+  },
+  "Et voilà cinquante centimes. Merci et bonne semaine !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ff1813c5077a97b2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.3
+  },
+  "Huit cent cinquante euros, plus cinquante euros de charges.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/4b9c909838605e06.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.4
+  },
+  "Ici, à gauche. C'est la chambre qui donne sur la cour, donc elle est très calme.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bfb0ce85d9756f05.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.66
+  },
+  "Il a fait beau, là-bas ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ba25456b9ad44f09.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.24
+  },
+  "Il a l'air sympa. Il travaille ici depuis longtemps ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f461aa8006d89c88.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.04
+  },
+  "Il arrive à Lyon à quelle heure ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ecda7d4a7e0cd1f0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.44
+  },
+  "Il est au bout de la rue, en face de la poste.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2d0b049ebd6bcbb0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.26
+  },
+  "J'ai mal à la tête depuis trois jours, et j'ai de la fièvre.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/70295bc4c27803a8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.16
+  },
+  "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2b2286c8752818a2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.96
+  },
+  "J'en voudrais deux, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ef61acc28afa7d26.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.36
+  },
+  "Je fais du M, en général. Vous avez cette veste en bleu ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/67efdc797d6df87b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.88
+  },
+  "Je joue au foot le samedi, et en fait, j'apprends la guitare.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/74d83287f61085d5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.74
+  },
+  "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bd9b6d965f4d1a9e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.9
+  },
+  "Je suis désolé, madame. Vous avez le ticket de caisse ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/32ed3ec4ccf3be37.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.08
+  },
+  "Je suis infirmier. Je travaille à l'hôpital.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1dfc4b221573e99b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.06
+  },
+  "Je viens de Lyon, mais j'habite à Paris depuis deux ans.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8cb5d6126836dca0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.26
+  },
+  "L, A, U, R, E, N, T. Laurent.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c2fb8c3d14115059.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.18
+  },
+  "La météo dit qu'il va faire beau demain après-midi.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2ea9431149551871.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.24
+  },
+  "Le plat du jour, c'est le poulet aux champignons. Il est très bon.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9d6100247751d595.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.12
+  },
+  "Mardi, je ne peux pas. Je préfère jeudi.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8736d54bb9f1cb54.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.8
+  },
+  "Merci beaucoup, madame. À jeudi !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5f5c912585272c29.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.04
+  },
+  "Merci beaucoup. Bonne soirée !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b18f080fe512e528.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.02
+  },
+  "Merci, madame. Bonne journée !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d3b7b518bcebcbc4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.38
+  },
+  "Merci, vous aussi ! À bientôt !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2678aae08735bd69.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.18
+  },
+  "Merci, vous aussi. Au revoir !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/eb5df2d93c6690cc.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.26
+  },
+  "Merci. Je dois boire beaucoup d'eau aussi ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/192397f80f510ce4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.68
+  },
+  "Merci. Je peux laisser ma valise ici le jour du départ ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/65e730e3edcd07c3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.46
+  },
+  "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0c8824bf4aa4adb3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.12
+  },
+  "Moi aussi, je voudrais vivre à la campagne un jour !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6f0e0eeeee362fe3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.46
+  },
+  "Non, c'est à cinq minutes à pied.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/984e6536304f4fb2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.16
+  },
+  "Non, elle a perdu. Tant pis ! Dimanche, ma sœur est venue déjeuner.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/cef0f051cf955a85.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.38
+  },
+  "Non, pas de fièvre. Mais je suis fatigué et je dors mal.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5a37c7a6940fa2b8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.7
+  },
+  "Non, pas très bien. Je suis fatigué et je me sens faible.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3d5beadd3ba196ec.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.38
+  },
+  "Nous pouvons l'envoyer en réparation, si vous voulez.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/730989dcc5382df6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.28
+  },
+  "Oh, je suis désolé ! Je vous change ça tout de suite.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a1f85f0550b5b710.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.1
+  },
+  "Oh, montre-moi ! C'est qui, à côté de toi ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b1101e21c179eee6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.18
+  },
+  "Oui, au troisième étage. Et vous ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f55170b4ff350463.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.82
+  },
+  "Oui, beaucoup ! C'est difficile, mais je fais quand même des progrès.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0c8ad6ececbb62d5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.18
   },
   "Oui, bien sûr. Ça fait six euros cinquante.": {
    "file": "audio/tts/qwen3-fr-m-bf16/523350cb697fa4af.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.76
   },
+  "Oui, bonjour ! Enchanté. Je commence aujourd'hui.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/36c80b89e2c90d2e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.98
+  },
+  "Oui, c'est bien ça : deux pièces, quarante mètres carrés.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3c069e1d4e9daeb8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.48
+  },
+  "Oui, c'est tout. Ça fait combien ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/91f5885c86fa0924.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.0
+  },
+  "Oui, c'est vrai. Allez, bonne semaine, Manon !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/15b79dfd44a2a3a1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.56
+  },
+  "Oui, d'accord. C'est combien ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/16603b86809615cd.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.86
+  },
+  "Oui, il fait un temps de chien aujourd'hui.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b19cde64cb293311.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.42
+  },
+  "Oui, il y a une heure : trente-huit cinq.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7d19b0324c6954e5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.86
+  },
+  "Oui, je cherche une veste pour l'hiver.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/35a56fddac1c61a6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.3
+  },
+  "Oui, je suis libre. Qu'est-ce que tu veux faire ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3ef6def47c59fae3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.0
+  },
+  "Oui, juste en face. C'est le quartier où j'habite, il est très vivant.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7289acb3e84538e4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.86
+  },
+  "Oui, le même plat avec des légumes, sans poulet.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/044c62520672e795.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.34
+  },
+  "Oui, merci. Où sont les cabines ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a68870b57509bc7c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.18
+  },
+  "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/89add04d4cc6ef41.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.96
+  },
+  "Oui, pas de problème. Tu peux me montrer mon bureau ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3f424ef6ab6c1587.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.3
+  },
   "Oui, pas de problème. Voilà. Bonne journée !": {
    "file": "audio/tts/qwen3-fr-m-bf16/6fe654be97da27d4.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.0
+  },
+  "Oui, un mois de loyer. L'appartement est libre le premier mars.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/76186afdfcb89d6c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.74
+  },
+  "Oui. Je vais inviter Léo aussi, ça te va ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a1d374a719830355.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.8
+  },
+  "Oui. Vous avez des tartes aux fruits ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/21bd1d27ef028cac.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.12
+  },
+  "Par carte. Le train part de quel quai ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/144d009c9943c634.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.36
+  },
+  "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a7518eb6d7b07247.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.4
+  },
+  "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6de4f41881436c7d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.5
+  },
+  "Pardon, pouvez-vous répéter, s'il vous plaît ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9a29451745438cc3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.42
+  },
+  "Parfait, je la prends. Et ces pains au chocolat, c'est combien ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c3e72d357408b032.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.76
+  },
+  "Parfait, je vais prendre la noire. Merci pour votre aide !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f3ae2d4787c01b71.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.86
+  },
+  "Parfait. Et le wifi, c'est quoi, le mot de passe ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b1214f2cfcc93f19.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.86
+  },
+  "Parfait. Et pour le retour, dimanche soir ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/cc5eced7046c680d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.04
+  },
+  "Pas de problème. Bref, dimanche, on court, et après, on va boire un verre !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/eaf163f9812fd926.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.78
+  },
+  "Pas mal, merci. Je suis resté à la maison. Et toi ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e5667d1027060684.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.36
+  },
+  "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d258f8d302aafc92.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.3
+  },
+  "Plus lentement, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/4801e341ded832d1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.56
+  },
+  "Samedi, j'ai regardé le match de foot à la télé.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ccfa8079f3eb6c21.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.1
+  },
+  "Seize heures, c'est parfait.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bf87efaebf439dec.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.94
+  },
+  "Super. Alors, on se voit samedi. J'ai hâte !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1ba0975d98704b34.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.14
   },
   "Sur place ou à emporter ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/d6be51369bdd529f.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.58
   },
+  "Tenez, j'ai des pièces : quatorze euros et dix centimes.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f3e65aeab4c12a1b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.56
+  },
+  "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/889b2e26d3927d58.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.8
+  },
+  "Trois jours ? Mais je travaille demain…": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b630b66f63ee4613.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.32
+  },
+  "Trois semaines, à peu près.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c059e62e59d48d7c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.56
+  },
+  "Très bien, merci. Et vous, madame Lefèvre ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/afc46c54b476626e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.76
+  },
+  "Très bien. Il y a un ascenseur ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b52708c1869be1aa.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.16
+  },
   "Très bien. Je vous apporte ça tout de suite.": {
    "file": "audio/tts/qwen3-fr-m-bf16/3bc6f048cff8a4d7.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.62
   },
+  "Très bien. Je vous choisis des tomates bien mûres.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bf3f433fbfd5d3e4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.98
+  },
+  "Très bien. Voici mon numéro. Au revoir, madame.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/217bd214b7edfb1c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.5
+  },
   "Un café. Et avec ça ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/e90992791f657abc.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.68
+  },
+  "Vincent Roux. R, O, U, X.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/41d170f8ef548d49.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.38
+  },
+  "Voilà votre plat. Bon appétit !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/166ad4ae34aa8670.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.2
+  },
+  "Voilà. Avec ça, ce sera tout ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8da60c10f9c751c5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.44
+  },
+  "Voilà. C'est tout, merci. Au revoir !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e601951ab1762ae3.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.26
+  },
+  "À la campagne, près de Dijon. Mon grand-père est né là-bas.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/12d792f01ee08c9c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.38
+  },
+  "Ça dépend. Il va peut-être encore pleuvoir un peu.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5a21c94adb35fe4e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.8
+  },
+  "Ça marche. Et le film, il commence à quelle heure ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/00d3b8600007b78a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.18
+  },
+  "Ça marche. À tout à l'heure, et merci pour ton aide !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/caa6373b5e01f8de.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.46
   }
  }
 };

@@ -12,7 +12,7 @@ are played by the Dialogues Listen buttons for the speakers mapped to this voice
 - Post-processing: silence trimmed, loudness normalized to -16 LUFS, MP3 64 kbps mono 24 kHz.
 - Quality check: every clip was transcribed by Whisper large-v3-turbo (MIT) and compared with its text;
   clips that failed after retries are not shipped and the site uses the device voice for them.
-- Coverage: 6 of 6 Listen texts.
+- Coverage: 124 of 124 Listen texts.
 - Regenerate or extend: see `tts-tools/README.md` ("Multiple voices").
 
 `manifest.json` next to this file lists every clip with its text, QA transcript and scores.

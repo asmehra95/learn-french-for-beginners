@@ -347,6 +347,5950 @@
    "input_lufs": -18.1,
    "bytes": 22656,
    "reviewWav": "tts-tools/work/qwen3-fr-m-bf16/523350cb697fa4af-a0.wav"
+  },
+  "9e9e3b0b17dd4ed3": {
+   "hash": "9e9e3b0b17dd4ed3",
+   "key": "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !",
+   "speak": "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !",
+   "genText": "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !",
+   "texts": [
+    "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 13,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1234,
+   "position": 0,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.48,
+     "ratio": 1.1414012738853505,
+     "flags": [],
+     "n": 0,
+     "seed": 1234,
+     "temperature": 0.7,
+     "wall": 6.177
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:29+00:00",
+   "reason": "new",
+   "durationSec": 4.14,
+   "input_lufs": -21.01,
+   "bytes": 33792,
+   "reviewWav": null
+  },
+  "6abe05d76d385f86": {
+   "hash": "6abe05d76d385f86",
+   "key": "Ah, la noire me va bien. Ça me plaît. C'est combien ?",
+   "speak": "Ah, la noire me va bien. Ça me plaît. C'est combien ?",
+   "genText": "Ah, la noire me va bien. Ça me plaît. C'est combien ?",
+   "texts": [
+    "Ah, la noire me va bien. Ça me plaît. C'est combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ah, la noire me va bien. Ça me plaît. C'est combien ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1235,
+   "position": 1,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ah, la noire me va bien. Ça me plaît. C'est combien ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.56,
+     "ratio": 1.5074380165289256,
+     "flags": [],
+     "n": 0,
+     "seed": 1235,
+     "temperature": 0.7,
+     "wall": 5.206
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:30+00:00",
+   "reason": "new",
+   "durationSec": 4.34,
+   "input_lufs": -21.23,
+   "bytes": 35328,
+   "reviewWav": null
+  },
+  "53543ac84ab07b74": {
+   "hash": "53543ac84ab07b74",
+   "key": "Ah, super ! Dites, on se tutoie ?",
+   "speak": "Ah, super ! Dites, on se tutoie ?",
+   "genText": "Ah, super ! Dites, on se tutoie ?",
+   "texts": [
+    "Ah, super ! Dites, on se tutoie ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ah, super ! Dites, on se tutoie ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1236,
+   "position": 2,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ah, super ! Dites, on se tutoie ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 1.642105263157895,
+     "flags": [],
+     "n": 0,
+     "seed": 1236,
+     "temperature": 0.7,
+     "wall": 3.362
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:31+00:00",
+   "reason": "new",
+   "durationSec": 2.92,
+   "input_lufs": -22.91,
+   "bytes": 24000,
+   "reviewWav": null
+  },
+  "1880a25e69fb6ac0": {
+   "hash": "1880a25e69fb6ac0",
+   "key": "Alors, ça vous fait neuf euros cinquante.",
+   "speak": "Alors, ça vous fait neuf euros cinquante.",
+   "genText": "Alors, ça vous fait neuf euros cinquante.",
+   "texts": [
+    "Alors, ça vous fait neuf euros cinquante."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Alors, ça vous fait 9,50 euros.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1237,
+   "position": 3,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Alors, ça vous fait 9,50 euros.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.72,
+     "ratio": 0.998165137614679,
+     "flags": [],
+     "n": 0,
+     "seed": 1237,
+     "temperature": 0.7,
+     "wall": 2.904
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:31+00:00",
+   "reason": "new",
+   "durationSec": 2.64,
+   "input_lufs": -19.91,
+   "bytes": 21696,
+   "reviewWav": null
+  },
+  "37f9e1702a8bac6f": {
+   "hash": "37f9e1702a8bac6f",
+   "key": "Après, prenez la deuxième rue à gauche.",
+   "speak": "Après, prenez la deuxième rue à gauche.",
+   "genText": "Après, prenez la deuxième rue à gauche.",
+   "texts": [
+    "Après, prenez la deuxième rue à gauche."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Après, prenez la deuxième rue à gauche.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1238,
+   "position": 4,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Après, prenez la deuxième rue à gauche.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 1.2116504854368935,
+     "flags": [],
+     "n": 0,
+     "seed": 1238,
+     "temperature": 0.7,
+     "wall": 3.073
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:32+00:00",
+   "reason": "new",
+   "durationSec": 2.86,
+   "input_lufs": -19.33,
+   "bytes": 23616,
+   "reviewWav": null
+  },
+  "ee9610269f7545d3": {
+   "hash": "ee9610269f7545d3",
+   "key": "Avec plaisir ! Et après, on va dîner ?",
+   "speak": "Avec plaisir ! Et après, on va dîner ?",
+   "genText": "Avec plaisir ! Et après, on va dîner ?",
+   "texts": [
+    "Avec plaisir ! Et après, on va dîner ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Avec plaisir. Et après, on va dîner ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1239,
+   "position": 5,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Avec plaisir. Et après, on va dîner ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.76,
+     "ratio": 1.6527472527472526,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1239,
+     "temperature": 0.7,
+     "wall": 3.904
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:33+00:00",
+   "reason": "new",
+   "durationSec": 3.2,
+   "input_lufs": -23.25,
+   "bytes": 26304,
+   "reviewWav": null
+  },
+  "6038383c852e778d": {
+   "hash": "6038383c852e778d",
+   "key": "Bien sûr. Attendez un instant, je vais la chercher en réserve.",
+   "speak": "Bien sûr. Attendez un instant, je vais la chercher en réserve.",
+   "genText": "Bien sûr. Attendez un instant, je vais la chercher en réserve.",
+   "texts": [
+    "Bien sûr. Attendez un instant, je vais la chercher en réserve."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bien sûr, attendez un instant, je vais la chercher en réserve.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1240,
+   "position": 6,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bien sûr, attendez un instant, je vais la chercher en réserve.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.48,
+     "ratio": 1.1414012738853505,
+     "flags": [],
+     "n": 0,
+     "seed": 1240,
+     "temperature": 0.7,
+     "wall": 5.301
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:34+00:00",
+   "reason": "new",
+   "durationSec": 4.1,
+   "input_lufs": -21.0,
+   "bytes": 33408,
+   "reviewWav": null
+  },
+  "d282ad727d69ae8f": {
+   "hash": "d282ad727d69ae8f",
+   "key": "Bonjour ! Qu'est-ce que vous cherchez ?",
+   "speak": "Bonjour ! Qu'est-ce que vous cherchez ?",
+   "genText": "Bonjour ! Qu'est-ce que vous cherchez ?",
+   "texts": [
+    "Bonjour ! Qu'est-ce que vous cherchez ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour, qu'est-ce que vous cherchez ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1241,
+   "position": 7,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour, qu'est-ce que vous cherchez ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.64,
+     "ratio": 1.0886597938144331,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1241,
+     "temperature": 0.7,
+     "wall": 3.15
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:35+00:00",
+   "reason": "new",
+   "durationSec": 2.08,
+   "input_lufs": -18.63,
+   "bytes": 17280,
+   "reviewWav": null
+  },
+  "4a13174d6f8e6697": {
+   "hash": "4a13174d6f8e6697",
+   "key": "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?",
+   "speak": "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?",
+   "genText": "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?",
+   "texts": [
+    "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour madame. Qu'est-ce qu'il vous faut aujourd'hui ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1242,
+   "position": 8,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour madame. Qu'est-ce qu'il vous faut aujourd'hui ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.96,
+     "ratio": 0.8705882352941177,
+     "flags": [],
+     "n": 0,
+     "seed": 1242,
+     "temperature": 0.7,
+     "wall": 3.863
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:36+00:00",
+   "reason": "new",
+   "durationSec": 2.6,
+   "input_lufs": -18.94,
+   "bytes": 21504,
+   "reviewWav": null
+  },
+  "2c77735319f23216": {
+   "hash": "2c77735319f23216",
+   "key": "Bonjour, madame. Entrez, je vous en prie.",
+   "speak": "Bonjour, madame. Entrez, je vous en prie.",
+   "genText": "Bonjour, madame. Entrez, je vous en prie.",
+   "texts": [
+    "Bonjour, madame. Entrez, je vous en prie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour madame. Entrez, je vous en prie.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1244,
+   "position": 10,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour madame. Entrez, je vous en prie.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.4,
+     "ratio": 0.9320388349514563,
+     "flags": [],
+     "n": 0,
+     "seed": 1244,
+     "temperature": 0.7,
+     "wall": 4.816
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:37+00:00",
+   "reason": "new",
+   "durationSec": 2.24,
+   "input_lufs": -20.49,
+   "bytes": 18624,
+   "reviewWav": null
+  },
+  "603e15f0f1615351": {
+   "hash": "603e15f0f1615351",
+   "key": "Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît.",
+   "speak": "Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît.",
+   "genText": "Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît.",
+   "texts": [
+    "Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "« Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît. »",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1245,
+   "position": 11,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "« Bonjour, madame. Je voudrais prendre rendez-vous pour une coupe, s'il vous plaît. »",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.8,
+     "ratio": 0.9504950495049505,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1245,
+     "temperature": 0.7,
+     "wall": 7.68
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:38+00:00",
+   "reason": "new",
+   "durationSec": 4.04,
+   "input_lufs": -19.31,
+   "bytes": 33024,
+   "reviewWav": null
+  },
+  "b6e3c5d0f3873d6f": {
+   "hash": "b6e3c5d0f3873d6f",
+   "key": "Bonjour, madame. Je voudrais une baguette, s'il vous plaît.",
+   "speak": "Bonjour, madame. Je voudrais une baguette, s'il vous plaît.",
+   "genText": "Bonjour, madame. Je voudrais une baguette, s'il vous plaît.",
+   "texts": [
+    "Bonjour, madame. Je voudrais une baguette, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour madame. Je voudrais une baguette, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1246,
+   "position": 12,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour madame. Je voudrais une baguette, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.96,
+     "ratio": 0.8,
+     "flags": [],
+     "n": 0,
+     "seed": 1246,
+     "temperature": 0.7,
+     "wall": 5.203
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:39+00:00",
+   "reason": "new",
+   "durationSec": 2.74,
+   "input_lufs": -19.36,
+   "bytes": 22656,
+   "reviewWav": null
+  },
+  "7abbbb672b3d49e0": {
+   "hash": "7abbbb672b3d49e0",
+   "key": "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.",
+   "speak": "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.",
+   "genText": "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.",
+   "texts": [
+    "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour madame, un aller-retour pour Lyon s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1247,
+   "position": 13,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour madame, un aller-retour pour Lyon s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 0.972972972972973,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1247,
+     "temperature": 0.7,
+     "wall": 5.137
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:40+00:00",
+   "reason": "new",
+   "durationSec": 2.98,
+   "input_lufs": -17.94,
+   "bytes": 24576,
+   "reviewWav": null
+  },
+  "4fc926185d39d147": {
+   "hash": "4fc926185d39d147",
+   "key": "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
+   "speak": "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
+   "genText": "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
+   "texts": [
+    "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 15,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonjour, vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1248,
+   "position": 14,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonjour, vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.28,
+     "ratio": 1.272289156626506,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1248,
+     "temperature": 0.7,
+     "wall": 6.293
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:40+00:00",
+   "reason": "new",
+   "durationSec": 4.42,
+   "input_lufs": -20.16,
+   "bytes": 36096,
+   "reviewWav": null
+  },
+  "0dde9d8299331d35": {
+   "hash": "0dde9d8299331d35",
+   "key": "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent.",
+   "speak": "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent.",
+   "genText": "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent.",
+   "texts": [
+    "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonsoir, j'ai une réservation pour deux nuits au nom de Laurent.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1249,
+   "position": 15,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Bonsoir, j'ai une réservation pour deux nuits au nom de Laurent.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.36,
+     "ratio": 1.3153374233128838,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1249,
+     "temperature": 0.7,
+     "wall": 6.583
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:41+00:00",
+   "reason": "new",
+   "durationSec": 4.42,
+   "input_lufs": -19.62,
+   "bytes": 36096,
+   "reviewWav": null
+  },
+  "ff5dc35a2a88aea2": {
+   "hash": "ff5dc35a2a88aea2",
+   "key": "C'est génial ! Tu es partie quand ?",
+   "speak": "C'est génial ! Tu es partie quand ?",
+   "genText": "C'est génial ! Tu es partie quand ?",
+   "texts": [
+    "C'est génial ! Tu es partie quand ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "C'est génial. Tu es parti quand ?",
+   "loose_cer": 0.03225806451612903,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1251,
+   "position": 17,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "C'est génial. Tu es parti quand ?",
+     "loose_cer": 0.03225806451612903,
+     "loose_wer": 0.14285714285714285,
+     "strict_cer": 0.03225806451612903,
+     "phon_cer": 0.0,
+     "duration": 2.8,
+     "ratio": 1.3176470588235294,
+     "flags": [],
+     "n": 0,
+     "seed": 1251,
+     "temperature": 0.7,
+     "wall": 3.268
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:43+00:00",
+   "reason": "new",
+   "durationSec": 2.32,
+   "input_lufs": -19.03,
+   "bytes": 19200,
+   "reviewWav": null
+  },
+  "41546d5a73c9bea0": {
+   "hash": "41546d5a73c9bea0",
+   "key": "C'est moi. Qu'est-ce que je peux faire pour vous ?",
+   "speak": "C'est moi. Qu'est-ce que je peux faire pour vous ?",
+   "genText": "C'est moi. Qu'est-ce que je peux faire pour vous ?",
+   "texts": [
+    "C'est moi. Qu'est-ce que je peux faire pour vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "C'est moi. Qu'est-ce que je peux faire pour vous ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1252,
+   "position": 18,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "C'est moi. Qu'est-ce que je peux faire pour vous ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.8,
+     "ratio": 0.9491525423728814,
+     "flags": [],
+     "n": 0,
+     "seed": 1252,
+     "temperature": 0.7,
+     "wall": 3.28
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:44+00:00",
+   "reason": "new",
+   "durationSec": 2.52,
+   "input_lufs": -20.27,
+   "bytes": 20736,
+   "reviewWav": null
+  },
+  "70eafc56a9ff6fc5": {
+   "hash": "70eafc56a9ff6fc5",
+   "key": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
+   "speak": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
+   "genText": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
+   "texts": [
+    "C'est vrai, il a fait très chaud. J'espère un automne plus doux."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1253,
+   "position": 19,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.400041666666667,
+     "ratio": 1.1428679653679654,
+     "flags": [],
+     "n": 0,
+     "seed": 1253,
+     "temperature": 0.7,
+     "wall": 5.459
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:45+00:00",
+   "reason": "new",
+   "durationSec": 4.1,
+   "input_lufs": -21.16,
+   "bytes": 33408,
+   "reviewWav": null
+  },
+  "7f8f76ac55d45de9": {
+   "hash": "7f8f76ac55d45de9",
+   "key": "Cinq cents grammes de fraises. Je vous mets autre chose ?",
+   "speak": "Cinq cents grammes de fraises. Je vous mets autre chose ?",
+   "genText": "Cinq cents grammes de fraises. Je vous mets autre chose ?",
+   "texts": [
+    "Cinq cents grammes de fraises. Je vous mets autre chose ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "500 g de fraises. Je vous mets autre chose ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1254,
+   "position": 20,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "500 g de fraises. Je vous mets autre chose ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 0.9710344827586207,
+     "flags": [],
+     "n": 0,
+     "seed": 1254,
+     "temperature": 0.7,
+     "wall": 4.172
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:46+00:00",
+   "reason": "new",
+   "durationSec": 3.2,
+   "input_lufs": -20.42,
+   "bytes": 26304,
+   "reviewWav": null
+  },
+  "03140d395af1e06b": {
+   "hash": "03140d395af1e06b",
+   "key": "Continuez tout droit jusqu'à la place.",
+   "speak": "Continuez tout droit jusqu'à la place.",
+   "genText": "Continuez tout droit jusqu'à la place.",
+   "texts": [
+    "Continuez tout droit jusqu'à la place."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Continuez tout droit jusqu'à la place.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1255,
+   "position": 21,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Continuez tout droit jusqu'à la place.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.48,
+     "ratio": 0.963106796116505,
+     "flags": [],
+     "n": 0,
+     "seed": 1255,
+     "temperature": 0.7,
+     "wall": 3.296
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:46+00:00",
+   "reason": "new",
+   "durationSec": 1.98,
+   "input_lufs": -19.15,
+   "bytes": 16512,
+   "reviewWav": null
+  },
+  "bb4899c3ca9184d9": {
+   "hash": "bb4899c3ca9184d9",
+   "key": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
+   "speak": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
+   "genText": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
+   "texts": [
+    "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1256,
+   "position": 22,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.68,
+     "ratio": 1.1323076923076925,
+     "flags": [],
+     "n": 0,
+     "seed": 1256,
+     "temperature": 0.7,
+     "wall": 4.05
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:47+00:00",
+   "reason": "new",
+   "durationSec": 3.28,
+   "input_lufs": -19.93,
+   "bytes": 26880,
+   "reviewWav": null
+  },
+  "10e862e1519847a2": {
+   "hash": "10e862e1519847a2",
+   "key": "D'accord, mais alors, tu m'emmènes courir dimanche.",
+   "speak": "D'accord, mais alors, tu m'emmènes courir dimanche.",
+   "genText": "D'accord, mais alors, tu m'emmènes courir dimanche.",
+   "texts": [
+    "D'accord, mais alors, tu m'emmènes courir dimanche."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "D'accord, mais alors, tu m'emmènes courir dimanche.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1257,
+   "position": 23,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "D'accord, mais alors, tu m'emmènes courir dimanche.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.76,
+     "ratio": 1.156923076923077,
+     "flags": [],
+     "n": 0,
+     "seed": 1257,
+     "temperature": 0.7,
+     "wall": 4.218
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:48+00:00",
+   "reason": "new",
+   "durationSec": 3.42,
+   "input_lufs": -21.01,
+   "bytes": 28032,
+   "reviewWav": null
+  },
+  "cb4883ed62023fe0": {
+   "hash": "cb4883ed62023fe0",
+   "key": "D'accord, merci, docteur. Au revoir !",
+   "speak": "D'accord, merci, docteur. Au revoir !",
+   "genText": "D'accord, merci, docteur. Au revoir !",
+   "texts": [
+    "D'accord, merci, docteur. Au revoir !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "D'accord, merci docteur. Au revoir.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1258,
+   "position": 24,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "D'accord, merci docteur. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.4,
+     "ratio": 1.054945054945055,
+     "flags": [],
+     "n": 0,
+     "seed": 1258,
+     "temperature": 0.7,
+     "wall": 3.207
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:49+00:00",
+   "reason": "new",
+   "durationSec": 2.2,
+   "input_lufs": -19.89,
+   "bytes": 18240,
+   "reviewWav": null
+  },
+  "05f9b7a14dd08ed8": {
+   "hash": "05f9b7a14dd08ed8",
+   "key": "D'accord. Et pour le nez, vous avez quelque chose ?",
+   "speak": "D'accord. Et pour le nez, vous avez quelque chose ?",
+   "genText": "D'accord. Et pour le nez, vous avez quelque chose ?",
+   "texts": [
+    "D'accord. Et pour le nez, vous avez quelque chose ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "D'accord. Et pour le nez, vous avez quelque chose ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1259,
+   "position": 25,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "D'accord. Et pour le nez, vous avez quelque chose ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 1.1612903225806452,
+     "flags": [],
+     "n": 0,
+     "seed": 1259,
+     "temperature": 0.7,
+     "wall": 4.218
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:50+00:00",
+   "reason": "new",
+   "durationSec": 3.24,
+   "input_lufs": -20.12,
+   "bytes": 26496,
+   "reviewWav": null
+  },
+  "59e8d08bedbff782": {
+   "hash": "59e8d08bedbff782",
+   "key": "Demain matin. À quelle heure part le train ?",
+   "speak": "Demain matin. À quelle heure part le train ?",
+   "genText": "Demain matin. À quelle heure part le train ?",
+   "texts": [
+    "Demain matin. À quelle heure part le train ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Demain matin, à quelle heure part le train ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1261,
+   "position": 27,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Demain matin, à quelle heure part le train ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.2285714285714286,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1261,
+     "temperature": 0.7,
+     "wall": 3.854
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:51+00:00",
+   "reason": "new",
+   "durationSec": 2.72,
+   "input_lufs": -20.01,
+   "bytes": 22464,
+   "reviewWav": null
+  },
+  "637d5e8b38cd72fe": {
+   "hash": "637d5e8b38cd72fe",
+   "key": "Elle est mignonne ! Et là, ce sont tes parents ?",
+   "speak": "Elle est mignonne ! Et là, ce sont tes parents ?",
+   "genText": "Elle est mignonne ! Et là, ce sont tes parents ?",
+   "texts": [
+    "Elle est mignonne ! Et là, ce sont tes parents ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Elle est mignonne. Et là, ce sont tes parents ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1262,
+   "position": 28,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Elle est mignonne. Et là, ce sont tes parents ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 1.2243478260869565,
+     "flags": [],
+     "n": 0,
+     "seed": 1262,
+     "temperature": 0.7,
+     "wall": 3.8
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:52+00:00",
+   "reason": "new",
+   "durationSec": 3.18,
+   "input_lufs": -19.95,
+   "bytes": 26112,
+   "reviewWav": null
+  },
+  "eb0c3f4d939f9722": {
+   "hash": "eb0c3f4d939f9722",
+   "key": "Elle est un peu petite. Vous l'avez en L ?",
+   "speak": "Elle est un peu petite. Vous l'avez en L ?",
+   "genText": "Elle est un peu petite. Vous l'avez en L ?",
+   "texts": [
+    "Elle est un peu petite. Vous l'avez en L ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Elle est un peu petite. Vous l'avez en elle ?",
+   "loose_cer": 0.07692307692307693,
+   "phon_cer": 0.043478260869565216,
+   "flags": [],
+   "seedBase": 1263,
+   "position": 29,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Elle est un peu petite. Vous l'avez en elle ?",
+     "loose_cer": 0.07692307692307693,
+     "loose_wer": 0.1,
+     "strict_cer": 0.07692307692307693,
+     "phon_cer": 0.043478260869565216,
+     "duration": 2.8,
+     "ratio": 1.1199999999999999,
+     "flags": [],
+     "n": 0,
+     "seed": 1263,
+     "temperature": 0.7,
+     "wall": 3.323
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:53+00:00",
+   "reason": "new",
+   "durationSec": 2.44,
+   "input_lufs": -20.95,
+   "bytes": 20160,
+   "reviewWav": null
+  },
+  "7fbe7d10d76619fb": {
+   "hash": "7fbe7d10d76619fb",
+   "key": "Et la femme à côté de la fenêtre, c'est qui ?",
+   "speak": "Et la femme à côté de la fenêtre, c'est qui ?",
+   "genText": "Et la femme à côté de la fenêtre, c'est qui ?",
+   "texts": [
+    "Et la femme à côté de la fenêtre, c'est qui ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Et la femme à côté de la fenêtre, c'est qui ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1265,
+   "position": 31,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Et la femme à côté de la fenêtre, c'est qui ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.56,
+     "ratio": 0.9660377358490566,
+     "flags": [],
+     "n": 0,
+     "seed": 1265,
+     "temperature": 0.7,
+     "wall": 3.346
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:55+00:00",
+   "reason": "new",
+   "durationSec": 2.28,
+   "input_lufs": -20.7,
+   "bytes": 18816,
+   "reviewWav": null
+  },
+  "18959209a35b988b": {
+   "hash": "18959209a35b988b",
+   "key": "Et la petite fille, c'est leur fille ?",
+   "speak": "Et la petite fille, c'est leur fille ?",
+   "genText": "Et la petite fille, c'est leur fille ?",
+   "texts": [
+    "Et la petite fille, c'est leur fille ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Et la petite fille, c'est leur fille.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1266,
+   "position": 32,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Et la petite fille, c'est leur fille.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.08,
+     "ratio": 0.8851063829787233,
+     "flags": [],
+     "n": 0,
+     "seed": 1266,
+     "temperature": 0.7,
+     "wall": 2.544
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:55+00:00",
+   "reason": "new",
+   "durationSec": 1.9,
+   "input_lufs": -22.32,
+   "bytes": 15936,
+   "reviewWav": null
+  },
+  "ff1813c5077a97b2": {
+   "hash": "ff1813c5077a97b2",
+   "key": "Et voilà cinquante centimes. Merci et bonne semaine !",
+   "speak": "Et voilà cinquante centimes. Merci et bonne semaine !",
+   "genText": "Et voilà cinquante centimes. Merci et bonne semaine !",
+   "texts": [
+    "Et voilà cinquante centimes. Merci et bonne semaine !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Et voilà 50 centimes. Merci et bonne semaine.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1267,
+   "position": 33,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Et voilà 50 centimes. Merci et bonne semaine.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.1050359712230216,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1267,
+     "temperature": 0.7,
+     "wall": 4.061
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:56+00:00",
+   "reason": "new",
+   "durationSec": 3.3,
+   "input_lufs": -21.51,
+   "bytes": 27072,
+   "reviewWav": null
+  },
+  "4b9c909838605e06": {
+   "hash": "4b9c909838605e06",
+   "key": "Huit cent cinquante euros, plus cinquante euros de charges.",
+   "speak": "Huit cent cinquante euros, plus cinquante euros de charges.",
+   "genText": "Huit cent cinquante euros, plus cinquante euros de charges.",
+   "texts": [
+    "Huit cent cinquante euros, plus cinquante euros de charges."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "850 euros plus 50 euros de charge.",
+   "loose_cer": 0.017543859649122806,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1268,
+   "position": 34,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "850 euros plus 50 euros de charge.",
+     "loose_cer": 0.017543859649122806,
+     "loose_wer": 0.1111111111111111,
+     "strict_cer": 0.017543859649122806,
+     "phon_cer": 0.0,
+     "duration": 3.68,
+     "ratio": 0.937579617834395,
+     "flags": [],
+     "n": 0,
+     "seed": 1268,
+     "temperature": 0.7,
+     "wall": 4.007
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:57+00:00",
+   "reason": "new",
+   "durationSec": 3.4,
+   "input_lufs": -21.41,
+   "bytes": 27840,
+   "reviewWav": null
+  },
+  "bfb0ce85d9756f05": {
+   "hash": "bfb0ce85d9756f05",
+   "key": "Ici, à gauche. C'est la chambre qui donne sur la cour, donc elle est très calme.",
+   "speak": "Ici, à gauche. C'est la chambre qui donne sur la cour, donc elle est très calme.",
+   "genText": "Ici, à gauche. C'est la chambre qui donne sur la cour, donc elle est très calme.",
+   "texts": [
+    "Ici, à gauche. C'est la chambre qui donne sur la cour, donc elle est très calme."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 17,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ici, à gauche, c'est la chambre qui donne sur la cour, donc elle est très calme.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1269,
+   "position": 35,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ici, à gauche, c'est la chambre qui donne sur la cour, donc elle est très calme.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 6.24,
+     "ratio": 1.3136842105263158,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1269,
+     "temperature": 0.7,
+     "wall": 7.175
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:58+00:00",
+   "reason": "new",
+   "durationSec": 5.66,
+   "input_lufs": -22.21,
+   "bytes": 45888,
+   "reviewWav": null
+  },
+  "ba25456b9ad44f09": {
+   "hash": "ba25456b9ad44f09",
+   "key": "Il a fait beau, là-bas ?",
+   "speak": "Il a fait beau, là-bas ?",
+   "genText": "Il a fait beau, là-bas ?",
+   "texts": [
+    "Il a fait beau, là-bas ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Il a fait beau là-bas.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1270,
+   "position": 36,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Il a fait beau là-bas.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.84,
+     "ratio": 1.2689655172413794,
+     "flags": [],
+     "n": 0,
+     "seed": 1270,
+     "temperature": 0.7,
+     "wall": 2.894
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:34:59+00:00",
+   "reason": "new",
+   "durationSec": 1.24,
+   "input_lufs": -21.89,
+   "bytes": 10560,
+   "reviewWav": null
+  },
+  "f461aa8006d89c88": {
+   "hash": "f461aa8006d89c88",
+   "key": "Il a l'air sympa. Il travaille ici depuis longtemps ?",
+   "speak": "Il a l'air sympa. Il travaille ici depuis longtemps ?",
+   "genText": "Il a l'air sympa. Il travaille ici depuis longtemps ?",
+   "texts": [
+    "Il a l'air sympa. Il travaille ici depuis longtemps ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Il a l'air sympa. Il travaille ici depuis longtemps.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1271,
+   "position": 37,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Il a l'air sympa. Il travaille ici depuis longtemps.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.0345864661654136,
+     "flags": [],
+     "n": 0,
+     "seed": 1271,
+     "temperature": 0.7,
+     "wall": 3.92
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:00+00:00",
+   "reason": "new",
+   "durationSec": 3.04,
+   "input_lufs": -20.82,
+   "bytes": 24960,
+   "reviewWav": null
+  },
+  "ecda7d4a7e0cd1f0": {
+   "hash": "ecda7d4a7e0cd1f0",
+   "key": "Il arrive à Lyon à quelle heure ?",
+   "speak": "Il arrive à Lyon à quelle heure ?",
+   "genText": "Il arrive à Lyon à quelle heure ?",
+   "texts": [
+    "Il arrive à Lyon à quelle heure ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Il arrive à Lyon à quelle heure ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1272,
+   "position": 38,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Il arrive à Lyon à quelle heure ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.84,
+     "ratio": 0.8658823529411765,
+     "flags": [],
+     "n": 0,
+     "seed": 1272,
+     "temperature": 0.7,
+     "wall": 2.417
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:01+00:00",
+   "reason": "new",
+   "durationSec": 1.44,
+   "input_lufs": -18.0,
+   "bytes": 12096,
+   "reviewWav": null
+  },
+  "2d0b049ebd6bcbb0": {
+   "hash": "2d0b049ebd6bcbb0",
+   "key": "Il est au bout de la rue, en face de la poste.",
+   "speak": "Il est au bout de la rue, en face de la poste.",
+   "genText": "Il est au bout de la rue, en face de la poste.",
+   "texts": [
+    "Il est au bout de la rue, en face de la poste."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Il est au bout de la rue, en face de la poste.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1273,
+   "position": 39,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Il est au bout de la rue, en face de la poste.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.36,
+     "ratio": 1.2330275229357797,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1273,
+     "temperature": 0.7,
+     "wall": 3.697
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:01+00:00",
+   "reason": "new",
+   "durationSec": 2.26,
+   "input_lufs": -18.26,
+   "bytes": 18816,
+   "reviewWav": null
+  },
+  "70295bc4c27803a8": {
+   "hash": "70295bc4c27803a8",
+   "key": "J'ai mal à la tête depuis trois jours, et j'ai de la fièvre.",
+   "speak": "J'ai mal à la tête depuis trois jours, et j'ai de la fièvre.",
+   "genText": "J'ai mal à la tête depuis trois jours, et j'ai de la fièvre.",
+   "texts": [
+    "J'ai mal à la tête depuis trois jours, et j'ai de la fièvre."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 15,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "J'ai mal à la tête depuis trois jours et j'ai de la fièvre.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1274,
+   "position": 40,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "J'ai mal à la tête depuis trois jours et j'ai de la fièvre.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.76,
+     "ratio": 1.0591549295774647,
+     "flags": [],
+     "n": 0,
+     "seed": 1274,
+     "temperature": 0.7,
+     "wall": 4.053
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:02+00:00",
+   "reason": "new",
+   "durationSec": 3.16,
+   "input_lufs": -20.82,
+   "bytes": 25920,
+   "reviewWav": null
+  },
+  "2b2286c8752818a2": {
+   "hash": "2b2286c8752818a2",
+   "key": "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris.",
+   "speak": "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris.",
+   "genText": "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris.",
+   "texts": [
+    "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 15,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "J'ai une sœur, Clara. Elle a 32 ans et elle travaille à Paris.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1275,
+   "position": 41,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "J'ai une sœur, Clara. Elle a 32 ans et elle travaille à Paris.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.24,
+     "ratio": 0.986046511627907,
+     "flags": [],
+     "n": 0,
+     "seed": 1275,
+     "temperature": 0.7,
+     "wall": 5.313
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:03+00:00",
+   "reason": "new",
+   "durationSec": 3.96,
+   "input_lufs": -21.85,
+   "bytes": 32256,
+   "reviewWav": null
+  },
+  "ef61acc28afa7d26": {
+   "hash": "ef61acc28afa7d26",
+   "key": "J'en voudrais deux, s'il vous plaît.",
+   "speak": "J'en voudrais deux, s'il vous plaît.",
+   "genText": "J'en voudrais deux, s'il vous plaît.",
+   "texts": [
+    "J'en voudrais deux, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "J'en voudrais deux, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1276,
+   "position": 42,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "J'en voudrais deux, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.16,
+     "ratio": 0.9494505494505495,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1276,
+     "temperature": 0.7,
+     "wall": 3.119
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:04+00:00",
+   "reason": "new",
+   "durationSec": 1.36,
+   "input_lufs": -18.82,
+   "bytes": 11520,
+   "reviewWav": null
+  },
+  "67efdc797d6df87b": {
+   "hash": "67efdc797d6df87b",
+   "key": "Je fais du M, en général. Vous avez cette veste en bleu ?",
+   "speak": "Je fais du M, en général. Vous avez cette veste en bleu ?",
+   "genText": "Je fais du M, en général. Vous avez cette veste en bleu ?",
+   "texts": [
+    "Je fais du M, en général. Vous avez cette veste en bleu ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je fais du M en général. Vous avez cette veste en bleu ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1277,
+   "position": 43,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je fais du M en général. Vous avez cette veste en bleu ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.64,
+     "ratio": 1.3647058823529412,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1277,
+     "temperature": 0.7,
+     "wall": 5.458
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:05+00:00",
+   "reason": "new",
+   "durationSec": 3.88,
+   "input_lufs": -22.31,
+   "bytes": 31680,
+   "reviewWav": null
+  },
+  "74d83287f61085d5": {
+   "hash": "74d83287f61085d5",
+   "key": "Je joue au foot le samedi, et en fait, j'apprends la guitare.",
+   "speak": "Je joue au foot le samedi, et en fait, j'apprends la guitare.",
+   "genText": "Je joue au foot le samedi, et en fait, j'apprends la guitare.",
+   "texts": [
+    "Je joue au foot le samedi, et en fait, j'apprends la guitare."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 13,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je joue au foot le samedi et en fait, j'apprends la guitare.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1278,
+   "position": 44,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je joue au foot le samedi et en fait, j'apprends la guitare.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.400041666666667,
+     "ratio": 1.1892004504504505,
+     "flags": [],
+     "n": 0,
+     "seed": 1278,
+     "temperature": 0.7,
+     "wall": 5.063
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:06+00:00",
+   "reason": "new",
+   "durationSec": 3.74,
+   "input_lufs": -21.47,
+   "bytes": 30528,
+   "reviewWav": null
+  },
+  "bd9b6d965f4d1a9e": {
+   "hash": "bd9b6d965f4d1a9e",
+   "key": "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.",
+   "speak": "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.",
+   "genText": "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.",
+   "texts": [
+    "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1279,
+   "position": 45,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.28,
+     "ratio": 0.8049079754601228,
+     "flags": [],
+     "n": 0,
+     "seed": 1279,
+     "temperature": 0.7,
+     "wall": 4.352
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:07+00:00",
+   "reason": "new",
+   "durationSec": 2.9,
+   "input_lufs": -22.96,
+   "bytes": 23808,
+   "reviewWav": null
+  },
+  "32ed3ec4ccf3be37": {
+   "hash": "32ed3ec4ccf3be37",
+   "key": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
+   "speak": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
+   "genText": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
+   "texts": [
+    "Je suis désolé, madame. Vous avez le ticket de caisse ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1280,
+   "position": 46,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.36,
+     "ratio": 0.9882352941176471,
+     "flags": [],
+     "n": 0,
+     "seed": 1280,
+     "temperature": 0.7,
+     "wall": 3.805
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:08+00:00",
+   "reason": "new",
+   "durationSec": 3.08,
+   "input_lufs": -19.39,
+   "bytes": 25344,
+   "reviewWav": null
+  },
+  "1dfc4b221573e99b": {
+   "hash": "1dfc4b221573e99b",
+   "key": "Je suis infirmier. Je travaille à l'hôpital.",
+   "speak": "Je suis infirmier. Je travaille à l'hôpital.",
+   "genText": "Je suis infirmier. Je travaille à l'hôpital.",
+   "texts": [
+    "Je suis infirmier. Je travaille à l'hôpital."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je suis infirmier. Je travaille à l'hôpital.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1281,
+   "position": 47,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je suis infirmier. Je travaille à l'hôpital.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 1.2521739130434784,
+     "flags": [],
+     "n": 0,
+     "seed": 1281,
+     "temperature": 0.7,
+     "wall": 3.899
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:08+00:00",
+   "reason": "new",
+   "durationSec": 3.06,
+   "input_lufs": -20.88,
+   "bytes": 25152,
+   "reviewWav": null
+  },
+  "8cb5d6126836dca0": {
+   "hash": "8cb5d6126836dca0",
+   "key": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
+   "speak": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
+   "genText": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
+   "texts": [
+    "Je viens de Lyon, mais j'habite à Paris depuis deux ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1282,
+   "position": 48,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.76,
+     "ratio": 1.0820143884892086,
+     "flags": [],
+     "n": 0,
+     "seed": 1282,
+     "temperature": 0.7,
+     "wall": 4.024
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:09+00:00",
+   "reason": "new",
+   "durationSec": 3.26,
+   "input_lufs": -20.82,
+   "bytes": 26688,
+   "reviewWav": null
+  },
+  "2ea9431149551871": {
+   "hash": "2ea9431149551871",
+   "key": "La météo dit qu'il va faire beau demain après-midi.",
+   "speak": "La météo dit qu'il va faire beau demain après-midi.",
+   "genText": "La météo dit qu'il va faire beau demain après-midi.",
+   "texts": [
+    "La météo dit qu'il va faire beau demain après-midi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "La météo dit qu'il va faire beau demain après-midi.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1284,
+   "position": 50,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "La météo dit qu'il va faire beau demain après-midi.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.48,
+     "ratio": 0.7630769230769231,
+     "flags": [],
+     "n": 0,
+     "seed": 1284,
+     "temperature": 0.7,
+     "wall": 4.508
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:11+00:00",
+   "reason": "new",
+   "durationSec": 2.24,
+   "input_lufs": -20.79,
+   "bytes": 18624,
+   "reviewWav": null
+  },
+  "9d6100247751d595": {
+   "hash": "9d6100247751d595",
+   "key": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
+   "speak": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
+   "genText": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
+   "texts": [
+    "Le plat du jour, c'est le poulet aux champignons. Il est très bon."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1285,
+   "position": 51,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.72,
+     "ratio": 1.18,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1285,
+     "temperature": 0.7,
+     "wall": 6.525
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:12+00:00",
+   "reason": "new",
+   "durationSec": 4.12,
+   "input_lufs": -22.06,
+   "bytes": 33600,
+   "reviewWav": null
+  },
+  "8736d54bb9f1cb54": {
+   "hash": "8736d54bb9f1cb54",
+   "key": "Mardi, je ne peux pas. Je préfère jeudi.",
+   "speak": "Mardi, je ne peux pas. Je préfère jeudi.",
+   "genText": "Mardi, je ne peux pas. Je préfère jeudi.",
+   "texts": [
+    "Mardi, je ne peux pas. Je préfère jeudi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Mardi, je ne peux pas. Je préfère jeudi.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1286,
+   "position": 52,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Mardi, je ne peux pas. Je préfère jeudi.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.376,
+     "flags": [],
+     "n": 0,
+     "seed": 1286,
+     "temperature": 0.7,
+     "wall": 7.986
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:13+00:00",
+   "reason": "new",
+   "durationSec": 2.8,
+   "input_lufs": -20.91,
+   "bytes": 23040,
+   "reviewWav": null
+  },
+  "d3b7b518bcebcbc4": {
+   "hash": "d3b7b518bcebcbc4",
+   "key": "Merci, madame. Bonne journée !",
+   "speak": "Merci, madame. Bonne journée !",
+   "genText": "Merci, madame. Bonne journée !",
+   "texts": [
+    "Merci, madame. Bonne journée !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 4,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci, madame. Bonne journée.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1289,
+   "position": 55,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Merci, madame. Bonne journée.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.8,
+     "ratio": 1.4177215189873418,
+     "flags": [],
+     "n": 0,
+     "seed": 1289,
+     "temperature": 0.7,
+     "wall": 4.273
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:15+00:00",
+   "reason": "new",
+   "durationSec": 2.38,
+   "input_lufs": -17.99,
+   "bytes": 19776,
+   "reviewWav": null
+  },
+  "2678aae08735bd69": {
+   "hash": "2678aae08735bd69",
+   "key": "Merci, vous aussi ! À bientôt !",
+   "speak": "Merci, vous aussi ! À bientôt !",
+   "genText": "Merci, vous aussi ! À bientôt !",
+   "texts": [
+    "Merci, vous aussi ! À bientôt !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci vous aussi. À bientôt.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1290,
+   "position": 56,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Merci vous aussi. À bientôt.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.72,
+     "ratio": 1.4315789473684213,
+     "flags": [],
+     "n": 0,
+     "seed": 1290,
+     "temperature": 0.7,
+     "wall": 4.787
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:16+00:00",
+   "reason": "new",
+   "durationSec": 2.18,
+   "input_lufs": -20.38,
+   "bytes": 18048,
+   "reviewWav": null
+  },
+  "192397f80f510ce4": {
+   "hash": "192397f80f510ce4",
+   "key": "Merci. Je dois boire beaucoup d'eau aussi ?",
+   "speak": "Merci. Je dois boire beaucoup d'eau aussi ?",
+   "genText": "Merci. Je dois boire beaucoup d'eau aussi ?",
+   "texts": [
+    "Merci. Je dois boire beaucoup d'eau aussi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci. Je dois boire beaucoup d'eau aussi ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1292,
+   "position": 58,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Merci. Je dois boire beaucoup d'eau aussi ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.056880733944954,
+     "flags": [],
+     "n": 0,
+     "seed": 1292,
+     "temperature": 0.7,
+     "wall": 4.351
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:17+00:00",
+   "reason": "new",
+   "durationSec": 2.68,
+   "input_lufs": -18.13,
+   "bytes": 22080,
+   "reviewWav": null
+  },
+  "65e730e3edcd07c3": {
+   "hash": "65e730e3edcd07c3",
+   "key": "Merci. Je peux laisser ma valise ici le jour du départ ?",
+   "speak": "Merci. Je peux laisser ma valise ici le jour du départ ?",
+   "genText": "Merci. Je peux laisser ma valise ici le jour du départ ?",
+   "texts": [
+    "Merci. Je peux laisser ma valise ici le jour du départ ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci. Je peux laisser ma valise ici le jour du départ ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1293,
+   "position": 59,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Merci. Je peux laisser ma valise ici le jour du départ ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.0,
+     "ratio": 1.1510791366906474,
+     "flags": [],
+     "n": 0,
+     "seed": 1293,
+     "temperature": 0.7,
+     "wall": 6.002
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:18+00:00",
+   "reason": "new",
+   "durationSec": 3.46,
+   "input_lufs": -21.26,
+   "bytes": 28416,
+   "reviewWav": null
+  },
+  "0c8824bf4aa4adb3": {
+   "hash": "0c8824bf4aa4adb3",
+   "key": "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour.",
+   "speak": "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour.",
+   "genText": "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour.",
+   "texts": [
+    "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Moi aussi je viens de Lyon. Je vais lui dire bonjour.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1294,
+   "position": 60,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Moi aussi je viens de Lyon. Je vais lui dire bonjour.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 1.0827067669172934,
+     "flags": [],
+     "n": 0,
+     "seed": 1294,
+     "temperature": 0.7,
+     "wall": 3.977
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:19+00:00",
+   "reason": "new",
+   "durationSec": 3.12,
+   "input_lufs": -20.4,
+   "bytes": 25536,
+   "reviewWav": null
+  },
+  "6f0e0eeeee362fe3": {
+   "hash": "6f0e0eeeee362fe3",
+   "key": "Moi aussi, je voudrais vivre à la campagne un jour !",
+   "speak": "Moi aussi, je voudrais vivre à la campagne un jour !",
+   "genText": "Moi aussi, je voudrais vivre à la campagne un jour !",
+   "texts": [
+    "Moi aussi, je voudrais vivre à la campagne un jour !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Moi aussi, je voudrais vivre à la campagne un jour.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1295,
+   "position": 61,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Moi aussi, je voudrais vivre à la campagne un jour.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 0.9600000000000001,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1295,
+     "temperature": 0.7,
+     "wall": 4.594
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:20+00:00",
+   "reason": "new",
+   "durationSec": 2.46,
+   "input_lufs": -21.04,
+   "bytes": 20352,
+   "reviewWav": null
+  },
+  "984e6536304f4fb2": {
+   "hash": "984e6536304f4fb2",
+   "key": "Non, c'est à cinq minutes à pied.",
+   "speak": "Non, c'est à cinq minutes à pied.",
+   "genText": "Non, c'est à cinq minutes à pied.",
+   "texts": [
+    "Non, c'est à cinq minutes à pied."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Non, c'est à cinq minutes à pied.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1296,
+   "position": 62,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Non, c'est à cinq minutes à pied.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.72,
+     "ratio": 1.3268292682926832,
+     "flags": [],
+     "n": 0,
+     "seed": 1296,
+     "temperature": 0.7,
+     "wall": 3.479
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:21+00:00",
+   "reason": "new",
+   "durationSec": 2.16,
+   "input_lufs": -22.65,
+   "bytes": 17856,
+   "reviewWav": null
+  },
+  "cef0f051cf955a85": {
+   "hash": "cef0f051cf955a85",
+   "key": "Non, elle a perdu. Tant pis ! Dimanche, ma sœur est venue déjeuner.",
+   "speak": "Non, elle a perdu. Tant pis ! Dimanche, ma sœur est venue déjeuner.",
+   "genText": "Non, elle a perdu. Tant pis ! Dimanche, ma sœur est venue déjeuner.",
+   "texts": [
+    "Non, elle a perdu. Tant pis ! Dimanche, ma sœur est venue déjeuner."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Non, elle a perdu. Tant pis. Dimanche, ma sœur est venue déjeuner.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1297,
+   "position": 63,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Non, elle a perdu. Tant pis. Dimanche, ma sœur est venue déjeuner.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.68,
+     "ratio": 1.42,
+     "flags": [],
+     "n": 0,
+     "seed": 1297,
+     "temperature": 0.7,
+     "wall": 6.973
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:21+00:00",
+   "reason": "new",
+   "durationSec": 5.38,
+   "input_lufs": -20.03,
+   "bytes": 43776,
+   "reviewWav": null
+  },
+  "5a37c7a6940fa2b8": {
+   "hash": "5a37c7a6940fa2b8",
+   "key": "Non, pas de fièvre. Mais je suis fatigué et je dors mal.",
+   "speak": "Non, pas de fièvre. Mais je suis fatigué et je dors mal.",
+   "genText": "Non, pas de fièvre. Mais je suis fatigué et je dors mal.",
+   "texts": [
+    "Non, pas de fièvre. Mais je suis fatigué et je dors mal."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Non, pas de fièvre, mais je suis fatigué et je dors mal.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1298,
+   "position": 64,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Non, pas de fièvre, mais je suis fatigué et je dors mal.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.32,
+     "ratio": 1.2705882352941178,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1298,
+     "temperature": 0.7,
+     "wall": 5.413
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:22+00:00",
+   "reason": "new",
+   "durationSec": 3.7,
+   "input_lufs": -21.2,
+   "bytes": 30336,
+   "reviewWav": null
+  },
+  "3d5beadd3ba196ec": {
+   "hash": "3d5beadd3ba196ec",
+   "key": "Non, pas très bien. Je suis fatigué et je me sens faible.",
+   "speak": "Non, pas très bien. Je suis fatigué et je me sens faible.",
+   "genText": "Non, pas très bien. Je suis fatigué et je me sens faible.",
+   "texts": [
+    "Non, pas très bien. Je suis fatigué et je me sens faible."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Non, pas très bien. Je suis fatigué et je me sens faible.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1299,
+   "position": 65,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Non, pas très bien. Je suis fatigué et je me sens faible.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 1.0129496402877698,
+     "flags": [],
+     "n": 0,
+     "seed": 1299,
+     "temperature": 0.7,
+     "wall": 5.421
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:23+00:00",
+   "reason": "new",
+   "durationSec": 3.38,
+   "input_lufs": -20.62,
+   "bytes": 27648,
+   "reviewWav": null
+  },
+  "730989dcc5382df6": {
+   "hash": "730989dcc5382df6",
+   "key": "Nous pouvons l'envoyer en réparation, si vous voulez.",
+   "speak": "Nous pouvons l'envoyer en réparation, si vous voulez.",
+   "genText": "Nous pouvons l'envoyer en réparation, si vous voulez.",
+   "texts": [
+    "Nous pouvons l'envoyer en réparation, si vous voulez."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Nous pouvons l'envoyer en réparation, si vous voulez.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "trail-silence"
+   ],
+   "seedBase": 1300,
+   "position": 66,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Nous pouvons l'envoyer en réparation, si vous voulez.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 1.0129496402877698,
+     "flags": [
+      "trail-silence"
+     ],
+     "n": 0,
+     "seed": 1300,
+     "temperature": 0.7,
+     "wall": 3.709
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:24+00:00",
+   "reason": "new",
+   "durationSec": 2.28,
+   "input_lufs": -20.52,
+   "bytes": 18816,
+   "reviewWav": null
+  },
+  "a1f85f0550b5b710": {
+   "hash": "a1f85f0550b5b710",
+   "key": "Oh, je suis désolé ! Je vous change ça tout de suite.",
+   "speak": "Oh, je suis désolé ! Je vous change ça tout de suite.",
+   "genText": "Oh, je suis désolé ! Je vous change ça tout de suite.",
+   "texts": [
+    "Oh, je suis désolé ! Je vous change ça tout de suite."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oh, je suis désolé. Je vous change ça tout de suite.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1301,
+   "position": 67,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oh, je suis désolé. Je vous change ça tout de suite.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.36,
+     "ratio": 1.058267716535433,
+     "flags": [],
+     "n": 0,
+     "seed": 1301,
+     "temperature": 0.7,
+     "wall": 3.69
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:25+00:00",
+   "reason": "new",
+   "durationSec": 3.1,
+   "input_lufs": -20.15,
+   "bytes": 25536,
+   "reviewWav": null
+  },
+  "b1101e21c179eee6": {
+   "hash": "b1101e21c179eee6",
+   "key": "Oh, montre-moi ! C'est qui, à côté de toi ?",
+   "speak": "Oh, montre-moi ! C'est qui, à côté de toi ?",
+   "genText": "Oh, montre-moi ! C'est qui, à côté de toi ?",
+   "texts": [
+    "Oh, montre-moi ! C'est qui, à côté de toi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oh, montre-moi ! C'est qui, à côté de toi ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1302,
+   "position": 68,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oh, montre-moi ! C'est qui, à côté de toi ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 1.5319148936170213,
+     "flags": [],
+     "n": 0,
+     "seed": 1302,
+     "temperature": 0.7,
+     "wall": 3.786
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:26+00:00",
+   "reason": "new",
+   "durationSec": 3.18,
+   "input_lufs": -23.08,
+   "bytes": 26112,
+   "reviewWav": null
+  },
+  "0c8ad6ececbb62d5": {
+   "hash": "0c8ad6ececbb62d5",
+   "key": "Oui, beaucoup ! C'est difficile, mais je fais quand même des progrès.",
+   "speak": "Oui, beaucoup ! C'est difficile, mais je fais quand même des progrès.",
+   "genText": "Oui, beaucoup ! C'est difficile, mais je fais quand même des progrès.",
+   "texts": [
+    "Oui, beaucoup ! C'est difficile, mais je fais quand même des progrès."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, beaucoup. C'est difficile, mais je fais quand même des progrès.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1304,
+   "position": 70,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, beaucoup. C'est difficile, mais je fais quand même des progrès.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.32,
+     "ratio": 1.0224852071005919,
+     "flags": [],
+     "n": 0,
+     "seed": 1304,
+     "temperature": 0.7,
+     "wall": 5.049
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:28+00:00",
+   "reason": "new",
+   "durationSec": 4.18,
+   "input_lufs": -22.01,
+   "bytes": 34176,
+   "reviewWav": null
+  },
+  "36c80b89e2c90d2e": {
+   "hash": "36c80b89e2c90d2e",
+   "key": "Oui, bonjour ! Enchanté. Je commence aujourd'hui.",
+   "speak": "Oui, bonjour ! Enchanté. Je commence aujourd'hui.",
+   "genText": "Oui, bonjour ! Enchanté. Je commence aujourd'hui.",
+   "texts": [
+    "Oui, bonjour ! Enchanté. Je commence aujourd'hui."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, bonjour, enchanté. Je commence aujourd'hui.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1306,
+   "position": 72,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, bonjour, enchanté. Je commence aujourd'hui.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.400041666666667,
+     "ratio": 1.4193682795698923,
+     "flags": [],
+     "n": 0,
+     "seed": 1306,
+     "temperature": 0.7,
+     "wall": 5.222
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:28+00:00",
+   "reason": "new",
+   "durationSec": 3.98,
+   "input_lufs": -19.67,
+   "bytes": 32448,
+   "reviewWav": null
+  },
+  "3c069e1d4e9daeb8": {
+   "hash": "3c069e1d4e9daeb8",
+   "key": "Oui, c'est bien ça : deux pièces, quarante mètres carrés.",
+   "speak": "Oui, c'est bien ça : deux pièces, quarante mètres carrés.",
+   "genText": "Oui, c'est bien ça : deux pièces, quarante mètres carrés.",
+   "texts": [
+    "Oui, c'est bien ça : deux pièces, quarante mètres carrés."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, c'est bien ça. Deux pièces, 40 mètres carrés.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1307,
+   "position": 73,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, c'est bien ça. Deux pièces, 40 mètres carrés.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.1050359712230216,
+     "flags": [],
+     "n": 0,
+     "seed": 1307,
+     "temperature": 0.7,
+     "wall": 4.444
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:29+00:00",
+   "reason": "new",
+   "durationSec": 3.48,
+   "input_lufs": -22.74,
+   "bytes": 28416,
+   "reviewWav": null
+  },
+  "91f5885c86fa0924": {
+   "hash": "91f5885c86fa0924",
+   "key": "Oui, c'est tout. Ça fait combien ?",
+   "speak": "Oui, c'est tout. Ça fait combien ?",
+   "genText": "Oui, c'est tout. Ça fait combien ?",
+   "texts": [
+    "Oui, c'est tout. Ça fait combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, c'est tout. Ça fait combien ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1308,
+   "position": 74,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, c'est tout. Ça fait combien ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.24,
+     "ratio": 1.0926829268292686,
+     "flags": [],
+     "n": 0,
+     "seed": 1308,
+     "temperature": 0.7,
+     "wall": 2.679
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:30+00:00",
+   "reason": "new",
+   "durationSec": 2.0,
+   "input_lufs": -21.63,
+   "bytes": 16704,
+   "reviewWav": null
+  },
+  "15b79dfd44a2a3a1": {
+   "hash": "15b79dfd44a2a3a1",
+   "key": "Oui, c'est vrai. Allez, bonne semaine, Manon !",
+   "speak": "Oui, c'est vrai. Allez, bonne semaine, Manon !",
+   "genText": "Oui, c'est vrai. Allez, bonne semaine, Manon !",
+   "texts": [
+    "Oui, c'est vrai. Allez, bonne semaine, Manon !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, c'est vrai. Allez, bonne semaine Manon.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1309,
+   "position": 75,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, c'est vrai. Allez, bonne semaine Manon.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.2,
+     "ratio": 1.1743119266055047,
+     "flags": [],
+     "n": 0,
+     "seed": 1309,
+     "temperature": 0.7,
+     "wall": 3.513
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:31+00:00",
+   "reason": "new",
+   "durationSec": 2.56,
+   "input_lufs": -18.36,
+   "bytes": 21120,
+   "reviewWav": null
+  },
+  "b19cde64cb293311": {
+   "hash": "b19cde64cb293311",
+   "key": "Oui, il fait un temps de chien aujourd'hui.",
+   "speak": "Oui, il fait un temps de chien aujourd'hui.",
+   "genText": "Oui, il fait un temps de chien aujourd'hui.",
+   "texts": [
+    "Oui, il fait un temps de chien aujourd'hui."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, il fait un temps de chien aujourd'hui.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1311,
+   "position": 77,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, il fait un temps de chien aujourd'hui.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.64,
+     "ratio": 0.9688073394495413,
+     "flags": [],
+     "n": 0,
+     "seed": 1311,
+     "temperature": 0.7,
+     "wall": 2.86
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:33+00:00",
+   "reason": "new",
+   "durationSec": 2.42,
+   "input_lufs": -20.02,
+   "bytes": 19968,
+   "reviewWav": null
+  },
+  "7d19b0324c6954e5": {
+   "hash": "7d19b0324c6954e5",
+   "key": "Oui, il y a une heure : trente-huit cinq.",
+   "speak": "Oui, il y a une heure : trente-huit cinq.",
+   "genText": "Oui, il y a une heure : trente-huit cinq.",
+   "texts": [
+    "Oui, il y a une heure : trente-huit cinq."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, il y a une heure. 38.5.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1312,
+   "position": 78,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, il y a une heure. 38.5.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.2,
+     "ratio": 1.3195876288659796,
+     "flags": [],
+     "n": 0,
+     "seed": 1312,
+     "temperature": 0.7,
+     "wall": 3.508
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:33+00:00",
+   "reason": "new",
+   "durationSec": 2.86,
+   "input_lufs": -21.51,
+   "bytes": 23616,
+   "reviewWav": null
+  },
+  "35a56fddac1c61a6": {
+   "hash": "35a56fddac1c61a6",
+   "key": "Oui, je cherche une veste pour l'hiver.",
+   "speak": "Oui, je cherche une veste pour l'hiver.",
+   "genText": "Oui, je cherche une veste pour l'hiver.",
+   "texts": [
+    "Oui, je cherche une veste pour l'hiver."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, je cherche une veste pour l'hiver.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1313,
+   "position": 79,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, je cherche une veste pour l'hiver.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.152,
+     "flags": [],
+     "n": 0,
+     "seed": 1313,
+     "temperature": 0.7,
+     "wall": 3.295
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:34+00:00",
+   "reason": "new",
+   "durationSec": 2.3,
+   "input_lufs": -20.46,
+   "bytes": 19008,
+   "reviewWav": null
+  },
+  "3ef6def47c59fae3": {
+   "hash": "3ef6def47c59fae3",
+   "key": "Oui, je suis libre. Qu'est-ce que tu veux faire ?",
+   "speak": "Oui, je suis libre. Qu'est-ce que tu veux faire ?",
+   "genText": "Oui, je suis libre. Qu'est-ce que tu veux faire ?",
+   "texts": [
+    "Oui, je suis libre. Qu'est-ce que tu veux faire ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, je suis libre. Qu'est-ce que tu veux faire ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1314,
+   "position": 80,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, je suis libre. Qu'est-ce que tu veux faire ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.36,
+     "ratio": 1.168695652173913,
+     "flags": [],
+     "n": 0,
+     "seed": 1314,
+     "temperature": 0.7,
+     "wall": 3.695
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:35+00:00",
+   "reason": "new",
+   "durationSec": 3.0,
+   "input_lufs": -21.34,
+   "bytes": 24576,
+   "reviewWav": null
+  },
+  "7289acb3e84538e4": {
+   "hash": "7289acb3e84538e4",
+   "key": "Oui, juste en face. C'est le quartier où j'habite, il est très vivant.",
+   "speak": "Oui, juste en face. C'est le quartier où j'habite, il est très vivant.",
+   "genText": "Oui, juste en face. C'est le quartier où j'habite, il est très vivant.",
+   "texts": [
+    "Oui, juste en face. C'est le quartier où j'habite, il est très vivant."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 15,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, juste en face. C'est le quartier où j'habite. Il est très vivant.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1315,
+   "position": 81,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, juste en face. C'est le quartier où j'habite. Il est très vivant.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.2,
+     "ratio": 1.2530120481927711,
+     "flags": [],
+     "n": 0,
+     "seed": 1315,
+     "temperature": 0.7,
+     "wall": 5.84
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:36+00:00",
+   "reason": "new",
+   "durationSec": 4.86,
+   "input_lufs": -21.39,
+   "bytes": 39552,
+   "reviewWav": null
+  },
+  "044c62520672e795": {
+   "hash": "044c62520672e795",
+   "key": "Oui, le même plat avec des légumes, sans poulet.",
+   "speak": "Oui, le même plat avec des légumes, sans poulet.",
+   "genText": "Oui, le même plat avec des légumes, sans poulet.",
+   "texts": [
+    "Oui, le même plat avec des légumes, sans poulet."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, le même plat avec des légumes, sans poulet.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1316,
+   "position": 82,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, le même plat avec des légumes, sans poulet.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.76,
+     "ratio": 1.2429752066115702,
+     "flags": [],
+     "n": 0,
+     "seed": 1316,
+     "temperature": 0.7,
+     "wall": 4.271
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:37+00:00",
+   "reason": "new",
+   "durationSec": 3.34,
+   "input_lufs": -20.49,
+   "bytes": 27456,
+   "reviewWav": null
+  },
+  "a68870b57509bc7c": {
+   "hash": "a68870b57509bc7c",
+   "key": "Oui, merci. Où sont les cabines ?",
+   "speak": "Oui, merci. Où sont les cabines ?",
+   "genText": "Oui, merci. Où sont les cabines ?",
+   "texts": [
+    "Oui, merci. Où sont les cabines ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, merci. Où sont les cabines ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1317,
+   "position": 83,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, merci. Où sont les cabines ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.4,
+     "ratio": 1.1707317073170733,
+     "flags": [],
+     "n": 0,
+     "seed": 1317,
+     "temperature": 0.7,
+     "wall": 2.803
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:38+00:00",
+   "reason": "new",
+   "durationSec": 2.18,
+   "input_lufs": -18.71,
+   "bytes": 18048,
+   "reviewWav": null
+  },
+  "89add04d4cc6ef41": {
+   "hash": "89add04d4cc6ef41",
+   "key": "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.",
+   "speak": "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.",
+   "genText": "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.",
+   "texts": [
+    "Oui, merci. Ça me fait plaisir de te rencontrer, Léa."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1318,
+   "position": 84,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, merci. Ça me fait plaisir de te rencontrer, Léa.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.0584615384615383,
+     "flags": [],
+     "n": 0,
+     "seed": 1318,
+     "temperature": 0.7,
+     "wall": 3.715
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:39+00:00",
+   "reason": "new",
+   "durationSec": 2.96,
+   "input_lufs": -22.49,
+   "bytes": 24384,
+   "reviewWav": null
+  },
+  "3f424ef6ab6c1587": {
+   "hash": "3f424ef6ab6c1587",
+   "key": "Oui, pas de problème. Tu peux me montrer mon bureau ?",
+   "speak": "Oui, pas de problème. Tu peux me montrer mon bureau ?",
+   "genText": "Oui, pas de problème. Tu peux me montrer mon bureau ?",
+   "texts": [
+    "Oui, pas de problème. Tu peux me montrer mon bureau ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, pas de problème. Tu peux me montrer mon bureau ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1319,
+   "position": 85,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, pas de problème. Tu peux me montrer mon bureau ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.1815384615384614,
+     "flags": [],
+     "n": 0,
+     "seed": 1319,
+     "temperature": 0.7,
+     "wall": 3.981
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:39+00:00",
+   "reason": "new",
+   "durationSec": 3.3,
+   "input_lufs": -18.84,
+   "bytes": 27072,
+   "reviewWav": null
+  },
+  "76186afdfcb89d6c": {
+   "hash": "76186afdfcb89d6c",
+   "key": "Oui, un mois de loyer. L'appartement est libre le premier mars.",
+   "speak": "Oui, un mois de loyer. L'appartement est libre le premier mars.",
+   "genText": "Oui, un mois de loyer. L'appartement est libre le premier mars.",
+   "texts": [
+    "Oui, un mois de loyer. L'appartement est libre le premier mars."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, un mois de loyer. L'appartement est libre le 1er mars.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1321,
+   "position": 87,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, un mois de loyer. L'appartement est libre le 1er mars.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.12,
+     "ratio": 1.3044585987261148,
+     "flags": [],
+     "n": 0,
+     "seed": 1321,
+     "temperature": 0.7,
+     "wall": 5.688
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:40+00:00",
+   "reason": "new",
+   "durationSec": 4.74,
+   "input_lufs": -21.18,
+   "bytes": 38592,
+   "reviewWav": null
+  },
+  "a1d374a719830355": {
+   "hash": "a1d374a719830355",
+   "key": "Oui. Je vais inviter Léo aussi, ça te va ?",
+   "speak": "Oui. Je vais inviter Léo aussi, ça te va ?",
+   "genText": "Oui. Je vais inviter Léo aussi, ça te va ?",
+   "texts": [
+    "Oui. Je vais inviter Léo aussi, ça te va ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, je vais inviter Léo aussi, ça te va ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1322,
+   "position": 88,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, je vais inviter Léo aussi, ça te va ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 1.44,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1322,
+     "temperature": 0.7,
+     "wall": 5.479
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:41+00:00",
+   "reason": "new",
+   "durationSec": 2.8,
+   "input_lufs": -20.21,
+   "bytes": 23040,
+   "reviewWav": null
+  },
+  "21bd1d27ef028cac": {
+   "hash": "21bd1d27ef028cac",
+   "key": "Oui. Vous avez des tartes aux fruits ?",
+   "speak": "Oui. Vous avez des tartes aux fruits ?",
+   "genText": "Oui. Vous avez des tartes aux fruits ?",
+   "texts": [
+    "Oui. Vous avez des tartes aux fruits ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, vous avez des tartes aux fruits ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1323,
+   "position": 89,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Oui, vous avez des tartes aux fruits ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.4,
+     "ratio": 0.9896907216494846,
+     "flags": [],
+     "n": 0,
+     "seed": 1323,
+     "temperature": 0.7,
+     "wall": 2.78
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:42+00:00",
+   "reason": "new",
+   "durationSec": 2.12,
+   "input_lufs": -21.34,
+   "bytes": 17664,
+   "reviewWav": null
+  },
+  "144d009c9943c634": {
+   "hash": "144d009c9943c634",
+   "key": "Par carte. Le train part de quel quai ?",
+   "speak": "Par carte. Le train part de quel quai ?",
+   "genText": "Par carte. Le train part de quel quai ?",
+   "texts": [
+    "Par carte. Le train part de quel quai ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Par carte, le train part de quel quai ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1324,
+   "position": 90,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Par carte, le train part de quel quai ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.96,
+     "ratio": 1.220618556701031,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1324,
+     "temperature": 0.7,
+     "wall": 3.193
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:43+00:00",
+   "reason": "new",
+   "durationSec": 2.36,
+   "input_lufs": -21.52,
+   "bytes": 19584,
+   "reviewWav": null
+  },
+  "a7518eb6d7b07247": {
+   "hash": "a7518eb6d7b07247",
+   "key": "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat.",
+   "speak": "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat.",
+   "genText": "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat.",
+   "texts": [
+    "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "« Pardon, j'ai oublié. Je vous apporte du pain avec votre plat. »",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1325,
+   "position": 91,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "« Pardon, j'ai oublié. Je vous apporte du pain avec votre plat. »",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.08,
+     "ratio": 1.080794701986755,
+     "flags": [],
+     "n": 0,
+     "seed": 1325,
+     "temperature": 0.7,
+     "wall": 4.157
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:44+00:00",
+   "reason": "new",
+   "durationSec": 3.4,
+   "input_lufs": -22.79,
+   "bytes": 27840,
+   "reviewWav": null
+  },
+  "6de4f41881436c7d": {
+   "hash": "6de4f41881436c7d",
+   "key": "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+   "speak": "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+   "genText": "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+   "texts": [
+    "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1326,
+   "position": 92,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Pardon, je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.92,
+     "ratio": 0.9619631901840492,
+     "flags": [],
+     "n": 0,
+     "seed": 1326,
+     "temperature": 0.7,
+     "wall": 4.735
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:45+00:00",
+   "reason": "new",
+   "durationSec": 3.5,
+   "input_lufs": -21.09,
+   "bytes": 28608,
+   "reviewWav": null
+  },
+  "9a29451745438cc3": {
+   "hash": "9a29451745438cc3",
+   "key": "Pardon, pouvez-vous répéter, s'il vous plaît ?",
+   "speak": "Pardon, pouvez-vous répéter, s'il vous plaît ?",
+   "genText": "Pardon, pouvez-vous répéter, s'il vous plaît ?",
+   "texts": [
+    "Pardon, pouvez-vous répéter, s'il vous plaît ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Pardon, pouvez-vous répéter s'il vous plaît ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1327,
+   "position": 93,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Pardon, pouvez-vous répéter s'il vous plaît ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.72,
+     "ratio": 0.9460869565217392,
+     "flags": [],
+     "n": 0,
+     "seed": 1327,
+     "temperature": 0.7,
+     "wall": 3.298
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:46+00:00",
+   "reason": "new",
+   "durationSec": 2.42,
+   "input_lufs": -18.52,
+   "bytes": 19968,
+   "reviewWav": null
+  },
+  "c3e72d357408b032": {
+   "hash": "c3e72d357408b032",
+   "key": "Parfait, je la prends. Et ces pains au chocolat, c'est combien ?",
+   "speak": "Parfait, je la prends. Et ces pains au chocolat, c'est combien ?",
+   "genText": "Parfait, je la prends. Et ces pains au chocolat, c'est combien ?",
+   "texts": [
+    "Parfait, je la prends. Et ces pains au chocolat, c'est combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Parfait, je l'apprends. Et ces pains au chocolat, c'est combien ?",
+   "loose_cer": 0.03389830508474576,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1328,
+   "position": 94,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Parfait, je l'apprends. Et ces pains au chocolat, c'est combien ?",
+     "loose_cer": 0.03389830508474576,
+     "loose_wer": 0.16666666666666666,
+     "strict_cer": 0.03389830508474576,
+     "phon_cer": 0.0,
+     "duration": 5.04,
+     "ratio": 1.3090909090909093,
+     "flags": [],
+     "n": 0,
+     "seed": 1328,
+     "temperature": 0.7,
+     "wall": 5.683
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:46+00:00",
+   "reason": "new",
+   "durationSec": 4.76,
+   "input_lufs": -22.74,
+   "bytes": 38784,
+   "reviewWav": null
+  },
+  "f3ae2d4787c01b71": {
+   "hash": "f3ae2d4787c01b71",
+   "key": "Parfait, je vais prendre la noire. Merci pour votre aide !",
+   "speak": "Parfait, je vais prendre la noire. Merci pour votre aide !",
+   "genText": "Parfait, je vais prendre la noire. Merci pour votre aide !",
+   "texts": [
+    "Parfait, je vais prendre la noire. Merci pour votre aide !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Parfait. Je vais prendre la noire. Merci pour votre aide.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1329,
+   "position": 95,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Parfait. Je vais prendre la noire. Merci pour votre aide.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.16,
+     "ratio": 1.1475862068965517,
+     "flags": [],
+     "n": 0,
+     "seed": 1329,
+     "temperature": 0.7,
+     "wall": 4.488
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:47+00:00",
+   "reason": "new",
+   "durationSec": 3.86,
+   "input_lufs": -22.03,
+   "bytes": 31488,
+   "reviewWav": null
+  },
+  "b1214f2cfcc93f19": {
+   "hash": "b1214f2cfcc93f19",
+   "key": "Parfait. Et le wifi, c'est quoi, le mot de passe ?",
+   "speak": "Parfait. Et le wifi, c'est quoi, le mot de passe ?",
+   "genText": "Parfait. Et le wifi, c'est quoi, le mot de passe ?",
+   "texts": [
+    "Parfait. Et le wifi, c'est quoi, le mot de passe ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Parfait. Et le Wi-Fi, c'est quoi le mot de passe ?",
+   "loose_cer": 0.022222222222222223,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1330,
+   "position": 96,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Parfait. Et le Wi-Fi, c'est quoi le mot de passe ?",
+     "loose_cer": 0.022222222222222223,
+     "loose_wer": 0.18181818181818182,
+     "strict_cer": 0.022222222222222223,
+     "phon_cer": 0.0,
+     "duration": 4.0,
+     "ratio": 1.391304347826087,
+     "flags": [],
+     "n": 0,
+     "seed": 1330,
+     "temperature": 0.7,
+     "wall": 4.171
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:48+00:00",
+   "reason": "new",
+   "durationSec": 3.86,
+   "input_lufs": -21.17,
+   "bytes": 31488,
+   "reviewWav": null
+  },
+  "cc5eced7046c680d": {
+   "hash": "cc5eced7046c680d",
+   "key": "Parfait. Et pour le retour, dimanche soir ?",
+   "speak": "Parfait. Et pour le retour, dimanche soir ?",
+   "genText": "Parfait. Et pour le retour, dimanche soir ?",
+   "texts": [
+    "Parfait. Et pour le retour, dimanche soir ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Parfait. Et pour le retour, dimanche soir ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1331,
+   "position": 97,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Parfait. Et pour le retour, dimanche soir ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.68,
+     "ratio": 1.3504587155963304,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1331,
+     "temperature": 0.7,
+     "wall": 3.897
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:49+00:00",
+   "reason": "new",
+   "durationSec": 3.04,
+   "input_lufs": -20.43,
+   "bytes": 24960,
+   "reviewWav": null
+  },
+  "eaf163f9812fd926": {
+   "hash": "eaf163f9812fd926",
+   "key": "Pas de problème. Bref, dimanche, on court, et après, on va boire un verre !",
+   "speak": "Pas de problème. Bref, dimanche, on court, et après, on va boire un verre !",
+   "genText": "Pas de problème. Bref, dimanche, on court, et après, on va boire un verre !",
+   "texts": [
+    "Pas de problème. Bref, dimanche, on court, et après, on va boire un verre !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 14,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Pas de problème. Bref, dimanche, on court et après, on va boire un verre.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1332,
+   "position": 98,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Pas de problème. Bref, dimanche, on court et après, on va boire un verre.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 6.32,
+     "ratio": 1.4445714285714286,
+     "flags": [],
+     "n": 0,
+     "seed": 1332,
+     "temperature": 0.7,
+     "wall": 6.654
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:50+00:00",
+   "reason": "new",
+   "durationSec": 5.78,
+   "input_lufs": -22.25,
+   "bytes": 46848,
+   "reviewWav": null
+  },
+  "e5667d1027060684": {
+   "hash": "e5667d1027060684",
+   "key": "Pas mal, merci. Je suis resté à la maison. Et toi ?",
+   "speak": "Pas mal, merci. Je suis resté à la maison. Et toi ?",
+   "genText": "Pas mal, merci. Je suis resté à la maison. Et toi ?",
+   "texts": [
+    "Pas mal, merci. Je suis resté à la maison. Et toi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "« Pas mal, merci. Je suis resté à la maison. Et toi ? »",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1333,
+   "position": 99,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "« Pas mal, merci. Je suis resté à la maison. Et toi ? »",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.08,
+     "ratio": 1.3830508474576273,
+     "flags": [],
+     "n": 0,
+     "seed": 1333,
+     "temperature": 0.7,
+     "wall": 4.367
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:51+00:00",
+   "reason": "new",
+   "durationSec": 3.36,
+   "input_lufs": -21.9,
+   "bytes": 27456,
+   "reviewWav": null
+  },
+  "d258f8d302aafc92": {
+   "hash": "d258f8d302aafc92",
+   "key": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
+   "speak": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
+   "genText": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
+   "texts": [
+    "Peut-être, mais je déteste courir. Je préfère les sports d'équipe."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1334,
+   "position": 100,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.72,
+     "ratio": 1.1373493975903612,
+     "flags": [],
+     "n": 0,
+     "seed": 1334,
+     "temperature": 0.7,
+     "wall": 5.706
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:52+00:00",
+   "reason": "new",
+   "durationSec": 4.3,
+   "input_lufs": -21.82,
+   "bytes": 35136,
+   "reviewWav": null
+  },
+  "4801e341ded832d1": {
+   "hash": "4801e341ded832d1",
+   "key": "Plus lentement, s'il vous plaît.",
+   "speak": "Plus lentement, s'il vous plaît.",
+   "genText": "Plus lentement, s'il vous plaît.",
+   "texts": [
+    "Plus lentement, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Plus lentement, s'il vous plaît.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1335,
+   "position": 101,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Plus lentement, s'il vous plaît.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 1.92,
+     "ratio": 0.9035294117647058,
+     "flags": [],
+     "n": 0,
+     "seed": 1335,
+     "temperature": 0.7,
+     "wall": 2.738
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:53+00:00",
+   "reason": "new",
+   "durationSec": 1.56,
+   "input_lufs": -20.89,
+   "bytes": 13056,
+   "reviewWav": null
+  },
+  "ccfa8079f3eb6c21": {
+   "hash": "ccfa8079f3eb6c21",
+   "key": "Samedi, j'ai regardé le match de foot à la télé.",
+   "speak": "Samedi, j'ai regardé le match de foot à la télé.",
+   "genText": "Samedi, j'ai regardé le match de foot à la télé.",
+   "texts": [
+    "Samedi, j'ai regardé le match de foot à la télé."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 11,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Samedi, j'ai regardé le match de foot à la télé.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1336,
+   "position": 102,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Samedi, j'ai regardé le match de foot à la télé.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.3016949152542374,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1336,
+     "temperature": 0.7,
+     "wall": 3.98
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:54+00:00",
+   "reason": "new",
+   "durationSec": 3.1,
+   "input_lufs": -20.79,
+   "bytes": 25536,
+   "reviewWav": null
+  },
+  "bf87efaebf439dec": {
+   "hash": "bf87efaebf439dec",
+   "key": "Seize heures, c'est parfait.",
+   "speak": "Seize heures, c'est parfait.",
+   "genText": "Seize heures, c'est parfait.",
+   "texts": [
+    "Seize heures, c'est parfait."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "16 heures, c'est parfait.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1337,
+   "position": 103,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "16 heures, c'est parfait.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.16,
+     "ratio": 1.136842105263158,
+     "flags": [],
+     "n": 0,
+     "seed": 1337,
+     "temperature": 0.7,
+     "wall": 2.826
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:54+00:00",
+   "reason": "new",
+   "durationSec": 1.94,
+   "input_lufs": -22.15,
+   "bytes": 16128,
+   "reviewWav": null
+  },
+  "1ba0975d98704b34": {
+   "hash": "1ba0975d98704b34",
+   "key": "Super. Alors, on se voit samedi. J'ai hâte !",
+   "speak": "Super. Alors, on se voit samedi. J'ai hâte !",
+   "genText": "Super. Alors, on se voit samedi. J'ai hâte !",
+   "texts": [
+    "Super. Alors, on se voit samedi. J'ai hâte !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Super ! Alors, on se voit samedi. J'ai hâte.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1338,
+   "position": 104,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Super ! Alors, on se voit samedi. J'ai hâte.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.400041666666667,
+     "ratio": 1.7087540453074435,
+     "flags": [],
+     "n": 0,
+     "seed": 1338,
+     "temperature": 0.7,
+     "wall": 4.522
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:55+00:00",
+   "reason": "new",
+   "durationSec": 4.14,
+   "input_lufs": -22.42,
+   "bytes": 33792,
+   "reviewWav": null
+  },
+  "889b2e26d3927d58": {
+   "hash": "889b2e26d3927d58",
+   "key": "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.",
+   "speak": "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.",
+   "genText": "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.",
+   "texts": [
+    "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 15,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Trois fois, moi j'ai souvent la flemme de faire du sport après le travail.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1341,
+   "position": 107,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Trois fois, moi j'ai souvent la flemme de faire du sport après le travail.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.16,
+     "ratio": 0.9043478260869566,
+     "flags": [],
+     "n": 0,
+     "seed": 1341,
+     "temperature": 0.7,
+     "wall": 5.753
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:57+00:00",
+   "reason": "new",
+   "durationSec": 3.8,
+   "input_lufs": -20.19,
+   "bytes": 31104,
+   "reviewWav": null
+  },
+  "b630b66f63ee4613": {
+   "hash": "b630b66f63ee4613",
+   "key": "Trois jours ? Mais je travaille demain…",
+   "speak": "Trois jours ? Mais je travaille demain…",
+   "genText": "Trois jours ? Mais je travaille demain….",
+   "texts": [
+    "Trois jours ? Mais je travaille demain…"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Trois jours, mais je travaille demain.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1342,
+   "position": 108,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Trois jours, mais je travaille demain.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.96,
+     "ratio": 1.1495145631067962,
+     "flags": [],
+     "n": 0,
+     "seed": 1342,
+     "temperature": 0.7,
+     "wall": 6.325
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:58+00:00",
+   "reason": "new",
+   "durationSec": 2.32,
+   "input_lufs": -21.44,
+   "bytes": 19200,
+   "reviewWav": null
+  },
+  "c059e62e59d48d7c": {
+   "hash": "c059e62e59d48d7c",
+   "key": "Trois semaines, à peu près.",
+   "speak": "Trois semaines, à peu près.",
+   "genText": "Trois semaines, à peu près.",
+   "texts": [
+    "Trois semaines, à peu près."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Trois semaines à peu près.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1343,
+   "position": 109,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Trois semaines à peu près.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.16,
+     "ratio": 1.1835616438356165,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1343,
+     "temperature": 0.7,
+     "wall": 3.577
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:35:59+00:00",
+   "reason": "new",
+   "durationSec": 1.56,
+   "input_lufs": -21.46,
+   "bytes": 13056,
+   "reviewWav": null
+  },
+  "b52708c1869be1aa": {
+   "hash": "b52708c1869be1aa",
+   "key": "Très bien. Il y a un ascenseur ?",
+   "speak": "Très bien. Il y a un ascenseur ?",
+   "genText": "Très bien. Il y a un ascenseur ?",
+   "texts": [
+    "Très bien. Il y a un ascenseur ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Très bien. Il y a un ascenseur ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1345,
+   "position": 111,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Très bien. Il y a un ascenseur ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.48,
+     "ratio": 1.2556962025316456,
+     "flags": [],
+     "n": 0,
+     "seed": 1345,
+     "temperature": 0.7,
+     "wall": 4.425
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:00+00:00",
+   "reason": "new",
+   "durationSec": 2.16,
+   "input_lufs": -18.86,
+   "bytes": 17856,
+   "reviewWav": null
+  },
+  "bf3f433fbfd5d3e4": {
+   "hash": "bf3f433fbfd5d3e4",
+   "key": "Très bien. Je vous choisis des tomates bien mûres.",
+   "speak": "Très bien. Je vous choisis des tomates bien mûres.",
+   "genText": "Très bien. Je vous choisis des tomates bien mûres.",
+   "texts": [
+    "Très bien. Je vous choisis des tomates bien mûres."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 9,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Très bien. Je vous choisis des tomates bien mûres.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1347,
+   "position": 113,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Très bien. Je vous choisis des tomates bien mûres.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.2,
+     "ratio": 0.9846153846153847,
+     "flags": [],
+     "n": 0,
+     "seed": 1347,
+     "temperature": 0.7,
+     "wall": 4.357
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:01+00:00",
+   "reason": "new",
+   "durationSec": 2.98,
+   "input_lufs": -21.27,
+   "bytes": 24576,
+   "reviewWav": null
+  },
+  "217bd214b7edfb1c": {
+   "hash": "217bd214b7edfb1c",
+   "key": "Très bien. Voici mon numéro. Au revoir, madame.",
+   "speak": "Très bien. Voici mon numéro. Au revoir, madame.",
+   "genText": "Très bien. Voici mon numéro. Au revoir, madame.",
+   "texts": [
+    "Très bien. Voici mon numéro. Au revoir, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Très bien. Voici mon numéro. Au revoir, madame.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1348,
+   "position": 114,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Très bien. Voici mon numéro. Au revoir, madame.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.68,
+     "ratio": 1.2474576271186442,
+     "flags": [],
+     "n": 0,
+     "seed": 1348,
+     "temperature": 0.7,
+     "wall": 4.176
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:02+00:00",
+   "reason": "new",
+   "durationSec": 3.5,
+   "input_lufs": -18.35,
+   "bytes": 28608,
+   "reviewWav": null
+  },
+  "8da60c10f9c751c5": {
+   "hash": "8da60c10f9c751c5",
+   "key": "Voilà. Avec ça, ce sera tout ?",
+   "speak": "Voilà. Avec ça, ce sera tout ?",
+   "genText": "Voilà. Avec ça, ce sera tout ?",
+   "texts": [
+    "Voilà. Avec ça, ce sera tout ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Voilà. Avec ça, ce sera tout.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1352,
+   "position": 118,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Voilà. Avec ça, ce sera tout.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 1.7095890410958905,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 0,
+     "seed": 1352,
+     "temperature": 0.7,
+     "wall": 3.385
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:04+00:00",
+   "reason": "new",
+   "durationSec": 2.44,
+   "input_lufs": -24.69,
+   "bytes": 20160,
+   "reviewWav": null
+  },
+  "e601951ab1762ae3": {
+   "hash": "e601951ab1762ae3",
+   "key": "Voilà. C'est tout, merci. Au revoir !",
+   "speak": "Voilà. C'est tout, merci. Au revoir !",
+   "genText": "Voilà. C'est tout, merci. Au revoir !",
+   "texts": [
+    "Voilà. C'est tout, merci. Au revoir !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Voilà. C'est tout. Merci. Au revoir.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1353,
+   "position": 119,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Voilà. C'est tout. Merci. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 1.5999999999999999,
+     "flags": [],
+     "n": 0,
+     "seed": 1353,
+     "temperature": 0.7,
+     "wall": 3.691
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:05+00:00",
+   "reason": "new",
+   "durationSec": 3.26,
+   "input_lufs": -19.37,
+   "bytes": 26688,
+   "reviewWav": null
+  },
+  "12d792f01ee08c9c": {
+   "hash": "12d792f01ee08c9c",
+   "key": "À la campagne, près de Dijon. Mon grand-père est né là-bas.",
+   "speak": "À la campagne, près de Dijon. Mon grand-père est né là-bas.",
+   "genText": "À la campagne, près de Dijon. Mon grand-père est né là-bas.",
+   "texts": [
+    "À la campagne, près de Dijon. Mon grand-père est né là-bas."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 13,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "À la campagne, près de Dijon, mon grand-père est né là-bas.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1354,
+   "position": 120,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "À la campagne, près de Dijon, mon grand-père est né là-bas.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.88,
+     "ratio": 1.3746478873239436,
+     "flags": [],
+     "n": 0,
+     "seed": 1354,
+     "temperature": 0.7,
+     "wall": 4.728
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:06+00:00",
+   "reason": "new",
+   "durationSec": 4.38,
+   "input_lufs": -24.49,
+   "bytes": 35712,
+   "reviewWav": null
+  },
+  "5a21c94adb35fe4e": {
+   "hash": "5a21c94adb35fe4e",
+   "key": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
+   "speak": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
+   "genText": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
+   "texts": [
+    "Ça dépend. Il va peut-être encore pleuvoir un peu."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1355,
+   "position": 121,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.2,
+     "ratio": 1.0078740157480317,
+     "flags": [],
+     "n": 0,
+     "seed": 1355,
+     "temperature": 0.7,
+     "wall": 3.276
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:07+00:00",
+   "reason": "new",
+   "durationSec": 2.8,
+   "input_lufs": -20.84,
+   "bytes": 23040,
+   "reviewWav": null
+  },
+  "00d3b8600007b78a": {
+   "hash": "00d3b8600007b78a",
+   "key": "Ça marche. Et le film, il commence à quelle heure ?",
+   "speak": "Ça marche. Et le film, il commence à quelle heure ?",
+   "genText": "Ça marche. Et le film, il commence à quelle heure ?",
+   "texts": [
+    "Ça marche. Et le film, il commence à quelle heure ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ça marche, et le film, il commence à quelle heure ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1356,
+   "position": 122,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ça marche, et le film, il commence à quelle heure ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.52,
+     "ratio": 1.135483870967742,
+     "flags": [],
+     "n": 0,
+     "seed": 1356,
+     "temperature": 0.7,
+     "wall": 3.398
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:08+00:00",
+   "reason": "new",
+   "durationSec": 3.18,
+   "input_lufs": -21.12,
+   "bytes": 26112,
+   "reviewWav": null
+  },
+  "caa6373b5e01f8de": {
+   "hash": "caa6373b5e01f8de",
+   "key": "Ça marche. À tout à l'heure, et merci pour ton aide !",
+   "speak": "Ça marche. À tout à l'heure, et merci pour ton aide !",
+   "genText": "Ça marche. À tout à l'heure, et merci pour ton aide !",
+   "texts": [
+    "Ça marche. À tout à l'heure, et merci pour ton aide !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 12,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Ça marche. À tout à l'heure et merci pour ton aide.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1357,
+   "position": 123,
+   "attempts": [
+    {
+     "status": "pass",
+     "transcript": "Ça marche. À tout à l'heure et merci pour ton aide.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.2387096774193547,
+     "flags": [],
+     "n": 0,
+     "seed": 1357,
+     "temperature": 0.7,
+     "wall": 4.003
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:36:08+00:00",
+   "reason": "new",
+   "durationSec": 3.46,
+   "input_lufs": -24.3,
+   "bytes": 28416,
+   "reviewWav": null
+  },
+  "c00cfd33cecdeb55": {
+   "hash": "c00cfd33cecdeb55",
+   "key": "De rien. Bonne visite !",
+   "speak": "De rien. Bonne visite !",
+   "genText": "De rien. Bonne visite !",
+   "texts": [
+    "De rien. Bonne visite !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 4,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "De rien. Bonne visite.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1260,
+   "position": 26,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "De rien. Bonne visite.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.32,
+     "ratio": 1.521311475409836,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1260,
+     "temperature": 0.7,
+     "wall": 3.017
+    },
+    {
+     "status": "pass",
+     "transcript": "De rien. Bonne visite.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.08,
+     "ratio": 1.3639344262295083,
+     "flags": [],
+     "n": 1,
+     "seed": 9179,
+     "temperature": 0.6,
+     "wall": 2.79
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:02+00:00",
+   "reason": "new",
+   "durationSec": 1.72,
+   "input_lufs": -17.81,
+   "bytes": 14400,
+   "reviewWav": null
+  },
+  "5f5c912585272c29": {
+   "hash": "5f5c912585272c29",
+   "key": "Merci beaucoup, madame. À jeudi !",
+   "speak": "Merci beaucoup, madame. À jeudi !",
+   "genText": "Merci beaucoup, madame. À jeudi !",
+   "texts": [
+    "Merci beaucoup, madame. À jeudi !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci beaucoup, Madame. À jeudi.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1287,
+   "position": 53,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Merci beaucoup, madame. À jeudi.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.64,
+     "ratio": 1.2423529411764707,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1287,
+     "temperature": 0.7,
+     "wall": 5.305
+    },
+    {
+     "status": "pass",
+     "transcript": "Merci beaucoup, Madame. À jeudi.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.72,
+     "ratio": 1.28,
+     "flags": [],
+     "n": 1,
+     "seed": 9206,
+     "temperature": 0.6,
+     "wall": 3.089
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:04+00:00",
+   "reason": "new",
+   "durationSec": 2.04,
+   "input_lufs": -20.35,
+   "bytes": 16896,
+   "reviewWav": null
+  },
+  "b18f080fe512e528": {
+   "hash": "b18f080fe512e528",
+   "key": "Merci beaucoup. Bonne soirée !",
+   "speak": "Merci beaucoup. Bonne soirée !",
+   "genText": "Merci beaucoup. Bonne soirée !",
+   "texts": [
+    "Merci beaucoup. Bonne soirée !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 4,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci beaucoup. Bonne soirée.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1288,
+   "position": 54,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Merci beaucoup. Bonne soirée.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.56,
+     "ratio": 1.2487804878048783,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1288,
+     "temperature": 0.7,
+     "wall": 6.228
+    },
+    {
+     "status": "pass",
+     "transcript": "Merci beaucoup. Bonne soirée.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.32,
+     "ratio": 1.1317073170731708,
+     "flags": [],
+     "n": 1,
+     "seed": 9207,
+     "temperature": 0.6,
+     "wall": 2.391
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:05+00:00",
+   "reason": "new",
+   "durationSec": 2.02,
+   "input_lufs": -18.97,
+   "bytes": 16896,
+   "reviewWav": null
+  },
+  "f55170b4ff350463": {
+   "hash": "f55170b4ff350463",
+   "key": "Oui, au troisième étage. Et vous ?",
+   "speak": "Oui, au troisième étage. Et vous ?",
+   "genText": "Oui, au troisième étage. Et vous ?",
+   "texts": [
+    "Oui, au troisième étage. Et vous ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, au troisième étage. Et vous ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1303,
+   "position": 69,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Oui, au troisième étage. Et vous ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.04,
+     "ratio": 1.4305882352941177,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1303,
+     "temperature": 0.7,
+     "wall": 3.442
+    },
+    {
+     "status": "pass",
+     "transcript": "Oui, au troisième étage. Et vous ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.3552941176470588,
+     "flags": [],
+     "n": 1,
+     "seed": 9222,
+     "temperature": 0.6,
+     "wall": 2.791
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:06+00:00",
+   "reason": "new",
+   "durationSec": 2.82,
+   "input_lufs": -21.1,
+   "bytes": 23232,
+   "reviewWav": null
+  },
+  "16603b86809615cd": {
+   "hash": "16603b86809615cd",
+   "key": "Oui, d'accord. C'est combien ?",
+   "speak": "Oui, d'accord. C'est combien ?",
+   "genText": "Oui, d'accord. C'est combien ?",
+   "texts": [
+    "Oui, d'accord. C'est combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Oui, d'accord. C'est combien ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1310,
+   "position": 76,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Oui, d'accord. C'est combien ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 1.7095890410958905,
+     "flags": [
+      "lead-silence",
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1310,
+     "temperature": 0.7,
+     "wall": 3.695
+    },
+    {
+     "status": "pass",
+     "transcript": "Oui, d'accord. C'est combien ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.08,
+     "ratio": 1.1397260273972603,
+     "flags": [],
+     "n": 1,
+     "seed": 9229,
+     "temperature": 0.6,
+     "wall": 2.14
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:07+00:00",
+   "reason": "new",
+   "durationSec": 1.86,
+   "input_lufs": -20.56,
+   "bytes": 15552,
+   "reviewWav": null
+  },
+  "166ad4ae34aa8670": {
+   "hash": "166ad4ae34aa8670",
+   "key": "Voilà votre plat. Bon appétit !",
+   "speak": "Voilà votre plat. Bon appétit !",
+   "genText": "Voilà votre plat. Bon appétit !",
+   "texts": [
+    "Voilà votre plat. Bon appétit !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Voilà votre plat. Bon appétit!",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1351,
+   "position": 117,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Voilà votre plat. Bon appétit!",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 1.5219512195121954,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1351,
+     "temperature": 0.7,
+     "wall": 3.384
+    },
+    {
+     "status": "pass",
+     "transcript": "Voilà votre plat. Bon appétit!",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.48,
+     "ratio": 1.2097560975609758,
+     "flags": [],
+     "n": 1,
+     "seed": 9270,
+     "temperature": 0.6,
+     "wall": 2.571
+    }
+   ],
+   "chosenAttempt": 1,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:10+00:00",
+   "reason": "new",
+   "durationSec": 2.2,
+   "input_lufs": -19.05,
+   "bytes": 18240,
+   "reviewWav": null
+  },
+  "f72b1a5a77773c71": {
+   "hash": "f72b1a5a77773c71",
+   "key": "Bonsoir, madame. Voici la carte.",
+   "speak": "Bonsoir, madame. Voici la carte.",
+   "genText": "Bonsoir, madame. Voici la carte.",
+   "texts": [
+    "Bonsoir, madame. Voici la carte."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Bonsoir, madame. Voici la carte.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1250,
+   "position": 16,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Bonsoir Madame. Voici la carte.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.6188235294117648,
+     "flags": [
+      "lead-silence",
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1250,
+     "temperature": 0.7,
+     "wall": 3.958
+    },
+    {
+     "status": "fail",
+     "transcript": "Bonsoir, Madame. Voici la carte.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.04,
+     "ratio": 1.4305882352941177,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 1,
+     "seed": 9169,
+     "temperature": 0.6,
+     "wall": 5.393
+    },
+    {
+     "status": "pass",
+     "transcript": "Bonsoir, madame. Voici la carte.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.6188235294117648,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 2,
+     "seed": 17088,
+     "temperature": 0.5,
+     "wall": 4.382
+    }
+   ],
+   "chosenAttempt": 2,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:39+00:00",
+   "reason": "new",
+   "durationSec": 2.28,
+   "input_lufs": -19.73,
+   "bytes": 18816,
+   "reviewWav": null
+  },
+  "be8089b6f923dd72": {
+   "hash": "be8089b6f923dd72",
+   "key": "Enchanté, Léa. Moi, c'est Thomas.",
+   "speak": "Enchanté, Léa. Moi, c'est Thomas.",
+   "genText": "Enchanté, Léa. Moi, c'est Thomas.",
+   "texts": [
+    "Enchanté, Léa. Moi, c'est Thomas."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Enchanté Léa, moi c'est Thomas.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1264,
+   "position": 30,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Enchanté, Léa. Moi, c'est Thomas.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.400041666666667,
+     "ratio": 2.1463617886178863,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1264,
+     "temperature": 0.7,
+     "wall": 5.221
+    },
+    {
+     "status": "fail",
+     "transcript": "Enchanté, Léa. Moi, c'est Thomas.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.08,
+     "ratio": 1.9902439024390246,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 1,
+     "seed": 9183,
+     "temperature": 0.6,
+     "wall": 3.988
+    },
+    {
+     "status": "pass",
+     "transcript": "Enchanté Léa, moi c'est Thomas.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.2,
+     "ratio": 1.5609756097560978,
+     "flags": [],
+     "n": 2,
+     "seed": 17102,
+     "temperature": 0.5,
+     "wall": 3.572
+    }
+   ],
+   "chosenAttempt": 2,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:40+00:00",
+   "reason": "new",
+   "durationSec": 2.78,
+   "input_lufs": -21.77,
+   "bytes": 22848,
+   "reviewWav": null
+  },
+  "afc46c54b476626e": {
+   "hash": "afc46c54b476626e",
+   "key": "Très bien, merci. Et vous, madame Lefèvre ?",
+   "speak": "Très bien, merci. Et vous, madame Lefèvre ?",
+   "genText": "Très bien, merci. Et vous, madame Lefèvre ?",
+   "texts": [
+    "Très bien, merci. Et vous, madame Lefèvre ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 7,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Très bien, merci. Et vous, Madame Lefèvre ?",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "lead-silence"
+   ],
+   "seedBase": 1344,
+   "position": 110,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Très bien, merci. Et vous, Madame Lefebvre ?",
+     "loose_cer": 0.02631578947368421,
+     "loose_wer": 0.14285714285714285,
+     "strict_cer": 0.05263157894736842,
+     "phon_cer": 0.037037037037037035,
+     "duration": 3.04,
+     "ratio": 1.1471698113207547,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 0,
+     "seed": 1344,
+     "temperature": 0.7,
+     "wall": 5.535
+    },
+    {
+     "status": "fail",
+     "transcript": "Très bien, merci. Et vous, Madame Lefebvre ?",
+     "loose_cer": 0.02631578947368421,
+     "loose_wer": 0.14285714285714285,
+     "strict_cer": 0.05263157894736842,
+     "phon_cer": 0.037037037037037035,
+     "duration": 3.12,
+     "ratio": 1.177358490566038,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 1,
+     "seed": 9263,
+     "temperature": 0.6,
+     "wall": 2.83
+    },
+    {
+     "status": "pass",
+     "transcript": "Très bien, merci. Et vous, Madame Lefèvre ?",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.44,
+     "ratio": 1.2981132075471697,
+     "flags": [
+      "lead-silence"
+     ],
+     "n": 2,
+     "seed": 17182,
+     "temperature": 0.5,
+     "wall": 3.547
+    }
+   ],
+   "chosenAttempt": 2,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:37:43+00:00",
+   "reason": "new",
+   "durationSec": 2.76,
+   "input_lufs": -21.63,
+   "bytes": 22656,
+   "reviewWav": null
+  },
+  "c2fb8c3d14115059": {
+   "hash": "c2fb8c3d14115059",
+   "key": "L, A, U, R, E, N, T. Laurent.",
+   "speak": "L, A, U, R, E, N, T. Laurent.",
+   "genText": "L, A, U, R, E, N, T. Laurent.",
+   "texts": [
+    "L, A, U, R, E, N, T. Laurent."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 8,
+   "status": "failed-kept",
+   "qaStatus": "fail",
+   "transcript": "L-A-U-R-E-N-T, Laurent.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "duration-outlier"
+   ],
+   "seedBase": 1283,
+   "position": 49,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "L-A-U-R-E-N-T, Laurent.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.52,
+     "ratio": 4.246153846153845,
+     "flags": [
+      "duration-outlier"
+     ],
+     "n": 0,
+     "seed": 1283,
+     "temperature": 0.7,
+     "wall": 6.095
+    },
+    {
+     "status": "fail",
+     "transcript": "L-A-U-R-E-N-T, Laurent.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 6.08,
+     "ratio": 4.676923076923077,
+     "flags": [
+      "duration-outlier"
+     ],
+     "n": 1,
+     "seed": 9202,
+     "temperature": 0.6,
+     "wall": 6.028
+    },
+    {
+     "status": "fail",
+     "transcript": "L-A-U-R-E-N-T-Lorent",
+     "loose_cer": 0.09523809523809523,
+     "loose_wer": 0.125,
+     "strict_cer": 0.09523809523809523,
+     "phon_cer": 0.0,
+     "duration": 3.12,
+     "ratio": 2.4,
+     "flags": [
+      "duration-outlier"
+     ],
+     "n": 2,
+     "seed": 17121,
+     "temperature": 0.5,
+     "wall": 3.123
+    },
+    {
+     "status": "fail",
+     "transcript": "L-A-U-R-E-N-T-Laurent",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 5.12,
+     "ratio": 3.9384615384615382,
+     "flags": [
+      "duration-outlier"
+     ],
+     "n": 3,
+     "seed": 25040,
+     "temperature": 0.8,
+     "wall": 4.667
+    }
+   ],
+   "chosenAttempt": 0,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:38:00+00:00",
+   "reason": "new",
+   "durationSec": 5.18,
+   "input_lufs": -24.18,
+   "bytes": 42048,
+   "reviewWav": "tts-tools/work/qwen3-fr-m-bf16/c2fb8c3d14115059-a0.wav"
+  },
+  "eb5df2d93c6690cc": {
+   "hash": "eb5df2d93c6690cc",
+   "key": "Merci, vous aussi. Au revoir !",
+   "speak": "Merci, vous aussi. Au revoir !",
+   "genText": "Merci, vous aussi. Au revoir !",
+   "texts": [
+    "Merci, vous aussi. Au revoir !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 5,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Merci, vous aussi. Au revoir.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1291,
+   "position": 57,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Merci, vous aussi. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.5157894736842106,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 0,
+     "seed": 1291,
+     "temperature": 0.7,
+     "wall": 4.037
+    },
+    {
+     "status": "fail",
+     "transcript": "Merci, vous aussi. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.96,
+     "ratio": 1.5578947368421052,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 1,
+     "seed": 9210,
+     "temperature": 0.6,
+     "wall": 2.853
+    },
+    {
+     "status": "fail",
+     "transcript": "Merci, vous aussi. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.88,
+     "ratio": 1.5157894736842106,
+     "flags": [
+      "internal-gap"
+     ],
+     "n": 2,
+     "seed": 17129,
+     "temperature": 0.5,
+     "wall": 2.91
+    },
+    {
+     "status": "pass",
+     "transcript": "Merci, vous aussi. Au revoir.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 2.32,
+     "ratio": 1.2210526315789474,
+     "flags": [],
+     "n": 3,
+     "seed": 25048,
+     "temperature": 0.8,
+     "wall": 2.416
+    }
+   ],
+   "chosenAttempt": 3,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:38:01+00:00",
+   "reason": "new",
+   "durationSec": 2.26,
+   "input_lufs": -20.25,
+   "bytes": 18816,
+   "reviewWav": null
+  },
+  "f3e65aeab4c12a1b": {
+   "hash": "f3e65aeab4c12a1b",
+   "key": "Tenez, j'ai des pièces : quatorze euros et dix centimes.",
+   "speak": "Tenez, j'ai des pièces : quatorze euros et dix centimes.",
+   "genText": "Tenez, j'ai des pièces : quatorze euros et dix centimes.",
+   "texts": [
+    "Tenez, j'ai des pièces : quatorze euros et dix centimes."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 10,
+   "status": "pass",
+   "qaStatus": "pass",
+   "transcript": "Tenez, j'ai des pièces, 14 euros et 10 centimes.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [],
+   "seedBase": 1340,
+   "position": 106,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Tenez, j'ai des pièces. 14,10 euros.",
+     "loose_cer": 0.23076923076923078,
+     "loose_wer": 0.2,
+     "strict_cer": 0.23076923076923078,
+     "phon_cer": 0.22580645161290322,
+     "duration": 4.32,
+     "ratio": 1.2431654676258994,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 0,
+     "seed": 1340,
+     "temperature": 0.7,
+     "wall": 5.42
+    },
+    {
+     "status": "fail",
+     "transcript": "Tenez, j'ai des pièces. 14,10 euros.",
+     "loose_cer": 0.23076923076923078,
+     "loose_wer": 0.2,
+     "strict_cer": 0.23076923076923078,
+     "phon_cer": 0.22580645161290322,
+     "duration": 4.64,
+     "ratio": 1.335251798561151,
+     "flags": [
+      "lead-silence",
+      "last-word-missing"
+     ],
+     "n": 1,
+     "seed": 9259,
+     "temperature": 0.6,
+     "wall": 3.926
+    },
+    {
+     "status": "fail",
+     "transcript": "Tenez, j'ai des pièces. 14,10 euros.",
+     "loose_cer": 0.23076923076923078,
+     "loose_wer": 0.2,
+     "strict_cer": 0.23076923076923078,
+     "phon_cer": 0.22580645161290322,
+     "duration": 4.56,
+     "ratio": 1.312230215827338,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 2,
+     "seed": 17178,
+     "temperature": 0.5,
+     "wall": 4.185
+    },
+    {
+     "status": "pass",
+     "transcript": "Tenez, j'ai des pièces, 14 euros et 10 centimes.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.84,
+     "ratio": 1.1050359712230216,
+     "flags": [],
+     "n": 3,
+     "seed": 25097,
+     "temperature": 0.8,
+     "wall": 3.364
+    }
+   ],
+   "chosenAttempt": 3,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:38:02+00:00",
+   "reason": "new",
+   "durationSec": 3.56,
+   "input_lufs": -21.38,
+   "bytes": 29184,
+   "reviewWav": null
+  },
+  "41d170f8ef548d49": {
+   "hash": "41d170f8ef548d49",
+   "key": "Vincent Roux. R, O, U, X.",
+   "speak": "Vincent Roux. R, O, U, X.",
+   "genText": "Vincent Roux. R, O, U, X.",
+   "texts": [
+    "Vincent Roux. R, O, U, X."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "words": 6,
+   "status": "failed-kept",
+   "qaStatus": "fail",
+   "transcript": "Vincent Roux. R-O-U-X.",
+   "loose_cer": 0.0,
+   "phon_cer": 0.0,
+   "flags": [
+    "duration-outlier"
+   ],
+   "seedBase": 1350,
+   "position": 116,
+   "attempts": [
+    {
+     "status": "fail",
+     "transcript": "Vincent Roux, ROUX",
+     "loose_cer": 0.15,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.15,
+     "phon_cer": 0.09090909090909091,
+     "duration": 3.04,
+     "ratio": 2.210909090909091,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 0,
+     "seed": 1350,
+     "temperature": 0.7,
+     "wall": 3.325
+    },
+    {
+     "status": "fail",
+     "transcript": "Vincent Roux. R.O.U.X.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 4.08,
+     "ratio": 2.9672727272727273,
+     "flags": [
+      "internal-gap",
+      "duration-outlier"
+     ],
+     "n": 1,
+     "seed": 9269,
+     "temperature": 0.6,
+     "wall": 3.501
+    },
+    {
+     "status": "fail",
+     "transcript": "Vincent Roux. R-O-U-X.",
+     "loose_cer": 0.0,
+     "loose_wer": 0.0,
+     "strict_cer": 0.0,
+     "phon_cer": 0.0,
+     "duration": 3.6,
+     "ratio": 2.618181818181818,
+     "flags": [
+      "duration-outlier"
+     ],
+     "n": 2,
+     "seed": 17188,
+     "temperature": 0.5,
+     "wall": 3.364
+    },
+    {
+     "status": "fail",
+     "transcript": "Vincent Roux, ROUX",
+     "loose_cer": 0.15,
+     "loose_wer": 0.6666666666666666,
+     "strict_cer": 0.15,
+     "phon_cer": 0.09090909090909091,
+     "duration": 2.56,
+     "ratio": 1.8618181818181818,
+     "flags": [
+      "last-word-missing"
+     ],
+     "n": 3,
+     "seed": 25107,
+     "temperature": 0.8,
+     "wall": 2.631
+    }
+   ],
+   "chosenAttempt": 2,
+   "settingsId": "409b95e83be4",
+   "generatedAt": "2026-10-16T15:38:03+00:00",
+   "reason": "new",
+   "durationSec": 3.38,
+   "input_lufs": -22.0,
+   "bytes": 27648,
+   "reviewWav": "tts-tools/work/qwen3-fr-m-bf16/41d170f8ef548d49-a2.wav"
   }
  },
  "runs": [
@@ -356,8 +6300,15 @@
    "synthWallSec": 17.3,
    "wallSec": 38.3,
    "finished": "2026-10-16T06:52:27+00:00"
+  },
+  {
+   "started": "2026-10-16T15:34:24+00:00",
+   "items": 118,
+   "synthWallSec": 82.5,
+   "wallSec": 218.8,
+   "finished": "2026-10-16T15:38:03+00:00"
   }
  ],
- "updatedAt": "2026-10-16T06:54:12+00:00",
+ "updatedAt": "2026-10-16T15:38:03+00:00",
  "settingsId": "409b95e83be4"
 }

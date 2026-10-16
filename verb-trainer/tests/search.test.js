@@ -269,8 +269,24 @@ test("dialogues: 'dialogue' and 'conversation' put Dialogues first; 'l'addition'
 });
 test("dialogues: a verb query (parler) is unchanged and the 4-argument index has no dialogues", function () {
   assert.deepEqual(ids(qd("parler")), ids(q("parler")));
-  assert.equal(qd("parler").dialogues.length, 0);
+  // Only the two dialogues titled "Parler de …" match it, and they don't take Enter from the verb.
+  assert.deepEqual(qd("parler").dialogues.map(function (d) { return d.id; }).sort(), ["talking-about-family", "weather-and-small-talk"]);
+  assert.equal(dialogueOk(qd("parler")), false);
   assert.deepEqual(q("cafe").dialogues, []);
+});
+test("dialogues: every dialogue is searchable; each new one is the first dialogue hit for its own query, with its level", function () {
+  [["faire connaissance", "meeting-someone-new"], ["boulangerie", "at-the-bakery"], ["marché", "at-the-market"],
+    ["directions", "asking-for-directions"], ["gare", "at-the-train-station"], ["hotel", "hotel-check-in"],
+    ["au restaurant", "at-the-restaurant"], ["clothes", "shopping-for-clothes"], ["pharmacie", "at-the-pharmacy"],
+    ["médecin", "at-the-doctors"], ["making plans", "making-plans"], ["week-end dernier", "talking-about-the-weekend"],
+    ["rendez-vous", "booking-an-appointment"], ["famille", "talking-about-family"], ["small talk", "weather-and-small-talk"],
+    ["colleague", "meeting-a-colleague"], ["appartement", "renting-a-flat"], ["réclamation", "a-small-complaint"],
+    ["loisirs", "hobbies-and-free-time"]].forEach(function (c) {
+    var hit = qd(c[0]).dialogues[0];
+    assert.ok(hit, c[0]);
+    assert.equal(hit.id, c[1], c[0]);
+    assert.ok(/^(A1|A2|B1)$/.test(hit.level), c[0]);
+  });
 });
 test("static: views-search.js renders sg-dia in the §6 order and Enter chains include dialogue", function () {
   assert.ok(VIEW.indexOf('group("sg-dia", "Dialogues ("') !== -1);

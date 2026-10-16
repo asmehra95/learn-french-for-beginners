@@ -68,6 +68,17 @@ class Evaluate(unittest.TestCase):
             ("Il est une heure.", "Il est 1 h."),
             ("Ça coûte soixante-quinze euros.", "Ça coûte 75 €."),
             ("vingt et un", "21"),
+            # decimal prices, units and phone-style groups (Dialogues)
+            ("Oui, bien sûr. Ça fait six euros cinquante.", "Oui, bien sûr. Ça fait 6,50 euros."),
+            ("Alors, ça vous fait neuf euros cinquante.", "Alors, ça vous fait 9,50 €."),
+            ("Ça fait quatorze euros dix, s'il vous plaît.", "Ça fait 14,10 €, s'il vous plaît."),
+            ("Un euro vingt pièce.", "1,20 € pièce."),
+            ("Et voilà cinquante centimes. Merci et bonne semaine !", "Et voilà 0,50 €. Merci et bonne semaine !"),
+            ("Trente-cinq degrés en août !", "35° en août !"),
+            ("deux pièces, quarante mètres carrés", "deux pièces, 40 m²"),
+            ("J'en prends cinq cents grammes", "J'en prends 500 g"),
+            ("Notre numéro, c'est le zéro un, quarante-deux, dix-huit, trente, douze.",
+             "Notre numéro, c'est le 01 42 18 30 12."),
         ]
         for speak, heard in cases:
             with self.subTest(speak=speak, heard=heard):
@@ -75,6 +86,7 @@ class Evaluate(unittest.TestCase):
 
     def test_wrong_time_still_fails(self):
         self.assertEqual(self.status("Il est quatre heures et quart.", "Il est 5 h 15."), "fail")
+        self.assertEqual(self.status("Alors, ça vous fait neuf euros cinquante.", "Alors, ça vous fait 9,15 €."), "fail")
 
     def test_single_numbers(self):
         self.assertEqual(self.status("quatre-vingts", "80", strict=True), "short-ok")

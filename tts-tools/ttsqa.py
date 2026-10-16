@@ -190,8 +190,36 @@ def _clock(s):
     return re.sub(r"(\d)\s*h\b", r"\1 heures", s)  # "à 8 h" is read "à huit heures"
 
 
+def _price(m):
+    """Whisper's decimal prices as they are read: "9,50 €" -> "9 euros 50", "1,20 €" -> "1 euro 20",
+    "0,50 €" -> "50 centimes" (digits are spelled out afterwards)."""
+    e, c = int(m.group(1)), int(m.group(2).ljust(2, "0"))
+    if e == 0:
+        return f" {c} centimes "
+    return f" {e} {'euro' if e == 1 else 'euros'} " + (f"{c} " if c else "")
+
+
+def _units(s):
+    """Unit symbols after a number, as they are read: 35° -> degrés, 40 m² -> mètres carrés,
+    500 g -> grammes, 1 kg -> kilo."""
+    s = re.sub(r"(\d)\s*°\s*C?\b|(\d)\s*°", lambda m: (m.group(1) or m.group(2)) + " degrés ", s)
+    s = re.sub(r"(\d)\s*m(?:²|2)(?!\w)", r"\1 mètres carrés", s)
+    s = re.sub(r"\b(\d+)\s*kg\b", lambda m: m.group(1) + (" kilo" if m.group(1) == "1" else " kilos"), s)
+    return re.sub(r"(\d)\s*g\b", r"\1 grammes", s)
+
+
+def _leading_zeros(s):
+    """Phone-style digit groups: "01 42 18 30 12" / "0142183012" are read "zéro un, quarante-deux, ...";
+    a two-digit group starting with 0 keeps its "zéro"."""
+    s = re.sub(r"\b0\d{9}\b", lambda m: " ".join(m.group(0)[i:i + 2] for i in range(0, 10, 2)), s)
+    return re.sub(r"\b0(\d)\b", r" zéro \1 ", s)
+
+
 def spell_numbers(s):
+    s = re.sub(r"\b(\d{1,3})[,.](\d{1,2})\s*(?:€|euros?\b)", _price, s)  # 9,50 € / 9.50 euros
     s = re.sub(r"(\d)\s*€", r"\1 euros", s).replace("€", " euros ")
+    s = _units(s)
+    s = _leading_zeros(s)
     s = re.sub(r"\b(\d{1,3})(er|re|ère)\b", lambda m: " " + fr_ordinal(int(m.group(1)), m.group(2) != "er") + " ", s)
     s = re.sub(r"\b(\d{1,3})(?:ème|eme|e|è|ᵉ)\b", lambda m: " " + fr_ordinal(int(m.group(1))) + " ", s)
     s = _clock(s)

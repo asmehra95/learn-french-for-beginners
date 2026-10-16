@@ -10,7 +10,7 @@ licensed under the **Creative Commons Attribution-ShareAlike 4.0 International**
 - Topic lesson data and exercises (verb-trainer/js/topics-data.js)
 - Grammar tables (french-grammar-tables.md, verb-trainer/reference/french-grammar-tables.*, verb-trainer/js/reference-data.js)
 - Everyday expressions (french-expressions.md, verb-trainer/reference/french-expressions.*, verb-trainer/js/expressions-data.js)
-- Dialogues (french-dialogues.md, verb-trainer/reference/french-dialogues.*, verb-trainer/js/dialogues-data.js)
+- Dialogues, all 20 conversations (french-dialogues.md, verb-trainer/reference/french-dialogues.*, verb-trainer/js/dialogues-data.js)
 - Any other written instructional content authored by Avtar Singh in this repository
 
 **Deed:** <https://creativecommons.org/licenses/by-sa/4.0/>

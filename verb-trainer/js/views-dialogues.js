@@ -129,27 +129,74 @@
     return parts.length ? parts.join(" · ") : "Not started";
   }
 
-  /* ---------- index ---------- */
+  /* ---------- index: one group per level (A1, A2, B1), cards in number order ---------- */
+  var LEVEL_NAMES = { A1: "Beginner", A2: "Elementary", B1: "Intermediate" };
+  var levelFilter = "all";   // index level filter (in memory only, no storage key)
+  function started(b) { return !!b && (b.listened || b.quizBest >= 0 || Object.keys(b.roles).length > 0); }
+  function overallText(list, byDialogue) {
+    var n = list.filter(function (d) { return started(byDialogue[d.id]); }).length;
+    var full = list.filter(function (d) { return byDialogue[d.id] && byDialogue[d.id].quizBest === 100; }).length;
+    var s = n + " of " + list.length + " started";
+    if (full) s += " · " + full + (full === 1 ? " quiz" : " quizzes") + " at 100%";
+    return s;
+  }
   function renderIndex(body) {
     var D = DATA();
     var st = DLG.stats(state(), D);
+    var list = DLG.index(D).list;
     body.appendChild(el("p", { className: "intro", text: D.intro }));
     body.appendChild(el("p", { className: "muted", text: D.respellingNote }));
-    body.appendChild(el("ul", { className: "lesson-grid dia-grid" }, DLG.index(D).list.map(function (d) {
-      var href = "#dialogues/" + d.id;
-      return el("li", { className: "home-card dia-card" }, [
-        el("h3", null, [el("a", { href: href, text: d.number + ". " + d.title })]),
-        el("p", { className: "dia-card-meta" }, [el("span", { lang: "fr", text: d.titleFr }), " ", el("span", { className: "dia-level", text: d.level })]),
-        el("p", { text: d.summary }),
-        el("p", { className: "muted", text: d.speakers.map(function (sp) { return sp.name + " (" + sp.role + ")"; }).join(" · ") }),
-        el("p", { className: "dia-status", text: statusText(d, st.byDialogue[d.id]) }),
-        el("p", { className: "dia-card-modes" }, [
-          el("a", { href: href, text: "Listen & read" }), " · ",
-          el("a", { href: href + "/roleplay", text: "Role-play" }), " · ",
-          el("a", { href: href + "/quiz", text: "Quiz" })
-        ])
+    body.appendChild(el("p", { className: "dia-overall", text: overallText(list, st.byDialogue) }));
+    var groups = {};
+    var levels = ["A1", "A2", "B1"].filter(function (lvl) { return list.some(function (d) { return d.level === lvl; }); });
+    var count = el("p", { className: "dia-filter-count", role: "status" });
+    var buttons = ["all"].concat(levels).map(function (lvl) {
+      var b = el("button", { type: "button", className: "chip", "aria-pressed": lvl === levelFilter ? "true" : "false", text: lvl === "all" ? "All" : lvl });
+      b.addEventListener("click", function () { applyFilter(lvl); });
+      return b;
+    });
+    function applyFilter(lvl) {
+      if (lvl !== "all" && !groups[lvl]) lvl = "all";
+      levelFilter = lvl;
+      var shown = 0;
+      levels.forEach(function (l) {
+        var on = lvl === "all" || lvl === l;
+        groups[l].node.hidden = !on;
+        if (on) shown += groups[l].n;
+      });
+      buttons.forEach(function (b, i) { b.setAttribute("aria-pressed", (i === 0 ? "all" : levels[i - 1]) === lvl ? "true" : "false"); });
+      count.textContent = "Showing " + shown + " of " + list.length + " dialogues";
+    }
+    body.appendChild(el("div", { className: "dia-filter", role: "group", "aria-label": "Filter dialogues by level" }, [
+      el("ul", { className: "jump-list" }, buttons.map(function (b) { return el("li", null, [b]); }))
+    ]));
+    body.appendChild(count);
+    levels.forEach(function (lvl) {
+      var ds = list.filter(function (d) { return d.level === lvl; });
+      var hid = "dia-level-" + lvl.toLowerCase();
+      var node = el("section", { className: "dia-level-group", "aria-labelledby": hid }, [
+        el("h3", { id: hid, text: lvl + " · " + LEVEL_NAMES[lvl] + " (" + ds.length + (ds.length === 1 ? " dialogue)" : " dialogues)") }),
+        el("ul", { className: "lesson-grid dia-grid" }, ds.map(function (d) { return indexCard(d, st.byDialogue[d.id]); }))
       ]);
-    })));
+      groups[lvl] = { node: node, n: ds.length };
+      body.appendChild(node);
+    });
+    applyFilter(levelFilter);
+  }
+  function indexCard(d, b) {
+    var href = "#dialogues/" + d.id;
+    return el("li", { className: "home-card dia-card" }, [
+      el("h4", null, [el("a", { href: href, text: d.number + ". " + d.title })]),
+      el("p", { className: "dia-card-meta" }, [el("span", { lang: "fr", text: d.titleFr }), " ", el("span", { className: "dia-level", text: d.level })]),
+      el("p", { text: d.summary }),
+      el("p", { className: "muted", text: d.speakers.map(function (sp) { return sp.name + " (" + sp.role + ")"; }).join(" · ") }),
+      el("p", { className: "dia-status", text: statusText(d, b) }),
+      el("p", { className: "dia-card-modes" }, [
+        el("a", { href: href, text: "Listen & read" }), " · ",
+        el("a", { href: href + "/roleplay", text: "Role-play" }), " · ",
+        el("a", { href: href + "/quiz", text: "Quiz" })
+      ])
+    ]);
   }
 
   /* ---------- dialogue page ---------- */
@@ -805,6 +852,7 @@
     stopPlayer();
     runs = {};
     rpPrefs = {};
+    levelFilter = "all";
   }
 
   window.VT_VIEWS.dialogues = { build: build, show: show, onKey: onKey, onStateReplaced: onStateReplaced };

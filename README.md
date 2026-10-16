@@ -52,17 +52,20 @@ native-speaker audio clips.
   the related verbs and grammar tables, with Listen buttons. Practise them as flashcards (French →
   English, English → French, or Listen → meaning) with the same spaced repetition as the verbs; misses
   show up in Review my mistakes and Progress has their own totals. Printable as a PDF and as Markdown.
-- **Dialogues** — short everyday conversations between two speakers (the first: *Au café*, ordering a
-  coffee and paying), each speaker with their own recorded synthetic voice, name, avatar letter and side,
-  so they are easy to tell apart without colour. Three modes: **Listen & read** (play the whole
+- **Dialogues** — 20 short everyday conversations between two speakers, grouped by level (6 A1, 10 A2,
+  4 B1): the café, the bakery, the market, directions, the train station, a hotel, a restaurant, clothes
+  shopping, the pharmacy, the doctor's, making plans, the weekend, a phone booking, family, small talk, a
+  new colleague, renting a flat, a complaint in a shop and hobbies. Each speaker has their own recorded
+  synthetic voice (one female, one male per dialogue), name, avatar letter and side, so they are easy to
+  tell apart without colour. Three modes: **Listen & read** (play the whole
   conversation line by line, or any single line, with the English respelling and liaisons marked ‿),
   **Role-play** (take either role and type or say your lines; natural alternatives are accepted) and a
   **Comprehension quiz** whose misses come back in Review my mistakes. Key vocabulary links to the
-  verbs, expressions and grammar tables. Progress shows each dialogue's results. Printable as a PDF and
-  as Markdown.
+  verbs, expressions and grammar tables, and each dialogue explains one grammar point. The index and
+  Progress show each dialogue's results. Printable as a PDF and as Markdown.
 - **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
   bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
-  ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts"), the everyday expressions ("excuse me", "lapin"), the dialogues ("café", "dialogue") and the topic
+  ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts"), the everyday expressions ("excuse me", "lapin"), the dialogues ("café", "boulangerie", "dialogue") and the topic
   lessons ("quel", "est-ce que"). Accent-, case-, apostrophe- and typo-tolerant. From a result you can open the verb card, listen to the matched
   form, or go to its lesson. A verb's type only shows if you search for it ("irregular", "reflexive").
 - **Foldable Browse section** — every verb grouped by lesson, with present-tense tables, past, future,
@@ -99,18 +102,19 @@ These PDFs are in the repo and served from the site:
 | [french-grammar-tables.md](french-grammar-tables.md) | Markdown source of the grammar tables |
 | [verb-trainer/reference/french-expressions.pdf](verb-trainer/reference/french-expressions.pdf) | 100 everyday expressions in 10 themes |
 | [french-expressions.md](french-expressions.md) | Markdown version of the everyday expressions |
-| [verb-trainer/reference/french-dialogues.pdf](verb-trainer/reference/french-dialogues.pdf) | Dialogues: every conversation with its transcript, pronunciation, vocabulary and answer key |
-| [french-dialogues.md](french-dialogues.md) | Markdown version of the dialogues |
+| [verb-trainer/reference/french-dialogues.pdf](verb-trainer/reference/french-dialogues.pdf) | Dialogues: all 20 conversations, with contents by level (A1, A2, B1), transcripts, pronunciation, vocabulary and answer key |
+| [french-dialogues.md](french-dialogues.md) | Markdown version of the 20 dialogues |
 
 ## Audio
 
 Three layers, selectable in Settings → Voice:
 
-1. **Pre-recorded synthetic voice (default)** — 2,198 of the site's 2,207 Listen texts generated with the open-source
+1. **Pre-recorded synthetic voice (default)** — 2,505 of the site's 2,515 Listen texts generated with the open-source
    Qwen3-TTS 1.7B Base model (`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16`, Apache-2.0). One
    consistent designed voice (not a real person's voice). Covers every present-tense form, past,
    future, example sentences, topic answers, the Grammar tables (cells and examples) and all 100 everyday expressions with
-   their examples. The
+   their examples. In the Dialogues each line plays in its speaker's voice: the female speakers use this
+   voice, the male speakers a second designed synthetic voice (`qwen3-fr-m-bf16`). The
    Credits view has a download link for the native-speaker recordings zip.
 
 2. **869 Lingua Libre native-speaker clips** — recorded by volunteer native French speakers on
@@ -180,7 +184,9 @@ printables all follow the data. Three non-code steps remain for each new dialogu
    [tts-tools/README.md](tts-tools/README.md), "Multiple voices"), then commit the clips and manifests.
 2. `node tools/build-dialogues.js`, which writes both `french-dialogues.md` files (and, with `--html`,
    the print HTML).
-3. Print the PDF from that `--html` output with headless Chrome (`--print-to-pdf`), as for the expressions.
+3. Print the PDF from that `--html` output with headless Chrome (`--print-to-pdf`), as for the expressions,
+   then strip `/Creator`, `CreationDate` and `ModDate` from it (the tests check). Both outputs open with a
+   table of contents grouped by level.
 
 ## Regenerating audio
 

@@ -1264,7 +1264,12 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 /* ---------- 11c. Dialogues (views-dialogues.js). Every class uses dia- (diaq- for the quiz): .dlg is the modal.
    Speakers never differ by colour alone: name + role, an initial avatar, the side, and a border on that side. */
 .dia-grid { margin: var(--s-4) 0; }
-.dia-card h3 { margin: 0 0 var(--s-1); }
+.dia-level-group > h3 { margin: var(--s-5) 0 0; }
+.dia-overall { font-weight: 600; margin: var(--s-3) 0 0; }
+.dia-filter .jump-list { flex-wrap: wrap; width: auto; }
+.dia-filter .chip[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: var(--on-primary); }
+.dia-filter-count { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
+.dia-card h4 { margin: 0 0 var(--s-1); font-size: var(--fs-md); }
 .dia-card-meta, .dia-status, .dia-card-modes { margin: 0 0 var(--s-2); }
 .dia-status { font-weight: 600; }
 .dia-level {

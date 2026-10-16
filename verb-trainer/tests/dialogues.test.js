@@ -40,6 +40,8 @@ var VOICE_IDS = [SHIPPED.VT_TTS.defaultVoice].concat(Object.keys(SHIPPED.VT_TTS_
 function refs() { return { verbsById: VERBS, exprById: EXPR, tableById: TABLES, voiceIds: VOICE_IDS }; }
 function clone(o) { return JSON.parse(JSON.stringify(o)); }
 var D0 = DATA_D.dialogues[0];
+/* The café alone: the pilot-shaped assertions below are about its 12 lines, 9 words and 4 questions. */
+var CAFE = { version: DATA_D.version, dialogues: [D0] };
 function lineOf(id) { return D0.lines.filter(function (l) { return l.id === id; })[0]; }
 function rng(seed) {
   var a = seed >>> 0;
@@ -67,6 +69,30 @@ test("content: validate() with full refs returns no errors; pilot shape", functi
   assert.equal(D0.lines.length, 12);
   assert.equal(D0.vocab.length, 9);
   assert.equal(D0.questions.length, 4);
+});
+test("content: 20 dialogues numbered 1-20, levels A1 → A2 → B1, one default-voice and one male-voice speaker, 20 distinct Notice tables", function () {
+  var ds = DATA_D.dialogues;
+  assert.equal(ds.length, 20);
+  assert.deepEqual(ds.map(function (d) { return d.number; }), Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  var order = { A1: 0, A2: 1, B1: 2 };
+  ds.forEach(function (d, i) { if (i) assert.ok(order[d.level] >= order[ds[i - 1].level], d.id); });
+  assert.deepEqual(["A1", "A2", "B1"].map(function (lv) { return ds.filter(function (d) { return d.level === lv; }).length; }), [6, 10, 4]);
+  ds.forEach(function (d) {
+    assert.deepEqual(d.speakers.map(function (s) { return s.voice; }).sort(), ["qwen3-fr-bf16", "qwen3-fr-m-bf16"], d.id);
+    assert.equal(d.questions.length, 4, d.id);
+  });
+  var tables = ds.map(function (d) { return d.notice.table; });
+  tables.forEach(function (t) { assert.ok(t && Object.prototype.hasOwnProperty.call(TABLES, t), t); });
+  assert.equal(new Set(tables).size, 20);
+});
+test("scale: stats and Review my mistakes cover every dialogue's questions", function () {
+  var LEARN = require("../js/learn.js");
+  assert.equal(DLG.stats({}, DATA_D).total, 80);
+  assert.equal(DLG.knownHeads(DATA_D).length, 80);
+  var k = "dlg:hobbies-and-free-time.q2|dlg-quiz|-";
+  var st = { stats: {} };
+  st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
+  assert.deepEqual(LEARN.mistakesDeck(st, global.window.VERB_DATA, null, DATA_D), [k]);
 });
 test("content: negative cases (speakers, punctuation-only and accent-only duplicates)", function () {
   var c = clone(DATA_D); c.dialogues[0].speakers[1].name = "julien";
@@ -199,8 +225,8 @@ test("keys: keyFor / parseKey / isKey round-trip; bad ids rejected", function ()
   ["dlg:__proto__.q1|dlg-quiz|-", "dlg:at-the-cafe.q10|dlg-quiz|-", "dlg:At.q1|dlg-quiz|-", "dlg:x.q1|other|-"].forEach(function (b) {
     assert.equal(DLG.parseKey(b), null, b);
   });
-  assert.deepEqual(DLG.knownHeads(DATA_D), ["dlg:at-the-cafe.q1", "dlg:at-the-cafe.q2", "dlg:at-the-cafe.q3", "dlg:at-the-cafe.q4"]);
-  assert.deepEqual(DLG.quizKeys(DATA_D, "at-the-cafe"), DLG.knownHeads(DATA_D).map(function (h) { return h + "|dlg-quiz|-"; }));
+  assert.deepEqual(DLG.knownHeads(CAFE), ["dlg:at-the-cafe.q1", "dlg:at-the-cafe.q2", "dlg:at-the-cafe.q3", "dlg:at-the-cafe.q4"]);
+  assert.deepEqual(DLG.quizKeys(DATA_D, "at-the-cafe"), DLG.knownHeads(CAFE).map(function (h) { return h + "|dlg-quiz|-"; }));
   assert.deepEqual(DLG.quizKeys(DATA_D, "nope"), []);
 });
 test("choiceItem: shape, 4 unique options with the answer, speaker voice, null for unknown", function () {
@@ -241,7 +267,7 @@ test("progress: record / markListened / recordQuiz / recordRolePlay clamp and ke
   assert.equal(st.dialogues["at-the-cafe"].listened, true);
   st.stats["dlg:at-the-cafe.q1|dlg-quiz|-"] = { seen: 2, correct: 1, box: 3 };
   st.stats["dlg:at-the-cafe.q2|dlg-quiz|-"] = { seen: 1, correct: 0, box: 0 };
-  var s = DLG.stats(st, DATA_D);
+  var s = DLG.stats(st, CAFE);
   assert.equal(s.answered, 3);
   assert.equal(s.correct, 1);
   assert.equal(s.mastered, 1);
@@ -253,7 +279,7 @@ test("progress: record / markListened / recordQuiz / recordRolePlay clamp and ke
 
 /* ---------- listen texts ---------- */
 test("listenEntries: one per line with its speaker's voice, vocab and examples on the default voice", function () {
-  var es = DLG.listenEntries(DATA_D);
+  var es = DLG.listenEntries(CAFE);
   var lines = es.filter(function (e) { return e.category === "dialogue-line"; });
   assert.equal(lines.length, 12);
   lines.forEach(function (e, i) {
@@ -602,6 +628,148 @@ test("voices: the female manifest keeps its format, default voice and pre-dialog
   assert.equal(M.voice.synthetic, true);
   assert.match(M.voice.note, /no real person was recorded or cloned/);
   Object.keys(M.items).forEach(function (k) { assert.equal(M.items[k].voiceId, "qwen3-fr-m-bf16"); });
+});
+
+/* ---------- all 20 dialogues: per-line content, role-play, quiz, clips ---------- */
+var VOICE_DIRS = { "qwen3-fr-bf16": "qwen3-fr-bf16", "qwen3-fr-m-bf16": "qwen3-fr-m-bf16" };
+/* Dialogue lines with no clip on purpose (failed-excluded, the device voice reads them). Empty now:
+   at-the-bakery l7 "Un euro vingt pièce." was reviewed and shipped as failed-kept (Whisper writes "1,20€"
+   and drops "pièce"; the word is spoken). */
+var DEVICE_VOICE_LINES = [];
+function clipHash(text) { return require("node:crypto").createHash("sha256").update(L.ttsKey(text), "utf8").digest("hex").slice(0, 16); }
+function voiceManifest(voice) {
+  return voice === SHIPPED.VT_TTS.defaultVoice ? SHIPPED.VT_TTS : SHIPPED.VT_TTS_VOICES[voice];
+}
+test("all 20: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
+  var ids = DATA_D.dialogues.map(function (d) { return d.id; });
+  assert.equal(new Set(ids).size, 20);
+  DATA_D.dialogues.forEach(function (d) {
+    ["lines", "vocab", "questions"].forEach(function (k) {
+      var xs = d[k].map(function (x) { return x.id; });
+      assert.equal(new Set(xs).size, xs.length, d.id + " " + k);
+    });
+    var sp = {};
+    d.speakers.forEach(function (s) {
+      assert.ok(VOICE_IDS.indexOf(s.voice) !== -1 && VOICE_DIRS[s.voice], d.id + " " + s.id);
+      sp[s.id] = s.voice;
+    });
+    assert.equal(d.speakers.length, 2, d.id);
+    d.lines.forEach(function (l) {
+      var where = d.id + "/" + l.id;
+      ["fr", "pron", "en"].forEach(function (k) { assert.ok(typeof l[k] === "string" && l[k].trim() !== "", where + " " + k); });
+      assert.ok(Object.prototype.hasOwnProperty.call(sp, l.speaker), where + " speaker " + l.speaker);
+      assert.equal(DLG.voiceOf(d, l.speaker), sp[l.speaker], where);
+    });
+    // both speakers actually speak
+    d.speakers.forEach(function (s) { assert.ok(d.lines.some(function (l) { return l.speaker === s.id; }), d.id + " " + s.id); });
+  });
+});
+test("all 20: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
+  var n = 0;
+  DATA_D.dialogues.forEach(function (d) {
+    d.vocab.forEach(function (v) {
+      if (!v.link) return;
+      n++;
+      var pool = { verb: VERBS, expression: EXPR, table: TABLES }[v.link.kind];
+      assert.ok(pool, d.id + "/" + v.id + " kind " + v.link.kind);
+      assert.ok(Object.prototype.hasOwnProperty.call(pool, v.link.id), d.id + "/" + v.id + " → " + v.link.kind + ":" + v.link.id);
+    });
+    assert.ok(d.notice.table && Object.prototype.hasOwnProperty.call(TABLES, d.notice.table), d.id + " notice " + d.notice.table);
+  });
+  assert.ok(n > 40, "links checked " + n);
+});
+test("all 20: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
+  DATA_D.dialogues.forEach(function (d) {
+    d.lines.forEach(function (l, i) {
+      var where = d.id + "/" + l.id;
+      l.accept.forEach(function (a) {
+        var r = DLG.checkLine(a, l.accept, { accentTolerant: false });
+        assert.equal(r.correct, true, where + ": " + a);
+        assert.equal(r.exact, true, where + ": " + a);
+      });
+      var keys = l.accept.map(DLG.lineKey);
+      var other = d.lines.filter(function (o, j) { return j !== i && keys.indexOf(DLG.lineKey(o.fr)) === -1; })[0];
+      assert.equal(DLG.checkLine(other.fr, l.accept, { accentTolerant: true }).correct, false, where + " vs " + other.id);
+      assert.equal(DLG.checkLine("Je ne comprends rien du tout aujourd'hui.", l.accept, { accentTolerant: true }).correct, false, where);
+    });
+  });
+});
+test("all 20: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
+  var n = 0;
+  DATA_D.dialogues.forEach(function (d) {
+    var byLine = {};
+    d.lines.forEach(function (l) { byLine[l.id] = l; });
+    DLG.quizKeys(DATA_D, d.id).forEach(function (k, qi) {
+      var it = DLG.choiceItem(DATA_D, k, rng(qi + 7));
+      var qq = d.questions[qi];
+      assert.ok(it, k);
+      assert.equal(it.correct, qq.answer, k);
+      assert.equal(it.options.length, 4, k);
+      assert.equal(new Set(it.options).size, 4, k);
+      assert.ok(it.options.indexOf(qq.answer) !== -1, k);
+      assert.equal(it.listen.voice, DLG.voiceOf(d, byLine[qq.line].speaker), k);
+      n++;
+    });
+  });
+  assert.equal(n, 80);
+});
+test("all 20: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
+  var fallback = [];
+  DATA_D.dialogues.forEach(function (d) {
+    d.lines.forEach(function (l) {
+      var voice = DLG.voiceOf(d, l.speaker);
+      var M = voiceManifest(voice);
+      var e = M.items[L.ttsKey(l.fr)];
+      if (!e) {
+        fallback.push(l.fr);
+        var man = JSON.parse(fs.readFileSync(path.join(ROOT, "audio", "tts", voice, "manifest.json"), "utf8"));
+        var rec = man.items[clipHash(l.fr)];
+        assert.ok(rec && rec.status === "failed-excluded", d.id + "/" + l.id + " has no failed-excluded record");
+        assert.equal(fs.existsSync(path.join(ROOT, "audio", "tts", voice, clipHash(l.fr) + ".mp3")), false);
+        return;
+      }
+      assert.equal(e.voiceId, voice, d.id + "/" + l.id);
+      assert.equal(e.file, "audio/tts/" + VOICE_DIRS[voice] + "/" + clipHash(l.fr) + ".mp3", d.id + "/" + l.id);
+      assert.ok(fs.statSync(path.join(ROOT, e.file)).size > 1024, e.file);
+    });
+  });
+  assert.deepEqual(fallback, DEVICE_VOICE_LINES);
+});
+test("all 20: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
+  var cp = require("node:child_process");
+  function git(args) { return cp.execFileSync("git", ["-C", REPO].concat(args), { encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] }); }
+  try { git(["rev-parse", "HEAD"]); } catch (e) { t.skip("not a git checkout"); return; }
+  var crypto = require("node:crypto");
+  Object.keys(VOICE_DIRS).forEach(function (voice) {
+    var dir = "verb-trainer/audio/tts/" + VOICE_DIRS[voice];
+    var tree = git(["ls-tree", "-r", "HEAD", dir + "/"]).trim().split("\n").filter(function (s) { return /\.mp3$/.test(s); });
+    assert.ok(tree.length > 0, voice);
+    tree.forEach(function (row) {
+      var m = /^\d+ blob ([0-9a-f]+)\t(.+)$/.exec(row);
+      var buf = fs.readFileSync(path.join(REPO, m[2]));
+      var sha = crypto.createHash("sha1").update("blob " + buf.length + "\0").update(buf).digest("hex");
+      assert.equal(sha, m[1], m[2] + " changed");
+    });
+    var before = JSON.parse(git(["show", "HEAD:" + dir + "/manifest.json"])).items;
+    var after = JSON.parse(fs.readFileSync(path.join(REPO, dir, "manifest.json"), "utf8")).items;
+    Object.keys(before).forEach(function (h) { assert.deepEqual(after[h], before[h], voice + " record " + h); });
+    var jsf = voice === SHIPPED.VT_TTS.defaultVoice ? "verb-trainer/js/tts-manifest.js" : "verb-trainer/js/tts-manifest-" + voice + ".js";
+    var sb = {}; sb.window = sb;
+    require("node:vm").runInNewContext(git(["show", "HEAD:" + jsf]), sb);
+    // JSON round-trip: the two vm realms have different Object prototypes
+    var old = clone(voice === SHIPPED.VT_TTS.defaultVoice ? sb.VT_TTS.items : sb.VT_TTS_VOICES[voice].items);
+    var now = clone(voiceManifest(voice).items);
+    Object.keys(old).forEach(function (k) { assert.deepEqual(now[k], old[k], voice + " entry " + k); });
+  });
+});
+test("all 20: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
+  var k = L.ttsKey("je me suis assis"), h = clipHash("je me suis assis");
+  Object.keys(VOICE_DIRS).forEach(function (voice) {
+    assert.equal(voiceManifest(voice).items[k], undefined, voice);
+    assert.equal(fs.existsSync(path.join(ROOT, "audio", "tts", voice, h + ".mp3")), false, voice);
+  });
+  var man = JSON.parse(fs.readFileSync(path.join(ROOT, "audio", "tts", "qwen3-fr-bf16", "manifest.json"), "utf8"));
+  assert.equal(man.items[h].excludedByUser, true);
 });
 
 /* ---------- printables and docs ---------- */

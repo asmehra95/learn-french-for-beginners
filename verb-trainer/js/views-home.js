@@ -245,12 +245,18 @@
       // Dialogues (views-dialogues.js).
       if (ctx.DIALOGUES && window.VT_DLG) {
         var dlgList = window.VT_DLG.index(ctx.DIALOGUES).list, nDlg = dlgList.length;
+        // "Start: <first>" until any dialogue is started, then "Continue: <first not yet started>".
+        // Started = listened, quizzed or role-played (same rule as started() in views-dialogues.js).
+        var dlgBy = window.VT_DLG.stats(ctx.state(), ctx.DIALOGUES).byDialogue;
+        var dlgDone = function (d) { var b = dlgBy[d.id]; return !!b && (b.listened || b.quizBest >= 0 || Object.keys(b.roles).length > 0); };
+        var dlgAny = dlgList.some(dlgDone);
+        var dlgNext = dlgList.filter(function (d) { return !dlgDone(d); })[0] || dlgList[0];
         body.appendChild(el("section", { className: "home-card dia-card-home", "aria-labelledby": "home-dia-h" }, [
           el("h3", { id: "home-dia-h" }, [UI.icon("messages-square"), el("span", { text: "Dialogues" })]),
           el("p", { text: nDlg + (nDlg === 1 ? " short conversation" : " short conversations") + " between two speakers. Listen and read, take a role, then check you understood." }),
           el("div", { className: "actions" }, [
             el("a", { className: "btn", id: "home-dia-link", href: "#dialogues" }, [el("span", { text: "Open the dialogues" }), UI.icon("arrow-right")]),
-            dlgList[0] ? el("a", { className: "text-link", href: "#dialogues/" + dlgList[0].id, text: "Start: " + dlgList[0].title }) : null
+            dlgNext ? el("a", { className: "text-link", href: "#dialogues/" + dlgNext.id, text: (dlgAny ? "Continue: " : "Start: ") + dlgNext.title }) : null
           ])
         ]));
       }
