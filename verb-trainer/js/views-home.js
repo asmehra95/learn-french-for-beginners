@@ -244,11 +244,20 @@
 
       // Dialogues (views-dialogues.js).
       if (ctx.DIALOGUES && window.VT_DLG) {
-        var dlgList = window.VT_DLG.index(ctx.DIALOGUES).list, nDlg = dlgList.length;
+        var DLG = window.VT_DLG;
+        var dlgList = DLG.everyday(ctx.DIALOGUES), nDlg = dlgList.length;
         // "Start: <first>" until any dialogue is started, then "Continue: <first not yet started>".
-        // Started = listened, quizzed or role-played (same rule as started() in views-dialogues.js).
-        var dlgBy = window.VT_DLG.stats(ctx.state(), ctx.DIALOGUES).byDialogue;
-        var dlgDone = function (d) { var b = dlgBy[d.id]; return !!b && (b.listened || b.quizBest >= 0 || Object.keys(b.roles).length > 0); };
+        // Started = listened, quizzed or role-played (VT_DLG.isStarted, shared with views-dialogues.js).
+        var dlgBy = DLG.stats(ctx.state(), ctx.DIALOGUES).byDialogue;
+        var dlgDone = function (d) { return DLG.isStarted(dlgBy[d.id]); };
+        // The story (La Lettre de Lyon): a separate link to the first episode not yet started.
+        var storyP = null, ser = DLG.seriesList(ctx.DIALOGUES)[0];
+        var nx = ser ? DLG.nextEpisode(ctx.state(), ctx.DIALOGUES, ser.id) : null;
+        if (nx && nx.dialogue) {
+          var verbWord = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
+          storyP = el("p", {}, [el("a", { className: "text-link", id: "home-story-link", href: "#dialogues/" + nx.dialogue.id,
+            text: "Story: " + verbWord + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title })]);
+        }
         var dlgAny = dlgList.some(dlgDone);
         var dlgNext = dlgList.filter(function (d) { return !dlgDone(d); })[0] || dlgList[0];
         body.appendChild(el("section", { className: "home-card dia-card-home", "aria-labelledby": "home-dia-h" }, [
@@ -257,7 +266,8 @@
           el("div", { className: "actions" }, [
             el("a", { className: "btn", id: "home-dia-link", href: "#dialogues" }, [el("span", { text: "Open the dialogues" }), UI.icon("arrow-right")]),
             dlgNext ? el("a", { className: "text-link", href: "#dialogues/" + dlgNext.id, text: (dlgAny ? "Continue: " : "Start: ") + dlgNext.title }) : null
-          ])
+          ]),
+          storyP
         ]));
       }
       // Explain entry point (views-explain.js). No network either way: only the link differs in wording.

@@ -15,58 +15,193 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
   "synthetic": true,
   "note": "One synthetic male voice designed from a text description with Qwen3-TTS VoiceDesign (\"Voix masculine native de Paris, chaleureuse et posée, la trentaine, diction claire et naturelle, accent standard de France, débit modéré.\"); no real person was recorded or cloned.",
   "credits": "audio/tts/qwen3-fr-m-bf16/CREDITS.md",
-  "generatedAt": "2026-10-16T15:38:03+00:00"
+  "generatedAt": "2026-10-18T02:12:15+00:00"
  },
  "coverage": {
-  "total": 124,
-  "recorded": 124,
+  "total": 260,
+  "recorded": 260,
   "byCategory": {
    "dialogue-line": {
-    "recorded": 124,
-    "total": 124
+    "recorded": 260,
+    "total": 260
    }
   }
  },
  "items": {
+  "Ah bon ? Comment est-ce qu'elle s'appelait, cette famille ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9dba8aa86464be2f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.56
+  },
   "Ah non, désolé, je n'ai plus de cerises. Mais goûtez ces fraises !": {
    "file": "audio/tts/qwen3-fr-m-bf16/9e9e3b0b17dd4ed3.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.14
+  },
+  "Ah, d'accord ! Alors voilà : Mme Vial ne veut pas de visite cette semaine. Son père est trop fatigué.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9cbc00e262b32c03.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.9
+  },
+  "Ah, l'autre Jacques ! Grand et timide. Il a quitté Delorme en soixante-deux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/99839865195e7333.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.01
   },
   "Ah, la noire me va bien. Ça me plaît. C'est combien ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/6abe05d76d385f86.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.34
   },
+  "Ah, la petite Simone ! Entrez, entrez. Qu'est-ce que je peux faire pour vous ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/407fe1cdda49e74e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.54
+  },
   "Ah, super ! Dites, on se tutoie ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/53543ac84ab07b74.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.92
+  },
+  "Alors il faut finir son travail. Tu as une idée, toi, la graphiste ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a320243690543440.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.08
+  },
+  "Alors le Café des Canuts n'existe plus… Je suis désolé, Maya.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/50a3b213cbe9d50e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.8
+  },
+  "Alors préparons-lui une belle soirée. Il a un souhait ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1b7e209e73236457.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.18
+  },
+  "Alors votre J. était peut-être typographe. Pourquoi est-ce que vous cherchez ce monsieur ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2c54ac07ca4cc114.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.56
+  },
+  "Alors, j'ai trouvé ce microfilm. Le Progrès du huit septembre mille neuf cent soixante-deux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/027236c830b0380a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.32
   },
   "Alors, ça vous fait neuf euros cinquante.": {
    "file": "audio/tts/qwen3-fr-m-bf16/1880a25e69fb6ac0.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.64
   },
+  "Après la fermeture, certains sont partis, d'autres sont restés à Lyon.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/50bdf1a98f6a69bc.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.28
+  },
   "Après, prenez la deuxième rue à gauche.": {
    "file": "audio/tts/qwen3-fr-m-bf16/37f9e1702a8bac6f.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.86
+  },
+  "Arrêter ? Pourquoi ? On sait qu'il s'appelle Jacques !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/cfb10db06d4f096d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.6
+  },
+  "Attendez, quelque chose est tombé du livre. Une photo !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ce27dfa855c8ac5b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.52
+  },
+  "Attendez. Moi aussi, je la garde toujours sur moi. Lisez le dos : « Pour Jacques. Ne m'oublie pas. S. »": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5bb56cd287743743.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 7.3
+  },
+  "Attendez… il y a quelque chose derrière le carreau. Une petite boîte en fer !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3312d98111c1a34b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.3
+  },
+  "Attends, un message… C'est Odile. Elle veut me voir samedi. Tu veux que je…": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3fc62462fd977701.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.58
+  },
+  "Attends. Le cachet de la poste… Fleurie. Fleurie, dans le Beaujolais !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8261fb54e24b3cc6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.18
+  },
+  "Au quatrième ? Chez Mme Laurent ? Vous êtes de la famille ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d3b8d1d72809cad0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.48
+  },
+  "Aux Tilleuls, à Caluire. Jacques Vial… Il est vivant, mademoiselle. Mais il est fragile.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e5d0b56eed50f260.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 6.54
   },
   "Avec plaisir ! Et après, on va dîner ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/ee9610269f7545d3.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.2
   },
+  "Avec plaisir ! Je m'appelle Théo. J'ai la librairie, en bas.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e998c013eeeb77c1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.56
+  },
+  "Bien sûr ! J'ai bu mon café là-bas pendant des années.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c2bae22d0bcdbb90.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.28
+  },
+  "Bien sûr, madame. Asseyez-vous… enfin, poussez les livres.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9c5f1c85a7b77c1b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.6
+  },
+  "Bien sûr, à La Page Tournée ! C'est génial. Mais il faudra rester à Lyon…": {
+   "file": "audio/tts/qwen3-fr-m-bf16/99be80c6e12b0daa.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.06
+  },
   "Bien sûr. Attendez un instant, je vais la chercher en réserve.": {
    "file": "audio/tts/qwen3-fr-m-bf16/6038383c852e778d.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.1
   },
+  "Bien sûr. L'imprimerie Delorme, quai Saint-Vincent ? Elle a fermé en mille neuf cent soixante-quinze.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/42203d4c6b55d1bf.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 6.78
+  },
+  "Bienvenue à Fleurie, mademoiselle ! C'est le dernier jour des vendanges.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c6009b3971450665.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.72
+  },
+  "Bon, je porte ce carton. Vous portez le sac ? On monte !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a0dc4903dd3d66f9.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.8
+  },
   "Bonjour ! Qu'est-ce que vous cherchez ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/d282ad727d69ae8f.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.08
+  },
+  "Bonjour, Maya. J'ai ma boîte à outils pour le carreau. Vous l'ouvrez ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/470c1924bf62a54b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.7
+  },
+  "Bonjour, Maya. Je peux vous appeler Maya, n'est-ce pas ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/468ba56db4aceb1b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.26
   },
   "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/4a13174d6f8e6697.mp3",
@@ -88,6 +223,11 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.04
   },
+  "Bonjour, madame. Je voudrais savoir si M. Jacques Vial habite chez vous.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3afb2acc05c15427.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.02
+  },
   "Bonjour, madame. Je voudrais une baguette, s'il vous plaît.": {
    "file": "audio/tts/qwen3-fr-m-bf16/b6e3c5d0f3873d6f.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -98,25 +238,55 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.98
   },
+  "Bonjour, mademoiselle ! C'est monsieur Brun qui vous envoie ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/693b45b741695c5d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.9
+  },
+  "Bonjour, mademoiselle ! Qu'est-ce qu'il vous faut, ce matin ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/959678daf728f175.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.16
+  },
   "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.": {
    "file": "audio/tts/qwen3-fr-m-bf16/4fc926185d39d147.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.42
+  },
+  "Bonsoir ! Ici Yanis, de la résidence Les Tilleuls. Je suis bien à La Page Tournée ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f58c3035e033f3ac.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.92
   },
   "Bonsoir ! J'ai une réservation pour deux nuits, au nom de Laurent.": {
    "file": "audio/tts/qwen3-fr-m-bf16/0dde9d8299331d35.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.42
   },
+  "Bonsoir, madame Berthier ! Je vous apporte votre roman policier.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/802527e35e3a5423.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.76
+  },
   "Bonsoir, madame. Voici la carte.": {
    "file": "audio/tts/qwen3-fr-m-bf16/f72b1a5a77773c71.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.28
   },
+  "Bonsoir, mademoiselle ! Vous êtes la petite-fille de Simone, n'est-ce pas ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8e83f97da1613e40.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.46
+  },
   "C'est génial ! Tu es partie quand ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/ff5dc35a2a88aea2.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.32
+  },
+  "C'est lui, J. ! Relisez la première lettre, maintenant.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/68f901a7ff520b2e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.92
   },
   "C'est moi. Qu'est-ce que je peux faire pour vous ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/41546d5a73c9bea0.mp3",
@@ -128,13 +298,33 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.1
   },
+  "Ce n'est pas grave. Après, moi aussi, j'avais le cafard. Je voulais tout arrêter.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/08b8da3b779b6b1b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.8
+  },
+  "Ce n'est pas votre faute, madame. Vous avez couru aussi vite que possible.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/45378b9739cd90b8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.82
+  },
   "Cinq cents grammes de fraises. Je vous mets autre chose ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/7f8f76ac55d45de9.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.2
   },
+  "Comment il s'appelle ? Vous savez son nom ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a6d6ea847a523e0a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.44
+  },
   "Continuez tout droit jusqu'à la place.": {
    "file": "audio/tts/qwen3-fr-m-bf16/03140d395af1e06b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.98
+  },
+  "Continuez, Maya, je vous en prie.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/568d567464a3bf67.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.98
   },
@@ -158,15 +348,40 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.24
   },
+  "D'accord. Oh… Dans ce livre, il y a une dédicace : « À Lucienne ».": {
+   "file": "audio/tts/qwen3-fr-m-bf16/26892f2b3cd0b77f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.1
+  },
   "De rien. Bonne visite !": {
    "file": "audio/tts/qwen3-fr-m-bf16/c00cfd33cecdeb55.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.72
   },
+  "De rien. Tu le reconnais, cet endroit, derrière eux ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e66e379c1652aab0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.24
+  },
   "Demain matin. À quelle heure part le train ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/59e8d08bedbff782.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.72
+  },
+  "Demain, dix heures, en haut de la montée de la Grande-Côte ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2996d3d99b5189b6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.66
+  },
+  "Demandez à Mme Berthier, au cinquième. Elle sait tout… mais elle ne dit rien.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/421f7163b004a8cf.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.36
+  },
+  "Elle a dit oui… C'est la réponse que j'attendais.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8bdd75d3b182e235.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.66
   },
   "Elle est mignonne ! Et là, ce sont tes parents ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/637d5e8b38cd72fe.mp3",
@@ -178,25 +393,90 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.44
   },
+  "Elle, oui ! La fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ef41f760d5a94d2c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.94
+  },
+  "Elles disent S et J… Simone et Jacques.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e29cef834270b39f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.14
+  },
+  "En janvier… Alors j'arrive trop tard, encore une fois. Montrez-moi, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d4d42d8c6fdc2332.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.26
+  },
+  "En quatre-vingt-cinq. Il est fermé depuis quarante ans, mademoiselle.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6e04941213cac3a9.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.94
+  },
   "Enchanté, Léa. Moi, c'est Thomas.": {
    "file": "audio/tts/qwen3-fr-m-bf16/be8089b6f923dd72.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.78
+  },
+  "Encore un carton de livres ! Votre grand-mère lisait beaucoup.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/eb0e3f44870181f5.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.62
+  },
+  "Et cette petite boîte, qu'est-ce que c'est ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1fb7aa26ccc4937d.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.4
+  },
+  "Et il y a une enveloppe : « Pour J. » C'est l'écriture de Simone ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5396bd96da4f73af.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.16
   },
   "Et la femme à côté de la fenêtre, c'est qui ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/7fbe7d10d76619fb.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.28
   },
+  "Et la lettre de Jacques ? Elle n'a jamais répondu ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8efc7c29253a9476.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.82
+  },
   "Et la petite fille, c'est leur fille ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/18959209a35b988b.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.9
   },
+  "Et le grand jeune homme, à côté d'elle ? Regardez derrière.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8a7416e4e3955157.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.54
+  },
+  "Et là : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est donc un homme.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/98de121e797b9652.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 7.76
+  },
+  "Et un garçon, en mille neuf cent soixante-deux ? Un certain J. ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/df23663a8e0f1713.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.84
+  },
   "Et voilà cinquante centimes. Merci et bonne semaine !": {
    "file": "audio/tts/qwen3-fr-m-bf16/ff1813c5077a97b2.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.3
+  },
+  "Et vous êtes arrivée à temps ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2ef71564e0331867.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.0
+  },
+  "G, A, R, N, I, E, R. Et voici le numéro de la librairie : zéro quatre, soixante-dix-huit…": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1f2865e7ed10b7e2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 8.1
   },
   "Huit cent cinquante euros, plus cinquante euros de charges.": {
    "file": "audio/tts/qwen3-fr-m-bf16/4b9c909838605e06.mp3",
@@ -233,15 +513,50 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.16
   },
+  "J'ai un message pour M. Garnier, qui a appelé lundi. Vous le connaissez ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0e60577f5c08436c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.46
+  },
   "J'ai une sœur, Clara. Elle a trente-deux ans et elle travaille à Paris.": {
    "file": "audio/tts/qwen3-fr-m-bf16/2b2286c8752818a2.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.96
   },
+  "J'aimerais revoir la Croix-Rousse. Une dernière fois… ou une première fois.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/56976bb38585e9ab.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.38
+  },
+  "J'en suis très heureux, Maya. Vraiment.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0c116953e56b4a45.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.7
+  },
   "J'en voudrais deux, s'il vous plaît.": {
    "file": "audio/tts/qwen3-fr-m-bf16/ef61acc28afa7d26.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.36
+  },
+  "Jacques ? Lequel ? Il y avait deux Jacques chez Delorme !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a9e71691e71f22dd.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.56
+  },
+  "Jacques est fragile. Et je ne voulais pas voir une deuxième porte se fermer devant toi.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/98bd170f568951e2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.62
+  },
+  "Jacques… au Canada ? Mais c'est le fils Vial ! Il est parti en soixante-deux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a82bceca7c4b776f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.82
+  },
+  "Je comprends. À mon avis, ce serait mieux sans escaliers.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/f32abfaca9a22f67.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.44
   },
   "Je fais du M, en général. Vous avez cette veste en bleu ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/67efdc797d6df87b.mp3",
@@ -253,15 +568,55 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.74
   },
+  "Je l'ai attendue à dix-huit heures, comme dans ma lettre. J'ai attendu jusqu'au dernier moment.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9f5dd2fdc8f55a86.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.94
+  },
+  "Je l'ai déjà imprimée. Tenez, lisez les noms.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1a6cb85a879cd2a9.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.34
+  },
+  "Je le lui dirai ce soir, madame. Jeudi, ils la liront ensemble.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/57b90d6597bd2214.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.36
+  },
   "Je ne peux pas vous rendre l'argent, mais je peux vous l'échanger.": {
    "file": "audio/tts/qwen3-fr-m-bf16/bd9b6d965f4d1a9e.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.9
   },
+  "Je sais, mais on n'a pas fini.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a9d18009802cee46.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.98
+  },
+  "Je sais. Je suis désolé, Maya. J'avais peur.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/44404dc4d0ed3379.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.24
+  },
+  "Je sais. Tu me l'as dit le jour des lettres. Pourquoi pas ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/59cf38b2ad39b817.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.72
+  },
+  "Je suis content, Maya. Très content que tu sois venue.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/244c8f0601211446.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.28
+  },
   "Je suis désolé, madame. Vous avez le ticket de caisse ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/32ed3ec4ccf3be37.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.08
+  },
+  "Je suis désolé. Je pense souvent à Simone. Un roman chaque samedi, toujours !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1888abeb1daa28b1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.24
   },
   "Je suis infirmier. Je travaille à l'hôpital.": {
    "file": "audio/tts/qwen3-fr-m-bf16/1dfc4b221573e99b.mp3",
@@ -273,20 +628,85 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.26
   },
+  "Je vous écoute. J'attends cette réponse depuis soixante-quatre ans.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e829f3f88bd88be0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.68
+  },
+  "Jeudi ? Je vous attendrai, mademoiselle. Cette fois, je sais attendre.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1abc691c2ed3b550.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.3
+  },
+  "Juste une question. Vous vous souvenez de Simone à vingt ans ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1cdbe8b4a5f88a7e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.86
+  },
   "L, A, U, R, E, N, T. Laurent.": {
    "file": "audio/tts/qwen3-fr-m-bf16/c2fb8c3d14115059.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 5.18
+  },
+  "La Grande-Côte, c'est ici, sur la colline ! Et la troisième lettre ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/1127111dbdf30b9f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.42
   },
   "La météo dit qu'il va faire beau demain après-midi.": {
    "file": "audio/tts/qwen3-fr-m-bf16/2ea9431149551871.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.24
   },
+  "Le Rhône, Fourvière, la Croix-Rousse… Tu la trouves comment, notre colline ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9bdfd6718418fdc1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.8
+  },
+  "Le grand, là… C'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e84b78a2440d317f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.38
+  },
   "Le plat du jour, c'est le poulet aux champignons. Il est très bon.": {
    "file": "audio/tts/qwen3-fr-m-bf16/9d6100247751d595.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.12
+  },
+  "Les Deux Collines, un bon bouchon sur la place. La salle est au rez-de-chaussée.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d0f2745fdbf7946a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.9
+  },
+  "Les canuts, et les typographes de l'imprimerie Delorme, sur le quai Saint-Vincent.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c8195a0f84143349.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.72
+  },
+  "Les livres. Et les gens du quartier. Viens, regarde encore les lettres avec moi.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/230892f443328738.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.54
+  },
+  "Lucienne ? Ça marche. Je monte la voir ce soir.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d49590aa51546f60.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.08
+  },
+  "Lui-même, mademoiselle. Asseyez-vous, je vous en prie. Vous êtes Maya, je crois ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/750f0fc1d06e78bf.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.18
+  },
+  "Mais après, pourquoi personne ne lui a écrit à Montréal ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/dee3f16b631f8a62.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.4
+  },
+  "Mais madame, vous habitez ici depuis soixante-six ans !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b5c763adf15659c6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.16
   },
   "Mardi, je ne peux pas. Je préfère jeudi.": {
    "file": "audio/tts/qwen3-fr-m-bf16/8736d54bb9f1cb54.mp3",
@@ -328,6 +748,16 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.46
   },
+  "Mes yeux sont fatigués. Vous voudriez bien me la lire ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/85a9b822f67b343b.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.32
+  },
+  "Moi ? Ha ! Non, je n'étais pas aussi beau, mademoiselle.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a9a9b16cb09848b8.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.04
+  },
   "Moi aussi, je viens de Lyon ! Je vais lui dire bonjour.": {
    "file": "audio/tts/qwen3-fr-m-bf16/0c8824bf4aa4adb3.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -348,6 +778,11 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 5.38
   },
+  "Non, je suis désolé. Il est parti au Canada… et il n'est jamais revenu, je crois.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7804593812db0357.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.34
+  },
   "Non, pas de fièvre. Mais je suis fatigué et je dors mal.": {
    "file": "audio/tts/qwen3-fr-m-bf16/5a37c7a6940fa2b8.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -358,10 +793,25 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.38
   },
+  "Non. Mais on va chercher.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/324f0a7a29ce6d35.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.88
+  },
+  "Non… Pas encore. Le numéro, c'est seulement le mien.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2ac9b9cc0e4cd0b0.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.14
+  },
   "Nous pouvons l'envoyer en réparation, si vous voulez.": {
    "file": "audio/tts/qwen3-fr-m-bf16/730989dcc5382df6.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.28
+  },
+  "Odile ne sait pas. Mais elle est curieuse, maintenant. Et moi, je suis nerveux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5c54f84b46e7912c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.76
   },
   "Oh, je suis désolé ! Je vous change ça tout de suite.": {
    "file": "audio/tts/qwen3-fr-m-bf16/a1f85f0550b5b710.mp3",
@@ -372,6 +822,26 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "file": "audio/tts/qwen3-fr-m-bf16/b1101e21c179eee6.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.18
+  },
+  "On lit les lettres d'amour de votre grand-mère ensemble… On peut se tutoyer, non ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/10c7141a428aa492.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.38
+  },
+  "On pourrait prendre un taxi jusqu'à la porte du restaurant.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b7ff12cd00f81eb2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.54
+  },
+  "On va demander à M. Rossi. Il buvait son café là-bas.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9e46073f760703bb.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.52
+  },
+  "Ouf ! Il est lourd, ce carton. Qu'est-ce qu'il y a dedans ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/284db4d4dbf089a1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.4
   },
   "Oui, au troisième étage. Et vous ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/f55170b4ff350463.mp3",
@@ -403,15 +873,30 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.0
   },
+  "Oui, c'est toute l'équipe, devant l'atelier. Et sous la photo, il y a les noms.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a81e9f91a1e837c4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.98
+  },
   "Oui, c'est vrai. Allez, bonne semaine, Manon !": {
    "file": "audio/tts/qwen3-fr-m-bf16/15b79dfd44a2a3a1.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.56
   },
+  "Oui, ces vignes-là, sur la colline. Mon père les a achetées en quatre-vingt-cinq.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/9f0c75557a3458d2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.68
+  },
   "Oui, d'accord. C'est combien ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/16603b86809615cd.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.86
+  },
+  "Oui, en deux mille un. Il vivait à Montréal, mais la France lui manquait.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3264980989c9233a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.16
   },
   "Oui, il fait un temps de chien aujourd'hui.": {
    "file": "audio/tts/qwen3-fr-m-bf16/b19cde64cb293311.mp3",
@@ -438,10 +923,25 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.86
   },
+  "Oui, la colline qui prie. Un jour, on va monter là-haut, à la basilique.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/aac38e0bfcd83607.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.64
+  },
   "Oui, le même plat avec des légumes, sans poulet.": {
    "file": "audio/tts/qwen3-fr-m-bf16/044c62520672e795.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.34
+  },
+  "Oui, lundi matin. Ma collègue Sabine l'a noté. Il a laissé le numéro de la librairie.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8bcbc8285fe40041.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.92
+  },
+  "Oui, madame. Il s'appelle Jacques Vial. Il a attendu Simone jusqu'au dernier moment.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/bd06b94916d3a065.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.28
   },
   "Oui, merci. Où sont les cabines ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/a68870b57509bc7c.mp3",
@@ -468,10 +968,25 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.74
   },
+  "Oui. C'était bête. Je l'ai compris ce soir, quand j'ai trouvé la librairie vide.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/61f9088ed634f235.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.82
+  },
+  "Oui. Je t'attendrai dans le jardin.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b3fc3b2915c8d3ae.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.22
+  },
   "Oui. Je vais inviter Léo aussi, ça te va ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/a1d374a719830355.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.8
+  },
+  "Oui. Son cœur est faible. Mais elle a dit oui : lundi, à quinze heures.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/6d4336030c7c0977.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.94
   },
   "Oui. Vous avez des tartes aux fruits ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/21bd1d27ef028cac.mp3",
@@ -482,6 +997,16 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "file": "audio/tts/qwen3-fr-m-bf16/144d009c9943c634.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.36
+  },
+  "Pardon ? Vous pouvez lui donner le message, mademoiselle ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/aa2ab2c9df02fde2.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.78
+  },
+  "Pardon ? Vous pouvez répéter ? J'entends mal, vous savez.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/67b594616ff8e5ce.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.88
   },
   "Pardon, j'ai oublié. Je vous apporte du pain avec votre plat.": {
    "file": "audio/tts/qwen3-fr-m-bf16/a7518eb6d7b07247.mp3",
@@ -508,6 +1033,11 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.86
   },
+  "Parfait. C'est de la part de Mme Odile Vial, la fille de M. Vial. Vous la connaissez aussi ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c883c3cf19abbbdb.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.8
+  },
   "Parfait. Et le wifi, c'est quoi, le mot de passe ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/b1214f2cfcc93f19.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -528,6 +1058,11 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.36
   },
+  "Perrin, je pense… Il habite montée Saint-Sébastien, je crois. Allez-y de ma part !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d30de15630f32b47.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.2
+  },
   "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.": {
    "file": "audio/tts/qwen3-fr-m-bf16/d258f8d302aafc92.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -537,6 +1072,36 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "file": "audio/tts/qwen3-fr-m-bf16/4801e341ded832d1.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.56
+  },
+  "Pour les métiers à tisser ! Ici, c'est le quartier de la soie, la colline qui travaille.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d9ec017b66dfd602.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.04
+  },
+  "Quai Saint-Antoine… il y a soixante-quatre ans ! J'avais vingt ans, à l'époque.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/ac4da239b0ae515e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.8
+  },
+  "Qui est Lucienne ? Une amie de Simone, peut-être ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/22a3edcc40dbd7e4.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.86
+  },
+  "Raymond Brun, oui. Mais c'est mon fils qui tient le stand, maintenant.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/0a1cc8cfe8448afa.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.9
+  },
+  "Regarde-les, à la fenêtre. Ils rient comme deux vieux amis.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/4b3bc2dc48d99135.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.1
+  },
+  "Sa fille, Odile ? Est-ce que je peux lui laisser un message ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/5bbc57f057c9aeab.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.62
   },
   "Samedi, j'ai regardé le match de foot à la télé.": {
    "file": "audio/tts/qwen3-fr-m-bf16/ccfa8079f3eb6c21.mp3",
@@ -548,10 +1113,30 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.94
   },
+  "Si elle m'aime, elle écrira, je me disais. Aujourd'hui, j'aimerais seulement savoir pourquoi.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/2d7ba53a895d57f6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.66
+  },
+  "Si, je sais. Mon père est mort il y a trois ans.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/30b306da39b23d4e.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.06
+  },
+  "Simone… Personne ne m'a dit ce nom depuis longtemps. Comment va-t-elle ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/461bf2b74b8b49cf.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.8
+  },
   "Super. Alors, on se voit samedi. J'ai hâte !": {
    "file": "audio/tts/qwen3-fr-m-bf16/1ba0975d98704b34.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 4.14
+  },
+  "Sur mon vieux plan de Lyon, il est sur la place de la Croix-Rousse. On y va ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d86e248f2427c921.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.3
   },
   "Sur place ou à emporter ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/d6be51369bdd529f.mp3",
@@ -562,6 +1147,16 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "file": "audio/tts/qwen3-fr-m-bf16/f3e65aeab4c12a1b.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.56
+  },
+  "Théo Garnier, de la librairie La Page Tournée. Je peux lui dire un mot ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/3a99d2c6e1dc8e1c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.12
+  },
+  "Tous les ans, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/af893575c6e820fd.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 6.5
   },
   "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.": {
    "file": "audio/tts/qwen3-fr-m-bf16/889b2e26d3927d58.mp3",
@@ -583,6 +1178,11 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.76
   },
+  "Très bien, merci. J'arrose mes géraniums. Et vous ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/678082abd19373f1.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.98
+  },
   "Très bien. Il y a un ascenseur ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/b52708c1869be1aa.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -603,10 +1203,45 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.5
   },
+  "Tu as décidé ça toute seule ? Moi, je crois que tu as peur.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/29374165d4ef989a.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.76
+  },
+  "Tu as raison. Plus de secrets. Je te le promets.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/7d89fd098279d183.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.48
+  },
   "Un café. Et avec ça ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/e90992791f657abc.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 1.68
+  },
+  "Un passage à travers les immeubles. Et voilà la Cour des Voraces !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/95f976e22c598488.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 3.72
+  },
+  "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites en soixante-deux.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d76fe7415cc32a8f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.64
+  },
+  "Une petite table près de la fenêtre, un dîner simple. Ce n'est pas la mer à boire.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c6ccb7937840c58c.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.78
+  },
+  "Une seule lettre, c'est peu ! Mais vous avez de la chance : trois noms commencent par J.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/fffc4173c3954888.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.12
+  },
+  "Venez, Maya. On va prendre une traboule. Vous allez voir, c'est magique.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/710752cef937a8c6.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 5.06
   },
   "Vincent Roux. R, O, U, X.": {
    "file": "audio/tts/qwen3-fr-m-bf16/41d170f8ef548d49.mp3",
@@ -618,6 +1253,16 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 2.2
   },
+  "Voilà, elles sont très belles cette semaine. Et avec ça ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/c98011ef96aa0567.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.68
+  },
+  "Voilà, je te raconte tout, comme promis. Odile était très inquiète.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/a33e84ef271fbf8f.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.72
+  },
   "Voilà. Avec ça, ce sera tout ?": {
    "file": "audio/tts/qwen3-fr-m-bf16/8da60c10f9c751c5.mp3",
    "voiceId": "qwen3-fr-m-bf16",
@@ -627,6 +1272,41 @@ window.VT_TTS_VOICES["qwen3-fr-m-bf16"] = {
    "file": "audio/tts/qwen3-fr-m-bf16/e601951ab1762ae3.mp3",
    "voiceId": "qwen3-fr-m-bf16",
    "duration": 3.26
+  },
+  "Voilà. Mais elle voudrait voir M. Garnier samedi, seul. Elle l'a dit deux fois : seul !": {
+   "file": "audio/tts/qwen3-fr-m-bf16/8371696ac4d1f474.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 6.14
+  },
+  "Vous avez raison. On lit la première lettre ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/e8dd7b5036826f62.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.48
+  },
+  "Vous savez pourquoi Simone n'est pas venue, madame ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/32ef01587da37819.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 2.02
+  },
+  "Vous vous appelez Lucienne, n'est-ce pas ?": {
+   "file": "audio/tts/qwen3-fr-m-bf16/b162042fb32a6815.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 1.54
+  },
+  "« BRUN, primeurs »… Les Brun ! Ils sont encore au marché de la Croix-Rousse.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/d7742232df4a00ee.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.52
+  },
+  "À cause d'une photo. Son père garde la photo d'une jeune femme dans son portefeuille.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/77550c21f3ccde71.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.56
+  },
+  "À l'hôpital… Et moi, je l'attendais au café où je l'avais vue la première fois.": {
+   "file": "audio/tts/qwen3-fr-m-bf16/437a74f530d88511.mp3",
+   "voiceId": "qwen3-fr-m-bf16",
+   "duration": 4.88
   },
   "À la campagne, près de Dijon. Mon grand-père est né là-bas.": {
    "file": "audio/tts/qwen3-fr-m-bf16/12d792f01ee08c9c.mp3",

@@ -440,6 +440,16 @@ test("dialogues: records sanitized: unknown dialogue/speaker ids dropped, malfor
   assert.equal(Object.keys(capped.dialogues).length, 50);
   assert.equal(Object.keys(capped.dialogues["d-0"].roles).length, 4);
 });
+test("dialogues: a story episode record (lyon-05-a-closed-door, role berthier) and its quiz stat survive sanitize", function () {
+  var STORE = loadFull();
+  var raw = clone(PRE_DLG);
+  raw.dialogues = { "lyon-05-a-closed-door": { listened: true, quizBest: 50, quizAttempts: 1, lastDate: "2026-10-17",
+    roles: { berthier: { best: 80, attempts: 2 } } } };
+  raw.stats["dlg:lyon-05-a-closed-door.q1|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1760000600000 };
+  var s = STORE.sanitize(raw);
+  assert.deepEqual(s.dialogues["lyon-05-a-closed-door"], raw.dialogues["lyon-05-a-closed-door"]);
+  assert.deepEqual(s.stats["dlg:lyon-05-a-closed-door.q1|dlg-quiz|-"], raw.stats["dlg:lyon-05-a-closed-door.q1|dlg-quiz|-"]);
+});
 test("dialogues: export → parseImport round trip keeps dialogues, dlg stats and dialogueShowEnglish; hasProgress", function () {
   var STORE = loadFull();
   var state = STORE.sanitize(clone(PRE_DLG));

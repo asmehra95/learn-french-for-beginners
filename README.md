@@ -41,8 +41,9 @@ native-speaker audio clips.
   can guess first. The conjugation table opens only when you press the small button, and shows the
   verb type inside (e.g. "Regular -er", "Irregular · conjugates like venir", "Reflexive").
 - **Grammar tables** — one quick reference for articles, pronouns (including y/en and pronoun order),
-  possessives, ce/cette, question words, negation, adjectives, prepositions, a verb summary and
-  numbers, dates and the time. Each table says when to use it; every French item has a pronunciation
+  possessives, ce/cette, question words, negation, adjectives, prepositions, a verb summary (present
+  endings, être verbs, future stems, the imparfait and the conditional) and numbers, dates and the time:
+  41 tables in 10 categories. Each table says when to use it; every French item has a pronunciation
   and a Listen button. Searchable (`cette`, `le mien`, `quatre-vingts`), printable, and available as a
   PDF and as Markdown.
 - **Everyday expressions** — 100 useful phrases in 10 themes (greetings, politeness, getting by,
@@ -63,6 +64,14 @@ native-speaker audio clips.
   **Comprehension quiz** whose misses come back in Review my mistakes. Key vocabulary links to the
   verbs, expressions and grammar tables, and each dialogue explains one grammar point. The index and
   Progress show each dialogue's results. Printable as a PDF and as Markdown.
+  **Stories:** *La Lettre de Lyon* (The Letter from Lyon) is a 20-episode story in 4 acts, A2 → B1
+  (dialogues 21–40, listed under Stories below the everyday dialogues): Maya finds three love letters
+  from 1962 in her grandmother's flat and goes looking for the man who wrote them. Each episode is a
+  normal dialogue page (same three modes, two recorded voices) with "Episode n of 20", a "Story so far"
+  line, Previous/Next episode links and a Next episode link in the quiz and role-play summaries. The
+  Stories list shows each episode's progress, Home has a "Story: Continue: Episode n" link, search finds
+  the episodes ("traboule", "Lucienne", "la lettre de lyon"), and the episode quizzes count in Progress
+  (its own per-episode table) and in Review my mistakes. Printable as its own PDF and Markdown.
 - **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
   bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
   ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts"), the everyday expressions ("excuse me", "lapin"), the dialogues ("café", "boulangerie", "dialogue") and the topic
@@ -98,18 +107,20 @@ These PDFs are in the repo and served from the site:
 | [topics/01-asking-questions-workbook.pdf](topics/01-asking-questions-workbook.pdf) | Workbook: Asking Questions |
 | [topics/02-reflexive-verbs.pdf](topics/02-reflexive-verbs.pdf) | Topic guide: Reflexive Verbs |
 | [topics/02-reflexive-verbs-workbook.pdf](topics/02-reflexive-verbs-workbook.pdf) | Workbook: Reflexive Verbs |
-| [verb-trainer/reference/french-grammar-tables.pdf](verb-trainer/reference/french-grammar-tables.pdf) | Grammar tables quick reference (all 10 categories) |
+| [verb-trainer/reference/french-grammar-tables.pdf](verb-trainer/reference/french-grammar-tables.pdf) | Grammar tables quick reference (all 10 categories, 41 tables, including the imparfait and the conditional) |
 | [french-grammar-tables.md](french-grammar-tables.md) | Markdown source of the grammar tables |
 | [verb-trainer/reference/french-expressions.pdf](verb-trainer/reference/french-expressions.pdf) | 100 everyday expressions in 10 themes |
 | [french-expressions.md](french-expressions.md) | Markdown version of the everyday expressions |
 | [verb-trainer/reference/french-dialogues.pdf](verb-trainer/reference/french-dialogues.pdf) | Dialogues: all 20 conversations, with contents by level (A1, A2, B1), transcripts, pronunciation, vocabulary and answer key |
 | [french-dialogues.md](french-dialogues.md) | Markdown version of the 20 dialogues |
+| [verb-trainer/reference/la-lettre-de-lyon.pdf](verb-trainer/reference/la-lettre-de-lyon.pdf) | Story: *La Lettre de Lyon*, 20 episodes in 4 acts (A2–B1), with word lists, questions and answer key |
+| [la-lettre-de-lyon.md](la-lettre-de-lyon.md) | Markdown version of the story |
 
 ## Audio
 
 Three layers, selectable in Settings → Voice:
 
-1. **Pre-recorded synthetic voice (default)** — 2,505 of the site's 2,515 Listen texts generated with the open-source
+1. **Pre-recorded synthetic voice (default)** — 2,886 of the site's 2,896 Listen texts generated with the open-source
    Qwen3-TTS 1.7B Base model (`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16`, Apache-2.0). One
    consistent designed voice (not a real person's voice). Covers every present-tense form, past,
    future, example sentences, topic answers, the Grammar tables (cells and examples) and all 100 everyday expressions with
@@ -187,6 +198,11 @@ printables all follow the data. Three non-code steps remain for each new dialogu
 3. Print the PDF from that `--html` output with headless Chrome (`--print-to-pdf`), as for the expressions,
    then strip `/Creator`, `CreationDate` and `ModDate` from it (the tests check). Both outputs open with a
    table of contents grouped by level.
+
+`french-dialogues.md`/`.pdf` hold the 20 everyday conversations only. The story records (those with
+`series`, `episode` and `act`) are printed by `node tools/build-story.js`, which writes both
+`la-lettre-de-lyon.md` files; its `--html <file>` output is printed to
+`verb-trainer/reference/la-lettre-de-lyon.pdf` with headless Chrome and the metadata stripped the same way.
 
 ## Regenerating audio
 

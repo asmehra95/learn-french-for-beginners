@@ -21,6 +21,9 @@ class Spelling(unittest.TestCase):
     def test_numbers(self):
         self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("21"), True), "vingt et un")
         self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("80"), True), "quatre vingts")
+        self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("juin 1962"), True), "juin mille neuf cent soixante deux")
+        self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("en 2001"), True), "en deux mille un")
+        self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("en 1975"), True), "en mille neuf cent soixante quinze")
 
     def test_ordinals(self):
         self.assertEqual(ttsqa.norm_text(ttsqa.spell_numbers("3e"), False), "troisième")
@@ -79,6 +82,14 @@ class Evaluate(unittest.TestCase):
             ("J'en prends cinq cents grammes", "J'en prends 500 g"),
             ("Notre numéro, c'est le zéro un, quarante-deux, dix-huit, trente, douze.",
              "Notre numéro, c'est le 01 42 18 30 12."),
+            # years, ages and phone prefixes (La Lettre de Lyon)
+            ("C'est vous et elle, sur le quai Saint-Antoine, en juin mille neuf cent soixante-deux.",
+             "C'est vous et elle, sur le quai Saint-Antoine, en juin 1962."),
+            ("Le Progrès du huit septembre mille neuf cent soixante-deux.", "Le Progrès du 8 septembre 1962."),
+            ("Oui, en deux mille un. Il vivait à Montréal, mais la France lui manquait.",
+             "Oui, en 2001. Il vivait à Montréal, mais la France lui manquait."),
+            ("Il y a soixante-quatre ans.", "Il y a 64 ans."),
+            ("Il a quitté Delorme en soixante-deux.", "Il a quitté Delorme en 62."),
         ]
         for speak, heard in cases:
             with self.subTest(speak=speak, heard=heard):
@@ -87,6 +98,7 @@ class Evaluate(unittest.TestCase):
     def test_wrong_time_still_fails(self):
         self.assertEqual(self.status("Il est quatre heures et quart.", "Il est 5 h 15."), "fail")
         self.assertEqual(self.status("Alors, ça vous fait neuf euros cinquante.", "Alors, ça vous fait 9,15 €."), "fail")
+        self.assertEqual(self.status("Elle a fermé en mille neuf cent soixante-quinze.", "Elle a fermé en 1965."), "fail")
 
     def test_single_numbers(self):
         self.assertEqual(self.status("quatre-vingts", "80", strict=True), "short-ok")
@@ -104,6 +116,17 @@ class Evaluate(unittest.TestCase):
             with self.subTest(speak=speak, heard=heard):
                 self.assertEqual(self.status(speak, heard, strict=True), "short-ok")
         self.assertEqual(self.status("à la", "Allah"), "pass")
+        # proper name heard as two words, and a written title (La Lettre de Lyon)
+        self.assertEqual(self.status("Il a quitté Delorme", "Il a quitté de l'orme."), "pass")
+        self.assertEqual(self.status("Des lettres en plomb, de l'imprimerie Delorme.",
+                                     "Des lettres en plomb de l'imprimerie de Lorme."), "pass")
+        self.assertEqual(self.status("Elle ne vous a jamais oublié, monsieur Vial.",
+                                     "Elle ne vous a jamais oublié, M. Vial."), "pass")
+        self.assertEqual(self.status("Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites.",
+                                     "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites."), "pass")
+        # silent plural -s after -er (La Lettre de Lyon): escaliers = escalier
+        self.assertEqual(self.status("Je comprends. À mon avis, ce serait mieux sans escaliers.",
+                                     "Je comprends. A mon avis, ce serait mieux sans escalier."), "pass")
         # not homophones: still unverified
         for speak, heard in (("tes", "...des."), ("ceux", "S"), ("longue", "Longe"), ("mes", "May"), ("le", "les")):
             with self.subTest(speak=speak, heard=heard):

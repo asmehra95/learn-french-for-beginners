@@ -70,8 +70,8 @@ test("content: validate() with full refs returns no errors; pilot shape", functi
   assert.equal(D0.vocab.length, 9);
   assert.equal(D0.questions.length, 4);
 });
-test("content: 20 dialogues numbered 1-20, levels A1 → A2 → B1, one default-voice and one male-voice speaker, 20 distinct Notice tables", function () {
-  var ds = DATA_D.dialogues;
+test("content: 20 everyday dialogues numbered 1-20, levels A1 → A2 → B1, one default-voice and one male-voice speaker, 20 distinct Notice tables", function () {
+  var ds = DLG.everyday(DATA_D);
   assert.equal(ds.length, 20);
   assert.deepEqual(ds.map(function (d) { return d.number; }), Array.from({ length: 20 }, function (_, i) { return i + 1; }));
   var order = { A1: 0, A2: 1, B1: 2 };
@@ -87,8 +87,8 @@ test("content: 20 dialogues numbered 1-20, levels A1 → A2 → B1, one default-
 });
 test("scale: stats and Review my mistakes cover every dialogue's questions", function () {
   var LEARN = require("../js/learn.js");
-  assert.equal(DLG.stats({}, DATA_D).total, 80);
-  assert.equal(DLG.knownHeads(DATA_D).length, 80);
+  assert.equal(DLG.stats({}, DATA_D).total, 160);          // 80 everyday + 80 story questions
+  assert.equal(DLG.knownHeads(DATA_D).length, 160);
   var k = "dlg:hobbies-and-free-time.q2|dlg-quiz|-";
   var st = { stats: {} };
   st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
@@ -630,7 +630,7 @@ test("voices: the female manifest keeps its format, default voice and pre-dialog
   Object.keys(M.items).forEach(function (k) { assert.equal(M.items[k].voiceId, "qwen3-fr-m-bf16"); });
 });
 
-/* ---------- all 20 dialogues: per-line content, role-play, quiz, clips ---------- */
+/* ---------- all 40 records (20 everyday dialogues + 20 story episodes): per-line content, role-play, quiz, clips ---------- */
 var VOICE_DIRS = { "qwen3-fr-bf16": "qwen3-fr-bf16", "qwen3-fr-m-bf16": "qwen3-fr-m-bf16" };
 /* Dialogue lines with no clip on purpose (failed-excluded, the device voice reads them). Empty now:
    at-the-bakery l7 "Un euro vingt pièce." was reviewed and shipped as failed-kept (Whisper writes "1,20€"
@@ -640,9 +640,10 @@ function clipHash(text) { return require("node:crypto").createHash("sha256").upd
 function voiceManifest(voice) {
   return voice === SHIPPED.VT_TTS.defaultVoice ? SHIPPED.VT_TTS : SHIPPED.VT_TTS_VOICES[voice];
 }
-test("all 20: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
+test("all 40: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
   var ids = DATA_D.dialogues.map(function (d) { return d.id; });
-  assert.equal(new Set(ids).size, 20);
+  assert.equal(ids.length, 40);
+  assert.equal(new Set(ids).size, 40);
   DATA_D.dialogues.forEach(function (d) {
     ["lines", "vocab", "questions"].forEach(function (k) {
       var xs = d[k].map(function (x) { return x.id; });
@@ -664,7 +665,7 @@ test("all 20: unique dialogue, line, vocab and question ids; every line has fr, 
     d.speakers.forEach(function (s) { assert.ok(d.lines.some(function (l) { return l.speaker === s.id; }), d.id + " " + s.id); });
   });
 });
-test("all 20: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
+test("all 40: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.vocab.forEach(function (v) {
@@ -678,10 +679,12 @@ test("all 20: every vocab link and Notice table resolves to a real verb / expres
   });
   assert.ok(n > 40, "links checked " + n);
 });
-test("all 20: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
+test("all 40: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
+  var storyLines = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.lines.forEach(function (l, i) {
       var where = d.id + "/" + l.id;
+      if (d.series) storyLines++;
       l.accept.forEach(function (a) {
         var r = DLG.checkLine(a, l.accept, { accentTolerant: false });
         assert.equal(r.correct, true, where + ": " + a);
@@ -693,8 +696,12 @@ test("all 20: role-play accepts every listed alternative (accents strict) and re
       assert.equal(DLG.checkLine("Je ne comprends rien du tout aujourd'hui.", l.accept, { accentTolerant: true }).correct, false, where);
     });
   });
+  var expected = 0;
+  DLG.episodes(DATA_D, "la-lettre-de-lyon").forEach(function (d) { expected += d.lines.length; });
+  assert.ok(expected > 0);
+  assert.equal(storyLines, expected, "every story line was checked");
 });
-test("all 20: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
+test("all 40: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     var byLine = {};
@@ -711,9 +718,9 @@ test("all 20: every quiz item offers its answer among 4 unique options, voiced b
       n++;
     });
   });
-  assert.equal(n, 80);
+  assert.equal(n, 160);
 });
-test("all 20: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
+test("all dialogues and episodes: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
   var fallback = [];
   DATA_D.dialogues.forEach(function (d) {
     d.lines.forEach(function (l) {
@@ -735,7 +742,7 @@ test("all 20: every line has a clip in its speaker's voice folder, or is on the 
   });
   assert.deepEqual(fallback, DEVICE_VOICE_LINES);
 });
-test("all 20: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
+test("all 40: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
   var cp = require("node:child_process");
   function git(args) { return cp.execFileSync("git", ["-C", REPO].concat(args), { encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] }); }
   try { git(["rev-parse", "HEAD"]); } catch (e) { t.skip("not a git checkout"); return; }
@@ -762,7 +769,7 @@ test("all 20: existing clips and manifest records are unchanged versus HEAD (git
     Object.keys(old).forEach(function (k) { assert.deepEqual(now[k], old[k], voice + " entry " + k); });
   });
 });
-test("all 20: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
+test("all 40: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
   var k = L.ttsKey("je me suis assis"), h = clipHash("je me suis assis");
   Object.keys(VOICE_DIRS).forEach(function (voice) {
     assert.equal(voiceManifest(voice).items[k], undefined, voice);
@@ -770,6 +777,208 @@ test("all 20: 'je me suis assis' stays excluded (no entry in either voice, no cl
   });
   var man = JSON.parse(fs.readFileSync(path.join(ROOT, "audio", "tts", "qwen3-fr-bf16", "manifest.json"), "utf8"));
   assert.equal(man.items[h].excludedByUser, true);
+});
+
+/* ---------- story schema and helpers (synthetic fixture: the café cloned into 3 fake episodes) ---------- */
+function storyFixture() {
+  var eps = [1, 2, 3].map(function (n) {
+    var d = clone(D0);
+    d.id = "fake-ep-" + n; d.number = 100 + n; d.series = "fake"; d.episode = n;
+    d.act = n === 3 ? 2 : 1; d.level = n === 3 ? "A2" : "A1";
+    if (n > 1) d.recap = "Previously in the fake story.";
+    return d;
+  });
+  return { version: 1, dialogues: [clone(D0)].concat(eps), series: [{ id: "fake", title: "Fake", titleFr: "Faux", summary: "A test.",
+    intro: "A test story.", acts: [{ number: 1, title: "One", titleFr: "Un", level: "A1" }, { number: 2, title: "Two", titleFr: "Deux", level: "A2" }] }] };
+}
+function ep(f, n) { return f.dialogues.filter(function (d) { return d.episode === n; })[0]; }
+test("story schema: the fixture validates; each broken field yields its specific error", function () {
+  assert.deepEqual(DLG.validate(storyFixture()), []);
+  var f = storyFixture(); ep(f, 3).episode = 4;
+  assert.deepEqual(DLG.validate(f), ["series/fake/episodes: missing episode 3 in fake"]);
+  f = storyFixture(); ep(f, 3).episode = 2;
+  assert.deepEqual(DLG.validate(f), ["fake-ep-3/episode: duplicate episode 2 in fake"]);
+  f = storyFixture(); ep(f, 1).series = "nope";
+  assert.ok(DLG.validate(f).indexOf("fake-ep-1/series: unknown series nope") !== -1);
+  f = storyFixture(); ep(f, 1).act = 5;
+  assert.deepEqual(DLG.validate(f), ["fake-ep-1/act: act 5 is not in fake"]);
+  f = storyFixture(); ep(f, 1).level = "B1";
+  assert.deepEqual(DLG.validate(f), ["fake-ep-1/level: B1 differs from act 1 level A1"]);
+  f = storyFixture(); ep(f, 2).recap = "x".repeat(161);
+  assert.deepEqual(DLG.validate(f), ["fake-ep-2/recap: must be a non-empty string of at most 160 characters"]);
+  f = storyFixture(); delete ep(f, 1).episode;
+  assert.ok(DLG.validate(f).indexOf("fake-ep-1/episode: a series record needs an episode") !== -1);
+  f = storyFixture(); f.dialogues[0].episode = 1;
+  assert.ok(DLG.validate(f).indexOf("at-the-cafe/series: an episode or act needs a series") !== -1);
+  f = storyFixture(); ep(f, 1).number = 103; ep(f, 3).number = 101;
+  assert.ok(DLG.validate(f).indexOf("series/fake/episodes: episode order differs from number order in fake") !== -1);
+  f = storyFixture(); ep(f, 1).speakers[0].gender = "other";
+  assert.deepEqual(DLG.validate(f), ["fake-ep-1/speakers[0].gender: must be female or male"]);
+  f = storyFixture(); f.series[0].acts[1].number = 3;
+  assert.ok(DLG.validate(f).indexOf("series/fake/acts[1].number: acts must be numbered 1..2") !== -1);
+  f = storyFixture(); f.series[0].intro = "";
+  assert.ok(DLG.validate(f).indexOf("series/fake/intro: must be a non-empty string") !== -1);
+});
+test("story helpers: episodeNav prev/next/total/act on the fixture; null for an everyday dialogue", function () {
+  var f = storyFixture();
+  var n1 = DLG.episodeNav(f, ep(f, 1)), n2 = DLG.episodeNav(f, ep(f, 2)), n3 = DLG.episodeNav(f, ep(f, 3));
+  assert.equal(n1.prev, null);
+  assert.equal(n1.next.id, "fake-ep-2");
+  assert.equal(n2.prev.id, "fake-ep-1");
+  assert.equal(n2.next.id, "fake-ep-3");
+  assert.equal(n3.next, null);
+  assert.equal(n2.total, 3);
+  assert.equal(n2.n, 2);
+  assert.equal(n2.act.number, 1);
+  assert.equal(n3.act.titleFr, "Deux");
+  assert.equal(n2.series.id, "fake");
+  assert.equal(DLG.episodeNav(f, f.dialogues[0]), null);
+  assert.deepEqual(DLG.episodes(f, "fake").map(function (d) { return d.id; }), ["fake-ep-1", "fake-ep-2", "fake-ep-3"]);
+  assert.deepEqual(DLG.episodes(f, "nope"), []);
+  assert.equal(DLG.seriesById(f, "fake").title, "Fake");
+  assert.equal(DLG.seriesById(f, "nope"), null);
+  assert.deepEqual(DLG.everyday(f).map(function (d) { return d.id; }), ["at-the-cafe"]);
+});
+test("story helpers: nextEpisode with no records, the first two started, all started; isStarted", function () {
+  var f = storyFixture();
+  var a = DLG.nextEpisode({}, f, "fake");
+  assert.deepEqual([a.dialogue.id, a.anyStarted, a.allStarted], ["fake-ep-1", false, false]);
+  var st = { stats: {} };
+  DLG.markListened(st, "fake-ep-1", "2026-10-17");
+  DLG.recordQuiz(st, "fake-ep-2", 50, "2026-10-17");
+  var b = DLG.nextEpisode(st, f, "fake");
+  assert.deepEqual([b.dialogue.id, b.anyStarted, b.allStarted], ["fake-ep-3", true, false]);
+  DLG.recordRolePlay(st, "fake-ep-3", "server", 0, "2026-10-17");
+  var c = DLG.nextEpisode(st, f, "fake");
+  assert.deepEqual([c.dialogue.id, c.anyStarted, c.allStarted], ["fake-ep-1", true, true]);
+  assert.equal(DLG.nextEpisode({}, f, "nope").dialogue, null);
+  assert.equal(DLG.isStarted(null), false);
+  assert.equal(DLG.isStarted({ listened: false, quizBest: -1, roles: {} }), false);
+  assert.equal(DLG.isStarted({ listened: false, quizBest: 0, roles: {} }), true);
+  assert.equal(DLG.isStarted({ listened: false, quizBest: -1, roles: { a: { best: 0, attempts: 1 } } }), true);
+});
+test("story helpers: everyday() on the live data is the 20 everyday ids in number order", function () {
+  var ev = DLG.everyday(DATA_D);
+  assert.equal(ev.length, 20);
+  assert.deepEqual(ev.map(function (d) { return d.number; }), Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  ev.forEach(function (d) { assert.ok(!("series" in d), d.id); });
+});
+
+/* ---------- story: La Lettre de Lyon ---------- */
+var SERIES = "la-lettre-de-lyon";
+var EPS = DLG.episodes(DATA_D, SERIES);
+test("story: series metadata; 20 episodes 1..20, numbers 21..40, acts 5×4, levels A2 then B1", function () {
+  var ser = DLG.seriesById(DATA_D, SERIES);
+  assert.ok(ser);
+  assert.equal(ser.titleFr, "La Lettre de Lyon");
+  assert.deepEqual(ser.acts.map(function (a) { return a.number + ":" + a.level; }), ["1:A2", "2:A2", "3:B1", "4:B1"]);
+  assert.equal(EPS.length, 20);
+  assert.deepEqual(EPS.map(function (d) { return d.episode; }), Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  assert.deepEqual(EPS.map(function (d) { return d.number; }), Array.from({ length: 20 }, function (_, i) { return i + 21; }));
+  assert.deepEqual(EPS.map(function (d) { return d.act; }), [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]);
+  EPS.forEach(function (d) { assert.equal(d.level, d.act <= 2 ? "A2" : "B1", d.id); });
+});
+test("story: episodeNav for every episode; recap on 2-20 only, at most 160 characters", function () {
+  var ix = DLG.index(DATA_D);
+  EPS.forEach(function (d, i) {
+    var nav = DLG.episodeNav(DATA_D, d);
+    assert.equal(nav.n, i + 1);
+    assert.equal(nav.total, 20);
+    assert.equal(nav.act.number, d.act);
+    if (i === 0) assert.equal(nav.prev, null); else assert.equal(nav.prev, ix.byId[EPS[i - 1].id]);
+    if (i === 19) assert.equal(nav.next, null); else assert.equal(nav.next, ix.byId[EPS[i + 1].id]);
+    if (d.episode === 1) assert.ok(!("recap" in d));
+    else assert.ok(typeof d.recap === "string" && d.recap.length > 0 && d.recap.length <= 160, d.id);
+  });
+});
+test("story: every line has fr/pron/en and a speaker; every speaker's gender picks its voice; one female + one male per episode", function () {
+  var VOICE = { female: "qwen3-fr-bf16", male: "qwen3-fr-m-bf16" };
+  DATA_D.dialogues.forEach(function (d) {
+    d.speakers.forEach(function (s) { assert.equal(s.voice, VOICE[s.gender], d.id + "/" + s.id); });
+  });
+  EPS.forEach(function (d) {
+    assert.deepEqual(d.speakers.map(function (s) { return s.gender; }).sort(), ["female", "male"], d.id);
+    var sp = {};
+    d.speakers.forEach(function (s) { sp[s.id] = true; });
+    d.lines.forEach(function (l) {
+      ["fr", "pron", "en"].forEach(function (k) { assert.ok(typeof l[k] === "string" && l[k].trim() !== "", d.id + "/" + l.id + " " + k); });
+      assert.ok(sp[l.speaker], d.id + "/" + l.id);
+    });
+  });
+});
+test("story respelling: alphabet, no false liaisons (truh‿z, saN‿z …), quatre ans/heures/euros = kah-tr…, no nuh‿vuh-roh", function () {
+  var BAD = ["truh‿z", "saN‿z", "set‿z", "nuhf‿z", "ohNz‿z", "ahNt‿z", "aNt‿z"];
+  var n = 0, quatre = 0;
+  EPS.forEach(function (d) {
+    var items = d.lines.map(function (l) { return [l.pron, l.fr, d.id + "/" + l.id]; })
+      .concat(d.vocab.map(function (v) { return [v.pron, v.fr, d.id + "/" + v.id]; }))
+      .concat(d.notice.examples.map(function (x, i) { return [x.pron, x.fr, d.id + "/notice[" + i + "]"]; }));
+    items.forEach(function (it) {
+      var p = it[0], fr = it[1], where = it[2];
+      n++;
+      assert.match(p, DLG.PRON_RE, where);
+      assert.ok(!IPA_RE.test(p) && !/[?!]/.test(p) && !/ ‿|‿ /.test(p), where);
+      BAD.forEach(function (b) { assert.ok(p.indexOf(b) === -1, where + ": " + b + " in " + p); });
+      assert.ok(p.indexOf("nuh‿vuh-roh") === -1, where);
+      if (/\bquatre (ans|heures|euros)\b/i.test(fr)) {
+        quatre++;
+        assert.ok(p.indexOf("kah-tr") !== -1 && !/kah-tr\S*‿z/.test(p), where + ": " + p);
+      }
+    });
+  });
+  assert.ok(n > 300, "checked " + n);
+});
+test("story links: notice tables and vocab links resolve; ep 7 → imparfait, ep 16 → conditionnel, ep 17-20 link the conditional", function () {
+  EPS.forEach(function (d) {
+    assert.ok(Object.prototype.hasOwnProperty.call(TABLES, d.notice.table), d.id);
+    d.vocab.forEach(function (v) {
+      if (v.link) assert.ok(Object.prototype.hasOwnProperty.call({ verb: VERBS, expression: EXPR, table: TABLES }[v.link.kind], v.link.id), d.id + "/" + v.id);
+    });
+  });
+  assert.equal(EPS[6].notice.table, "imparfait");
+  assert.equal(EPS[15].notice.table, "conditionnel");
+  [16, 17, 18, 19].forEach(function (i) {
+    assert.ok(EPS[i].vocab.some(function (v) { return v.link && v.link.kind === "table" && v.link.id === "conditionnel"; }), EPS[i].id);
+  });
+});
+test("story quiz: every question's item has its answer among 4 unique options, voiced by its line's speaker; the legend names the episode", function () {
+  var n = 0;
+  EPS.forEach(function (d) {
+    DLG.quizKeys(DATA_D, d.id).forEach(function (k, qi) {
+      var it = DLG.choiceItem(DATA_D, k, rng(qi + 11));
+      var qq = d.questions[qi];
+      var line = d.lines.filter(function (l) { return l.id === qq.line; })[0];
+      assert.equal(it.options.length, 4, k);
+      assert.equal(new Set(it.options).size, 4, k);
+      assert.ok(it.options.indexOf(qq.answer) !== -1, k);
+      assert.equal(it.listen.voice, DLG.voiceOf(d, line.speaker), k);
+      assert.equal(it.legend.before, "La Lettre de Lyon, episode " + d.episode + ": ", k);
+      n++;
+    });
+  });
+  assert.ok(n >= 60, "questions " + n);
+  assert.equal(DLG.choiceItem(DATA_D, "dlg:at-the-cafe.q1|dlg-quiz|-", rng(1)).legend.before, "At the café: ");
+});
+test("story progress: Review my mistakes picks up a missed story question; stats cover every episode", function () {
+  var LEARN = require("../js/learn.js");
+  var k = "dlg:lyon-16-meeting-jacques.q2|dlg-quiz|-";
+  var st = { stats: {} };
+  st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
+  assert.deepEqual(LEARN.mistakesDeck(st, global.window.VERB_DATA, null, DATA_D), [k]);
+  assert.ok(/^La Lettre de Lyon, episode 16/.test(DLG.choiceItem(DATA_D, k, rng(2)).legend.before));
+  var by = DLG.stats({}, DATA_D).byDialogue;
+  EPS.forEach(function (d) { assert.ok(by[d.id], d.id); });
+});
+test("static: views-dialogues.js has the Stories section, episode header, recap and Previous/Next links; lists use everyday()", function () {
+  var src = fs.readFileSync(path.join(ROOT, "js", "views-dialogues.js"), "utf8");
+  ['"Episode "', '"Story so far: "', 'rel: "prev"', 'rel: "next"', '"Stories"', "DLG.everyday("].forEach(function (s) {
+    assert.ok(src.indexOf(s) !== -1, s);
+  });
+  var home = fs.readFileSync(path.join(ROOT, "js", "views-home.js"), "utf8");
+  assert.ok(home.indexOf("home-story-link") !== -1 && home.indexOf("DLG.everyday(") !== -1 && home.indexOf("DLG.isStarted(") !== -1);
+  var app = fs.readFileSync(path.join(ROOT, "js", "app.js"), "utf8");
+  assert.ok(app.indexOf("window.VT_DLG.everyday(DLG_DATA)") !== -1);
+  assert.ok(app.indexOf("Listened, role-play and quiz results per episode of ") !== -1);
 });
 
 /* ---------- printables and docs ---------- */
@@ -783,6 +992,28 @@ test("printables: both french-dialogues.md files equal markdown(); the PDF exist
   assert.equal(pdf.slice(0, 4).toString("latin1"), "%PDF");
   var s = pdf.toString("latin1");
   ["/Creator", "CreationDate", "ModDate"].forEach(function (k) { assert.ok(s.indexOf(k) === -1, k); });
+});
+test("printables (story): both la-lettre-de-lyon.md equal build-story markdown(); 4 acts, 20 episodes in order, answer key, licence; PDF without metadata", function () {
+  var md = require("../../tools/build-story.js").markdown();
+  assert.equal(fs.readFileSync(path.join(REPO, "la-lettre-de-lyon.md"), "utf8"), md, "la-lettre-de-lyon.md is stale: run node tools/build-story.js");
+  assert.equal(fs.readFileSync(path.join(ROOT, "reference", "la-lettre-de-lyon.md"), "utf8"), md, "reference copy is stale");
+  assert.equal((md.match(/^## Act /gm) || []).length, 4);
+  var eps = (md.match(/^### Episode (\d+) /gm) || []).map(function (h) { return Number(/\d+/.exec(h)[0]); });
+  assert.deepEqual(eps, Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  assert.ok(md.indexOf("## Answer key") !== -1);
+  assert.ok(md.indexOf("CC BY-SA 4.0") !== -1);
+  var pdf = fs.readFileSync(path.join(ROOT, "reference", "la-lettre-de-lyon.pdf"));
+  assert.equal(pdf.slice(0, 4).toString("latin1"), "%PDF");
+  var s = pdf.toString("latin1");
+  ["/Creator", "CreationDate", "ModDate"].forEach(function (k) { assert.ok(s.indexOf(k) === -1, k); });
+  assert.ok(!/\/U[s]ers\/|\/h[o]me\//.test(s), "no local home-directory path in the PDF");
+  assert.ok(!new RegExp("vta" + "sing").test(s), "no local user name in the PDF");
+});
+test("docs (story): the root README links the story printables; LICENSE-CONTENT covers them", function () {
+  var root = fs.readFileSync(path.join(REPO, "README.md"), "utf8");
+  assert.ok(root.indexOf("verb-trainer/reference/la-lettre-de-lyon.pdf") !== -1);
+  assert.ok(root.indexOf("la-lettre-de-lyon.md") !== -1);
+  assert.ok(fs.readFileSync(path.join(REPO, "LICENSE-CONTENT.md"), "utf8").indexOf("la-lettre-de-lyon.md") !== -1);
 });
 test("docs: both READMEs carry the stale-cache sentence; the root README links the printables", function () {
   var root = fs.readFileSync(path.join(REPO, "README.md"), "utf8");

@@ -826,7 +826,7 @@
     /* ---------------------------------------------------------------- 9 */
     {
       id: "verbs", number: 9, title: "Verb reference",
-      summary: "present endings · verbs with être · future stems",
+      summary: "present endings · verbs with être · future stems · imparfait · conditional",
       intro: "A summary only. The full verb tables, with every form and a Listen button, are in Learn.",
       links: [{ label: "Learn: all verbs", href: "#browse" }, { label: "Lesson 2: regular -er verbs", href: "#browse/lesson/2" },
         verb("parler", "parler"), verb("finir", "finir"), verb("attendre", "attendre"), verb("aller", "aller"), verb("venir", "venir"),
@@ -932,6 +932,79 @@
           ],
           links: [topic("Reflexive verbs, lesson 4 (future)", "#topics/reflexive/R4")],
           keywords: ["future", "futur simple", "future tense", "future stems", "will"]
+        },
+        {
+          id: "imparfait", title: "Imparfait: how things were, what used to happen",
+          when: "Stem = the nous form of the present minus -ons (nous parlons → parl-), + -ais, -ais, -ait, -ions, -iez, -aient. Only être is irregular (ét-). Use it for descriptions, the background and habits (\"was …-ing\", \"used to\"); use the passé composé for single completed events.",
+          caption: "Imparfait endings (parler) and stems from the nous form", infoLabel: "Ending / stem",
+          rows: [
+            r("je parlais", "zhuh par-leh", "I was speaking / I used to speak", "-ais", { verbId: "parler" }),
+            r("tu parlais", "tew par-leh", "you were speaking", "-ais"),
+            r("il parlait", "eel par-leh", "he was speaking", "-ait"),
+            r("nous parlions", "noo par-lyohN", "we were speaking", "-ions"),
+            r("vous parliez", "voo par-lyay", "you were speaking", "-iez"),
+            r("ils parlaient", "eel par-leh", "they were speaking", "-aient"),
+            r("je finissais", "zhuh fee-nee-seh", "I was finishing", "nous finissons → finiss-", { verbId: "finir" }),
+            r("j'avais", "zhah-veh", "I had / I used to have", "nous avons → av-", { verbId: "avoir" }),
+            r("je faisais", "zhuh fuh-zeh", "I was doing", "nous faisons → fais-", { verbId: "faire" }),
+            r("j'allais", "zhah-leh", "I was going", "nous allons → all-", { verbId: "aller" }),
+            r("je prenais", "zhuh pruh-neh", "I was taking", "nous prenons → pren-", { verbId: "prendre" }),
+            r("j'étais", "zhay-teh", "I was", "être: ét-", { verbId: "etre" }),
+            r("il pleuvait", "eel pluh-veh", "it was raining", "pleuvoir: pleuv-", { verbId: "pleuvoir" })
+          ],
+          examples: [
+            ex("Il pleuvait.", "eel pluh-veh", "It was raining."),
+            ex("Quand j'étais petite, j'habitais à Lyon.", "kahN zhay-teh puh-teet, zhah-bee-teh ah lee-ohN", "When I was little, I lived in Lyon."),
+            ex("Je lisais quand le téléphone a sonné.", "zhuh lee-zeh kahN luh tay-lay-fun ah su-nay", "I was reading when the phone rang.")
+          ],
+          watchOut: [
+            note("je parlais, tu parlais, il parlait and ils parlaient all sound the same: par-leh."),
+            note("Imparfait for the background or a habit; passé composé for the event that happens in it: Il pleuvait quand elle est arrivée."),
+            wo("j'étions", "nous étions", "noo zay-tyohN")
+          ],
+          links: [verb("être", "etre"), verb("avoir", "avoir"), verb("faire", "faire"),
+            { label: "Verbs with être in the passé composé", href: "#tables/verbs/etre-verbs" }],
+          keywords: ["imparfait", "imperfect", "imperfect tense", "was", "used to", "past description", "etais", "avais"]
+        },
+        {
+          id: "conditionnel", title: "Conditional: would, could, polite requests",
+          when: "\"Would\". The future stem (the infinitive, or the irregular future stem) + the imparfait endings -ais, -ais, -ait, -ions, -iez, -aient. Use it for polite requests (je voudrais, pourriez-vous), advice (tu devrais) and hypotheses (si + imparfait → conditional).",
+          caption: "Conditional endings (parler) and irregular stems", infoLabel: "Ending / stem",
+          rows: [
+            r("je parlerais", "zhuh par-luh-reh", "I would speak", "-ais", { verbId: "parler" }),
+            r("tu parlerais", "tew par-luh-reh", "you would speak", "-ais"),
+            r("il parlerait", "eel par-luh-reh", "he would speak", "-ait"),
+            r("nous parlerions", "noo par-luh-ryohN", "we would speak", "-ions"),
+            r("vous parleriez", "voo par-luh-ryay", "you would speak", "-iez"),
+            r("ils parleraient", "eel par-luh-reh", "they would speak", "-aient"),
+            r("je serais", "zhuh suh-reh", "I would be", "être: ser-", { verbId: "etre" }),
+            r("j'aurais", "zhoh-reh", "I would have", "avoir: aur-", { verbId: "avoir" }),
+            r("j'irais", "zhee-reh", "I would go", "aller: ir-", { verbId: "aller" }),
+            r("je ferais", "zhuh fuh-reh", "I would do", "faire: fer-", { verbId: "faire" }),
+            r("je pourrais", "zhuh poo-reh", "I could", "pouvoir: pourr-", { verbId: "pouvoir" }),
+            r("je voudrais", "zhuh voo-dreh", "I would like", "vouloir: voudr-", { verbId: "vouloir" }),
+            r("je devrais", "zhuh duh-vreh", "I should", "devoir: devr-", { verbId: "devoir" }),
+            r("je viendrais", "zhuh vyaN-dreh", "I would come", "venir: viendr-", { verbId: "venir" }),
+            r("je verrais", "zhuh veh-reh", "I would see", "voir: verr-", { verbId: "voir" }),
+            r("je saurais", "zhuh soh-reh", "I would know", "savoir: saur-", { verbId: "savoir" }),
+            r("j'aimerais", "zhem-reh", "I would like / I would love", "aimer: aimer-", { verbId: "aimer" }),
+            r("ce serait", "suh suh-reh", "it would be", "être: ser-", { verbId: "etre" })
+          ],
+          examples: [
+            ex("Je voudrais un café, s'il vous plaît.", "zhuh voo-dreh uhN kah-fay, seel voo pleh", "I'd like a coffee, please."),
+            ex("Pourriez-vous m'aider ?", "poo-ryay voo meh-day", "Could you help me?"),
+            ex("Si j'avais le temps, je viendrais.", "see zhah-veh luh tahN, zhuh vyaN-dreh", "If I had the time, I would come."),
+            ex("Tu devrais lui écrire.", "tew duh-vreh lwee ay-kreer", "You should write to him.")
+          ],
+          watchOut: [
+            wo("Si j'aurais le temps…", "Si j'avais le temps, je viendrais.", "see zhah-veh luh tahN, zhuh vyaN-dreh", "never the conditional right after si: si + imparfait, then the conditional."),
+            note("Future or conditional? je voudrai (zhuh voo-dray) = I will want; je voudrais (zhuh voo-dreh) = I would like. Only the ending sound changes."),
+            note("Preview (B1): the past conditional is avoir or être in the conditional + the past participle. Si j'étais arrivée plus tôt, il aurait lu la lettre (see zhay-teh ah-ree-vay plew toh, eel oh-reh lew lah let-ruh) = If I had got there earlier, he would have read the letter.")
+          ],
+          links: [verb("vouloir", "vouloir"), verb("pouvoir", "pouvoir"), verb("devoir", "devoir"),
+            { label: "Futur simple: endings and irregular stems", href: "#tables/verbs/future" },
+            { label: "Imparfait", href: "#tables/verbs/imparfait" }],
+          keywords: ["conditionnel", "conditional", "would", "could", "should", "polite requests", "voudrais", "pourrais", "si clauses", "hypothesis"]
         }
       ]
     },

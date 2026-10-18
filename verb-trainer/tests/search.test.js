@@ -288,6 +288,31 @@ test("dialogues: every dialogue is searchable; each new one is the first dialogu
     assert.ok(/^(A1|A2|B1)$/.test(hit.level), c[0]);
   });
 });
+/* ---------- Story episodes (La Lettre de Lyon) ---------- */
+function storyHits(text) { return qd(text).dialogues.filter(function (d) { return d.series === "la-lettre-de-lyon"; }); }
+test("story: traboule, Jacques, lettre, Lucienne, Beaujolais and the series title find episodes, with episode and total", function () {
+  ["traboule", "Jacques", "lettre", "Lucienne", "Beaujolais", "la lettre de lyon"].forEach(function (t) {
+    var hs = storyHits(t);
+    assert.ok(hs.length >= 1, t);
+    hs.forEach(function (h) {
+      assert.ok(Number.isInteger(h.episode) && h.episode >= 1 && h.episode <= 20, t);
+      assert.equal(h.total, 20, t);
+      assert.equal(h.seriesTitleFr, "La Lettre de Lyon", t);
+    });
+  });
+  assert.equal(qd("traboule").dialogues[0].id, "lyon-03-a-vanished-address");
+  var j = qd("Jacques").dialogues[0];
+  assert.ok(["lyon-09-the-wrong-jacques", "lyon-16-meeting-jacques"].indexOf(j.id) !== -1, j.id);
+  assert.equal(j.series, "la-lettre-de-lyon");
+});
+test("story: everyday dialogue hits carry no series fields", function () {
+  qd("cafe").dialogues.filter(function (d) { return d.id === "at-the-cafe"; }).forEach(function (d) {
+    ["series", "episode", "total", "seriesTitleFr"].forEach(function (k) { assert.ok(!(k in d), k); });
+  });
+});
+test("static: views-search.js labels story results 'Story: … · Episode n of total'", function () {
+  assert.ok(VIEW.indexOf('"Story: " + x.seriesTitleFr + " · Episode " + x.episode + " of " + x.total') !== -1);
+});
 test("static: views-search.js renders sg-dia in the §6 order and Enter chains include dialogue", function () {
   assert.ok(VIEW.indexOf('group("sg-dia", "Dialogues ("') !== -1);
   assert.ok(VIEW.indexOf("if (dialoguesFirst(res))        { diaGroup(); verbGroup(); tableGroup(); exprGroup(); }") !== -1);

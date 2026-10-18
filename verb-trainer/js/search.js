@@ -240,10 +240,15 @@
 
   /* Dialogues (dialogues-data.js): one doc per dialogue. French title 90, English title 85, keywords (plus the
      words "dialogue", "conversation", "role-play") 85, vocabulary 70, each line's French 60 and English 45,
-     summary and scene 40. Same scoring rule as the expressions. */
+     summary and scene 40. Same scoring rule as the expressions. Story episodes (records with a series) also
+     match the series titles and the story keywords at 85, and carry series, episode, total and seriesTitleFr. */
   var DLG_GLOBAL_KEYWORDS = ["dialogue", "dialogues", "conversation", "conversations", "role-play", "role play"];
+  var DLG_STORY_KEYWORDS = ["story", "stories", "histoire", "episode", "épisode", "la lettre de lyon"];
   function buildDialogueDocs(dd) {
     var docs = [];
+    var seriesById = {}, totals = {};
+    ((dd && dd.series) || []).forEach(function (s) { seriesById[s.id] = s; });
+    ((dd && dd.dialogues) || []).forEach(function (d) { if (d.series) totals[d.series] = (totals[d.series] || 0) + 1; });
     ((dd && dd.dialogues) || []).slice().sort(function (a, b) { return a.number - b.number; }).forEach(function (d, i) {
       var fields = [];
       function field(text, weight, kind, fr) {
@@ -257,8 +262,15 @@
       (d.vocab || []).forEach(function (v) { field(v.fr, 70, "vocab", v.fr); });
       (d.lines || []).forEach(function (l) { field(l.fr, 60, "line", l.fr); field(l.en, 45, "line", l.fr); });
       field(d.summary + " " + d.scene, 40, "scene");
-      docs.push({ id: d.id, title: d.title, titleFr: d.titleFr, level: d.level,
-        speakers: (d.speakers || []).map(function (sp) { return sp.name; }), href: "#dialogues/" + d.id, order: i, fields: fields });
+      var ser = d.series ? seriesById[d.series] || null : null;
+      if (ser) [ser.titleFr, ser.title].concat(DLG_STORY_KEYWORDS).forEach(function (w) { field(w, 85, "keyword"); });
+      var doc = { id: d.id, title: d.title, titleFr: d.titleFr, level: d.level,
+        speakers: (d.speakers || []).map(function (sp) { return sp.name; }), href: "#dialogues/" + d.id, order: i, fields: fields };
+      if (d.series) {
+        doc.series = d.series; doc.episode = d.episode; doc.total = totals[d.series];
+        doc.seriesTitleFr = ser ? ser.titleFr : d.series;
+      }
+      docs.push(doc);
     });
     return docs;
   }
@@ -276,8 +288,10 @@
       });
       if (!best) return;
       var kind = best.field.kind;
-      out.push({ id: doc.id, title: doc.title, titleFr: doc.titleFr, level: doc.level, speakers: doc.speakers, href: doc.href,
-        score: best.score, matchDetail: best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order });
+      var hit = { id: doc.id, title: doc.title, titleFr: doc.titleFr, level: doc.level, speakers: doc.speakers, href: doc.href,
+        score: best.score, matchDetail: best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order };
+      if (doc.series) { hit.series = doc.series; hit.episode = doc.episode; hit.total = doc.total; hit.seriesTitleFr = doc.seriesTitleFr; }
+      out.push(hit);
     });
     out.sort(function (a, b) { return b.score - a.score || a.order - b.order; });
     return out;

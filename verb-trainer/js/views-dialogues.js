@@ -22,6 +22,9 @@
   var printing = false;
   var PDF_HREF = "reference/french-dialogues.pdf";
   var MD_HREF = "reference/french-dialogues.md";
+  var STORY_PDF_HREF = "reference/la-lettre-de-lyon.pdf";
+  var STORY_MD_HREF = "reference/la-lettre-de-lyon.md";
+  var focusStories = false;  // set by an episode's "All episodes" link: focus the Stories heading on the index
   var GAP_MS = 500;
 
   function DATA() { return C && C.DIALOGUES; }
@@ -104,7 +107,8 @@
       if (b) b.hidden = !on;
     });
   }
-  function toolbar() {
+  function toolbar(d) {
+    var story = !!(d && d.series);
     var print = el("button", { type: "button", className: "btn" }, [C.UI.icon("printer"), el("span", { text: "Print" })]);
     print.addEventListener("click", function () { window.print(); });
     var key = el("button", { type: "button", className: "btn", "aria-haspopup": "dialog" }, [C.UI.icon("info"), el("span", { text: "Pronunciation key" })]);
@@ -115,8 +119,8 @@
     });
     return el("div", { className: "actions tables-toolbar" }, [
       print, key,
-      el("a", { className: "btn", href: PDF_HREF }, [el("span", { text: "Printable PDF" })]),
-      el("a", { className: "btn", href: MD_HREF }, [el("span", { text: "Markdown" })])
+      el("a", { className: "btn", href: story ? STORY_PDF_HREF : PDF_HREF }, [el("span", { text: "Printable PDF" })]),
+      el("a", { className: "btn", href: story ? STORY_MD_HREF : MD_HREF }, [el("span", { text: "Markdown" })])
     ]);
   }
   function statusText(d, b) {
@@ -132,7 +136,7 @@
   /* ---------- index: one group per level (A1, A2, B1), cards in number order ---------- */
   var LEVEL_NAMES = { A1: "Beginner", A2: "Elementary", B1: "Intermediate" };
   var levelFilter = "all";   // index level filter (in memory only, no storage key)
-  function started(b) { return !!b && (b.listened || b.quizBest >= 0 || Object.keys(b.roles).length > 0); }
+  function started(b) { return DLG.isStarted(b); }
   function overallText(list, byDialogue) {
     var n = list.filter(function (d) { return started(byDialogue[d.id]); }).length;
     var full = list.filter(function (d) { return byDialogue[d.id] && byDialogue[d.id].quizBest === 100; }).length;
@@ -143,7 +147,7 @@
   function renderIndex(body) {
     var D = DATA();
     var st = DLG.stats(state(), D);
-    var list = DLG.index(D).list;
+    var list = DLG.everyday(D);   // the everyday conversations; story episodes are listed under Stories
     body.appendChild(el("p", { className: "intro", text: D.intro }));
     body.appendChild(el("p", { className: "muted", text: D.respellingNote }));
     body.appendChild(el("p", { className: "dia-overall", text: overallText(list, st.byDialogue) }));
@@ -182,6 +186,57 @@
       body.appendChild(node);
     });
     applyFilter(levelFilter);
+    var stories = storiesSection(D, st.byDialogue);
+    if (stories) body.appendChild(stories);
+    if (focusStories) {
+      focusStories = false;
+      setTimeout(function () {
+        var h = $("dia-stories-h");
+        if (h && document.contains(h)) { h.focus({ preventScroll: true }); h.scrollIntoView({ block: "start" }); }
+      }, 0);
+    }
+  }
+
+  /* ---------- Stories: one block per series, episodes grouped by act ---------- */
+  function speakersText(d) { return d.speakers.map(function (sp) { return sp.name + " (" + sp.role + ")"; }).join(" · "); }
+  function storiesSection(D, byDialogue) {
+    var all = DLG.seriesList(D).filter(function (s) { return DLG.episodes(D, s.id).length; });
+    if (!all.length) return null;
+    return el("section", { className: "dia-stories", "aria-labelledby": "dia-stories-h" }, [
+      el("h3", { id: "dia-stories-h", tabindex: "-1", text: "Stories" })
+    ].concat(all.map(function (ser) { return seriesCard(D, ser, byDialogue); })));
+  }
+  function seriesCard(D, ser, byDialogue) {
+    var eps = DLG.episodes(D, ser.id);
+    var n = eps.filter(function (d) { return started(byDialogue[d.id]); }).length;
+    var nx = DLG.nextEpisode(state(), D, ser.id);
+    var verb = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
+    var kids = [
+      el("h4", null, [el("span", { lang: "fr", text: ser.titleFr }), " ", el("span", { className: "dia-series-en", text: "(" + ser.title + ")" })]),
+      el("p", { text: ser.summary }),
+      el("p", { className: "muted", text: ser.intro }),
+      el("p", { className: "dia-overall", text: n + " of " + eps.length + " episodes started" }),
+      el("div", { className: "actions" }, [
+        nx.dialogue ? el("a", { className: "btn btn-primary", href: "#dialogues/" + nx.dialogue.id }, [
+          el("span", { text: verb + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title }), C.UI.icon("arrow-right")]) : null,
+        el("a", { className: "text-link", href: STORY_PDF_HREF, text: "Story PDF" }),
+        el("a", { className: "text-link", href: STORY_MD_HREF, text: "Markdown" })
+      ])
+    ];
+    (ser.acts || []).forEach(function (act) {
+      var ds = eps.filter(function (d) { return d.act === act.number; });
+      if (!ds.length) return;
+      kids.push(el("h5", null, ["Act " + act.number + " · ", el("span", { lang: "fr", text: act.titleFr }), " (" + act.title + ") · " + act.level]));
+      kids.push(el("ol", { className: "dia-episodes", start: String(ds[0].episode) }, ds.map(function (d) {
+        return el("li", { className: "dia-episode" }, [
+          el("p", { className: "dia-episode-title" }, [el("a", { href: "#dialogues/" + d.id, text: "Episode " + d.episode + ": " + d.title }), " ",
+            el("span", { lang: "fr", text: d.titleFr })]),
+          el("p", { className: "muted", text: speakersText(d) }),
+          el("p", { className: "dia-status", text: statusText(d, byDialogue[d.id]) })
+        ]);
+      })));
+    });
+    return el("div", { className: "home-card dia-series" }, kids);
   }
   function indexCard(d, b) {
     var href = "#dialogues/" + d.id;
@@ -220,7 +275,10 @@
     var body = $("dialogues-body");
     C.UI.clear(body);
     current = { d: d, mode: mode };
-    document.title = d.title + " · Dialogues · Learn French for Beginners";
+    var nav = DLG.episodeNav(DATA(), d);
+    document.title = nav
+      ? "Episode " + nav.n + ": " + d.title + " · " + (nav.series ? nav.series.titleFr : d.series) + " · Learn French for Beginners"
+      : d.title + " · Dialogues · Learn French for Beginners";
     var hid = "dia-h-" + d.id;
     var modeSection = el("section", { className: "dia-mode", "aria-labelledby": "dia-mode-h" }, [
       el("h4", { id: "dia-mode-h", tabindex: "-1", text: MODES.filter(function (m) { return m[0] === mode; })[0][1] })
@@ -228,11 +286,14 @@
     var art = el("article", { className: "dia", "aria-labelledby": hid }, [
       el("h3", { id: hid, tabindex: "-1" }, [d.title, " ", el("span", { lang: "fr", className: "dia-title-fr", text: d.titleFr }), " ",
         el("span", { className: "dia-level", text: d.level })]),
+      nav ? el("p", { className: "dia-episode-of" }, ["Episode " + nav.n + " of " + nav.total + (nav.act ? " · Act " + nav.act.number + ": " : ""),
+        nav.act ? el("span", { lang: "fr", text: nav.act.titleFr }) : null]) : null,
+      nav && d.recap ? el("p", { className: "dia-recap" }, [el("span", { className: "ref-label", text: "Story so far: " }), d.recap]) : null,
       el("p", { className: "dia-scene" }, [el("span", { className: "ref-label", text: "Scene: " }), d.scene]),
       el("p", { className: "dia-cast", text: d.speakers.map(function (sp) { return sp.name + " (" + sp.role + ")"; }).join(" and ") +
         ". Each line shows the speaker's name and initial; " + d.speakers.filter(function (s) { return s.side === "start"; })[0].name +
         "'s lines sit on the left, " + d.speakers.filter(function (s) { return s.side === "end"; })[0].name + "'s on the right." }),
-      toolbar(),
+      toolbar(d),
       modeNav(d, mode),
       modeSection
     ]);
@@ -246,9 +307,24 @@
     } else {
       renderQuiz(d, modeSection);
     }
-    art.appendChild(el("p", { className: "dia-back" }, [el("a", { href: "#dialogues", text: "All dialogues" })]));
+    if (nav) art.appendChild(episodeNavNode(nav));
+    var back = el("a", { href: "#dialogues", text: nav ? "All episodes" : "All dialogues" });
+    if (nav) back.addEventListener("click", function () { focusStories = true; });
+    art.appendChild(el("p", { className: "dia-back" }, [back]));
     var target = focusMode ? $("dia-mode-h") : $(hid);
     setTimeout(function () { if (target && document.contains(target)) target.focus({ preventScroll: !!focusMode }); }, 0);
+  }
+
+  function episodeNavNode(nav) {
+    return el("nav", { className: "dia-ep-nav", "aria-label": "Episodes" }, [
+      nav.prev ? el("a", { href: "#dialogues/" + nav.prev.id, rel: "prev", text: "← Previous episode: " + nav.prev.title }) : null,
+      nav.next ? el("a", { href: "#dialogues/" + nav.next.id, rel: "next", text: "Next episode: " + nav.next.title + " →" }) : null
+    ]);
+  }
+  /* Summary-card link to the next episode of a story (none for everyday dialogues or the last episode). */
+  function nextEpisodeExtra(d) {
+    var nav = DLG.episodeNav(DATA(), d);
+    return nav && nav.next ? [{ label: "Next episode: " + nav.next.title, href: "#dialogues/" + nav.next.id }] : [];
   }
 
   /* ---------- mode 1: Listen & read ---------- */
@@ -696,7 +772,7 @@
       primary: { label: "Swap roles", onClick: function () { startRun(d, otherSpeakerId(d, run.role)); } },
       secondary: [{ label: "Try again", onClick: function () { startRun(d, run.role); } },
         { label: "Back to the dialogue", href: "#dialogues/" + d.id, onSameHash: function () { renderDialogue(d, "listen", true); } }],
-      extra: [{ label: "Take the comprehension quiz", href: "#dialogues/" + d.id + "/quiz" }],
+      extra: [{ label: "Take the comprehension quiz", href: "#dialogues/" + d.id + "/quiz" }].concat(nextEpisodeExtra(d)),
       dailyCount: C.LEARN.todayCount(st, Date.now()), dailyGoal: st.settings.dailyGoal,
       quizLine: "Best as " + speaker.name + ": " + st.dialogues[d.id].roles[run.role].best + "%"
     });
@@ -755,7 +831,7 @@
             renderQuizItem(quizSession, true);
           } },
           secondary: [{ label: "Back to the dialogue", href: "#dialogues/" + d.id, onSameHash: function () { renderDialogue(d, "listen", true); } }],
-          extra: [{ label: "Review my mistakes", href: "#review" }],
+          extra: [{ label: "Review my mistakes", href: "#review" }].concat(nextEpisodeExtra(d)),
           dailyCount: C.LEARN.todayCount(st, Date.now()), dailyGoal: st.settings.dailyGoal,
           quizLine: "Best score: " + st.dialogues[d.id].quizBest + "%"
         });
@@ -853,6 +929,7 @@
     runs = {};
     rpPrefs = {};
     levelFilter = "all";
+    focusStories = false;
   }
 
   window.VT_VIEWS.dialogues = { build: build, show: show, onKey: onKey, onStateReplaced: onStateReplaced };

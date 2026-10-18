@@ -20,8 +20,8 @@
       scene: "Camille walks into a small Paris café in the morning and sits at a table. Julien, the server, comes over to take her order. Later she asks for the bill and pays by card.",
       keywords: ["cafe", "café", "coffee", "croissant", "ordering", "order", "bill", "check", "l'addition", "paying", "restaurant", "waiter", "server"],
       speakers: [
-        { id: "server", name: "Julien", role: "server", initial: "J", side: "start", voice: "qwen3-fr-m-bf16" },
-        { id: "customer", name: "Camille", role: "customer", initial: "C", side: "end", voice: "qwen3-fr-bf16" }
+        { id: "server", name: "Julien", role: "server", initial: "J", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "customer", name: "Camille", role: "customer", initial: "C", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
       ],
       lines: [
         line("l1", "server", "Bonjour, madame ! Vous avez choisi ?", "bohN-zhoor, mah-dahm. voo‿zah-vay shwah-zee",
@@ -107,8 +107,8 @@
       scene: "Léa and Thomas meet at a party given by neighbours in their Paris apartment building. They introduce themselves and say where they're from and what they do. They start with vous, then Thomas suggests tu.",
       keywords: ["meeting", "introductions", "introduce yourself", "names", "faire connaissance", "enchante", "enchanté", "je m'appelle", "tu", "vous", "tutoyer", "neighbour", "neighbor", "party", "job"],
       speakers: [
-        { id: "lea", name: "Léa", role: "guest", initial: "L", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "thomas", name: "Thomas", role: "guest", initial: "T", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "lea", name: "Léa", role: "guest", initial: "L", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "thomas", name: "Thomas", role: "guest", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "lea", "Bonsoir ! Je m'appelle Léa. Et vous ?", "bohN-swahr. zhuh mah-pel lay-ah. ay voo",
@@ -196,8 +196,8 @@
       scene: "Paul goes into his local bakery on Saturday morning to buy lunch for his family. Mme Durand, the baker, serves him across the counter. He points at what he wants and pays with coins.",
       keywords: ["bakery", "boulangerie", "baker", "bread", "baguette", "tart", "tarte", "pain au chocolat", "pastry", "pastries", "shopping", "price", "c'est combien", "coins"],
       speakers: [
-        { id: "baker", name: "Mme Durand", role: "baker", initial: "D", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "customer", name: "Paul", role: "customer", initial: "P", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "baker", name: "Mme Durand", role: "baker", initial: "D", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "customer", name: "Paul", role: "customer", initial: "P", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "baker", "Bonjour, monsieur ! Qu'est-ce que je vous sers ?", "bohN-zhoor, muh-syuh. kes-kuh zhuh voo sair",
@@ -291,8 +291,8 @@
       scene: "Sophie does her weekly shopping at the open-air market. M. Martin, the stallholder, weighs her tomatoes and lets her taste his strawberries. He has run out of cherries, then he adds up the total.",
       keywords: ["market", "marché", "marche", "stall", "fruit", "vegetables", "légumes", "legumes", "tomatoes", "strawberries", "eggs", "kilo", "grams", "quantities", "shopping"],
       speakers: [
-        { id: "stallholder", name: "M. Martin", role: "stallholder", initial: "M", side: "start", voice: "qwen3-fr-m-bf16" },
-        { id: "customer", name: "Sophie", role: "customer", initial: "S", side: "end", voice: "qwen3-fr-bf16" }
+        { id: "stallholder", name: "M. Martin", role: "stallholder", initial: "M", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "customer", name: "Sophie", role: "customer", initial: "S", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
       ],
       lines: [
         line("l1", "stallholder", "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?", "bohN-zhoor, mah-dahm. kes-keel voo foh oh-zhoor-dwee",
@@ -389,8 +389,8 @@
       scene: "Emma is visiting a French town and gets lost near the town hall. She stops Lucas in the street and asks him the way to the museum. He gives her directions and she repeats them to check.",
       keywords: ["directions", "lost", "perdue", "perdu", "way", "street", "museum", "musée", "musee", "left", "right", "straight on", "tout droit", "opposite", "en face de", "chemin"],
       speakers: [
-        { id: "tourist", name: "Emma", role: "tourist", initial: "E", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "passer-by", name: "Lucas", role: "passer-by", initial: "L", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "tourist", name: "Emma", role: "tourist", initial: "E", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "passer-by", name: "Lucas", role: "passer-by", initial: "L", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "tourist", "Excusez-moi, monsieur. Je suis perdue.", "eks-kew-zay mwah, muh-syuh. zhuh swee pair-dew",
@@ -475,8 +475,8 @@
       scene: "Karim is at the ticket office of a Paris station. He wants to go to Lyon tomorrow and come back on Sunday. Nathalie, the ticket agent, finds him the trains and sells him the ticket.",
       keywords: ["train", "station", "gare", "ticket", "billet", "return", "aller-retour", "timetable", "times", "platform", "quai", "lyon", "travel", "departure", "arrival"],
       speakers: [
-        { id: "traveller", name: "Karim", role: "traveller", initial: "K", side: "start", voice: "qwen3-fr-m-bf16" },
-        { id: "agent", name: "Nathalie", role: "ticket agent", initial: "N", side: "end", voice: "qwen3-fr-bf16" }
+        { id: "traveller", name: "Karim", role: "traveller", initial: "K", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "agent", name: "Nathalie", role: "ticket agent", initial: "N", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
       ],
       lines: [
         line("l1", "traveller", "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.", "bohN-zhoor, mah-dahm. uhN‿nah-lay ruh-toor poor lee-ohN, seel voo pleh",
@@ -568,8 +568,8 @@
       scene: "David arrives at a small hotel one evening; he has booked a room for two nights. Claire, the receptionist, checks his name and gives him his room and key. She tells him about breakfast and the wifi.",
       keywords: ["hotel", "hôtel", "check-in", "reception", "réception", "room", "chambre", "booking", "reservation", "réservation", "floor", "étage", "etage", "wifi", "breakfast"],
       speakers: [
-        { id: "receptionist", name: "Claire", role: "receptionist", initial: "C", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "guest", name: "David", role: "guest", initial: "D", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "receptionist", name: "Claire", role: "receptionist", initial: "C", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "guest", name: "David", role: "guest", initial: "D", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "receptionist", "Bonsoir, monsieur ! Bienvenue à l'hôtel.", "bohN-swahr, muh-syuh. byaN-vuh-new ah loh-tel",
@@ -661,8 +661,8 @@
       scene: "Isabelle is having dinner in a restaurant one evening. Antoine, the server, recommends the dish of the day, but she doesn't eat meat. Her plate arrives with chicken and there's no bread, so she points it out politely and he puts it right.",
       keywords: ["restaurant", "dinner", "menu", "la carte", "ordering", "order", "vegetarian", "végétarien", "vegetarien", "dish of the day", "plat du jour", "waiter", "server", "complaint", "mistake"],
       speakers: [
-        { id: "server", name: "Antoine", role: "server", initial: "A", side: "start", voice: "qwen3-fr-m-bf16" },
-        { id: "diner", name: "Isabelle", role: "diner", initial: "I", side: "end", voice: "qwen3-fr-bf16" }
+        { id: "server", name: "Antoine", role: "server", initial: "A", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "diner", name: "Isabelle", role: "diner", initial: "I", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
       ],
       lines: [
         line("l1", "server", "Bonsoir, madame. Voici la carte.", "bohN-swahr, mah-dahm. vwah-see lah kart",
@@ -754,8 +754,8 @@
       scene: "Romain is looking for a winter jacket in a clothes shop. Julie, the shop assistant, helps him with the size and colour. The blue one is too small, so he tries a larger size in black and takes it.",
       keywords: ["clothes", "shopping", "vêtements", "vetements", "jacket", "veste", "size", "taille", "colour", "color", "couleur", "trying on", "essayer", "changing room", "shop"],
       speakers: [
-        { id: "assistant", name: "Julie", role: "shop assistant", initial: "J", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "customer", name: "Romain", role: "customer", initial: "R", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "assistant", name: "Julie", role: "shop assistant", initial: "J", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "customer", name: "Romain", role: "customer", initial: "R", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "assistant", "Bonjour, monsieur. Je peux vous aider ?", "bohN-zhoor, muh-syuh. zhuh puh voo‿zeh-day",
@@ -848,8 +848,8 @@
       scene: "Olivier goes into a pharmacy with a sore throat and a cold. Hélène, the pharmacist, asks a few questions and suggests lozenges and a nasal spray. She explains how often to take them and tells him to see a doctor if it goes on.",
       keywords: ["pharmacy", "pharmacie", "chemist", "pharmacist", "sore throat", "mal à la gorge", "cold", "rhume", "enrhumé", "enrhume", "lozenges", "pastilles", "medicine", "médicament", "medicament", "spray"],
       speakers: [
-        { id: "pharmacist", name: "Hélène", role: "pharmacist", initial: "H", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "customer", name: "Olivier", role: "customer", initial: "O", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "pharmacist", name: "Hélène", role: "pharmacist", initial: "H", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "customer", name: "Olivier", role: "customer", initial: "O", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "pharmacist", "Bonjour, monsieur. Qu'est-ce que je peux faire pour vous ?", "bohN-zhoor, muh-syuh. kes-kuh zhuh puh fair poor voo",
@@ -941,8 +941,8 @@
       scene: "Benoît has had a headache and a temperature for three days, so he goes to see Dr Moreau. She asks a few questions and examines him. She tells him to rest, prescribes some medicine and gives him a sick note for work.",
       keywords: ["doctor", "médecin", "medecin", "docteur", "appointment", "headache", "mal à la tête", "fever", "temperature", "fièvre", "fievre", "flu", "grippe", "sick note", "arrêt de travail", "illness"],
       speakers: [
-        { id: "doctor", name: "Dr Moreau", role: "doctor", initial: "M", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "patient", name: "Benoît", role: "patient", initial: "B", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "doctor", name: "Dr Moreau", role: "doctor", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "patient", name: "Benoît", role: "patient", initial: "B", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "doctor", "Bonjour, monsieur. Asseyez-vous. Qu'est-ce qui ne va pas ?", "bohN-zhoor, muh-syuh. ah-seh-yay voo. kes-kee nuh vah pah",
@@ -1036,8 +1036,8 @@
       scene: "Chloé phones her friend Maxime on a Thursday evening. She wants to go out on Saturday, so they choose a film and a restaurant, then agree on a time and a place to meet.",
       keywords: ["plans", "making plans", "projets", "saturday", "samedi", "cinema", "cinéma", "film", "movie", "dinner", "dîner", "near future", "futur proche", "friend", "invite", "inviter"],
       speakers: [
-        { id: "chloe", name: "Chloé", role: "friend", initial: "C", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "maxime", name: "Maxime", role: "friend", initial: "M", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "chloe", name: "Chloé", role: "friend", initial: "C", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "maxime", name: "Maxime", role: "friend", initial: "M", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "chloe", "Salut Maxime ! Tu es libre samedi ?", "sah-lew mahk-seem. tew eh lee-bruh sahm-dee",
@@ -1120,8 +1120,8 @@
       scene: "It's Monday morning and Manon meets her friend Nicolas on the way to work. She spent the weekend at the seaside; he stayed at home, watched a match and had his sister over for lunch.",
       keywords: ["weekend", "week-end", "last weekend", "passé composé", "passe compose", "seaside", "la mer", "beach", "plage", "football", "match", "sister", "sœur", "soeur", "monday", "friend"],
       speakers: [
-        { id: "manon", name: "Manon", role: "friend", initial: "M", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "nicolas", name: "Nicolas", role: "friend", initial: "N", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "manon", name: "Manon", role: "friend", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "nicolas", name: "Nicolas", role: "friend", initial: "N", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "manon", "Salut Nicolas ! Ça va ? Tu as passé un bon week-end ?", "sah-lew nee-koh-lah. sah vah. tew ah pah-say uhN bohN wee-kend",
@@ -1207,8 +1207,8 @@
       scene: "Vincent phones a hair salon to book a haircut. Sandrine, the receptionist, offers him Tuesday or Thursday; they agree on a time, she asks for his name and gives him the salon's number.",
       keywords: ["phone", "phone call", "téléphone", "telephone", "appointment", "rendez-vous", "booking", "book", "haircut", "coupe", "hairdresser", "coiffeur", "salon", "days", "jeudi", "spelling"],
       speakers: [
-        { id: "receptionist", name: "Sandrine", role: "salon receptionist", initial: "S", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "caller", name: "Vincent", role: "caller", initial: "V", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "receptionist", name: "Sandrine", role: "salon receptionist", initial: "S", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "caller", name: "Vincent", role: "caller", initial: "V", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "receptionist", "Salon Élégance, bonjour !", "sah-lohN ay-lay-gahNs, bohN-zhoor",
@@ -1306,8 +1306,8 @@
       scene: "Inès shows her friend Hugo some photos from a family party on her phone. She points out her brother, his wife, her parents and her niece, then Hugo talks about his sister and his grandparents.",
       keywords: ["family", "famille", "photos", "brother", "frère", "frere", "sister", "sœur", "soeur", "parents", "grandparents", "grands-parents", "niece", "nièce", "possessives", "mon ma mes"],
       speakers: [
-        { id: "ines", name: "Inès", role: "friend", initial: "I", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "hugo", name: "Hugo", role: "friend", initial: "H", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "ines", name: "Inès", role: "friend", initial: "I", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "hugo", name: "Hugo", role: "friend", initial: "H", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "ines", "Regarde, ce sont les photos de la fête de famille.", "ruh-gard, suh sohN lay foh-toh duh lah fet duh fah-mee-y",
@@ -1395,8 +1395,8 @@
       scene: "It's a rainy morning and Mme Lefèvre meets her neighbour M. Petit at the bus stop. They chat about today's rain, the hot summer and the forecast for tomorrow until her bus arrives.",
       keywords: ["weather", "météo", "meteo", "temps", "rain", "pluie", "small talk", "neighbour", "neighbor", "voisin", "bus stop", "quel", "quelle", "summer", "été", "forecast"],
       speakers: [
-        { id: "neighbour-f", name: "Mme Lefèvre", role: "neighbour", initial: "L", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "neighbour-m", name: "M. Petit", role: "neighbour", initial: "P", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "neighbour-f", name: "Mme Lefèvre", role: "neighbour", initial: "L", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "neighbour-m", name: "M. Petit", role: "neighbour", initial: "P", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "neighbour-f", "Bonjour, monsieur Petit ! Comment allez-vous ?", "bohN-zhoor, muh-syuh puh-tee. koh-mahN‿tah-lay voo",
@@ -1481,8 +1481,8 @@
       scene: "It's Mehdi's first day in a new office. Aurélie, his team lead, welcomes him, tells him that everyone uses tu here and introduces two colleagues. Then she plans to explain his first project.",
       keywords: ["work", "office", "colleague", "collègue", "collegue", "team", "équipe", "equipe", "first day", "job", "bureau", "tutoyer", "manager", "boss"],
       speakers: [
-        { id: "team-lead", name: "Aurélie", role: "team lead", initial: "A", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "new-colleague", name: "Mehdi", role: "new colleague", initial: "M", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "team-lead", name: "Aurélie", role: "team lead", initial: "A", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "new-colleague", name: "Mehdi", role: "new colleague", initial: "M", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "team-lead", "Bonjour ! Tu es Mehdi ? Moi, c'est Aurélie, je suis responsable de l'équipe.", "bohN-zhoor. tew eh meh-dee. mwah, seh oh-ray-lee, zhuh swee reh-spohN-sahbl duh lay-keep",
@@ -1571,8 +1571,8 @@
       scene: "Laura is looking for a flat and visits a small one with the landlord, M. Girard. He shows her the bright living room and the quiet bedroom, and tells her about the area, the rent and the deposit. Laura wants to think it over before she decides.",
       keywords: ["flat", "apartment", "appartement", "renting", "rent", "louer", "loyer", "landlord", "propriétaire", "proprietaire", "housing", "logement", "deposit", "caution", "visit"],
       speakers: [
-        { id: "landlord", name: "M. Girard", role: "landlord", initial: "G", side: "start", voice: "qwen3-fr-m-bf16" },
-        { id: "tenant", name: "Laura", role: "prospective tenant", initial: "L", side: "end", voice: "qwen3-fr-bf16" }
+        { id: "landlord", name: "M. Girard", role: "landlord", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "tenant", name: "Laura", role: "prospective tenant", initial: "L", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
       ],
       lines: [
         line("l1", "landlord", "Bonjour, madame. Entrez, je vous en prie.", "bohN-zhoor, mah-dahm. ahN-tray, zhuh voo‿zahN pree",
@@ -1664,8 +1664,8 @@
       scene: "Nadia brings back a kettle she bought last week, because it has stopped working. Thierry, the shop manager, checks her receipt and offers to send it for repair. Nadia politely asks for an exchange or a refund, and they agree on an exchange.",
       keywords: ["complaint", "réclamation", "reclamation", "shop", "magasin", "kettle", "bouilloire", "refund", "rembourser", "exchange", "échanger", "echanger", "receipt", "manager", "broken"],
       speakers: [
-        { id: "customer", name: "Nadia", role: "customer", initial: "N", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "manager", name: "Thierry", role: "shop manager", initial: "T", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "customer", name: "Nadia", role: "customer", initial: "N", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "manager", name: "Thierry", role: "shop manager", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "customer", "Bonjour, monsieur. Excusez-moi, je voudrais voir le responsable.", "bohN-zhoor, muh-syuh. eks-kew-zay mwah, zhuh voo-dreh vwahr luh reh-spohN-sahbl",
@@ -1761,8 +1761,8 @@
       scene: "Zoé and her friend Bastien are chatting about what they do in their free time. She runs and loves reading; he plays football and is learning the guitar. They share their opinions and make a plan for Sunday.",
       keywords: ["hobbies", "hobby", "free time", "loisirs", "sport", "football", "foot", "guitar", "guitare", "running", "courir", "reading", "lecture", "opinions", "weekend"],
       speakers: [
-        { id: "zoe", name: "Zoé", role: "friend", initial: "Z", side: "start", voice: "qwen3-fr-bf16" },
-        { id: "bastien", name: "Bastien", role: "friend", initial: "B", side: "end", voice: "qwen3-fr-m-bf16" }
+        { id: "zoe", name: "Zoé", role: "friend", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "bastien", name: "Bastien", role: "friend", initial: "B", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
       ],
       lines: [
         line("l1", "zoe", "Alors, qu'est-ce que tu fais pendant ton temps libre ?", "ah-lor, kes-kuh tew feh pahN-dahN tohN tahN lee-bruh",
@@ -1846,13 +1846,1664 @@
         ],
         table: "indirect-object-pronouns"
       }
+    },
+    /* ---- Story: La Lettre de Lyon, episodes 1–20 (numbers 21–40). Written content © 2026 Avtar Singh, CC BY-SA 4.0. ---- */
+    {
+      id: "lyon-01-moving-in", number: 21, level: "A2", series: "la-lettre-de-lyon", episode: 1, act: 1,
+      title: "Moving in", titleFr: "L'emménagement",
+      summary: "Maya moves into her late grandmother's flat in Lyon; Théo from the bookshop helps, and a loose tile hides a box.",
+      scene: "On a Saturday afternoon Maya, 30, is carrying boxes up to her late grandmother's flat on the fourth floor of an old building on rue Dumenge, in Lyon's Croix-Rousse. There's no lift. Théo, who runs the bookshop on the ground floor, comes out to help her.",
+      keywords: ["emménagement", "emmenagement", "moving in", "moving", "boxes", "cartons", "bookshop", "librairie", "bookseller", "lyon", "croix-rousse", "grandmother", "grand-mère", "grand-mere", "tile", "carreau"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "new neighbour", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Excusez-moi, monsieur ! Vous pouvez m'aider ? Il n'y a pas d'ascenseur.", "eks-kew-zay mwah, muh-syuh. voo poo-vay meh-day. eel nyah pah dah-sahN-suhr",
+          "Excuse me! Could you help me? There's no lift. (US: elevator)",
+          ["Excusez-moi ! Vous pouvez m'aider ?", "Pardon, monsieur ! Vous pouvez m'aider ? Il n'y a pas d'ascenseur.", "Excusez-moi, vous pouvez m'aider, s'il vous plaît ?", "Excusez-moi, monsieur ! Est-ce que vous pouvez m'aider ?", "Vous pouvez m'aider ? Il n'y a pas d'ascenseur."]),
+        line("l2", "theo", "Avec plaisir ! Je m'appelle Théo. J'ai la librairie, en bas.", "ah-vek pleh-zeer. zhuh mah-pel tay-oh. zhay lah lee-breh-ree, ahN bah",
+          "With pleasure! My name's Théo. I have the bookshop downstairs. (US: bookstore)",
+          ["Avec plaisir ! Moi, c'est Théo. J'ai la librairie, en bas.", "Bien sûr ! Je m'appelle Théo. J'ai la librairie, en bas.", "Volontiers ! Je m'appelle Théo. J'ai la librairie, en bas.", "Avec plaisir ! Je suis Théo. J'ai la librairie en bas.", "Avec plaisir ! Je m'appelle Théo."]),
+        line("l3", "maya", "Enchantée. Moi, c'est Maya. J'habite au quatrième étage, maintenant.", "ahN-shahN-tay. mwah, seh mah-yah. zhah-beet oh kah-tree-yem ay-tahzh, maNt-nahN",
+          "Nice to meet you. I'm Maya. I live on the fourth floor now.",
+          ["Enchantée. Je m'appelle Maya. J'habite au quatrième étage, maintenant.", "Enchantée ! Moi, c'est Maya. J'habite au quatrième, maintenant.", "Enchantée. Je suis Maya. Maintenant, j'habite au quatrième étage.", "Enchantée. Moi, c'est Maya. J'habite au 4e étage.", "Moi, c'est Maya. J'habite au quatrième étage."]),
+        line("l4", "theo", "Au quatrième ? Chez Mme Laurent ? Vous êtes de la famille ?", "oh kah-tree-yem. shay mah-dahm loh-rahN. voo‿zet duh lah fah-meey",
+          "On the fourth? At Mme Laurent's? Are you family?",
+          ["Au quatrième ? Chez Madame Laurent ? Vous êtes de la famille ?", "Chez Mme Laurent ? Vous êtes de sa famille ?", "Au quatrième ? Chez Mme Laurent ? Vous êtes de sa famille ?", "Au quatrième ? Chez Simone ? Vous êtes de la famille ?"]),
+        line("l5", "maya", "Oui, c'est l'appartement de ma grand-mère. Je viens de Londres.", "wee, seh lah-par-tuh-mahN duh mah grahN-mair. zhuh vyaN duh lohNdr",
+          "Yes, it's my grandmother's flat (US: apartment). I'm from London.",
+          ["Oui, c'est l'appartement de Mamie. Je viens de Londres.", "Oui, c'est l'appartement de ma grand-mère. J'arrive de Londres.", "Oui, c'est chez ma grand-mère. Je viens de Londres.", "Oui, c'est l'appartement de ma grand-mère. Moi, je viens de Londres.", "Oui, c'est l'appartement de ma grand-mère."]),
+        line("l6", "theo", "Je suis désolé. Je pense souvent à Simone. Un roman chaque samedi, toujours !", "zhuh swee day-zoh-lay. zhuh pahNs soo-vahN ah see-mun. uhN roh-mahN shahk sahm-dee, too-zhoor",
+          "I'm so sorry. I often think of Simone. A novel every Saturday, always!",
+          ["Je suis désolé. Je pense souvent à votre grand-mère. Un roman chaque samedi !", "Je suis désolé. Je pense souvent à elle. Un roman chaque samedi, toujours !", "Je suis vraiment désolé. Je pense souvent à Simone.", "Désolé. Je pense souvent à Simone. Un roman tous les samedis, toujours !", "Je suis désolé. Je pense souvent à Simone. Un roman tous les samedis !"]),
+        line("l7", "maya", "Merci. Je suis graphiste, alors je travaille ici, avec mon ordinateur.", "mair-see. zhuh swee grah-feest, ah-lor zhuh trah-vahy ee-see, ah-vek mohN‿nor-dee-nah-tuhr",
+          "Thank you. I'm a graphic designer, so I work from here, on my computer.",
+          ["Merci. Je suis graphiste, je travaille ici, avec mon ordinateur.", "Merci. Je suis graphiste, alors je travaille ici.", "Merci. Moi, je suis graphiste, je travaille ici avec mon ordinateur.", "Merci. Je suis graphiste, alors je travaille à la maison.", "Merci. Je suis graphiste. Je travaille ici, sur mon ordinateur."]),
+        line("l8", "theo", "Bon, je porte ce carton. Vous portez le sac ? On monte !", "bohN, zhuh port suh kar-tohN. voo por-tay luh sak. ohN mohNt",
+          "Right, I'll carry this box. Can you carry the bag? Up we go!",
+          ["Bon, je porte le carton. Vous portez le sac ? On monte !", "Je porte ce carton. Vous portez le sac ? On monte !", "Bon, je prends ce carton. Vous portez le sac ? On monte !", "Bon, je porte ce carton et vous portez le sac. On monte !", "Bon, je porte ce carton. Vous prenez le sac ? On y va !"]),
+        line("l9", "maya", "Voilà la cuisine. Vous pouvez poser le carton sur le comptoir.", "vwah-lah lah kwee-zeen. voo poo-vay poh-zay luh kar-tohN sewr luh kohN-twahr",
+          "Here's the kitchen. You can put the box on the counter.",
+          ["Voilà la cuisine. Posez le carton sur le comptoir.", "Voici la cuisine. Vous pouvez poser le carton sur le comptoir.", "C'est la cuisine. Vous pouvez poser le carton ici.", "Voilà la cuisine. Vous pouvez mettre le carton sur le comptoir.", "Voilà la cuisine. Vous pouvez poser le carton là."]),
+        line("l10", "theo", "Ouf ! Il est lourd, ce carton. Qu'est-ce qu'il y a dedans ?", "oof. eel eh loor, suh kar-tohN. kes-keel ee ah duh-dahN",
+          "Phew! It's heavy, this box. What's in it?",
+          ["Ouf ! Ce carton est lourd. Qu'est-ce qu'il y a dedans ?", "Il est lourd, ce carton ! Qu'est-ce qu'il y a dedans ?", "Ouf ! Il est lourd. Qu'est-ce qu'il y a dans ce carton ?", "Ouf ! Il est lourd, ce carton. Il y a quoi dedans ?", "Ouf ! Il est très lourd, ce carton. Qu'est-ce qu'il y a dedans ?"]),
+        line("l11", "maya", "Des livres, bien sûr ! Oh… le carreau bleu bouge.", "day lee-vruh, byaN sewr. oh… luh kah-roh bluh boozh",
+          "Books, of course! Oh… the blue tile is moving.",
+          ["Des livres ! Oh… le carreau bleu bouge.", "Des livres, évidemment ! Oh… le carreau bleu bouge.", "Des livres, bien sûr ! Regardez, le carreau bleu bouge.", "Des livres, bien sûr ! Oh… le carreau bleu bouge un peu.", "Des livres, bien sûr ! Oh, regardez… le carreau bleu bouge."]),
+        line("l12", "theo", "Attendez… il y a quelque chose derrière le carreau. Une petite boîte en fer !", "ah-tahN-day… eel ee ah kel-kuh shohz dair-yair luh kah-roh. ewn puh-teet bwaht ahN fair",
+          "Wait… there's something behind the tile. A little tin box!",
+          ["Attendez… il y a quelque chose derrière ! Une petite boîte en fer !", "Attendez… il y a quelque chose derrière le carreau. Une boîte en fer !", "Regardez… il y a quelque chose derrière le carreau. Une petite boîte en fer !", "Attendez… il y a une petite boîte en fer derrière le carreau !", "Attendez… il y a quelque chose derrière le carreau bleu. Une petite boîte en fer !"])
+      ],
+      vocab: [
+        word("v1", "Vous pouvez m'aider ?", "voo poo-vay meh-day", "Could you help me? (polite)", "l1", "expression", "vous-pouvez-maider"),
+        word("v2", "Avec plaisir", "ah-vek pleh-zeer", "With pleasure", "l2", "expression", "avec-plaisir"),
+        word("v3", "Je m'appelle Théo", "zhuh mah-pel tay-oh", "My name's Théo (literally: I call myself Théo)", "l2", "expression", "je-mappelle"),
+        word("v4", "Enchantée", "ahN-shahN-tay", "Nice to meet you (Maya writes Enchantée because she's a woman; it sounds the same as Enchanté)", "l3", "expression", "enchante"),
+        word("v5", "J'habite", "zhah-beet", "I live", "l3", "verb", "habiter"),
+        word("v6", "au quatrième étage", "oh kah-tree-yem ay-tahzh", "on the fourth floor (quatre → quatrième)", "l3", "table", "ordinals"),
+        word("v7", "Je viens de Londres", "zhuh vyaN duh lohNdr", "I'm from London (literally: I come from London)", "l5", "verb", "venir"),
+        word("v8", "je travaille", "zhuh trah-vahy", "I work", "l7", "verb", "travailler"),
+        word("v9", "je porte ce carton", "zhuh port suh kar-tohN", "I'll carry this box (the present often means 'I'll…' for something you're about to do)", "l8", "verb", "porter"),
+        word("v10", "On monte", "ohN mohNt", "Up we go (literally: we go up)", "l8", "verb", "monter")
+      ],
+      questions: [
+        q("q1", "Why does Maya ask Théo for help?", "The building has no lift (US: elevator)", ["She has lost her keys", "She can't find the street", "Her car has broken down"], "en", "l1"),
+        q("q2", "Whose flat is Maya moving into?", "Her grandmother's", ["Her mother's", "Théo's", "A friend's from London"], "en", "l5"),
+        q("q3", "What does Théo remember about Simone?", "She bought a novel every Saturday", ["She drank a coffee with him every morning", "She sold him her old books", "She walked to the river every Sunday"], "en", "l6"),
+        q("q4", "What does Théo find behind the blue tile?", "Une petite boîte en fer", ["Une vieille clé", "Un livre bleu", "Une photo de Simone"], "fr", "l12")
+      ],
+      notice: {
+        title: "Present-tense endings: je porte, vous portez",
+        text: "Théo says Je porte ce carton and asks Maya Vous portez le sac ? The stem port- stays the same; only the ending changes: -e for je, -ez for vous. Travailler works the same way: je travaille, vous travaillez.",
+        examples: [
+          eg("Je porte ce carton.", "zhuh port suh kar-tohN", "I'll carry this box. (je: -e)"),
+          eg("Vous portez le sac ?", "voo por-tay luh sak", "Can you carry the bag? (vous: -ez)"),
+          eg("Vous travaillez ici ?", "voo trah-vah-yay ee-see", "Do you work here? (vous: -ez)")
+        ],
+        table: "present-endings"
+      }
+    },
+    {
+      id: "lyon-02-the-letters", number: 22, level: "A2", series: "la-lettre-de-lyon", episode: 2, act: 1,
+      title: "The letters from J.", titleFr: "Les lettres de J.",
+      recap: "Maya moved into her late grandmother's flat in Lyon. Théo, the bookseller downstairs, helped, and a loose kitchen tile hid a small tin box.",
+      summary: "In the tin box: three love letters signed J. and a sealed envelope. Who was J., and where was his café?",
+      scene: "On Sunday morning Théo comes up to Maya's flat with his toolbox to fix the loose blue tile. On the kitchen table is the little tin box from behind it. Inside are old letters in black ink and one envelope in Simone's blue ink.",
+      keywords: ["lettres", "letters", "love letters", "lettres d'amour", "envelope", "enveloppe", "sealed", "tin box", "boîte", "boite", "grande-côte", "grande-cote", "fourvière", "fourviere", "il y a", "there is"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "new neighbour", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Bonjour, Théo ! Entrez. La boîte est sur la table.", "bohN-zhoor, tay-oh. ahN-tray. lah bwaht eh sewr lah tahbl",
+          "Morning, Théo! Come in. The box is on the table.",
+          ["Bonjour ! Entrez. La boîte est sur la table.", "Bonjour, Théo ! Entrez, la boîte est là, sur la table.", "Bonjour, Théo ! Entrez, je vous en prie. La boîte est sur la table.", "Bonjour, Théo ! Venez. La boîte est sur la table.", "Bonjour, Théo ! Entrez. La boîte est sur la table de la cuisine."]),
+        line("l2", "theo", "Bonjour, Maya. J'ai ma boîte à outils pour le carreau. Vous l'ouvrez ?", "bohN-zhoor, mah-yah. zhay mah bwaht ah oo-tee poor luh kah-roh. voo loo-vray",
+          "Morning, Maya. I've got my toolbox for the tile. Are you going to open it?",
+          ["Bonjour ! J'ai ma boîte à outils pour le carreau. Vous l'ouvrez ?", "Bonjour, Maya. J'ai mes outils pour le carreau. Vous l'ouvrez ?", "Bonjour, Maya. J'ai ma boîte à outils. Vous ouvrez la boîte ?", "Bonjour, Maya. J'ai ma boîte à outils pour le carreau. On l'ouvre ?", "Bonjour, Maya. J'ai ma boîte à outils. Vous l'ouvrez ?"]),
+        line("l3", "maya", "Oui. Il y a des lettres… trois lettres, signées J.", "wee. eel ee ah day let-ruh… trwah let-ruh, see-nyay zhee",
+          "Yes. There are letters… three letters, signed J.",
+          ["Oui. Il y a trois lettres, signées J.", "Il y a des lettres… trois lettres, signées J.", "Oui, regardez. Il y a trois lettres, signées J.", "Oui. Il y a trois lettres. Elles sont signées J.", "Oui. Dans la boîte, il y a trois lettres, signées J."]),
+        line("l4", "theo", "Et il y a une enveloppe : « Pour J. » C'est l'écriture de Simone ?", "ay eel ee ah ewn ahN-vlop. poor zhee. seh lay-kree-tewr duh see-mun",
+          "And there's an envelope: 'For J.' Is that Simone's handwriting?",
+          ["Il y a aussi une enveloppe : « Pour J. » C'est l'écriture de Simone ?", "Et il y a une enveloppe : « Pour J. » C'est l'écriture de votre grand-mère ?", "Et il y a une enveloppe. C'est l'écriture de Simone ?", "Et il y a une enveloppe : « Pour J. » C'est bien l'écriture de Simone ?", "Et une enveloppe : « Pour J. » C'est l'écriture de Simone ?"]),
+        line("l5", "maya", "Oui, l'encre bleue de Mamie. Mais elle est fermée. Je ne l'ouvre pas : ce n'est pas à moi.", "wee, lahNkr bluh duh mah-mee. meh el eh fair-may. zhuh nuh loovr pah. suh neh pah ah mwah",
+          "Yes, Mamie's blue ink. But it's sealed. I'm not opening it: it isn't mine.",
+          ["Oui, c'est l'encre bleue de Mamie. Mais elle est fermée. Je ne l'ouvre pas : ce n'est pas à moi.", "Oui. Mais elle est fermée. Je ne l'ouvre pas, ce n'est pas à moi.", "Oui, l'encre bleue de ma grand-mère. Mais elle est fermée. Je ne l'ouvre pas : ce n'est pas à moi.", "Oui, l'encre bleue de Mamie. Mais elle est fermée, et ce n'est pas à moi.", "Oui, l'encre bleue de Mamie. Mais je ne l'ouvre pas : ce n'est pas à moi.", "Oui, l'encre bleue de Mamie. Mais elle est fermée. Je l'ouvre pas : c'est pas à moi."]),
+        line("l6", "theo", "Vous avez raison. On lit la première lettre ?", "voo‿zah-vay reh-zohN. ohN lee lah pruh-myair let-ruh",
+          "You're right. Shall we read the first letter?",
+          ["Vous avez raison. On lit la première ?", "D'accord. On lit la première lettre ?", "Vous avez raison. On peut lire la première lettre ?", "Vous avez raison. Vous lisez la première lettre ?", "Bien sûr. On lit la première lettre ?"]),
+        line("l7", "maya", "« Depuis samedi, je pense à toi tout le temps. » Et puis : le Café des Canuts, un foulard bleu, Lucienne…", "duh-pwee sahm-dee, zhuh pahNs ah twah too luh tahN. ay pwee. luh kah-fay day kah-new, uhN foo-lar bluh, lew-syen…",
+          "'Since Saturday I've been thinking about you all the time.' And then: the Café des Canuts, a blue scarf, Lucienne…",
+          ["« Depuis samedi, je pense à toi tout le temps. » Et après : le Café des Canuts, un foulard bleu, Lucienne…", "« Depuis samedi, je pense à toi tout le temps. » Il y a aussi le Café des Canuts, un foulard bleu, Lucienne…", "« Depuis samedi, je pense à toi tout le temps. » Et ensuite : le Café des Canuts, un foulard bleu, Lucienne…", "« Depuis samedi, je pense à toi tout le temps. »"]),
+        line("l8", "theo", "Qui est Lucienne ? Une amie de Simone, peut-être ?", "kee eh lew-syen. ew-nah-mee duh see-mun, puh-tetr",
+          "Who's Lucienne? A friend of Simone's, maybe?",
+          ["Lucienne ? C'est qui ? Une amie de Simone, peut-être ?", "Qui est Lucienne ? Une amie de votre grand-mère, peut-être ?", "Qui est Lucienne ? Peut-être une amie de Simone ?", "Lucienne, qui est-ce ? Une amie de Simone, peut-être ?", "Qui est Lucienne ? C'est peut-être une amie de Simone ?"]),
+        line("l9", "maya", "Je ne sais pas. J. écrit : « Je t'attends à dix heures, en haut de la montée de la Grande-Côte. »", "zhuh nuh seh pah. zhee ay-kree. zhuh tah-tahN ah dee‿zuhr, ahN oh duh lah mohN-tay duh lah grahNd-koht",
+          "I don't know. J. writes: 'I'll wait for you at ten o'clock at the top of the montée de la Grande-Côte.'",
+          ["Aucune idée. J. écrit : « Je t'attends à dix heures, en haut de la montée de la Grande-Côte. »", "Je ne sais pas. Ici, J. écrit : « Je t'attends à dix heures, en haut de la montée de la Grande-Côte. »", "Je sais pas. J. écrit : « Je t'attends à dix heures, en haut de la montée de la Grande-Côte. »", "Je ne sais pas. Et J. écrit : « Je t'attends à dix heures, en haut de la montée de la Grande-Côte. »", "Je ne sais pas. J. écrit : « Je t'attends à 10 heures, en haut de la montée de la Grande-Côte. »"]),
+        line("l10", "theo", "La Grande-Côte, c'est ici, sur la colline ! Et la troisième lettre ?", "lah grahNd-koht, seh ee-see, sewr lah koh-leen. ay lah trwah-zyem let-ruh",
+          "The Grande-Côte is right here, on the hill! And the third letter?",
+          ["La Grande-Côte, c'est ici, sur la Croix-Rousse ! Et la troisième lettre ?", "La Grande-Côte, c'est tout près ! Et la troisième lettre ?", "C'est ici, la Grande-Côte ! Et la troisième lettre ?", "La Grande-Côte, c'est ici, sur la colline ! Et la dernière lettre ?", "La Grande-Côte, c'est ici ! Vous lisez la troisième lettre ?"]),
+        line("l11", "maya", "« Si ta réponse est oui, retrouve-moi samedi, à dix-huit heures, au Café des Canuts. »", "see tah ray-pohNs eh wee, ruh-troov mwah sahm-dee, ah dee-zwee‿tuhr, oh kah-fay day kah-new",
+          "'If your answer is yes, meet me on Saturday at six p.m. at the Café des Canuts.'",
+          ["Écoutez : « Si ta réponse est oui, retrouve-moi samedi, à dix-huit heures, au Café des Canuts. »", "Il y a ça : « Si ta réponse est oui, retrouve-moi samedi, à dix-huit heures, au Café des Canuts. »", "« Si ta réponse est oui, retrouve-moi samedi, à 18 heures, au Café des Canuts. »", "« Si ta réponse est oui, retrouve-moi samedi, à 18 h, au Café des Canuts. »"]),
+        line("l12", "theo", "Et là : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est donc un homme.", "ay lah. meh zhuh swee preh ah too ruh-koh-mahN-say ah-vek twah, lah-bah. preh, pah pret. zhee eh dohNk uhN‿num",
+          "And here: 'But I'm ready to start everything again with you, over there.' Prêt, not prête. So J. is a man.",
+          ["Et là : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Donc J. est un homme.", "Et ici : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est un homme.", "Regardez : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est un homme.", "« Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête : c'est un homme."]),
+        line("l13", "maya", "« Je t'attendrai jusqu'au dernier moment. » Le Café des Canuts… Vous connaissez ?", "zhuh tah-tahN-dray zhews-koh dair-nyay moh-mahN. luh kah-fay day kah-new… voo koh-neh-say",
+          "'I'll wait for you until the very last moment.' The Café des Canuts… Do you know it?",
+          ["« Je t'attendrai jusqu'au dernier moment. » Le Café des Canuts… Vous le connaissez ?", "« Je t'attendrai jusqu'au dernier moment. » Vous connaissez le Café des Canuts ?", "« Je t'attendrai jusqu'au dernier moment. » Le Café des Canuts… Vous savez où c'est ?", "Le Café des Canuts… Vous connaissez ?", "Le Café des Canuts… Vous le connaissez, Théo ?"]),
+        line("l14", "theo", "Non. Mais on va chercher.", "nohN. meh ohN vah shair-shay",
+          "No. But we're going to look for it.",
+          ["Non. Mais on va le chercher.", "Non. Mais on va le trouver.", "Non, pas du tout. Mais on va chercher.", "Non. Mais nous allons chercher.", "Je ne connais pas. Mais on va chercher."])
+      ],
+      vocab: [
+        word("v1", "Vous l'ouvrez ?", "voo loo-vray", "Are you going to open it? (ouvrir: to open)", "l2", "verb", "ouvrir"),
+        word("v2", "Il y a des lettres", "eel ee ah day let-ruh", "There are (some) letters (des: plural of un / une)", "l3", "table", "indefinite-articles"),
+        word("v3", "trois lettres", "trwah let-ruh", "three letters", "l3", "table", "numbers-0-20"),
+        word("v4", "On lit la première lettre ?", "ohN lee lah pruh-myair let-ruh", "Shall we read the first letter? (lire: to read)", "l6", "verb", "lire"),
+        word("v5", "Qui est Lucienne ?", "kee eh lew-syen", "Who's Lucienne?", "l8", "table", "question-words"),
+        word("v6", "Je ne sais pas", "zhuh nuh seh pah", "I don't know", "l9", "expression", "je-ne-sais-pas"),
+        word("v7", "J. écrit", "zhee ay-kree", "J. writes (écrire: to write)", "l9", "verb", "ecrire"),
+        word("v8", "Je t'attendrai", "zhuh tah-tahN-dray", "I'll wait for you (attendre: to wait for, no 'for' in French)", "l13", "verb", "attendre"),
+        word("v9", "Vous connaissez ?", "voo koh-neh-say", "Do you know it? (connaître: to know a place or a person)", "l13", "verb", "connaitre"),
+        word("v10", "on va chercher", "ohN vah shair-shay", "we're going to look (chercher: to look for)", "l14", "verb", "chercher")
+      ],
+      questions: [
+        q("q1", "What does Maya find in the tin box?", "Three letters signed J. and a sealed envelope", ["Two letters and an old photo", "A diary and some old keys", "Three postcards from Montréal"], "en", "l3"),
+        q("q2", "Why won't Maya open the envelope?", "It isn't hers", ["She's afraid of what it says", "Théo tells her not to", "It's empty"], "en", "l5"),
+        q("q3", "How do Maya and Théo know that J. is a man?", "He writes prêt, not prête", ["He signs with his full name", "Lucienne says so in the letter", "The envelope says Monsieur"], "en", "l12"),
+        q("q4", "Where does J. ask Simone to meet him on Saturday?", "Au Café des Canuts", ["À la gare de Perrache", "En haut de la Grande-Côte", "À Fourvière"], "fr", "l11")
+      ],
+      notice: {
+        title: "Il y a un, une, des: there is, there are",
+        text: "Maya says Il y a des lettres and Théo adds Il y a une enveloppe. Il y a means both 'there is' and 'there are', and it never changes. After it, use un (masculine), une (feminine) or des (plural).",
+        examples: [
+          eg("Il y a des lettres.", "eel ee ah day let-ruh", "There are (some) letters. (plural)"),
+          eg("Il y a une enveloppe.", "eel ee ah ewn ahN-vlop", "There's an envelope. (feminine)"),
+          eg("Il y a un carreau bleu.", "eel ee ah uhN kah-roh bluh", "There's a blue tile. (masculine)")
+        ],
+        table: "indefinite-articles"
+      }
+    },
+    {
+      id: "lyon-03-a-vanished-address", number: 23, level: "A2", series: "la-lettre-de-lyon", episode: 3, act: 1,
+      title: "An address that's gone", titleFr: "Une adresse disparue",
+      recap: "In the box Maya found three love letters from 1962 signed \"J.\" and a sealed envelope, Pour J. The letters mention the Café des Canuts.",
+      summary: "Théo shows Maya the silk weavers' hill, but the Café des Canuts from the letters has gone.",
+      scene: "On Sunday afternoon Théo shows Maya the Croix-Rousse, the old silk weavers' hill. They walk through a traboule to the Cour des Voraces and look across the Saône at Fourvière. Then they go to find the Café des Canuts on the place de la Croix-Rousse.",
+      keywords: ["traboule", "traboules", "cour des voraces", "croix-rousse", "fourvière", "fourviere", "saône", "saone", "silk", "soie", "canuts", "optician", "opticien", "near future", "futur proche", "aller"],
+      speakers: [
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "new neighbour", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "theo", "Venez, Maya. On va prendre une traboule. Vous allez voir, c'est magique.", "vuh-nay, mah-yah. ohN vah prahNdr ewn trah-bool. voo‿zah-lay vwahr, seh mah-zheek",
+          "Come on, Maya. We're going to take a traboule. You'll see, it's magical.",
+          ["Venez ! On va prendre une traboule. Vous allez voir, c'est magique.", "Venez, Maya. On va passer par une traboule. Vous allez voir, c'est magique.", "Venez, Maya. On va prendre une traboule. Vous allez voir, c'est beau.", "Venez, Maya. Nous allons prendre une traboule. Vous allez voir, c'est magique.", "Venez, Maya. On va prendre une traboule."]),
+        line("l2", "maya", "Une traboule ? Ça veut dire quoi ?", "ewn trah-bool. sah vuh deer kwah",
+          "A traboule? What does that mean?",
+          ["Une traboule ? Qu'est-ce que c'est ?", "Une traboule ? C'est quoi ?", "Ça veut dire quoi, une traboule ?", "Une traboule ? Qu'est-ce que ça veut dire ?", "Pardon, une traboule ? Ça veut dire quoi ?"]),
+        line("l3", "theo", "Un passage à travers les immeubles. Et voilà la Cour des Voraces !", "uhN pah-sahzh ah trah-vair lay‿zee-muh-bluh. ay vwah-lah lah koor day voh-rahs",
+          "It's a passage through the buildings. And here's the Cour des Voraces!",
+          ["C'est un passage à travers les immeubles. Et voilà la Cour des Voraces !", "C'est un passage entre les immeubles. Et voilà la Cour des Voraces !", "C'est un passage à travers les immeubles. Voilà la Cour des Voraces !", "C'est un passage dans les immeubles. Et voici la Cour des Voraces !", "C'est un passage couvert à travers les immeubles. Et voilà la Cour des Voraces !", "C'est un passage à travers les maisons. Et voilà la Cour des Voraces !"]),
+        line("l4", "maya", "C'est très beau ! Et pourquoi les plafonds sont si hauts, chez moi ?", "seh treh boh. ay poor-kwah lay plah-fohN sohN see oh, shay mwah",
+          "It's beautiful! And why are the ceilings so high in my flat?",
+          ["C'est magnifique ! Et pourquoi les plafonds sont si hauts, chez moi ?", "C'est très beau ! Pourquoi les plafonds sont si hauts chez moi ?", "C'est très beau ! Et pourquoi est-ce que les plafonds sont si hauts, chez moi ?", "C'est très beau ! Et chez moi, pourquoi les plafonds sont si hauts ?", "Très beau ! Et pourquoi les plafonds sont si hauts, dans mon appartement ?"]),
+        line("l5", "theo", "Pour les métiers à tisser ! Ici, c'est le quartier de la soie, la colline qui travaille.", "poor lay may-tyay ah tee-say. ee-see, seh luh kar-tyay duh lah swah, lah koh-leen kee trah-vahy",
+          "For the looms! This is the silk district, the hill that works.",
+          ["Pour les métiers à tisser ! Ici, c'est le quartier de la soie.", "C'est pour les métiers à tisser ! Ici, c'est la colline qui travaille.", "Pour les métiers à tisser ! La Croix-Rousse, c'est la colline qui travaille.", "À cause des métiers à tisser ! Ici, c'est le quartier de la soie, la colline qui travaille.", "Pour les métiers à tisser. Ici, c'est le quartier des canuts, la colline qui travaille."]),
+        line("l6", "maya", "Et en face, de l'autre côté de la Saône, c'est Fourvière ?", "ay ahN fahs, duh lohtr koh-tay duh lah sohn, seh foor-vyair",
+          "And opposite, on the other side of the Saône, that's Fourvière?",
+          ["Et en face, c'est Fourvière ?", "Et là, de l'autre côté de la Saône, c'est Fourvière ?", "Et en face, de l'autre côté de la Saône, c'est bien Fourvière ?", "En face, de l'autre côté de la Saône, c'est Fourvière ?", "Et en face, de l'autre côté de la rivière, c'est Fourvière ?"]),
+        line("l7", "theo", "Oui, la colline qui prie. Un jour, on va monter là-haut, à la basilique.", "wee, lah koh-leen kee pree. uhN zhoor, ohN vah mohN-tay lah-oh, ah lah bah-zee-leek",
+          "Yes, the hill that prays. One day we'll go up there, to the basilica.",
+          ["Oui, c'est la colline qui prie. Un jour, on va monter là-haut.", "Oui, la colline qui prie. Un jour, on va monter à la basilique.", "Oui, la colline qui prie. On va monter là-haut, un jour.", "Oui, la colline qui prie. Un jour, nous allons monter là-haut, à la basilique.", "Oui, la colline qui prie. Un jour, on va aller là-haut, à la basilique."]),
+        line("l8", "maya", "Comme Simone et J. ! Bon, où est le Café des Canuts ?", "kum see-mun ay zhee. bohN, oo eh luh kah-fay day kah-new",
+          "Like Simone and J.! Right, where's the Café des Canuts?",
+          ["Comme Simone et J. ! Alors, où est le Café des Canuts ?", "Comme Simone et J. ! Bon, il est où, le Café des Canuts ?", "Comme Simone et J. ! Et le Café des Canuts, c'est où ?", "Comme Simone et J. ! Bon, où se trouve le Café des Canuts ?", "Comme dans la lettre ! Bon, où est le Café des Canuts ?"]),
+        line("l9", "theo", "Sur mon vieux plan de Lyon, il est sur la place de la Croix-Rousse. On y va ?", "sewr mohN vyuh plahN duh lee-ohN, eel eh sewr lah plahs duh lah krwah-roos. ohN‿nee vah",
+          "On my old map of Lyon, it's on the place de la Croix-Rousse. Shall we go?",
+          ["Sur mon vieux plan, il est sur la place de la Croix-Rousse. On y va ?", "Sur mon vieux plan de Lyon, il est place de la Croix-Rousse. On y va ?", "Sur mon vieux plan de Lyon, le café est sur la place de la Croix-Rousse. On y va ?", "D'après mon vieux plan de Lyon, il est sur la place de la Croix-Rousse. On y va ?", "Sur mon vieux plan de Lyon, il est sur la place de la Croix-Rousse. Allons-y !"]),
+        line("l10", "maya", "Voilà la place. Mais… à cette adresse, il y a un opticien !", "vwah-lah lah plahs. meh… ah set ah-dres, eel ee ah uhN‿nop-tee-syaN",
+          "Here's the square. But… at this address there's an optician's!",
+          ["Voilà la place. Mais… à cette adresse, il y a maintenant un opticien !", "C'est la place. Mais… à cette adresse, il y a un opticien !", "Voilà la place. Mais… ici, il y a un opticien !", "Voilà la place. Mais… à cette adresse, c'est un opticien !", "Voilà la place. Mais… il y a un opticien à cette adresse !"]),
+        line("l11", "theo", "Alors le Café des Canuts n'existe plus… Je suis désolé, Maya.", "ah-lor luh kah-fay day kah-new neg-zeest plew… zhuh swee day-zoh-lay, mah-yah",
+          "So the Café des Canuts doesn't exist any more… I'm sorry, Maya.",
+          ["Le Café des Canuts n'existe plus… Je suis désolé, Maya.", "Alors le café n'existe plus… Je suis désolé, Maya.", "Alors le Café des Canuts n'existe plus. Désolé, Maya.", "Alors le Café des Canuts a disparu… Je suis désolé, Maya.", "Alors le Café des Canuts n'existe plus… Je suis vraiment désolé, Maya."]),
+        line("l12", "maya", "Ce n'est pas grave. Mais qu'est-ce qu'on va faire, maintenant ?", "suh neh pah grahv. meh kes-kohN vah fehr, maNt-nahN",
+          "Never mind. But what are we going to do now?",
+          ["C'est pas grave. Mais qu'est-ce qu'on va faire, maintenant ?", "Ce n'est pas grave. Qu'est-ce qu'on va faire, maintenant ?", "Ce n'est pas grave. Mais on va faire quoi, maintenant ?", "Ce n'est pas grave. Mais qu'est-ce que nous allons faire, maintenant ?", "Tant pis. Mais qu'est-ce qu'on va faire, maintenant ?"]),
+        line("l13", "theo", "On va demander à M. Rossi. Il buvait son café là-bas.", "ohN vah duh-mahN-day ah muh-syuh roh-see. eel bew-veh sohN kah-fay lah-bah",
+          "We're going to ask M. Rossi. He used to drink his coffee there.",
+          ["On va demander à Monsieur Rossi. Il buvait son café là-bas.", "On va demander à M. Rossi. Il prenait son café là-bas.", "Nous allons demander à M. Rossi. Il buvait son café là-bas.", "On va demander à M. Rossi, notre voisin. Il buvait son café là-bas.", "On va demander à M. Rossi."])
+      ],
+      vocab: [
+        word("v1", "On va prendre une traboule", "ohN vah prahNdr ewn trah-bool", "We're going to take a traboule (a covered passage through the buildings)", "l1", "verb", "aller"),
+        word("v2", "Vous allez voir", "voo‿zah-lay vwahr", "You'll see (literally: you're going to see)", "l1", "verb", "voir"),
+        word("v3", "Ça veut dire quoi ?", "sah vuh deer kwah", "What does that mean?", "l2", "expression", "ca-veut-dire-quoi"),
+        word("v4", "pourquoi", "poor-kwah", "why", "l4", "table", "question-words"),
+        word("v5", "en face", "ahN fahs", "opposite, across the way", "l6", "table", "prepositions-of-place"),
+        word("v6", "on va monter là-haut", "ohN vah mohN-tay lah-oh", "we're going to go up there", "l7", "verb", "monter"),
+        word("v7", "On y va ?", "ohN‿nee vah", "Shall we go?", "l9", "expression", "on-y-va"),
+        word("v8", "Je suis désolé", "zhuh swee day-zoh-lay", "I'm sorry (Théo is a man: désolé; Maya would write désolée)", "l11", "expression", "je-suis-desole"),
+        word("v9", "Ce n'est pas grave", "suh neh pah grahv", "Never mind / It doesn't matter (spoken: C'est pas grave)", "l12", "expression", "cest-pas-grave"),
+        word("v10", "On va demander à M. Rossi", "ohN vah duh-mahN-day ah muh-syuh roh-see", "We're going to ask M. Rossi (demander à quelqu'un)", "l13", "verb", "demander")
+      ],
+      questions: [
+        q("q1", "What is a traboule, according to Théo?", "A passage through the buildings", ["A little street market", "A kind of silk scarf", "An old café on the square"], "en", "l3"),
+        q("q2", "Why are the ceilings in Maya's flat so high?", "They were built for the silk looms", ["To keep the rooms cool in summer", "The building used to be a church", "To make room for big bookshelves"], "en", "l5"),
+        q("q3", "What do Maya and Théo find at the café's old address?", "An optician's", ["A bookshop", "A bakery", "An empty shop"], "en", "l10"),
+        q("q4", "What is Théo's plan at the end?", "On va demander à M. Rossi.", ["On va monter à Fourvière.", "On va ouvrir l'enveloppe.", "On va prendre une traboule."], "fr", "l13")
+      ],
+      notice: {
+        title: "Aller + infinitive: the near future",
+        text: "Théo makes plans with aller + an infinitive: On va prendre une traboule, Vous allez voir, On va demander à M. Rossi. Conjugate aller (je vais, vous allez, on va) and leave the second verb in the infinitive. It's the everyday way to say what's going to happen; the table's Watch-out note compares it with the futur simple.",
+        examples: [
+          eg("On va demander à M. Rossi.", "ohN vah duh-mahN-day ah muh-syuh roh-see", "We're going to ask M. Rossi."),
+          eg("Je vais chercher le café.", "zhuh veh shair-shay luh kah-fay", "I'm going to look for the café."),
+          eg("Vous allez voir.", "voo‿zah-lay vwahr", "You'll see.")
+        ],
+        table: "future"
+      }
+    },
+    {
+      id: "lyon-04-the-neighbour", number: 24, level: "A2", series: "la-lettre-de-lyon", episode: 4, act: 1,
+      title: "The neighbour in the courtyard", titleFr: "Le voisin de la cour",
+      recap: "The Café des Canuts has gone: its address is now an optician's. Théo said M. Rossi, a neighbour, used to drink his coffee there.",
+      summary: "Maya asks her neighbour M. Rossi about the Café des Canuts and learns that J. may have been a printer.",
+      scene: "On Monday evening M. Rossi, who lives on the ground floor, is watering his geraniums in the courtyard. Maya comes down with a lot of questions about the Café des Canuts. M. Rossi has lived on the Croix-Rousse for a long time and loves to chat.",
+      keywords: ["voisin", "voisine", "neighbour", "neighbor", "courtyard", "cour", "géraniums", "geraniums", "questions", "question words", "quand", "pourquoi", "imprimerie", "printing works", "delorme"],
+      speakers: [
+        { id: "rossi", name: "M. Rossi", role: "neighbour", initial: "R", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "new neighbour", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "rossi", "Bonsoir, mademoiselle ! Vous êtes la petite-fille de Simone, n'est-ce pas ?", "bohN-swahr, mad-mwah-zel. voo‿zet lah puh-teet-feey duh see-mun, nes-pah",
+          "Good evening! You're Simone's granddaughter, aren't you?",
+          ["Bonsoir ! Vous êtes la petite-fille de Simone, n'est-ce pas ?", "Bonsoir, mademoiselle ! Vous êtes la petite-fille de Simone ?", "Bonsoir, mademoiselle ! C'est vous, la petite-fille de Simone ?", "Bonsoir, mademoiselle ! Vous êtes bien la petite-fille de Simone ?", "Bonsoir, mademoiselle ! Vous êtes la petite-fille de Mme Laurent, n'est-ce pas ?"]),
+        line("l2", "maya", "Oui, je suis Maya. Bonsoir, monsieur Rossi. Comment allez-vous ?", "wee, zhuh swee mah-yah. bohN-swahr, muh-syuh roh-see. koh-mahN‿tah-lay voo",
+          "Yes, I'm Maya. Good evening, M. Rossi. How are you?",
+          ["Oui, c'est moi, Maya. Bonsoir, monsieur Rossi. Comment allez-vous ?", "Oui, je m'appelle Maya. Bonsoir, monsieur Rossi. Comment allez-vous ?", "Oui, je suis Maya. Bonsoir, monsieur. Comment allez-vous ?", "Oui, je suis Maya. Bonsoir, monsieur Rossi. Vous allez bien ?", "Oui, je suis Maya. Comment allez-vous, monsieur Rossi ?"]),
+        line("l3", "rossi", "Très bien, merci. J'arrose mes géraniums. Et vous ?", "treh byaN, mair-see. zhah-roz may zhay-rah-nyum. ay voo",
+          "Very well, thanks. I'm watering my geraniums. And you?",
+          ["Bien, merci. J'arrose mes géraniums. Et vous ?", "Très bien, merci. J'arrose mes fleurs. Et vous ?", "Très bien, merci. Et vous ?", "Ça va bien, merci. J'arrose mes géraniums. Et vous ?", "Très bien, merci beaucoup. J'arrose mes géraniums. Et vous ?"]),
+        line("l4", "maya", "Bien, merci. Une question : est-ce que vous connaissez le Café des Canuts ?", "byaN, mair-see. ewn kes-tyohN. es-kuh voo koh-neh-say luh kah-fay day kah-new",
+          "Fine, thanks. A question: do you know the Café des Canuts?",
+          ["Bien, merci. Vous connaissez le Café des Canuts ?", "Ça va, merci. Est-ce que vous connaissez le Café des Canuts ?", "Bien, merci. J'ai une question : est-ce que vous connaissez le Café des Canuts ?", "Bien, merci. Une question : vous connaissez le Café des Canuts ?", "Bien, merci. Une question : connaissez-vous le Café des Canuts ?"]),
+        line("l5", "rossi", "Bien sûr ! J'ai bu mon café là-bas pendant des années.", "byaN sewr. zhay bew mohN kah-fay lah-bah pahN-dahN day‿zah-nay",
+          "Of course! I drank my coffee there for years.",
+          ["Bien sûr ! J'ai pris mon café là-bas pendant des années.", "Oui, bien sûr ! J'ai bu mon café là-bas pendant des années.", "Bien sûr ! Pendant des années, j'ai bu mon café là-bas.", "Évidemment ! J'ai bu mon café là-bas pendant des années.", "Bien sûr ! J'ai bu mon café là-bas pendant des années et des années."]),
+        line("l6", "maya", "Et quand est-ce que le café a fermé ?", "ay kahN‿tes-kuh luh kah-fay ah fair-may",
+          "And when did the café close?",
+          ["Quand est-ce que le café a fermé ?", "Et le café a fermé quand ?", "Et quand le café a-t-il fermé ?", "Et quand est-ce qu'il a fermé ?", "Et il a fermé quand, le café ?"]),
+        line("l7", "rossi", "En quatre-vingt-cinq. Il est fermé depuis quarante ans, mademoiselle.", "ahN kah-truh-vaN-saNk. eel eh fair-may duh-pwee kah-rahN-tahN, mad-mwah-zel",
+          "In eighty-five. It's been closed for forty years.",
+          ["En 1985. Il est fermé depuis quarante ans, mademoiselle.", "En quatre-vingt-cinq. Il est fermé depuis 40 ans.", "En mille neuf cent quatre-vingt-cinq. Il est fermé depuis quarante ans.", "En quatre-vingt-cinq. Ça fait quarante ans, mademoiselle.", "En quatre-vingt-cinq. Il est fermé depuis quarante ans."]),
+        line("l8", "maya", "Qui venait au café ? Les gens du quartier ?", "kee vuh-neh oh kah-fay. lay zhahN dew kar-tyay",
+          "Who used to go to the café? People from the neighbourhood? (US: neighborhood)",
+          ["Qui venait au café ? Des gens du quartier ?", "Qui allait au café ? Les gens du quartier ?", "Qui venait là-bas ? Les gens du quartier ?", "Et qui venait au café ? Les gens du quartier ?", "Qui étaient les clients ? Les gens du quartier ?"]),
+        line("l9", "rossi", "Les canuts, et les typographes de l'imprimerie Delorme, sur le quai Saint-Vincent.", "lay kah-new, ay lay tee-poh-grahf duh laN-pree-muh-ree duh-lorm, sewr luh kay saN-vaN-sahN",
+          "The silk weavers, and the typesetters from the Delorme printing works, on the quai Saint-Vincent.",
+          ["Les canuts et les typographes de l'imprimerie Delorme, quai Saint-Vincent.", "Les canuts, et les ouvriers de l'imprimerie Delorme, sur le quai Saint-Vincent.", "Des canuts, et des typographes de l'imprimerie Delorme, sur le quai Saint-Vincent.", "Les canuts, et aussi les typographes de l'imprimerie Delorme, sur le quai Saint-Vincent.", "Les canuts et les typographes de l'imprimerie Delorme."]),
+        line("l10", "maya", "Delorme ? Mais J. écrit « Monsieur Delorme » dans une lettre !", "duh-lorm. meh zhee ay-kree muh-syuh duh-lorm dahN‿zewn let-ruh",
+          "Delorme? But J. writes 'Monsieur Delorme' in one of the letters!",
+          ["Delorme ? J. écrit « Monsieur Delorme » dans une lettre !", "Delorme ? Mais dans une lettre, J. écrit « Monsieur Delorme » !", "Delorme ? Mais J. écrit « Monsieur Delorme » dans sa lettre !", "Comment ? Delorme ? J. écrit « Monsieur Delorme » dans une lettre !", "Delorme ? Mais J. écrit « Monsieur Delorme » dans une des lettres !"]),
+        line("l11", "rossi", "Alors votre J. était peut-être typographe. Pourquoi est-ce que vous cherchez ce monsieur ?", "ah-lor vohtr zhee ay-teh puh-tetr tee-poh-grahf. poor-kwah es-kuh voo shair-shay suh muh-syuh",
+          "Then maybe your J. was a typesetter. Why are you looking for this man?",
+          ["Alors votre J. était peut-être typographe. Pourquoi vous cherchez ce monsieur ?", "Votre J. était peut-être typographe. Pourquoi est-ce que vous cherchez ce monsieur ?", "Alors votre J. était peut-être typographe ! Pourquoi cherchez-vous ce monsieur ?", "Alors votre J. était peut-être typographe. Pourquoi est-ce que vous le cherchez ?", "Alors J. était peut-être typographe. Pourquoi est-ce que vous cherchez ce monsieur ?"]),
+        line("l12", "maya", "C'est une histoire de ma grand-mère. Qui peut m'aider, à votre avis ?", "seh‿tewn ees-twahr duh mah grahN-mair. kee puh meh-day, ah vohtr ah-vee",
+          "It's a story about my grandmother. Who could help me, do you think?",
+          ["C'est une histoire de famille. Qui peut m'aider, à votre avis ?", "C'est une histoire de ma grand-mère. À votre avis, qui peut m'aider ?", "C'est une vieille histoire de ma grand-mère. Qui peut m'aider, à votre avis ?", "C'est pour ma grand-mère. Qui peut m'aider, à votre avis ?", "C'est une histoire de ma grand-mère. Qui peut m'aider ?"]),
+        line("l13", "rossi", "Demandez à Mme Berthier, au cinquième. Elle sait tout… mais elle ne dit rien.", "duh-mahN-day ah mah-dahm bair-tyay, oh saN-kyem. el seh too… meh el nuh dee ryaN",
+          "Ask Mme Berthier, on the fifth floor. She knows everything… but she says nothing.",
+          ["Demandez à Madame Berthier, au cinquième. Elle sait tout… mais elle ne dit rien.", "Demandez à Mme Berthier, au cinquième étage. Elle sait tout… mais elle ne dit rien.", "Allez voir Mme Berthier, au cinquième. Elle sait tout… mais elle ne dit rien.", "Demandez à Mme Berthier. Elle sait tout… mais elle ne dit rien.", "Demandez à Mme Berthier, au cinquième. Elle sait tout, mais elle ne dit jamais rien."])
+      ],
+      vocab: [
+        word("v1", "Comment allez-vous ?", "koh-mahN‿tah-lay voo", "How are you? (polite)", "l2", "expression", "comment-allez-vous"),
+        word("v2", "Et vous ?", "ay voo", "And you? (polite)", "l3", "expression", "et-vous"),
+        word("v3", "est-ce que vous connaissez", "es-kuh voo koh-neh-say", "do you know (est-ce que turns a sentence into a question)", "l4", "verb", "connaitre"),
+        word("v4", "J'ai bu mon café", "zhay bew mohN kah-fay", "I drank my coffee (boire → bu)", "l5", "verb", "boire"),
+        word("v5", "pendant des années", "pahN-dahN day‿zah-nay", "for years", "l5", "table", "time-expressions"),
+        word("v6", "Quand est-ce que", "kahN‿tes-kuh", "When…? (question word + est-ce que)", "l6", "table", "question-words"),
+        word("v7", "le café a fermé", "luh kah-fay ah fair-may", "the café closed", "l6", "verb", "fermer"),
+        word("v8", "depuis quarante ans", "duh-pwee kah-rahN-tahN", "for forty years (and still now)", "l7", "table", "numbers-21-100"),
+        word("v9", "Qui venait", "kee vuh-neh", "Who used to come (venir)", "l8", "verb", "venir"),
+        word("v10", "Elle sait tout", "el seh too", "She knows everything (savoir)", "l13", "verb", "savoir")
+      ],
+      questions: [
+        q("q1", "When did the Café des Canuts close?", "In 1985, about forty years ago", ["In 1962, the year of the letters", "In 2001, about twenty-five years ago", "Last year"], "en", "l7"),
+        q("q2", "Who were the café's regulars, according to M. Rossi?", "Silk weavers and typesetters from a printing works", ["Students and their teachers", "Bus drivers and market sellers", "Tourists and artists"], "en", "l9"),
+        q("q3", "Why is the name Delorme important to Maya?", "J. mentions a Monsieur Delorme in a letter", ["It's her grandmother's maiden name", "It's the name of Théo's bookshop", "It's written on the sealed envelope"], "en", "l10"),
+        q("q4", "Who does M. Rossi tell Maya to ask?", "Mme Berthier, au cinquième", ["M. Delorme, à l'imprimerie", "Théo, à la librairie", "L'opticien, sur la place"], "fr", "l13")
+      ],
+      notice: {
+        title: "Question words: quand, qui, pourquoi",
+        text: "Maya asks Quand est-ce que le café a fermé ? and Qui venait au café ? M. Rossi asks back Pourquoi est-ce que vous cherchez ce monsieur ? Put the question word first, then est-ce que and an ordinary sentence. When qui is the subject, you don't need est-ce que.",
+        examples: [
+          eg("Quand est-ce que le café a fermé ?", "kahN‿tes-kuh luh kah-fay ah fair-may", "When did the café close?"),
+          eg("Qui venait au café ?", "kee vuh-neh oh kah-fay", "Who used to come to the café? (qui is the subject)"),
+          eg("Pourquoi est-ce que vous cherchez ce monsieur ?", "poor-kwah es-kuh voo shair-shay suh muh-syuh", "Why are you looking for this man?")
+        ],
+        table: "question-words"
+      }
+    },
+    {
+      id: "lyon-05-a-closed-door", number: 25, level: "A2", series: "la-lettre-de-lyon", episode: 5, act: 1,
+      title: "A door that closes", titleFr: "Une porte qui se ferme",
+      recap: "M. Rossi told Maya that J. was a printer at the Imprimerie Delorme, and that Mme Berthier on the fifth floor knows everything.",
+      summary: "Théo asks old Mme Berthier about Simone and J. She remembers a little, then shuts the door on him.",
+      scene: "On Tuesday evening Théo climbs to the fifth floor to bring Mme Berthier, 88, the detective novel she ordered from his bookshop. She has lived in the building since 1960 and knew Simone well. Théo wants to ask her about 1962, but she doesn't want to remember.",
+      keywords: ["berthier", "mme berthier", "madame berthier", "negation", "negative words", "ne rien", "ne personne", "ne jamais", "roman policier", "detective novel", "fifth floor", "cinquième", "cinquieme", "secret", "door", "porte"],
+      speakers: [
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "berthier", name: "Mme Berthier", role: "neighbour", initial: "B", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "theo", "Bonsoir, madame Berthier ! Je vous apporte votre roman policier.", "bohN-swahr, mah-dahm bair-tyay. zhuh voo‿zah-port vohtr roh-mahN poh-lee-syay",
+          "Good evening, Mme Berthier! I've brought you your detective novel.",
+          ["Bonsoir ! Je vous apporte votre roman policier.", "Bonsoir, madame Berthier ! Voilà votre roman policier.", "Bonsoir, madame Berthier ! J'ai votre roman policier.", "Bonsoir, madame Berthier ! Je vous apporte votre polar.", "Bonsoir, madame Berthier ! Je vous apporte le roman policier."]),
+        line("l2", "berthier", "Ah, mon petit Théo ! Merci. Entrez, mais ne restez pas longtemps.", "ah, mohN puh-tee tay-oh. mair-see. ahN-tray, meh nuh res-tay pah lohN-tahN",
+          "Ah, my dear Théo! Thank you. Come in, but don't stay long.",
+          ["Ah, Théo ! Merci. Entrez, mais ne restez pas longtemps.", "Mon petit Théo ! Merci. Entrez, mais ne restez pas longtemps.", "Ah, mon petit Théo ! Merci beaucoup. Entrez, mais pas longtemps.", "Ah, mon petit Théo ! Merci. Entrez, mais ne restez pas trop longtemps.", "Ah, mon petit Théo ! Merci. Entrez donc, mais ne restez pas longtemps."]),
+        line("l3", "theo", "Juste une question. Vous vous souvenez de Simone à vingt ans ?", "zhewst ewn kes-tyohN. voo voo soov-nay duh see-mun ah vaN‿tahN",
+          "Just one question. Do you remember Simone at twenty?",
+          ["Une question. Vous vous souvenez de Simone à vingt ans ?", "Juste une question. Vous vous rappelez Simone à vingt ans ?", "Juste une question. Est-ce que vous vous souvenez de Simone à vingt ans ?", "Juste une question. Vous vous souvenez de Simone jeune ?", "Juste une question. Vous vous souvenez de Simone à 20 ans ?"]),
+        line("l4", "berthier", "Simone… Bien sûr. Toujours son foulard bleu, et toujours ce rire !", "see-mun… byaN sewr. too-zhoor sohN foo-lar bluh, ay too-zhoor suh reer",
+          "Simone… Of course. Always that blue scarf, and always that laugh!",
+          ["Simone… Je me souviens. Toujours son foulard bleu, et toujours ce rire !", "Simone… Bien sûr. Toujours son foulard bleu et son rire !", "Bien sûr. Toujours son foulard bleu, et toujours ce rire !", "Simone… Oui, bien sûr. Toujours son foulard bleu, et toujours ce rire !", "Simone… Évidemment. Toujours son foulard bleu, et toujours ce rire !"]),
+        line("l5", "theo", "Et un garçon, en mille neuf cent soixante-deux ? Un certain J. ?", "ay uhN gar-sohN, ahN meel nuhf sahN swah-sahNt-duh. uhN sair-taN zhee",
+          "And a boy, in 1962? A certain J.?",
+          ["Et un garçon, en 1962 ? Un certain J. ?", "Et un jeune homme, en mille neuf cent soixante-deux ? Un certain J. ?", "Et un garçon, en soixante-deux ? Un certain J. ?", "Et un amoureux, en mille neuf cent soixante-deux ? Un certain J. ?", "Il y a un garçon, en mille neuf cent soixante-deux ? Un certain J. ?"]),
+        line("l6", "berthier", "Un garçon de l'imprimerie, oui. Grand, timide…", "uhN gar-sohN duh laN-pree-muh-ree, wee. grahN, tee-meed…",
+          "A boy from the printing works, yes. Tall, shy…",
+          ["Oui, un garçon de l'imprimerie. Grand, timide…", "Un garçon de l'imprimerie. Grand, timide…", "Un jeune homme de l'imprimerie, oui. Grand, timide…", "Un garçon de l'imprimerie, oui. Grand et timide…"]),
+        line("l7", "theo", "Comment il s'appelle ? Vous savez son nom ?", "koh-mahN eel sah-pel. voo sah-vay sohN nohN",
+          "What's he called? Do you know his name?",
+          ["Il s'appelle comment ? Vous savez son nom ?", "Comment s'appelle-t-il ? Vous savez son nom ?", "Vous savez son nom ?", "Comment il s'appelle ? Vous connaissez son nom ?", "Comment est-ce qu'il s'appelle ? Vous savez son nom ?"]),
+        line("l8", "berthier", "Non. Je ne sais rien, je ne connais personne. C'est loin, tout ça.", "nohN. zhuh nuh seh ryaN, zhuh nuh koh-neh pair-sun. seh lwaN, too sah",
+          "No. I don't know anything, I don't know anyone. That was all a long time ago.",
+          ["Non, je ne sais rien, je ne connais personne. C'est vieux, tout ça.", "Non. Je ne sais rien, je ne connais personne.", "Non. Je sais rien, je connais personne. C'est loin, tout ça.", "Non. Je ne sais rien du tout. C'est loin, tout ça.", "Non. Je ne sais rien, je ne connais personne. Tout ça, c'est loin."]),
+        line("l9", "theo", "Mais madame, vous habitez ici depuis soixante-six ans !", "meh mah-dahm, voo‿zah-bee-tay ee-see duh-pwee swah-sahNt-see‿zahN",
+          "But madame, you've lived here for sixty-six years!",
+          ["Mais madame, vous habitez ici depuis 66 ans !", "Mais vous habitez ici depuis soixante-six ans !", "Mais madame Berthier, vous habitez ici depuis soixante-six ans !", "Mais madame, vous vivez ici depuis soixante-six ans !", "Mais madame, ça fait soixante-six ans que vous habitez ici !"]),
+        line("l10", "berthier", "Et alors ? Je ne regarde jamais en arrière. Allez à la bibliothèque, à la Part-Dieu.", "ay ah-lor. zhuh nuh ruh-gard zhah-meh ahN‿nah-ryair. ah-lay ah lah bee-blee-oh-tek, ah lah par-dyuh",
+          "So what? I never look back. Go to the library, at Part-Dieu.",
+          ["Et alors ? Je ne regarde jamais en arrière. Allez à la bibliothèque.", "Et alors ? Je ne regarde jamais derrière moi. Allez à la bibliothèque, à la Part-Dieu.", "Et alors ? Je ne regarde jamais en arrière. Allez donc à la bibliothèque de la Part-Dieu.", "Et alors ? Moi, je ne regarde jamais en arrière. Allez à la bibliothèque, à la Part-Dieu.", "Et alors ? Je ne regarde jamais en arrière. Allez à la bibliothèque de la Part-Dieu."]),
+        line("l11", "theo", "D'accord. Oh… Dans ce livre, il y a une dédicace : « À Lucienne ».", "dah-kor. oh… dahN suh lee-vruh, eel ee ah ewn day-dee-kahs. ah lew-syen",
+          "All right. Oh… In this book there's an inscription: 'To Lucienne'.",
+          ["D'accord. Dans ce livre, il y a une dédicace : « À Lucienne ».", "Bon, d'accord. Oh… Dans ce livre, il y a une dédicace : « À Lucienne ».", "D'accord. Oh… Dans ce livre, il y a écrit : « À Lucienne ».", "D'accord. Oh… Il y a une dédicace dans ce livre : « À Lucienne »."]),
+        line("l12", "berthier", "Ce n'est rien. Il est tard, Théo. Je suis fatiguée.", "suh neh ryaN. eel eh tar, tay-oh. zhuh swee fah-tee-gay",
+          "It's nothing. It's late, Théo. I'm tired.",
+          ["Ce n'est rien. Il est tard. Je suis fatiguée.", "C'est rien. Il est tard, Théo. Je suis fatiguée.", "Ce n'est rien du tout. Il est tard, Théo. Je suis fatiguée.", "Ce n'est rien. Il est tard, Théo.", "Ce n'est rien. Il est tard, Théo, et je suis fatiguée."]),
+        line("l13", "theo", "Vous vous appelez Lucienne, n'est-ce pas ?", "voo voo‿zah-play lew-syen, nes-pah",
+          "Your name is Lucienne, isn't it?",
+          ["Vous vous appelez Lucienne ?", "Madame Berthier, vous vous appelez Lucienne, n'est-ce pas ?", "Votre prénom, c'est Lucienne, n'est-ce pas ?", "Vous vous appelez Lucienne, non ?", "C'est vous, Lucienne, n'est-ce pas ?"]),
+        line("l14", "berthier", "Bonsoir, monsieur Garnier.", "bohN-swahr, muh-syuh gar-nyay",
+          "Good night, Monsieur Garnier. (She uses his surname: the conversation is over.)",
+          ["Bonne soirée, monsieur Garnier.", "Au revoir, monsieur Garnier.", "Bonsoir, monsieur.", "Bonne nuit, monsieur Garnier."])
+      ],
+      vocab: [
+        word("v1", "Je vous apporte", "zhuh voo‿zah-port", "I've brought you (literally: I bring you)", "l1", "verb", "apporter"),
+        word("v2", "ne restez pas longtemps", "nuh res-tay pah lohN-tahN", "don't stay long", "l2", "verb", "rester"),
+        word("v3", "Vous vous souvenez de Simone", "voo voo soov-nay duh see-mun", "Do you remember Simone (se souvenir de)", "l3", "verb", "se-souvenir"),
+        word("v4", "Vous savez son nom ?", "voo sah-vay sohN nohN", "Do you know his name? (savoir: to know a fact)", "l7", "verb", "savoir"),
+        word("v5", "Je ne sais rien", "zhuh nuh seh ryaN", "I don't know anything (ne… rien: nothing)", "l8", "table", "negative-words"),
+        word("v6", "je ne connais personne", "zhuh nuh koh-neh pair-sun", "I don't know anyone (ne… personne: nobody)", "l8", "verb", "connaitre"),
+        word("v7", "Je ne regarde jamais en arrière", "zhuh nuh ruh-gard zhah-meh ahN‿nah-ryair", "I never look back (ne… jamais: never)", "l10", "verb", "regarder"),
+        word("v8", "Je suis fatiguée", "zhuh swee fah-tee-gay", "I'm tired (a woman writes fatiguée; it sounds the same)", "l12", "expression", "je-suis-fatigue"),
+        word("v9", "Vous vous appelez Lucienne", "voo voo‿zah-play lew-syen", "Your name is Lucienne (s'appeler: vous vous appelez)", "l13", "table", "reflexive-pronouns"),
+        word("v10", "Bonsoir", "bohN-swahr", "Good evening (here also: good night, goodbye)", "l14", "expression", "bonsoir")
+      ],
+      questions: [
+        q("q1", "Why does Théo go up to Mme Berthier's flat?", "To bring her a detective novel", ["To fix her loose kitchen tile", "To invite her to the bookshop", "To give her a letter from Maya"], "en", "l1"),
+        q("q2", "What does Mme Berthier remember about Simone?", "Her blue scarf and her laugh", ["Her red coat and her songs", "Her long letters", "Her bicycle and her dog"], "en", "l4"),
+        q("q3", "Who does Mme Berthier remember from 1962?", "A tall, shy boy from the printing works", ["A sailor from Le Havre", "A loud student from Paris", "A silk weaver from the hill"], "en", "l6"),
+        q("q4", "How does Mme Berthier end the conversation?", "Bonsoir, monsieur Garnier.", ["Bonne nuit, mon petit Théo.", "Oui, je m'appelle Lucienne.", "Revenez demain, Théo."], "fr", "l14")
+      ],
+      notice: {
+        title: "Negative words: ne… rien, ne… personne, ne… jamais",
+        text: "Mme Berthier shuts Théo out with negatives: Je ne sais rien, je ne connais personne, Je ne regarde jamais en arrière. Ne goes before the verb, and rien, personne or jamais takes the place of pas after it. In speech the ne often disappears (Je sais rien), but keep it when you write.",
+        examples: [
+          eg("Je ne sais rien.", "zhuh nuh seh ryaN", "I don't know anything. (nothing)"),
+          eg("Je ne connais personne.", "zhuh nuh koh-neh pair-sun", "I don't know anyone. (nobody)"),
+          eg("Je ne regarde jamais en arrière.", "zhuh nuh ruh-gard zhah-meh ahN‿nah-ryair", "I never look back. (never)")
+        ],
+        table: "negative-words"
+      }
+    },
+    {
+      id: "lyon-06-the-archives", number: 26, level: "A2", series: "la-lettre-de-lyon", episode: 6, act: 2,
+      title: "In the archives", titleFr: "Aux archives",
+      recap: "Mme Berthier remembered Simone and a boy from the printing works, then shut her door. A book of hers is inscribed 'To Lucienne'.",
+      summary: "At the city library, an archivist finds a 1962 newspaper article that lists three names beginning with J.",
+      scene: "On Thursday Maya goes to the Part-Dieu library while Théo minds the bookshop. M. Faure, an archivist, finds a 1962 issue of Le Progrès on microfilm about the Delorme printing works. Under a staff photo, the caption gives the workers' names.",
+      keywords: ["archives", "archive", "archivist", "library", "bibliothèque", "bibliotheque", "microfilm", "newspaper", "le progrès", "le progres", "printing works", "imprimerie", "passé composé", "passe compose", "être verbs", "etre verbs"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "reader", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "faure", name: "M. Faure", role: "archivist", initial: "F", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Bonjour, monsieur. Vous pouvez m'aider ? Je cherche un article sur l'imprimerie Delorme.", "bohN-zhoor, muh-syuh. voo poo-vay meh-day. zhuh shairsh uhN‿nar-tee-kluh sewr laN-pree-muh-ree duh-lorm",
+          "Hello. Can you help me? I'm looking for an article about the Delorme printing works.",
+          ["Bonjour. Vous pouvez m'aider ? Je cherche un article sur l'imprimerie Delorme.", "Bonjour, monsieur. Je cherche un article sur l'imprimerie Delorme.", "Bonjour, monsieur. Est-ce que vous pouvez m'aider ? Je cherche un article sur l'imprimerie Delorme.", "Bonjour, monsieur. Pouvez-vous m'aider ? Je cherche un article sur l'imprimerie Delorme.", "Vous pouvez m'aider ? Je cherche un article sur l'imprimerie Delorme.", "Bonjour, monsieur. Vous pouvez m'aider ? Je cherche un article sur l'imprimerie Delorme, s'il vous plaît."]),
+        line("l2", "faure", "Bien sûr. L'imprimerie Delorme, quai Saint-Vincent ? Elle a fermé en mille neuf cent soixante-quinze.", "byaN sewr. laN-pree-muh-ree duh-lorm, kay saN-vaN-sahN. el ah fair-may ahN meel nuhf sahN swah-sahNt-kaNz",
+          "Of course. The Delorme printing works, on the quai Saint-Vincent? It closed in 1975.",
+          ["Bien sûr. L'imprimerie Delorme ? Elle a fermé en mille neuf cent soixante-quinze.", "Bien sûr. L'imprimerie Delorme, quai Saint-Vincent ? Elle a fermé en 1975.", "Oui, bien sûr. L'imprimerie Delorme, quai Saint-Vincent ? Elle a fermé en mille neuf cent soixante-quinze.", "Bien sûr. L'imprimerie Delorme, sur le quai Saint-Vincent ? Elle a fermé en mille neuf cent soixante-quinze.", "Bien sûr. L'imprimerie Delorme ? Elle a fermé en 1975."]),
+        line("l3", "maya", "Ah bon ? Je voudrais savoir qui travaillait là-bas en soixante-deux.", "ah bohN. zhuh voo-dreh sah-vwahr kee trah-vah-yeh lah-bah ahN swah-sahNt-duh",
+          "Really? I'd like to know who worked there in '62.",
+          ["Ah bon ? Je voudrais savoir qui travaillait là-bas en 1962.", "Je voudrais savoir qui travaillait là-bas en soixante-deux.", "Ah bon ? J'aimerais savoir qui travaillait là-bas en soixante-deux.", "Ah bon ? Je voudrais savoir qui travaillait là-bas en mille neuf cent soixante-deux.", "Ah bon ? Je voudrais savoir qui travaillait là-bas en 62.", "Ah bon ? Je voudrais savoir qui y travaillait en soixante-deux."]),
+        line("l4", "faure", "Alors, j'ai trouvé ce microfilm. Le Progrès du huit septembre mille neuf cent soixante-deux.", "ah-lor, zhay troo-vay suh mee-kroh-feelm. luh proh-greh dew wee sep-tahNbr meel nuhf sahN swah-sahNt-duh",
+          "Right, I've found this microfilm. Le Progrès of 8 September 1962.",
+          ["J'ai trouvé ce microfilm. Le Progrès du huit septembre mille neuf cent soixante-deux.", "Alors, j'ai trouvé ce microfilm. Le Progrès du 8 septembre 1962.", "Alors, j'ai trouvé ce microfilm : Le Progrès du huit septembre soixante-deux.", "Bon, j'ai trouvé ce microfilm. Le Progrès du huit septembre mille neuf cent soixante-deux.", "Alors, voilà ce microfilm. Le Progrès du huit septembre mille neuf cent soixante-deux."]),
+        line("l5", "maya", "Oh ! Il y a une photo… « L'imprimerie Delorme a cent ans ».", "oh. eel ee ah ewn foh-toh… laN-pree-muh-ree duh-lorm ah sahN‿tahN",
+          "Oh! There's a photo… 'The Delorme printing works is a hundred years old.'",
+          ["Il y a une photo… « L'imprimerie Delorme a cent ans ».", "Oh ! Il y a aussi une photo… « L'imprimerie Delorme a cent ans ».", "Oh ! Une photo… « L'imprimerie Delorme a cent ans ».", "Oh ! Il y a une photo… « L'imprimerie Delorme a 100 ans ».", "Regardez, il y a une photo… « L'imprimerie Delorme a cent ans »."]),
+        line("l6", "faure", "Oui, c'est toute l'équipe, devant l'atelier. Et sous la photo, il y a les noms.", "wee, seh toot lay-keep, duh-vahN lah-tuh-lyay. ay soo lah foh-toh, eel ee ah lay nohN",
+          "Yes, it's the whole team, in front of the workshop. And under the photo there are the names.",
+          ["C'est toute l'équipe, devant l'atelier. Et sous la photo, il y a les noms.", "Oui, c'est toute l'équipe devant l'atelier. Sous la photo, il y a les noms.", "Oui, c'est tout le personnel, devant l'atelier. Et sous la photo, il y a les noms.", "Oui, c'est toute l'équipe, devant l'atelier. Et en dessous, il y a les noms.", "Oui, c'est toute l'équipe, devant l'atelier. Et sous la photo, on a les noms."]),
+        line("l7", "maya", "Et ces typographes, qu'est-ce qu'ils sont devenus ?", "ay say tee-poh-grahf, kes-keel sohN duh-vuh-new",
+          "And these typesetters, what became of them?",
+          ["Qu'est-ce qu'ils sont devenus, ces typographes ?", "Et ces typographes, que sont-ils devenus ?", "Qu'est-ce qu'ils sont devenus ?", "Que sont devenus ces typographes ?", "Et les typographes, qu'est-ce qu'ils sont devenus ?"]),
+        line("l8", "faure", "Après la fermeture, certains sont partis, d'autres sont restés à Lyon.", "ah-preh lah fair-muh-tewr, sair-taN sohN par-tee, doh-truh sohN res-tay ah lee-ohN",
+          "After it closed, some left and others stayed in Lyon.",
+          ["Après la fermeture, certains sont partis et d'autres sont restés à Lyon.", "Certains sont partis, d'autres sont restés à Lyon.", "Après la fermeture, quelques-uns sont partis, d'autres sont restés à Lyon.", "Après la fermeture, certains sont partis, d'autres sont restés ici.", "Après la fermeture, certains sont partis, les autres sont restés à Lyon."]),
+        line("l9", "maya", "Je cherche un homme. Son prénom commence par J.", "zhuh shairsh uhN‿num. sohN pray-nohN koh-mahNs par zhee",
+          "I'm looking for a man. His first name begins with J.",
+          ["Je cherche un homme. Son prénom commence par un J.", "Je cherche un homme dont le prénom commence par J.", "Je cherche un monsieur. Son prénom commence par J.", "Je cherche un homme. Son prénom commence par la lettre J.", "Son prénom commence par J."]),
+        line("l10", "faure", "Une seule lettre, c'est peu ! Mais vous avez de la chance : trois noms commencent par J.", "ewn suhl let-ruh, seh puh. meh voo‿zah-vay duh lah shahNs. trwah nohN koh-mahNs par zhee",
+          "Just one letter, that's not much to go on! But you're in luck: three names begin with J.",
+          ["Une seule lettre, c'est peu ! Mais vous avez de la chance : trois noms commencent par un J.", "Une lettre, c'est peu ! Mais vous avez de la chance : trois noms commencent par J.", "C'est peu, une seule lettre ! Mais vous avez de la chance : trois noms commencent par J.", "Une seule lettre, ce n'est pas beaucoup ! Mais vous avez de la chance : trois noms commencent par J.", "Une seule lettre, c'est peu ! Mais vous avez de la chance : il y a trois noms qui commencent par J."]),
+        line("l11", "maya", "Merci beaucoup. Vous pouvez faire une copie de la page ?", "mair-see boh-koo. voo poo-vay fair ewn koh-pee duh lah pahzh",
+          "Thank you very much. Could you make a copy of the page?",
+          ["Merci beaucoup. Vous pouvez faire une copie de la page, s'il vous plaît ?", "Merci ! Vous pouvez faire une copie de la page ?", "Merci beaucoup. Est-ce que vous pouvez faire une copie de la page ?", "Merci beaucoup. Vous pourriez faire une copie de la page ?", "Merci beaucoup. Je peux avoir une copie de la page ?"]),
+        line("l12", "faure", "Je l'ai déjà imprimée. Tenez, lisez les noms.", "zhuh lay day-zhah aN-pree-may. tuh-nay, lee-zay lay nohN",
+          "I've already printed it. Here you are, read the names.",
+          ["Je l'ai déjà imprimée. Tenez.", "Je l'ai déjà imprimée. Voilà, lisez les noms.", "C'est déjà fait. Tenez, lisez les noms.", "Je l'ai déjà imprimée. Tenez, lisez les noms vous-même.", "Je l'ai imprimée. Tenez, lisez les noms."]),
+        line("l13", "maya", "Jean Cordier, Jacques Perrin, Joseph Lambert. Trois J.", "zhahN kor-dyay, zhahk peh-raN, zhoh-zef lahN-bair. trwah zhee",
+          "Jean Cordier, Jacques Perrin, Joseph Lambert. Three J.s.",
+          ["Jean Cordier, Jacques Perrin et Joseph Lambert. Trois J.", "Jean Cordier, Jacques Perrin, Joseph Lambert.", "Trois J : Jean Cordier, Jacques Perrin, Joseph Lambert.", "Jean Cordier, Jacques Perrin, Joseph Lambert. Ça fait trois J."])
+      ],
+      vocab: [
+        word("v1", "Vous pouvez m'aider ?", "voo poo-vay meh-day", "Can you help me? (polite)", "l1", "expression", "vous-pouvez-maider"),
+        word("v2", "Je cherche", "zhuh shairsh", "I'm looking for (chercher: no 'for' in French)", "l1", "verb", "chercher"),
+        word("v3", "Elle a fermé", "el ah fair-may", "It closed (fermer takes avoir)", "l2", "verb", "fermer"),
+        word("v4", "mille neuf cent soixante-quinze", "meel nuhf sahN swah-sahNt-kaNz", "1975 (years are said in full: one thousand nine hundred seventy-five)", "l2", "table", "numbers-21-100"),
+        word("v5", "j'ai trouvé", "zhay troo-vay", "I've found / I found", "l4", "verb", "trouver"),
+        word("v6", "huit septembre", "wee sep-tahNbr", "8 September (no capital on months)", "l4", "table", "months"),
+        word("v7", "qu'est-ce qu'ils sont devenus ?", "kes-keel sohN duh-vuh-new", "what became of them? (devenir takes être)", "l7", "table", "etre-verbs"),
+        word("v8", "certains sont partis", "sair-taN sohN par-tee", "some left (partir takes être)", "l8", "verb", "partir"),
+        word("v9", "d'autres sont restés", "doh-truh sohN res-tay", "others stayed (rester takes être)", "l8", "verb", "rester"),
+        word("v10", "Merci beaucoup", "mair-see boh-koo", "Thank you very much", "l11", "expression", "merci-beaucoup")
+      ],
+      questions: [
+        q("q1", "When did the Delorme printing works close?", "In 1975", ["In 1962", "In 1985", "In 1957"], "en", "l2"),
+        q("q2", "What does M. Faure find for Maya?", "A 1962 issue of Le Progrès on microfilm", ["A letter signed J.", "A list of the café's regulars", "A photo of the Café des Canuts"], "en", "l4"),
+        q("q3", "According to M. Faure, what happened to the typesetters after the works closed?", "Some left, others stayed in Lyon", ["They all left for Paris", "They all stayed at the works", "They opened a café together"], "en", "l8"),
+        q("q4", "How does Maya say who she is looking for?", "Je cherche un homme. Son prénom commence par J.", ["Je cherche une femme. Son prénom commence par S.", "Je cherche un homme. Son nom commence par D.", "Je cherche un café. Son nom commence par C."], "fr", "l9")
+      ],
+      notice: {
+        title: "Être or avoir in the passé composé",
+        text: "M. Faure says L'imprimerie a fermé: most verbs, like fermer, make the passé composé with avoir. Verbs of coming, going, staying and becoming take être, and their participle agrees with the subject: certains sont partis, d'autres sont restés, qu'est-ce qu'ils sont devenus ?",
+        examples: [
+          eg("L'imprimerie a fermé.", "laN-pree-muh-ree ah fair-may", "The printing works closed. (fermer: avoir)"),
+          eg("Certains sont partis.", "sair-taN sohN par-tee", "Some left. (partir: être, plural -s)"),
+          eg("D'autres sont restés à Lyon.", "doh-truh sohN res-tay ah lee-ohN", "Others stayed in Lyon. (rester: être, plural -s)")
+        ],
+        table: "etre-verbs"
+      }
+    },
+    {
+      id: "lyon-07-the-photo", number: 27, level: "A2", series: "la-lettre-de-lyon", episode: 7, act: 2,
+      title: "The photo", titleFr: "La photo",
+      recap: "In a 1962 newspaper at the library, Maya found the staff of the Imprimerie Delorme: three of the names start with J.",
+      summary: "Sorting Simone's books, Maya and Théo find a 1962 photo of her with J., and switch from vous to tu.",
+      scene: "On Friday evening Théo and Maya sort her grandmother's books for the bookshop. A photo falls out of Le Petit Prince: Simone and a tall young man by the Saône in June 1962. They read the first letter again, and Théo suggests they say tu.",
+      keywords: ["photo", "photograph", "picture", "le petit prince", "imparfait", "imperfect", "tu", "vous", "saying tu", "books", "quai saint-antoine", "foulard", "scarf", "love story"],
+      speakers: [
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "neighbour", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "theo", "Encore un carton de livres ! Votre grand-mère lisait beaucoup.", "ahN-kor uhN kar-tohN duh lee-vruh. voh-truh grahN-mair lee-zeh boh-koo",
+          "Another box of books! Your grandmother read a lot.",
+          ["Encore un carton ! Votre grand-mère lisait beaucoup.", "Encore des livres ! Votre grand-mère lisait beaucoup.", "Encore un carton de livres ! Elle lisait beaucoup, votre grand-mère.", "Encore un carton de livres ! Votre grand-mère lisait vraiment beaucoup.", "Encore un carton plein de livres ! Votre grand-mère lisait beaucoup."]),
+        line("l2", "maya", "Oh, regardez : Le Petit Prince. C'était mon livre préféré.", "oh, ruh-gar-day. luh puh-tee praNs. say-teh mohN lee-vruh pray-fay-ray",
+          "Oh, look: Le Petit Prince. It was my favourite book. (US: favorite)",
+          ["Regardez : Le Petit Prince. C'était mon livre préféré.", "Oh, regardez : Le Petit Prince. Quand j'étais petite, c'était mon livre préféré.", "Oh, regardez : Le Petit Prince. C'était mon livre favori.", "Oh, regardez : Le Petit Prince. J'adorais ce livre.", "Oh, Le Petit Prince ! C'était mon livre préféré."]),
+        line("l3", "theo", "Attendez, quelque chose est tombé du livre. Une photo !", "ah-tahN-day, kel-kuh shohz eh tohN-bay dew lee-vruh. ewn foh-toh",
+          "Wait, something's fallen out of the book. A photo!",
+          ["Attendez, quelque chose est tombé. Une photo !", "Attendez, une photo est tombée du livre !", "Attendez, il y a quelque chose qui est tombé du livre. Une photo !", "Attendez ! Quelque chose est tombé du livre. C'est une photo !", "Regardez, quelque chose est tombé du livre. Une photo !"]),
+        line("l4", "maya", "C'est Mamie ! Elle était si jeune… Et elle riait.", "seh mah-mee. el ay-teh see zhuhn… ay el ree-yeh",
+          "It's Mamie! She was so young… And she was laughing.",
+          ["C'est ma grand-mère ! Elle était si jeune… Et elle riait.", "C'est Mamie ! Elle était tellement jeune… Et elle riait.", "C'est Mamie ! Elle était si jeune. Elle riait.", "C'est Mamie ! Elle était très jeune… Et elle riait.", "Oh, c'est Mamie ! Elle était si jeune… Et elle riait."]),
+        line("l5", "theo", "Et le grand jeune homme, à côté d'elle ? Regardez derrière.", "ay luh grahN zhuh-num, ah koh-tay del. ruh-gar-day deh-ryair",
+          "And the tall young man next to her? Look on the back.",
+          ["Et le grand jeune homme à côté d'elle ? Regardez au dos.", "Et le jeune homme, à côté d'elle ? Regardez derrière.", "Et le grand jeune homme, à côté d'elle ? Retournez la photo.", "Et ce grand jeune homme, à côté d'elle ? Regardez derrière.", "Et le grand jeune homme, à côté d'elle ? Il y a quelque chose derrière."]),
+        line("l6", "maya", "« Toi et moi, quai Saint-Antoine, juin mille neuf cent soixante-deux. J. »", "twah ay mwah, kay saN-tahN-twahn, zhwaN meel nuhf sahN swah-sahNt-duh. zhee",
+          "'You and me, quai Saint-Antoine, June 1962. J.'",
+          ["« Toi et moi, quai Saint-Antoine, juin 1962. J. »", "Toi et moi, quai Saint-Antoine, juin 1962.", "C'est écrit : « Toi et moi, quai Saint-Antoine, juin mille neuf cent soixante-deux. J. »", "Il y a écrit : « Toi et moi, quai Saint-Antoine, juin 1962. J. »"]),
+        line("l7", "theo", "C'est lui, J. ! Relisez la première lettre, maintenant.", "seh lwee, zhee. ruh-lee-zay lah pruh-myair let-ruh, maNt-nahN",
+          "It's him, J.! Read the first letter again, now.",
+          ["C'est lui, J. ! Relisez la première lettre.", "C'est J. ! Relisez la première lettre, maintenant.", "C'est lui, J. ! Lisez encore la première lettre, maintenant.", "C'est lui, J. ! Maintenant, relisez la première lettre.", "C'est forcément lui, J. ! Relisez la première lettre, maintenant."]),
+        line("l8", "maya", "« Au Café des Canuts, il pleuvait. Tu avais un foulard bleu… » Le voilà, son foulard.", "oh kah-fay day kah-new, eel pluh-veh. tew ah-veh uhN foo-lar bluh… luh vwah-lah, sohN foo-lar",
+          "'At the Café des Canuts, it was raining. You had a blue scarf…' There it is, her scarf.",
+          ["« Au Café des Canuts, il pleuvait. Tu avais un foulard bleu… » Le voici, son foulard.", "« Au Café des Canuts, il pleuvait. Tu avais un foulard bleu… » Voilà son foulard.", "« Il pleuvait. Tu avais un foulard bleu… » Le voilà, son foulard.", "« Au Café des Canuts, il pleuvait. Tu avais un foulard bleu… » C'est son foulard !", "« Au Café des Canuts, il pleuvait. Tu avais un foulard bleu… » Le voilà, le foulard."]),
+        line("l9", "theo", "On lit les lettres d'amour de votre grand-mère ensemble… On peut se tutoyer, non ?", "ohN lee lay let-ruh dah-moor duh voh-truh grahN-mair ahN-sahN-bluh… ohN puh suh tew-twah-yay, nohN",
+          "We're reading your grandmother's love letters together… We could say tu to each other, couldn't we?",
+          ["On lit les lettres d'amour de votre grand-mère ensemble… On peut se tutoyer ?", "On lit les lettres de votre grand-mère ensemble… On peut se tutoyer, non ?", "On lit les lettres d'amour de votre grand-mère ensemble… On se tutoie ?", "On lit ensemble les lettres d'amour de votre grand-mère… On peut se tutoyer, non ?", "On lit les lettres d'amour de votre grand-mère ensemble… Et si on se tutoyait ?", "On peut se tutoyer, non ?"]),
+        line("l10", "maya", "Oui. Tu as raison. Merci, Théo… pour tout ça.", "wee. tew ah reh-zohN. mair-see, tay-oh… poor too sah",
+          "Yes. You're right. Thank you, Théo… for all this.",
+          ["Oui. Tu as raison.", "Oui, tu as raison. Merci, Théo.", "Oui. Tu as raison. Merci pour tout ça, Théo.", "Oui, d'accord. Tu as raison. Merci, Théo… pour tout ça.", "Oui. Tu as raison. Merci, Théo… pour tout."]),
+        line("l11", "theo", "De rien. Tu le reconnais, cet endroit, derrière eux ?", "duh ryaN. tew luh ruh-koh-neh, set ahN-drwah, deh-ryair uh",
+          "You're welcome. Do you recognise that place, behind them? (US: recognize)",
+          ["De rien. Tu reconnais cet endroit, derrière eux ?", "Tu le reconnais, cet endroit, derrière eux ?", "De rien. Tu reconnais l'endroit, derrière eux ?", "De rien. Et cet endroit, derrière eux, tu le reconnais ?", "Avec plaisir. Tu le reconnais, cet endroit, derrière eux ?"]),
+        line("l12", "maya", "On dirait un marché, au bord de la Saône. Il y a un panneau…", "ohN dee-reh uhN mar-shay, oh bor duh lah sohn. eel ee ah uhN pah-noh…",
+          "It looks like a market, by the Saône. There's a sign…",
+          ["C'est un marché, au bord de la Saône. Il y a un panneau…", "On dirait un marché, au bord de la Saône. Il y a une pancarte…", "On dirait un marché, près de la Saône. Il y a un panneau…", "On dirait un marché au bord de la Saône. Et il y a un panneau…", "Ça ressemble à un marché, au bord de la Saône. Il y a un panneau…"]),
+        line("l13", "theo", "« BRUN, primeurs »… Les Brun ! Ils sont encore au marché de la Croix-Rousse.", "bruhN, pree-muhr… lay bruhN. eel sohN ahN-kor oh mar-shay duh lah krwah-roos",
+          "'BRUN, greengrocers'… The Bruns! They're still at the Croix-Rousse market.",
+          ["« BRUN, primeurs »… Les Brun ! Ils sont encore au marché.", "Brun, primeurs… Les Brun ! Ils sont toujours au marché de la Croix-Rousse.", "« BRUN, primeurs »… Je connais les Brun ! Ils sont encore au marché de la Croix-Rousse.", "« BRUN, primeurs »… Les Brun ! Ils ont encore un stand au marché de la Croix-Rousse.", "Les Brun ! Ils sont encore au marché de la Croix-Rousse."])
+      ],
+      vocab: [
+        word("v1", "lisait beaucoup", "lee-zeh boh-koo", "used to read a lot (imparfait: a habit)", "l1", "verb", "lire"),
+        word("v2", "C'était mon livre préféré", "say-teh mohN lee-vruh pray-fay-ray", "It was my favourite book (c'était: imparfait of c'est)", "l2", "verb", "etre"),
+        word("v3", "quelque chose est tombé", "kel-kuh shohz eh tohN-bay", "something fell (tomber takes être)", "l3", "verb", "tomber"),
+        word("v4", "elle riait", "el ree-yeh", "she was laughing (rire, imparfait)", "l4", "verb", "rire"),
+        word("v5", "il pleuvait", "eel pluh-veh", "it was raining (pleuvoir, imparfait)", "l8", "verb", "pleuvoir"),
+        word("v6", "Tu avais un foulard bleu", "tew ah-veh uhN foo-lar bluh", "You had a blue scarf (imparfait: a description)", "l8", "table", "imparfait"),
+        word("v7", "On peut se tutoyer, non ?", "ohN puh suh tew-twah-yay, nohN", "Shall we say tu? (tutoyer: to say tu; vouvoyer: to say vous)", "l9", "table", "subject-pronouns"),
+        word("v8", "Tu as raison", "tew ah reh-zohN", "You're right (avoir raison; now with tu)", "l10", "verb", "avoir"),
+        word("v9", "Tu le reconnais", "tew luh ruh-koh-neh", "Do you recognise it? (US: recognize)", "l11", "verb", "reconnaitre"),
+        word("v10", "cet endroit", "set ahN-drwah", "that place (ce becomes cet before a vowel)", "l11", "table", "demonstrative-adjectives")
+      ],
+      questions: [
+        q("q1", "What is written on the back of the photo?", "You and me, quai Saint-Antoine, June 1962. J.", ["You and me, Fourvière, May 1962. J.", "Café des Canuts, June 1962. S.", "For Simone, quai Saint-Vincent, 1962. J."], "en", "l6"),
+        q("q2", "Why does Théo suggest they say tu?", "They're reading her grandmother's love letters together", ["They're the same age", "Simone always said tu to him", "Maya asked him to"], "en", "l9"),
+        q("q3", "What does Théo read on the sign behind the couple?", "BRUN, primeurs (a greengrocer's stall)", ["DELORME, imprimerie (a printing works)", "Café des Canuts", "La Page Tournée (a bookshop)"], "en", "l13"),
+        q("q4", "How does Maya agree to say tu?", "Oui. Tu as raison.", ["Oui. Vous avez raison.", "Non. Vous avez tort.", "Oui. On se voit quand ?"], "fr", "l10")
+      ],
+      notice: {
+        title: "The imparfait: how things were",
+        text: "The letter paints the scene: Au Café des Canuts, il pleuvait. Tu avais un foulard bleu. The imparfait (pleuvait, avais, riait, était) describes the background in the past: the weather, how people looked, what was going on. For a single event, Théo uses the passé composé: quelque chose est tombé.",
+        examples: [
+          eg("Il pleuvait.", "eel pluh-veh", "It was raining. (imparfait: the background)"),
+          eg("Tu avais un foulard bleu.", "tew ah-veh uhN foo-lar bluh", "You had a blue scarf. (imparfait: a description)"),
+          eg("Une photo est tombée.", "ewn foh-toh eh tohN-bay", "A photo fell out. (passé composé: the event)")
+        ],
+        table: "imparfait"
+      }
+    },
+    {
+      id: "lyon-08-the-market-seller", number: 28, level: "A2", series: "la-lettre-de-lyon", episode: 8, act: 2,
+      title: "The market seller remembers", titleFr: "Le marchand se souvient",
+      recap: "A photo fell out of a book: Simone and J., quai Saint-Antoine, June 1962. Behind them is the sign of the Brun family's market stall.",
+      summary: "At the Croix-Rousse market, an old stallholder recognises the couple in the photo and names Jacques.",
+      scene: "On Saturday morning Maya buys figs at the Croix-Rousse market and shows the photo to M. Brun, who is 84. In 1962 he worked at his parents' stall on the quai Saint-Antoine. He remembers Simone, and the young man too.",
+      keywords: ["marchand", "market seller", "stallholder", "stall", "figs", "figues", "fruit", "il y a", "ago", "à l'époque", "a l'epoque", "time expressions", "remember", "se souvenir"],
+      speakers: [
+        { id: "brun", name: "M. Brun", role: "market seller", initial: "B", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "customer", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "brun", "Bonjour, mademoiselle ! Qu'est-ce qu'il vous faut, ce matin ?", "bohN-zhoor, mad-mwah-zel. kes-keel voo foh, suh mah-taN",
+          "Morning! What can I get you today? (literally: what do you need this morning?)",
+          ["Bonjour ! Qu'est-ce qu'il vous faut, ce matin ?", "Bonjour, mademoiselle ! Qu'est-ce que je vous sers ?", "Bonjour, mademoiselle ! Qu'est-ce qu'il vous faut ?", "Bonjour, mademoiselle ! Vous désirez, ce matin ?", "Bonjour, mademoiselle ! Qu'est-ce que vous voulez, ce matin ?"]),
+        line("l2", "maya", "Bonjour, monsieur. Je voudrais des figues, s'il vous plaît. Un demi-kilo.", "bohN-zhoor, muh-syuh. zhuh voo-dreh day feeg, seel voo pleh. uhN duh-mee-kee-loh",
+          "Morning. I'd like some figs, please. Half a kilo.",
+          ["Bonjour. Je voudrais un demi-kilo de figues, s'il vous plaît.", "Je voudrais des figues, s'il vous plaît. Un demi-kilo.", "Bonjour, monsieur. Un demi-kilo de figues, s'il vous plaît.", "Bonjour, monsieur. Je vais prendre des figues, s'il vous plaît. Un demi-kilo.", "Bonjour, monsieur. Je voudrais cinq cents grammes de figues, s'il vous plaît.", "Bonjour, monsieur. Je voudrais des figues, s'il vous plaît. 500 grammes."]),
+        line("l3", "brun", "Voilà, elles sont très belles cette semaine. Et avec ça ?", "vwah-lah, el sohN treh bel set suh-men. ay ah-vek sah",
+          "Here you are, they're lovely this week. Anything else?",
+          ["Voilà, elles sont belles cette semaine. Et avec ça ?", "Voilà, elles sont très belles cette semaine. Et avec ceci ?", "Voilà, elles sont très belles cette semaine. Autre chose ?", "Voilà. Elles sont très belles cette semaine. Ce sera tout ?", "Voilà vos figues, elles sont très belles cette semaine. Et avec ça ?"]),
+        line("l4", "maya", "C'est tout, merci. Excusez-moi, vous êtes monsieur Brun ?", "seh too, mair-see. eks-kew-zay mwah, voo‿zet muh-syuh bruhN",
+          "That's all, thanks. Excuse me, are you Monsieur Brun?",
+          ["C'est tout. Excusez-moi, vous êtes monsieur Brun ?", "C'est tout, merci. Pardon, vous êtes monsieur Brun ?", "C'est tout, merci. Excusez-moi, est-ce que vous êtes monsieur Brun ?", "Ce sera tout, merci. Excusez-moi, vous êtes monsieur Brun ?", "C'est tout, merci. Excusez-moi, c'est vous, monsieur Brun ?"]),
+        line("l5", "brun", "Raymond Brun, oui. Mais c'est mon fils qui tient le stand, maintenant.", "reh-mohN bruhN, wee. meh seh mohN fees kee tyaN luh stahNd, maNt-nahN",
+          "Raymond Brun, yes. But it's my son who runs the stall now.",
+          ["Oui, Raymond Brun. Mais c'est mon fils qui tient le stand, maintenant.", "Raymond Brun, oui. Mais maintenant, c'est mon fils qui tient le stand.", "Oui, c'est moi. Mais c'est mon fils qui tient le stand, maintenant.", "Raymond Brun, oui. Mais c'est mon fils qui s'occupe du stand, maintenant.", "Raymond Brun, oui. Mais le stand, c'est mon fils qui le tient, maintenant."]),
+        line("l6", "maya", "Regardez cette photo. C'était le stand de vos parents ?", "ruh-gar-day set foh-toh. say-teh luh stahNd duh voh pah-rahN",
+          "Look at this photo. Was this your parents' stall?",
+          ["Regardez cette photo. C'était le stand de vos parents, non ?", "Regardez cette photo. C'était bien le stand de vos parents ?", "Regardez cette photo. Est-ce que c'était le stand de vos parents ?", "Regardez cette photo. C'est le stand de vos parents ?", "Vous pouvez regarder cette photo ? C'était le stand de vos parents ?"]),
+        line("l7", "brun", "Quai Saint-Antoine… il y a soixante-quatre ans ! J'avais vingt ans, à l'époque.", "kay saN-tahN-twahn… eel ee ah swah-sahNt-kah-trahN. zhah-veh vaN‿tahN, ah lay-pok",
+          "The quai Saint-Antoine… sixty-four years ago! I was twenty back then.",
+          ["Quai Saint-Antoine… il y a soixante-quatre ans ! J'avais vingt ans.", "Oh là là ! Quai Saint-Antoine… il y a soixante-quatre ans ! J'avais vingt ans, à l'époque.", "Quai Saint-Antoine… il y a 64 ans ! J'avais 20 ans, à l'époque.", "Quai Saint-Antoine… il y a soixante-quatre ans ! À l'époque, j'avais vingt ans.", "Le quai Saint-Antoine… il y a soixante-quatre ans ! J'avais vingt ans, à l'époque."]),
+        line("l8", "maya", "Et ces deux jeunes, vous les reconnaissez ?", "ay say duh zhuhn, voo lay ruh-koh-neh-say",
+          "And these two young people, do you recognise them? (US: recognize)",
+          ["Et ces deux jeunes, vous les connaissez ?", "Vous reconnaissez ces deux jeunes ?", "Et ces deux jeunes gens, vous les reconnaissez ?", "Et ces deux jeunes, est-ce que vous les reconnaissez ?", "Et ces deux jeunes, vous les reconnaissez, monsieur ?"]),
+        line("l9", "brun", "Elle, oui ! La fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard.", "el, wee. lah feey dew kah-new duh lah rew dew-mahNzh. el vuh-neh luh dee-mahNsh ah-vek sohN foo-lar",
+          "Her, yes! The silk weaver's daughter from rue Dumenge. She used to come on Sundays in her scarf.",
+          ["Elle, oui ! La fille du canut de la rue Dumenge. Elle venait le dimanche.", "Elle, oui ! C'est la fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard.", "Elle, oui ! La fille du canut de la rue Dumenge. Elle venait tous les dimanches avec son foulard.", "Elle, je la reconnais ! La fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard.", "Oui, elle ! La fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard."]),
+        line("l10", "maya", "C'était ma grand-mère, Simone. Et lui ? Vous vous souvenez de lui ?", "say-teh mah grahN-mair, see-mun. ay lwee. voo voo soo-vuh-nay duh lwee",
+          "That was my grandmother, Simone. And him? Do you remember him?",
+          ["C'était ma grand-mère. Et lui ? Vous vous souvenez de lui ?", "C'était ma grand-mère, Simone. Et lui ? Vous vous souvenez de lui aussi ?", "C'était ma grand-mère, Simone. Et lui ? Vous le reconnaissez ?", "C'était ma grand-mère, Simone. Et lui ? Vous vous en souvenez ?", "C'est ma grand-mère, Simone. Et lui ? Vous vous souvenez de lui ?"]),
+        line("l11", "brun", "Le grand, là… C'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.", "luh grahN, lah… say-teh zhahk, duh laN-pree-muh-ree. eel‿zahsh-teh day pesh, too lay duh",
+          "The tall one… That was Jacques, from the printing works. They used to buy peaches, the two of them.",
+          ["Le grand… C'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.", "Le grand, là… C'était Jacques, de l'imprimerie. Ils achetaient des pêches ensemble.", "Le grand, là… C'est Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.", "Le grand, là… C'était Jacques, de l'imprimerie.", "Le grand, là… Ça, c'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux."]),
+        line("l12", "maya", "Jacques ! Vous connaissez son nom de famille ?", "zhahk. voo koh-neh-say sohN nohN duh fah-meey",
+          "Jacques! Do you know his surname? (US: last name)",
+          ["Jacques ! Vous savez son nom de famille ?", "Jacques ! Vous connaissez son nom ?", "Jacques ! Est-ce que vous connaissez son nom de famille ?", "Jacques ! Et son nom de famille, vous le connaissez ?", "Jacques ! Vous vous souvenez de son nom de famille ?"]),
+        line("l13", "brun", "Perrin, je pense… Il habite montée Saint-Sébastien, je crois. Allez-y de ma part !", "peh-raN, zhuh pahNs… eel ah-beet mohN-tay saN-say-bahs-tyaN, zhuh krwah. ah-lay-zee duh mah par",
+          "Perrin, I think… He lives on the montée Saint-Sébastien, I believe. Go and see him, and say I sent you!",
+          ["Perrin, je crois… Il habite montée Saint-Sébastien. Allez-y de ma part !", "Perrin, je pense. Il habite montée Saint-Sébastien, je crois. Allez le voir de ma part !", "Perrin, je pense… Il habite dans la montée Saint-Sébastien, je crois. Allez-y de ma part !", "Perrin, il me semble… Il habite montée Saint-Sébastien, je crois. Allez-y de ma part !", "Perrin, je pense… Il habite montée Saint-Sébastien, je crois. Dites-lui que vous venez de ma part !"])
+      ],
+      vocab: [
+        word("v1", "Je voudrais des figues", "zhuh voo-dreh day feeg", "I'd like some figs (polite)", "l2", "expression", "je-voudrais"),
+        word("v2", "C'est tout", "seh too", "That's all", "l4", "expression", "cest-tout"),
+        word("v3", "Excusez-moi", "eks-kew-zay mwah", "Excuse me", "l4", "expression", "excusez-moi"),
+        word("v4", "il y a soixante-quatre ans", "eel ee ah swah-sahNt-kah-trahN", "sixty-four years ago (il y a + time = ago)", "l7", "table", "time-expressions"),
+        word("v5", "J'avais vingt ans", "zhah-veh vaN‿tahN", "I was twenty (age uses avoir: j'ai, j'avais)", "l7", "verb", "avoir"),
+        word("v6", "vous les reconnaissez ?", "voo lay ruh-koh-neh-say", "do you recognise them? (US: recognize)", "l8", "verb", "reconnaitre"),
+        word("v7", "Elle venait le dimanche", "el vuh-neh luh dee-mahNsh", "She used to come on Sundays (imparfait: a habit; le dimanche = every Sunday)", "l9", "verb", "venir"),
+        word("v8", "Vous vous souvenez de lui ?", "voo voo soo-vuh-nay duh lwee", "Do you remember him? (se souvenir de)", "l10", "verb", "se-souvenir"),
+        word("v9", "Ils achetaient des pêches", "eel‿zahsh-teh day pesh", "They used to buy peaches", "l11", "verb", "acheter"),
+        word("v10", "Allez-y de ma part", "ah-lay-zee duh mah par", "Go and see him, say I sent you (de ma part: from me)", "l13", "verb", "aller")
+      ],
+      questions: [
+        q("q1", "What does Maya buy at the stall?", "Half a kilo of figs", ["Half a kilo of peaches", "A kilo of figs", "Two kilos of apples"], "en", "l2"),
+        q("q2", "How old was M. Brun when the photo was taken?", "Twenty", ["Sixteen", "Thirty", "Sixty-four"], "en", "l7"),
+        q("q3", "How does M. Brun remember Simone?", "As the silk weaver's daughter from rue Dumenge", ["As a girl from the printing works", "As the daughter of the café owner", "As a customer who lived by the Saône"], "en", "l9"),
+        q("q4", "Where does M. Brun say Jacques lives?", "Il habite montée Saint-Sébastien, je crois.", ["Il habite rue Dumenge, je crois.", "Il habite quai Saint-Vincent, je crois.", "Il habite au Canada, je crois."], "fr", "l13")
+      ],
+      notice: {
+        title: "Il y a + time: 'ago'",
+        text: "M. Brun looks at the photo and says il y a soixante-quatre ans: sixty-four years ago. Il y a + a length of time means 'ago'. À l'époque means 'back then', and le dimanche (with le) means 'on Sundays', every week, which is why it goes with the imparfait: elle venait le dimanche.",
+        examples: [
+          eg("Il y a soixante-quatre ans.", "eel ee ah swah-sahNt-kah-trahN", "Sixty-four years ago."),
+          eg("À l'époque, j'avais vingt ans.", "ah lay-pok, zhah-veh vaN‿tahN", "Back then, I was twenty."),
+          eg("Elle venait le dimanche.", "el vuh-neh luh dee-mahNsh", "She used to come on Sundays.")
+        ],
+        table: "time-expressions"
+      }
+    },
+    {
+      id: "lyon-09-the-wrong-jacques", number: 29, level: "A2", series: "la-lettre-de-lyon", episode: 9, act: 2,
+      title: "The wrong Jacques", titleFr: "Le mauvais Jacques",
+      recap: "M. Brun, the market seller, remembered J. as Jacques from the printing works, \"Perrin, I think\", and sent Maya to see him.",
+      summary: "A retired typesetter is not the J. in the photo, but he remembers another Jacques who left for Canada.",
+      scene: "On Monday Maya visits M. Perrin on the montée Saint-Sébastien. He is 86, a little hard of hearing, kind and funny, and he worked at the Delorme printing works. He looks at the photo and laughs.",
+      keywords: ["typographe", "typesetter", "printer", "retired", "lequel", "laquelle", "which one", "celui", "canada", "perrin", "montée saint-sébastien", "montee saint-sebastien", "wrong person"],
+      speakers: [
+        { id: "perrin", name: "M. Perrin", role: "retired typesetter", initial: "P", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "visitor", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "perrin", "Bonjour, mademoiselle ! C'est monsieur Brun qui vous envoie ?", "bohN-zhoor, mad-mwah-zel. seh muh-syuh bruhN kee voo‿zahN-vwah",
+          "Hello! Monsieur Brun sent you? (literally: it's Monsieur Brun who's sending you?)",
+          ["Bonjour ! C'est monsieur Brun qui vous envoie ?", "Bonjour, mademoiselle ! C'est Brun qui vous envoie ?", "Bonjour, mademoiselle ! Vous venez de la part de monsieur Brun ?", "Bonjour, mademoiselle ! C'est bien monsieur Brun qui vous envoie ?", "Bonjour, mademoiselle ! Monsieur Brun vous envoie ?"]),
+        line("l2", "maya", "Oui. Je suis la petite-fille de Simone Morel, de la rue Dumenge.", "wee. zhuh swee lah puh-teet-feey duh see-mun moh-rel, duh lah rew dew-mahNzh",
+          "Yes. I'm Simone Morel's granddaughter, from rue Dumenge.",
+          ["Oui, c'est ça. Je suis la petite-fille de Simone Morel, de la rue Dumenge.", "Oui. Je suis la petite-fille de Simone Morel.", "Oui. Bonjour, monsieur. Je suis la petite-fille de Simone Morel, de la rue Dumenge.", "Oui. Je m'appelle Maya, je suis la petite-fille de Simone Morel, de la rue Dumenge.", "Oui. Je suis la petite-fille de Simone Morel, qui habitait rue Dumenge."]),
+        line("l3", "perrin", "Pardon ? Vous pouvez répéter ? J'entends mal, vous savez.", "par-dohN. voo poo-vay ray-pay-tay. zhahN-tahN mahl, voo sah-vay",
+          "Sorry? Could you say that again? I don't hear very well, you know.",
+          ["Pardon ? Vous pouvez répéter ?", "Pardon ? Pouvez-vous répéter ? J'entends mal, vous savez.", "Comment ? Vous pouvez répéter ? J'entends mal, vous savez.", "Pardon ? Vous pouvez répéter, s'il vous plaît ? J'entends mal.", "Pardon ? Vous pouvez répéter ? Je n'entends pas bien, vous savez."]),
+        line("l4", "maya", "Bien sûr. La petite-fille de Simone Morel.", "byaN sewr. lah puh-teet-feey duh see-mun moh-rel",
+          "Of course. Simone Morel's granddaughter.",
+          ["La petite-fille de Simone Morel.", "Bien sûr. Je suis la petite-fille de Simone Morel.", "Oui, bien sûr. La petite-fille de Simone Morel.", "Pas de problème. La petite-fille de Simone Morel.", "Bien sûr. Je suis la petite-fille de Simone Morel, de la rue Dumenge."]),
+        line("l5", "perrin", "Ah, la petite Simone ! Entrez, entrez. Qu'est-ce que je peux faire pour vous ?", "ah, lah puh-teet see-mun. ahN-tray, ahN-tray. kes-kuh zhuh puh fair poor voo",
+          "Ah, little Simone! Come in, come in. What can I do for you?",
+          ["Ah, Simone ! Entrez, entrez. Qu'est-ce que je peux faire pour vous ?", "Ah, la petite Simone ! Entrez. Qu'est-ce que je peux faire pour vous ?", "Ah, la petite Simone ! Entrez, entrez. Que puis-je faire pour vous ?", "Ah, la petite Simone ! Entrez, entrez. Je peux vous aider ?", "Ah, la petite Simone ! Entrez donc. Qu'est-ce que je peux faire pour vous ?"]),
+        line("l6", "maya", "Monsieur Brun dit que vous êtes le Jacques de cette photo. Regardez.", "muh-syuh bruhN dee kuh voo‿zet luh zhahk duh set foh-toh. ruh-gar-day",
+          "Monsieur Brun says you're the Jacques in this photo. Look.",
+          ["Monsieur Brun dit que vous êtes le Jacques de la photo. Regardez.", "Monsieur Brun pense que vous êtes le Jacques de cette photo. Regardez.", "Regardez. Monsieur Brun dit que vous êtes le Jacques de cette photo.", "Monsieur Brun dit que c'est vous, le Jacques de cette photo. Regardez.", "Monsieur Brun croit que vous êtes le Jacques de cette photo. Regardez."]),
+        line("l7", "perrin", "Moi ? Ha ! Non, je n'étais pas aussi beau, mademoiselle.", "mwah. ah. nohN, zhuh nay-teh pah oh-see boh, mad-mwah-zel",
+          "Me? Ha! No, I was never that handsome, mademoiselle. (literally: I wasn't as handsome)",
+          ["Moi ? Non, je n'étais pas aussi beau, mademoiselle.", "Moi ? Ha ! Non, je n'étais pas si beau, mademoiselle.", "Moi ? Ha ! Non, je n'étais pas aussi beau.", "Moi ? Ha ha ! Non, je n'étais pas aussi beau, mademoiselle.", "Moi ? Ha ! Non, je n'étais pas aussi beau que ça, mademoiselle.", "Moi ? Ha ! Non, j'étais pas aussi beau, mademoiselle."]),
+        line("l8", "maya", "Ce n'est pas vous ? Mais vous vous appelez Jacques…", "suh neh pah voo. meh voo voo‿zah-play zhahk…",
+          "It isn't you? But your name's Jacques…",
+          ["C'est pas vous ? Mais vous vous appelez Jacques…", "Ce n'est pas vous ? Pourtant, vous vous appelez Jacques…", "Ce n'est pas vous ? Mais votre prénom, c'est Jacques…", "Ce n'est pas vous ? Vous vous appelez bien Jacques, pourtant…", "Ce n'est pas vous ? Mais vous vous appelez Jacques, non ?"]),
+        line("l9", "perrin", "Jacques ? Lequel ? Il y avait deux Jacques chez Delorme !", "zhahk. luh-kel. eel ee ah-veh duh zhahk shay duh-lorm",
+          "Jacques? Which one? There were two Jacques at Delorme's!",
+          ["Lequel ? Il y avait deux Jacques chez Delorme !", "Jacques ? Mais lequel ? Il y avait deux Jacques chez Delorme !", "Jacques ? Lequel ? On était deux Jacques chez Delorme !", "Jacques ? Lequel ? Il y avait deux Jacques à l'imprimerie !", "Jacques ? Quel Jacques ? Il y avait deux Jacques chez Delorme !"]),
+        line("l10", "maya", "Celui de la photo. Le grand, à côté de ma grand-mère.", "suh-lwee duh lah foh-toh. luh grahN, ah koh-tay duh mah grahN-mair",
+          "The one in the photo. The tall one, next to my grandmother.",
+          ["Celui de la photo. Le grand, à côté d'elle.", "Celui de la photo.", "Celui-là, sur la photo. Le grand, à côté de ma grand-mère.", "Celui de la photo. Le grand jeune homme, à côté de ma grand-mère.", "Celui qui est sur la photo. Le grand, à côté de ma grand-mère."]),
+        line("l11", "perrin", "Ah, l'autre Jacques ! Grand et timide. Il a quitté Delorme en soixante-deux.", "ah, loh-truh zhahk. grahN ay tee-meed. eel ah kee-tay duh-lorm ahN swah-sahNt-duh",
+          "Ah, the other Jacques! Tall and shy. He left Delorme's in '62.",
+          ["Ah, l'autre Jacques ! Grand, timide. Il a quitté Delorme en soixante-deux.", "Ah, l'autre Jacques ! Grand et timide. Il a quitté Delorme en 1962.", "Ah, l'autre Jacques ! Grand et timide. Il a quitté Delorme en mille neuf cent soixante-deux.", "Ah, l'autre Jacques ! Grand et timide. Il a quitté l'imprimerie en soixante-deux.", "Ah, l'autre Jacques ! Grand et timide. Il est parti de chez Delorme en soixante-deux."]),
+        line("l12", "maya", "Vous vous souvenez de son nom de famille ?", "voo voo soo-vuh-nay duh sohN nohN duh fah-meey",
+          "Do you remember his surname? (US: last name)",
+          ["Vous vous rappelez son nom de famille ?", "Vous vous souvenez de son nom ?", "Est-ce que vous vous souvenez de son nom de famille ?", "Et son nom de famille, vous vous en souvenez ?", "Vous connaissez son nom de famille ?"]),
+        line("l13", "perrin", "Non, je suis désolé. Il est parti au Canada… et il n'est jamais revenu, je crois.", "nohN, zhuh swee day-zoh-lay. eel eh par-tee oh kah-nah-dah… ay eel neh zhah-meh ruh-vuh-new, zhuh krwah",
+          "No, I'm sorry. He left for Canada… and he never came back, I think.",
+          ["Non, désolé. Il est parti au Canada… et il n'est jamais revenu, je crois.", "Non, je suis désolé. Il est parti au Canada et il n'est jamais revenu, je pense.", "Non, je suis désolé. Il est parti au Canada… et il n'est jamais rentré, je crois.", "Non, je regrette. Il est parti au Canada… et il n'est jamais revenu, je crois.", "Non, je suis désolé. Il est parti au Canada… Il n'est jamais revenu, je crois."])
+      ],
+      vocab: [
+        word("v1", "qui vous envoie", "kee voo‿zahN-vwah", "who sends you (envoyer)", "l1", "verb", "envoyer"),
+        word("v2", "Pardon", "par-dohN", "Sorry? / Pardon? (asking someone to repeat)", "l3", "expression", "pardon"),
+        word("v3", "J'entends mal", "zhahN-tahN mahl", "I don't hear well (entendre: to hear)", "l3", "verb", "entendre"),
+        word("v4", "je n'étais pas aussi beau", "zhuh nay-teh pah oh-see boh", "I wasn't that handsome (être, imparfait)", "l7", "verb", "etre"),
+        word("v5", "Lequel ?", "luh-kel", "Which one? (masculine; laquelle for a feminine noun)", "l9", "table", "lequel"),
+        word("v6", "Celui de la photo", "suh-lwee duh lah foh-toh", "The one in the photo (celui: masculine)", "l10", "table", "demonstrative-pronouns"),
+        word("v7", "Il a quitté Delorme", "eel ah kee-tay duh-lorm", "He left Delorme's (quitter + a place takes avoir)", "l11", "verb", "quitter"),
+        word("v8", "Vous vous souvenez de son nom de famille ?", "voo voo soo-vuh-nay duh sohN nohN duh fah-meey", "Do you remember his surname? (US: last name)", "l12", "verb", "se-souvenir"),
+        word("v9", "Il est parti au Canada", "eel eh par-tee oh kah-nah-dah", "He left for Canada (partir takes être)", "l13", "verb", "partir"),
+        word("v10", "il n'est jamais revenu", "eel neh zhah-meh ruh-vuh-new", "he never came back (ne… jamais around être)", "l13", "verb", "revenir")
+      ],
+      questions: [
+        q("q1", "Why does M. Perrin ask Maya to repeat?", "He doesn't hear very well", ["He doesn't understand her accent", "He is on the phone", "He doesn't know Simone"], "en", "l3"),
+        q("q2", "Is M. Perrin the young man in the photo?", "No, he laughs and says he was never that handsome", ["Yes, he recognises himself at once", "He isn't sure, the photo is too old", "Yes, but he doesn't want to say so"], "en", "l7"),
+        q("q3", "How does M. Perrin describe the other Jacques?", "Tall and shy", ["Short and talkative", "Tall and funny", "Handsome and proud"], "en", "l11"),
+        q("q4", "How does Maya say which Jacques she means?", "Celui de la photo.", ["Celle de la photo.", "Ceux de la photo.", "Lequel de la photo ?"], "fr", "l10")
+      ],
+      notice: {
+        title: "Lequel ? Which one?",
+        text: "When Maya says Jacques, M. Perrin asks Lequel ?: which one? Lequel stands for quel + a noun (quel Jacques ?) and agrees with it: lequel, laquelle, lesquels, lesquelles. Maya answers with celui de la photo, 'the one in the photo'.",
+        examples: [
+          eg("Jacques ? Lequel ?", "zhahk. luh-kel", "Jacques? Which one?"),
+          eg("Une photo ? Laquelle ?", "ewn foh-toh. lah-kel", "A photo? Which one? (feminine)"),
+          eg("Celui de la photo.", "suh-lwee duh lah foh-toh", "The one in the photo.")
+        ],
+        table: "lequel"
+      }
+    },
+    {
+      id: "lyon-10-a-rainy-afternoon", number: 30, level: "A2", series: "la-lettre-de-lyon", episode: 10, act: 2,
+      title: "A rainy afternoon", titleFr: "Un après-midi de pluie",
+      recap: "M. Perrin is not the man in the photo. The other Jacques at Delorme, tall and shy, left for Canada in 1962.",
+      summary: "On a rainy afternoon Maya wants to give up: a quarrel, a confession, then a clue on an old postmark.",
+      scene: "On Saturday afternoon the rain drums on the skylight of La Page Tournée. Maya tells Théo she wants to stop looking for J., and they argue. Then Théo picks up the second letter under the lamp.",
+      keywords: ["pluie", "rain", "rainy", "argument", "quarrel", "dispute", "moi", "toi", "stressed pronouns", "postmark", "cachet de la poste", "fleurie", "grief", "fed up"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "neighbour", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Il fait un temps de chien… et moi, j'en ai marre. Je veux arrêter.", "eel feh uhN tahN duh shyaN… ay mwah, zhahN‿nay mar. zhuh vuh ah-reh-tay",
+          "The weather's foul… and I'm fed up. I want to stop.",
+          ["Il fait un temps de chien et j'en ai marre. Je veux arrêter.", "Il pleut, et moi, j'en ai marre. Je veux arrêter.", "Il fait un temps de chien… et moi, j'en ai assez. Je veux arrêter.", "Il fait un temps de chien… et moi, j'en ai marre. Je veux tout arrêter.", "Quel temps de chien… Moi, j'en ai marre. Je veux arrêter."]),
+        line("l2", "theo", "Arrêter ? Pourquoi ? On sait qu'il s'appelle Jacques !", "ah-reh-tay. poor-kwah. ohN seh keel sah-pel zhahk",
+          "Stop? Why? We know his name's Jacques!",
+          ["Arrêter ? Mais pourquoi ? On sait qu'il s'appelle Jacques !", "Pourquoi ? On sait qu'il s'appelle Jacques !", "Arrêter ? Pourquoi ? On connaît son prénom, Jacques !", "Arrêter ? Pourquoi ? On sait déjà qu'il s'appelle Jacques !", "Arrêter ? Pourquoi ? Maintenant, on sait qu'il s'appelle Jacques !"]),
+        line("l3", "maya", "Un Jacques parti au Canada il y a soixante-quatre ans. Le Canada, c'est immense !", "uhN zhahk par-tee oh kah-nah-dah eel ee ah swah-sahNt-kah-trahN. luh kah-nah-dah, seh ee-mahNs",
+          "A Jacques who left for Canada sixty-four years ago. Canada is huge!",
+          ["Un Jacques parti au Canada il y a 64 ans. Le Canada, c'est immense !", "Un Jacques parti au Canada il y a soixante-quatre ans. Le Canada, c'est énorme !", "Un Jacques qui est parti au Canada il y a soixante-quatre ans. Le Canada, c'est immense !", "Un Jacques parti au Canada il y a soixante-quatre ans ! Le Canada est immense !", "Un Jacques parti au Canada en soixante-deux. Le Canada, c'est immense !"]),
+        line("l4", "theo", "Je sais, mais on n'a pas fini.", "zhuh seh, meh ohN nah pah fee-nee",
+          "I know, but we haven't finished.",
+          ["Je sais, mais on n'a pas fini de chercher.", "Je sais, mais on n'a pas encore fini.", "Je sais, mais ce n'est pas fini.", "D'accord, mais on n'a pas fini.", "Je sais, mais on n'a pas terminé."]),
+        line("l5", "maya", "Il est peut-être mort, Théo. Et moi, j'ai un appartement à vider et une vie à Londres.", "eel eh puh-teh-truh mor, tay-oh. ay mwah, zhay uhN‿nah-par-tuh-mahN ah vee-day ay ewn vee ah lohN-druh",
+          "He may be dead, Théo. And I've got a flat to clear out and a life in London. (US: an apartment)",
+          ["Il est peut-être mort. Et moi, j'ai un appartement à vider et une vie à Londres.", "Il est peut-être mort, Théo. Moi, j'ai un appartement à vider et une vie à Londres.", "Il est peut-être mort, tu sais. Et moi, j'ai un appartement à vider et une vie à Londres.", "Peut-être qu'il est mort, Théo. Et moi, j'ai un appartement à vider et une vie à Londres.", "Il est peut-être mort, Théo. Et moi, j'ai un appartement à vider et ma vie à Londres."]),
+        line("l6", "theo", "Tu as décidé ça toute seule ? Moi, je crois que tu as peur.", "tew ah day-see-day sah toot suhl. mwah, zhuh krwah kuh tew ah puhr",
+          "You decided that all on your own? I think you're scared.",
+          ["Tu as décidé ça toute seule ? Je crois que tu as peur.", "Tu as décidé ça toute seule ? Moi, je pense que tu as peur.", "Tu as décidé ça seule ? Moi, je crois que tu as peur.", "Tu as décidé ça toute seule, c'est ça ? Moi, je crois que tu as peur.", "Tu as pris cette décision toute seule ? Moi, je crois que tu as peur."]),
+        line("l7", "maya", "N'importe quoi ! Toi, tu ne sais pas ce que c'est, perdre quelqu'un.", "naN-port kwah. twah, tew nuh seh pah suh kuh seh, pair-druh kelk-uhN",
+          "Rubbish! You don't know what it's like to lose someone. (US: nonsense)",
+          ["N'importe quoi ! Tu ne sais pas ce que c'est, perdre quelqu'un.", "N'importe quoi ! Toi, tu ne sais pas ce que c'est de perdre quelqu'un.", "N'importe quoi ! Toi, tu sais pas ce que c'est, perdre quelqu'un.", "N'importe quoi ! Toi, tu ne peux pas savoir ce que c'est, perdre quelqu'un.", "N'importe quoi ! Toi, tu ne sais pas ce que ça fait, de perdre quelqu'un."]),
+        line("l8", "theo", "Si, je sais. Mon père est mort il y a trois ans.", "see, zhuh seh. mohN pair eh mor eel ee ah trwah‿zahN",
+          "Yes, I do. My father died three years ago.",
+          ["Si, je le sais. Mon père est mort il y a trois ans.", "Si. Mon père est mort il y a trois ans.", "Si, je sais. Mon père est mort il y a 3 ans.", "Si, je sais. J'ai perdu mon père il y a trois ans.", "Si, je sais ce que c'est. Mon père est mort il y a trois ans."]),
+        line("l9", "maya", "Oh… Théo. Je ne savais pas. Je suis désolée.", "oh… tay-oh. zhuh nuh sah-veh pah. zhuh swee day-zoh-lay",
+          "Oh… Théo. I didn't know. I'm sorry.",
+          ["Oh… Théo. Je ne savais pas. Pardon.", "Je ne savais pas. Je suis désolée.", "Oh… Théo. Je ne le savais pas. Je suis désolée.", "Oh… Théo. Je ne savais pas. Je suis vraiment désolée.", "Oh… Théo. Je savais pas. Pardon."]),
+        line("l10", "theo", "Ce n'est pas grave. Après, moi aussi, j'avais le cafard. Je voulais tout arrêter.", "suh neh pah grahv. ah-preh, mwah oh-see, zhah-veh luh kah-far. zhuh voo-leh too ah-reh-tay",
+          "It's all right. Afterwards, I felt low too. I wanted to give everything up.",
+          ["C'est pas grave. Après, moi aussi, j'avais le cafard. Je voulais tout arrêter.", "Ce n'est pas grave. Moi aussi, j'avais le cafard. Je voulais tout arrêter.", "Ce n'est rien. Après, moi aussi, j'avais le cafard. Je voulais tout arrêter.", "Ce n'est pas grave. Après, j'avais le cafard, moi aussi. Je voulais tout arrêter.", "Ce n'est pas grave. Après, moi aussi, j'étais triste. Je voulais tout arrêter."]),
+        line("l11", "maya", "Et qu'est-ce qui t'a aidé ?", "ay kes-kee tah eh-day",
+          "And what helped you?",
+          ["Qu'est-ce qui t'a aidé ?", "Et qu'est-ce qui t'a aidé, toi ?", "Et qu'est-ce qui t'a fait du bien ?", "Et toi, qu'est-ce qui t'a aidé ?", "Et après, qu'est-ce qui t'a aidé ?"]),
+        line("l12", "theo", "Les livres. Et les gens du quartier. Viens, regarde encore les lettres avec moi.", "lay lee-vruh. ay lay zhahN dew kar-tyay. vyaN, ruh-gard ahN-kor lay let-ruh ah-vek mwah",
+          "Books. And the people in the neighbourhood. Come on, look at the letters again with me. (US: neighborhood)",
+          ["Les livres. Et les gens du quartier. Viens, regarde encore une fois les lettres avec moi.", "Les livres. Et les gens du quartier. Viens, on regarde encore les lettres ensemble.", "Les livres. Et les gens du quartier. Viens, relis les lettres avec moi.", "Les livres. Et les voisins. Viens, regarde encore les lettres avec moi.", "Les livres. Et les gens du quartier. Allez, viens, regarde encore les lettres avec moi."]),
+        line("l13", "maya", "D'accord. « Je suis chez mes parents, à la campagne… » Mais où ?", "dah-kor. zhuh swee shay meh pah-rahN, ah lah kahN-pahny… meh oo",
+          "OK. 'I'm at my parents', in the country…' But where?",
+          ["D'accord. « Je suis chez mes parents, à la campagne… » Mais où, exactement ?", "« Je suis chez mes parents, à la campagne… » Mais où ?", "D'accord. « Je suis chez mes parents, à la campagne… » Mais où, à la campagne ?", "D'accord. « Je suis chez mes parents, à la campagne… » Oui, mais où ?", "Bon, d'accord. « Je suis chez mes parents, à la campagne… » Mais où ?"]),
+        line("l14", "theo", "Attends. Le cachet de la poste… Fleurie. Fleurie, dans le Beaujolais !", "ah-tahN. luh kah-sheh duh lah post… fluh-ree. fluh-ree, dahN luh boh-zhoh-leh",
+          "Wait. The postmark… Fleurie. Fleurie, in the Beaujolais!",
+          ["Attends ! Le cachet de la poste… Fleurie, dans le Beaujolais !", "Attends. Regarde le cachet de la poste… Fleurie. Fleurie, dans le Beaujolais !", "Attends. Le tampon de la poste… Fleurie. Fleurie, dans le Beaujolais !", "Attends. Le cachet… Fleurie ! Fleurie, dans le Beaujolais !", "Attends. Le cachet de la poste dit Fleurie. Fleurie, dans le Beaujolais !"])
+      ],
+      vocab: [
+        word("v1", "Il fait un temps de chien", "eel feh uhN tahN duh shyaN", "The weather's foul (literally: a dog's weather)", "l1", "expression", "temps-de-chien"),
+        word("v2", "j'en ai marre", "zhahN‿nay mar", "I'm fed up (informal)", "l1", "expression", "jen-ai-marre"),
+        word("v3", "Tu as décidé", "tew ah day-see-day", "You decided / You've decided (décider)", "l6", "verb", "decider"),
+        word("v4", "je crois que tu as peur", "zhuh krwah kuh tew ah puhr", "I think you're scared (croire que; avoir peur)", "l6", "verb", "croire"),
+        word("v5", "N'importe quoi", "naN-port kwah", "Rubbish! / Nonsense!", "l7", "expression", "nimporte-quoi"),
+        word("v6", "Toi, tu ne sais pas", "twah, tew nuh seh pah", "You don't know (toi stresses 'you')", "l7", "table", "stressed-pronouns"),
+        word("v7", "perdre quelqu'un", "pair-druh kelk-uhN", "to lose someone", "l7", "verb", "perdre"),
+        word("v8", "Mon père est mort", "mohN pair eh mor", "My father died (mourir takes être)", "l8", "verb", "mourir"),
+        word("v9", "j'avais le cafard", "zhah-veh luh kah-far", "I felt low (avoir le cafard; imparfait for a feeling)", "l10", "expression", "avoir-le-cafard"),
+        word("v10", "le cachet de la poste", "luh kah-sheh duh lah post", "the postmark", "l14", null)
+      ],
+      questions: [
+        q("q1", "Why does Maya want to stop looking for J.?", "Canada is huge, he may be dead and her life is in London", ["She has already found him", "Théo asked her to stop", "Her mother wants the flat sold quickly"], "en", "l5"),
+        q("q2", "What does Théo tell Maya about his father?", "He died three years ago", ["He died thirteen years ago", "He left for Canada", "He ran the bookshop before Théo"], "en", "l8"),
+        q("q3", "What helped Théo after his loss?", "Books and the people in the neighbourhood", ["Moving to London", "A trip to Canada", "Working at the market"], "en", "l12"),
+        q("q4", "Where was the second letter posted, according to Théo?", "Fleurie, dans le Beaujolais.", ["Lyon, à la Croix-Rousse.", "Montréal, au Canada.", "Paris, près de la gare."], "fr", "l14")
+      ],
+      notice: {
+        title: "Moi, toi: stressed pronouns for contrast",
+        text: "In the argument they put moi and toi in front: Et moi, j'ai un appartement à vider. Toi, tu ne sais pas… A stressed pronoun adds weight or contrast, and the normal subject (je, tu) still comes before the verb. You also use them after a preposition: avec moi.",
+        examples: [
+          eg("Toi, tu ne sais pas.", "twah, tew nuh seh pah", "You don't know. (stressing 'you')"),
+          eg("Moi, je crois que tu as peur.", "mwah, zhuh krwah kuh tew ah puhr", "I think you're scared. (stressing 'I')"),
+          eg("Regarde les lettres avec moi.", "ruh-gard lay let-ruh ah-vek mwah", "Look at the letters with me. (after avec)")
+        ],
+        table: "stressed-pronouns"
+      }
+    },
+    {
+      id: "lyon-11-the-vineyards", number: 31, level: "B1", series: "la-lettre-de-lyon", episode: 11, act: 3,
+      title: "In the Beaujolais vineyards", titleFr: "Dans les vignes du Beaujolais",
+      recap: "Maya nearly gave up, and Théo told her his father died three years ago. Then he saw the postmark on letter 2: Fleurie, in the Beaujolais.",
+      summary: "In Fleurie at harvest time, Maya finally learns J.'s surname and where he lives now.",
+      scene: "It's Sunday, the last day of the grape harvest in Fleurie, and long tables are being set out between the vines for the revole. Maya asks M. Dumas, a winegrower, about a family who had vines here long ago, while Théo picks grapes further down the row.",
+      keywords: ["beaujolais", "fleurie", "vineyard", "vineyards", "vignes", "vendanges", "harvest", "grape harvest", "revole", "winegrower", "vigneron", "canada", "vial", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "dumas", name: "M. Dumas", role: "winegrower", initial: "D", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "visitor", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "dumas", "Bienvenue à Fleurie, mademoiselle ! C'est le dernier jour des vendanges.", "byaN-vuh-new ah fluh-ree, mad-mwah-zel. seh luh dair-nyay zhoor day vahN-dahNzh",
+          "Welcome to Fleurie! It's the last day of the grape harvest.",
+          ["Bienvenue à Fleurie ! C'est le dernier jour des vendanges.", "Bienvenue, mademoiselle ! C'est le dernier jour des vendanges.", "Bienvenue à Fleurie, mademoiselle ! Aujourd'hui, c'est le dernier jour des vendanges.", "Bienvenue à Fleurie ! Les vendanges finissent aujourd'hui."]),
+        line("l2", "maya", "Merci, monsieur. Je cherche une famille qui avait des vignes ici, il y a longtemps.", "mair-see, muh-syuh. zhuh shairsh ewn fah-meey kee ah-veh day veeny ee-see, eel ee ah lohN-tahN",
+          "Thank you. I'm looking for a family who had vines here, a long time ago.",
+          ["Merci. Je cherche une famille qui avait des vignes ici, il y a longtemps.", "Merci, monsieur. Je cherche une famille qui avait des vignes à Fleurie, il y a longtemps.", "Merci, monsieur. Je cherche une famille qui avait des vignes ici autrefois.", "Merci, monsieur. Je cherche une famille qui avait des vignes ici avant."]),
+        line("l3", "dumas", "Ah bon ? Comment est-ce qu'elle s'appelait, cette famille ?", "ah bohN. koh-mahN es-kel sah-pleh, set fah-meey",
+          "Really? What was the family called?",
+          ["Comment est-ce qu'elle s'appelait ?", "Ah bon ? Comment s'appelait cette famille ?", "Ah bon ? Elle s'appelait comment, cette famille ?", "Et comment est-ce qu'elle s'appelait, cette famille ?", "Ah bon ? Quel était le nom de cette famille ?"]),
+        line("l4", "maya", "Je ne sais pas. Le fils s'appelait Jacques. Il travaillait à Lyon quand il est parti au Canada.", "zhuh nuh seh pah. luh fees sah-pleh zhahk. eel trah-vah-yeh ah lee-ohN kahN‿teel eh par-tee oh kah-nah-dah",
+          "I don't know (their name). The son was called Jacques. He was working in Lyon when he left for Canada.",
+          ["Je ne sais pas. Le fils s'appelait Jacques. Il travaillait à Lyon quand il est parti pour le Canada.", "Je ne sais pas. Le fils s'appelait Jacques, il travaillait à Lyon. Il est parti au Canada.", "Je ne connais pas le nom. Le fils s'appelait Jacques. Il travaillait à Lyon quand il est parti au Canada.", "Je ne sais pas. Il s'appelait Jacques. Il travaillait à Lyon quand il est parti au Canada.", "Je ne sais pas. Le fils s'appelait Jacques. Il était typographe à Lyon quand il est parti au Canada."]),
+        line("l5", "dumas", "Jacques… au Canada ? Mais c'est le fils Vial ! Il est parti en soixante-deux.", "zhahk… oh kah-nah-dah. meh seh luh fees vyahl. eel eh par-tee ahN swah-sahNt-duh",
+          "Jacques… in Canada? But that's the Vial boy! He left in sixty-two.",
+          ["Mais c'est le fils Vial ! Il est parti en soixante-deux.", "Jacques… au Canada ? Mais c'est le fils Vial ! Il est parti en 62.", "Jacques… au Canada ? Mais c'est Jacques Vial ! Il est parti en soixante-deux.", "Jacques… au Canada ? Mais c'est le fils des Vial ! Il est parti en soixante-deux.", "Jacques… au Canada ? C'est le fils Vial, alors ! Il est parti en soixante-deux."]),
+        line("l6", "maya", "Vial ? Vous le connaissez ? Ses parents avaient des vignes ici ?", "vyahl. voo luh koh-neh-say. say pah-rahN ah-veh day veeny ee-see",
+          "Vial? Do you know him? His parents had vines here?",
+          ["Vous le connaissez ? Ses parents avaient des vignes ici ?", "Vial ? Vous le connaissez ? Ses parents avaient des vignes à Fleurie ?", "Vial ? Vous connaissez cette famille ? Ses parents avaient des vignes ici ?", "Vial ? Vous le connaissez ? Est-ce que ses parents avaient des vignes ici ?"]),
+        line("l7", "dumas", "Oui, ces vignes-là, sur la colline. Mon père les a achetées en quatre-vingt-cinq.", "wee, say veeny-lah, sewr lah koh-leen. mohN pair lay‿zah ahsh-tay ahN kah-truh-vaN-saNk",
+          "Yes, those vines there, on the hill. My father bought them in eighty-five.",
+          ["Oui, ces vignes, sur la colline. Mon père les a achetées en quatre-vingt-cinq.", "Oui, ces vignes-là, sur la colline. Mon père les a achetées en 85.", "Oui, ces vignes-là. Mon père les a achetées en quatre-vingt-cinq.", "Oui, ces vignes-là, sur la colline. Mon père les a achetées en mille neuf cent quatre-vingt-cinq.", "Oui, ces vignes-là, sur la colline. Mon père a acheté ces vignes en quatre-vingt-cinq."]),
+        line("l8", "maya", "Et Jacques ? Il est revenu en France ?", "ay zhahk. eel eh ruh-vuh-new ahN frahNs",
+          "And Jacques? Did he come back to France?",
+          ["Est-ce que Jacques est revenu en France ?", "Et Jacques ? Est-ce qu'il est revenu en France ?", "Et lui ? Il est revenu en France ?", "Et Jacques ? Il est rentré en France ?"]),
+        line("l9", "dumas", "Oui, en deux mille un. Il vivait à Montréal, mais la France lui manquait.", "wee, ahN duh meel uhN. eel vee-veh ah mohN-ray-ahl, meh lah frahNs lwee mahN-keh",
+          "Yes, in 2001. He was living in Montréal, but he missed France. (literally: France was missing to him)",
+          ["Oui, en 2001. Il vivait à Montréal, mais la France lui manquait.", "Oui, en deux mille un. Il habitait à Montréal, mais la France lui manquait.", "En deux mille un. Il vivait à Montréal, mais la France lui manquait.", "Oui, en deux mille un. Il vivait au Canada, mais la France lui manquait.", "Oui, il est revenu en deux mille un. Il vivait à Montréal, mais la France lui manquait."]),
+        line("l10", "maya", "Il vient encore à Fleurie ?", "eel vyaN ahN-kor ah fluh-ree",
+          "Does he still come to Fleurie?",
+          ["Est-ce qu'il vient encore à Fleurie ?", "Il vient toujours à Fleurie ?", "Il revient encore à Fleurie ?", "Et il vient encore ici ?"]),
+        line("l11", "dumas", "Tous les ans, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.", "too lay‿zahN, poor lah ruh-vol. meh pah set ah-nay. sah feey oh-deel ah dee nohN, ah kohz duh sohN kuhr",
+          "Every year, for the revole (the end-of-harvest meal). But not this year: his daughter Odile said no, because of his heart.",
+          ["Chaque année, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.", "Tous les ans, pour la revole. Mais cette année, sa fille Odile a dit non, à cause de son cœur.", "Oui, tous les ans, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.", "Tous les ans, pour la revole. Pas cette année : sa fille Odile a refusé, à cause de son cœur."]),
+        line("l12", "maya", "Son cœur ? Où est-ce qu'il habite maintenant ?", "sohN kuhr. oo es-keel ah-beet maN-tuh-nahN",
+          "His heart? Where does he live now?",
+          ["Son cœur ? Il habite où maintenant ?", "Son cœur ? Où habite-t-il maintenant ?", "Où est-ce qu'il habite maintenant ?", "Son cœur ? Et où est-ce qu'il habite aujourd'hui ?"]),
+        line("l13", "dumas", "Aux Tilleuls, à Caluire. Jacques Vial… Il est vivant, mademoiselle. Mais il est fragile.", "oh tee-yuhl, ah kah-lweer. zhahk vyahl… eel eh vee-vahN, mad-mwah-zel. meh eel eh frah-zheel",
+          "At Les Tilleuls, in Caluire. Jacques Vial… He's alive. But he's frail.",
+          ["Aux Tilleuls, à Caluire. Il est vivant, mademoiselle. Mais il est fragile.", "Il habite aux Tilleuls, à Caluire. Jacques Vial est vivant, mademoiselle, mais il est fragile.", "Aux Tilleuls, une maison de retraite à Caluire. Il est vivant, mademoiselle, mais il est fragile.", "Aux Tilleuls, à Caluire. Jacques Vial… Il est vivant. Mais il est fragile."]),
+        line("l14", "maya", "À Caluire… Mais c'est à dix minutes de chez moi !", "ah kah-lweer… meh seh ah dee mee-newt duh shay mwah",
+          "In Caluire… But that's ten minutes from my place!",
+          ["À Caluire… C'est à dix minutes de chez moi, ça !", "Caluire… C'est à dix minutes de chez moi !", "À Caluire… Mais c'est tout près de chez moi !", "À Caluire… Mais c'est à 10 minutes de chez moi !", "À Caluire… Mais il habite à dix minutes de chez moi !"])
+      ],
+      vocab: [
+        word("v1", "il y a longtemps", "eel ee ah lohN-tahN", "a long time ago (il y a + time = ago)", "l2", "table", "time-expressions"),
+        word("v2", "Il travaillait à Lyon", "eel trah-vah-yeh ah lee-ohN", "He was working in Lyon (imparfait: the background)", "l4", "verb", "travailler"),
+        word("v3", "il est parti au Canada", "eel eh par-tee oh kah-nah-dah", "he left for Canada (passé composé: the event)", "l4", "verb", "partir"),
+        word("v4", "Vous le connaissez ?", "voo luh koh-neh-say", "Do you know him?", "l6", "verb", "connaitre"),
+        word("v5", "Il est revenu en France", "eel eh ruh-vuh-new ahN frahNs", "He came back to France (en + a feminine country)", "l8", "verb", "revenir"),
+        word("v6", "Il vivait à Montréal", "eel vee-veh ah mohN-ray-ahl", "He was living in Montréal (à + a city)", "l9", "verb", "vivre"),
+        word("v7", "la France lui manquait", "lah frahNs lwee mahN-keh", "he missed France (literally: France was missing to him; lui = to him)", "l9", "table", "indirect-object-pronouns"),
+        word("v8", "Tous les ans", "too lay‿zahN", "Every year", "l11", "table", "time-expressions"),
+        word("v9", "sa fille", "sah feey", "his daughter (sa: fille is feminine, whoever the parent is)", "l11", "table", "possessive-adjectives")
+      ],
+      questions: [
+        q("q1", "What surname does M. Dumas give Maya for Jacques?", "Vial", ["Perrin", "Cordier", "Dumas"], "en", "l5"),
+        q("q2", "When did M. Dumas's father buy the Vial family's vines?", "In 1985", ["In 1962", "In 2001", "In 1975"], "en", "l7"),
+        q("q3", "Why isn't Jacques at the revole this year?", "His daughter said no because of his heart", ["He still lives in Montréal", "He fell out with the Dumas family", "He is helping with another harvest"], "en", "l11"),
+        q("q4", "How does M. Dumas say Jacques left in 1962?", "Il est parti en soixante-deux.", ["Il partait en soixante-deux.", "Il est revenu en soixante-deux.", "Il est resté en soixante-deux."], "fr", "l5")
+      ],
+      notice: {
+        title: "À, au, en: cities and countries",
+        text: "Maya says Il travaillait à Lyon quand il est parti au Canada, and M. Dumas answers Il est revenu en France and Il vivait à Montréal. Use à before a city, au before a masculine country (le Canada) and en before a feminine one (la France). The same word means both 'in' and 'to'.",
+        examples: [
+          eg("Il est parti au Canada.", "eel eh par-tee oh kah-nah-dah", "He left for Canada. (le Canada → au)"),
+          eg("Il est revenu en France.", "eel eh ruh-vuh-new ahN frahNs", "He came back to France. (la France → en)"),
+          eg("Il vivait à Montréal.", "eel vee-veh ah mohN-ray-ahl", "He lived in Montréal. (a city → à)")
+        ],
+        table: "cities-and-countries"
+      }
+    },
+    {
+      id: "lyon-12-a-phone-call", number: 32, level: "B1", series: "la-lettre-de-lyon", episode: 12, act: 3,
+      title: "A phone call", titleFr: "Un coup de téléphone",
+      recap: "In Fleurie, M. Dumas said Jacques Vial is alive. He came back from Canada and lives at Les Tilleuls, where his daughter Odile looks after him.",
+      summary: "Théo phones Jacques's retirement home, leaves a message for his daughter and keeps Maya out of it.",
+      scene: "It's Monday morning and Maya is working upstairs in her flat. Downstairs in the bookshop, Théo phones the Résidence Les Tilleuls in Caluire, where Sabine, the receptionist, answers.",
+      keywords: ["téléphone", "telephone", "phone call", "coup de téléphone", "appeler", "calling", "receptionist", "retirement home", "maison de retraite", "les tilleuls", "caluire", "spelling", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "sabine", name: "Sabine", role: "receptionist", initial: "S", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "caller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "sabine", "Résidence Les Tilleuls, bonjour. Sabine à l'appareil.", "ray-zee-dahNs lay tee-yuhl, bohN-zhoor. sah-been ah lah-pah-rehy",
+          "Les Tilleuls residence, good morning. Sabine speaking.",
+          ["Les Tilleuls, bonjour.", "Résidence Les Tilleuls, bonjour.", "Bonjour, résidence Les Tilleuls. Sabine à l'appareil.", "Résidence Les Tilleuls, Sabine, bonjour."]),
+        line("l2", "theo", "Bonjour, madame. Je voudrais savoir si M. Jacques Vial habite chez vous.", "bohN-zhoor, mah-dahm. zhuh voo-dreh sah-vwahr see muh-syuh zhahk vyahl ah-beet shay voo",
+          "Good morning. I'd like to know whether M. Jacques Vial lives with you.",
+          ["Bonjour. Je voudrais savoir si M. Vial habite chez vous.", "Bonjour, madame. Est-ce que M. Jacques Vial habite chez vous ?", "Bonjour, madame. Je voudrais savoir si Monsieur Jacques Vial habite ici.", "Bonjour, madame. M. Jacques Vial habite chez vous ?"]),
+        line("l3", "sabine", "Oui, M. Vial est un de nos résidents. C'est de la part de qui ?", "wee, muh-syuh vyahl eh uhN duh noh ray-zee-dahN. seh duh lah par duh kee",
+          "Yes, M. Vial is one of our residents. Who's calling, please?",
+          ["Oui, M. Vial habite ici. C'est de la part de qui ?", "Oui. C'est de la part de qui ?", "Oui, M. Vial est un de nos résidents. Qui est à l'appareil ?", "Oui, il habite ici. C'est de la part de qui ?"]),
+        line("l4", "theo", "Théo Garnier, de la librairie La Page Tournée. Je peux lui dire un mot ?", "tay-oh gar-nyay, duh lah lee-breh-ree lah pahzh toor-nay. zhuh puh lwee deer uhN moh",
+          "Théo Garnier, from La Page Tournée bookshop. Could I have a word with him?",
+          ["Théo Garnier, de La Page Tournée. Je peux lui dire un mot ?", "Théo Garnier, de la librairie La Page Tournée. Est-ce que je peux lui dire un mot ?", "C'est Théo Garnier, de la librairie La Page Tournée. Je peux lui dire un mot ?", "Théo Garnier, de la librairie La Page Tournée. Je pourrais lui dire un mot ?"]),
+        line("l5", "sabine", "Je suis désolée, monsieur. Pour les visites et les appels, il faut passer par sa fille.", "zhuh swee day-zoh-lay, muh-syuh. poor lay vee-zeet ay lay‿zah-pel, eel foh pah-say par sah feey",
+          "I'm sorry. For visits and calls, you have to go through his daughter.",
+          ["Je suis désolée. Pour les visites et les appels, il faut passer par sa fille.", "Désolée, monsieur. Pour les visites et les appels, il faut passer par sa fille.", "Je suis désolée, monsieur. Pour les visites et les appels, il faut demander à sa fille.", "Je suis désolée, monsieur. Il faut passer par sa fille."]),
+        line("l6", "theo", "Sa fille, Odile ? Est-ce que je peux lui laisser un message ?", "sah feey, oh-deel. es-kuh zhuh puh lwee leh-say uhN meh-sahzh",
+          "His daughter, Odile? Can I leave her a message?",
+          ["Je peux lui laisser un message ?", "Sa fille, Odile ? Je peux lui laisser un message ?", "D'accord. Est-ce que je peux lui laisser un message ?", "Sa fille, Odile ? Est-ce que je pourrais lui laisser un message ?"]),
+        line("l7", "sabine", "Bien sûr, mais elle est absente jusqu'à jeudi. C'est à quel sujet ?", "byaN sewr, meh el eh ahp-sahNt zhews-kah zhuh-dee. seh ah kel sew-zheh",
+          "Of course, but she's away until Thursday. What is it about?",
+          ["Bien sûr, mais elle n'est pas là avant jeudi. C'est à quel sujet ?", "Oui, mais elle est absente jusqu'à jeudi. C'est à quel sujet ?", "Bien sûr, mais elle revient jeudi. C'est à quel sujet ?", "Bien sûr, mais elle est absente jusqu'à jeudi. C'est pour quoi ?"]),
+        line("l8", "theo", "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites en soixante-deux.", "ewn ah-mee, mah-yah klark, ah ruh-troo-vay day let-ruh. muh-syuh vyahl lay‿zah ay-kreet ahN swah-sahNt-duh",
+          "A friend, Maya Clarke, has found some letters. M. Vial wrote them in sixty-two.",
+          ["Une amie a retrouvé des lettres. M. Vial les a écrites en soixante-deux.", "Une amie, Maya Clarke, a trouvé des lettres. M. Vial les a écrites en soixante-deux.", "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites en 1962.", "Une amie, Maya Clarke, a retrouvé des lettres de M. Vial, de soixante-deux."]),
+        line("l9", "sabine", "Des lettres… Je comprends. Et Garnier, comment ça s'écrit ?", "day let-ruh… zhuh kohN-prahN. ay gar-nyay, koh-mahN sah say-kree",
+          "Letters… I see. And Garnier, how do you spell that?",
+          ["Je comprends. Et Garnier, comment ça s'écrit ?", "Des lettres… D'accord. Et Garnier, comment ça s'écrit ?", "Des lettres… Je comprends. Et Garnier, ça s'écrit comment ?", "Des lettres… Je vois. Et Garnier, comment ça s'écrit ?"]),
+        line("l10", "theo", "G, A, R, N, I, E, R. Et voici le numéro de la librairie : zéro quatre, soixante-dix-huit…", "zhay, ah, air, en, ee, uh, air. ay vwah-see luh new-may-roh duh lah lee-breh-ree. zay-roh kah-truh, swah-sahNt-dee-zweet…",
+          "G, A, R, N, I, E, R. And here's the bookshop's number: zero four, seventy-eight…",
+          ["G, A, R, N, I, E, R. Et le numéro de la librairie : zéro quatre, soixante-dix-huit…", "Garnier : G, A, R, N, I, E, R. Et voici le numéro de la librairie : zéro quatre, soixante-dix-huit…", "G, A, R, N, I, E, R. Et voici le numéro de la librairie : 04 78…", "G, A, R, N, I, E, R. Mon numéro, c'est celui de la librairie : zéro quatre, soixante-dix-huit…"]),
+        line("l11", "sabine", "C'est noté. Je lui laisse le message jeudi matin. Je lui dis aussi que Mlle Clarke la cherche ?", "seh noh-tay. zhuh lwee les luh meh-sahzh zhuh-dee mah-taN. zhuh lwee dee oh-see kuh mad-mwah-zel klark lah shairsh",
+          "That's noted. I'll leave her the message on Thursday morning. Shall I also tell her that Mlle Clarke is looking for her?",
+          ["C'est noté. Je lui laisse le message jeudi. Je lui dis aussi que Mlle Clarke la cherche ?", "Très bien. Je lui laisse le message jeudi matin. Je lui dis aussi que Mlle Clarke la cherche ?", "C'est noté. Je lui donne le message jeudi matin. Je lui dis aussi que Mlle Clarke la cherche ?", "C'est noté. Je lui laisse le message jeudi matin. Je lui dis aussi que Mademoiselle Clarke la cherche ?"]),
+        line("l12", "theo", "Non… Pas encore. Le numéro, c'est seulement le mien.", "nohN… pah ahN-kor. luh new-may-roh, seh suhl-mahN luh myaN",
+          "No… Not yet. The number is just mine.",
+          ["Euh… Non. Pas encore. Le numéro, c'est seulement le mien.", "Non, pas encore. Seulement le mien.", "Non… Pas encore. Le numéro, c'est juste le mien.", "Non… Pas encore. Donnez-lui seulement le mien.", "Non, pas encore. Le numéro, c'est uniquement le mien."])
+      ],
+      vocab: [
+        word("v1", "je voudrais savoir", "zhuh voo-dreh sah-vwahr", "I'd like to know (polite)", "l2", "expression", "je-voudrais"),
+        word("v2", "Je peux lui dire un mot ?", "zhuh puh lwee deer uhN moh", "Could I have a word with him? (lui = to him)", "l4", "verb", "dire"),
+        word("v3", "il faut passer par sa fille", "eel foh pah-say par sah feey", "you have to go through his daughter", "l5", "verb", "passer"),
+        word("v4", "lui laisser un message", "lwee leh-say uhN meh-sahzh", "leave her a message (lui = to her)", "l6", "verb", "laisser"),
+        word("v5", "jusqu'à jeudi", "zhews-kah zhuh-dee", "until Thursday", "l7", "table", "days"),
+        word("v6", "M. Vial les a écrites", "muh-syuh vyahl lay‿zah ay-kreet", "M. Vial wrote them (écrites agrees with les = les lettres)", "l8", "verb", "ecrire"),
+        word("v7", "comment ça s'écrit ?", "koh-mahN sah say-kree", "how do you spell that? (literally: how does that write itself?)", "l9", "expression", "comment-ca-secrit"),
+        word("v8", "Je lui laisse le message", "zhuh lwee les luh meh-sahzh", "I'll leave her the message (lui replaces à Odile)", "l11", "table", "indirect-object-pronouns"),
+        word("v9", "le mien", "luh myaN", "mine (le numéro → le mien)", "l12", "table", "possessive-pronouns")
+      ],
+      questions: [
+        q("q1", "Why can't Théo speak to M. Vial directly?", "Calls and visits go through his daughter", ["M. Vial is in hospital", "M. Vial doesn't live there any more", "Visits are only on Sundays"], "en", "l5"),
+        q("q2", "Until when is Odile away?", "Until Thursday", ["Until Monday", "Until Saturday", "Until next month"], "en", "l7"),
+        q("q3", "Which phone number does Théo leave?", "The bookshop's number", ["Maya's mobile number", "Odile's home number", "Mme Berthier's number"], "en", "l10"),
+        q("q4", "How does Théo ask to leave a message for Odile?", "Est-ce que je peux lui laisser un message ?", ["Est-ce que je peux leur laisser un message ?", "Est-ce que je peux lui dire un mot ?", "Est-ce que je peux le laisser ici ?"], "fr", "l6")
+      ],
+      notice: {
+        title: "Lui, leur: to him, to her, to them",
+        text: "Théo asks Je peux lui dire un mot ? about M. Vial and Est-ce que je peux lui laisser un message ? about Odile. Lui replaces à + one person, a man or a woman, and goes before the verb (here before the infinitive). For more than one person, use leur.",
+        examples: [
+          eg("Je peux lui laisser un message ?", "zhuh puh lwee leh-say uhN meh-sahzh", "Can I leave him/her a message? (lui = to him or to her)"),
+          eg("Je leur laisse un message.", "zhuh luhr les uhN meh-sahzh", "I'm leaving them a message. (leur = to them)")
+        ],
+        table: "indirect-object-pronouns"
+      }
+    },
+    {
+      id: "lyon-13-the-message", number: 33, level: "B1", series: "la-lettre-de-lyon", episode: 13, act: 3,
+      title: "The message", titleFr: "Le message",
+      recap: "Théo phoned Les Tilleuls and left a message for Odile Vial, Jacques's daughter. He didn't tell Maya.",
+      summary: "Minding the bookshop, Maya takes a call from Les Tilleuls and finds out Théo kept a secret from her.",
+      scene: "It's Thursday, six o'clock in the evening. Maya is minding La Page Tournée while Théo delivers books, and the shop phone rings. Yanis, the chatty evening receptionist at Les Tilleuls, has a message for M. Garnier.",
+      keywords: ["message", "phone message", "bookshop", "librairie", "receptionist", "les tilleuls", "secret", "odile", "direct object", "pronouns", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "yanis", name: "Yanis", role: "receptionist", initial: "Y", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "bookshop helper", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "yanis", "Bonsoir ! Ici Yanis, de la résidence Les Tilleuls. Je suis bien à La Page Tournée ?", "bohN-swahr. ee-see yah-nees, duh lah ray-zee-dahNs lay tee-yuhl. zhuh swee byaN ah lah pahzh toor-nay",
+          "Good evening! This is Yanis, from Les Tilleuls residence. Is this La Page Tournée?",
+          ["Bonsoir ! C'est Yanis, de la résidence Les Tilleuls. Je suis bien à La Page Tournée ?", "Bonsoir ! Ici Yanis, des Tilleuls. C'est bien La Page Tournée ?", "Bonsoir ! Yanis, de la résidence Les Tilleuls. Je suis bien à la librairie La Page Tournée ?", "Bonsoir ! Ici Yanis, de la résidence Les Tilleuls. C'est bien La Page Tournée ?"]),
+        line("l2", "maya", "Les Tilleuls ? Oui… oui, c'est bien ici. Je vous écoute.", "lay tee-yuhl. wee… wee, seh byaN ee-see. zhuh voo‿zay-koot",
+          "Les Tilleuls? Yes… yes, this is the right place. Go ahead. (literally: I'm listening to you)",
+          ["Oui, c'est bien ici. Je vous écoute.", "Les Tilleuls ? Oui, c'est bien ici. Je vous écoute.", "Les Tilleuls ? Oui… c'est bien La Page Tournée. Je vous écoute.", "Les Tilleuls ? Oui, c'est ici. Je vous écoute."]),
+        line("l3", "yanis", "J'ai un message pour M. Garnier, qui a appelé lundi. Vous le connaissez ?", "zhay uhN meh-sahzh poor muh-syuh gar-nyay, kee ah ah-puh-lay luhN-dee. voo luh koh-neh-say",
+          "I've got a message for M. Garnier, who called on Monday. Do you know him?",
+          ["J'ai un message pour M. Garnier, qui a téléphoné lundi. Vous le connaissez ?", "J'ai un message pour Monsieur Garnier. Il a appelé lundi. Vous le connaissez ?", "J'ai un message pour M. Garnier, qui a appelé lundi. Vous connaissez M. Garnier ?", "C'est un message pour M. Garnier, qui a appelé lundi. Vous le connaissez ?"]),
+        line("l4", "maya", "Lundi ? Oui… je le connais. Je travaille avec lui.", "luhN-dee. wee… zhuh luh koh-neh. zhuh trah-vahy ah-vek lwee",
+          "Monday? Yes… I know him. I work with him.",
+          ["Oui, je le connais. Je travaille avec lui.", "Lundi ? Oui, je le connais bien. Je travaille avec lui.", "Lundi ? Oui… je le connais. Je suis son amie.", "Lundi ? Oui, je le connais. Je travaille ici avec lui."]),
+        line("l5", "yanis", "Parfait. C'est de la part de Mme Odile Vial, la fille de M. Vial. Vous la connaissez aussi ?", "par-feh. seh duh lah par duh mah-dahm oh-deel vyahl, lah feey duh muh-syuh vyahl. voo lah koh-neh-say oh-see",
+          "Perfect. It's from Mme Odile Vial, M. Vial's daughter. Do you know her too?",
+          ["C'est de la part de Mme Odile Vial, la fille de M. Vial. Vous la connaissez aussi ?", "Parfait. C'est un message de Mme Odile Vial, la fille de M. Vial. Vous la connaissez ?", "Parfait. C'est de la part d'Odile Vial, la fille de M. Vial. Vous la connaissez aussi ?", "Parfait. C'est de la part de Mme Vial, sa fille. Vous la connaissez aussi ?"]),
+        line("l6", "maya", "Non, je ne la connais pas. Mais je connais son père… enfin, ses lettres.", "nohN, zhuh nuh lah koh-neh pah. meh zhuh koh-neh sohN pair… ahN-faN, say let-ruh",
+          "No, I don't know her. But I know her father… well, his letters.",
+          ["Non, je ne la connais pas. Mais je connais son père.", "Non, je ne la connais pas. Mais je connais un peu son père… enfin, ses lettres.", "Non, pas du tout. Mais je connais son père… enfin, ses lettres.", "Non, je la connais pas. Mais je connais son père… enfin, ses lettres."]),
+        line("l7", "yanis", "Ah, d'accord ! Alors voilà : Mme Vial ne veut pas de visite cette semaine. Son père est trop fatigué.", "ah, dah-kor. ah-lor vwah-lah. mah-dahm vyahl nuh vuh pah duh vee-zeet set suh-men. sohN pair eh troh fah-tee-gay",
+          "Ah, right! So here it is: Mme Vial doesn't want a visit this week. Her father is too tired.",
+          ["Alors voilà : Mme Vial ne veut pas de visite cette semaine. Son père est trop fatigué.", "Ah, d'accord ! Mme Vial ne veut pas de visite cette semaine, son père est trop fatigué.", "Ah, d'accord ! Alors, Mme Vial ne veut pas de visite cette semaine. Son père est très fatigué.", "D'accord ! Alors voilà : pas de visite cette semaine. Son père est trop fatigué."]),
+        line("l8", "maya", "Je comprends. Elle veut le protéger.", "zhuh kohN-prahN. el vuh luh proh-tay-zhay",
+          "I understand. She wants to protect him.",
+          ["Je comprends. Elle veut protéger son père.", "Je comprends bien. Elle veut le protéger.", "D'accord, je comprends. Elle veut le protéger.", "Je comprends. Elle a raison de le protéger."]),
+        line("l9", "yanis", "Voilà. Mais elle voudrait voir M. Garnier samedi, seul. Elle l'a dit deux fois : seul !", "vwah-lah. meh el voo-dreh vwahr muh-syuh gar-nyay sahm-dee, suhl. el lah dee duh fwah. suhl",
+          "That's it. But she'd like to see M. Garnier on Saturday, on his own. She said it twice: on his own!",
+          ["Mais elle voudrait voir M. Garnier samedi, seul. Elle l'a dit deux fois : seul !", "Voilà. Mais elle voudrait voir M. Garnier samedi, seul.", "Voilà. Mais elle aimerait voir M. Garnier samedi, seul. Elle l'a dit deux fois : seul !", "Voilà. Mais elle voudrait rencontrer M. Garnier samedi, seul. Elle l'a dit deux fois : seul !"]),
+        line("l10", "maya", "Seul ? Mais… M. Garnier a appelé lundi, vous êtes sûr ?", "suhl. meh… muh-syuh gar-nyay ah ah-puh-lay luhN-dee, voo‿zet sewr",
+          "On his own? But… M. Garnier called on Monday, are you sure?",
+          ["M. Garnier a appelé lundi, vous êtes sûr ?", "Seul ? Mais… il a appelé lundi, vous êtes sûr ?", "Seul ? Mais… M. Garnier a téléphoné lundi, vous êtes sûr ?", "Seul ? Mais… M. Garnier a appelé lundi ? Vous en êtes sûr ?"]),
+        line("l11", "yanis", "Oui, lundi matin. Ma collègue Sabine l'a noté. Il a laissé le numéro de la librairie.", "wee, luhN-dee mah-taN. mah koh-leg sah-been lah noh-tay. eel ah leh-say luh new-may-roh duh lah lee-breh-ree",
+          "Yes, Monday morning. My colleague Sabine wrote it down. He left the bookshop's number.",
+          ["Oui, lundi matin. Sabine l'a noté. Il a laissé le numéro de la librairie.", "Oui, lundi matin. Ma collègue l'a noté. Il a laissé le numéro de la librairie.", "Oui, lundi. Ma collègue Sabine l'a noté. Il a laissé le numéro de la librairie.", "Oui, lundi matin. Ma collègue Sabine l'a écrit. Il a laissé le numéro de la librairie."]),
+        line("l12", "maya", "Lundi… Il le sait depuis trois jours.", "luhN-dee… eel luh seh duh-pwee trwah zhoor",
+          "Monday… He's known for three days.",
+          ["Il le sait depuis trois jours.", "Lundi… Il le sait depuis 3 jours.", "Lundi… Ça fait trois jours qu'il le sait.", "Lundi… Il le sait depuis lundi.", "Lundi… Il le sait depuis trois jours, alors."]),
+        line("l13", "yanis", "Pardon ? Vous pouvez lui donner le message, mademoiselle ?", "par-dohN. voo poo-vay lwee doh-nay luh meh-sahzh, mad-mwah-zel",
+          "Sorry? Can you give him the message?",
+          ["Vous pouvez lui donner le message ?", "Pardon ? Vous pouvez lui donner le message ?", "Pardon ? Vous pouvez lui transmettre le message, mademoiselle ?", "Pardon ? Est-ce que vous pouvez lui donner le message, mademoiselle ?"]),
+        line("l14", "maya", "Merci, monsieur. Je vais le lui dire… moi-même.", "mair-see, muh-syuh. zhuh veh luh lwee deer… mwah-mem",
+          "Thank you. I'll tell him… myself.",
+          ["Merci. Je vais le lui dire moi-même.", "Merci, monsieur. Je vais le lui dire moi-même, ce soir.", "Merci, monsieur. Je le lui dirai… moi-même.", "Merci, monsieur. Je vais lui dire… moi-même."])
+      ],
+      vocab: [
+        word("v1", "Je vous écoute", "zhuh voo‿zay-koot", "Go ahead (on the phone; literally: I'm listening to you)", "l2", "verb", "ecouter"),
+        word("v2", "qui a appelé lundi", "kee ah ah-puh-lay luhN-dee", "who called on Monday", "l3", "verb", "appeler"),
+        word("v3", "Vous le connaissez ?", "voo luh koh-neh-say", "Do you know him? (le = him)", "l3", "table", "direct-object-pronouns"),
+        word("v4", "je ne la connais pas", "zhuh nuh lah koh-neh pah", "I don't know her (la = her; ne… pas goes around la + verb)", "l6", "verb", "connaitre"),
+        word("v5", "d'accord", "dah-kor", "right / OK", "l7", "expression", "daccord"),
+        word("v6", "Elle veut le protéger", "el vuh luh proh-tay-zhay", "She wants to protect him (le goes before the infinitive)", "l8", "verb", "vouloir"),
+        word("v7", "depuis trois jours", "duh-pwee trwah zhoor", "for three days (and still now)", "l12", "table", "time-expressions"),
+        word("v8", "Pardon ?", "par-dohN", "Sorry? / Pardon?", "l13", "expression", "pardon"),
+        word("v9", "Je vais le lui dire", "zhuh veh luh lwee deer", "I'm going to tell him (le = it, lui = to him)", "l14", "table", "pronoun-order")
+      ],
+      questions: [
+        q("q1", "Who is the message from?", "Odile Vial, Jacques's daughter", ["Jacques Vial himself", "Sabine, the day receptionist", "M. Dumas, the winegrower"], "en", "l5"),
+        q("q2", "Why doesn't Odile want a visit this week?", "Her father is too tired", ["She is away until next month", "The residence is closed to visitors", "Her father is in hospital"], "en", "l7"),
+        q("q3", "What does Maya realise at the end?", "Théo has known about Jacques for three days", ["Théo has already met Jacques", "Odile wants to meet her on Saturday", "Sabine forgot to pass on the message"], "en", "l12"),
+        q("q4", "How does Yanis ask Maya if she knows M. Garnier?", "Vous le connaissez ?", ["Vous la connaissez ?", "Vous les connaissez ?", "Vous le savez ?"], "fr", "l3")
+      ],
+      notice: {
+        title: "Le, la, les: him, her, it, them",
+        text: "Yanis asks Vous le connaissez ? about M. Garnier, then Vous la connaissez aussi ? about Odile. Le (him, it) and la (her, it) replace the direct object and go before the verb; before a vowel they become l': Sabine l'a noté. In the negative, ne… pas goes around the pronoun and the verb together: Je ne la connais pas.",
+        examples: [
+          eg("Vous le connaissez ?", "voo luh koh-neh-say", "Do you know him?"),
+          eg("Je ne la connais pas.", "zhuh nuh lah koh-neh pah", "I don't know her."),
+          eg("Elle veut le voir.", "el vuh luh vwahr", "She wants to see him. (le before the infinitive)")
+        ],
+        table: "direct-object-pronouns"
+      }
+    },
+    {
+      id: "lyon-14-on-the-quay", number: 34, level: "B1", series: "la-lettre-de-lyon", episode: 14, act: 3,
+      title: "Sorry, on the quay", titleFr: "Pardon, sur le quai",
+      recap: "A message for Théo from Odile came while Maya was minding the shop. Maya understood that Théo had found Jacques and kept it from her.",
+      summary: "On the banks of the Saône, Maya confronts Théo about his secret, and he apologises.",
+      scene: "It's Thursday evening on the quay by the Saône, under the lights of Fourvière. Théo has found the bookshop empty and Maya walking by the river. She is angry; he has come to apologise.",
+      keywords: ["quai", "quay", "saône", "saone", "river", "apology", "sorry", "pardon", "secret", "promise", "promesse", "argument", "feelings", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "neighbour", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Tu ne me l'as pas dit. Tu l'as trouvé lundi, et tu ne me l'as pas dit.", "tew nuh muh lah pah dee. tew lah troo-vay luhN-dee, ay tew nuh muh lah pah dee",
+          "You didn't tell me. You found him on Monday, and you didn't tell me.",
+          ["Tu l'as trouvé lundi et tu ne me l'as pas dit.", "Tu ne me l'as pas dit. Tu as trouvé Jacques lundi, et tu ne me l'as pas dit.", "Tu ne m'as rien dit. Tu l'as trouvé lundi, et tu ne m'as rien dit.", "Tu me l'as pas dit. Tu l'as trouvé lundi, et tu me l'as pas dit."]),
+        line("l2", "theo", "Je sais. Je suis désolé, Maya. J'avais peur.", "zhuh seh. zhuh swee day-zoh-lay, mah-yah. zhah-veh puhr",
+          "I know. I'm sorry, Maya. I was scared.",
+          ["Je suis désolé, Maya. J'avais peur.", "Je sais. Pardon, Maya. J'avais peur.", "Je sais. Je suis vraiment désolé, Maya. J'avais peur.", "Je sais. Je suis désolé. J'avais peur."]),
+        line("l3", "maya", "Peur de quoi ? Moi, j'étais en colère quand j'ai entendu le message.", "puhr duh kwah. mwah, zhay-teh ahN koh-lair kahN zhay ahN-tahN-dew luh meh-sahzh",
+          "Scared of what? I was angry when I heard the message.",
+          ["Peur de quoi ? J'étais en colère quand j'ai entendu le message.", "Peur de quoi ? Moi, j'étais furieuse quand j'ai entendu le message.", "Tu avais peur de quoi ? Moi, j'étais en colère quand j'ai entendu le message.", "Peur de quoi ? Moi, j'étais en colère quand j'ai eu le message.", "Peur de quoi ? Moi, j'étais très en colère quand j'ai entendu le message."]),
+        line("l4", "theo", "Jacques est fragile. Et je ne voulais pas voir une deuxième porte se fermer devant toi.", "zhahk eh frah-zheel. ay zhuh nuh voo-leh pah vwahr ewn duh-zyem port suh fair-may duh-vahN twah",
+          "Jacques is frail. And I didn't want to see a second door close in your face.",
+          ["Jacques est fragile. Je ne voulais pas voir une deuxième porte se fermer devant toi.", "Il est fragile. Et je ne voulais pas voir une deuxième porte se fermer devant toi.", "Jacques est fragile. Et je ne voulais pas voir une autre porte se fermer devant toi.", "Jacques est fragile. Et je voulais pas voir une deuxième porte se fermer devant toi."]),
+        line("l5", "maya", "Alors tu as décidé pour moi. Tu voulais me protéger, c'est ça ?", "ah-lor tew ah day-see-day poor mwah. tew voo-leh muh proh-tay-zhay, seh sah",
+          "So you decided for me. You wanted to protect me, is that it?",
+          ["Tu as décidé pour moi. Tu voulais me protéger, c'est ça ?", "Alors tu as décidé à ma place. Tu voulais me protéger, c'est ça ?", "Alors tu as décidé pour moi. Tu voulais me protéger ?", "Donc tu as décidé pour moi. Tu voulais me protéger, c'est ça ?"]),
+        line("l6", "theo", "Oui. C'était bête. Je l'ai compris ce soir, quand j'ai trouvé la librairie vide.", "wee. say-teh bet. zhuh lay kohN-pree suh swahr, kahN zhay troo-vay lah lee-breh-ree veed",
+          "Yes. It was stupid. I realised it tonight, when I found the bookshop empty.",
+          ["Oui. C'était bête. Je l'ai compris ce soir.", "Oui, c'était idiot. Je l'ai compris ce soir, quand j'ai trouvé la librairie vide.", "Oui. C'était bête. J'ai compris ce soir, quand j'ai trouvé la librairie vide.", "Oui. C'était stupide. Je l'ai compris ce soir, quand j'ai trouvé la librairie vide."]),
+        line("l7", "maya", "C'est l'histoire de ma grand-mère, Théo. C'était à moi de décider.", "seh lees-twahr duh mah grahN-mair, tay-oh. say-teh ah mwah duh day-see-day",
+          "It's my grandmother's story, Théo. It was up to me to decide.",
+          ["C'est l'histoire de ma grand-mère. C'était à moi de décider.", "C'est l'histoire de Mamie, Théo. C'était à moi de décider.", "C'est l'histoire de ma grand-mère, Théo. C'était à moi de choisir.", "C'est l'histoire de ma grand-mère, Théo. C'est à moi de décider."]),
+        line("l8", "theo", "Tu as raison. Plus de secrets. Je te le promets.", "tew ah reh-zohN. plew duh suh-kreh. zhuh tuh luh proh-meh",
+          "You're right. No more secrets. I promise.",
+          ["Tu as raison. Fini, les secrets. Je te le promets.", "Tu as raison. Je te le promets : plus de secrets.", "Tu as raison. Plus de secrets. Promis.", "Tu as raison. Plus jamais de secrets. Je te le promets."]),
+        line("l9", "maya", "Tu sais, l'enveloppe de Mamie… je ne l'ai toujours pas ouverte.", "tew seh, lahN-vlop duh mah-mee… zhuh nuh lay too-zhoor pah oo-vairt",
+          "You know, Mamie's envelope… I still haven't opened it.",
+          ["L'enveloppe de Mamie… je ne l'ai toujours pas ouverte.", "Tu sais, l'enveloppe de ma grand-mère… je ne l'ai toujours pas ouverte.", "Tu sais, l'enveloppe de Mamie… je ne l'ai pas encore ouverte.", "Tu sais, je n'ai toujours pas ouvert l'enveloppe de Mamie."]),
+        line("l10", "theo", "Je sais. Tu me l'as dit le jour des lettres. Pourquoi pas ?", "zhuh seh. tew muh lah dee luh zhoor day let-ruh. poor-kwah pah",
+          "I know. You told me the day we found the letters. Why not?",
+          ["Je sais, tu me l'as dit. Pourquoi pas ?", "Je sais. Tu me l'as déjà dit. Pourquoi pas ?", "Tu me l'as dit le jour des lettres. Pourquoi pas ?", "Je sais. Tu me l'as dit le jour des lettres. Pourquoi tu ne l'ouvres pas ?"]),
+        line("l11", "maya", "Parce qu'elle n'est pas à moi. Elle est pour J. Je veux la lui donner, à lui.", "pars-kel neh pah ah mwah. el eh poor zhee. zhuh vuh lah lwee doh-nay, ah lwee",
+          "Because it isn't mine. It's for J. I want to give it to him, to him in person.",
+          ["Parce qu'elle n'est pas à moi. Elle est pour J. Je veux la lui donner.", "Parce que ce n'est pas à moi. Elle est pour J. Je veux la lui donner, à lui.", "Elle n'est pas à moi. Elle est pour J. Je veux la lui donner, à lui.", "Parce qu'elle n'est pas à moi. Elle est pour Jacques. Je veux la lui donner, à lui."]),
+        line("l12", "theo", "Attends, un message… C'est Odile. Elle veut me voir samedi. Tu veux que je…", "ah-tahN, uhN meh-sahzh… seh oh-deel. el vuh muh vwahr sahm-dee. tew vuh kuh zhuh…",
+          "Hang on, a message… It's Odile. She wants to see me on Saturday. Do you want me to…",
+          ["Un message… C'est Odile. Elle veut me voir samedi. Tu veux que je…", "Attends, un message… C'est elle. Elle veut me voir samedi. Tu veux que je…", "Attends, un message… C'est Odile. Elle veut me voir samedi. Tu préfères que je…", "Attends… C'est Odile. Elle veut me voir samedi. Tu veux que j'y aille ?"]),
+        line("l13", "maya", "Vas-y. Mais tu me racontes tout.", "vah-zee. meh tew muh rah-kohNt too",
+          "Go. But you tell me everything.",
+          ["Vas-y. Mais tu me raconteras tout.", "Oui, vas-y. Mais tu me racontes tout.", "Vas-y. Mais après, tu me racontes tout.", "Vas-y. Mais tu me dis tout."])
+      ],
+      vocab: [
+        word("v1", "Tu ne me l'as pas dit", "tew nuh muh lah pah dee", "You didn't tell me (me before l'; ne… pas around the group)", "l1", "table", "pronoun-order"),
+        word("v2", "Je suis désolé", "zhuh swee day-zoh-lay", "I'm sorry (a woman writes désolée; it sounds the same)", "l2", "expression", "je-suis-desole"),
+        word("v3", "J'avais peur", "zhah-veh puhr", "I was scared (avoir peur; imparfait for a feeling)", "l2", "verb", "avoir"),
+        word("v4", "j'étais en colère", "zhay-teh ahN koh-lair", "I was angry (imparfait for a feeling)", "l3", "verb", "etre"),
+        word("v5", "tu as décidé pour moi", "tew ah day-see-day poor mwah", "you decided for me (passé composé: one action)", "l5", "verb", "decider"),
+        word("v6", "Je te le promets", "zhuh tuh luh proh-meh", "I promise (you) (te before le)", "l8", "verb", "promettre"),
+        word("v7", "je ne l'ai toujours pas ouverte", "zhuh nuh lay too-zhoor pah oo-vairt", "I still haven't opened it (ouverte agrees with l' = l'enveloppe)", "l9", "verb", "ouvrir"),
+        word("v8", "Je veux la lui donner", "zhuh vuh lah lwee doh-nay", "I want to give it to him (la before lui)", "l11", "table", "direct-object-pronouns"),
+        word("v9", "tu me racontes tout", "tew muh rah-kohNt too", "you tell me everything (raconter: to tell a story)", "l13", "verb", "raconter")
+      ],
+      questions: [
+        q("q1", "Why did Théo keep the phone call secret?", "He was afraid another door would close on Maya", ["Odile asked him to say nothing", "He wanted to meet Jacques on his own first", "He forgot to tell her"], "en", "l4"),
+        q("q2", "What does Théo promise Maya?", "No more secrets", ["To phone Odile tomorrow", "To open the envelope with her", "To close the bookshop on Saturday"], "en", "l8"),
+        q("q3", "Why hasn't Maya opened the envelope?", "It isn't hers: it's for J.", ["She is afraid of what it says", "Théo told her not to", "Her mother wants to read it first"], "en", "l11"),
+        q("q4", "How does Maya tell Théo he kept it from her?", "Tu ne me l'as pas dit.", ["Tu ne l'as pas lu.", "Tu ne me l'as pas donné.", "Tu ne le lui as pas dit."], "fr", "l1")
+      ],
+      notice: {
+        title: "Me le, la lui: two pronouns together",
+        text: "Maya says Tu ne me l'as pas dit, and Théo answers Je te le promets. When two object pronouns meet, me or te comes before le or la, and le or la comes before lui: Je veux la lui donner. The pair sits before the verb (before avoir in the passé composé), and ne… pas goes around the whole group.",
+        examples: [
+          eg("Tu ne me l'as pas dit.", "tew nuh muh lah pah dee", "You didn't tell me (it)."),
+          eg("Je te le promets.", "zhuh tuh luh proh-meh", "I promise you (it)."),
+          eg("Je vais le lui dire.", "zhuh veh luh lwee deer", "I'm going to tell him (it). (le before lui)")
+        ],
+        table: "pronoun-order"
+      }
+    },
+    {
+      id: "lyon-15-the-big-rock", number: 35, level: "B1", series: "la-lettre-de-lyon", episode: 15, act: 3,
+      title: "At the Gros Caillou", titleFr: "Au Gros Caillou",
+      recap: "On the quay Théo said sorry and promised no more secrets. Then Odile asked to see him on Saturday.",
+      summary: "At the Gros Caillou, Théo tells Maya what Odile said, and they share how they feel.",
+      scene: "It's Saturday evening at the Gros Caillou, the big boulder at the end of the boulevard, with the whole city lit up below. Théo has just met Odile and tells Maya everything, as he promised. Before they leave, Maya takes his hand.",
+      keywords: ["gros caillou", "croix-rousse", "view", "city lights", "feelings", "sentiments", "nervous", "nerveux", "nerveuse", "happy", "heureux", "heureuse", "at home", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "neighbour", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "theo", "Voilà, je te raconte tout, comme promis. Odile était très inquiète.", "vwah-lah, zhuh tuh rah-kohNt too, kum proh-mee. oh-deel ay-teh treh‿zaN-kyet",
+          "Right, I'm telling you everything, as promised. Odile was very worried.",
+          ["Je te raconte tout, comme promis. Odile était très inquiète.", "Voilà, comme promis, je te raconte tout. Odile était très inquiète.", "Voilà, je te dis tout, comme promis. Odile était très inquiète.", "Voilà, je te raconte tout. Odile était vraiment inquiète."]),
+        line("l2", "maya", "Inquiète ? Pour son père ?", "aN-kyet. poor sohN pair",
+          "Worried? About her father?",
+          ["Pour son père ?", "Inquiète ? Pour son papa ?", "Elle était inquiète pour son père ?", "Inquiète ? À cause de son père ?"]),
+        line("l3", "theo", "Oui. Son cœur est faible. Mais elle a dit oui : lundi, à quinze heures.", "wee. sohN kuhr eh febl. meh el ah dee wee. luhN-dee, ah kaN-zuhr",
+          "Yes. His heart is weak. But she said yes: Monday, at three o'clock.",
+          ["Son cœur est faible. Mais elle a dit oui : lundi, à quinze heures.", "Oui. Son cœur est fragile. Mais elle a dit oui : lundi, à quinze heures.", "Oui. Son cœur est faible. Mais elle a dit oui : lundi, à 15 heures.", "Oui. Son cœur est faible. Mais elle est d'accord : lundi, à quinze heures.", "Oui. Son cœur est faible. Mais elle a dit oui pour lundi, à 15 h."]),
+        line("l4", "maya", "Lundi ! Mais pourquoi elle a dit oui ?", "luhN-dee. meh poor-kwah el ah dee wee",
+          "Monday! But why did she say yes?",
+          ["Mais pourquoi elle a dit oui ?", "Lundi ! Mais pourquoi est-ce qu'elle a dit oui ?", "Lundi ! Pourquoi elle a accepté ?", "Lundi ! Mais pourquoi a-t-elle dit oui ?"]),
+        line("l5", "theo", "À cause d'une photo. Son père garde la photo d'une jeune femme dans son portefeuille.", "ah kohz dewn foh-toh. sohN pair gard lah foh-toh dewn zhuhn fahm dahN sohN port-fuhy",
+          "Because of a photo. Her father keeps a photo of a young woman in his wallet.",
+          ["Son père garde la photo d'une jeune femme dans son portefeuille.", "À cause d'une photo. Son père a la photo d'une jeune femme dans son portefeuille.", "À cause d'une photo. Son père garde une photo d'une jeune femme dans son portefeuille.", "À cause d'une photo. Son père a toujours la photo d'une jeune femme dans son portefeuille."]),
+        line("l6", "maya", "Une jeune femme… avec un foulard ?", "ewn zhuhn fahm… ah-vek uhN foo-lar",
+          "A young woman… with a scarf?",
+          ["Avec un foulard ?", "Une jeune femme… qui porte un foulard ?", "Une jeune femme… avec un foulard bleu ?", "Une jeune femme… Elle a un foulard ?"]),
+        line("l7", "theo", "Odile ne sait pas. Mais elle est curieuse, maintenant. Et moi, je suis nerveux.", "oh-deel nuh seh pah. meh el eh kew-ryuhz, maN-tuh-nahN. ay mwah, zhuh swee nair-vuh",
+          "Odile doesn't know. But she's curious now. And me, I'm nervous.",
+          ["Elle ne sait pas. Mais elle est curieuse maintenant. Et moi, je suis nerveux.", "Odile ne sait pas. Mais maintenant, elle est curieuse. Et moi, je suis nerveux.", "Odile ne sait pas. Mais elle est curieuse, maintenant. Et je suis nerveux.", "Odile ne sait pas. Mais elle est curieuse, maintenant. Moi, je suis un peu nerveux."]),
+        line("l8", "maya", "Moi aussi, je suis nerveuse. Et heureuse. Regarde la ville…", "mwah oh-see, zhuh swee nair-vuhz. ay uh-ruhz. ruh-gard lah veel…",
+          "I'm nervous too. And happy. Look at the city…",
+          ["Moi aussi, je suis nerveuse. Et heureuse.", "Moi aussi, je suis nerveuse. Et heureuse aussi. Regarde la ville…", "Je suis nerveuse aussi. Et heureuse. Regarde la ville…", "Moi aussi, je suis nerveuse, mais heureuse. Regarde la ville…"]),
+        line("l9", "theo", "Le Rhône, Fourvière, la Croix-Rousse… Tu la trouves comment, notre colline ?", "luh rohn, foor-vyair, lah krwah-roos… tew lah troov koh-mahN, not-ruh koh-leen",
+          "The Rhône, Fourvière, the Croix-Rousse… What do you think of it, our hill?",
+          ["Tu la trouves comment, notre colline ?", "Le Rhône, Fourvière, la Croix-Rousse… Comment tu la trouves, notre colline ?", "Le Rhône, Fourvière… Tu la trouves comment, notre colline ?", "Le Rhône, Fourvière, la Croix-Rousse… Elle te plaît, notre colline ?"]),
+        line("l10", "maya", "Pour la première fois, je me sens chez moi ici.", "poor lah pruh-myair fwah, zhuh muh sahN shay mwah ee-see",
+          "For the first time, I feel at home here.",
+          ["Je me sens chez moi ici, pour la première fois.", "Pour la première fois, je me sens chez moi.", "Pour la première fois, je me sens vraiment chez moi ici.", "Pour la première fois, je me sens à la maison ici."]),
+        line("l11", "theo", "Je suis content, Maya. Très content que tu sois venue.", "zhuh swee kohN-tahN, mah-yah. treh kohN-tahN kuh tew swah vuh-new",
+          "I'm glad, Maya. Really glad you came.",
+          ["Je suis content, Maya. Vraiment content que tu sois venue.", "Je suis heureux, Maya. Très heureux que tu sois venue.", "Ça me fait plaisir, Maya. Je suis très content que tu sois venue.", "Je suis content que tu sois venue, Maya."]),
+        line("l12", "maya", "Moi aussi, je suis contente. Lundi, quinze heures… Tu viens avec moi ?", "mwah oh-see, zhuh swee kohN-tahNt. luhN-dee, kaN-zuhr… tew vyaN ah-vek mwah",
+          "I'm glad too. Monday, three o'clock… Will you come with me?",
+          ["Moi aussi, je suis contente. Tu viens avec moi lundi ?", "Moi aussi. Lundi, quinze heures… Tu viens avec moi ?", "Moi aussi, je suis contente. Lundi, quinze heures… Tu m'accompagnes ?", "Moi aussi, je suis contente. Lundi, 15 heures… Tu viens avec moi ?"]),
+        line("l13", "theo", "Oui. Je t'attendrai dans le jardin.", "wee. zhuh tah-tahN-dray dahN luh zhar-daN",
+          "Yes. I'll wait for you in the garden.",
+          ["Je t'attendrai dans le jardin.", "Oui. Je t'attendrai dehors, dans le jardin.", "Bien sûr. Je t'attendrai dans le jardin.", "Oui. Je vais t'attendre dans le jardin."])
+      ],
+      vocab: [
+        word("v1", "était très inquiète", "ay-teh treh‿zaN-kyet", "was very worried (inquiet → inquiète for a woman)", "l1", "verb", "etre"),
+        word("v2", "à quinze heures", "ah kaN-zuhr", "at three p.m. (15:00)", "l3", "table", "telling-time"),
+        word("v3", "Son père garde la photo", "sohN pair gard lah foh-toh", "Her father keeps the photo", "l5", "verb", "garder"),
+        word("v4", "Et moi, je suis nerveux", "ay mwah, zhuh swee nair-vuh", "And me, I'm nervous (moi for emphasis; a man: nerveux)", "l7", "table", "stressed-pronouns"),
+        word("v5", "je suis nerveuse", "zhuh swee nair-vuhz", "I'm nervous (a woman: nerveuse)", "l8", "table", "adjective-agreement"),
+        word("v6", "Tu la trouves comment ?", "tew lah troov koh-mahN", "What do you think of it? (literally: how do you find it?)", "l9", "verb", "trouver"),
+        word("v7", "je me sens chez moi", "zhuh muh sahN shay mwah", "I feel at home (se sentir)", "l10", "verb", "sentir"),
+        word("v8", "Tu viens avec moi ?", "tew vyaN ah-vek mwah", "Will you come with me?", "l12", "verb", "venir"),
+        word("v9", "Je t'attendrai", "zhuh tah-tahN-dray", "I'll wait for you (futur; J. wrote the same words in 1962)", "l13", "verb", "attendre")
+      ],
+      questions: [
+        q("q1", "When will Maya meet Jacques?", "On Monday at 3 p.m.", ["On Saturday at 6 p.m.", "On Monday at 9 p.m.", "On Thursday at 3 p.m."], "en", "l3"),
+        q("q2", "Why did Odile agree to the visit?", "Her father keeps a photo of a young woman in his wallet", ["Théo promised the visit would be short", "Jacques asked to meet Maya", "Her father is feeling much better"], "en", "l5"),
+        q("q3", "What does Maya say about the hill?", "For the first time, she feels at home there", ["She wants to go back to London", "She finds it too steep", "She has always felt at home there"], "en", "l10"),
+        q("q4", "How does Maya say she is nervous?", "Je suis nerveuse.", ["Je suis nerveux.", "Je suis heureuse.", "Je suis curieuse."], "fr", "l8")
+      ],
+      notice: {
+        title: "Nerveux, nerveuse: adjectives agree",
+        text: "Théo says je suis nerveux; Maya answers je suis nerveuse… et heureuse. An adjective agrees with the person it describes: -eux becomes -euse for a woman, and many adjectives just add -e (content, contente). Odile était très inquiète follows the same idea: inquiet, inquiète.",
+        examples: [
+          eg("Je suis nerveux.", "zhuh swee nair-vuh", "I'm nervous. (a man)"),
+          eg("Je suis nerveuse.", "zhuh swee nair-vuhz", "I'm nervous. (a woman)"),
+          eg("Je suis content, je suis contente.", "zhuh swee kohN-tahN, zhuh swee kohN-tahNt", "I'm glad. (a man, a woman)")
+        ],
+        table: "adjective-agreement"
+      }
+    },
+    {
+      id: "lyon-16-meeting-jacques", number: 36, level: "B1", series: "la-lettre-de-lyon", episode: 16, act: 4,
+      title: "Meeting Jacques", titleFr: "La rencontre",
+      recap: "Odile agreed to a visit on Monday at three. Her father carries a photo of a young woman in his wallet. Maya took Théo's hand.",
+      summary: "Maya meets Jacques, 87, who carries the twin of her photo and still doesn't know why Simone never came.",
+      scene: "On Monday at three, Maya walks into the linden garden of Les Tilleuls, a retirement home in Caluire. Jacques, eighty-seven, tall and tired, is waiting on a bench. She has the old photo in her hand and Simone's sealed envelope in her bag.",
+      keywords: ["jacques", "jacques vial", "la rencontre", "rencontre", "les tilleuls", "tilleuls", "caluire", "conditionnel", "conditional", "polite requests", "je pourrais", "j'aimerais", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "maya", name: "Maya", role: "visitor", initial: "M", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "jacques", name: "Jacques", role: "J.", initial: "J", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "maya", "Bonjour, monsieur. Excusez-moi, vous êtes monsieur Vial ?", "bohN-zhoor, muh-syuh. eks-kew-zay mwah, voo‿zet muh-syuh vyahl",
+          "Hello. Excuse me, are you Monsieur Vial?",
+          ["Bonjour, monsieur. Vous êtes monsieur Vial ?", "Excusez-moi, vous êtes monsieur Vial ?", "Bonjour, monsieur. Pardon, vous êtes monsieur Vial ?", "Bonjour, monsieur. Excusez-moi, c'est vous, monsieur Vial ?", "Bonjour. Excusez-moi, êtes-vous monsieur Vial ?"]),
+        line("l2", "jacques", "Lui-même, mademoiselle. Asseyez-vous, je vous en prie. Vous êtes Maya, je crois ?", "lwee-mem, mad-mwah-zel. ah-seh-yay voo, zhuh voo‿zahN pree. voo‿zet mah-yah, zhuh krwah",
+          "That's me, mademoiselle. Please, do sit down. You're Maya, I believe?",
+          ["Oui, c'est moi, mademoiselle. Asseyez-vous, je vous en prie.", "C'est moi. Asseyez-vous, je vous en prie. Vous êtes Maya, je crois ?", "Lui-même. Asseyez-vous, je vous en prie.", "Oui, mademoiselle. Asseyez-vous. Vous êtes Maya, je crois ?", "Lui-même, mademoiselle. Asseyez-vous, je vous en prie. Vous êtes Maya, n'est-ce pas ?"]),
+        line("l3", "maya", "Oui. Je suis la petite-fille de Simone Morel. Je voudrais vous montrer quelque chose.", "wee. zhuh swee lah puh-teet-feey duh see-mun moh-rel. zhuh voo-dreh voo mohN-tray kel-kuh shohz",
+          "Yes. I'm Simone Morel's granddaughter. I'd like to show you something.",
+          ["Oui. Je suis la petite-fille de Simone. Je voudrais vous montrer quelque chose.", "Oui, je suis la petite-fille de Simone Morel. J'aimerais vous montrer quelque chose.", "Je suis la petite-fille de Simone Morel. Je voudrais vous montrer quelque chose.", "Oui. Simone Morel était ma grand-mère. Je voudrais vous montrer quelque chose.", "Oui. Je suis la petite-fille de Simone Morel. Je peux vous montrer quelque chose ?"]),
+        line("l4", "jacques", "Simone… Personne ne m'a dit ce nom depuis longtemps. Comment va-t-elle ?", "see-mun… pair-sun nuh mah dee suh nohN duh-pwee lohN-tahN. koh-mahN vah-tel",
+          "Simone… Nobody has said that name to me for a long time. How is she?",
+          ["Simone… Comment va-t-elle ?", "Simone… Personne ne m'a dit ce nom depuis longtemps. Comment est-ce qu'elle va ?", "Simone… Comment va-t-elle, mademoiselle ?", "Simone… Je n'ai pas entendu ce nom depuis longtemps. Comment va-t-elle ?", "Simone… Elle va bien ?"]),
+        line("l5", "maya", "Je suis désolée. Elle est morte en janvier. Mais elle a gardé cette photo toute sa vie.", "zhuh swee day-zoh-lay. el eh mort ahN zhahN-vyay. meh el ah gar-day set foh-toh toot sah vee",
+          "I'm sorry. She died in January. But she kept this photo all her life.",
+          ["Je suis désolée. Elle est décédée en janvier. Mais elle a gardé cette photo toute sa vie.", "Je suis désolée, elle est morte en janvier. Elle a gardé cette photo toute sa vie.", "Elle est morte en janvier. Mais elle a gardé cette photo toute sa vie.", "Je suis désolée. Elle nous a quittés en janvier. Mais elle a gardé cette photo toute sa vie.", "Je suis désolée. Elle est morte en janvier, mais elle a toujours gardé cette photo."]),
+        line("l6", "jacques", "En janvier… Alors j'arrive trop tard, encore une fois. Montrez-moi, s'il vous plaît.", "ahN zhahN-vyay… ah-lor zhah-reev troh tar, ahN-kor ewn fwah. mohN-tray mwah, seel voo pleh",
+          "In January… So I'm too late, once again. Show me, please.",
+          ["En janvier… Je suis arrivé trop tard, encore une fois. Montrez-moi, s'il vous plaît.", "Alors j'arrive trop tard, encore une fois. Montrez-moi, s'il vous plaît.", "En janvier… Encore une fois trop tard. Montrez-moi, s'il vous plaît.", "En janvier… Alors j'arrive trop tard. Vous pouvez me la montrer, s'il vous plaît ?", "En janvier… Alors j'arrive trop tard, encore une fois. Montrez-moi."]),
+        line("l7", "maya", "C'est vous et elle, sur le quai Saint-Antoine, en juin mille neuf cent soixante-deux.", "seh voo ay el, sewr luh kay saN-tahN-twahn, ahN zhwaN meel nuhf sahN swah-sahNt-duh",
+          "It's you and her, on the quai Saint-Antoine, in June 1962.",
+          ["C'est vous et elle, sur le quai Saint-Antoine, en juin 1962.", "C'est vous et elle, quai Saint-Antoine, en juin mille neuf cent soixante-deux.", "C'est vous et ma grand-mère, sur le quai Saint-Antoine, en juin mille neuf cent soixante-deux.", "C'est vous avec elle, sur le quai Saint-Antoine, en juin soixante-deux.", "Regardez : c'est vous et elle, sur le quai Saint-Antoine, en juin 1962."]),
+        line("l8", "jacques", "Attendez. Moi aussi, je la garde toujours sur moi. Lisez le dos : « Pour Jacques. Ne m'oublie pas. S. »", "ah-tahN-day. mwah oh-see, zhuh lah gard too-zhoor sewr mwah. lee-zay luh doh. poor zhahk. nuh moo-blee pah. es",
+          "Wait. I always keep it on me too. Read the back: 'For Jacques. Don't forget me. S.'",
+          ["Attendez. Moi aussi, je la garde toujours sur moi. Lisez le dos.", "Attendez. Moi aussi, je l'ai toujours sur moi. Lisez le dos : « Pour Jacques. Ne m'oublie pas. S. »", "Attendez… J'ai la même, toujours sur moi. Lisez le dos : « Pour Jacques. Ne m'oublie pas. S. »", "Moi aussi, je la garde toujours sur moi. Lisez le dos : « Pour Jacques. Ne m'oublie pas. S. »", "Attendez. Moi aussi, je la garde toujours sur moi. Regardez le dos : « Pour Jacques. Ne m'oublie pas. S. »"]),
+        line("l9", "maya", "La même photo… Monsieur Vial, j'aimerais savoir. Qu'est-ce qui s'est passé, ce samedi de septembre ?", "lah mem foh-toh… muh-syuh vyahl, zhem-reh sah-vwahr. kes-kee seh pah-say, suh sahm-dee duh sep-tahNbr",
+          "The same photo… Monsieur Vial, I'd like to know. What happened that Saturday in September?",
+          ["La même photo… J'aimerais savoir. Qu'est-ce qui s'est passé, ce samedi de septembre ?", "Monsieur Vial, je voudrais savoir. Qu'est-ce qui s'est passé, ce samedi de septembre ?", "La même photo… Monsieur Vial, j'aimerais savoir ce qui s'est passé ce samedi de septembre.", "La même photo… Monsieur Vial, qu'est-ce qui s'est passé ce samedi-là ?", "La même photo… Vous pourriez me dire ce qui s'est passé, ce samedi de septembre ?"]),
+        line("l10", "jacques", "Je l'ai attendue à dix-huit heures, comme dans ma lettre. J'ai attendu jusqu'au dernier moment.", "zhuh lay ah-tahN-dew ah dee-zwee‿tuhr, kum dahN mah let-ruh. zhay ah-tahN-dew zhews-koh dair-nyay moh-mahN",
+          "I waited for her at six o'clock, as I said in my letter. I waited until the very last moment.",
+          ["Je l'ai attendue à dix-huit heures. J'ai attendu jusqu'au dernier moment.", "Je l'ai attendue à 18 heures, comme dans ma lettre. J'ai attendu jusqu'au dernier moment.", "Je l'ai attendue à six heures du soir, comme dans ma lettre. J'ai attendu jusqu'au dernier moment.", "J'ai attendu jusqu'au dernier moment.", "Je l'ai attendue à dix-huit heures, comme dans ma lettre. Je l'ai attendue jusqu'au dernier moment."]),
+        line("l11", "maya", "Et ensuite, vous avez pris votre train… Vous ne lui avez jamais écrit ?", "ay ahN-sweet, voo‿zah-vay pree votr traN… voo nuh lwee ah-vay zhah-meh ay-kree",
+          "And then you took your train… You never wrote to her?",
+          ["Vous ne lui avez jamais écrit ?", "Et ensuite, vous avez pris le train… Vous ne lui avez jamais écrit ?", "Et après, vous avez pris votre train… Vous ne lui avez jamais écrit ?", "Et ensuite, vous êtes parti… Vous ne lui avez jamais écrit ?", "Et ensuite, vous avez pris votre train… Vous ne lui avez pas écrit ?"]),
+        line("l12", "jacques", "Si elle m'aime, elle écrira, je me disais. Aujourd'hui, j'aimerais seulement savoir pourquoi.", "see el mem, el ay-kree-rah, zhuh muh dee-zeh. oh-zhoor-dwee, zhem-reh suhl-mahN sah-vwahr poor-kwah",
+          "'If she loves me, she'll write,' I told myself. Today I'd just like to know why.",
+          ["Si elle m'aime, elle écrira, je me disais. Aujourd'hui, je voudrais seulement savoir pourquoi.", "Si elle m'aime, elle écrira, je me disais. Maintenant, j'aimerais seulement savoir pourquoi.", "Je me disais : si elle m'aime, elle écrira. Aujourd'hui, j'aimerais seulement savoir pourquoi.", "Si elle m'aime, elle écrira, je me disais. Aujourd'hui, j'aimerais juste savoir pourquoi.", "Si elle m'aime, elle écrira, je me disais. Aujourd'hui, j'aimerais savoir pourquoi elle n'est pas venue."]),
+        line("l13", "maya", "Monsieur Vial… Est-ce que je pourrais revenir jeudi ?", "muh-syuh vyahl… es-kuh zhuh poo-reh ruh-vuh-neer zhuh-dee",
+          "Monsieur Vial… (her hand finds the sealed envelope in her bag) Could I come back on Thursday?",
+          ["Est-ce que je pourrais revenir jeudi ?", "Monsieur Vial, je pourrais revenir jeudi ?", "Monsieur Vial… Pourrais-je revenir jeudi ?", "Monsieur Vial… Est-ce que je peux revenir jeudi ?", "Monsieur Vial… J'aimerais revenir jeudi. C'est possible ?"]),
+        line("l14", "jacques", "Jeudi ? Je vous attendrai, mademoiselle. Cette fois, je sais attendre.", "zhuh-dee. zhuh voo‿zah-tahN-dray, mad-mwah-zel. set fwah, zhuh seh ah-tahNdr",
+          "Thursday? I'll wait for you, mademoiselle. This time, I know how to wait.",
+          ["Jeudi ? Je vous attendrai, mademoiselle.", "Jeudi ? Bien sûr. Je vous attendrai, mademoiselle.", "Jeudi ? Je vous attendrai. Cette fois, je sais attendre.", "Avec plaisir. Je vous attendrai, mademoiselle. Cette fois, je sais attendre.", "Jeudi ? Oui. Je vous attendrai, mademoiselle. Cette fois, je sais attendre."])
+      ],
+      vocab: [
+        word("v1", "Excusez-moi", "eks-kew-zay mwah", "Excuse me", "l1", "expression", "excusez-moi"),
+        word("v2", "je vous en prie", "zhuh voo‿zahN pree", "please (formal; here: 'do sit down')", "l2", "expression", "je-vous-en-prie"),
+        word("v3", "Je voudrais", "zhuh voo-dreh", "I'd like (vouloir in the conditional: polite)", "l3", "expression", "je-voudrais"),
+        word("v4", "cette photo", "set foh-toh", "this photo (cette: feminine)", "l5", "table", "demonstrative-adjectives"),
+        word("v5", "je la garde toujours sur moi", "zhuh lah gard too-zhoor sewr mwah", "I always keep it on me (garder)", "l8", "verb", "garder"),
+        word("v6", "Ne m'oublie pas", "nuh moo-blee pah", "Don't forget me (tu: written between lovers)", "l8", "verb", "oublier"),
+        word("v7", "j'aimerais savoir", "zhem-reh sah-vwahr", "I'd like to know (aimer in the conditional)", "l9", "table", "conditionnel"),
+        word("v8", "J'ai attendu jusqu'au dernier moment", "zhay ah-tahN-dew zhews-koh dair-nyay moh-mahN", "I waited until the very last moment (attendre; the words of his 1962 letter)", "l10", "verb", "attendre"),
+        word("v9", "je pourrais", "zhuh poo-reh", "I could (pouvoir in the conditional)", "l13", "verb", "pouvoir"),
+        word("v10", "revenir jeudi", "ruh-vuh-neer zhuh-dee", "to come back on Thursday", "l13", "verb", "revenir")
+      ],
+      questions: [
+        q("q1", "How is Maya related to Simone?", "She's her granddaughter", ["She's her daughter", "She's her niece", "She's her neighbour"], "en", "l3"),
+        q("q2", "What is written on the back of Jacques's photo?", "For Jacques. Don't forget me. S.", ["You and me, quai Saint-Antoine, June 1962. J.", "For Simone. Wait for me. J.", "Lyon, June 1962. With love."], "en", "l8"),
+        q("q3", "Why did Jacques never write to Simone?", "He thought she would write if she loved him", ["He had lost her address", "His boss told him not to", "He was already married in Montréal"], "en", "l12"),
+        q("q4", "How does Maya ask if she can come back?", "Est-ce que je pourrais revenir jeudi ?", ["Est-ce que je pourrais revenir lundi ?", "Est-ce que vous pourriez venir jeudi ?", "Est-ce que je devrais partir jeudi ?"], "fr", "l13")
+      ],
+      notice: {
+        title: "The conditional for polite requests: je voudrais, je pourrais",
+        text: "Maya is talking to a stranger about something delicate, so she softens everything with the conditional: Je voudrais vous montrer quelque chose, J'aimerais savoir, Est-ce que je pourrais revenir jeudi ? It is the future stem plus the imparfait endings (pourr- + -ais). Est-ce que je peux revenir ? is correct too, just more direct.",
+        examples: [
+          eg("Est-ce que je pourrais revenir jeudi ?", "es-kuh zhuh poo-reh ruh-vuh-neer zhuh-dee", "Could I come back on Thursday? (polite: conditional)"),
+          eg("Est-ce que je peux revenir jeudi ?", "es-kuh zhuh puh ruh-vuh-neer zhuh-dee", "Can I come back on Thursday? (more direct: present)"),
+          eg("J'aimerais savoir.", "zhem-reh sah-vwahr", "I'd like to know.")
+        ],
+        table: "conditionnel"
+      }
+    },
+    {
+      id: "lyon-17-lucienne-s-secret", number: 37, level: "B1", series: "la-lettre-de-lyon", episode: 17, act: 4,
+      title: "Lucienne's secret", titleFr: "Le secret de Lucienne",
+      recap: "Maya met Jacques. In 1962 he waited for Simone at the café, then left for Montréal. Maya hasn't given him the sealed envelope yet.",
+      summary: "Mme Berthier finally tells Théo what happened on 15 September 1962, and why she kept quiet for 64 years.",
+      scene: "On Tuesday evening Mme Berthier calls Théo up to her flat on the fifth floor. He tells her that Jacques is alive and that he waited for Simone all evening in 1962. At eighty-eight, she finally breaks a promise she has kept for sixty-four years.",
+      keywords: ["lucienne", "le secret de lucienne", "secret", "promesse", "promise", "negation", "ne jamais", "ne rien", "personne ne", "si j'étais", "si j'etais", "conditionnel passé", "conditionnel passe", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "berthier", name: "Mme Berthier", role: "neighbour", initial: "B", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "berthier", "Alors, mon petit Théo ? Maya l'a vu, ce monsieur ?", "ah-lor, mohN puh-tee tay-oh. mah-yah lah vew, suh muh-syuh",
+          "Well, Théo dear? Did Maya see him, this gentleman?",
+          ["Alors, Théo ? Maya l'a vu, ce monsieur ?", "Alors, mon petit Théo ? Maya l'a vu ?", "Alors, mon petit Théo ? Maya a vu ce monsieur ?", "Alors, mon petit Théo ? Elle l'a vu, ce monsieur ?", "Alors, mon petit Théo ? Maya l'a rencontré, ce monsieur ?"]),
+        line("l2", "theo", "Oui, madame. Il s'appelle Jacques Vial. Il a attendu Simone jusqu'au dernier moment.", "wee, mah-dahm. eel sah-pel zhahk vyahl. eel ah ah-tahN-dew see-mun zhews-koh dair-nyay moh-mahN",
+          "Yes, madame. His name is Jacques Vial. He waited for Simone until the very last moment.",
+          ["Oui. Il s'appelle Jacques Vial. Il a attendu Simone jusqu'au dernier moment.", "Oui, madame. C'est Jacques Vial. Il a attendu Simone jusqu'au dernier moment.", "Oui, madame. Il s'appelle Jacques Vial, et il a attendu Simone jusqu'au dernier moment.", "Oui, madame. Il s'appelle Jacques Vial. Il a attendu Simone jusqu'à la fin.", "Oui, madame. Jacques Vial. Il a attendu Simone jusqu'au dernier moment."]),
+        line("l3", "berthier", "Jacques est vivant… J'ai promis à Simone. Je n'ai jamais rien dit.", "zhahk eh vee-vahN… zhay proh-mee ah see-mun. zhuh nay zhah-meh ryaN dee",
+          "Jacques is alive… I made Simone a promise. I've never said a word.",
+          ["Il est vivant… J'ai promis à Simone. Je n'ai jamais rien dit.", "Jacques est vivant… J'ai fait une promesse à Simone. Je n'ai jamais rien dit.", "Jacques est vivant… J'avais promis à Simone. Je n'ai jamais rien dit.", "Jacques est vivant… J'ai promis à Simone, et je n'ai jamais rien dit.", "Jacques est vivant… J'ai promis à Simone. Je ne l'ai jamais dit à personne."]),
+        line("l4", "theo", "Vous savez pourquoi Simone n'est pas venue, madame ?", "voo sah-vay poor-kwah see-mun neh pah vuh-new, mah-dahm",
+          "Do you know why Simone didn't come, madame?",
+          ["Vous savez pourquoi Simone n'est pas venue ?", "Est-ce que vous savez pourquoi Simone n'est pas venue, madame ?", "Vous savez pourquoi elle n'est pas venue, madame ?", "Vous savez pourquoi Simone n'est jamais venue, madame ?", "Madame, vous savez pourquoi Simone n'est pas venue ?"]),
+        line("l5", "berthier", "Ce samedi-là, son père est tombé à l'atelier. Elle a passé la nuit à l'hôpital.", "suh sahm-dee-lah, sohN pair eh tohN-bay ah lah-tuh-lyay. el ah pah-say lah nwee ah loh-pee-tahl",
+          "That Saturday, her father collapsed in the workshop. She spent the night at the hospital.",
+          ["Son père est tombé à l'atelier. Elle a passé la nuit à l'hôpital.", "Ce samedi-là, vers seize heures, son père est tombé à l'atelier. Elle a passé la nuit à l'hôpital.", "Ce samedi-là, son père est tombé à l'atelier. Elle a passé toute la nuit à l'hôpital.", "Ce samedi-là, son père est tombé à l'atelier. Simone a passé la nuit à l'hôpital avec lui.", "Ce samedi-là, Henri est tombé à l'atelier. Elle a passé la nuit à l'hôpital."]),
+        line("l6", "theo", "Et la lettre de Jacques ? Elle n'a jamais répondu ?", "ay lah let-ruh duh zhahk. el nah zhah-meh ray-pohN-dew",
+          "And Jacques's letter? She never answered?",
+          ["Elle n'a jamais répondu ?", "Et la lettre de Jacques ? Elle n'a pas répondu ?", "Et la lettre de Jacques ? Elle ne lui a jamais répondu ?", "Et la lettre de Jacques ? Simone n'a jamais répondu ?", "Et sa lettre ? Elle n'a jamais répondu ?"]),
+        line("l7", "berthier", "Si. Elle a écrit sa réponse, et moi, Lucienne, j'ai monté la Grande-Côte en courant.", "see. el ah ay-kree sah ray-pohNs, ay mwah, lew-syen, zhay mohN-tay lah grahNd-koht ahN koo-rahN",
+          "She did. She wrote her answer, and I, Lucienne, ran all the way up the Grande-Côte. (si: 'yes' after a negative question)",
+          ["Si. Elle a écrit une réponse, et moi, Lucienne, j'ai monté la Grande-Côte en courant.", "Si. Elle a écrit sa réponse, et j'ai monté la Grande-Côte en courant.", "Si. Elle a répondu, et moi, Lucienne, j'ai monté la Grande-Côte en courant.", "Si. Elle a écrit sa réponse, et moi, Lucienne, j'ai couru jusqu'en haut de la Grande-Côte."]),
+        line("l8", "theo", "Et vous êtes arrivée à temps ?", "ay voo‿zet ah-ree-vay ah tahN",
+          "And did you get there in time?",
+          ["Vous êtes arrivée à temps ?", "Et vous êtes arrivée à l'heure ?", "Et vous êtes arrivée avant le départ ?", "Et vous êtes arrivée à temps, madame ?", "Et vous l'avez trouvé ?"]),
+        line("l9", "berthier", "Non. À vingt et une heures, la mère Jeanne fermait. Elle m'a dit : « Il est parti. »", "nohN. ah vaN-tay ewn uhr, lah mair zhahn fair-meh. el mah dee. eel eh par-tee",
+          "No. At nine p.m. old Jeanne was closing up. She told me: 'He's gone.'",
+          ["Non. À vingt et une heures, la mère Jeanne fermait.", "Non. À 21 heures, la mère Jeanne fermait. Elle m'a dit : « Il est parti. »", "Non. À neuf heures du soir, la mère Jeanne fermait. Elle m'a dit : « Il est parti. »", "Non. À vingt et une heures, le café fermait. La mère Jeanne m'a dit : « Il est parti. »", "Non. À vingt et une heures, la mère Jeanne fermait. Elle m'a dit qu'il était parti."]),
+        line("l10", "theo", "Mais après, pourquoi personne ne lui a écrit à Montréal ?", "meh ah-preh, poor-kwah pair-sun nuh lwee ah ay-kree ah mohN-ray-ahl",
+          "But afterwards, why did nobody write to him in Montréal?",
+          ["Pourquoi personne ne lui a écrit à Montréal ?", "Mais après, pourquoi personne ne lui a écrit ?", "Mais ensuite, pourquoi personne ne lui a écrit à Montréal ?", "Mais après, pourquoi Simone ne lui a pas écrit à Montréal ?", "Mais après, pourquoi est-ce que personne ne lui a écrit à Montréal ?"]),
+        line("l11", "berthier", "Elle n'avait pas son adresse, et elle était fière. « S'il m'aime, il écrira », elle disait.", "el nah-veh pah sohN‿nah-dres, ay el ay-teh fyair. seel mem, eel ay-kree-rah, el dee-zeh",
+          "She didn't have his address, and she was proud. 'If he loves me, he'll write,' she used to say.",
+          ["Elle n'avait pas son adresse, et elle était fière.", "Elle n'avait pas son adresse. Et elle était fière. Elle disait : « S'il m'aime, il écrira. »", "Elle n'avait pas son adresse, et elle était trop fière. « S'il m'aime, il écrira », elle disait.", "Elle était fière. « S'il m'aime, il écrira », elle disait.", "Elle n'avait pas son adresse, et elle était fière. « S'il m'aime, il écrira », disait-elle."]),
+        line("l12", "theo", "Ce n'est pas votre faute, madame. Vous avez couru aussi vite que possible.", "suh neh pah votr foht, mah-dahm. voo‿zah-vay koo-rew oh-see veet kuh poh-seebl",
+          "It isn't your fault, madame. You ran as fast as you could.",
+          ["Ce n'est pas votre faute. Vous avez couru aussi vite que possible.", "Ce n'est pas de votre faute, madame. Vous avez couru aussi vite que possible.", "Ce n'est pas votre faute, madame. Vous avez couru le plus vite possible.", "Ce n'est pas votre faute, madame. Vous avez fait ce que vous pouviez.", "Ce n'est pas votre faute, madame."]),
+        line("l13", "berthier", "Si j'étais arrivée plus tôt, il aurait lu la lettre… Dites à Maya d'ouvrir l'enveloppe. Avec lui.", "see zhay-teh ah-ree-vay plew toh, eel oh-reh lew lah let-ruh… deet ah mah-yah doo-vreer lahN-vlop. ah-vek lwee",
+          "If I had got there earlier, he would have read the letter… Tell Maya to open the envelope. With him.",
+          ["Dites à Maya d'ouvrir l'enveloppe. Avec lui.", "Si j'étais arrivée avant, il aurait lu la lettre… Dites à Maya d'ouvrir l'enveloppe. Avec lui.", "Si j'étais arrivée plus tôt, il l'aurait lue… Dites à Maya d'ouvrir l'enveloppe. Avec lui.", "Si j'étais arrivée plus tôt, il aurait lu la lettre… Dites à Maya d'ouvrir la lettre. Avec lui.", "Si j'étais arrivée plus tôt, il aurait lu la lettre… Dites à Maya de l'ouvrir. Avec lui."]),
+        line("l14", "theo", "Je le lui dirai ce soir, madame. Jeudi, ils la liront ensemble.", "zhuh luh lwee dee-ray suh swahr, mah-dahm. zhuh-dee, eel lah lee-rohN ahN-sahNbl",
+          "I'll tell her tonight, madame. On Thursday they'll read it together.",
+          ["Je le lui dirai ce soir. Jeudi, ils la liront ensemble.", "Je le lui dis ce soir, madame. Jeudi, ils la liront ensemble.", "Je vais le lui dire ce soir, madame. Jeudi, ils la liront ensemble.", "Je le lui dirai ce soir, madame. Ils la liront ensemble jeudi.", "Je le lui dirai, madame. Jeudi, ils la liront ensemble."])
+      ],
+      vocab: [
+        word("v1", "Alors", "ah-lor", "So? / Well? (alors at the start of a question)", "l1", "expression", "alors"),
+        word("v2", "J'ai promis à Simone", "zhay proh-mee ah see-mun", "I promised Simone (promettre à quelqu'un)", "l3", "verb", "promettre"),
+        word("v3", "Je n'ai jamais rien dit", "zhuh nay zhah-meh ryaN dee", "I've never said anything (ne… jamais rien wraps around ai)", "l3", "table", "negation-placement"),
+        word("v4", "son père est tombé", "sohN pair eh tohN-bay", "her father fell / collapsed (tomber takes être)", "l5", "verb", "tomber"),
+        word("v5", "Elle n'a jamais répondu ?", "el nah zhah-meh ray-pohN-dew", "She never answered? (répondre)", "l6", "verb", "repondre"),
+        word("v6", "en courant", "ahN koo-rahN", "running (courir: en + -ant)", "l7", "verb", "courir"),
+        word("v7", "Vous êtes arrivée à temps ?", "voo‿zet ah-ree-vay ah tahN", "Did you get there in time? (arrivée: Théo is asking a woman)", "l8", "verb", "arriver"),
+        word("v8", "personne ne lui a écrit", "pair-sun nuh lwee ah ay-kree", "nobody wrote to him (personne as the subject comes first)", "l10", "table", "negative-words"),
+        word("v9", "Si j'étais arrivée plus tôt, il aurait lu la lettre", "see zhay-teh ah-ree-vay plew toh, eel oh-reh lew lah let-ruh", "If I had got there earlier, he would have read the letter (B1 preview: si + plus-que-parfait, then the past conditional)", "l13", "table", "conditionnel"),
+        word("v10", "d'ouvrir l'enveloppe", "doo-vreer lahN-vlop", "to open the envelope (ouvrir)", "l13", "verb", "ouvrir")
+      ],
+      questions: [
+        q("q1", "Why didn't Simone go to meet Jacques?", "Her father collapsed and she stayed at the hospital", ["She didn't love him any more", "She was working late at the looms", "Lucienne forgot to tell her the time"], "en", "l5"),
+        q("q2", "When did Lucienne reach the café?", "At 9 p.m.", ["At 6 p.m.", "At 8.30 p.m.", "At 4 p.m."], "en", "l9"),
+        q("q3", "Why did Simone never write to Jacques in Montréal?", "She had no address, and she was proud", ["Her father would not let her", "Her letters came back unopened", "Lucienne told her not to"], "en", "l11"),
+        q("q4", "What message does Mme Berthier send to Maya?", "Dites à Maya d'ouvrir l'enveloppe. Avec lui.", ["Dites à Maya de garder l'enveloppe. Pour elle.", "Dites à Maya de brûler l'enveloppe. Ce soir.", "Dites à Maya de lire l'enveloppe. Toute seule."], "fr", "l13")
+      ],
+      notice: {
+        title: "Ne… jamais, ne… rien in the passé composé",
+        text: "In the passé composé the two parts of the negative wrap around the helper verb: Je n'ai jamais rien dit, Elle n'a jamais répondu ? Personne is different: as an object it goes after the past participle (Je ne l'ai dit à personne), and as the subject it comes first: Personne ne lui a écrit.",
+        examples: [
+          eg("Je n'ai jamais rien dit.", "zhuh nay zhah-meh ryaN dee", "I've never said anything."),
+          eg("Je ne l'ai dit à personne.", "zhuh nuh lay dee ah pair-sun", "I didn't tell anyone. (personne after the participle)"),
+          eg("Personne ne lui a écrit.", "pair-sun nuh lwee ah ay-kree", "Nobody wrote to him. (personne as the subject)")
+        ],
+        table: "negation-placement"
+      }
+    },
+    {
+      id: "lyon-18-the-unsent-letter", number: 38, level: "B1", series: "la-lettre-de-lyon", episode: 18, act: 4,
+      title: "The unsent letter", titleFr: "La lettre jamais envoyée",
+      recap: "Mme Berthier, the Lucienne of the letters, told Théo the truth: in 1962 she ran to the café with Simone's answer, but Jacques had gone.",
+      summary: "Maya tells Jacques what happened in 1962 and reads him Simone's sealed reply at last.",
+      scene: "On Thursday afternoon Maya comes back to the linden garden of Les Tilleuls with Simone's sealed envelope, marked 'Pour J.' Jacques is waiting on the same bench. She tells him about the night of 15 September 1962, then opens the letter she has never opened.",
+      keywords: ["lettre jamais envoyée", "lettre jamais envoyee", "la lettre jamais envoyée", "unsent letter", "envelope", "enveloppe", "ma réponse est oui", "ma reponse est oui", "relative pronouns", "qui que où", "qui que ou", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "jacques", name: "Jacques", role: "J.", initial: "J", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "visitor", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "jacques", "Bonjour, Maya. Je peux vous appeler Maya, n'est-ce pas ?", "bohN-zhoor, mah-yah. zhuh puh voo‿zah-play mah-yah, nes pah",
+          "Hello, Maya. I can call you Maya, can't I?",
+          ["Bonjour, Maya. Je peux vous appeler Maya ?", "Bonjour, Maya. Je peux vous appeler Maya, j'espère ?", "Bonjour, Maya. Vous permettez que je vous appelle Maya ?", "Bonjour, Maya. Est-ce que je peux vous appeler Maya ?", "Bonjour, mademoiselle. Je peux vous appeler Maya, n'est-ce pas ?"]),
+        line("l2", "maya", "Bien sûr. Monsieur Vial, je sais maintenant pourquoi Simone n'est pas venue.", "byaN sewr. muh-syuh vyahl, zhuh seh maNt-nahN poor-kwah see-mun neh pah vuh-new",
+          "Of course. Monsieur Vial, I know now why Simone didn't come.",
+          ["Bien sûr. Je sais maintenant pourquoi Simone n'est pas venue.", "Oui, bien sûr. Monsieur Vial, je sais pourquoi Simone n'est pas venue.", "Bien sûr. Monsieur Vial, maintenant je sais pourquoi Simone n'est pas venue.", "Avec plaisir. Monsieur Vial, je sais maintenant pourquoi Simone n'est pas venue.", "Bien sûr. Monsieur Vial, je sais maintenant pourquoi ma grand-mère n'est pas venue."]),
+        line("l3", "jacques", "Je vous écoute. J'attends cette réponse depuis soixante-quatre ans.", "zhuh voo‿zay-koot. zhah-tahN set ray-pohNs duh-pwee swah-sahNt-kah-trahN",
+          "I'm listening. I've been waiting sixty-four years for that answer.",
+          ["Je vous écoute. J'attends cette réponse depuis 64 ans.", "Je vous écoute, Maya. J'attends cette réponse depuis soixante-quatre ans.", "Dites-moi. J'attends cette réponse depuis soixante-quatre ans.", "Je vous écoute. Ça fait soixante-quatre ans que j'attends cette réponse.", "Je vous écoute. J'attends depuis soixante-quatre ans."]),
+        line("l4", "maya", "Ce samedi-là, son père est tombé à l'atelier. Elle a passé la nuit à l'Hôtel-Dieu.", "suh sahm-dee-lah, sohN pair eh tohN-bay ah lah-tuh-lyay. el ah pah-say lah nwee ah loh-tel-dyuh",
+          "That Saturday her father collapsed in the workshop. She spent the night at the Hôtel-Dieu hospital.",
+          ["Son père est tombé à l'atelier. Elle a passé la nuit à l'Hôtel-Dieu.", "Ce samedi-là, son père est tombé à l'atelier. Elle a passé la nuit à l'hôpital.", "Ce samedi-là, son père est tombé à l'atelier, et elle a passé la nuit à l'Hôtel-Dieu.", "Ce samedi-là, son père a fait un malaise à l'atelier. Elle a passé la nuit à l'Hôtel-Dieu.", "Ce samedi-là, Henri est tombé à l'atelier. Simone a passé la nuit à l'Hôtel-Dieu."]),
+        line("l5", "jacques", "À l'hôpital… Et moi, je l'attendais au café où je l'avais vue la première fois.", "ah loh-pee-tahl… ay mwah, zhuh lah-tahN-deh oh kah-fay oo zhuh lah-veh vew lah pruh-myair fwah",
+          "At the hospital… And there I was, waiting for her at the café where I'd first seen her.",
+          ["À l'hôpital… Et moi, je l'attendais au café.", "À l'hôpital… Et moi, je l'attendais au Café des Canuts, où je l'avais vue la première fois.", "À l'hôpital… Et moi, j'étais au café où je l'avais vue la première fois.", "À l'hôpital… Et moi, je l'attendais dans le café où je l'avais vue la première fois.", "À l'hôpital… Pendant ce temps, je l'attendais au café où je l'avais vue la première fois."]),
+        line("l6", "maya", "Voici la lettre qu'elle a écrite cette nuit-là. Lucienne est arrivée trop tard.", "vwah-see lah let-ruh kel ah ay-kreet set nwee-lah. lew-syen eh ah-ree-vay troh tar",
+          "Here is the letter she wrote that night. Lucienne got there too late.",
+          ["Voici la lettre qu'elle a écrite cette nuit-là.", "Voilà la lettre qu'elle a écrite cette nuit-là. Lucienne est arrivée trop tard.", "Voici la lettre qu'elle vous a écrite cette nuit-là. Lucienne est arrivée trop tard.", "Voici la lettre qu'elle a écrite cette nuit-là. Lucienne est arrivée au café trop tard.", "Voici sa lettre, écrite cette nuit-là. Lucienne est arrivée trop tard."]),
+        line("l7", "jacques", "Mes yeux sont fatigués. Vous voudriez bien me la lire ?", "may‿zyuh sohN fah-tee-gay. voo voo-dree-yay byaN muh lah leer",
+          "My eyes are tired. Would you be kind enough to read it to me?",
+          ["Vous voudriez bien me la lire ?", "Mes yeux sont fatigués. Vous pourriez me la lire ?", "Mes yeux sont fatigués. Vous voulez bien me la lire ?", "Mes yeux sont fatigués. Est-ce que vous voudriez bien me la lire ?", "Mes yeux sont fatigués. Vous pourriez me la lire, s'il vous plaît ?"]),
+        line("l8", "maya", "Je l'ouvre. « Je t'écris de l'hôpital. »", "zhuh loovr. zhuh tay-kree duh loh-pee-tahl",
+          "I'm opening it. 'I'm writing to you from the hospital.'",
+          ["J'ouvre l'enveloppe. « Je t'écris de l'hôpital. »", "Je vais l'ouvrir. « Je t'écris de l'hôpital. »", "Bon, je l'ouvre. « Je t'écris de l'hôpital. »", "« Je t'écris de l'hôpital. »"]),
+        line("l9", "jacques", "Continuez, Maya, je vous en prie.", "kohN-tee-new-ay, mah-yah, zhuh voo‿zahN pree",
+          "Go on, Maya, please.",
+          ["Continuez, je vous en prie.", "Continuez, Maya, s'il vous plaît.", "Continuez, Maya.", "Lisez la suite, Maya, je vous en prie.", "Allez-y, Maya, je vous en prie."]),
+        line("l10", "maya", "« Ma réponse est oui. Oui à Montréal, oui à toi. »", "mah ray-pohNs eh wee. wee ah mohN-ray-ahl, wee ah twah",
+          "'My answer is yes. Yes to Montréal, yes to you.'",
+          ["« Ma réponse est oui. »", "Elle écrit : « Ma réponse est oui. Oui à Montréal, oui à toi. »", "Elle a écrit : « Ma réponse est oui. Oui à Montréal, oui à toi. »", "Écoutez : « Ma réponse est oui. Oui à Montréal, oui à toi. »"]),
+        line("l11", "jacques", "Elle a dit oui… C'est la réponse que j'attendais.", "el ah dee wee… seh lah ray-pohNs kuh zhah-tahN-deh",
+          "She said yes… That's the answer I was waiting for.",
+          ["Elle a dit oui…", "Elle a dit oui… C'était la réponse que j'attendais.", "Elle a dit oui… C'est cette réponse que j'attendais.", "Elle a dit oui… C'est la réponse que j'attendais depuis si longtemps.", "Elle a dit oui… C'est la réponse que j'espérais."]),
+        line("l12", "maya", "« Je t'aime. Simone. » Elle ne vous a jamais oublié, monsieur Vial.", "zhuh tem. see-mun. el nuh voo‿zah zhah-meh oo-blee-ay, muh-syuh vyahl",
+          "'I love you. Simone.' She never forgot you, Monsieur Vial.",
+          ["« Je t'aime. Simone. »", "« Je t'aime. Simone. » Elle ne vous a jamais oublié.", "« Je t'aime. » Elle ne vous a jamais oublié, monsieur Vial.", "« Je t'aime. Simone. » Elle ne vous a pas oublié, monsieur Vial.", "« Je t'aime. Simone. » Elle vous a toujours gardé dans son cœur, monsieur Vial."]),
+        line("l13", "jacques", "J'aimerais revoir la Croix-Rousse. Une dernière fois… ou une première fois.", "zhem-reh ruh-vwahr lah krwah-roos. ewn dair-nyair fwah… oo ewn pruh-myair fwah",
+          "I'd like to see the Croix-Rousse again. One last time… or one first time.",
+          ["J'aimerais revoir la Croix-Rousse.", "Je voudrais revoir la Croix-Rousse. Une dernière fois… ou une première fois.", "J'aimerais revoir la Croix-Rousse. Pour la dernière fois… ou la première.", "J'aimerais retourner à la Croix-Rousse. Une dernière fois… ou une première fois.", "J'aimerais bien revoir la Croix-Rousse. Une dernière fois… ou une première fois."]),
+        line("l14", "maya", "Alors nous irons ensemble.", "ah-lor noo‿zee-rohN ahN-sahNbl",
+          "Then we'll go together.",
+          ["Nous irons ensemble.", "Alors on ira ensemble.", "Alors nous y irons ensemble.", "Alors nous irons ensemble, monsieur Vial.", "Alors on y va ensemble."])
+      ],
+      vocab: [
+        word("v1", "Je vous écoute", "zhuh voo‿zay-koot", "I'm listening (to you) (écouter)", "l3", "verb", "ecouter"),
+        word("v2", "depuis soixante-quatre ans", "duh-pwee swah-sahNt-kah-trahN", "for sixty-four years (and still now: depuis + present; no z, quatre ends in a sounded r)", "l3", "table", "numbers-21-100"),
+        word("v3", "au café où je l'avais vue", "oh kah-fay oo zhuh lah-veh vew", "at the café where I had seen her (où for a place)", "l5", "table", "relative-pronouns"),
+        word("v4", "la lettre qu'elle a écrite", "lah let-ruh kel ah ay-kreet", "the letter she wrote (écrite agrees with la lettre)", "l6", "verb", "ecrire"),
+        word("v5", "Vous voudriez bien me la lire ?", "voo voo-dree-yay byaN muh lah leer", "Would you kindly read it to me? (vouloir in the conditional: very polite)", "l7", "table", "conditionnel"),
+        word("v6", "Je l'ouvre", "zhuh loovr", "I'm opening it (ouvrir)", "l8", "verb", "ouvrir"),
+        word("v7", "je vous en prie", "zhuh voo‿zahN pree", "please (formal)", "l9", "expression", "je-vous-en-prie"),
+        word("v8", "la réponse que j'attendais", "lah ray-pohNs kuh zhah-tahN-deh", "the answer I was waiting for (attendre, imparfait)", "l11", "verb", "attendre"),
+        word("v9", "Je t'aime", "zhuh tem", "I love you (aimer)", "l12", "verb", "aimer"),
+        word("v10", "revoir la Croix-Rousse", "ruh-vwahr lah krwah-roos", "to see the Croix-Rousse again (re- + voir)", "l13", "verb", "voir")
+      ],
+      questions: [
+        q("q1", "Where did Simone spend the night of the meeting?", "At the Hôtel-Dieu hospital", ["At the Café des Canuts", "At Perrache station", "In her father's workshop"], "en", "l4"),
+        q("q2", "Why does Jacques ask Maya to read the letter?", "His eyes are tired", ["He has forgotten his glasses at home", "He is afraid to open it", "Odile asked her to read it"], "en", "l7"),
+        q("q3", "What was Simone's answer?", "Yes, to Montréal and to him", ["No, because of her father", "Wait until next year", "She would never leave Lyon"], "en", "l10"),
+        q("q4", "What would Jacques like to do?", "J'aimerais revoir la Croix-Rousse.", ["J'aimerais revoir Montréal.", "J'aimerais revoir Fleurie.", "J'aimerais revoir Fourvière."], "fr", "l13")
+      ],
+      notice: {
+        title: "Qui, que, où: one sentence instead of two",
+        text: "Relative pronouns join two ideas. Que stands for the object: la réponse que j'attendais, la lettre qu'elle a écrite (écrite agrees with la lettre, because que comes before the verb). Où stands for a place: le café où je l'avais vue. Qui stands for the subject: c'est Lucienne qui a couru.",
+        examples: [
+          eg("C'est la réponse que j'attendais.", "seh lah ray-pohNs kuh zhah-tahN-deh", "That's the answer I was waiting for. (que: object)"),
+          eg("Voici la lettre qu'elle a écrite.", "vwah-see lah let-ruh kel ah ay-kreet", "Here's the letter she wrote. (écrite agrees with la lettre)"),
+          eg("C'est Lucienne qui a couru.", "seh lew-syen kee ah koo-rew", "It was Lucienne who ran. (qui: subject)")
+        ],
+        table: "relative-pronouns"
+      }
+    },
+    {
+      id: "lyon-19-a-dinner-plan", number: 39, level: "B1", series: "la-lettre-de-lyon", episode: 19, act: 4,
+      title: "Planning a dinner", titleFr: "On prépare un dîner",
+      recap: "Maya read Simone's sealed letter to Jacques. In 1962 her answer was yes. Jacques would like to see the Croix-Rousse again.",
+      summary: "Odile is worried about her father's heart; Théo plans a dinner on the Croix-Rousse with no stairs.",
+      scene: "On Friday Odile Vial, Jacques's daughter, comes into La Page Tournée to see Théo. Her father wants to come to the Croix-Rousse, but she is worried about his heart, the steep hill and the stairs. Théo, among his piles of books, has a plan.",
+      keywords: ["bouchon", "les deux collines", "deux collines", "dîner", "diner", "dinner plan", "planning a dinner", "odile", "opinions", "à mon avis", "a mon avis", "ce serait", "bags", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "odile", name: "Odile", role: "Jacques's daughter", initial: "O", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        line("l1", "odile", "Bonjour, monsieur Garnier. C'est encore moi. Vous avez un moment ?", "bohN-zhoor, muh-syuh gar-nyay. seh ahN-kor mwah. voo‿zah-vay uhN moh-mahN",
+          "Hello, Monsieur Garnier. It's me again. Do you have a moment?",
+          ["Bonjour, monsieur. C'est encore moi. Vous avez un moment ?", "Bonjour, monsieur Garnier. C'est encore moi, Odile. Vous avez un moment ?", "Bonjour, monsieur Garnier. C'est encore moi. Vous avez une minute ?", "Bonjour, monsieur Garnier. C'est encore moi. Est-ce que vous avez un moment ?", "Bonjour, monsieur Garnier. Je ne vous dérange pas ? Vous avez un moment ?"]),
+        line("l2", "theo", "Bien sûr, madame. Asseyez-vous… enfin, poussez les livres.", "byaN sewr, mah-dahm. ah-seh-yay voo… ahN-faN, poo-say lay lee-vruh",
+          "Of course, madame. Do sit down… well, push the books aside.",
+          ["Bien sûr. Asseyez-vous, madame.", "Bien sûr, madame. Asseyez-vous… pardon, poussez les livres.", "Oui, bien sûr, madame. Asseyez-vous… enfin, poussez les livres.", "Avec plaisir, madame. Asseyez-vous… enfin, poussez les livres.", "Bien sûr, madame. Asseyez-vous… enfin, mettez les livres par terre."]),
+        line("l3", "odile", "Mon père veut venir à la Croix-Rousse samedi. Je suis inquiète : son cœur, la colline…", "mohN pair vuh vuh-neer ah lah krwah-roos sahm-dee. zhuh swee aN-kyet. sohN kuhr, lah koh-leen…",
+          "My father wants to come to the Croix-Rousse on Saturday. I'm worried: his heart, the hill…",
+          ["Mon père veut venir à la Croix-Rousse samedi. Je suis inquiète.", "Mon père veut venir ici samedi. Je suis inquiète : son cœur, la colline…", "Mon père voudrait venir à la Croix-Rousse samedi. Je suis inquiète : son cœur, la colline…", "Mon père veut venir à la Croix-Rousse samedi, et je suis inquiète : son cœur, la colline…", "Mon père veut monter à la Croix-Rousse samedi. J'ai peur : son cœur, la colline…"]),
+        line("l4", "theo", "Je comprends. À mon avis, ce serait mieux sans escaliers.", "zhuh kohN-prahN. ah mohN‿nah-vee, suh suh-reh myuh sahN‿zes-kah-lyay",
+          "I understand. In my opinion, it would be better with no stairs.",
+          ["À mon avis, ce serait mieux sans escaliers.", "Je comprends. Je pense que ce serait mieux sans escaliers.", "Je comprends. À mon avis, il vaudrait mieux éviter les escaliers.", "Je comprends. Pour moi, ce serait mieux sans escaliers.", "Je comprends, madame. À mon avis, ce serait mieux sans escaliers."]),
+        line("l5", "odile", "Oui, chez Maya, il y a quatre étages sans ascenseur. C'est trop difficile pour lui.", "wee, shay mah-yah, eel ee ah kah-tray-tahzh sahN‿zah-sahN-suhr. seh troh dee-fee-seel poor lwee",
+          "Yes, at Maya's there are four floors and no lift. (US: elevator) It's too hard for him.",
+          ["Oui, chez Maya, il y a quatre étages sans ascenseur.", "Oui, chez Maya, il y a 4 étages sans ascenseur. C'est trop difficile pour lui.", "Chez Maya, il y a quatre étages sans ascenseur. C'est trop difficile pour lui.", "Oui, Maya habite au quatrième sans ascenseur. C'est trop difficile pour lui.", "Oui, chez Maya, il y a quatre étages sans ascenseur. C'est trop dur pour lui."]),
+        line("l6", "theo", "On pourrait prendre un taxi jusqu'à la porte du restaurant.", "ohN poo-reh prahNdr uhN tahk-see zhews-kah lah port dew res-toh-rahN",
+          "We could take a taxi right to the door of the restaurant.",
+          ["On pourrait prendre un taxi jusqu'au restaurant.", "On pourrait prendre un taxi jusqu'à la porte.", "Nous pourrions prendre un taxi jusqu'à la porte du restaurant.", "On pourrait venir en taxi jusqu'à la porte du restaurant.", "Et si on prenait un taxi jusqu'à la porte du restaurant ?"]),
+        line("l7", "odile", "Quel restaurant ? Il ne peut pas monter les escaliers, vous savez.", "kel res-toh-rahN. eel nuh puh pah mohN-tay lay‿zes-kah-lyay, voo sah-vay",
+          "Which restaurant? He can't climb stairs, you know.",
+          ["Quel restaurant ? Il ne peut pas monter les escaliers.", "Quel restaurant ? Vous savez, il ne peut pas monter les escaliers.", "Quel restaurant ? Il ne peut pas monter d'escaliers, vous savez.", "Quel restaurant ? Il ne peut pas monter les marches, vous savez.", "Lequel ? Il ne peut pas monter les escaliers, vous savez."]),
+        line("l8", "theo", "Les Deux Collines, un bon bouchon sur la place. La salle est au rez-de-chaussée.", "lay duh koh-leen, uhN bohN boo-shohN sewr lah plahs. lah sahl eh oh rayd-shoh-say",
+          "Les Deux Collines, a good bouchon on the square. The dining room is on the ground floor. (US: first floor)",
+          ["Les Deux Collines, un bon bouchon sur la place.", "Les Deux Collines, sur la place. La salle est au rez-de-chaussée.", "Les Deux Collines, un bon bouchon sur la place de la Croix-Rousse. La salle est au rez-de-chaussée.", "Un bon bouchon sur la place : Les Deux Collines. La salle est au rez-de-chaussée.", "Les Deux Collines, un bon bouchon sur la place. Il n'y a pas d'escaliers."]),
+        line("l9", "odile", "Un bouchon ? Je pense que ce serait parfait. Mais pas trop long, le dîner.", "uhN boo-shohN. zhuh pahNs kuh suh suh-reh par-feh. meh pah troh lohN, luh dee-nay",
+          "A bouchon? I think that would be perfect. But not too long a dinner.",
+          ["Un bouchon ? Je pense que ce serait parfait.", "Un bouchon ? À mon avis, ce serait parfait. Mais pas trop long, le dîner.", "Un bouchon ? Je trouve que ce serait parfait. Mais pas trop long, le dîner.", "Un bouchon ? Ce serait parfait. Mais un dîner pas trop long.", "Un bouchon ? Je pense que ce serait parfait. Mais le dîner ne doit pas être trop long."]),
+        line("l10", "theo", "Une petite table près de la fenêtre, un dîner simple. Ce n'est pas la mer à boire.", "ewn puh-teet tahbl preh duh lah fuh-netr, uhN dee-nay saNpl. suh neh pah lah mair ah bwahr",
+          "A little table by the window, a simple dinner. It's not that hard. (literally: it's not drinking the sea)",
+          ["Une petite table près de la fenêtre, un dîner simple.", "Une petite table près de la fenêtre et un dîner simple. Ce n'est pas la mer à boire.", "Une petite table à côté de la fenêtre, un dîner simple. Ce n'est pas la mer à boire.", "Une petite table près de la fenêtre, un dîner simple. Ce n'est pas compliqué.", "Une petite table près de la fenêtre, un dîner simple. Ce n'est pas difficile."]),
+        line("l11", "odile", "D'accord. Vous savez, mon père n'a pas souri comme ça depuis des années.", "dah-kor. voo sah-vay, mohN pair nah pah soo-ree kum sah duh-pwee day‿zah-nay",
+          "All right. You know, my father hasn't smiled like this for years.",
+          ["D'accord. Mon père n'a pas souri comme ça depuis des années.", "D'accord. Vous savez, mon père n'a pas souri comme ça depuis longtemps.", "D'accord. Vous savez, il n'a pas souri comme ça depuis des années.", "Très bien. Vous savez, mon père n'a pas souri comme ça depuis des années.", "D'accord. Vous savez, ça fait des années que mon père n'a pas souri comme ça."]),
+        line("l12", "theo", "Alors préparons-lui une belle soirée. Il a un souhait ?", "ah-lor pray-pah-rohN-lwee ewn bel swah-ray. eel ah uhN sweh",
+          "Then let's give him a lovely evening. Is there anything he'd wish for?",
+          ["Préparons-lui une belle soirée. Il a un souhait ?", "Alors on lui prépare une belle soirée. Il a un souhait ?", "Alors préparons-lui une belle soirée. Est-ce qu'il a un souhait ?", "Alors préparons-lui une belle soirée. Il voudrait inviter quelqu'un ?", "Alors préparons-lui une belle soirée. Qu'est-ce qu'il aimerait ?"]),
+        line("l13", "odile", "Il voudrait une seule chose : revoir Lucienne.", "eel voo-dreh ewn suhl shohz. ruh-vwahr lew-syen",
+          "He'd like just one thing: to see Lucienne again.",
+          ["Il voudrait seulement revoir Lucienne.", "Il aimerait une seule chose : revoir Lucienne.", "Il voudrait une seule chose : voir Lucienne.", "Une seule chose : revoir Lucienne.", "Il voudrait juste une chose : revoir Lucienne."]),
+        line("l14", "theo", "Lucienne ? Ça marche. Je monte la voir ce soir.", "lew-syen. sah marsh. zhuh mohNt lah vwahr suh swahr",
+          "Lucienne? Done. I'll go up and see her tonight.",
+          ["Ça marche. Je monte la voir ce soir.", "Lucienne ? D'accord. Je monte la voir ce soir.", "Lucienne ? Pas de problème. Je monte la voir ce soir.", "Lucienne ? Ça marche. Je vais monter la voir ce soir.", "Lucienne ? Ça marche. Je lui demande ce soir."])
+      ],
+      vocab: [
+        word("v1", "je suis inquiète", "zhuh swee aN-kyet", "I'm worried (inquiet, inquiète: Odile is a woman)", "l3", "table", "adjective-agreement"),
+        word("v2", "ce serait mieux", "suh suh-reh myuh", "it would be better (être in the conditional)", "l4", "table", "conditionnel"),
+        word("v3", "On pourrait prendre un taxi", "ohN poo-reh prahNdr uhN tahk-see", "We could take a taxi (pouvoir in the conditional: a suggestion)", "l6", "verb", "pouvoir"),
+        word("v4", "monter les escaliers", "mohN-tay lay‿zes-kah-lyay", "to climb the stairs (monter)", "l7", "verb", "monter"),
+        word("v5", "un bon bouchon", "uhN bohN boo-shohN", "a good bouchon (a traditional Lyon restaurant; bon goes before the noun)", "l8", "table", "bags-adjectives"),
+        word("v6", "sur la place", "sewr lah plahs", "on the square", "l8", "table", "prepositions-of-place"),
+        word("v7", "Je pense que", "zhuh pahNs kuh", "I think (that)", "l9", "expression", "je-pense-que"),
+        word("v8", "Ce n'est pas la mer à boire", "suh neh pah lah mair ah bwahr", "It's not that hard", "l10", "expression", "pas-la-mer-a-boire"),
+        word("v9", "préparons-lui une belle soirée", "pray-pah-rohN-lwee ewn bel swah-ray", "let's put on a lovely evening for him (préparer)", "l12", "verb", "preparer"),
+        word("v10", "Ça marche", "sah marsh", "Done / That works", "l14", "expression", "ca-marche")
+      ],
+      questions: [
+        q("q1", "What worries Odile?", "Her father's heart and the steep hill", ["The cost of the dinner", "Her father's eyesight", "The rain on Saturday"], "en", "l3"),
+        q("q2", "Why does Théo choose Les Deux Collines?", "Its dining room is on the ground floor", ["It's next to the hospital", "It's in the old Café des Canuts", "Odile's father knows the owner"], "en", "l8"),
+        q("q3", "What does Odile say about her father?", "He hasn't smiled like this for years", ["He doesn't want to go out", "He has never eaten in a bouchon", "He wants to go back to Montréal"], "en", "l11"),
+        q("q4", "What is the one thing Jacques would like?", "Il voudrait une seule chose : revoir Lucienne.", ["Il voudrait une seule chose : revoir Montréal.", "Il voudrait une seule chose : revoir Fleurie.", "Il voudrait une seule chose : revoir le café."], "fr", "l13")
+      ],
+      notice: {
+        title: "Beauty, age, goodness, size: adjectives before the noun",
+        text: "Most French adjectives go after the noun: un dîner simple. A small group goes before it, the BAGS adjectives (beauty, age, goodness, size). Théo plans un bon bouchon, une petite table and une belle soirée. Belle is the feminine of beau.",
+        examples: [
+          eg("un bon bouchon", "uhN bohN boo-shohN", "a good bouchon (goodness: before the noun)"),
+          eg("une belle soirée", "ewn bel swah-ray", "a lovely evening (beauty: before the noun)"),
+          eg("un dîner simple", "uhN dee-nay saNpl", "a simple dinner (most adjectives: after the noun)")
+        ],
+        table: "bags-adjectives"
+      }
+    },
+    {
+      id: "lyon-20-a-new-beginning", number: 40, level: "B1", series: "la-lettre-de-lyon", episode: 20, act: 4,
+      title: "A new beginning", titleFr: "Un nouveau départ",
+      recap: "Théo and Odile planned a dinner for Jacques at Les Deux Collines, on the place de la Croix-Rousse. Jacques wanted to see Lucienne again.",
+      summary: "Outside the bouchon, Maya shows Théo Jacques's gift, and they make plans of their own.",
+      scene: "On Saturday night Maya and Théo stand outside Les Deux Collines, on the place de la Croix-Rousse. Through the window Jacques and Lucienne are talking like old friends. Maya is holding a small wooden box that Jacques has just given her.",
+      keywords: ["nouveau départ", "nouveau depart", "un nouveau départ", "new beginning", "lead type", "plomb", "s et j", "hopes", "j'espère", "j'espere", "possessive pronouns", "la nôtre", "la notre", "la lettre de lyon", "story"],
+      speakers: [
+        { id: "theo", name: "Théo", role: "bookseller", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "maya", name: "Maya", role: "neighbour", initial: "M", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        line("l1", "theo", "Regarde-les, à la fenêtre. Ils rient comme deux vieux amis.", "ruh-gard lay, ah lah fuh-netr. eel ree kum duh vyuh‿zah-mee",
+          "Look at them, at the window. They're laughing like two old friends.",
+          ["Regarde-les. Ils rient comme deux vieux amis.", "Regarde-les, à la fenêtre. Ils rient comme de vieux amis.", "Regarde-les, derrière la fenêtre. Ils rient comme deux vieux amis.", "Tu les vois, à la fenêtre ? Ils rient comme deux vieux amis.", "Regarde-les, à la fenêtre. On dirait deux vieux amis."]),
+        line("l2", "maya", "Soixante-quatre ans après… J'espère qu'ils vont se revoir souvent.", "swah-sahNt-kah-trahN ah-preh… zhes-pair keel vohN suh ruh-vwahr soo-vahN",
+          "Sixty-four years later… I hope they'll see each other often.",
+          ["Soixante-quatre ans après…", "64 ans après… J'espère qu'ils vont se revoir souvent.", "Soixante-quatre ans plus tard… J'espère qu'ils vont se revoir souvent.", "Soixante-quatre ans après… J'espère qu'ils se reverront souvent.", "Soixante-quatre ans après… J'espère qu'ils vont se voir souvent."]),
+        line("l3", "theo", "Et cette petite boîte, qu'est-ce que c'est ?", "ay set puh-teet bwaht, kes-kuh seh",
+          "And this little box, what is it?",
+          ["Qu'est-ce que c'est, cette petite boîte ?", "Et cette boîte, qu'est-ce que c'est ?", "Et cette petite boîte, c'est quoi ?", "Et qu'est-ce que c'est, cette petite boîte ?", "Et cette petite boîte, qu'est-ce qu'il y a dedans ?"]),
+        line("l4", "maya", "Jacques me l'a offerte. Des lettres en plomb, de l'imprimerie Delorme.", "zhahk muh lah oh-fairt. day let-ruh ahN plohN, duh laN-pree-muh-ree duh-lorm",
+          "Jacques gave it to me. Lead letters, from the Delorme printing works.",
+          ["Jacques me l'a offerte.", "C'est Jacques qui me l'a offerte. Des lettres en plomb, de l'imprimerie Delorme.", "Jacques me l'a donnée. Des lettres en plomb, de l'imprimerie Delorme.", "Un cadeau de Jacques. Des lettres en plomb, de l'imprimerie Delorme.", "Jacques me l'a offerte. Ce sont des lettres en plomb, de l'imprimerie Delorme."]),
+        line("l5", "theo", "Elles disent S et J… Simone et Jacques.", "el deez es ay zhee… see-mun ay zhahk",
+          "They spell S and J… Simone and Jacques.",
+          ["S et J… Simone et Jacques.", "Elles forment S et J… Simone et Jacques.", "On lit S et J… Simone et Jacques.", "Ça fait S et J… Simone et Jacques."]),
+        line("l6", "maya", "Il les a composées en soixante-deux, pour une carte qu'il n'a jamais imprimée.", "eel lay‿zah kohN-poh-zay ahN swah-sahNt-duh, poor ewn kart keel nah zhah-meh aN-pree-may",
+          "He set them in '62, for a card he never printed.",
+          ["Il les a composées en mille neuf cent soixante-deux, pour une carte qu'il n'a jamais imprimée.", "Il les a composées en 1962, pour une carte qu'il n'a jamais imprimée.", "Il les a préparées en soixante-deux, pour une carte qu'il n'a jamais imprimée.", "En soixante-deux, il les a composées pour une carte qu'il n'a jamais imprimée.", "Il les a composées en soixante-deux, pour une carte jamais imprimée."]),
+        line("l7", "theo", "Alors il faut finir son travail. Tu as une idée, toi, la graphiste ?", "ah-lor eel foh fee-neer sohN trah-vahy. tew ah ewn ee-day, twah, lah grah-feest",
+          "Then someone has to finish his work. Any ideas, Ms Graphic Designer?",
+          ["Alors il faut finir son travail. Tu as une idée ?", "Alors il faut finir son travail. Tu as une idée, toi ?", "Il faut finir son travail, alors. Tu as une idée, toi, la graphiste ?", "Alors il faut terminer son travail. Tu as une idée, toi, la graphiste ?", "Alors on doit finir son travail. Tu as une idée, toi, la graphiste ?"]),
+        line("l8", "maya", "Oui. J'aimerais faire un petit livre avec les lettres. Et toi, tu le vendrais ?", "wee. zhem-reh fair uhN puh-tee lee-vruh ah-vek lay let-ruh. ay twah, tew luh vahN-dreh",
+          "Yes. I'd like to make a little book of the letters. And would you sell it?",
+          ["J'aimerais faire un petit livre avec les lettres. Tu le vendrais ?", "Oui. Je voudrais faire un petit livre avec les lettres. Et toi, tu le vendrais ?", "Oui. J'aimerais faire un petit livre avec leurs lettres. Et toi, tu le vendrais ?", "Oui. J'aimerais faire un petit livre avec les lettres. Tu pourrais le vendre ?", "Oui. J'aimerais créer un petit livre avec les lettres. Et toi, tu le vendrais ?"]),
+        line("l9", "theo", "Bien sûr, à La Page Tournée ! C'est génial. Mais il faudra rester à Lyon…", "byaN sewr, ah lah pahzh toor-nay. seh zhay-nyahl. meh eel foh-drah res-tay ah lee-ohN…",
+          "Of course, at La Page Tournée! That's brilliant. But you'd have to stay in Lyon…",
+          ["Bien sûr ! C'est génial. Mais il faudra rester à Lyon…", "Bien sûr, à La Page Tournée ! C'est génial. Mais tu devras rester à Lyon…", "Évidemment, à La Page Tournée ! C'est génial. Mais il faudra rester à Lyon…", "Bien sûr, à La Page Tournée ! C'est super. Mais il faudra rester à Lyon…", "Bien sûr, à La Page Tournée ! Mais il faudra rester à Lyon…"]),
+        line("l10", "maya", "Je reste. J'ai décidé. Ici, entre la colline qui travaille et la colline qui prie.", "zhuh rest. zhay day-see-day. ee-see, ahNtr lah koh-leen kee trah-vahy ay lah koh-leen kee pree",
+          "I'm staying. I've decided. Here, between the hill that works and the hill that prays.",
+          ["Je reste. J'ai décidé.", "Je reste à Lyon. J'ai décidé. Ici, entre la colline qui travaille et la colline qui prie.", "Je reste, c'est décidé. Ici, entre la colline qui travaille et la colline qui prie.", "Je vais rester. J'ai décidé. Ici, entre la colline qui travaille et la colline qui prie.", "Je reste. J'ai décidé. Ici, entre la colline qui prie et la colline qui travaille."]),
+        line("l11", "theo", "J'en suis très heureux, Maya. Vraiment.", "zhahN swee treh‿zuh-ruh, mah-yah. vreh-mahN",
+          "I'm really glad, Maya. Truly.",
+          ["J'en suis très heureux.", "J'en suis très content, Maya. Vraiment.", "Je suis très heureux, Maya. Vraiment.", "J'en suis vraiment heureux, Maya.", "Ça me fait très plaisir, Maya. Vraiment."]),
+        line("l12", "maya", "C'est leur histoire… et maintenant, on écrit la nôtre.", "seh luh-rees-twahr… ay maNt-nahN, ohN‿nay-kree lah nohtr",
+          "It's their story… and now we're writing ours.",
+          ["C'est leur histoire… et maintenant, nous écrivons la nôtre.", "C'est leur histoire. Maintenant, on écrit la nôtre.", "C'était leur histoire… et maintenant, on écrit la nôtre.", "C'est leur histoire… et maintenant, on va écrire la nôtre.", "C'est leur histoire… et maintenant, à nous d'écrire la nôtre."]),
+        line("l13", "theo", "Demain, dix heures, en haut de la montée de la Grande-Côte ?", "duh-maN, dee‿zuhr, ahN oh duh lah mohN-tay duh lah grahNd-koht",
+          "Tomorrow, ten o'clock, at the top of the montée de la Grande-Côte?",
+          ["Demain, 10 heures, en haut de la montée de la Grande-Côte ?", "Demain, à dix heures, en haut de la montée de la Grande-Côte ?", "Demain, dix heures, en haut de la Grande-Côte ?", "On se retrouve demain, à dix heures, en haut de la montée de la Grande-Côte ?", "Demain matin, dix heures, en haut de la montée de la Grande-Côte ?"]),
+        line("l14", "maya", "J'y serai.", "zhee suh-ray",
+          "I'll be there.",
+          ["Oui, j'y serai.", "J'y serai, promis.", "D'accord. J'y serai.", "J'y serai. À demain."])
+      ],
+      vocab: [
+        word("v1", "J'espère qu'ils vont se revoir souvent", "zhes-pair keel vohN suh ruh-vwahr soo-vahN", "I hope they'll see each other often (espérer que + indicative)", "l2", "verb", "esperer"),
+        word("v2", "Jacques me l'a offerte", "zhahk muh lah oh-fairt", "Jacques gave it to me (offrir; offerte agrees with la boîte)", "l4", "verb", "offrir"),
+        word("v3", "J'aimerais faire un petit livre", "zhem-reh fair uhN puh-tee lee-vruh", "I'd like to make a little book (a hope: conditional)", "l8", "table", "conditionnel"),
+        word("v4", "tu le vendrais", "tew luh vahN-dreh", "you'd sell it (vendre in the conditional)", "l8", "verb", "vendre"),
+        word("v5", "C'est génial", "seh zhay-nyahl", "That's brilliant", "l9", "expression", "cest-genial"),
+        word("v6", "Je reste", "zhuh rest", "I'm staying (rester)", "l10", "verb", "rester"),
+        word("v7", "on écrit", "ohN‿nay-kree", "we're writing (on = nous in speech; écrire)", "l12", "verb", "ecrire"),
+        word("v8", "la nôtre", "lah nohtr", "ours (la nôtre = notre histoire)", "l12", "table", "possessive-pronouns"),
+        word("v9", "dix heures", "dee‿zuhr", "ten o'clock (z liaison: dix ends in x)", "l13", "table", "telling-time"),
+        word("v10", "J'y serai", "zhee suh-ray", "I'll be there (être in the futur simple)", "l14", "table", "future")
+      ],
+      questions: [
+        q("q1", "What is Jacques's gift to Maya?", "A little box of old lead letters", ["The original 1962 photo", "A copy of Le Petit Prince", "A bottle of Fleurie wine"], "en", "l4"),
+        q("q2", "What would Maya like to make?", "A little book of the letters", ["A film about Simone", "An exhibition at the library", "A website for the bookshop"], "en", "l8"),
+        q("q3", "What has Maya decided?", "To stay in Lyon", ["To go back to London", "To sell the flat", "To move to Montréal"], "en", "l10"),
+        q("q4", "Where does Théo suggest meeting tomorrow?", "En haut de la montée de la Grande-Côte.", ["Au Café des Canuts.", "Sur le quai Saint-Antoine.", "Au Gros Caillou."], "fr", "l13")
+      ],
+      notice: {
+        title: "La nôtre, la leur: possessive pronouns",
+        text: "Maya says C'est leur histoire… et maintenant, on écrit la nôtre. La nôtre means 'ours' and stands for notre histoire, so it takes the article and gender of histoire: la. 'Theirs' works the same way: cette histoire, c'est la leur.",
+        examples: [
+          eg("On écrit la nôtre.", "ohN‿nay-kree lah nohtr", "We're writing ours. (la nôtre = notre histoire)"),
+          eg("C'est la leur.", "seh lah luhr", "It's theirs. (la leur = leur histoire)")
+        ],
+        table: "possessive-pronouns"
+      }
     }
   ];
   var data = {
     version: 1,
     intro: "Short everyday conversations between two people, each with its own recorded voice. Read and listen, take one of the roles, then check you understood.",
     respellingNote: "The pronunciation under each line is an English-style respelling, not IPA: zh as in 'measure', uh as in 'the', ew as French u, a capital N for a nasal vowel (ahN, ohN, aN, uhN). ‿ links two words with a liaison: the consonant starts the next word (vous avez = voo‿zah-vay).",
-    dialogues: dialogues
+    dialogues: dialogues,
+    // Story series: their episodes are ordinary dialogue records with series, episode and act.
+    series: [
+      {
+        id: "la-lettre-de-lyon", title: "The Letter from Lyon", titleFr: "La Lettre de Lyon",
+        summary: "A 20-episode story set in Lyon: Maya finds three love letters from 1962 and goes looking for the man who wrote them.",
+        intro: "Maya, a graphic designer from London, moves into her late grandmother's flat on the Croix-Rousse hill in Lyon. Behind a loose kitchen tile she finds three love letters from 1962, signed only \"J.\", and a sealed envelope in her grandmother's writing. With Théo, the bookseller downstairs, she sets out to find J.",
+        acts: [
+          { number: 1, title: "Arrival", titleFr: "L'arrivée", level: "A2" },
+          { number: 2, title: "The search", titleFr: "L'enquête", level: "A2" },
+          { number: 3, title: "Vineyards and doubt", titleFr: "Les vignes et le doute", level: "B1" },
+          { number: 4, title: "The answer", titleFr: "La réponse", level: "B1" }
+        ]
+      }
+    ]
   };
   if (typeof module !== "undefined" && module.exports) module.exports = data;
   if (root) root.VT_DIALOGUES = data;

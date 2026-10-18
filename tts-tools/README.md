@@ -31,13 +31,13 @@ Then reload the site. If you use the Explain helper (`explainer/start.sh`), rest
 
 Texts with no clip keep working: the site falls back to the device voice for them.
 
-Coverage now: 2,505 of 2,515 Listen texts have a clip in the default voice (2,494 pass, 9 `failed-kept`,
+Coverage now: 2,886 of 2,896 Listen texts have a clip in the default voice (2,875 pass, 9 `failed-kept`,
 2 `short-unverified`; all 198 everyday-expression texts passed QA on the first run). Left to the device voice
 (`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`, `cher, chère`, `ceux`, `longue`, `tes`, and the
 dialogue vocabulary items `six euros cinquante` (Whisper hears "6,50 euros", which the scorer can't match) and
 `à Étretat` (heard "À être ta."). The dialogue line `Un euro vingt pièce.` is `failed-kept`: Whisper writes "1,20€"
 and drops `pièce`, but the word is spoken (the clip's tail alone transcribes as "Une pièce."), so it ships.
-`je me suis assis` is excluded by the user (`excludedByUser`). The second voice covers 124 of 124 texts (121 pass,
+`je me suis assis` is excluded by the user (`excludedByUser`). The second voice covers 260 of 260 texts (257 pass,
 3 `failed-kept`: the spelled names `L, A, U, R, E, N, T. Laurent.` and `Vincent Roux. R, O, U, X.` run longer than
 the length estimate, and `Oui, bien sûr. Ça fait six euros cinquante.` for the same digits reason as above).
 ## What generate.py does per text

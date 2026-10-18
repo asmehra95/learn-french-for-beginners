@@ -157,7 +157,9 @@
           el("span", { className: "search-inf", lang: "fr", text: x.titleFr }), sep(),
           el("span", { className: "search-meaning", text: x.title }), sep()
         ]),
-        el("span", { className: "search-why" }, ["Dialogues: " + x.level + " · " + x.speakers.join(" and ")].concat(
+        el("span", { className: "search-why" }, [x.series
+          ? "Story: " + x.seriesTitleFr + " · Episode " + x.episode + " of " + x.total + " · " + x.level + " · " + x.speakers.join(" and ")
+          : "Dialogues: " + x.level + " · " + x.speakers.join(" and ")].concat(
           x.matchDetail ? [" · ", x.matchDetail.indexOf("line: ") === 0 ? el("span", { lang: "fr", text: x.matchDetail }) : x.matchDetail] : []))
       ])
     ]);

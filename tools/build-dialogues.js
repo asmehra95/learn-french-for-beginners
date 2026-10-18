@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Builds the dialogues Markdown (and, with --html, a print HTML for the PDF) from
-   verb-trainer/js/dialogues-data.js, the single source of the dialogues.
+   verb-trainer/js/dialogues-data.js, the single source of the dialogues. It prints the 20 everyday
+   conversations only; the story (La Lettre de Lyon) is built by tools/build-story.js.
      node tools/build-dialogues.js                 writes french-dialogues.md and
                                                    verb-trainer/reference/french-dialogues.md
      node tools/build-dialogues.js --html out.html also writes the print HTML (print it to PDF
@@ -47,7 +48,7 @@ function check(site) {
   var errs = site.DLG.validate(site.data, site.refs);
   if (errs.length) throw new Error("dialogues-data.js is invalid:\n" + errs.join("\n"));
 }
-function sorted(site, d) { return site.DLG.index(site.data).list; }
+function sorted(site, d) { return site.DLG.everyday(site.data); }   // validation still covers every record
 function speaker(d, id) { return d.speakers.filter(function (s) { return s.id === id; })[0]; }
 /* "See" text: verb infinitive, expression French, table title; "–" for no link. */
 function seeText(site, v) {

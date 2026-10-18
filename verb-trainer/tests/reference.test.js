@@ -216,6 +216,57 @@ test("print CSS only hides other views while the tables view is showing", functi
   m.forEach(function (sel) { assert.match(sel, /body:has\(#view-tables:not\(\[hidden\]\)\)/, "scoped: " + sel.trim()); });
 });
 
+function verbTable(id) {
+  var c = REF.categories.filter(function (x) { return x.id === "verbs"; })[0];
+  return c.tables.filter(function (t) { return t.id === id; })[0];
+}
+
+test("imparfait and conditionnel: both in the verbs category, after future", function () {
+  var ids = REF.categories.filter(function (x) { return x.id === "verbs"; })[0].tables.map(function (t) { return t.id; });
+  var f = ids.indexOf("future");
+  assert.ok(f !== -1);
+  assert.ok(ids.indexOf("imparfait") > f, "imparfait after future");
+  assert.ok(ids.indexOf("conditionnel") > ids.indexOf("imparfait"), "conditionnel after imparfait");
+});
+
+test("conditionnel: exactly the 10 irregular stems from the brief", function () {
+  var t = verbTable("conditionnel");
+  var stems = ["être: ser-", "avoir: aur-", "aller: ir-", "faire: fer-", "pouvoir: pourr-", "vouloir: voudr-",
+    "devoir: devr-", "venir: viendr-", "voir: verr-", "savoir: saur-"];
+  var infos = t.rows.map(function (r) { return r.info; });
+  stems.forEach(function (s) { assert.ok(infos.indexOf(s) !== -1, s); });
+  var irregular = infos.filter(function (i) { return /: [a-zé]+-$/.test(i) && i !== "aimer: aimer-"; });
+  assert.deepEqual(Array.from(new Set(irregular)).sort(), stems.slice().sort());
+});
+
+test("imparfait: an être: ét- row and the when line names the nous stem", function () {
+  var t = verbTable("imparfait");
+  assert.ok(t.rows.some(function (r) { return r.info === "être: ét-" && r.fr === "j'étais"; }));
+  assert.match(t.when, /nous form/);
+  assert.match(t.when, /-ons/);
+});
+
+test("conditionnel: the si + imparfait example and a Preview watch-out", function () {
+  var t = verbTable("conditionnel");
+  assert.ok(t.examples.some(function (e) { return e.fr === "Si j'avais le temps, je viendrais."; }));
+  assert.ok(t.watchOut.some(function (w) { return /Preview/.test(w.note || ""); }));
+});
+
+test("search: imparfait / imperfect and conditionnel / conditional find the new tables", function () {
+  assert.equal(firstTable("imparfait"), "imparfait");
+  assert.equal(firstTable("imperfect"), "imparfait");
+  assert.equal(firstTable("conditionnel"), "conditionnel");
+  assert.equal(firstTable("conditional"), "conditionnel");
+});
+
+test("printables: the grammar-tables PDF has no metadata; the Markdown has the Imparfait and Conditional tables", function () {
+  var pdf = fs.readFileSync(path.join(ROOT, "reference", "french-grammar-tables.pdf")).toString("latin1");
+  ["/Creator", "CreationDate", "ModDate"].forEach(function (k) { assert.ok(pdf.indexOf(k) === -1, k); });
+  var md = fs.readFileSync(path.join(REPO, "french-grammar-tables.md"), "utf8");
+  assert.ok(md.indexOf("### Imparfait: how things were") !== -1);
+  assert.ok(md.indexOf("### Conditional: would, could, polite requests") !== -1);
+});
+
 test("numbers 21-100 rule: et un up to 61, et onze for 71", function () {
   var t = null;
   REF.categories.forEach(function (c) { c.tables.forEach(function (x) { if (x.id === "numbers-21-100") t = x; }); });

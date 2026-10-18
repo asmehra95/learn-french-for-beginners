@@ -152,7 +152,12 @@ _TENS = {2: "vingt", 3: "trente", 4: "quarante", 5: "cinquante", 6: "soixante"}
 
 
 def fr_number(n):
-    """French words for 0..999 (enough for anything Whisper may write as digits here)."""
+    """French words for 0..9999 (enough for anything Whisper may write as digits here, years included:
+    1962 -> mille neuf cent soixante-deux, 2001 -> deux mille un)."""
+    if n >= 1000:
+        th, r = divmod(n, 1000)
+        head = "mille" if th == 1 else fr_number(th) + " mille"
+        return head + ("" if r == 0 else " " + fr_number(r))
     if n < 20:
         return _UNITS[n]
     if n < 70:
@@ -215,7 +220,15 @@ def _leading_zeros(s):
     return re.sub(r"\b0(\d)\b", r" zéro \1 ", s)
 
 
+def _titles(s):
+    """Written titles as they are read: "M. Vial" -> "monsieur Vial", "Mme" -> madame, "Mlle" -> mademoiselle."""
+    s = re.sub(r"\bM\.(?=\s+[A-ZÀ-Ý])", "monsieur", s)
+    s = re.sub(r"\bMme\b\.?", "madame", s)
+    return re.sub(r"\bMlle\b\.?", "mademoiselle", s)
+
+
 def spell_numbers(s):
+    s = _titles(s)
     s = re.sub(r"\b(\d{1,3})[,.](\d{1,2})\s*(?:€|euros?\b)", _price, s)  # 9,50 € / 9.50 euros
     s = re.sub(r"(\d)\s*€", r"\1 euros", s).replace("€", " euros ")
     s = _units(s)
@@ -223,6 +236,7 @@ def spell_numbers(s):
     s = re.sub(r"\b(\d{1,3})(er|re|ère)\b", lambda m: " " + fr_ordinal(int(m.group(1)), m.group(2) != "er") + " ", s)
     s = re.sub(r"\b(\d{1,3})(?:ème|eme|e|è|ᵉ)\b", lambda m: " " + fr_ordinal(int(m.group(1))) + " ", s)
     s = _clock(s)
+    s = re.sub(r"\b[1-9]\d{3}\b", lambda m: " " + fr_number(int(m.group(0))) + " ", s)  # years: 1962, 2001
     return re.sub(r"\d{1,3}", lambda m: " " + fr_number(int(m.group(0))) + " ", s)
 
 
@@ -297,9 +311,9 @@ def sound_key(word):
         # verb -ent is silent and the stem's last consonant is heard: posent = pose = [poz]
         w = w[:-3]
     else:
-        # "E" marks a final [e]/[ɛ] sound: -aient/-ais/-ait/-ai/-ez/-er/-est/-et/-é(e)(s)/-ès/-êt
+        # "E" marks a final [e]/[ɛ] sound: -aient/-ais/-ait/-ai/-ez/-(i)er(s)/-est/-et/-é(e)(s)/-ès/-êt
         if len(w) > 1:
-            w = re.sub(r"(aient|aies|aie|ais|ait|ai|ez|er|est|et|ées|ée|és|é|ès|êt|ê)$", "E", w)
+            w = re.sub(r"(aient|aies|aie|ais|ait|ai|ez|(?<=i)ers|er|est|et|ées|ée|és|é|ès|êt|ê)$", "E", w)
         w = re.sub(r"(?<=.)[sxzdt]+$", "", w)
         w = re.sub(r"(?<=.)e$", "", w)
     w = re.sub(r"[éèêë]", "E", w)
@@ -341,11 +355,25 @@ def is_single(speak, strict_single=False):
     return word_count(speak) <= 1 or (strict_single and not re.search(r"\s", speak.strip()))
 
 
+def _join_de_names(speak, transcript):
+    """Whisper splits a name that starts with "De" ("Delorme" -> "de Lorme" / "de l'orme"). For every such
+    word of the text, the transcript's split spelling is joined back; scored as one more reading."""
+    for w in set(re.findall(r"\b[Dd]e\w{3,}", speak)):
+        rest = w[2:]
+        pat = r"\b[Dd]e\s+" + re.escape(rest[0]) + r"'?\s*" + re.escape(rest[1:]) + r"\b"
+        transcript = re.sub(pat, w, transcript, flags=re.IGNORECASE)
+    return transcript
+
+
 def evaluate_corpus(speak, wav_path, transcript, median_ratio, strict_single=False):
     """QA one corpus clip against Whisper's transcript and the other correct readings of any clock
     time it wrote as digits (clock_variants); keeps the best-scoring reading. See _evaluate_one."""
     best = None
-    for hyp in [spell_numbers(transcript)] + clock_variants(transcript):
+    hyps = [spell_numbers(transcript)] + clock_variants(transcript)
+    joined = _join_de_names(speak, transcript)
+    if joined != transcript:
+        hyps += [spell_numbers(joined)] + clock_variants(joined)
+    for hyp in hyps:
         q = _evaluate_one(speak, wav_path, hyp, median_ratio, strict_single)
         if best is None or (_RANK[q["status"]], q["phon_cer"], q["loose_cer"], len(q["flags"])) < \
                 (_RANK[best["status"]], best["phon_cer"], best["loose_cer"], len(best["flags"])):

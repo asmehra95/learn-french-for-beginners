@@ -2158,24 +2158,39 @@
         el("div", null, [el("dt", { text: "Quiz accuracy" }), el("dd", { text: ds.answered ? Math.round((100 * ds.correct) / ds.answered) + "%" : "–" })]),
         el("div", null, [el("dt", { text: "Questions mastered" }), el("dd", { text: ds.mastered + " of " + ds.total })])
       ]));
+      // One row per dialogue: the everyday conversations, then one table per story series (in episode order).
+      var dlgRow = function (d, head, label) {
+        var b = ds.byDialogue[d.id];
+        var roles = d.speakers.map(function (sp) {
+          var r = Object.prototype.hasOwnProperty.call(b.roles, sp.id) ? b.roles[sp.id] : null;
+          return sp.name + " " + (r ? r.best + "%" : "–");
+        }).join(", ");
+        return el("tr", null, [
+          el("th", { scope: "row", text: head }),
+          el("td", { text: b.listened ? "Yes" : "–" }),
+          el("td", { text: roles }),
+          el("td", { text: b.quizBest >= 0 ? b.quizBest + "%" : "–" }),
+          el("td", null, [el("a", { href: "#dialogues/" + d.id, "aria-label": label, text: "Open" })])
+        ]);
+      };
       body.appendChild(tableRegion("Dialogues", el("table", { className: "stats-table" }, [
         el("caption", { text: "Listened, role-play and comprehension-quiz results per dialogue" }),
         el("thead", null, [el("tr", null, ["Dialogue", "Listened", "Role-play best", "Quiz best", "Open"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
-        el("tbody", null, window.VT_DLG.index(DLG_DATA).list.map(function (d) {
-          var b = ds.byDialogue[d.id];
-          var roles = d.speakers.map(function (sp) {
-            var r = Object.prototype.hasOwnProperty.call(b.roles, sp.id) ? b.roles[sp.id] : null;
-            return sp.name + " " + (r ? r.best + "%" : "–");
-          }).join(", ");
-          return el("tr", null, [
-            el("th", { scope: "row", text: d.number + ". " + d.title }),
-            el("td", { text: b.listened ? "Yes" : "–" }),
-            el("td", { text: roles }),
-            el("td", { text: b.quizBest >= 0 ? b.quizBest + "%" : "–" }),
-            el("td", null, [el("a", { href: "#dialogues/" + d.id, "aria-label": "Open the dialogue " + d.title, text: "Open" })])
-          ]);
+        el("tbody", null, window.VT_DLG.everyday(DLG_DATA).map(function (d) {
+          return dlgRow(d, d.number + ". " + d.title, "Open the dialogue " + d.title);
         }))
       ])));
+      window.VT_DLG.seriesList(DLG_DATA).forEach(function (ser) {
+        var eps = window.VT_DLG.episodes(DLG_DATA, ser.id);
+        if (!eps.length) return;
+        body.appendChild(tableRegion(ser.titleFr, el("table", { className: "stats-table" }, [
+          el("caption", { text: "Listened, role-play and quiz results per episode of " + ser.titleFr }),
+          el("thead", null, [el("tr", null, ["Episode", "Listened", "Role-play best", "Quiz best", "Open"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+          el("tbody", null, eps.map(function (d) {
+            return dlgRow(d, "Episode " + d.episode + ": " + d.title, "Open episode " + d.episode + ", " + d.title);
+          }))
+        ])));
+      });
     }
 
     body.appendChild(el("h3", { text: "Accuracy by verb" }));

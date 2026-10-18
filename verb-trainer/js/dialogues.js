@@ -31,8 +31,37 @@
       (d.questions || []).forEach(function (qq) { qs[qq.id] = qq; });
     });
     ix.list.sort(function (a, b) { return a.number - b.number; });
+    ix.everyday = ix.list.filter(function (d) { return !d.series; });
+    ix.series = {};
+    ix.list.forEach(function (d) { if (d.series) (ix.series[d.series] = ix.series[d.series] || []).push(d); });
+    Object.keys(ix.series).forEach(function (k) { ix.series[k].sort(function (a, b) { return a.episode - b.episode; }); });
     cache.push({ data: data, ix: ix });
     return ix;
+  }
+
+  /* ---------- everyday dialogues and story series ---------- */
+  function everyday(data) { return index(data).everyday.slice(); }
+  function seriesList(data) { return (data && Array.isArray(data.series)) ? data.series : []; }
+  function seriesById(data, id) { return seriesList(data).filter(function (s) { return s.id === id; })[0] || null; }
+  function episodes(data, seriesId) { var s = index(data).series; return own(s, seriesId) ? s[seriesId].slice() : []; }
+  function episodeNav(data, d) {
+    if (!d || !d.series) return null;
+    var list = index(data).series[d.series] || [];
+    var i = list.indexOf(d);
+    var ser = seriesById(data, d.series);
+    var act = ser ? (ser.acts || []).filter(function (a) { return a.number === d.act; })[0] || null : null;
+    return { series: ser, n: d.episode, total: list.length, act: act,
+      prev: i > 0 ? list[i - 1] : null, next: i !== -1 && i + 1 < list.length ? list[i + 1] : null };
+  }
+  /* A dialogue counts as started once it was listened to, quizzed or role-played. */
+  function isStarted(rec) { return !!(rec && (rec.listened || rec.quizBest >= 0 || (rec.roles && Object.keys(rec.roles).length))); }
+  function nextEpisode(state, data, seriesId) {
+    var list = episodes(data, seriesId);
+    var recs = (state && state.dialogues) || {};
+    var started = list.map(function (d) { return isStarted(own(recs, d.id) ? recs[d.id] : null); });
+    var first = started.indexOf(false);
+    return { dialogue: list.length ? list[first === -1 ? 0 : first] : null,
+      anyStarted: started.indexOf(true) !== -1, allStarted: list.length > 0 && first === -1 };
   }
 
   /* ---------- line checking ---------- */
@@ -60,6 +89,28 @@
     var ds = (data && data.dialogues) || [];
     var ids = {}, numbers = {};
     if (!Array.isArray(ds)) return ["dialogues: not an array"];
+    var seriesMap = {}, bySeries = {};
+    if (own(data, "series")) {
+      if (!Array.isArray(data.series)) errs.push("series: not an array");
+      else data.series.forEach(function (s, si) {
+        var sid = s && s.id ? s.id : "#" + si;
+        function serr(path, rule) { errs.push("series/" + sid + "/" + path + ": " + rule); }
+        if (!s || typeof s !== "object") { serr("", "not an object"); return; }
+        if (!ID_RE.test(String(s.id))) serr("id", "must match ^[a-z0-9-]{1,40}$");
+        else if (seriesMap[s.id]) serr("id", "duplicate series id");
+        else seriesMap[s.id] = s;
+        ["title", "titleFr", "summary", "intro"].forEach(function (k) { if (!str(s[k])) serr(k, "must be a non-empty string"); });
+        if (!Array.isArray(s.acts) || !s.acts.length) { serr("acts", "must be a non-empty array"); return; }
+        s.acts.forEach(function (a, ai) {
+          var p = "acts[" + ai + "]";
+          if (!a || a.number !== ai + 1) serr(p + ".number", "acts must be numbered 1.." + s.acts.length);
+          if (!a) return;
+          if (!str(a.title)) serr(p + ".title", "must be a non-empty string");
+          if (!str(a.titleFr)) serr(p + ".titleFr", "must be a non-empty string");
+          if (LEVELS.indexOf(a.level) === -1) serr(p + ".level", "must be A1, A2 or B1");
+        });
+      });
+    }
     ds.forEach(function (d, di) {
       var did = d && d.id ? d.id : "#" + di;
       function err(path, rule) { errs.push(did + "/" + path + ": " + rule); }
@@ -69,6 +120,26 @@
       if (!(Number.isInteger(d.number) && d.number >= 1)) err("number", "must be an integer >= 1");
       else if (numbers[d.number]) err("number", "duplicate number"); else numbers[d.number] = true;
       ["title", "titleFr", "summary", "scene"].forEach(function (k) { if (!str(d[k])) err(k, "must be a non-empty string"); });
+      // story fields (optional; everyday dialogues have none)
+      var hasS = own(d, "series"), hasE = own(d, "episode"), hasA = own(d, "act");
+      if (hasS || hasE || hasA) {
+        if (!hasS) err("series", "an episode or act needs a series");
+        if (!hasE) err("episode", "a series record needs an episode");
+        if (!hasA) err("act", "a series record needs an act");
+      }
+      var ser = null;
+      if (hasS) {
+        if (typeof d.series !== "string" || !ID_RE.test(d.series)) err("series", "must match ^[a-z0-9-]{1,40}$");
+        else if (!own(seriesMap, d.series)) err("series", "unknown series " + d.series);
+        else ser = seriesMap[d.series];
+      }
+      if (hasE && !(Number.isInteger(d.episode) && d.episode >= 1)) err("episode", "must be an integer >= 1");
+      if (hasA) {
+        if (!Number.isInteger(d.act)) err("act", "must be an integer");
+        else if (ser && !(ser.acts || []).some(function (a) { return a && a.number === d.act; })) err("act", "act " + d.act + " is not in " + d.series);
+      }
+      if (own(d, "recap") && (!str(d.recap) || d.recap.length > 160)) err("recap", "must be a non-empty string of at most 160 characters");
+      if (ser && hasE && Number.isInteger(d.episode)) (bySeries[d.series] = bySeries[d.series] || []).push(d);
       if (str(d.summary) && d.summary.length > 120) err("summary", "longer than 120 characters");
       if (LEVELS.indexOf(d.level) === -1) err("level", "must be A1, A2 or B1");
       // 0-16 (design §1.2 said 0-12, but its own pilot list has 13 keywords; the data wins, see verification.md)
@@ -91,6 +162,7 @@
         else { var c = s.initial.toLowerCase(); if (seen.initial[c]) err(p + ".initial", "duplicate initial"); seen.initial[c] = true; }
         if (s.side !== "start" && s.side !== "end") err(p + ".side", "must be start or end");
         else { if (seen.side[s.side]) err(p + ".side", "duplicate side"); seen.side[s.side] = true; }
+        if (own(s, "gender") && s.gender !== "female" && s.gender !== "male") err(p + ".gender", "must be female or male");
         if (!str(s.voice)) err(p + ".voice", "must be a voice id");
         else if (refs && refs.voiceIds && refs.voiceIds.indexOf(s.voice) === -1) err(p + ".voice", "unknown voice " + s.voice);
       });
@@ -182,6 +254,24 @@
         }
       }
     });
+    // per series: episodes 1..N, no gaps or duplicates, in number order, level = the act's level
+    Object.keys(bySeries).forEach(function (sid) {
+      var ser = seriesMap[sid], recs = bySeries[sid].slice();
+      var seenEp = {};
+      recs.forEach(function (d) {
+        if (seenEp[d.episode]) errs.push(d.id + "/episode: duplicate episode " + d.episode + " in " + sid);
+        seenEp[d.episode] = true;
+        var act = (ser.acts || []).filter(function (a) { return a && a.number === d.act; })[0];
+        if (act && d.level !== act.level) errs.push(d.id + "/level: " + d.level + " differs from act " + d.act + " level " + act.level);
+      });
+      var max = Math.max.apply(null, recs.map(function (d) { return d.episode; }));
+      for (var n = 1; n <= max; n++) if (!seenEp[n]) errs.push("series/" + sid + "/episodes: missing episode " + n + " in " + sid);
+      var byEp = recs.slice().sort(function (a, b) { return a.episode - b.episode || a.number - b.number; });
+      var byNum = recs.slice().sort(function (a, b) { return a.number - b.number; });
+      for (var i = 0; i < byEp.length; i++) {
+        if (byEp[i] !== byNum[i]) { errs.push("series/" + sid + "/episodes: episode order differs from number order in " + sid); break; }
+      }
+    });
     return errs;
   }
   function checkPron(p, path, err) {
@@ -212,6 +302,11 @@
     var s = d ? (d.speakers || []).filter(function (x) { return x.id === speakerId; })[0] : null;
     return s ? s.voice : null;
   }
+  function legendBefore(data, d) {
+    if (!d.series) return d.title + ": ";
+    var ser = seriesById(data, d.series);
+    return (ser ? ser.titleFr : d.series) + ", episode " + d.episode + ": ";
+  }
   function choiceItem(data, key, rng) {
     var p = parseKey(key);
     if (!p) return null;
@@ -223,7 +318,7 @@
     var line = ix.lineById[d.id][qq.line];
     var speaker = ix.speakerById[d.id][line.speaker];
     return { kind: "choice", dialogue: d, question: qq, family: "dlg", key: key,
-      legend: { before: d.title + ": ", strong: qq.prompt, strongLang: null, after: "" },
+      legend: { before: legendBefore(data, d), strong: qq.prompt, strongLang: null, after: "" },
       correct: qq.answer, options: L.buildChoices(qq.answer, qq.distractors, 4, rng), isFrench: qq.lang === "fr",
       listen: { text: line.fr, key: null, voice: speaker.voice },
       reveal: { french: line.fr, pronunciation: line.pron, english: line.en },
@@ -389,6 +484,13 @@
     KEY_RE: KEY_RE,
     PRON_RE: PRON_RE,
     index: index,
+    everyday: everyday,
+    seriesList: seriesList,
+    seriesById: seriesById,
+    episodes: episodes,
+    episodeNav: episodeNav,
+    isStarted: isStarted,
+    nextEpisode: nextEpisode,
     validate: validate,
     lineKey: lineKey,
     acceptKey: acceptKey,

@@ -1181,6 +1181,9 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   .dia-avatar { width: 32px; height: 32px; font-size: var(--fs-sm); }
   .dia-controls { flex-wrap: wrap; }
   .dia-vocab { min-width: 30rem; }
+  .dia-episodes { padding-left: var(--s-4); }
+  .dia-ep-nav { flex-direction: column; }
+  .dia-ep-nav a[rel="next"] { margin-inline-start: 0; text-align: start; }
 }
 
 /* ---------- 11b. grammar tables (views-tables.js) ---------- */
@@ -1334,6 +1337,23 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 .dia-vocab th[scope="row"] { font-weight: 600; }
 .dia-card-home h3 .icon { color: var(--primary); }
 .diaq-panel { margin: var(--s-3) 0; }
+/* Stories (La Lettre de Lyon): the series block on the index, the episode header, recap and Previous / Next */
+.dia-stories { margin: var(--s-5) 0 0; }
+.dia-stories > h3 { margin: 0 0 var(--s-3); }
+.dia-stories > h3:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.dia-series h4 { margin: 0 0 var(--s-2); font-size: var(--fs-md); }
+.dia-series .dia-series-en { font-weight: 400; color: var(--muted); }
+.dia-series h5 { margin: var(--s-4) 0 var(--s-1); font-size: var(--fs-base); }
+.dia-series .actions { flex-wrap: wrap; }
+.dia-episodes { margin: 0; padding-left: var(--s-5); list-style: decimal; }
+.dia-episode { margin: 0 0 var(--s-2); overflow-wrap: anywhere; }
+.dia-episode p { margin: 0; }
+.dia-episode-title a { font-weight: 600; }
+.dia-episode-of { margin: 0 0 var(--s-2); color: var(--muted); font-size: var(--fs-sm); }
+.dia-recap { margin: 0 0 var(--s-2); padding: var(--s-2) var(--s-3); border-left: 4px solid var(--border-strong); background: var(--surface-2); border-radius: var(--r-md); }
+.dia-ep-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-4); margin: var(--s-4) 0 var(--s-2); }
+.dia-ep-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; overflow-wrap: anywhere; }
+.dia-ep-nav a[rel="next"] { margin-inline-start: auto; text-align: end; }
 /* ---------- 12. forced colours (§15.2) ---------- */
 @media (forced-colors: active) {
   .btn, .listen, .listen-word, .accent-btn, .nav-link, .btn-util, .btn-icon, .bottom-link, .verb-card, .practice-area, .panel, .totals > div, .type-badge, .choice label {

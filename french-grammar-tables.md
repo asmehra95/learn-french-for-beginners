@@ -25,7 +25,7 @@ Tips: final consonants are usually silent (*parlent* = "parl"). A hyphen joins s
 6. **Negation**: Negative words · Where the negative goes
 7. **Adjectives**: Regular agreement patterns · Common irregular adjectives · Adjectives that go before the noun: BAGS
 8. **Prepositions**: Prepositions of place · Cities and countries: à, en, au, aux
-9. **Verb reference**: Present-tense endings · Verbs that take être in the passé composé · Futur simple: endings and irregular stems
+9. **Verb reference**: Present-tense endings · Verbs that take être in the passé composé · Futur simple: endings and irregular stems · Imparfait: how things were, what used to happen · Conditional: would, could, polite requests
 10. **Everyday basics**: Numbers 0–20 · Numbers 21–100 · Ordinal numbers: first, second... · Days of the week · Months · Telling the time · Common time expressions
 ---
 ## 1. Articles
@@ -671,6 +671,64 @@ See also: Reflexive verbs, lesson 4 (past).
 > - The near future is more common in speech: aller + infinitive, Je vais partir (zhuh veh par-teer).
 
 See also: Reflexive verbs, lesson 4 (future).
+### Imparfait: how things were, what used to happen
+*When:* Stem = the nous form of the present minus -ons (nous parlons → parl-), + -ais, -ais, -ait, -ions, -iez, -aient. Only être is irregular (ét-). Use it for descriptions, the background and habits ("was …-ing", "used to"); use the passé composé for single completed events.
+| French | Pronunciation | English | Ending / stem |
+|---|---|---|---|
+| je parlais | zhuh par-leh | I was speaking / I used to speak | -ais |
+| tu parlais | tew par-leh | you were speaking | -ais |
+| il parlait | eel par-leh | he was speaking | -ait |
+| nous parlions | noo par-lyohN | we were speaking | -ions |
+| vous parliez | voo par-lyay | you were speaking | -iez |
+| ils parlaient | eel par-leh | they were speaking | -aient |
+| je finissais | zhuh fee-nee-seh | I was finishing | nous finissons → finiss- |
+| j'avais | zhah-veh | I had / I used to have | nous avons → av- |
+| je faisais | zhuh fuh-zeh | I was doing | nous faisons → fais- |
+| j'allais | zhah-leh | I was going | nous allons → all- |
+| je prenais | zhuh pruh-neh | I was taking | nous prenons → pren- |
+| j'étais | zhay-teh | I was | être: ét- |
+| il pleuvait | eel pluh-veh | it was raining | pleuvoir: pleuv- |
+- **Il pleuvait.** (eel pluh-veh) — *It was raining.*
+- **Quand j'étais petite, j'habitais à Lyon.** (kahN zhay-teh puh-teet, zhah-bee-teh ah lee-ohN) — *When I was little, I lived in Lyon.*
+- **Je lisais quand le téléphone a sonné.** (zhuh lee-zeh kahN luh tay-lay-fun ah su-nay) — *I was reading when the phone rang.*
+> **Watch out**
+> - je parlais, tu parlais, il parlait and ils parlaient all sound the same: par-leh.
+> - Imparfait for the background or a habit; passé composé for the event that happens in it: Il pleuvait quand elle est arrivée.
+> - ✗ *j'étions* → ✓ **nous étions** (noo zay-tyohN)
+
+See also: être · avoir · faire · Verbs with être in the passé composé.
+### Conditional: would, could, polite requests
+*When:* "Would". The future stem (the infinitive, or the irregular future stem) + the imparfait endings -ais, -ais, -ait, -ions, -iez, -aient. Use it for polite requests (je voudrais, pourriez-vous), advice (tu devrais) and hypotheses (si + imparfait → conditional).
+| French | Pronunciation | English | Ending / stem |
+|---|---|---|---|
+| je parlerais | zhuh par-luh-reh | I would speak | -ais |
+| tu parlerais | tew par-luh-reh | you would speak | -ais |
+| il parlerait | eel par-luh-reh | he would speak | -ait |
+| nous parlerions | noo par-luh-ryohN | we would speak | -ions |
+| vous parleriez | voo par-luh-ryay | you would speak | -iez |
+| ils parleraient | eel par-luh-reh | they would speak | -aient |
+| je serais | zhuh suh-reh | I would be | être: ser- |
+| j'aurais | zhoh-reh | I would have | avoir: aur- |
+| j'irais | zhee-reh | I would go | aller: ir- |
+| je ferais | zhuh fuh-reh | I would do | faire: fer- |
+| je pourrais | zhuh poo-reh | I could | pouvoir: pourr- |
+| je voudrais | zhuh voo-dreh | I would like | vouloir: voudr- |
+| je devrais | zhuh duh-vreh | I should | devoir: devr- |
+| je viendrais | zhuh vyaN-dreh | I would come | venir: viendr- |
+| je verrais | zhuh veh-reh | I would see | voir: verr- |
+| je saurais | zhuh soh-reh | I would know | savoir: saur- |
+| j'aimerais | zhem-reh | I would like / I would love | aimer: aimer- |
+| ce serait | suh suh-reh | it would be | être: ser- |
+- **Je voudrais un café, s'il vous plaît.** (zhuh voo-dreh uhN kah-fay, seel voo pleh) — *I'd like a coffee, please.*
+- **Pourriez-vous m'aider ?** (poo-ryay voo meh-day) — *Could you help me?*
+- **Si j'avais le temps, je viendrais.** (see zhah-veh luh tahN, zhuh vyaN-dreh) — *If I had the time, I would come.*
+- **Tu devrais lui écrire.** (tew duh-vreh lwee ay-kreer) — *You should write to him.*
+> **Watch out**
+> - ✗ *Si j'aurais le temps…* → ✓ **Si j'avais le temps, je viendrais.** (see zhah-veh luh tahN, zhuh vyaN-dreh) — never the conditional right after si: si + imparfait, then the conditional.
+> - Future or conditional? je voudrai (zhuh voo-dray) = I will want; je voudrais (zhuh voo-dreh) = I would like. Only the ending sound changes.
+> - Preview (B1): the past conditional is avoir or être in the conditional + the past participle. Si j'étais arrivée plus tôt, il aurait lu la lettre (see zhay-teh ah-ree-vay plew toh, eel oh-reh lew lah let-ruh) = If I had got there earlier, he would have read the letter.
+
+See also: vouloir · pouvoir · devoir · Futur simple: endings and irregular stems · Imparfait.
 ## 10. Everyday basics
 ### Numbers 0–20
 *When:* Counting, prices, ages and phone numbers. Learn 0–16 by heart; 17, 18 and 19 are 10 + 7, 8, 9.
