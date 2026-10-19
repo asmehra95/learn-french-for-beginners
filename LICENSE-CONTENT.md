@@ -34,3 +34,14 @@ verb-trainer/audio/tts/qwen3-fr-m-bf16/) were generated with the open text-to-sp
 `mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16` (Qwen3-TTS 1.7B Base, Qwen team / Alibaba Cloud) and are
 provided under the **Apache License 2.0**, as stated in each folder's **CREDITS.md**. The second (male)
 voice was designed from a text description; neither voice is a recording or clone of a real person.
+
+---
+## Illustrations — separate terms
+The *La Lettre de Lyon* pictures (verb-trainer/images/story/*.webp and the copies embedded in
+verb-trainer/reference/la-lettre-de-lyon.pdf) are **not** covered by the CC BY-SA licence above. They were
+AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large), from prompts and
+character designs by the project author; their use follows the
+[Stability AI Community License](https://stability.ai/community-license-agreement) and the
+[Amazon Bedrock third-party model terms](https://aws.amazon.com/legal/bedrock/third-party-models/).
+Every prompt, negative prompt, seed and model id is in tools/story-images/manifest.json. They show
+fictional characters only. Episode 8 has no picture.

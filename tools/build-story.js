@@ -5,6 +5,7 @@
                                                verb-trainer/reference/la-lettre-de-lyon.md (identical)
      node tools/build-story.js --html out.html also writes the print HTML (print it to PDF with headless
                                                Chrome --print-to-pdf, then strip the PDF metadata)
+       [--print-images DIR]                    use DIR/<id>.jpg for the pictures (generate.py printjpg)
    A lighter layout than tools/build-dialogues.js: each line shows the speaker, the French and the English;
    respellings appear only in each episode's word list; questions and the answer key are in an appendix.
    Reuses loadSite() from build-dialogues.js and the key, licence, CSS and escaping of build-grammar-tables.js.
@@ -132,8 +133,25 @@ var CSS = G.CSS + "\n" + [
   ".qs-page { page-break-before: always; } .qs-page h3 { margin: 8pt 0 2pt; }",
   "ol.qs { padding-left: 16pt; margin: 0; } ol.qs > li { margin: 0 0 4pt; break-inside: avoid; page-break-inside: avoid; }",
   "ol.qs ol { list-style: lower-alpha; padding-left: 16pt; margin: 1pt 0 0; }",
-  ".answers { page-break-before: always; } .answers ul { columns: 2; list-style: none; padding-left: 0; }"
+  ".answers { page-break-before: always; } .answers ul { columns: 2; list-style: none; padding-left: 0; }",
+  ".cover { display: block; width: 7.5cm; height: auto; margin: 12pt auto 8pt; } .credit { font-size: 8pt; color: #555; }",
+  ".ep-img { display: block; width: 100%; height: auto; max-height: 8.6cm; object-fit: contain; margin: 0 0 6pt; break-inside: avoid; }"
 ].join("\n");
+
+/* Story illustrations (verb-trainer/js/story-images.js), inlined as data: URIs so the print HTML works from any
+   folder and the PDF carries no file paths. Episodes without an entry get no picture.
+   With --print-images DIR, DIR/<id>.jpg (from generate.py printjpg) replaces each WebP: Chrome embeds JPEG as is
+   but re-encodes WebP losslessly, which would make the PDF about 30 MB. */
+var IMAGES = require(path.join(SITE, "js", "story-images.js"));
+var printImages = null;
+function imgTag(rec, cls, alt) {
+  var id = path.basename(rec.src, ".webp");
+  var jpg = printImages && path.join(printImages, id + ".jpg");
+  var useJpg = jpg && fs.existsSync(jpg);
+  var data = fs.readFileSync(useJpg ? jpg : path.join(SITE, rec.src)).toString("base64");
+  return "<img class=\"" + cls + "\" src=\"data:image/" + (useJpg ? "jpeg" : "webp") + ";base64," + data + "\" width=\"" + rec.width +
+    "\" height=\"" + rec.height + "\" alt=\"" + G.esc(alt) + "\">";
+}
 
 function printHtml(site) {
   site = site || B.loadSite();
@@ -143,7 +161,9 @@ function printHtml(site) {
   var h = [];
   h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + "</style></head><body>");
   h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1 lang=\"fr\">" + esc(S.ser.titleFr) + "</h1>" +
-    "<p class=\"sub\">A story in " + S.eps.length + " episodes · A2–B1</p><p class=\"lic\">" + esc(G.LICENCE) + "</p></section>");
+    "<p class=\"sub\">A story in " + S.eps.length + " episodes · A2–B1</p>" +
+    (IMAGES.cover ? imgTag(IMAGES.cover, "cover", IMAGES.cover.alt) : "") +
+    "<p class=\"lic\">" + esc(G.LICENCE) + "</p><p class=\"credit\">" + esc(IMAGES.credit) + "</p></section>");
   h.push("<section class=\"front\"><h2>" + esc(S.ser.title) + "</h2><p class=\"intro\">" + esc(S.ser.summary + " " + S.ser.intro) + "</p>");
   h.push("<h2>How to read</h2><p>Each line gives the speaker and the French, then the English in italics. The respellings (English-style pronunciation, not IPA) are only in the word list at the end of each episode; <b>‿</b> marks a liaison there (<em>vous avez</em> = voo‿zah-vay). The questions for every episode and the answer key are at the end.</p>");
   h.push("<table class=\"key\"><thead><tr><th>Spelling</th><th>Sounds like</th></tr></thead><tbody>");
@@ -166,6 +186,8 @@ function printHtml(site) {
       "<p class=\"lvl\">Level " + esc(g.act.level) + "</p>");
     g.eps.forEach(function (d) {
       h.push("<section class=\"ep\" id=\"e-" + esc(d.id) + "\"><h3>Episode " + d.episode + " · <span lang=\"fr\">" + esc(d.titleFr) + "</span> (" + esc(d.title) + ")</h3>");
+      var pic = IMAGES.episodes[String(d.episode)];
+      if (pic) h.push(imgTag(pic, "ep-img", pic.alt));
       h.push("<p class=\"scene\">" + esc(d.scene) + "</p>");
       d.lines.forEach(function (l) {
         h.push("<p class=\"ln\"><b>" + esc(speaker(d, l.speaker).name) + "</b> <span lang=\"fr\">" + esc(l.fr) + "</span><br><i>" + esc(l.en) + "</i></p>");
@@ -201,6 +223,8 @@ if (require.main === module) {
   var md = markdown(site);
   var html = null;
   var i = process.argv.indexOf("--html");
+  var pi = process.argv.indexOf("--print-images");
+  if (pi !== -1 && process.argv[pi + 1]) printImages = path.resolve(process.argv[pi + 1]);
   if (i !== -1 && process.argv[i + 1]) html = printHtml(site);
   var targets = [path.join(REPO, "la-lettre-de-lyon.md"), path.join(SITE, "reference", "la-lettre-de-lyon.md")];
   fs.mkdirSync(path.join(SITE, "reference"), { recursive: true });

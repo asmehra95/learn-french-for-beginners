@@ -28,6 +28,20 @@
   var GAP_MS = 500;
 
   function DATA() { return C && C.DIALOGUES; }
+  /* Story illustrations (story-images.js, window.VT_STORY_IMAGES): rec is { src, width, height, alt } or null.
+     alt "" marks a decorative copy (list thumbnails beside a link that already names the episode). */
+  function storyImage(d) {
+    var S = window.VT_STORY_IMAGES;
+    return S && d && d.series === S.series && d.episode ? S.episodes[String(d.episode)] || null : null;
+  }
+  function storyCover(ser) {
+    var S = window.VT_STORY_IMAGES;
+    return S && ser && ser.id === S.series ? S.cover : null;
+  }
+  function imgNode(rec, cls, alt, lazy) {
+    return el("img", { className: cls, src: rec.src, width: String(rec.width), height: String(rec.height), alt: alt,
+      loading: lazy ? "lazy" : null, decoding: "async" });
+  }
   function el(tag, attrs, kids) { return C.UI.el(tag, attrs, kids); }
   function state() { return C.state(); }
   function today() { return C.LEARN.dayKey(new Date()); }
@@ -211,8 +225,10 @@
     var n = eps.filter(function (d) { return started(byDialogue[d.id]); }).length;
     var nx = DLG.nextEpisode(state(), D, ser.id);
     var verb = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
+    var cover = storyCover(ser);
     var kids = [
       el("h4", null, [el("span", { lang: "fr", text: ser.titleFr }), " ", el("span", { className: "dia-series-en", text: "(" + ser.title + ")" })]),
+      cover ? imgNode(cover, "dia-series-cover", cover.alt, true) : null,
       el("p", { text: ser.summary }),
       el("p", { className: "muted", text: ser.intro }),
       el("p", { className: "dia-overall", text: n + " of " + eps.length + " episodes started" }),
@@ -228,7 +244,9 @@
       if (!ds.length) return;
       kids.push(el("h5", null, ["Act " + act.number + " · ", el("span", { lang: "fr", text: act.titleFr }), " (" + act.title + ") · " + act.level]));
       kids.push(el("ol", { className: "dia-episodes", start: String(ds[0].episode) }, ds.map(function (d) {
-        return el("li", { className: "dia-episode" }, [
+        var pic = storyImage(d);
+        return el("li", { className: pic ? "dia-episode dia-episode-pic" : "dia-episode" }, [
+          pic ? imgNode(pic, "dia-episode-thumb", "", true) : null,
           el("p", { className: "dia-episode-title" }, [el("a", { href: "#dialogues/" + d.id, text: "Episode " + d.episode + ": " + d.title }), " ",
             el("span", { lang: "fr", text: d.titleFr })]),
           el("p", { className: "muted", text: speakersText(d) }),
@@ -288,6 +306,7 @@
         el("span", { className: "dia-level", text: d.level })]),
       nav ? el("p", { className: "dia-episode-of" }, ["Episode " + nav.n + " of " + nav.total + (nav.act ? " · Act " + nav.act.number + ": " : ""),
         nav.act ? el("span", { lang: "fr", text: nav.act.titleFr }) : null]) : null,
+      storyImage(d) ? el("figure", { className: "dia-illus" }, [imgNode(storyImage(d), "dia-illus-img", storyImage(d).alt, false)]) : null,
       nav && d.recap ? el("p", { className: "dia-recap" }, [el("span", { className: "ref-label", text: "Story so far: " }), d.recap]) : null,
       el("p", { className: "dia-scene" }, [el("span", { className: "ref-label", text: "Scene: " }), d.scene]),
       el("p", { className: "dia-cast", text: d.speakers.map(function (sp) { return sp.name + " (" + sp.role + ")"; }).join(" and ") +

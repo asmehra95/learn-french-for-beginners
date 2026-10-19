@@ -2321,6 +2321,18 @@
         el("a", { href: xv.credits, text: xv.credits }), "."
       ]));
     });
+    // Story illustrations (js/story-images.js): separate terms from the CC BY-SA text.
+    var SI = window.VT_STORY_IMAGES;
+    if (SI && SI.cover) {
+      body.appendChild(el("h3", { text: "Illustrations (La Lettre de Lyon)" }));
+      body.appendChild(el("p", null, [
+        "The story pictures are AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large), from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text; their use follows the ",
+        el("a", { href: "https://stability.ai/community-license-agreement", text: "Stability AI Community License" }), " and the ",
+        el("a", { href: "https://aws.amazon.com/legal/bedrock/third-party-models/", text: "Amazon Bedrock third-party model terms" }),
+        ". " + Object.keys(SI.episodes).length + " of the 20 episodes have a picture. The prompts and seeds are in ",
+        el("span", { className: "filename", text: "tools/story-images/manifest.json" }), "."
+      ]));
+    }
     body.appendChild(el("h3", { text: "Native-speaker recordings" }));
     var keys = Object.keys(AUDIO);
     if (!keys.length) {

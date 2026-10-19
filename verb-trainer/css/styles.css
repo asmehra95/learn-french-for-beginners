@@ -961,7 +961,7 @@ input[aria-invalid="true"].answer-input { animation: shake 240ms var(--ease); }
 .bar-chart { list-style: none; display: flex; align-items: flex-end; gap: var(--s-2); margin: var(--s-2) 0 var(--s-4); padding: var(--s-3); max-width: 32rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); }
 .bar-day { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: var(--s-1); max-width: none; }
 .bar-track { display: flex; align-items: flex-end; width: 100%; max-width: 2.5rem; height: 6rem; border-bottom: 1px solid var(--border); }
-.bar { display: block; width: 100%; height: var(--h, 0%); min-height: 2px; background: var(--primary); border-radius: var(--r-sm, 4px) var(--r-sm, 4px) 0 0; }
+.bar { display: block; width: 100%; height: var(--h, 0%); min-height: 2px; background: var(--primary); border-radius: var(--r-sm) var(--r-sm) 0 0; }
 .bar.is-met { background: var(--success); }
 .bar-count { font-size: var(--fs-xs); font-weight: 600; }
 .bar-label { font-size: var(--fs-xs); color: var(--muted); }
@@ -1354,6 +1354,17 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 .dia-ep-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-4); margin: var(--s-4) 0 var(--s-2); }
 .dia-ep-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; overflow-wrap: anywhere; }
 .dia-ep-nav a[rel="next"] { margin-inline-start: auto; text-align: end; }
+/* Story illustrations (images/story/*.webp, story-images.js): width/height attributes reserve the space */
+.dia-illus { margin: 0 0 var(--s-3); }
+.dia-illus-img { display: block; width: 100%; max-width: 48rem; height: auto; border-radius: var(--r-md); border: 1px solid var(--border); }
+.dia-series-cover { float: right; width: clamp(6rem, 28%, 11rem); height: auto; margin: 0 0 var(--s-3) var(--s-3); border-radius: var(--r-md); border: 1px solid var(--border); }
+.dia-series h5 { clear: both; }
+.dia-episode-pic ~ .dia-episode:not(.dia-episode-pic) { padding-left: calc(5.5rem + var(--s-3)); } /* episode 8: no picture */
+.dia-episode-pic::after { content: ""; display: block; clear: both; } /* stays a list-item: keeps the number */
+.dia-episode-thumb { float: left; margin: 0 var(--s-3) var(--s-1) 0; width: 5.5rem; height: auto; border-radius: var(--r-sm); border: 1px solid var(--border); }
+.dia-home-story { display: flex; align-items: center; gap: var(--s-3); }
+.dia-home-cover { width: 3.5rem; height: auto; flex: none; border-radius: var(--r-sm); border: 1px solid var(--border); }
+@media print { .dia-episode-thumb, .dia-series-cover, .dia-home-cover { display: none; } }
 /* ---------- 12. forced colours (§15.2) ---------- */
 @media (forced-colors: active) {
   .btn, .listen, .listen-word, .accent-btn, .nav-link, .btn-util, .btn-icon, .bottom-link, .verb-card, .practice-area, .panel, .totals > div, .type-badge, .choice label {

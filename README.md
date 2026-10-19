@@ -204,6 +204,15 @@ printables all follow the data. Three non-code steps remain for each new dialogu
 `la-lettre-de-lyon.md` files; its `--html <file>` output is printed to
 `verb-trainer/reference/la-lettre-de-lyon.pdf` with headless Chrome and the metadata stripped the same way.
 
+## Regenerating the story illustrations
+The prompts, seeds and alt texts live in `tools/story-images/manifest.json`; `tools/story-images/generate.py`
+calls Amazon Bedrock through the AWS CLI (Stable Diffusion 3.5 Large; only prompts are sent, credentials
+stay in the CLI profile). `generate` writes PNGs to a folder outside the repo, `webp` writes the 1200×686
+(cover 960×1200) WebPs to `verb-trainer/images/story/` without metadata, `site` writes
+`verb-trainer/js/story-images.js` (file, size and alt text per episode) and `printjpg` makes the JPEG copies
+that `node tools/build-story.js --html out.html --print-images DIR` embeds in the story PDF. Images marked
+`"published": false` (episode 8) are skipped.
+
 ## Regenerating audio
 
 See [tts-tools/README.md](tts-tools/README.md). The short version: activate the Python venv and run
@@ -233,3 +242,6 @@ changes.
   [verb-trainer/audio/tts/qwen3-fr-m-bf16/CREDITS.md](verb-trainer/audio/tts/qwen3-fr-m-bf16/CREDITS.md).
 - **Lucide icons** — ISC licence, bundled as an inline SVG sprite
   (`verb-trainer/licenses/LUCIDE-LICENSE.txt`).
+- **Story illustrations** (*La Lettre de Lyon*, `verb-trainer/images/story/`) — separate terms, not
+  CC BY-SA: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large);
+  character designs by the project author. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).

@@ -255,8 +255,13 @@
         var nx = ser ? DLG.nextEpisode(ctx.state(), ctx.DIALOGUES, ser.id) : null;
         if (nx && nx.dialogue) {
           var verbWord = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
-          storyP = el("p", {}, [el("a", { className: "text-link", id: "home-story-link", href: "#dialogues/" + nx.dialogue.id,
-            text: "Story: " + verbWord + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title })]);
+          // The story cover (story-images.js) sits beside the link as a decorative thumbnail (alt "").
+          var SI = window.VT_STORY_IMAGES, cov = SI && SI.series === ser.id ? SI.cover : null;
+          storyP = el("p", { className: cov ? "dia-home-story" : null }, [
+            cov ? el("img", { className: "dia-home-cover", src: cov.src, width: String(cov.width), height: String(cov.height), alt: "",
+              loading: "lazy", decoding: "async" }) : null,
+            el("a", { className: "text-link", id: "home-story-link", href: "#dialogues/" + nx.dialogue.id,
+              text: "Story: " + verbWord + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title })]);
         }
         var dlgAny = dlgList.some(dlgDone);
         var dlgNext = dlgList.filter(function (d) { return !dlgDone(d); })[0] || dlgList[0];
