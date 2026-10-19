@@ -197,17 +197,14 @@
    "width": 1200,
    "height": 686,
    "people": [
-    "brun",
-    "maya"
+    "brun"
    ],
    "prompt": "A hand-painted gouache illustration from a European picture book, visible brush strokes: a short, sturdy, ruddy-cheeked 84-year-old market seller with thin white hair, clean-shaven, in a dark-green apron stands behind his market stall of figs and grapes, peering with a delighted smile at a small blank cream-coloured card (the back of an old photograph) that a 30-year-old woman with olive skin and loose shoulder-length wavy dark-brown hair, bare uncovered head, in a navy-and-white striped Breton top holds out to him. Medium shot of exactly two people facing each other across the crates, the young woman in the right foreground as large as the old man, both faces visible. Details: On the left, M. BRUN, a short, sturdy 84-year-old market seller with thin white hair, ruddy cheeks, clean-shaven, a dark-green canvas apron over a checked flannel shirt, behind wooden crates of purple figs, grapes and tomatoes. On the right, MAYA, a 30-year-old British-French woman with warm olive skin, dark brown wavy shoulder-length hair with a side-swept fringe, green eyes, a soft smile, a navy-and-white striped Breton top and a small gold hoop earring, a paper bag of figs in her other hand. Maya's eyes are bare and clearly visible, her loose hair uncovered; the striped top is hers alone. The open-air market on the boulevard de la Croix-Rousse in Lyon on a Saturday morning: plane trees, plain green awnings, crates of autumn fruit and vegetables, sunlight and shade. No price signs. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no signs with writing anywhere in the image.",
    "negative_prompt": "text, lettering, words, typography, caption, signature, scribbles, watermark, logo, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, child, children, blurry, photorealistic photo, 3d render, bare chest, chest hair, nsfw, headscarf, hijab, anime, flat vector art, photograph, photo, stock photo, hyperrealistic, glossy, studio portrait, portrait photo in frame, necktie, elderly woman, grey-haired woman, hair bun, woman wearing glasses, woman in denim shirt, man in striped top, full white beard, bow tie, price tags, striped awning, single person, man alone, crowd, empty right side",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
-   "alt": "At the Croix-Rousse market, M. Brun smiles from behind his crates of figs as Maya shows him the old photo.",
+   "alt": "M. Brun, an elderly market seller with grey hair and a white moustache, smiles behind his fruit stall and holds up a blank card.",
    "attempts": 14,
-   "published": false,
-   "note": "Not published: in 10 takes SD3.5 Large never painted M. Brun and Maya together, and 4 Stable Image Ultra takes (seeds 7108-7408) gave Brun a beard, a headscarfed second woman, signature-like marks or two bearded men. Seed 5708 (SD3.5 Large, Brun alone) is the best unpublished take.",
-   "accepted": false
+   "note": "Published as a one-person picture: M. Brun alone behind his fruit stall, holding up a blank card; Maya is not in it. No take of the two-person prompt, from SD3.5 Large or Stable Image Ultra, painted Brun and Maya together without a defect. Seed 5708 (SD3.5 Large) was painted with an earlier revision of this prompt, so a re-run can differ; its look is more ink-and-watercolour than the other pictures."
   },
   {
    "id": "ep09",

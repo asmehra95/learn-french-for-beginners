@@ -213,7 +213,8 @@ ep18) the manifest marks with `raw_suffix`, `webp` writes the 1200×686
 (cover 960×1200) WebPs to `verb-trainer/images/story/` without metadata, `site` writes
 `verb-trainer/js/story-images.js` (file, size and alt text per episode) and `printjpg` makes the JPEG copies
 that `node tools/build-story.js --html out.html --print-images DIR` embeds in the story PDF. Images marked
-`"published": false` (episode 8) are skipped.
+`"published": false` are skipped (none at the moment: the cover and all 20 episodes are published; episode 8 is
+M. Brun alone, made with Stable Diffusion 3.5 Large).
 
 ## Regenerating audio
 

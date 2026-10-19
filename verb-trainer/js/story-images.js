@@ -55,6 +55,12 @@
      "height": 686,
      "alt": "Surrounded by tall stacks of old books, Maya and Théo look through an open volume together."
     },
+    "8": {
+     "src": "images/story/ep08.webp",
+     "width": 1200,
+     "height": 686,
+     "alt": "M. Brun, an elderly market seller with grey hair and a white moustache, smiles behind his fruit stall and holds up a blank card."
+    },
     "9": {
      "src": "images/story/ep09.webp",
      "width": 1200,

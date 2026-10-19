@@ -40,10 +40,10 @@ voice was designed from a text description; neither voice is a recording or clon
 The *La Lettre de Lyon* pictures (verb-trainer/images/story/*.webp and the copies embedded in
 verb-trainer/reference/la-lettre-de-lyon.pdf) are **not** covered by the CC BY-SA licence above. They were
 AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large for the cover and
-episodes 1–7, 9–19; Stable Image Ultra for episode 20), from prompts and character designs by the project
+episodes 1–19, including episode 8; Stable Image Ultra for episode 20), from prompts and character designs by the project
 author. Episodes 16 and 18 have a small hand retouch (tools/story-images/retouch.py). Every prompt, negative
 prompt, seed and model id is in tools/story-images/manifest.json. They show fictional characters only.
-Episode 8 has no picture.
+Episode 8 shows M. Brun alone (Stable Diffusion 3.5 Large).
 
 **Public.** The site deploys to GitHub Pages (.github/workflows/pages.yml), so these pictures are
 published publicly at https://asmehra95.github.io/learn-french-for-beginners/ and in the public repository.

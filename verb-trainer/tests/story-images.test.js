@@ -38,12 +38,16 @@ test("manifest: 21 entries (cover + 20 episodes), each with model, seed, prompt 
     assert.ok(i.alt.length > 20 && i.alt.length < 200, i.id + " alt");
     assert.ok(Number.isInteger(i.attempts) && i.attempts >= 1, i.id + " attempts");
   });
-  // Episode 8 is the only image without a usable take.
-  assert.deepEqual(MANIFEST.images.filter(function (i) { return i.published === false; }).map(function (i) { return i.id; }), ["ep08"]);
+  // Every image is published, episode 8 included (M. Brun alone, SD3.5 Large, seed 5708).
+  assert.deepEqual(MANIFEST.images.filter(function (i) { return i.published === false; }), []);
   assert.deepEqual(MANIFEST.images[0].people, ["maya"], "only Maya is on the cover");
   var byId = {};
   MANIFEST.images.forEach(function (i) { byId[i.id] = i; });
   assert.equal(byId.ep20.model, "stability.stable-image-ultra-v1:1");
+  assert.equal(byId.ep08.model, "stability.sd3-5-large-v1:0");
+  assert.equal(byId.ep08.seed, 5708);
+  assert.deepEqual(byId.ep08.people, ["brun"], "episode 8 shows M. Brun alone");
+  assert.doesNotMatch(byId.ep08.alt, /Maya/, "ep08 alt describes only what is painted");
   assert.match(byId.ep16.alt, /back/, "ep16 alt describes the back of the photo that is painted");
 });
 
@@ -72,7 +76,8 @@ test("story-images.js matches the manifest: cover + one entry per published epis
   eps.forEach(function (i) {
     assert.deepEqual(SI.episodes[String(i.episode)], { src: "images/story/" + i.file, width: i.width, height: i.height, alt: i.alt });
   });
-  assert.equal(SI.episodes["8"], undefined);
+  assert.equal(Object.keys(SI.episodes).length, 20, "all 20 episodes have a picture");
+  assert.equal(SI.episodes["8"].src, "images/story/ep08.webp");
   var story = D.dialogues.filter(function (d) { return d.series === SI.series; }).map(function (d) { return d.episode; });
   Object.keys(SI.episodes).forEach(function (n) { assert.ok(story.indexOf(Number(n)) !== -1, "episode " + n + " exists"); });
 });
@@ -111,6 +116,7 @@ test("the story PDF embeds the pictures and the credit, and the licence file has
   assert.match(lic, /## Illustrations — separate terms/);
   assert.match(lic, /aws\.amazon\.com\/legal\/bedrock\/third-party-models/);
   assert.match(lic, /Stable Image Ultra/);
+  assert.match(lic, /Episode 8 shows M\. Brun alone/);
   assert.match(lic, /GitHub Pages/);
   assert.match(lic, /\*In plain language\*|\*\*In plain language\*\*/);
 });
