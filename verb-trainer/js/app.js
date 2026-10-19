@@ -2326,12 +2326,14 @@
     if (SI && SI.cover) {
       body.appendChild(el("h3", { text: "Illustrations (La Lettre de Lyon)" }));
       body.appendChild(el("p", null, [
-        "The story pictures are AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large), from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text; their use follows the ",
-        el("a", { href: "https://stability.ai/community-license-agreement", text: "Stability AI Community License" }), " and the ",
-        el("a", { href: "https://aws.amazon.com/legal/bedrock/third-party-models/", text: "Amazon Bedrock third-party model terms" }),
-        ". " + Object.keys(SI.episodes).length + " of the 20 episodes have a picture. The prompts and seeds are in ",
+        "The story pictures are AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large and Stable Image Ultra), from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text. Because the models were used through Amazon Bedrock, the terms that apply are the ",
+        el("a", { href: "https://aws.amazon.com/legal/bedrock/third-party-models/", text: "Stability AI Amazon Bedrock End User License Agreement" }), ", the ",
+        el("a", { href: "https://aws.amazon.com/service-terms/", text: "AWS Service Terms" }), " and the ",
+        el("a", { href: "https://aws.amazon.com/ai/responsible-ai/policy/", text: "AWS Responsible AI Policy" }),
+        ", not the Stability AI Community License (which covers downloading and running the models yourself). " + Object.keys(SI.episodes).length + " of the 20 episodes have a picture. The prompts and seeds are in ",
         el("span", { className: "filename", text: "tools/story-images/manifest.json" }), "."
       ]));
+      body.appendChild(el("p", { text: "In plain terms: as between the author and Stability AI, the author owns the pictures to the extent the law allows (AI-generated images may have little or no copyright protection). The terms do not forbid publishing them or using them commercially and require no attribution, but they must not be used to mislead, harass, infringe others' rights or break the law, and any provenance marks the service adds must not be removed (none were found in these files). The author is responsible for how they are shared. The site, pictures included, is published publicly on GitHub Pages. This is a summary, not legal advice; see LICENSE-CONTENT.md for what was and was not checked." }));
     }
     body.appendChild(el("h3", { text: "Native-speaker recordings" }));
     var keys = Object.keys(AUDIO);

@@ -39,9 +39,43 @@ voice was designed from a text description; neither voice is a recording or clon
 ## Illustrations — separate terms
 The *La Lettre de Lyon* pictures (verb-trainer/images/story/*.webp and the copies embedded in
 verb-trainer/reference/la-lettre-de-lyon.pdf) are **not** covered by the CC BY-SA licence above. They were
-AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large), from prompts and
-character designs by the project author; their use follows the
-[Stability AI Community License](https://stability.ai/community-license-agreement) and the
-[Amazon Bedrock third-party model terms](https://aws.amazon.com/legal/bedrock/third-party-models/).
-Every prompt, negative prompt, seed and model id is in tools/story-images/manifest.json. They show
-fictional characters only. Episode 8 has no picture.
+AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large for the cover and
+episodes 1–7, 9–19; Stable Image Ultra for episode 20), from prompts and character designs by the project
+author. Episodes 16 and 18 have a small hand retouch (tools/story-images/retouch.py). Every prompt, negative
+prompt, seed and model id is in tools/story-images/manifest.json. They show fictional characters only.
+Episode 8 has no picture.
+
+**Public.** The site deploys to GitHub Pages (.github/workflows/pages.yml), so these pictures are
+published publicly at https://asmehra95.github.io/learn-french-for-beginners/ and in the public repository.
+
+**Which terms apply.** The models were used as a service through Amazon Bedrock, not downloaded. So the
+governing terms are the
+[Stability AI Amazon Bedrock End User License Agreement](https://aws.amazon.com/legal/bedrock/third-party-models/)
+(Stability AI sells its Bedrock models; using them means agreeing to this EULA), together with the
+[AWS Service Terms](https://aws.amazon.com/service-terms/) (section 50.12, Amazon Bedrock) and the
+[AWS Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/). The
+[Stability AI Community License](https://stability.ai/community-license-agreement) covers self-hosting the
+model weights and does not govern these outputs.
+
+**In plain language** (a summary, not legal advice):
+
+- *Ownership.* As between the user and Stability AI, the user owns the generated images to the extent
+  applicable law allows. Stability AI keeps the models. Purely AI-generated images may have little or no
+  copyright protection in some countries, so others may be free to reuse them.
+- *Public and commercial redistribution.* Neither the Stability EULA nor the AWS terms forbid publishing,
+  sharing or commercial use of outputs. The user is responsible for how they are shared ("Content Sharing").
+- *Conditions.* No attribution is required. Outputs and sharing must not break the law, infringe
+  intellectual-property, privacy or publicity rights, depict real people's likeness without consent, harass,
+  deceive or mislead, or include sensitive personal data (Stability "Prohibited Uses", AWS Responsible AI
+  Policy). Under AWS Service Terms 50.12.6, provenance data (metadata, signatures or watermarks marking an
+  output as AI-generated) that Bedrock adds must not be removed or altered.
+
+**What was checked and what was not.** Checked on 19 October 2026: the Stability AI section of the Bedrock
+third-party model terms page (EULA "Last Updated: April 29, 2024"), AWS Service Terms section 50.12
+(page "Last Updated: October 13, 2026"), the AWS Responsible AI Policy (January 13, 2025) and the Bedrock
+model cards for both models, which link to the third-party terms page. The raw PNGs from Bedrock carry no
+metadata besides an `fdEC` chunk written by the fpng encoder (no C2PA, XMP or text chunks), so stripping
+metadata removed no provenance data. Not checked: whether the images carry an invisible watermark in the pixels
+(the resize, WebP compression and the two retouches could weaken one), copyright law in any particular country, and any terms the terms
+pages incorporate by reference beyond those named here. The terms can change; the links above are the
+current versions.

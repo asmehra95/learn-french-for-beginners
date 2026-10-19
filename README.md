@@ -206,8 +206,10 @@ printables all follow the data. Three non-code steps remain for each new dialogu
 
 ## Regenerating the story illustrations
 The prompts, seeds and alt texts live in `tools/story-images/manifest.json`; `tools/story-images/generate.py`
-calls Amazon Bedrock through the AWS CLI (Stable Diffusion 3.5 Large; only prompts are sent, credentials
-stay in the CLI profile). `generate` writes PNGs to a folder outside the repo, `webp` writes the 1200×686
+calls Amazon Bedrock through the AWS CLI (Stable Diffusion 3.5 Large, or Stable Image Ultra where an entry's
+`model` says so; only prompts are sent, credentials stay in the CLI profile). `generate` writes PNGs to a
+folder outside the repo, `tools/story-images/retouch.py --src DIR` applies the two small retouches (ep16,
+ep18) the manifest marks with `raw_suffix`, `webp` writes the 1200×686
 (cover 960×1200) WebPs to `verb-trainer/images/story/` without metadata, `site` writes
 `verb-trainer/js/story-images.js` (file, size and alt text per episode) and `printjpg` makes the JPEG copies
 that `node tools/build-story.js --html out.html --print-images DIR` embeds in the story PDF. Images marked
@@ -243,5 +245,10 @@ changes.
 - **Lucide icons** — ISC licence, bundled as an inline SVG sprite
   (`verb-trainer/licenses/LUCIDE-LICENSE.txt`).
 - **Story illustrations** (*La Lettre de Lyon*, `verb-trainer/images/story/`) — separate terms, not
-  CC BY-SA: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large);
-  character designs by the project author. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+  CC BY-SA: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large and
+  Stable Image Ultra); character designs by the project author. Governed by the Stability AI Amazon
+  Bedrock EULA and the AWS Service Terms (not the Stability Community License): the author owns the
+  outputs as far as the law allows, public and commercial sharing is not restricted, no attribution is
+  required, and outputs must not mislead, infringe others' rights or break the law. They are published
+  publicly with the site on GitHub Pages. Summary and what was verified in
+  [LICENSE-CONTENT.md](LICENSE-CONTENT.md).

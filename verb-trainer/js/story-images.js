@@ -5,7 +5,7 @@
   "use strict";
   var api = {
    "series": "la-lettre-de-lyon",
-   "credit": "Illustrations: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large); character designs by the project author. Not covered by the CC BY-SA licence of the text.",
+   "credit": "Illustrations: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large and Stable Image Ultra); character designs by the project author. Not covered by the CC BY-SA licence of the text.",
    "cover": {
     "src": "images/story/cover.webp",
     "width": 960,
@@ -101,7 +101,7 @@
      "src": "images/story/ep16.webp",
      "width": 1200,
      "height": 686,
-     "alt": "On a bench, Jacques holds a small sepia photo of a young man while Maya sits beside him."
+     "alt": "On a garden bench, Jacques holds up a small old photo, its plain cream back towards us, while Maya sits beside him."
     },
     "17": {
      "src": "images/story/ep17.webp",
@@ -125,7 +125,7 @@
      "src": "images/story/ep20.webp",
      "width": 1200,
      "height": 686,
-     "alt": "At night outside a warmly lit window, Théo and Maya stand close together, smiling."
+     "alt": "At night in a lamp-lit old Lyon street, Théo, in glasses and a denim shirt, has his arm round Maya's shoulders; both are smiling."
     }
    }
   };

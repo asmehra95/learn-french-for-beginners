@@ -30,7 +30,9 @@ test("manifest: 21 entries (cover + 20 episodes), each with model, seed, prompt 
   var ids = MANIFEST.images.map(function (i) { return i.id; });
   assert.deepEqual(ids, ["cover"].concat(Array.from({ length: 20 }, function (_, k) { return "ep" + String(k + 1).padStart(2, "0"); })));
   MANIFEST.images.forEach(function (i) {
-    assert.equal(i.model, MANIFEST.model, i.id);
+    assert.ok(Object.prototype.hasOwnProperty.call(MANIFEST.models, i.model), i.id + " model " + i.model);
+    // A retouched take is read from <id>__s<seed>r.png and says what was changed.
+    if (i.raw_suffix !== undefined) assert.ok(i.raw_suffix === "r" && i.retouch.length > 20, i.id + " retouch");
     assert.ok(Number.isInteger(i.seed) && i.seed > 0, i.id + " seed");
     assert.ok(i.prompt.length > 100 && i.negative_prompt.length > 20, i.id + " prompt");
     assert.ok(i.alt.length > 20 && i.alt.length < 200, i.id + " alt");
@@ -38,6 +40,11 @@ test("manifest: 21 entries (cover + 20 episodes), each with model, seed, prompt 
   });
   // Episode 8 is the only image without a usable take.
   assert.deepEqual(MANIFEST.images.filter(function (i) { return i.published === false; }).map(function (i) { return i.id; }), ["ep08"]);
+  assert.deepEqual(MANIFEST.images[0].people, ["maya"], "only Maya is on the cover");
+  var byId = {};
+  MANIFEST.images.forEach(function (i) { byId[i.id] = i; });
+  assert.equal(byId.ep20.model, "stability.stable-image-ultra-v1:1");
+  assert.match(byId.ep16.alt, /back/, "ep16 alt describes the back of the photo that is painted");
 });
 
 test("every published image exists as a WebP at its manifest size, under the size cap, with no metadata", function () {
@@ -56,7 +63,7 @@ test("every published image exists as a WebP at its manifest size, under the siz
 
 test("story-images.js matches the manifest: cover + one entry per published episode", function () {
   assert.equal(SI.series, "la-lettre-de-lyon");
-  assert.match(SI.credit, /Stable Diffusion 3\.5 Large/);
+  assert.match(SI.credit, /Stable Diffusion 3\.5 Large and Stable Image Ultra/);
   assert.match(SI.credit, /Not covered by the CC BY-SA/);
   var cover = MANIFEST.images[0];
   assert.deepEqual(SI.cover, { src: "images/story/cover.webp", width: cover.width, height: cover.height, alt: cover.alt });
@@ -103,4 +110,7 @@ test("the story PDF embeds the pictures and the credit, and the licence file has
   var lic = fs.readFileSync(path.join(REPO, "LICENSE-CONTENT.md"), "utf8");
   assert.match(lic, /## Illustrations — separate terms/);
   assert.match(lic, /aws\.amazon\.com\/legal\/bedrock\/third-party-models/);
+  assert.match(lic, /Stable Image Ultra/);
+  assert.match(lic, /GitHub Pages/);
+  assert.match(lic, /\*In plain language\*|\*\*In plain language\*\*/);
 });

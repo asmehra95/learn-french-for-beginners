@@ -1,7 +1,7 @@
 {
- "about": "Illustrations for La Lettre de Lyon. AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large); character designs by the project author. Regenerate with tools/story-images/generate.py.",
+ "about": "Illustrations for La Lettre de Lyon. AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large; Stable Image Ultra for episode 20); character designs by the project author. Regenerate with tools/story-images/generate.py; ep16 and ep18 then get a small retouch with tools/story-images/retouch.py.",
  "model": "stability.sd3-5-large-v1:0",
- "model_name": "Stable Diffusion 3.5 Large",
+ "model_name": "Stable Diffusion 3.5 Large (and Stable Image Ultra for ep20)",
  "provider": "Amazon Bedrock",
  "region": "us-west-2",
  "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
@@ -30,8 +30,7 @@
    "width": 960,
    "height": 1200,
    "people": [
-    "maya",
-    "theo"
+    "maya"
    ],
    "prompt": "A hand-painted gouache illustration from a European picture book, visible brush strokes: a 30-year-old woman with olive skin and loose shoulder-length wavy dark-brown hair, bare uncovered head, in a navy-and-white striped Breton top stands at a tall open window holding a bundle of old envelopes tied with a faded blue ribbon and a small blank cream-coloured card (the back of an old photograph), beside a freckled 34-year-old man with tousled chestnut-brown hair, a thick full brown beard and round black-framed glasses, in a buttoned light-blue denim shirt, who smiles at her. Wide shot, both faces visible. Details: On the left, MAYA, a 30-year-old British-French woman with warm olive skin, dark brown wavy shoulder-length hair with a side-swept fringe, green eyes, a soft smile, a navy-and-white striped Breton top and a small gold hoop earring, holds the old envelopes and the small photograph. On the right, THEO, a 34-year-old man with fair skin with freckles, tousled light-brown hair, a short brown beard, round dark-framed glasses, a wide friendly grin, a buttoned light-blue denim shirt and a yellow pencil tucked behind his ear, leans on the window frame. Maya's eyes are bare and clearly visible, her loose hair uncovered; the striped top is hers alone. Theo is the one with the glasses and the full beard, in a plain solid-blue denim shirt. They are in an old high-ceilinged silk-weaver's flat on the Croix-Rousse hill in Lyon, France. Through the window: terracotta rooftops, the river Saône and, across it, Fourvière hill with its white basilica in golden late-afternoon light. Warm, hopeful, a little nostalgic book-cover composition. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no signs with writing anywhere in the image.",
    "negative_prompt": "text, lettering, words, typography, caption, signature, scribbles, watermark, logo, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, child, children, blurry, photorealistic photo, 3d render, bare chest, chest hair, nsfw, headscarf, hijab, anime, flat vector art, photograph, photo, stock photo, hyperrealistic, glossy, studio portrait, portrait photo in frame, necktie, elderly woman, grey-haired woman, hair bun, apron, woman wearing glasses, woman in denim shirt, man in striped top, clean-shaven young man, stubble, blond hair, full white beard, bow tie",
@@ -205,9 +204,9 @@
    "negative_prompt": "text, lettering, words, typography, caption, signature, scribbles, watermark, logo, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, child, children, blurry, photorealistic photo, 3d render, bare chest, chest hair, nsfw, headscarf, hijab, anime, flat vector art, photograph, photo, stock photo, hyperrealistic, glossy, studio portrait, portrait photo in frame, necktie, elderly woman, grey-haired woman, hair bun, woman wearing glasses, woman in denim shirt, man in striped top, full white beard, bow tie, price tags, striped awning, single person, man alone, crowd, empty right side",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
    "alt": "At the Croix-Rousse market, M. Brun smiles from behind his crates of figs as Maya shows him the old photo.",
-   "attempts": 10,
+   "attempts": 14,
    "published": false,
-   "note": "Not published: in 10 takes SD3.5 Large never painted M. Brun and Maya together. Seed 5708 (Brun alone) is the best unpublished take.",
+   "note": "Not published: in 10 takes SD3.5 Large never painted M. Brun and Maya together, and 4 Stable Image Ultra takes (seeds 7108-7408) gave Brun a beard, a headscarfed second woman, signature-like marks or two bearded men. Seed 5708 (SD3.5 Large, Brun alone) is the best unpublished take.",
    "accepted": false
   },
   {
@@ -372,9 +371,11 @@
    "prompt": "A hand-painted gouache illustration from a European picture book, visible brush strokes: a tall, lean 87-year-old man with a white moustache and a clean-shaven chin, in a grey-brown tweed flat cap and a tweed jacket over an open-collared white shirt, bare throat sits on a wooden garden bench holding a small blank cream-coloured card (the back of an old photograph) beside a 30-year-old woman with olive skin and loose shoulder-length wavy dark-brown hair, bare uncovered head, in a navy-and-white striped Breton top, who holds the same small photograph; they look at each other, moved. Wide shot, both faces visible. Details: On the left, JACQUES, an 87-year-old man, tall and lean, white hair at the sides under a grey-brown tweed flat cap, a long lined face, bushy grey eyebrows, a white moustache, kind blue-grey eyes, a tweed jacket over an open-collared white shirt with the top button undone, bare throat, the worn photograph in his hands, his eyes wet. On the right, MAYA, a 30-year-old British-French woman with warm olive skin, dark brown wavy shoulder-length hair with a side-swept fringe, green eyes, a soft smile, a navy-and-white striped Breton top and a small gold hoop earring, gently smiling. Only these two people are in the image. Jacques's chin is smooth and clean-shaven beneath his white moustache; open shirt collar. Maya's eyes are bare and clearly visible, her loose hair uncovered; the striped top is hers alone. The garden of Les Tilleuls, a small retirement home in an old stone house with pale shutters in Caluire near Lyon, France: tall linden trees with yellowing autumn leaves, gravel paths, three in the afternoon, soft dappled light. A tender, quiet first meeting. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no signs with writing anywhere in the image.",
    "negative_prompt": "text, lettering, words, typography, caption, signature, scribbles, watermark, logo, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, child, children, blurry, photorealistic photo, 3d render, bare chest, chest hair, nsfw, headscarf, hijab, anime, flat vector art, photograph, photo, stock photo, hyperrealistic, glossy, studio portrait, portrait photo in frame, necktie, elderly woman, grey-haired woman, hair bun, apron, full white beard, bow tie, woman wearing glasses, woman in denim shirt, man in striped top, third person, man in denim shirt",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
-   "alt": "On a bench, Jacques holds a small sepia photo of a young man while Maya sits beside him.",
-   "attempts": 5,
-   "accepted": true
+   "alt": "On a garden bench, Jacques holds up a small old photo, its plain cream back towards us, while Maya sits beside him.",
+   "attempts": 12,
+   "accepted": true,
+   "raw_suffix": "r",
+   "retouch": "retouch.py: the invented sepia portrait on the photo was painted over with the card's cream colour, so the photo is seen from the back. 3 more SD3.5 Large takes (6416-6616) and 4 Stable Image Ultra takes (7116-7416) were rejected (Edwardian costume, framed portraits, beard and glasses on Jacques, Maya missing)."
   },
   {
    "id": "ep17",
@@ -416,7 +417,9 @@
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
    "alt": "On a garden bench, Maya reads the old letter aloud while Jacques listens beside her.",
    "attempts": 4,
-   "accepted": true
+   "accepted": true,
+   "raw_suffix": "r",
+   "retouch": "retouch.py: a small cursive pseudo-word in the top-left corner of the letter was painted over with the paper colour."
   },
   {
    "id": "ep19",
@@ -443,9 +446,8 @@
    "id": "ep20",
    "episode": 20,
    "file": "ep20.webp",
-   "model": "stability.sd3-5-large-v1:0",
-   "mode": "text-to-image",
-   "seed": 5220,
+   "model": "stability.stable-image-ultra-v1:1",
+   "seed": 7320,
    "aspect": "16:9",
    "width": 1200,
    "height": 686,
@@ -453,13 +455,18 @@
     "theo",
     "maya"
    ],
-   "prompt": "A hand-painted gouache illustration from a European picture book, visible brush strokes: a 30-year-old woman with olive skin and loose shoulder-length wavy dark-brown hair, bare uncovered head, in a navy-and-white striped Breton top and a freckled 34-year-old man with tousled chestnut-brown hair, a thick full brown beard and round black-framed glasses, in a buttoned light-blue denim shirt stand together at night outside the warmly lit window of a small traditional restaurant; she holds open a small wooden box of tiny metal printer's type blocks, and they smile at each other. Wide shot, both faces visible. Details: On the left, THEO, a 34-year-old man with fair skin with freckles, tousled light-brown hair, a short brown beard, round dark-framed glasses, a wide friendly grin, a buttoned light-blue denim shirt and a yellow pencil tucked behind his ear, his arm around her shoulders. On the right, MAYA, a 30-year-old British-French woman with warm olive skin, dark brown wavy shoulder-length hair with a side-swept fringe, green eyes, a soft smile, a navy-and-white striped Breton top and a small gold hoop earring, holding the little wooden box. Through the window behind them, small soft blurred shapes of an elderly couple talking at a table with a red-and-white checked tablecloth. Theo is the one with the glasses and the full beard, in a plain solid-blue denim shirt. Maya's eyes are bare and clearly visible, her loose hair uncovered; the striped top is hers alone. The place de la Croix-Rousse in Lyon on a Saturday night: old stone buildings, plane trees, street lamps, the warm golden glow of the bouchon's window. No shop signs. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no signs with writing anywhere in the image.",
-   "negative_prompt": "text, lettering, words, typography, caption, signature, scribbles, watermark, logo, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, child, children, blurry, photorealistic photo, 3d render, bare chest, chest hair, nsfw, headscarf, hijab, anime, flat vector art, photograph, photo, stock photo, hyperrealistic, glossy, studio portrait, portrait photo in frame, necktie, elderly woman, grey-haired woman, hair bun, apron, man in striped top, clean-shaven young man, stubble, blond hair, woman wearing glasses, woman in denim shirt, full white beard, bow tie, shop sign, restaurant sign",
+   "prompt": "A hand-painted gouache illustration from a European picture book, visible brush strokes. A present-day scene in 2020s France; everyone wears contemporary everyday clothes. Two people only, standing close together at night and smiling. Details: On the left, THEO, a 34-year-old man with fair skin with freckles, tousled light-brown hair, a short brown beard, round dark-framed glasses, a wide friendly grin, a buttoned light-blue denim shirt and a yellow pencil tucked behind his ear; he clearly has a short brown beard and round dark-framed glasses, his arm around her shoulders. On the right, MAYA, a 30-year-old British-French woman with warm olive skin, dark brown wavy shoulder-length hair with a side-swept fringe, green eyes, a soft smile, a navy-and-white striped Breton top and a small gold hoop earring, young and slim, in jeans, her loose dark hair uncovered. Theo is the only one with glasses and a beard. Maya's eyes are bare; the striped top is hers alone. Behind them, an old street on the Croix-Rousse hill in Lyon near the bouchon: old stone houses, glowing street lamps, a deep blue starry night sky. The painting fills the whole frame edge to edge. No shop signs. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no signs with writing anywhere in the image.",
+   "negative_prompt": "text, lettering, letters, words, signature, watermark, logo, deformed face, deformed hands, extra fingers, extra people, crowd, photorealistic, 3d render, clean-shaven man, woman wearing glasses, white background, blank border, daylight, shop sign",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
-   "alt": "At night outside a warmly lit window, Théo and Maya stand close together, smiling.",
-   "attempts": 5,
-   "accepted": true
+   "alt": "At night in a lamp-lit old Lyon street, Théo, in glasses and a denim shirt, has his arm round Maya's shoulders; both are smiling.",
+   "attempts": 12,
+   "accepted": true,
+   "prompt_note": "Seed 7320 was painted with this round-3 revision; the prompt text was rewritten here from the working notes after the run, so a re-run may differ slightly. Earlier rejected takes: SD3.5 Large 5120-5520 and 6420-6620 (lens rim or glasses on Maya), Stable Image Ultra 7120, 7220, 7420 (white background, signage, glasses on Maya)."
   }
  ],
- "prompt_note": "Each prompt is the last revision tried for that image; some chosen seeds were painted with an earlier revision of the same prompt, so a re-run can differ."
+ "prompt_note": "Each prompt is the last revision tried for that image; some chosen seeds were painted with an earlier revision of the same prompt, so a re-run can differ.",
+ "models": {
+  "stability.sd3-5-large-v1:0": "Stable Diffusion 3.5 Large",
+  "stability.stable-image-ultra-v1:1": "Stable Image Ultra"
+ }
 }

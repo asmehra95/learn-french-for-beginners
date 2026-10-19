@@ -165,7 +165,8 @@ def cmd_webp(args):
     for img in m["images"]:
         if img.get("published") is False:
             continue
-        src = os.path.join(args.src, "%s__s%d.png" % (img["id"], img["seed"]))
+        # "raw_suffix": "r" means the retouched take written by retouch.py
+        src = os.path.join(args.src, "%s__s%d%s.png" % (img["id"], img["seed"], img.get("raw_suffix", "")))
         with Image.open(src) as im:
             im = im.convert("RGB")
             w, h = img["width"], img["height"]
@@ -226,8 +227,8 @@ def cmd_site(args):
                 "  if (root) root.VT_STORY_IMAGES = api;\n"
                 "})(typeof window !== \"undefined\" ? window : null);\n")
     print("%s: cover %s, %d episodes" % (args.dest, "yes" if cover else "no", len(eps)))
-CREDIT = ("Illustrations: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large); "
-          "character designs by the project author. Not covered by the CC BY-SA licence of the text.")
+CREDIT = ("Illustrations: AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large and "
+          "Stable Image Ultra); character designs by the project author. Not covered by the CC BY-SA licence of the text.")
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--manifest", default=MANIFEST)
