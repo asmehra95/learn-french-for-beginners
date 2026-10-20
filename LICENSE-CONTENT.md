@@ -12,6 +12,7 @@ licensed under the **Creative Commons Attribution-ShareAlike 4.0 International**
 - Everyday expressions (french-expressions.md, verb-trainer/reference/french-expressions.*, verb-trainer/js/expressions-data.js)
 - Dialogues, all 20 everyday conversations (french-dialogues.md, verb-trainer/reference/french-dialogues.*, verb-trainer/js/dialogues-data.js)
 - Story *La Lettre de Lyon*, 20 episodes (la-lettre-de-lyon.md, verb-trainer/reference/la-lettre-de-lyon.*, the story records in verb-trainer/js/dialogues-data.js)
+- Story *Le Café des Questions*, 20 episodes (le-cafe-des-questions.md, verb-trainer/reference/le-cafe-des-questions.*, the story records in verb-trainer/js/dialogues-data.js)
 - Any other written instructional content authored by Avtar Singh in this repository
 
 **Deed:** <https://creativecommons.org/licenses/by-sa/4.0/>

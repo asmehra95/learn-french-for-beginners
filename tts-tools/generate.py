@@ -513,7 +513,7 @@ are played by the Dialogues Listen buttons for the speakers mapped to this voice
 - Model license: {v['license']} ({v['licenseUrl']}).
 - Voice: {v['voiceNote']}
 - Designed with `{d['repo']}` @ `{d['revision']}`, seed `{d['seed']}`, from the instruction above. No real person was recorded or cloned.
-- Run: mlx-audio 0.5.8 on Apple Silicon; temperature 0.7 (retries 0.45 to 0.8), seed 1234 + item position.
+- Run: mlx-audio 0.5.8 on Apple Silicon; temperature 0.7 (retries 0.45 to 0.8), seed 1234 + item position. The *Le Café des Questions* clips use approach D: temperature 0.9 on every attempt and punctuation cues in the generation text only (`cueText` in `manifest.json`); lines that failed every D attempt were recorded with the settings above (`approach: "A-fallback"`).
 - Post-processing: silence trimmed, loudness normalized to -16 LUFS, MP3 64 kbps mono 24 kHz.
 - Quality check: every clip was transcribed by Whisper large-v3-turbo (MIT) and compared with its text;
   clips that failed after retries are not shipped and the site uses the device voice for them.
@@ -534,7 +534,7 @@ are played by the verb trainer's Listen buttons.
 - Model: {v['model']}, revision `{v['revision']}` ({v['modelUrl']}). Upstream: Qwen3-TTS by the Qwen team, Alibaba Cloud ({v['upstreamUrl']}).
 - Model license: {v['license']} ({v['licenseUrl']}).
 - Voice: {v['voiceNote']}
-- Run: mlx-audio 0.5.8 on Apple Silicon; temperature 0.7 (retries 0.45 to 0.8), seed 1234 + item position.
+- Run: mlx-audio 0.5.8 on Apple Silicon; temperature 0.7 (retries 0.45 to 0.8), seed 1234 + item position. The *Le Café des Questions* clips use approach D: temperature 0.9 on every attempt and punctuation cues in the generation text only (`cueText` in `manifest.json`); lines that failed every D attempt were recorded with the settings above (`approach: "A-fallback"`).
 - Post-processing: silence trimmed, loudness normalized to -16 LUFS, MP3 64 kbps mono 24 kHz.
 - Quality check: every clip was transcribed by Whisper large-v3-turbo (MIT) and compared with its text;
   clips that failed after retries are not shipped and the site uses the device voice for them.

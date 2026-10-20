@@ -320,3 +320,30 @@ test("static: views-search.js renders sg-dia in the §6 order and Enter chains i
   assert.ok(VIEW.indexOf('expressionsFirst(last) ? ["expression", "table", "open", "dialogue", "topic"]') !== -1);
   assert.ok(HTML.indexOf("everyday expressions, dialogues and the topic lessons</label>") !== -1);
 });
+/* ---------- Le Café des Questions: proverbs and the series title ---------- */
+test("café: 'proverbe' returns the 20 café episodes and no Lyon or everyday dialogue", function () {
+  var hs = qd("proverbe").dialogues;
+  assert.equal(hs.length, 20);
+  hs.forEach(function (h) { assert.equal(h.series, "le-cafe-des-questions", h.id); });
+  assert.equal(qd("sagesse du jour").dialogues.length, 20);
+});
+test("café: 'oiseau' finds episode 3 first with a proverb: match detail; the English equivalent finds its episode too", function () {
+  var h = qd("oiseau").dialogues[0];
+  assert.equal(h.id, "cafe-03-the-nephew");
+  assert.ok(/^proverb: « Petit à petit, l'oiseau fait son nid\. »$/.test(h.matchDetail), h.matchDetail);
+  var t = qd("All in good time").dialogues[0];
+  assert.equal(t.id, "cafe-01-the-rule");
+  assert.equal(t.matchDetail, "proverb: « Chaque chose en son temps. »");
+  assert.equal(qd("Tel père, tel fils").dialogues[0].id, "cafe-17-like-father");
+});
+test("café: the series titles each find only their own episodes", function () {
+  var c = qd("Le Café des Questions").dialogues;
+  assert.ok(c.length >= 20);
+  c.slice(0, 20).forEach(function (h) { assert.equal(h.seriesTitleFr, "Le Café des Questions", h.id); assert.equal(h.total, 20); });
+  var l = qd("la lettre de lyon").dialogues.filter(function (h) { return h.series; });
+  assert.ok(l.length >= 20);
+  l.forEach(function (h) { assert.equal(h.series, "la-lettre-de-lyon", h.id); });
+});
+test("static: views-search.js tags proverb match details as French", function () {
+  assert.ok(VIEW.indexOf("/^(line|proverb): /.test(x.matchDetail)") !== -1);
+});

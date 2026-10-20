@@ -9,6 +9,8 @@
 (function (root) {
   "use strict";
   function line(id, speaker, fr, pron, en, alts) { return { id: id, speaker: speaker, fr: fr, pron: pron, en: en, accept: [fr].concat(alts || []) }; }
+  // A story line with an emotion tag (one of VT_DLG.EMOTIONS), shown in brackets after the English.
+  function eline(id, speaker, fr, pron, en, emotion, alts) { return { id: id, speaker: speaker, fr: fr, pron: pron, en: en, emotion: emotion, accept: [fr].concat(alts || []) }; }
   // kind === null means "no link" (link: null): not every word has a verb, expression or table to point at.
   function word(id, fr, pron, en, lineId, kind, targetId) { return { id: id, fr: fr, pron: pron, en: en, line: lineId, link: kind ? { kind: kind, id: targetId } : null }; }
   function q(id, prompt, answer, distractors, lang, lineId) { return { id: id, prompt: prompt, answer: answer, distractors: distractors, lang: lang, line: lineId }; }
@@ -3483,6 +3485,1701 @@
         ],
         table: "possessive-pronouns"
       }
+    },
+    /* ---- Story: Le Café des Questions, episodes 1–20 (numbers 41–60). Written content © 2026 Avtar Singh, CC BY-SA 4.0. ---- */
+    {
+      id: "cafe-01-the-rule", number: 41, level: "A1", series: "le-cafe-des-questions", episode: 1, act: 1,
+      title: "The rule", titleFr: "La règle",
+      summary: "Thomas rushes in for a quick coffee, but Madame Rose serves you only after one question.",
+      scene: "On Monday at half past eight, Thomas rushes into a tiny café in Montmartre with a phone in each hand. Madame Rose puts a white cup on her side of the counter and taps the slate by the door, signed O. When a phone rings, Thomas answers it, and Socrate, the grey parrot by the window, turns his back on him. Later Thomas puts both phones down, and Rose slides the cup across.",
+      keywords: ["pressé", "presse", "in a hurry", "règle", "regle", "rule", "ardoise", "slate", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "thomas", name: "Thomas", role: "customer in a hurry", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "thomas", "Bonjour ! Un café, vite ! Je suis en retard.", "bohN-zhoor. uhN kah-fay, veet. zhuh swee‿zahN ruh-tar",
+          "Morning! A coffee, quick! I'm late.", "worried",
+          ["Bonjour ! Un café, vite, s'il vous plaît ! Je suis en retard.", "Un café, vite ! Je suis en retard.", "Bonjour madame ! Un café, vite ! Je suis en retard.", "Bonjour ! Un express, vite ! Je suis en retard.", "Bonjour ! Un café, s'il vous plaît. Je suis en retard."]),
+        eline("l2", "rose", "Bonjour, monsieur. Vite ? Ici, une question, puis un café.", "bohN-zhoor, muh-syuh. veet. ee-see, ewn kes-tyohN, pwee uhN kah-fay",
+          "Good morning. Quick? Here, it's one question, then a coffee.", "teasing",
+          ["Vite ? Ici, une question, puis un café.", "Bonjour. Vite ? Ici, une question, puis un café.", "Bonjour, monsieur. Vite ? Non. Ici, une question, puis un café.", "Bonjour, monsieur. Ici, d'abord une question, puis un café."]),
+        eline("l3", "thomas", "Une question ? Pour un café ? Je n'ai pas le temps !", "ewn kes-tyohN. poor uhN kah-fay. zhuh nay pah luh tahN",
+          "A question? For a coffee? I haven't got time! (US: I don't have time)", "annoyed",
+          ["Une question ? Je n'ai pas le temps !", "Une question ? Pour un café ? Mais je n'ai pas le temps !", "Une question ? Pour un café ? Je n'ai pas de temps !", "Une question ? Pour un café ? Je suis pressé !"]),
+        eline("l4", "rose", "Socrate vous tourne le dos. Il n'est pas d'accord.", "soh-krat voo toorn luh doh. eel neh pah dah-kor",
+          "Socrate's turning his back on you. He doesn't approve.", "amused",
+          ["Regardez, Socrate vous tourne le dos. Il n'est pas d'accord.", "Socrate vous tourne le dos. Socrate n'est pas d'accord.", "Socrate n'est pas d'accord. Il vous tourne le dos.", "Regardez Socrate. Il n'est pas d'accord."]),
+        eline("l5", "thomas", "Pardon. Et sur l'ardoise, c'est qui, O. ?", "par-dohN. ay sewr lar-dwahz, seh kee, oh",
+          "Sorry. And on the slate, who's O.?", "curious",
+          ["Pardon. C'est qui, O. ?", "Pardon. Et sur l'ardoise, qui est O. ?", "Pardon. Qui est O., sur l'ardoise ?", "Et sur l'ardoise, c'est qui, O. ?", "Pardon. Et O., sur l'ardoise, c'est qui ?"]),
+        eline("l6", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "C'est moi qui pose les questions, ici.", "Ici, les questions, c'est moi.", "Ici, c'est moi qui pose les questions, monsieur."]),
+        eline("l7", "rose", "Qu'est-ce que vous aimez, le matin ?", "kes-kuh voo‿zeh-may, luh mah-taN",
+          "What do you like, in the morning?", "curious",
+          ["Le matin, qu'est-ce que vous aimez ?", "Vous aimez quoi, le matin ?", "Qu'est-ce que vous aimez faire, le matin ?", "Et vous, qu'est-ce que vous aimez, le matin ?", "Le matin, vous aimez quoi ?"]),
+        eline("l8", "thomas", "Le matin ? Je cours. Je travaille. Avec mon café.", "luh mah-taN. zhuh koor. zhuh trah-vahy. ah-vek mohN kah-fay",
+          "In the morning? I rush around. I work. Coffee in hand.", "worried",
+          ["Le matin ? Je cours et je travaille. Avec mon café.", "Je cours. Je travaille. Avec mon café.", "Le matin ? Je cours. Je travaille. Avec mon café à la main.", "Le matin ? Je ne sais pas. Je cours. Je travaille."]),
+        eline("l9", "thomas", "J'aime… le café. Et le silence.", "zhem… luh kah-fay. ay luh see-lahNs",
+          "I like… coffee. And silence.", "surprised",
+          ["J'aime le café. Et j'aime le silence.", "J'aime bien le café. Et le silence.", "Le café. Et le silence.", "J'aime… le café. Et aussi le silence."]),
+        eline("l10", "thomas", "Merci. Je m'assois. Je reste cinq minutes.", "mair-see. zhuh mah-swah. zhuh rest saNk mee-newt",
+          "Thanks. I'll sit down. I'll stay five minutes.", "relieved",
+          ["Merci. Je m'assieds. Je reste cinq minutes.", "Je m'assois. Je reste cinq minutes.", "Merci. Je reste cinq minutes.", "Merci beaucoup. Je m'assois. Je reste 5 minutes.", "Merci. Je m'assois. Je reste cinq minutes, alors."])
+      ],
+      vocab: [
+        word("v1", "Je suis en retard", "zhuh swee‿zahN ruh-tar", "I'm late", "l1", "expression", "je-suis-en-retard"),
+        word("v2", "un café", "uhN kah-fay", "a coffee (un: masculine)", "l1", "table", "indefinite-articles"),
+        word("v3", "Je n'ai pas le temps", "zhuh nay pah luh tahN", "I haven't got time (US: I don't have time)", "l3", "verb", "avoir"),
+        word("v4", "pas d'accord", "pah dah-kor", "doesn't agree (d'accord: OK, agreed)", "l4", "expression", "daccord"),
+        word("v5", "c'est moi qui pose les questions", "seh mwah kee pohz lay kes-tyohN", "I'm the one who asks the questions (poser une question: to ask a question)", "l6", "verb", "poser"),
+        word("v6", "Qu'est-ce que vous aimez", "kes-kuh voo‿zeh-may", "What do you like", "l7", "verb", "aimer"),
+        word("v7", "Je cours", "zhuh koor", "I run, I rush around (courir)", "l8", "verb", "courir"),
+        word("v8", "Je travaille", "zhuh trah-vahy", "I work (je: -e; vous travaillez)", "l8", "table", "present-endings"),
+        word("v9", "Je reste cinq minutes", "zhuh rest saNk mee-newt", "I'll stay five minutes (present for a decision now)", "l10", "verb", "rester")
+      ],
+      questions: [
+        q("q1", "Why does Thomas want his coffee quickly?", "He's late", ["He's cold", "He's very tired", "He has a train to catch"], "en", "l1"),
+        q("q2", "What does Thomas like in the morning?", "Coffee and silence", ["His phones and his work", "Running and music", "Bread and jam"], "en", "l9"),
+        q("q3", "How long does Thomas stay in the end?", "Five minutes", ["Two minutes", "Ten minutes", "An hour"], "en", "l10"),
+        q("q4", "What is Rose's question?", "Qu'est-ce que vous aimez, le matin ?", ["Pourquoi vous êtes en retard ?", "Qu'est-ce que vous buvez, le matin ?", "Où est-ce que vous travaillez ?"], "fr", "l7")
+      ],
+      notice: {
+        title: "Present-tense endings: vous aimez, j'aime",
+        text: "Rose asks Qu'est-ce que vous aimez, le matin ? and Thomas answers J'aime… le café. The stem aim- stays the same; only the ending changes: -ez for vous, -e for je. Thomas's Je travaille works the same way: vous travaillez.",
+        examples: [
+          eg("Qu'est-ce que vous aimez, le matin ?", "kes-kuh voo‿zeh-may, luh mah-taN", "What do you like in the morning? (vous: -ez)"),
+          eg("J'aime le silence.", "zhem luh see-lahNs", "I like silence. (je: -e)"),
+          eg("Vous travaillez le matin ?", "voo trah-vah-yay luh mah-taN", "Do you work in the morning? (vous: -ez)")
+        ],
+        table: "present-endings"
+      },
+      proverb: {
+        fr: "Chaque chose en son temps.",
+        respelling: "shahk shohz ahN sohN tahN",
+        literal: "Each thing in its time.",
+        meaning: "Give each thing its own moment: finish your coffee before the next task.",
+        englishEquivalent: "All in good time."
+      }
+    },
+    {
+      id: "cafe-02-the-speech", number: 42, level: "A1", series: "le-cafe-des-questions", episode: 2, act: 1,
+      title: "The speech", titleFr: "Le discours",
+      recap: "Thomas, always late, answered Rose's question and stayed five minutes. The slate's rule is signed O., but Rose won't say who O. is.",
+      summary: "Paul's wedding speech is twelve pages long, until Rose asks him why he loves Léa.",
+      scene: "On Thursday Paul sits at one of Madame Rose's three little tables with twelve pages and a pen: on Saturday he marries Léa. Rose drinks from her own blue cup with an O painted on it; customers get white ones. She puts Paul's white cup on her side of the counter. Later Socrate, the grey parrot, nibbles page twelve.",
+      keywords: ["discours", "speech", "wedding", "mariage", "léa", "lea", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "paul", name: "Paul", role: "groom-to-be", initial: "P", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Bonjour, monsieur. Un thé ? Vous êtes tout blanc.", "bohN-zhoor, muh-syuh. uhN tay. voo‿zet too blahN",
+          "Hello. A tea? You're as white as a sheet. (literally: all white)", "curious",
+          ["Bonjour. Un thé ? Vous êtes tout blanc.", "Bonjour, monsieur. Un thé ? Vous êtes très pâle.", "Bonjour, monsieur. Vous voulez un thé ? Vous êtes tout blanc.", "Un thé, monsieur ? Vous êtes tout blanc."]),
+        eline("l2", "paul", "Samedi, je me marie. Écoutez : l'amour est une étoile…", "sahm-dee, zhuh muh mah-ree. ay-koo-tay. lah-moor eh ewn ay-twahl…",
+          "I'm getting married on Saturday. Listen: 'Love is a star…'", "worried",
+          ["Je me marie samedi. Écoutez : l'amour est une étoile…", "Samedi, je me marie. Écoutez mon discours : l'amour est une étoile…", "Oui, merci. Samedi, je me marie. Écoutez : l'amour est une étoile…", "Samedi, je me marie. Écoutez : l'amour, c'est une étoile…"]),
+        eline("l3", "rose", "Douze pages ? Pour un mariage ?", "dooz pahzh. poor uhN mah-ryahzh",
+          "Twelve pages? For a wedding?", "amused",
+          ["12 pages ? Pour un mariage ?", "Douze pages ? Pour un discours de mariage ?", "Douze pages ? C'est beaucoup pour un mariage !", "Vous avez douze pages ? Pour un mariage ?"]),
+        eline("l4", "paul", "Je sais. J'écris, j'écris… et j'ai peur.", "zhuh seh. zhay-kree, zhay-kree… ay zhay puhr",
+          "I know. I write and write… and I'm scared.", "worried",
+          ["Oui, je sais. J'écris, j'écris… et j'ai peur.", "Je sais. J'écris beaucoup… et j'ai peur.", "J'écris, j'écris… et j'ai peur.", "Je sais. J'écris, j'écris… Et j'ai très peur."]),
+        eline("l5", "rose", "Votre thé, après une question. La règle a quarante ans.", "voh-truh tay, ah-preh ewn kes-tyohN. lah reh-gluh ah kah-rahN-tahN",
+          "Your tea comes after one question. The rule is forty years old.", "teasing",
+          ["Votre thé, après une question. La règle a 40 ans.", "D'abord une question. La règle a quarante ans.", "Votre thé ? D'abord une question. La règle a quarante ans.", "Votre thé, après une question. Cette règle a quarante ans."]),
+        eline("l6", "rose", "Pourquoi vous aimez Léa ?", "poor-kwah voo‿zeh-may lay-ah",
+          "Why do you love Léa?", "curious",
+          ["Pourquoi est-ce que vous aimez Léa ?", "Vous aimez Léa pourquoi ?", "Dites-moi : pourquoi vous aimez Léa ?", "Et pourquoi vous aimez Léa ?"]),
+        eline("l7", "paul", "Parce qu'elle rit tout le temps. Parce qu'elle est gentille.", "pars kel ree too luh tahN. pars kel eh zhahN-teey",
+          "Because she laughs all the time. Because she's kind.", "moved",
+          ["Parce qu'elle rit tout le temps. Et parce qu'elle est gentille.", "Elle rit tout le temps. Elle est gentille.", "Parce qu'elle rit souvent. Parce qu'elle est gentille.", "Parce qu'elle rit tout le temps et qu'elle est gentille."]),
+        eline("l8", "paul", "Parce qu'avec elle, je suis moi.", "pars kah-vek el, zhuh swee mwah",
+          "Because with her, I'm me.", "proud",
+          ["Parce qu'avec elle, je suis moi-même.", "Et parce qu'avec elle, je suis moi.", "Avec elle, je suis moi.", "Parce que je suis moi avec elle."]),
+        eline("l9", "rose", "Voilà votre discours. Et voilà votre thé.", "vwah-lah voh-truh dees-koor. ay vwah-lah voh-truh tay",
+          "There's your speech. And here's your tea.", "proud",
+          ["Voilà votre discours, monsieur. Et voilà votre thé.", "Voilà votre discours. Et votre thé.", "Voilà, c'est votre discours. Et voilà votre thé.", "Voilà votre discours. Et maintenant, votre thé."]),
+        eline("l10", "paul", "Ouf ! Et Socrate mange la page douze. Onze pages, alors !", "oof. ay soh-krat mahNzh lah pahzh dooz. ohNz pahzh, ah-lor",
+          "Phew! And Socrate's eating page twelve. Eleven pages, then!", "amused",
+          ["Ouf ! Socrate mange la page douze. Onze pages, alors !", "Oh ! Socrate mange la page douze. Onze pages, alors !", "Ouf ! Et Socrate mange la page douze. Alors, onze pages !", "Ouf ! Et Socrate mange la page 12. Onze pages, alors !"]),
+        eline("l11", "rose", "Non, monsieur. Trois phrases. C'est tout.", "nohN, muh-syuh. trwah frahz. seh too",
+          "No. Three sentences. That's all.", "teasing",
+          ["Non. Trois phrases. C'est tout.", "Non, monsieur. 3 phrases. C'est tout.", "Non, monsieur. Juste trois phrases.", "Non. Trois phrases, et c'est tout."])
+      ],
+      vocab: [
+        word("v1", "Vous êtes tout blanc", "voo‿zet too blahN", "You're as white as a sheet (être: vous êtes)", "l1", "verb", "etre"),
+        word("v2", "je me marie", "zhuh muh mah-ree", "I'm getting married (se marier: me for je)", "l2", "table", "reflexive-pronouns"),
+        word("v3", "Douze pages", "dooz pahzh", "twelve pages", "l3", "table", "numbers-0-20"),
+        word("v4", "J'écris", "zhay-kree", "I write", "l4", "verb", "ecrire"),
+        word("v5", "j'ai peur", "zhay puhr", "I'm scared (literally: I have fear)", "l4", "verb", "avoir"),
+        word("v6", "La règle a quarante ans", "lah reh-gluh ah kah-rahN-tahN", "The rule is forty years old (avoir for age; no z after quarante)", "l5", "table", "numbers-21-100"),
+        word("v7", "Pourquoi vous aimez Léa", "poor-kwah voo‿zeh-may lay-ah", "Why do you love Léa", "l6", "table", "question-words"),
+        word("v8", "Parce qu'elle rit", "pars kel ree", "Because she laughs (qu' before a vowel)", "l7", "verb", "rire"),
+        word("v9", "votre discours", "voh-truh dees-koor", "your speech (polite)", "l9", "table", "possessive-adjectives"),
+        word("v10", "C'est tout", "seh too", "That's all", "l11", "expression", "cest-tout")
+      ],
+      questions: [
+        q("q1", "Why is Paul so pale?", "He's scared of his wedding speech", ["He's ill", "He has lost the wedding rings", "He has no money for the tea"], "en", "l4"),
+        q("q2", "How many pages is Paul's speech at first?", "Twelve", ["Two", "Ten", "Twenty"], "en", "l3"),
+        q("q3", "Why does Paul love Léa?", "She laughs all the time and she's kind", ["She's rich and very pretty", "She cooks and she sings", "She works with him at school"], "en", "l7"),
+        q("q4", "What is Rose's question?", "Pourquoi vous aimez Léa ?", ["Pourquoi vous êtes tout blanc ?", "Quand est-ce que vous vous mariez ?", "Où est votre discours ?"], "fr", "l6")
+      ],
+      notice: {
+        title: "Pourquoi… ? Parce que…",
+        text: "Rose asks Pourquoi vous aimez Léa ? and Paul answers three times with parce que. Before a vowel, que becomes qu': Parce qu'elle rit, Parce qu'avec elle. Pourquoi asks for a reason; parce que gives it.",
+        examples: [
+          eg("Pourquoi vous aimez Léa ?", "poor-kwah voo‿zeh-may lay-ah", "Why do you love Léa? (asking for a reason)"),
+          eg("Parce qu'elle est gentille.", "pars kel eh zhahN-teey", "Because she's kind. (qu' before a vowel)"),
+          eg("Parce que je suis en retard.", "pars kuh zhuh swee‿zahN ruh-tar", "Because I'm late. (que before a consonant)")
+        ],
+        table: "question-words"
+      },
+      proverb: {
+        fr: "Il ne faut pas chercher midi à quatorze heures.",
+        respelling: "eel nuh foh pah shair-shay mee-dee ah kah-tor-zuhr",
+        literal: "You mustn't look for noon at two p.m.",
+        meaning: "Don't make a simple thing complicated.",
+        englishEquivalent: "Keep it simple."
+      }
+    },
+    {
+      id: "cafe-03-the-nephew", number: 43, level: "A1", series: "le-cafe-des-questions", episode: 3, act: 1,
+      title: "The great-nephew", titleFr: "Le petit-neveu",
+      recap: "Paul's twelve-page speech became three sentences about why he loves Léa. Rose's rule is forty years old, and her own cup is blue, with an O.",
+      summary: "On his first day at work, Hugo wants a free coffee, but the rule is the rule, even for family.",
+      scene: "On Saturday at five past eight, Hugo, Rose's 22-year-old great-nephew, runs into the café for his first day at work, in an apron that is too short, and drops a white cup. Socrate, the grey parrot by the window, fluffs up, offended. Hugo sweeps up the pieces, and Rose puts a new white cup on her side of the counter and looks at him over her glasses.",
+      keywords: ["neveu", "petit-neveu", "great-nephew", "nephew", "hugo", "tata", "gâteaux", "gateaux", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "hugo", name: "Hugo", role: "Rose's great-nephew", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "hugo", "J'arrive ! Pardon, Tata !", "zhah-reev. par-dohN, tah-tah",
+          "Coming! Sorry, Auntie!", "worried",
+          ["J'arrive ! Pardon, Tata Rose !", "Pardon, Tata ! J'arrive !", "J'arrive ! Désolé, Tata !", "Pardon ! J'arrive, Tata !"]),
+        eline("l2", "rose", "Pas de problème. Une tasse, deux euros.", "pah duh proh-blem. ewn tahs, duh‿zuh-roh",
+          "No problem. One cup: two euros.", "teasing",
+          ["Pas de problème. Une tasse, 2 euros.", "Pas de problème. La tasse, deux euros.", "Pas de souci. Une tasse, deux euros.", "Pas de problème, mon grand. Une tasse, deux euros."]),
+        eline("l3", "hugo", "Un café, s'il te plaît. Je suis de la famille !", "uhN kah-fay, seel tuh pleh. zhuh swee duh lah fah-meey",
+          "A coffee, please. I'm family!", "annoyed",
+          ["Un café, s'il te plaît, Tata. Je suis de la famille !", "Un café, s'il te plaît ! Je suis de la famille, moi !", "Tata, un café, s'il te plaît. Je suis de la famille !", "Un café ! Je suis de la famille !"]),
+        eline("l4", "rose", "La règle, c'est la règle. Même pour toi.", "lah reh-gluh, seh lah reh-gluh. mem poor twah",
+          "Rules are rules. Even for you.", "teasing",
+          ["La règle, c'est la règle. Même pour toi, mon grand.", "C'est la règle. Même pour toi.", "La règle, c'est la règle. Même pour la famille.", "Non. La règle, c'est la règle. Même pour toi."]),
+        eline("l5", "rose", "Qu'est-ce que tu aimes faire, toi ?", "kes-kuh tew em fair, twah",
+          "And what do you like doing yourself?", "curious",
+          ["Et toi, qu'est-ce que tu aimes faire ?", "Toi, qu'est-ce que tu aimes faire ?", "Qu'est-ce que tu aimes faire ?", "Tu aimes faire quoi, toi ?"]),
+        eline("l6", "hugo", "J'aime faire des gâteaux. Mes parents aiment le droit.", "zhem fair day gah-toh. may pah-rahN em luh drwah",
+          "I like baking cakes. My parents like law.", "sad",
+          ["J'aime faire des gâteaux. Mais mes parents aiment le droit.", "Moi, j'aime faire des gâteaux. Mes parents aiment le droit.", "J'aime faire des gâteaux. Mes parents, eux, aiment le droit.", "J'adore faire des gâteaux. Mes parents aiment le droit."]),
+        eline("l7", "hugo", "D'abord la tasse. Puis le café.", "dah-bor lah tahs. pwee luh kah-fay",
+          "First the cup. Then the coffee.", "proud",
+          ["D'abord la tasse. Après, le café.", "D'abord la tasse. Ensuite, le café.", "La tasse d'abord. Puis le café.", "D'abord, je ramasse la tasse. Puis le café."]),
+        eline("l8", "rose", "Voilà. Un café, puis un autre.", "vwah-lah. uhN kah-fay, pwee uhN‿noh-truh",
+          "There you go. One coffee, then another.", "amused",
+          ["Voilà. Un café, et puis un autre.", "Voilà ! Un café, puis un deuxième.", "Bien. Un café, puis un autre.", "Voilà, mon grand. Un café, puis un autre."]),
+        eline("l9", "hugo", "Socrate a quel âge, Tata ?", "soh-krat ah kel ahzh, tah-tah",
+          "How old is Socrate, Auntie?", "curious",
+          ["Tata, Socrate a quel âge ?", "Quel âge a Socrate, Tata ?", "Socrate a quel âge ?", "Tata, quel âge a Socrate ?"]),
+        eline("l10", "rose", "Cinquante ans ! Plus vieux que le Café des Questions.", "saN-kahN-tahN. plew vyuh kuh luh kah-fay day kes-tyohN",
+          "Fifty! Older than the Café des Questions.", "neutral",
+          ["Cinquante ans ! Il est plus vieux que le Café des Questions.", "50 ans ! Plus vieux que le Café des Questions.", "Il a cinquante ans ! Plus vieux que le Café des Questions.", "Cinquante ans. Il est plus âgé que le Café des Questions."]),
+        eline("l11", "hugo", "Plus vieux que le café ? Le café a quel âge ?", "plew vyuh kuh luh kah-fay. luh kah-fay ah kel ahzh",
+          "Older than the café? How old is the café?", "surprised",
+          ["Plus vieux que le café ? Quel âge a le café ?", "Plus vieux que le café ? Et le café a quel âge ?", "Le café a quel âge, alors ?", "Plus vieux que le café ? Le café a quel âge, Tata ?"]),
+        eline("l12", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "C'est moi qui pose les questions, ici.", "Ici, les questions, c'est moi.", "Ici, c'est moi qui pose les questions, mon grand."])
+      ],
+      vocab: [
+        word("v1", "J'arrive", "zhah-reev", "Coming! / I'm on my way", "l1", "expression", "jarrive"),
+        word("v2", "Pardon", "par-dohN", "Sorry", "l1", "expression", "pardon"),
+        word("v3", "Pas de problème", "pah duh proh-blem", "No problem", "l2", "expression", "pas-de-probleme"),
+        word("v4", "s'il te plaît", "seel tuh pleh", "please (tu form; polite: s'il vous plaît)", "l3", "table", "subject-pronouns"),
+        word("v5", "Qu'est-ce que tu aimes faire", "kes-kuh tew em fair", "What do you like doing (to family)", "l5", "verb", "faire"),
+        word("v6", "J'aime faire des gâteaux", "zhem fair day gah-toh", "I like baking cakes (aimer + infinitive)", "l6", "verb", "aimer"),
+        word("v7", "le droit", "luh drwah", "law (the subject; le: masculine)", "l6", "table", "definite-articles"),
+        word("v8", "Socrate a quel âge", "soh-krat ah kel ahzh", "How old is Socrate (avoir for age)", "l9", "verb", "avoir"),
+        word("v9", "Cinquante ans", "saN-kahN-tahN", "fifty years old (no z after cinquante)", "l10", "table", "numbers-21-100")
+      ],
+      questions: [
+        q("q1", "How much does Rose say the broken cup costs?", "Two euros", ["Three euros", "Five euros", "Nothing"], "en", "l2"),
+        q("q2", "Why does Hugo think he should get his coffee without a question?", "He's family", ["He's late", "He broke a cup", "He's very tired"], "en", "l3"),
+        q("q3", "What does Hugo like doing?", "Baking cakes", ["Studying law", "Making coffee", "Running"], "en", "l6"),
+        q("q4", "What does Rose say when Hugo asks how old the café is?", "Ici, c'est moi qui pose les questions.", ["La règle, c'est la règle.", "Pas de problème.", "Cinquante ans !"], "fr", "l12")
+      ],
+      notice: {
+        title: "Tu or vous: family and customers",
+        text: "Hugo and Rose are family, so they say tu: Qu'est-ce que tu aimes faire, toi ?, s'il te plaît, Même pour toi. With customers Rose says vous, as in episodes 1 and 2: Qu'est-ce que vous aimez, le matin ? and Pourquoi vous aimez Léa ? So s'il te plaît becomes s'il vous plaît.",
+        examples: [
+          eg("Qu'est-ce que tu aimes faire ?", "kes-kuh tew em fair", "What do you like doing? (tu: family)"),
+          eg("Qu'est-ce que vous aimez, le matin ?", "kes-kuh voo‿zeh-may, luh mah-taN", "What do you like in the morning? (vous: a customer)"),
+          eg("Un café, s'il te plaît.", "uhN kah-fay, seel tuh pleh", "A coffee, please. (to family; polite: s'il vous plaît)")
+        ],
+        table: "subject-pronouns"
+      },
+      proverb: {
+        fr: "Petit à petit, l'oiseau fait son nid.",
+        respelling: "puh-tee‿tah puh-tee, lwah-zoh feh sohN nee",
+        literal: "Little by little, the bird makes its nest.",
+        meaning: "Patience and small steps get big things done.",
+        englishEquivalent: "Slowly but surely."
+      }
+    },
+    {
+      id: "cafe-04-one-day-in-paris", number: 44, level: "A1", series: "le-cafe-des-questions", episode: 4, act: 1,
+      title: "One day in Paris", titleFr: "Un jour à Paris",
+      recap: "On his first day at work, Hugo told Rose he likes baking cakes; his parents like law. Socrate is fifty, older than the Café des Questions.",
+      summary: "Emma wants to see all of Paris in one day, until Hugo asks her what she can see right now.",
+      scene: "On Tuesday at ten, Madame Rose is at the market, so Hugo is alone behind the counter. Emma, an English tourist, comes in with a printed plan: Paris in one day, minute by minute. Hugo puts her white cup on his side, like Rose, and when Emma looks at her plan he points at the window; she crosses out half of it. Socrate steals a sugar cube from her saucer, and behind the counter hangs a row of postcards of the sea.",
+      keywords: ["touriste", "tourist", "one day", "un jour", "plan", "paris", "sacré-cœur", "sacre-coeur", "hugo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "emma", name: "Emma", role: "tourist", initial: "E", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "hugo", name: "Hugo", role: "Rose's stand-in", initial: "H", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "emma", "Bonjour ! Un café, vite. J'ai un plan.", "bohN-zhoor. uhN kah-fay, veet. zhay uhN plahN",
+          "Hello! A coffee, quickly. I have a plan.", "worried",
+          ["Bonjour ! Un café, vite, s'il vous plaît. J'ai un plan.", "Un café, vite. J'ai un plan.", "Bonjour ! Un café, s'il vous plaît. J'ai un plan.", "Bonjour monsieur ! Un café, vite. J'ai un programme."]),
+        eline("l2", "hugo", "Ici, une question, puis un café. Votre couleur préférée ?", "ee-see, ewn kes-tyohN, pwee uhN kah-fay. voh-truh koo-luhr pray-fay-ray",
+          "Here, it's one question, then a coffee. Your favourite colour? (US: favorite color)", "teasing",
+          ["Ici, une question, puis un café. Quelle est votre couleur préférée ?", "Ici, d'abord une question. Votre couleur préférée ?", "Une question, puis un café. Votre couleur préférée ?", "Ici, une question, puis un café. C'est quoi, votre couleur préférée ?"]),
+        eline("l3", "emma", "Le bleu ? C'est la règle ?", "luh bluh. seh lah reh-gluh",
+          "Blue? Is that the rule?", "amused",
+          ["Le bleu ? C'est ça, la règle ?", "Bleu ? C'est la règle ?", "Le bleu ? C'est votre règle ?", "Euh… le bleu ? C'est la règle ?"]),
+        eline("l4", "hugo", "Non… pardon. Ma vraie question : qu'est-ce que vous voyez, là ?", "nohN… par-dohN. mah vreh kes-tyohN. kes-kuh voo vwah-yay, lah",
+          "No… sorry. My real question: what can you see, right there?", "curious",
+          ["Non, pardon. Ma vraie question : qu'est-ce que vous voyez ?", "Pardon. Ma vraie question : qu'est-ce que vous voyez, là ?", "Non… pardon. Ma vraie question : vous voyez quoi, là ?", "Non… pardon. Voilà ma vraie question : qu'est-ce que vous voyez, là ?", "Non… excusez-moi. Ma vraie question : qu'est-ce que vous voyez, là ?"]),
+        eline("l5", "emma", "Mon plan ! À dix heures douze, une photo du Sacré-Cœur.", "mohN plahN. ah dee‿zuhr dooz, ewn foh-toh dew sah-kray-kuhr",
+          "My plan! At 10:12, a photo of the Sacré-Cœur.", "worried",
+          ["Mon plan ! À 10 h 12, une photo du Sacré-Cœur.", "Je vois mon plan ! À dix heures douze, une photo du Sacré-Cœur.", "Mon plan. À dix heures douze, je prends une photo du Sacré-Cœur.", "Mon plan ! Dix heures douze : une photo du Sacré-Cœur."]),
+        eline("l6", "emma", "Oh… Je vois les toits. Et le Sacré-Cœur. C'est beau.", "oh… zhuh vwah lay twah. ay luh sah-kray-kuhr. seh boh",
+          "Oh… I can see the roofs. And the Sacré-Cœur. It's beautiful.", "moved",
+          ["Je vois les toits. Et le Sacré-Cœur. C'est beau.", "Oh… Je vois les toits. Et le Sacré-Cœur. C'est très beau.", "Oh… Je vois les toits de Paris. Et le Sacré-Cœur. C'est beau.", "Oh… Je vois les toits. Le Sacré-Cœur aussi. C'est beau.", "Je vois les toits. Et le Sacré-Cœur. C'est joli."]),
+        eline("l7", "emma", "Et ces cartes postales de la mer, là ? C'est où ?", "ay say kart pohs-tahl duh lah mair, lah. seh oo",
+          "And those postcards of the sea, over there? Where is that?", "curious",
+          ["Et ces cartes postales de la mer ? C'est où ?", "Et les cartes postales de la mer, là ? C'est où ?", "Et ces cartes postales, là ? C'est où ?", "Et ces cartes postales de la mer, là ? C'est quelle ville ?", "Ces cartes postales de la mer, là, c'est où ?"]),
+        eline("l8", "hugo", "À Saint-Malo. Tata Rose reçoit une carte chaque année.", "ah saN-mah-loh. tah-tah rohz ruh-swah ewn kart shahk ah-nay",
+          "In Saint-Malo. Auntie Rose gets a card every year.", "neutral",
+          ["Saint-Malo. Tata Rose reçoit une carte chaque année.", "À Saint-Malo. Tata Rose reçoit une carte tous les ans.", "C'est Saint-Malo. Tata Rose reçoit une carte chaque année.", "À Saint-Malo. Chaque année, Tata Rose reçoit une carte."]),
+        eline("l9", "emma", "De qui ?", "duh kee",
+          "Who from?", "curious",
+          ["Elles sont de qui ?", "Les cartes sont de qui ?", "Et c'est de qui ?", "De qui, les cartes ?"]),
+        eline("l10", "hugo", "Je ne sais pas. Mystère !", "zhuh nuh seh pah. mees-tair",
+          "I don't know. It's a mystery!", "amused",
+          ["Je ne sais pas. C'est un mystère !", "Aucune idée. Mystère !", "Je ne sais pas du tout. Mystère !", "Mystère ! Je ne sais pas."]),
+        eline("l11", "emma", "Je reste. Un autre café, s'il vous plaît.", "zhuh rest. uhN‿noh-truh kah-fay, seel voo pleh",
+          "I'm staying. Another coffee, please.", "relieved",
+          ["Je reste ici. Un autre café, s'il vous plaît.", "Je reste. Encore un café, s'il vous plaît.", "Bon, je reste. Un autre café, s'il vous plaît.", "Je reste. Un deuxième café, s'il vous plaît.", "Je reste. Un autre café, merci."])
+      ],
+      vocab: [
+        word("v1", "J'ai un plan", "zhay uhN plahN", "I have a plan", "l1", "verb", "avoir"),
+        word("v2", "Votre couleur préférée", "voh-truh koo-luhr pray-fay-ray", "your favourite colour (US: favorite color)", "l2", "table", "possessive-adjectives"),
+        word("v3", "qu'est-ce que vous voyez", "kes-kuh voo vwah-yay", "what can you see (voir)", "l4", "verb", "voir"),
+        word("v4", "À dix heures douze", "ah dee‿zuhr dooz", "at 10:12 (à + the time)", "l5", "table", "telling-time"),
+        word("v5", "du Sacré-Cœur", "dew sah-kray-kuhr", "of the Sacré-Cœur (de + le = du)", "l5", "table", "contractions"),
+        word("v6", "reçoit une carte", "ruh-swah ewn kart", "gets a card (recevoir)", "l8", "verb", "recevoir"),
+        word("v7", "chaque année", "shahk ah-nay", "every year", "l8", "table", "time-expressions"),
+        word("v8", "Je ne sais pas", "zhuh nuh seh pah", "I don't know", "l10", "expression", "je-ne-sais-pas"),
+        word("v9", "Je reste", "zhuh rest", "I'm staying", "l11", "verb", "rester"),
+        word("v10", "s'il vous plaît", "seel voo pleh", "please (polite)", "l11", "expression", "sil-vous-plait")
+      ],
+      questions: [
+        q("q1", "Why does Emma want her coffee quickly?", "She has a plan for the day", ["She's late for her train", "She's cold", "She's meeting a friend"], "en", "l1"),
+        q("q2", "What does Emma see through the window?", "The roofs and the Sacré-Cœur", ["The Eiffel Tower and the river", "The market and Rose", "The Louvre and a park"], "en", "l6"),
+        q("q3", "Where do the postcards behind the counter come from?", "Saint-Malo", ["Manchester", "London", "Lyon"], "en", "l8"),
+        q("q4", "What is Hugo's first, silly question?", "Votre couleur préférée ?", ["Votre plan préféré ?", "Qu'est-ce que vous voyez, là ?", "Vous venez d'où ?"], "fr", "l2")
+      ],
+      notice: {
+        title: "Telling the time: à dix heures douze",
+        text: "Emma's plan uses à + the time: À dix heures douze, une photo du Sacré-Cœur. Say the hour, then heures, then the minutes: dix heures douze is 10:12. Noon is midi, with no heures.",
+        examples: [
+          eg("À dix heures douze, une photo du Sacré-Cœur.", "ah dee‿zuhr dooz, ewn foh-toh dew sah-kray-kuhr", "At 10:12, a photo of the Sacré-Cœur. (à + time)"),
+          eg("À onze heures, le Louvre.", "ah ohN-zuhr, luh loo-vruh", "At eleven, the Louvre."),
+          eg("À midi, la tour Eiffel.", "ah mee-dee, lah toor eh-fel", "At noon, the Eiffel Tower. (midi: no heures)")
+        ],
+        table: "telling-time"
+      },
+      proverb: {
+        fr: "Paris ne s'est pas fait en un jour.",
+        respelling: "pah-ree nuh seh pah feh ahN‿nuhN zhoor",
+        literal: "Paris wasn't made in one day.",
+        meaning: "Great things take time and patience; you can't do them all at once.",
+        englishEquivalent: "Rome wasn't built in a day."
+      }
+    },
+    {
+      id: "cafe-05-mister-yes", number: 45, level: "A1", series: "le-cafe-des-questions", episode: 5, act: 1,
+      title: "Mister Yes", titleFr: "Monsieur Oui",
+      recap: "Alone on a Tuesday, Hugo asked Emma what she could see, and she saw Paris. Rose gets a postcard from Saint-Malo every year, but who sends it?",
+      summary: "Antoine says yes to everyone, until Rose asks him what he wants and he says his first no.",
+      scene: "On Friday morning Antoine comes into Madame Rose's café with his neighbour's dog on a lead, his boss's files and his sister's shopping. He says yes before anyone speaks, and he even says sorry to Socrate, the grey parrot by the window. Rose puts the white cup on her side of the counter and taps the slate.",
+      keywords: ["dire non", "say no", "monsieur oui", "mister yes", "oui", "non", "chien", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "antoine", name: "Antoine", role: "customer", initial: "A", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "antoine", "Bonjour ! Oui, oui, d'accord !", "bohN-zhoor. wee, wee, dah-kor",
+          "Hello! Yes, yes, OK!", "worried",
+          ["Bonjour ! Oui, d'accord !", "Bonjour ! Oui, oui, bien sûr !", "Bonjour madame ! Oui, oui, d'accord !", "Oui, oui, d'accord !", "Bonjour ! Oui, oui, pas de problème !"]),
+        eline("l2", "rose", "Mais je ne demande rien, monsieur !", "meh zhuh nuh duh-mahNd ryaN, muh-syuh",
+          "But I'm not asking anything!", "teasing",
+          ["Mais je ne demande rien !", "Mais monsieur, je ne demande rien !", "Mais je ne dis rien, monsieur !", "Mais je ne demande rien, moi !"]),
+        eline("l3", "antoine", "Ah… oui. Pardon. Pardon aussi, monsieur le perroquet !", "ah… wee. par-dohN. par-dohN oh-see, muh-syuh luh peh-roh-keh",
+          "Ah… right. Sorry. Sorry to you too, Mr Parrot!", "worried",
+          ["Ah… oui. Pardon. Pardon, monsieur le perroquet !", "Ah, oui. Pardon. Et pardon, monsieur le perroquet !", "Ah… oui. Excusez-moi. Pardon aussi, monsieur le perroquet !", "Ah… oui. Pardon. Pardon à vous aussi, monsieur le perroquet !"]),
+        eline("l4", "rose", "Vous dites pardon à Socrate ?", "voo deet par-dohN ah soh-krat",
+          "You're saying sorry to Socrate?", "amused",
+          ["Vous dites pardon à un perroquet ?", "Vous dites pardon à Socrate, maintenant ?", "Pardon à Socrate ?", "Vous demandez pardon à Socrate ?"]),
+        eline("l5", "antoine", "Je dis toujours oui. Mon chef, ma sœur, votre règle…", "zhuh dee too-zhoor wee. mohN shef, mah suhr, voh-truh reh-gluh…",
+          "I always say yes. My boss, my sister, your rule…", "sad",
+          ["Je dis toujours oui. À mon chef, à ma sœur, à votre règle…", "Je dis toujours oui. Mon chef, ma sœur, et votre règle…", "Moi, je dis toujours oui. Mon chef, ma sœur, votre règle…", "Je dis oui à tout. Mon chef, ma sœur, votre règle…"]),
+        eline("l6", "rose", "Ce n'est pas ma règle. Elle est à une amie.", "suh neh pah mah reh-gluh. el eh ah ewn ah-mee",
+          "It isn't my rule. It belongs to a friend.", "neutral",
+          ["Ce n'est pas ma règle. C'est la règle d'une amie.", "Non, ce n'est pas ma règle. Elle est à une amie.", "Ce n'est pas ma règle. Elle appartient à une amie.", "Ce n'est pas ma règle, monsieur. Elle est à une amie."]),
+        eline("l7", "rose", "Et vous, qu'est-ce que vous voulez ?", "ay voo, kes-kuh voo voo-lay",
+          "And you, what do you want?", "curious",
+          ["Et vous, vous voulez quoi ?", "Et vous ? Qu'est-ce que vous voulez, vous ?", "Qu'est-ce que vous voulez, vous ?", "Et vous, monsieur, qu'est-ce que vous voulez ?", "Et vous, qu'est-ce que vous voulez vraiment ?"]),
+        eline("l8", "antoine", "Moi ? Je… Je ne veux pas garder le chien !", "mwah. zhuh… zhuh nuh vuh pah gar-day luh shyaN",
+          "Me? I… I don't want to look after the dog!", "surprised",
+          ["Moi ? Je ne veux pas garder le chien !", "Moi ? Je… je ne veux pas garder ce chien !", "Moi ? Je… Je ne veux pas garder le chien du voisin !", "Moi ? Euh… Je ne veux pas garder le chien !"]),
+        eline("l9", "antoine", "Et je n'aime pas les chiens.", "ay zhuh nem pah lay shyaN",
+          "And I don't like dogs.", "relieved",
+          ["Et je n'aime pas du tout les chiens.", "Je n'aime pas les chiens.", "Et en plus, je n'aime pas les chiens.", "Et moi, je n'aime pas les chiens."]),
+        eline("l10", "rose", "Vous ne dites jamais non. Alors, c'est toujours oui.", "voo nuh deet zhah-meh nohN. ah-lor, seh too-zhoor wee",
+          "You never say no. So it's always yes.", "amused",
+          ["Vous ne dites jamais non. Donc, c'est toujours oui.", "Vous ne dites jamais non. Alors, pour tout le monde, c'est oui.", "Vous ne dites jamais non. Alors, c'est oui, toujours.", "Vous ne dites jamais non. Pour les autres, c'est toujours oui."]),
+        eline("l11", "rose", "Une part de tarte ? Cinq euros.", "ewn par duh tart. saN-kuh-roh",
+          "A slice of tart? Five euros.", "teasing",
+          ["Une part de tarte ? 5 euros.", "Une part de tarte aux pommes ? Cinq euros.", "Vous voulez une part de tarte ? Cinq euros.", "Une part de tarte, monsieur ? Cinq euros.", "Et une part de tarte ? Cinq euros."]),
+        eline("l12", "antoine", "Non ! Non, merci. Mon premier non !", "nohN. nohN, mair-see. mohN pruh-myay nohN",
+          "No! No, thank you. My first no!", "proud",
+          ["Non, merci ! Mon premier non !", "Non ! Mon premier non !", "Non ! Non merci. C'est mon premier non !", "Non ! Non, merci. Voilà mon premier non !"])
+      ],
+      vocab: [
+        word("v1", "D'accord", "dah-kor", "OK, all right", "l1", "expression", "daccord"),
+        word("v2", "Je ne demande rien", "zhuh nuh duh-mahNd ryaN", "I'm not asking anything (ne… rien: nothing)", "l2", "verb", "demander"),
+        word("v3", "Pardon", "par-dohN", "Sorry", "l3", "expression", "pardon"),
+        word("v4", "Je dis toujours oui", "zhuh dee too-zhoor wee", "I always say yes (dire: je dis)", "l5", "verb", "dire"),
+        word("v5", "ma règle", "mah reh-gluh", "my rule (ma: feminine)", "l6", "table", "possessive-adjectives"),
+        word("v6", "Et vous", "ay voo", "And you? (vous after et: stressed form)", "l7", "table", "stressed-pronouns"),
+        word("v7", "qu'est-ce que vous voulez", "kes-kuh voo voo-lay", "what do you want", "l7", "verb", "vouloir"),
+        word("v8", "Je ne veux pas", "zhuh nuh vuh pah", "I don't want (ne + verb + pas)", "l8", "table", "negative-words"),
+        word("v9", "Je n'aime pas les chiens", "zhuh nem pah lay shyaN", "I don't like dogs (n' before a vowel)", "l9", "verb", "aimer"),
+        word("v10", "Cinq euros", "saN-kuh-roh", "five euros (no z after cinq)", "l11", "table", "numbers-0-20")
+      ],
+      questions: [
+        q("q1", "What does Antoine say before Rose speaks?", "Yes, yes, OK!", ["No, thank you!", "A coffee, please!", "Sorry, I'm late!"], "en", "l1"),
+        q("q2", "Whose rule is it, according to Rose?", "A friend's", ["Rose's", "Socrate's", "Her mother's"], "en", "l6"),
+        q("q3", "How much is a slice of tart?", "Five euros", ["Two euros", "Three euros", "Four euros"], "en", "l11"),
+        q("q4", "What does Antoine really not want?", "Je ne veux pas garder le chien !", ["Je ne veux pas boire de café !", "Je ne veux pas aider ma sœur !", "Je ne veux pas manger de tarte !"], "fr", "l8")
+      ],
+      notice: {
+        title: "Saying no: ne… pas",
+        text: "Antoine finally says Je ne veux pas garder le chien ! and Je n'aime pas les chiens. Ne goes before the verb and pas after it; before a vowel, ne becomes n'. Rose's Vous ne dites jamais non works the same way, with jamais (never) instead of pas.",
+        examples: [
+          eg("Je ne veux pas garder le chien.", "zhuh nuh vuh pah gar-day luh shyaN", "I don't want to look after the dog. (ne + verb + pas)"),
+          eg("Je n'aime pas les chiens.", "zhuh nem pah lay shyaN", "I don't like dogs. (n' before a vowel)"),
+          eg("Vous ne dites jamais non.", "voo nuh deet zhah-meh nohN", "You never say no. (ne… jamais)")
+        ],
+        table: "negative-words"
+      },
+      proverb: {
+        fr: "Qui ne dit mot consent.",
+        respelling: "kee nuh dee moh kohN-sahN",
+        literal: "Who says no word consents.",
+        meaning: "If you say nothing, people think you agree.",
+        englishEquivalent: "Silence gives consent."
+      }
+    },
+    {
+      id: "cafe-06-the-driving-test", number: 46, level: "A2", series: "le-cafe-des-questions", episode: 6, act: 2,
+      title: "The driving test", titleFr: "Le permis",
+      recap: "Antoine, who never says no, said his first non when Rose offered him tart. Rose said the rule isn't hers: it belongs to a friend.",
+      summary: "Léo, seventeen, has just failed his driving test; Rose asks him what he learnt this morning.",
+      scene: "On a Thursday morning Léo, seventeen, drops into a chair in Rose's tiny Montmartre café: he has just failed his driving test. Rose puts a white cup on her side of the counter and points at the slate by the door. When Léo tells the truth, Socrate the grey parrot fluffs up his feathers.",
+      keywords: ["permis", "driving test", "learner driver", "examen", "exam", "léo", "leo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions", "passé composé", "passe compose"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "leo", name: "Léo", role: "learner driver", initial: "L", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Bonjour, monsieur. Vous voulez un chocolat chaud ?", "bohN-zhoor, muh-syuh. voo voo-lay uhN shoh-koh-lah shoh",
+          "Hello, sir. Would you like a hot chocolate?", "neutral",
+          ["Bonjour. Vous voulez un chocolat chaud ?", "Bonjour, monsieur. Un chocolat chaud ?", "Bonjour, monsieur. Vous voulez boire un chocolat chaud ?", "Bonjour, monsieur. Est-ce que vous voulez un chocolat chaud ?"]),
+        eline("l2", "leo", "Vous ? Moi ? Personne ne me dit vous !", "voo. mwah. pair-sun nuh muh dee voo",
+          "'Vous'? To me? Nobody says 'vous' to me!", "surprised",
+          ["Moi ? Personne ne me dit vous !", "Vous ? À moi ? Personne ne me dit vous !", "Vous ? Moi ? On ne me dit jamais vous !"]),
+        eline("l3", "rose", "Ici, je dis vous à tout le monde. Même à Socrate.", "ee-see, zhuh dee voo ah too luh mohNd. mem ah soh-krat",
+          "Here I say 'vous' to everyone. Even to Socrate.", "teasing",
+          ["Ici, je dis vous à tout le monde. Même au perroquet.", "Ici, je vouvoie tout le monde. Même Socrate.", "Je dis vous à tout le monde ici. Même à Socrate."]),
+        eline("l4", "leo", "J'ai raté mon permis ce matin. Je suis nul.", "zhay rah-tay mohN pair-mee suh mah-taN. zhuh swee newl",
+          "I failed my driving test this morning. I'm useless. (US: driver's test)", "sad",
+          ["Ce matin, j'ai raté mon permis. Je suis nul.", "J'ai raté le permis ce matin. Je suis nul.", "J'ai raté mon permis. Je suis vraiment nul.", "J'ai raté mon permis de conduire ce matin. Je suis nul."]),
+        eline("l5", "rose", "Nul ? Vous avez dix-sept ans, monsieur.", "newl. voo‿zah-vay dee-se-tahN, muh-syuh",
+          "Useless? You're seventeen, sir.", "amused",
+          ["Nul ? Vous avez dix-sept ans.", "Nul ? Vous avez 17 ans, monsieur.", "Nul ? Mais vous avez dix-sept ans, monsieur.", "Nul, vous ? Vous avez dix-sept ans !"]),
+        eline("l6", "leo", "Je suis parti trop vite. L'examinateur a crié. J'en ai marre !", "zhuh swee par-tee troh veet. leg-zah-mee-nah-tuhr ah kree-ay. zhahN‿nay mar",
+          "I pulled away too fast. The examiner shouted. I'm fed up!", "annoyed",
+          ["Je suis parti trop vite. L'examinateur a crié.", "Je suis parti trop vite et l'examinateur a crié. J'en ai marre !", "J'ai démarré trop vite. L'examinateur a crié. J'en ai marre !", "Je suis parti trop vite. L'examinateur a crié. J'en ai assez !"]),
+        eline("l7", "rose", "Alors, ma question. Qu'est-ce que vous avez appris ce matin ?", "ah-lor, mah kes-tyohN. kes-kuh voo‿zah-vay ah-pree suh mah-taN",
+          "So, my question. What did you learn this morning?", "curious",
+          ["Qu'est-ce que vous avez appris ce matin ?", "Alors, ma question. Vous avez appris quoi, ce matin ?", "Alors, ma question. Qu'avez-vous appris ce matin ?", "Ma question, alors. Qu'est-ce que vous avez appris ce matin ?"]),
+        eline("l8", "leo", "J'ai appris… à regarder à droite. Et à partir doucement.", "zhay ah-pree… ah ruh-gar-day ah drwaht. ay ah par-teer doos-mahN",
+          "I learnt… to look to the right. And to pull away gently. (US: learned)", "relieved",
+          ["J'ai appris… à regarder à droite.", "J'ai appris… à regarder à droite. Et à démarrer doucement.", "Euh… J'ai appris à regarder à droite. Et à partir doucement.", "J'ai appris… à bien regarder à droite. Et à partir doucement."]),
+        eline("l9", "rose", "Moi aussi, j'ai raté un examen. Ce n'est pas grave.", "mwah oh-see, zhay rah-tay uhN‿neg-zah-maN. suh neh pah grahv",
+          "I failed an exam once too. It doesn't matter.", "neutral",
+          ["Moi aussi, j'ai raté un examen. C'est pas grave.", "Moi aussi, j'ai raté un examen. Ce n'est rien.", "Moi aussi, un jour, j'ai raté un examen. Ce n'est pas grave.", "J'ai raté un examen, moi aussi. Ce n'est pas grave."]),
+        eline("l10", "leo", "Je vais repasser le permis en juin. Et vous, alors ?", "zhuh veh ruh-pah-say luh pair-mee ahN zhwaN. ay voo, ah-lor",
+          "I'm going to retake the test in June. And what about you, then?", "hopeful",
+          ["Je vais repasser mon permis en juin. Et vous, alors ?", "En juin, je vais repasser le permis. Et vous, alors ?", "Je vais repasser le permis en juin. Et vous ?", "Je repasse le permis en juin. Et vous, alors ?"]),
+        eline("l11", "rose", "Alors ? Je suis là. Et je suis contente.", "ah-lor. zhuh swee lah. ay zhuh swee kohN-tahNt",
+          "Then? I'm here. And I'm happy.", "proud",
+          ["Alors ? Je suis ici. Et je suis contente.", "Alors ? Je suis là. Et je suis heureuse.", "Je suis là. Et je suis contente.", "Alors ? Je suis là. Et je suis très contente."])
+      ],
+      vocab: [
+        word("v1", "J'ai raté mon permis", "zhay rah-tay mohN pair-mee", "I failed my driving test (rater: avoir in the passé composé)", "l4", null),
+        word("v2", "dix-sept ans", "dee-se-tahN", "seventeen (years old) (avoir dix-sept ans; no z after sept)", "l5", "table", "numbers-0-20"),
+        word("v3", "Je suis parti", "zhuh swee par-tee", "I left / I pulled away (partir takes être)", "l6", "table", "etre-verbs"),
+        word("v4", "J'en ai marre !", "zhahN‿nay mar", "I'm fed up! (informal)", "l6", "expression", "jen-ai-marre"),
+        word("v5", "Qu'est-ce que vous avez appris", "kes-kuh voo‿zah-vay ah-pree", "What did you learn (apprendre → appris)", "l7", "verb", "apprendre"),
+        word("v6", "regarder à droite", "ruh-gar-day ah drwaht", "to look to the right", "l8", "verb", "regarder"),
+        word("v7", "partir doucement", "par-teer doos-mahN", "to pull away gently", "l8", "verb", "partir"),
+        word("v8", "Ce n'est pas grave", "suh neh pah grahv", "It doesn't matter (spoken: c'est pas grave)", "l9", "expression", "cest-pas-grave"),
+        word("v9", "Je vais repasser le permis", "zhuh veh ruh-pah-say luh pair-mee", "I'm going to retake the test (aller + infinitive)", "l10", "verb", "aller")
+      ],
+      questions: [
+        q("q1", "Why is Léo surprised at the start?", "Rose calls him vous", ["Rose knows his name", "The hot chocolate is free", "The parrot speaks to him"], "en", "l2"),
+        q("q2", "What went wrong in Léo's driving test?", "He pulled away too fast and the examiner shouted", ["He hit a car and the examiner left", "He forgot his papers and went home", "He arrived late and missed the test"], "en", "l6"),
+        q("q3", "How old is Léo?", "Seventeen", ["Sixteen", "Eighteen", "Twenty"], "en", "l5"),
+        q("q4", "What is Rose's question?", "Qu'est-ce que vous avez appris ce matin ?", ["Qu'est-ce que vous avez raté ce matin ?", "Qu'est-ce que vous allez faire en juin ?", "Pourquoi vous êtes parti trop vite ?"], "fr", "l7")
+      ],
+      notice: {
+        title: "Être or avoir: je suis parti, j'ai raté",
+        text: "Léo says J'ai raté mon permis and J'ai appris à regarder, but Je suis parti trop vite. Most verbs make the passé composé with avoir; partir is one of the être verbs (aller, arriver, partir, rester, tomber…). With être the participle agrees: Rose would say je suis partie.",
+        examples: [
+          eg("Je suis parti trop vite.", "zhuh swee par-tee troh veet", "I pulled away too fast. (partir: être)"),
+          eg("J'ai appris à regarder à droite.", "zhay ah-pree ah ruh-gar-day ah drwaht", "I learnt to look to the right. (apprendre: avoir)"),
+          eg("Rose est partie à l'heure.", "rohz eh par-tee ah luhr", "Rose left on time. (être: -e for a woman)")
+        ],
+        table: "etre-verbs"
+      },
+      proverb: {
+        fr: "C'est en forgeant qu'on devient forgeron.",
+        respelling: "seh‿tahN for-zhahN kohN duh-vyaN for-zhuh-rohN",
+        literal: "It's by forging that you become a blacksmith.",
+        meaning: "You learn by doing it again and again, mistakes included.",
+        englishEquivalent: "Practice makes perfect."
+      }
+    },
+    {
+      id: "cafe-07-the-influencer", number: 47, level: "A2", series: "le-cafe-des-questions", episode: 7, act: 2,
+      title: "The influencer", titleFr: "L'influenceur",
+      recap: "Léo failed his driving test but learnt to look right; he will retake it in June. Rose said she once failed an exam too.",
+      summary: "Max, an influencer, films everything; Rose asks him what he has really seen today.",
+      scene: "On a Saturday afternoon Max, an influencer, walks into Rose's tiny Montmartre café filming himself. Rose waits behind the counter while Hugo works in the small kitchen. When Max holds up his phone for a selfie with Socrate, the grey parrot turns his back. Rose keeps the white cup on her side until Max answers.",
+      keywords: ["influenceur", "influencer", "abonnés", "abonnes", "followers", "selfie", "vidéo", "video", "max", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "max", name: "Max", role: "influencer", initial: "M", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "max", "Salut tout le monde ! Je suis au café secret. C'est génial !", "sah-lew too luh mohNd. zhuh swee oh kah-fay suh-kreh. seh zhay-nyahl",
+          "Hi everyone! I'm at the secret café. It's brilliant!", "proud",
+          ["Salut tout le monde ! Je suis au café secret !", "Salut à tous ! Je suis au café secret. C'est génial !", "Bonjour tout le monde ! Je suis au café secret. C'est génial !", "Salut tout le monde ! Aujourd'hui, je suis au café secret. C'est génial !"]),
+        eline("l2", "rose", "Ici, on dit bonjour à la dame.", "ee-see, ohN dee bohN-zhoor ah lah dahm",
+          "Here, we say hello to the lady.", "teasing",
+          ["Ici, on dit d'abord bonjour à la dame.", "Ici, on dit bonjour à la dame, monsieur.", "Bonjour, monsieur. Ici, on dit bonjour à la dame.", "Ici, on commence par dire bonjour à la dame."]),
+        eline("l3", "max", "Pardon ! Bonjour, madame. J'ai deux cent mille abonnés !", "par-dohN. bohN-zhoor, mah-dahm. zhay duh sahN meel ah-bu-nay",
+          "Sorry! Hello, madam. I've got two hundred thousand followers!", "amused",
+          ["Pardon ! Bonjour, madame. J'ai 200 000 abonnés !", "Oh, pardon ! Bonjour, madame. J'ai deux cent mille abonnés !", "Pardon ! Bonjour, madame. Vous savez, j'ai deux cent mille abonnés !", "Pardon ! Bonjour, madame. Deux cent mille personnes me suivent !"]),
+        eline("l4", "rose", "Moi, j'ai un perroquet. Il ne m'aime pas non plus.", "mwah, zhay uhN peh-roh-keh. eel nuh mem pah nohN plew",
+          "I've got a parrot. He doesn't like me either.", "teasing",
+          ["Moi, j'ai un perroquet. Et il ne m'aime pas non plus.", "Moi, j'ai un perroquet. Lui non plus, il ne m'aime pas.", "Moi, j'ai juste un perroquet. Il ne m'aime pas non plus.", "Moi, j'ai un perroquet. Il ne m'aime pas non plus, lui."]),
+        eline("l5", "max", "Un selfie avec lui ? Oh ! Il m'a tourné le dos !", "uhN sel-fee ah-vek lwee. oh. eel mah toor-nay luh doh",
+          "A selfie with him? Oh! He's turned his back on me!", "surprised",
+          ["Une photo avec lui ? Oh ! Il m'a tourné le dos !", "Un selfie avec le perroquet ? Oh ! Il m'a tourné le dos !", "Un selfie avec lui ? Il m'a tourné le dos !", "Oh ! Il m'a tourné le dos !"]),
+        eline("l6", "rose", "Socrate a connu la première patronne. Il n'aime pas les photos.", "soh-krat ah koh-new lah pruh-myair pah-trun. eel nem pah lay foh-toh",
+          "Socrate knew the first owner. He doesn't like photos.", "amused",
+          ["Socrate a connu la première patronne. Il déteste les photos.", "Socrate n'aime pas les photos. Il a connu la première patronne.", "Il a connu la première patronne. Il n'aime pas les photos.", "Socrate a connu la première patronne, et il n'aime pas les photos."]),
+        eline("l7", "max", "Bon, bon. Et la question, je la filme ?", "bohN, bohN. ay lah kes-tyohN, zhuh lah feelm",
+          "All right, all right. And the question, shall I film it?", "annoyed",
+          ["Bon. Et la question, je la filme ?", "Bon, bon. Je peux filmer la question ?", "Bon, bon. Et la question, je peux la filmer ?", "Et la question, je la filme ?"]),
+        eline("l8", "rose", "Non, vous la vivez. Qu'avez-vous vu aujourd'hui ? Pas filmé : vu.", "nohN, voo lah vee-vay. kah-vay voo vew oh-zhoor-dwee. pah feel-may, vew",
+          "No, you live it. What have you seen today? Not filmed: seen.", "curious",
+          ["Qu'est-ce que vous avez vu aujourd'hui ? Pas filmé : vu.", "Non, vous la vivez. Vous avez vu quoi, aujourd'hui ? Pas filmé : vu.", "Non. Qu'est-ce que vous avez vu aujourd'hui ? Pas filmé : vu.", "Non, vous la vivez. Qu'avez-vous vu aujourd'hui ?"]),
+        eline("l9", "max", "J'ai vu… mon téléphone. Je n'ai pas regardé Paris.", "zhay vew… mohN tay-lay-fun. zhuh nay pah ruh-gar-day pah-ree",
+          "I saw… my phone. I didn't look at Paris.", "sad",
+          ["J'ai vu… mon écran. Je n'ai pas regardé Paris.", "J'ai vu… mon téléphone. Je n'ai rien regardé.", "Mon téléphone. Je n'ai pas regardé Paris.", "J'ai vu… mon téléphone. Je n'ai pas vu Paris."]),
+        eline("l10", "rose", "Votre café, monsieur. Paris est là, derrière la fenêtre.", "voh-truh kah-fay, muh-syuh. pah-ree eh lah, dair-yair lah fuh-neh-truh",
+          "Your coffee, sir. Paris is right there, behind the window.", "neutral",
+          ["Votre café. Paris est là, derrière la fenêtre.", "Voilà votre café, monsieur. Paris est là, derrière la fenêtre.", "Votre café, monsieur. Paris est juste derrière la fenêtre.", "Votre café, monsieur. Regardez, Paris est là."]),
+        eline("l11", "max", "Je vais rester un peu. Sans vidéo.", "zhuh veh res-tay uhN puh. sahN vee-day-oh",
+          "I'm going to stay a while. No video.", "relieved",
+          ["Je vais rester un moment. Sans vidéo.", "Je reste un peu. Sans vidéo.", "Je vais rester un peu. Sans caméra.", "Je vais rester encore un peu. Sans vidéo."])
+      ],
+      vocab: [
+        word("v1", "C'est génial !", "seh zhay-nyahl", "It's brilliant! (US: awesome)", "l1", "expression", "cest-genial"),
+        word("v2", "on dit bonjour", "ohN dee bohN-zhoor", "we say hello (on = people in general)", "l2", "verb", "dire"),
+        word("v3", "deux cent mille abonnés", "duh sahN meel ah-bu-nay", "two hundred thousand followers (cent, mille: no -s here)", "l3", "table", "numbers-21-100"),
+        word("v4", "Il ne m'aime pas non plus", "eel nuh mem pah nohN plew", "He doesn't like me either", "l4", "verb", "aimer"),
+        word("v5", "Il m'a tourné le dos", "eel mah toor-nay luh doh", "He's turned his back on me", "l5", "verb", "tourner"),
+        word("v6", "Socrate a connu", "soh-krat ah koh-new", "Socrate knew (connaître → connu)", "l6", "verb", "connaitre"),
+        word("v7", "Qu'avez-vous vu", "kah-vay voo vew", "What have you seen? (voir → vu)", "l8", "verb", "voir"),
+        word("v8", "Je n'ai pas regardé Paris", "zhuh nay pah ruh-gar-day pah-ree", "I didn't look at Paris (ne… pas around ai)", "l9", "table", "negation-placement"),
+        word("v9", "Je vais rester un peu", "zhuh veh res-tay uhN puh", "I'm going to stay a while (aller + infinitive)", "l11", "verb", "rester")
+      ],
+      questions: [
+        q("q1", "What does Rose want Max to do first?", "Say hello to her", ["Turn off his phone", "Sit down at a table", "Pay for his coffee"], "en", "l2"),
+        q("q2", "How many followers does Max have?", "200,000", ["20,000", "2,000", "2 million"], "en", "l3"),
+        q("q3", "What does Socrate do when Max wants a selfie?", "He turns his back on him", ["He bites Max's phone", "He steals a sugar cube", "He fluffs up his feathers"], "en", "l5"),
+        q("q4", "What does Max realise about his day?", "Je n'ai pas regardé Paris.", ["Je n'ai pas filmé le café.", "Je n'ai pas aimé Paris.", "Je n'ai pas pris de photos."], "fr", "l9")
+      ],
+      notice: {
+        title: "Ne… pas in the past: je n'ai pas regardé",
+        text: "Max says Je n'ai pas regardé Paris. In the passé composé, ne… pas goes around the auxiliary (n'ai pas), and the past participle comes after it. Rien works the same way (je n'ai rien vu), while in the present ne… pas goes around the verb itself: Il n'aime pas les photos.",
+        examples: [
+          eg("Je n'ai pas regardé Paris.", "zhuh nay pah ruh-gar-day pah-ree", "I didn't look at Paris. (n' + ai + pas + regardé)"),
+          eg("Je n'ai rien vu.", "zhuh nay ryaN vew", "I didn't see anything. (rien sits where pas sits)"),
+          eg("Il n'aime pas les photos.", "eel nem pah lay foh-toh", "He doesn't like photos. (present: around the verb)")
+        ],
+        table: "negation-placement"
+      },
+      proverb: {
+        fr: "Tout ce qui brille n'est pas or.",
+        respelling: "too suh kee breey neh pah or",
+        literal: "All that shines is not gold.",
+        meaning: "Things that look wonderful aren't always what they seem.",
+        englishEquivalent: "All that glitters is not gold."
+      }
+    },
+    {
+      id: "cafe-08-the-bicycle", number: 48, level: "A2", series: "le-cafe-des-questions", episode: 8, act: 2,
+      title: "The bicycle", titleFr: "Le vélo",
+      recap: "Max saw only his phone all day, so he stayed to look at Paris without a video. Rose said Socrate knew the café's first owner.",
+      summary: "Bruno hates Mondays and his office job; Rose asks him when he was happy last week.",
+      scene: "On a Monday morning Bruno, in a grey suit, stares into his white cup at the counter of Rose's Montmartre café before it is even full. There is a little black bike grease on his hands. Rose keeps the cup on her side until he answers, and Socrate the parrot steals Bruno's sugar cube.",
+      keywords: ["vélo", "velo", "bicycle", "bike", "assurances", "insurance", "lundi", "monday", "bruno", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "bruno", name: "Bruno", role: "office worker", initial: "B", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Bonjour, monsieur. Vous avez l'air triste.", "bohN-zhoor, muh-syuh. voo‿zah-vay lair treest",
+          "Hello, sir. You look sad.", "neutral",
+          ["Bonjour. Vous avez l'air triste.", "Bonjour, monsieur. Vous avez l'air triste ce matin.", "Bonjour, monsieur. Vous semblez triste.", "Bonjour, monsieur. Vous avez l'air bien triste."]),
+        eline("l2", "bruno", "C'est lundi.", "seh luhN-dee",
+          "It's Monday.", "sad",
+          ["Parce que c'est lundi.", "C'est lundi, madame.", "Eh oui, c'est lundi.", "On est lundi."]),
+        eline("l3", "rose", "C'est lundi ? Ah. Ça explique tout.", "seh luhN-dee. ah. sah eks-pleek too",
+          "It's Monday? Ah. That explains everything.", "teasing",
+          ["C'est lundi ? Ça explique tout.", "Lundi ? Ah. Ça explique tout.", "C'est lundi ? Bon. Ça explique tout.", "Ah, c'est lundi. Alors ça explique tout."]),
+        eline("l4", "bruno", "Je travaille dans les assurances depuis vingt-cinq ans. J'en ai assez.", "zhuh trah-vahy dahN lay‿zah-sew-rahNs duh-pwee vaNt-saN-kahN. zhahN‿nay ah-say",
+          "I've worked in insurance for twenty-five years. I've had enough.", "annoyed",
+          ["Je travaille dans les assurances depuis 25 ans. J'en ai assez.", "Je travaille dans les assurances depuis vingt-cinq ans. J'en ai marre.", "Ça fait vingt-cinq ans que je travaille dans les assurances. J'en ai assez.", "Je suis dans les assurances depuis vingt-cinq ans. J'en ai assez."]),
+        eline("l5", "rose", "Quand est-ce que vous avez été heureux, la semaine dernière ?", "kahN‿tes-kuh voo‿zah-vay ay-tay uh-ruh, lah suh-men dair-nyair",
+          "When were you happy, last week?", "curious",
+          ["La semaine dernière, quand est-ce que vous avez été heureux ?", "Vous avez été heureux quand, la semaine dernière ?", "Quand avez-vous été heureux, la semaine dernière ?", "La semaine dernière, vous avez été heureux quand ?"]),
+        eline("l6", "bruno", "Samedi, j'ai réparé le vélo de mon voisin. Quatre heures !", "sahm-dee, zhay ray-pah-ray luh vay-loh duh mohN vwah-zaN. kah-truhr",
+          "On Saturday I repaired my neighbour's bike. Four hours! (US: neighbor's)", "surprised",
+          ["Samedi, j'ai réparé le vélo de mon voisin. 4 heures !", "Samedi, j'ai réparé le vélo du voisin. Quatre heures !", "Samedi, j'ai réparé le vélo de mon voisin. Pendant quatre heures !", "Samedi, j'ai réparé le vélo de mon voisin."]),
+        eline("l7", "bruno", "C'est bête, quand même. Un vélo… Mais j'ai été heureux.", "seh bet, kahN mem. uhN vay-loh… meh zhay ay-tay uh-ruh",
+          "It's silly, though. A bike… But I was happy.", "moved",
+          ["C'est bête, quand même. Un vélo… Mais j'ai été content.", "C'est bête, non ? Un vélo… Mais j'ai été heureux.", "C'est bête. Un vélo… Mais j'ai été heureux.", "C'est un peu bête, quand même. Un vélo… Mais j'ai été heureux."]),
+        eline("l8", "rose", "Pas bête. Moi aussi, j'ai changé de vie. Il y a longtemps.", "pah bet. mwah oh-see, zhay shahN-zhay duh vee. eel ee ah lohN-tahN",
+          "Not silly. I changed my life too. A long time ago.", "neutral",
+          ["Ce n'est pas bête. Moi aussi, j'ai changé de vie. Il y a longtemps.", "Pas bête du tout. Moi aussi, j'ai changé de vie. Il y a longtemps.", "Moi aussi, j'ai changé de vie. Il y a longtemps.", "Pas bête. J'ai changé de vie, moi aussi. Il y a longtemps."]),
+        eline("l9", "bruno", "Ah bon ? Pourquoi ?", "ah bohN. poor-kwah",
+          "Really? Why?", "curious",
+          ["Pourquoi ?", "Ah oui ? Pourquoi ?", "Vraiment ? Pourquoi ?", "Ah bon ? Pourquoi, madame ?"]),
+        eline("l10", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "C'est moi qui pose les questions, ici.", "Ici, les questions, c'est moi.", "Ici, c'est moi qui pose les questions, monsieur."]),
+        eline("l11", "bruno", "Du coup, je vais passer au magasin de vélos, rue Lepic.", "dew koo, zhuh veh pah-say oh mah-gah-zaN duh vay-loh, rew luh-peek",
+          "So I'm going to drop by the bike shop on rue Lepic.", "hopeful",
+          ["Je vais passer au magasin de vélos, rue Lepic.", "Du coup, je vais aller au magasin de vélos, rue Lepic.", "Du coup, je vais passer au magasin de vélos de la rue Lepic.", "Alors, je vais passer au magasin de vélos, rue Lepic."])
+      ],
+      vocab: [
+        word("v1", "Je travaille", "zhuh trah-vahy", "I work (travailler)", "l4", "verb", "travailler"),
+        word("v2", "depuis vingt-cinq ans", "duh-pwee vaNt-saN-kahN", "for twenty-five years (and still now: depuis + present)", "l4", "table", "time-expressions"),
+        word("v3", "vous avez été", "voo‿zah-vay ay-tay", "you were / you have been (être → été)", "l5", "verb", "etre"),
+        word("v4", "la semaine dernière", "lah suh-men dair-nyair", "last week (like l'année dernière)", "l5", "table", "time-expressions"),
+        word("v5", "quand même", "kahN mem", "though / all the same", "l7", "expression", "quand-meme"),
+        word("v6", "j'ai changé de vie", "zhay shahN-zhay duh vee", "I changed my life (changer de + noun, no article)", "l8", "verb", "changer"),
+        word("v7", "Du coup", "dew koo", "So / as a result (spoken)", "l11", "expression", "du-coup"),
+        word("v8", "je vais passer", "zhuh veh pah-say", "I'm going to drop by (aller + infinitive)", "l11", "verb", "passer")
+      ],
+      questions: [
+        q("q1", "How does Bruno explain why he looks sad?", "It's Monday", ["He has lost his job", "His bike is broken", "He's late for work"], "en", "l2"),
+        q("q2", "How long has Bruno worked in insurance?", "Twenty-five years", ["Fifteen years", "Twenty years", "Thirty-five years"], "en", "l4"),
+        q("q3", "What made Bruno happy last week?", "Repairing his neighbour's bike", ["Riding his new bike", "A day off at home", "Lunch with his neighbour"], "en", "l6"),
+        q("q4", "What is Bruno going to do?", "Passer au magasin de vélos", ["Rester au bureau", "Acheter un vélo neuf", "Appeler son voisin"], "fr", "l11")
+      ],
+      notice: {
+        title: "Time words: depuis, il y a, la semaine dernière",
+        text: "Bruno says Je travaille dans les assurances depuis vingt-cinq ans: depuis + the present means it started then and is still going on. Rose says J'ai changé de vie. Il y a longtemps: il y a + a time means ago, with the passé composé. La semaine dernière (last week) is built like the table's l'année dernière.",
+        examples: [
+          eg("depuis vingt-cinq ans", "duh-pwee vaNt-saN-kahN", "for twenty-five years (and still now)"),
+          eg("Il y a longtemps.", "eel ee ah lohN-tahN", "A long time ago. (il y a = ago)"),
+          eg("la semaine dernière", "lah suh-men dair-nyair", "last week (like l'année dernière)")
+        ],
+        table: "time-expressions"
+      },
+      proverb: {
+        fr: "Il n'y a pas de sot métier.",
+        respelling: "eel nyah pah duh soh may-tyay",
+        literal: "There's no stupid job.",
+        meaning: "Every honest job deserves respect; none is beneath anyone.",
+        englishEquivalent: "There's no shame in honest work."
+      }
+    },
+    {
+      id: "cafe-09-the-phone-call", number: 49, level: "A2", series: "le-cafe-des-questions", episode: 9, act: 2,
+      title: "The phone call", titleFr: "L'appel",
+      recap: "Bruno was happy repairing a bike, so he's going to visit the bike shop on rue Lepic. Rose said she changed her life long ago.",
+      summary: "On a Tuesday Hugo runs the counter; Inès, a nurse, is waiting for her mother to call.",
+      scene: "On a Tuesday morning Rose is at the market, so Hugo runs the counter of the Montmartre café, wearing his great-aunt's reading glasses to look serious; they keep slipping down his nose. Inès, a nurse still in her tunic after a night shift, puts her phone on the table, picks it up and puts it down again. When she says ma mère, Socrate the parrot fluffs up his feathers, and Hugo glances at the slate signed O. Later Inès steps outside with her phone and comes back with red eyes and a smile.",
+      keywords: ["appel", "phone call", "téléphone", "telephone", "mère", "mere", "maman", "mother", "infirmière", "infirmiere", "nurse", "hugo", "montmartre", "rose", "socrate", "question"],
+      speakers: [
+        { id: "hugo", name: "Hugo", role: "Rose's stand-in", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "ines", name: "Inès", role: "nurse", initial: "I", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "hugo", "Bonjour, madame. Ici, une question, puis un café.", "bohN-zhoor, mah-dahm. ee-see, ewn kes-tyohN, pwee uhN kah-fay",
+          "Hello, madam. Here: one question, then a coffee.", "proud",
+          ["Bonjour. Ici, une question, puis un café.", "Bonjour, madame. Ici, d'abord une question, puis un café.", "Ici, une question, puis un café.", "Bonjour, madame. Ici, une question, et puis un café."]),
+        eline("l2", "ines", "Je suis fatiguée. J'ai travaillé toute la nuit.", "zhuh swee fah-tee-gay. zhay trah-vah-yay toot lah nwee",
+          "I'm tired. I worked all night.", "sad",
+          ["Je suis très fatiguée. J'ai travaillé toute la nuit.", "Je suis fatiguée. J'ai travaillé cette nuit.", "J'ai travaillé toute la nuit. Je suis fatiguée.", "Pardon, je suis fatiguée. J'ai travaillé toute la nuit."]),
+        eline("l3", "hugo", "Oups. Les lunettes de Tata Rose. C'est pour avoir l'air sérieux.", "oops. lay lew-net duh tah-tah rohz. seh poor ah-vwahr lair say-ryuh",
+          "Oops. Auntie Rose's glasses. They're to make me look serious.", "surprised",
+          ["Oups. Ce sont les lunettes de Tata Rose. C'est pour avoir l'air sérieux.", "Oups. Les lunettes de ma grand-tante. C'est pour avoir l'air sérieux.", "Oups. Les lunettes de Tata Rose. Pour avoir l'air sérieux.", "Pardon. Les lunettes de Tata Rose. C'est pour avoir l'air sérieux."]),
+        eline("l4", "ines", "Vous êtes drôle. D'accord, je vous écoute.", "voo‿zet drohl. dah-kor, zhuh voo‿zay-koot",
+          "You're funny. All right, I'm listening.", "amused",
+          ["Vous êtes drôle. Bon, je vous écoute.", "Vous êtes très drôle. D'accord, je vous écoute.", "Vous êtes drôle. Allez, je vous écoute.", "Vous êtes drôle. D'accord, votre question ?"]),
+        eline("l5", "hugo", "Vous attendez un appel de qui ?", "voo‿zah-tahN-day uhN‿nah-pel duh kee",
+          "Whose call are you waiting for?", "curious",
+          ["Vous attendez l'appel de qui ?", "De qui est-ce que vous attendez un appel ?", "Vous attendez un coup de fil de qui ?", "Vous attendez un appel de qui, madame ?"]),
+        eline("l6", "ines", "De ma mère. On s'est disputées il y a trois mois.", "duh mah mair. ohN seh dees-pew-tay eel ee ah trwah mwah",
+          "My mother's. We had a row three months ago. (US: a fight)", "sad",
+          ["De ma mère. On s'est disputées il y a 3 mois.", "De ma mère. Nous nous sommes disputées il y a trois mois.", "Ma mère. On s'est disputées il y a trois mois.", "De ma maman. On s'est disputées il y a trois mois."]),
+        eline("l7", "hugo", "Et vous, vous l'avez appelée ? Dimanche, c'est la fête des Mères.", "ay voo, voo lah-vay ah-puh-lay. dee-mahNsh, seh lah fet day mair",
+          "And you, have you called her? Sunday is Mother's Day.", "hopeful",
+          ["Vous l'avez appelée ? Dimanche, c'est la fête des Mères.", "Et vous, est-ce que vous l'avez appelée ? Dimanche, c'est la fête des Mères.", "Et vous, vous l'avez appelée ? C'est la fête des Mères dimanche.", "Et vous, vous l'avez appelée ?"]),
+        eline("l8", "ines", "Non. Elle ne m'a pas appelée non plus. J'attends.", "nohN. el nuh mah pah ah-puh-lay nohN plew. zhah-tahN",
+          "No. She hasn't called me either. I'm waiting.", "annoyed",
+          ["Non. Et elle ne m'a pas appelée. J'attends.", "Non. Elle ne m'a pas appelée non plus. Alors j'attends.", "Non. Elle non plus, elle ne m'a pas appelée. J'attends.", "Non. Elle ne m'a pas appelée non plus."]),
+        eline("l9", "hugo", "La règle vient d'une dame, Odette. Tata Rose ne parle jamais d'elle.", "lah reh-gluh vyaN dewn dahm, oh-det. tah-tah rohz nuh parl zhah-meh del",
+          "The rule comes from a lady, Odette. Auntie Rose never talks about her.", "neutral",
+          ["La règle vient d'une dame qui s'appelle Odette. Tata Rose ne parle jamais d'elle.", "La règle vient d'une dame, Odette. Ma tante ne parle jamais d'elle.", "La règle vient d'une dame, Odette. Mais Tata Rose ne parle jamais d'elle.", "Vous savez, la règle vient d'Odette. Tata Rose ne parle jamais d'elle."]),
+        eline("l10", "ines", "Je vais l'appeler tout de suite. Et je vais lui dire pardon.", "zhuh veh lah-puh-lay too duh sweet. ay zhuh veh lwee deer par-dohN",
+          "I'm going to call her right now. And I'm going to say sorry to her.", "hopeful",
+          ["Je vais l'appeler tout de suite. Je vais lui dire pardon.", "Je vais l'appeler maintenant. Et je vais lui dire pardon.", "Je l'appelle tout de suite. Et je lui dis pardon.", "Je vais l'appeler tout de suite et lui dire pardon."]),
+        eline("l11", "ines", "Elle a pleuré. Moi aussi. Et maintenant, mon café, s'il vous plaît !", "el ah pluh-ray. mwah oh-see. ay maN-tuh-nahN, mohN kah-fay, seel voo pleh",
+          "She cried. So did I. And now, my coffee, please!", "relieved",
+          ["Elle a pleuré. Moi aussi. Maintenant, mon café, s'il vous plaît !", "Elle a pleuré, et moi aussi. Et maintenant, mon café, s'il vous plaît !", "Elle a pleuré. Moi aussi. Et maintenant, un café, s'il vous plaît !", "Elle a pleuré. Moi aussi. Mon café, s'il vous plaît !"])
+      ],
+      vocab: [
+        word("v1", "Je suis fatiguée", "zhuh swee fah-tee-gay", "I'm tired (fatiguée: a woman speaking)", "l2", "expression", "je-suis-fatigue"),
+        word("v2", "J'ai travaillé toute la nuit", "zhay trah-vah-yay toot lah nwee", "I worked all night", "l2", "verb", "travailler"),
+        word("v3", "Vous attendez un appel", "voo‿zah-tahN-day uhN‿nah-pel", "You're waiting for a call (attendre: no word for 'for')", "l5", "verb", "attendre"),
+        word("v4", "il y a trois mois", "eel ee ah trwah mwah", "three months ago (il y a = ago)", "l6", "table", "time-expressions"),
+        word("v5", "vous l'avez appelée", "voo lah-vay ah-puh-lay", "have you called her? (l' = her, so appelée agrees)", "l7", "table", "direct-object-pronouns"),
+        word("v6", "Je vais l'appeler", "zhuh veh lah-puh-lay", "I'm going to call her (l' before the infinitive)", "l10", "verb", "appeler"),
+        word("v7", "tout de suite", "too duh sweet", "right now / straight away", "l10", "expression", "tout-de-suite"),
+        word("v8", "je vais lui dire pardon", "zhuh veh lwee deer par-dohN", "I'm going to say sorry to her (lui = to her)", "l10", "table", "indirect-object-pronouns"),
+        word("v9", "Elle a pleuré", "el ah pluh-ray", "She cried (pleurer)", "l11", "verb", "pleurer")
+      ],
+      questions: [
+        q("q1", "Why is Inès tired?", "She worked all night", ["She danced all night", "She read all night", "She drove all night"], "en", "l2"),
+        q("q2", "Why does Hugo wear Auntie Rose's glasses?", "To look serious", ["To read the slate", "Because his are broken", "To look like a doctor"], "en", "l3"),
+        q("q3", "When did Inès and her mother fall out?", "Three months ago", ["Three weeks ago", "Three days ago", "Three years ago"], "en", "l6"),
+        q("q4", "What does Inès decide to do?", "Je vais l'appeler tout de suite.", ["Je vais l'attendre encore.", "Je vais lui écrire dimanche.", "Je vais rentrer dormir."], "fr", "l10")
+      ],
+      notice: {
+        title: "L' or lui? Je vais l'appeler, je vais lui dire",
+        text: "Inès says Je vais l'appeler and Je vais lui dire pardon. Appeler takes a direct object (appeler sa mère → l'appeler), but dire takes à (dire pardon à sa mère → lui dire pardon). In the passé composé, a direct object before avoir makes the participle agree: vous l'avez appelée, elle ne m'a pas appelée.",
+        examples: [
+          eg("Je vais l'appeler.", "zhuh veh lah-puh-lay", "I'm going to call her. (appeler quelqu'un: l')"),
+          eg("Je vais lui dire pardon.", "zhuh veh lwee deer par-dohN", "I'm going to say sorry to her. (dire à quelqu'un: lui)"),
+          eg("Elle ne m'a pas appelée.", "el nuh mah pah ah-puh-lay", "She hasn't called me. (appelée agrees with m' = Inès)")
+        ],
+        table: "indirect-object-pronouns"
+      },
+      proverb: {
+        fr: "Mieux vaut tard que jamais.",
+        respelling: "myuh voh tar kuh zhah-meh",
+        literal: "Late is worth more than never.",
+        meaning: "It's better to do something late than not at all.",
+        englishEquivalent: "Better late than never."
+      }
+    },
+    {
+      id: "cafe-10-the-old-photo", number: 50, level: "A2", series: "le-cafe-des-questions", episode: 10, act: 2,
+      title: "The old photo", titleFr: "La vieille photo",
+      recap: "Inès finally called her mother, and they both cried. Hugo said the rule comes from a lady, Odette, and Rose never talks about her.",
+      summary: "Victor, an amateur historian, asks ten questions a minute; Rose asks him one, and he finds Odette.",
+      scene: "On a Wednesday Victor, an amateur historian with a notebook, walks into Rose's Montmartre café already asking questions. Rose puts the white cup on her side of the counter and counts his questions on her fingers, and after the fifth one Socrate the parrot turns his back. In his bag Victor has a photo from 1975 that he bought at a flea market on Sunday: a woman in a big hat in front of this door. Above the door, the old name is still faint under the new sign.",
+      keywords: ["vieille photo", "old photo", "photo", "historien", "historian", "blog", "chez odette", "odette", "écouter", "ecouter", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question"],
+      speakers: [
+        { id: "victor", name: "Victor", role: "amateur historian", initial: "V", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "victor", "Bonjour ! Le café a quel âge ? Le comptoir est d'origine ?", "bohN-zhoor. luh kah-fay ah kel ahzh. luh kohN-twahr eh doh-ree-zheen",
+          "Hello! How old is the café? Is the counter original?", "curious",
+          ["Bonjour ! Quel âge a le café ? Le comptoir est d'origine ?", "Bonjour, madame ! Le café a quel âge ? Le comptoir est d'origine ?", "Bonjour ! Le café a quel âge ? Le comptoir, il est d'origine ?", "Bonjour ! Le café a quel âge ? Et le comptoir est d'origine ?"]),
+        eline("l2", "rose", "Bonjour, monsieur. Ça fait deux questions.", "bohN-zhoor, muh-syuh. sah feh duh kes-tyohN",
+          "Hello, sir. That's two questions.", "teasing",
+          ["Bonjour. Ça fait deux questions.", "Bonjour, monsieur. Ça fait déjà deux questions.", "Bonjour, monsieur. Deux questions.", "Bonjour, monsieur. Ça fait 2 questions."]),
+        eline("l3", "victor", "Et le perroquet ? Il parle ? Vous êtes là depuis quand ?", "ay luh peh-roh-keh. eel parl. voo‿zet lah duh-pwee kahN",
+          "And the parrot? Does he talk? How long have you been here?", "curious",
+          ["Et le perroquet ? Il parle ? Depuis quand vous êtes là ?", "Et le perroquet ? Il parle ? Depuis quand êtes-vous là ?", "Et le perroquet ? Il parle ? Vous êtes ici depuis quand ?", "Le perroquet parle ? Vous êtes là depuis quand ?"]),
+        eline("l4", "rose", "Cinq. Regardez, Socrate vous tourne le dos.", "saNk. ruh-gar-day, soh-krat voo toorn luh doh",
+          "Five. Look, Socrate is turning his back on you.", "amused",
+          ["Cinq questions. Regardez, Socrate vous tourne le dos.", "Ça fait cinq. Regardez, Socrate vous tourne le dos.", "Cinq. Socrate vous tourne le dos.", "Cinq. Regardez, le perroquet vous tourne le dos."]),
+        eline("l5", "victor", "Pardon ! J'écris un blog sur le vieux Montmartre.", "par-dohN. zhay-kree uhN blog sewr luh vyuh mohN-mar-truh",
+          "Sorry! I write a blog about old Montmartre.", "proud",
+          ["Pardon ! J'écris un blog sur Montmartre.", "Pardon ! J'ai un blog sur le vieux Montmartre.", "Excusez-moi ! J'écris un blog sur le vieux Montmartre.", "Pardon, madame ! J'écris un blog sur le vieux Montmartre."]),
+        eline("l6", "rose", "Une question. Une. C'est moi qui la pose.", "ewn kes-tyohN. ewn. seh mwah kee lah pohz",
+          "One question. One. And I'm the one who asks it.", "annoyed",
+          ["Une question. Une seule. C'est moi qui la pose.", "Une question, une seule, et c'est moi qui la pose.", "Ici, une question. Une. C'est moi qui la pose.", "Une question. Une. Et c'est moi qui la pose."]),
+        eline("l7", "rose", "Qu'est-ce que votre femme vous a dit ce matin ?", "kes-kuh voh-truh fahm voo‿zah dee suh mah-taN",
+          "What did your wife say to you this morning?", "curious",
+          ["Ce matin, qu'est-ce que votre femme vous a dit ?", "Votre femme vous a dit quoi, ce matin ?", "Qu'est-ce que votre femme a dit ce matin ?", "Que vous a dit votre femme ce matin ?"]),
+        eline("l8", "victor", "Ma femme ? Je ne sais pas. Je n'ai pas écouté.", "mah fahm. zhuh nuh seh pah. zhuh nay pah ay-koo-tay",
+          "My wife? I don't know. I didn't listen.", "surprised",
+          ["Ma femme ? Je ne sais plus. Je n'ai pas écouté.", "Je ne sais pas. Je n'ai pas écouté.", "Ma femme ? Aucune idée. Je n'ai pas écouté.", "Ma femme ? Je ne sais pas. Je ne l'ai pas écoutée."]),
+        eline("l9", "rose", "Votre café, monsieur. Vous l'avez mérité.", "voh-truh kah-fay, muh-syuh. voo lah-vay may-ree-tay",
+          "Your coffee, sir. You've earned it.", "teasing",
+          ["Voilà votre café, monsieur. Vous l'avez mérité.", "Votre café. Vous l'avez mérité.", "Votre café, monsieur. Vous l'avez bien mérité.", "Tenez, votre café. Vous l'avez mérité."]),
+        eline("l10", "victor", "Merci. Regardez ! Sur la photo, le café s'appelle Chez Odette.", "mair-see. ruh-gar-day. sewr lah foh-toh, luh kah-fay sah-pel shay oh-det",
+          "Thank you. Look! In the photo, the café is called Chez Odette.", "curious",
+          ["Regardez ! Sur la photo, le café s'appelle Chez Odette.", "Merci. Regardez ! Sur cette photo, le café s'appelle Chez Odette.", "Merci. Regardez ! Ici, le café s'appelle Chez Odette.", "Merci. Regardez la photo ! Le café s'appelle Chez Odette."]),
+        eline("l11", "rose", "Odette… Vous avez trouvé Odette.", "oh-det… voo‿zah-vay troo-vay oh-det",
+          "Odette… You've found Odette.", "moved",
+          ["Vous avez trouvé Odette.", "Odette… Vous l'avez trouvée.", "Odette… Vous avez retrouvé Odette.", "Odette… C'est Odette. Vous avez trouvé Odette."]),
+        eline("l12", "victor", "Ce soir, je vais écouter ma femme. Une heure. Sans carnet.", "suh swahr, zhuh veh ay-koo-tay mah fahm. ewn uhr. sahN kar-neh",
+          "Tonight I'm going to listen to my wife. For an hour. No notebook.", "hopeful",
+          ["Ce soir, je vais écouter ma femme. Pendant une heure. Sans carnet.", "Ce soir, je vais écouter ma femme. Une heure. Sans mon carnet.", "Ce soir, je vais écouter ma femme. Sans carnet.", "Ce soir, j'écoute ma femme. Une heure. Sans carnet."])
+      ],
+      vocab: [
+        word("v1", "Le café a quel âge", "luh kah-fay ah kel ahzh", "How old is the café? (avoir + age)", "l1", "table", "question-words"),
+        word("v2", "Pardon", "par-dohN", "Sorry / excuse me", "l5", "expression", "pardon"),
+        word("v3", "J'écris un blog", "zhay-kree uhN blog", "I write a blog (écrire)", "l5", "verb", "ecrire"),
+        word("v4", "votre femme vous a dit", "voh-truh fahm voo‿zah dee", "your wife said to you (dire → dit)", "l7", "verb", "dire"),
+        word("v5", "Je n'ai pas écouté", "zhuh nay pah ay-koo-tay", "I didn't listen (écouter)", "l8", "verb", "ecouter"),
+        word("v6", "Vous l'avez mérité", "voo lah-vay may-ree-tay", "You've earned it (l' = the coffee)", "l9", "table", "direct-object-pronouns"),
+        word("v7", "Vous avez trouvé Odette", "voo‿zah-vay troo-vay oh-det", "You've found Odette (trouver)", "l11", "verb", "trouver"),
+        word("v8", "Ce soir", "suh swahr", "This evening / tonight (ce = this)", "l12", "table", "demonstrative-adjectives"),
+        word("v9", "je vais écouter", "zhuh veh ay-koo-tay", "I'm going to listen (aller + infinitive)", "l12", "table", "future")
+      ],
+      questions: [
+        q("q1", "Why does Victor ask so many questions?", "He writes a blog about old Montmartre", ["He wants to buy the café", "He is a police detective", "He is writing a guidebook to Paris"], "en", "l5"),
+        q("q2", "What does Socrate do after the fifth question?", "He turns his back on Victor", ["He steals Victor's sugar", "He fluffs up his feathers", "He bites Victor's notebook"], "en", "l4"),
+        q("q3", "What did Victor's wife say to him this morning?", "He doesn't know: he didn't listen", ["To buy some bread", "To come home early", "To stop writing his blog"], "en", "l8"),
+        q("q4", "What is the café called in Victor's photo?", "Chez Odette", ["Chez Rose", "Le Café des Questions", "Chez Socrate"], "fr", "l10")
+      ],
+      notice: {
+        title: "The near future: je vais écouter",
+        text: "Victor ends with Ce soir, je vais écouter ma femme: the present of aller (je vais, vous allez, elle va) + an infinitive says what is going to happen. In speech it is much more common than the futur simple in the table (j'écouterai). Inès did the same last time: Je vais l'appeler.",
+        examples: [
+          eg("Ce soir, je vais écouter ma femme.", "suh swahr, zhuh veh ay-koo-tay mah fahm", "Tonight I'm going to listen to my wife. (aller + infinitive)"),
+          eg("Vous allez voir.", "voo‿zah-lay vwahr", "You'll see. (vous allez + voir)"),
+          eg("J'écouterai ma femme.", "zhay-koo-tray mah fahm", "I will listen to my wife. (futur simple: more formal)")
+        ],
+        table: "future"
+      },
+      proverb: {
+        fr: "Il n'est pire sourd que celui qui ne veut pas entendre.",
+        respelling: "eel neh peer soor kuh suh-lwee kee nuh vuh pah ahN-tahN-druh",
+        literal: "There's no worse deaf man than the one who doesn't want to hear.",
+        meaning: "The hardest person to reach is the one who won't listen.",
+        englishEquivalent: "There are none so deaf as those who will not hear."
+      }
+    },
+    {
+      id: "cafe-11-saturday-dances", number: 51, level: "A2", series: "le-cafe-des-questions", episode: 11, act: 3,
+      title: "Saturday dances", titleFr: "Le bal du samedi",
+      recap: "Victor found a 1975 photo of the café when it was called Chez Odette. Rose, moved, said: « Vous avez trouvé Odette. »",
+      summary: "Albert, 82, the street's old postman, remembers young Rose, and Rose's question reminds him he loved to dance.",
+      scene: "On a Monday morning in June, an old man with a cane stops at the door of the tiny Montmartre café and stares at the slate. Albert, 82, used to deliver the post on this street, and he recognises Madame Rose before she recognises him. He orders a white coffee; Rose puts the white cup on her side of the counter and taps the slate. On his perch, Socrate fluffs up his feathers for Albert.",
+      keywords: ["bal", "dance", "danser", "albert", "facteur", "postman", "souvenirs", "memories", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "albert", name: "Albert", role: "old customer", initial: "A", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "albert", "Mademoiselle Rose ? La petite étudiante ? Moi, c'est Albert, le facteur !", "mahd-mwah-zel rohz. lah puh-teet ay-tew-dyahNt. mwah, seh ahl-bair, luh fahk-tuhr",
+          "Miss Rose? The little student? It's me, Albert, the postman! (US: mailman)", "surprised",
+          ["Mademoiselle Rose ? C'est moi, Albert, le facteur !", "Mademoiselle Rose ? La petite étudiante ? C'est moi, Albert, le facteur !", "Mademoiselle Rose ? La petite étudiante ? Je suis Albert, le facteur !", "La petite étudiante ? Mademoiselle Rose ? Moi, c'est Albert, le facteur !"]),
+        eline("l2", "rose", "Albert ! Le facteur ! Ça fait presque cinquante ans !", "ahl-bair. luh fahk-tuhr. sah feh presk saN-kahN-tahN",
+          "Albert! The postman! It's been almost fifty years!", "moved",
+          ["Albert ! Le facteur ! Presque cinquante ans !", "Albert ! Le facteur ! Ça fait presque 50 ans !", "Albert ! Le facteur de la rue ! Ça fait presque cinquante ans !", "Albert ! Le facteur ! Il y a presque cinquante ans !"]),
+        eline("l3", "albert", "Vous étiez toujours pressée. Vous buviez votre café debout.", "voo‿zay-tyay too-zhoor preh-say. voo bew-vyay voh-truh kah-fay duh-boo",
+          "You were always in a hurry. You drank your coffee standing up.", "amused",
+          ["Vous étiez toujours pressée. Vous buviez votre café debout, au comptoir.", "Vous étiez toujours pressée et vous buviez votre café debout.", "Toujours pressée ! Vous buviez votre café debout.", "Vous étiez toujours pressée. Vous preniez votre café debout."]),
+        eline("l4", "albert", "Un matin, Odette vous a posé une question. C'était quoi ?", "uhN mah-taN, oh-det voo‿zah poh-zay ewn kes-tyohN. say-teh kwah",
+          "One morning, Odette asked you a question. What was it?", "curious",
+          ["Un matin, Odette vous a posé une question. Quelle question ?", "Un matin, Odette vous a posé une question. C'était quelle question ?", "Un jour, Odette vous a posé une question. C'était quoi ?", "Un matin, Odette vous a posé une question. Qu'est-ce que c'était ?"]),
+        eline("l5", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "Ici, les questions, c'est moi.", "C'est moi qui pose les questions, ici.", "Ici, c'est moi qui pose les questions, monsieur."]),
+        eline("l6", "rose", "Qu'est-ce que vous aimiez faire le samedi soir ?", "kes-kuh voo‿zeh-myay fair luh sahm-dee swahr",
+          "What did you like to do on Saturday nights?", "curious",
+          ["Le samedi soir, qu'est-ce que vous aimiez faire ?", "Vous aimiez faire quoi, le samedi soir ?", "Qu'est-ce que vous faisiez le samedi soir ?", "Le samedi soir, vous aimiez faire quoi ?"]),
+        eline("l7", "albert", "Je dansais ! Au bal, place des Abbesses. Je dansais très bien.", "zhuh dahN-seh. oh bahl, plahs day‿zah-bes. zhuh dahN-seh treh byaN",
+          "I used to dance! At the dance, on the place des Abbesses. I danced very well.", "proud",
+          ["Je dansais ! Au bal, place des Abbesses.", "Je dansais tous les samedis ! Au bal, place des Abbesses. Je dansais très bien.", "J'allais danser ! Au bal, place des Abbesses. Je dansais très bien.", "Je dansais ! Au bal des Abbesses. Je dansais très bien."]),
+        eline("l8", "albert", "Mais maintenant, j'ai quatre-vingt-deux ans. Je suis trop vieux.", "meh maNt-nahN, zhay kah-truh-vaN-duh‿zahN. zhuh swee troh vyuh",
+          "But now I'm eighty-two. I'm too old.", "sad",
+          ["Maintenant, j'ai quatre-vingt-deux ans. Je suis trop vieux.", "Mais maintenant, j'ai 82 ans. Je suis trop vieux.", "Mais aujourd'hui, j'ai quatre-vingt-deux ans. Je suis trop vieux.", "Mais maintenant, je suis trop vieux."]),
+        eline("l9", "rose", "Vous devriez danser encore. Il y a un bal samedi, à la mairie.", "voo duh-vree-yay dahN-say ahN-kor. eel ee ah uhN bahl sahm-dee, ah lah meh-ree",
+          "You should dance again. There's a dance on Saturday, at the town hall.", "hopeful",
+          ["Il faut danser encore ! Il y a un bal samedi, à la mairie.", "Vous devriez retourner danser. Il y a un bal samedi, à la mairie.", "Vous devriez danser encore. Samedi, il y a un bal à la mairie.", "Vous devriez danser ! Il y a un bal à la mairie, samedi."]),
+        eline("l10", "albert", "D'accord ! Mais vous venez avec moi, mademoiselle Rose ?", "dah-kor. meh voo vuh-nay ah-vek mwah, mahd-mwah-zel rohz",
+          "All right! But will you come with me, Miss Rose?", "hopeful",
+          ["D'accord ! Vous venez avec moi, mademoiselle Rose ?", "D'accord ! Mais vous venez avec moi ?", "D'accord ! Mais est-ce que vous venez avec moi, mademoiselle Rose ?", "Bon, d'accord ! Mais vous venez avec moi au bal, mademoiselle Rose ?"]),
+        eline("l11", "rose", "Moi ? Oh non, je suis trop vieille !", "mwah. oh nohN, zhuh swee troh vyey",
+          "Me? Oh no, I'm too old!", "surprised",
+          ["Moi ? Je suis trop vieille !", "Moi ? Non, je suis trop vieille !", "Oh non, je suis trop vieille !", "Moi ? Oh non, moi, je suis trop vieille !"]),
+        eline("l12", "albert", "Ah non ! Pas vous aussi !", "ah nohN. pah voo oh-see",
+          "Oh no! Not you too!", "amused",
+          ["Ah non ! Pas vous aussi, mademoiselle Rose !", "Oh non ! Pas vous aussi !", "Non ! Pas vous aussi !", "Ah non ! Vous aussi ?"])
+      ],
+      vocab: [
+        word("v1", "Vous étiez toujours pressée", "voo‿zay-tyay too-zhoor preh-say", "You were always in a hurry (étiez: imparfait of être)", "l3", "verb", "etre"),
+        word("v2", "Vous buviez votre café debout", "voo bew-vyay voh-truh kah-fay duh-boo", "You used to drink your coffee standing up (boire: nous buvons → vous buviez)", "l3", "verb", "boire"),
+        word("v3", "Ça fait presque cinquante ans", "sah feh presk saN-kahN-tahN", "It's been almost fifty years (cinquante ans: no z)", "l2", "table", "numbers-21-100"),
+        word("v4", "c'est moi qui pose les questions", "seh mwah kee pohz lay kes-tyohN", "I'm the one who asks the questions", "l5", "verb", "poser"),
+        word("v5", "Qu'est-ce que vous aimiez faire", "kes-kuh voo‿zeh-myay fair", "What did you like to do (aimiez: imparfait)", "l6", "table", "imparfait"),
+        word("v6", "j'ai quatre-vingt-deux ans", "zhay kah-truh-vaN-duh‿zahN", "I'm eighty-two (avoir for age)", "l8", "verb", "avoir"),
+        word("v7", "Vous devriez danser", "voo duh-vree-yay dahN-say", "You should dance (vous devriez + infinitive: advice)", "l9", "verb", "devoir"),
+        word("v8", "D'accord", "dah-kor", "All right / OK", "l10", "expression", "daccord"),
+        word("v9", "je suis trop vieille", "zhuh swee troh vyey", "I'm too old (vieux → vieille for a woman)", "l11", "table", "irregular-adjectives")
+      ],
+      questions: [
+        q("q1", "Who is Albert?", "The street's old postman", ["Rose's old teacher", "Odette's brother", "A painter from the place du Tertre"], "en", "l1"),
+        q("q2", "How did young Rose drink her coffee, according to Albert?", "Standing up, always in a hurry", ["Sitting by the window, slowly", "With Odette, every Sunday", "At a table, with a book"], "en", "l3"),
+        q("q3", "How old is Albert?", "Eighty-two", ["Seventy-two", "Ninety-two", "Sixty-eight"], "en", "l8"),
+        q("q4", "What is Rose's question?", "Qu'est-ce que vous aimiez faire le samedi soir ?", ["Qu'est-ce que vous aimez faire le dimanche ?", "Où est-ce que vous habitiez avant Rouen ?", "Pourquoi vous êtes revenu à Montmartre ?"], "fr", "l6")
+      ],
+      notice: {
+        title: "The imparfait: vous étiez, je dansais",
+        text: "Albert remembers: Vous étiez toujours pressée. Vous buviez votre café debout. Je dansais très bien. Habits and descriptions in the past take the imparfait: the nous stem (nous buvons → buv-) plus -ais, -ait, -iez, with être as the one irregular stem (ét-). For one single event Albert uses the passé composé: Un matin, Odette vous a posé une question.",
+        examples: [
+          eg("Vous buviez votre café debout.", "voo bew-vyay voh-truh kah-fay duh-boo", "You used to drink your coffee standing up. (habit: imparfait)"),
+          eg("Je dansais très bien.", "zhuh dahN-seh treh byaN", "I used to dance very well. (je: -ais)"),
+          eg("Un matin, Odette vous a posé une question.", "uhN mah-taN, oh-det voo‿zah poh-zay ewn kes-tyohN", "One morning, Odette asked you a question. (one event: passé composé)")
+        ],
+        table: "imparfait"
+      },
+      proverb: {
+        fr: "C'est dans les vieux pots qu'on fait les meilleures soupes.",
+        respelling: "seh dahN lay vyuh poh kohN feh lay meh-yuhr soop",
+        literal: "It's in the old pots that you make the best soups.",
+        meaning: "Experience and age are an advantage, not a weakness.",
+        englishEquivalent: "There's many a good tune played on an old fiddle."
+      }
+    },
+    {
+      id: "cafe-12-the-burnt-cake", number: 52, level: "A2", series: "le-cafe-des-questions", episode: 12, act: 3,
+      title: "The burnt cake", titleFr: "Le gâteau brûlé",
+      recap: "Albert, the old postman, remembered young Rose drinking her coffee standing up. Rose told him he should dance again on Saturday.",
+      summary: "Nadia's perfect birthday cake is burnt; Hugo's question reminds her that her daughter loves a simple apple tart.",
+      scene: "On Tuesday morning, while Rose is at the market, Hugo runs the tiny Montmartre café alone. Nadia, a pharmacist, puts a black, burnt three-tier cake on the counter. On his perch, Socrate turns his back on the cake, and Hugo puts the white cup on his side of the counter, just like his great-aunt. At the end, Nadia ties on an apron and Socrate helps himself to the apples.",
+      keywords: ["gâteau", "gateau", "cake", "burnt", "brûlé", "brule", "tarte", "apple tart", "hugo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "nadia", name: "Nadia", role: "mother", initial: "N", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "hugo", name: "Hugo", role: "Rose's stand-in", initial: "H", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "nadia", "Bonjour. Voilà mon gâteau. Enfin… c'était mon gâteau.", "bohN-zhoor. vwah-lah mohN gah-toh. ahN-faN… say-teh mohN gah-toh",
+          "Hello. Here's my cake. Well… it was my cake.", "annoyed",
+          ["Voilà mon gâteau. Enfin… c'était mon gâteau.", "Bonjour. Regardez mon gâteau. Enfin… c'était mon gâteau.", "Bonjour, monsieur. Voilà mon gâteau. Enfin… c'était mon gâteau.", "Bonjour. Voilà mon gâteau… enfin, c'était un gâteau."]),
+        eline("l2", "hugo", "Oh là là ! Même Socrate ne veut pas le regarder !", "oh lah lah. mem soh-krat nuh vuh pah luh ruh-gar-day",
+          "Oh dear! Even Socrate won't look at it!", "amused",
+          ["Oh là là ! Socrate ne veut même pas le regarder !", "Oh là là ! Même Socrate ne le regarde pas !", "Oh là là ! Regardez, même Socrate ne veut pas le regarder !", "Oh là là ! Même Socrate ne veut pas le voir !"]),
+        eline("l3", "nadia", "C'est pour ma fille, Lina. Elle va avoir huit ans samedi.", "seh poor mah feey, lee-nah. el vah ah-vwahr wee‿tahN sahm-dee",
+          "It's for my daughter, Lina. She's going to be eight on Saturday.", "sad",
+          ["C'est pour ma fille, Lina. Elle va avoir 8 ans samedi.", "C'est pour Lina, ma fille. Elle va avoir huit ans samedi.", "C'est pour ma fille. Elle va avoir huit ans samedi.", "C'est pour ma fille, Lina. Samedi, elle va avoir huit ans."]),
+        eline("l4", "nadia", "Le gâteau du magazine… Trois étages, des décorations en or. Brûlé deux fois !", "luh gah-toh dew mah-gah-zeen… trwah‿zay-tahzh, day day-koh-rah-syohN ahN‿nor. brew-lay duh fwah",
+          "The cake from the magazine… Three tiers, gold decorations. Burnt twice!", "annoyed",
+          ["Le gâteau du magazine… Trois étages, des décorations dorées. Brûlé deux fois !", "Le gâteau du magazine, avec trois étages et des décorations en or. Brûlé deux fois !", "Le gâteau du magazine… Trois étages, des décorations en or. Deux fois brûlé !", "Le gâteau du magazine… Trois étages. Brûlé deux fois !"]),
+        eline("l5", "hugo", "Bon. Ici, une question, puis un café. Même pour un gâteau brûlé.", "bohN. ee-see, ewn kes-tyohN, pwee uhN kah-fay. mem poor uhN gah-toh brew-lay",
+          "Right. Here: one question, then a coffee. Even for a burnt cake.", "teasing",
+          ["Ici, une question, puis un café. Même pour un gâteau brûlé.", "Bon. Ici, une question, puis un café, madame. Même pour un gâteau brûlé.", "Bon. La règle, c'est la règle : une question, puis un café.", "Bon. Ici, une question, puis un café. Même avec un gâteau brûlé."]),
+        eline("l6", "hugo", "Quand Lina était petite, qu'est-ce qu'elle aimait manger ?", "kahN lee-nah ay-teh puh-teet, kes-kel eh-meh mahN-zhay",
+          "When Lina was little, what did she like to eat?", "curious",
+          ["Quand Lina était petite, qu'est-ce qu'elle adorait manger ?", "Quand Lina était petite, elle aimait manger quoi ?", "Quand elle était petite, qu'est-ce que Lina aimait manger ?", "Petite, qu'est-ce que Lina aimait manger ?"]),
+        eline("l7", "nadia", "Elle adorait la tarte aux pommes de sa grand-mère.", "el ah-doh-reh lah tart oh pum duh sah grahN-mair",
+          "She loved her grandmother's apple tart.", "moved",
+          ["Elle aimait beaucoup la tarte aux pommes de sa grand-mère.", "Elle adorait la tarte aux pommes de ma mère.", "La tarte aux pommes de sa grand-mère. Elle adorait ça.", "Elle adorait la tarte aux pommes de sa mamie."]),
+        eline("l8", "nadia", "Simple. Avec du beurre et du sucre.", "saN-pluh. ah-vek dew buhr ay dew sew-kruh",
+          "Simple. With butter and sugar.", "surprised",
+          ["Une tarte simple. Avec du beurre et du sucre.", "Toute simple. Avec du beurre et du sucre.", "Simple, avec du beurre et un peu de sucre.", "Simple. Du beurre et du sucre."]),
+        eline("l9", "hugo", "Il faut faire simple. Vous devriez faire une tarte aux pommes.", "eel foh fair saN-pluh. voo duh-vree-yay fair ewn tart oh pum",
+          "You have to keep it simple. You should make an apple tart.", "hopeful",
+          ["Il faut faire simple. Faites une tarte aux pommes.", "Alors, il faut faire simple. Vous devriez faire une tarte aux pommes.", "Il faut faire simple, madame. Vous devriez faire une tarte aux pommes.", "Vous devriez faire une tarte aux pommes. Il faut faire simple."]),
+        eline("l10", "nadia", "Une tarte ? Mais je ne sais pas faire les tartes !", "ewn tart. meh zhuh nuh seh pah fair lay tart",
+          "A tart? But I don't know how to make tarts!", "worried",
+          ["Une tarte ? Mais je ne sais pas faire de tarte !", "Une tarte ? Je ne sais pas faire les tartes !", "Une tarte ? Mais je ne fais jamais de tartes !", "Une tarte aux pommes ? Mais je ne sais pas faire les tartes !"]),
+        eline("l11", "hugo", "Tata Rose fait la tarte d'Odette depuis quarante ans. Elle m'a appris la recette.", "tah-tah rohz feh lah tart doh-det duh-pwee kah-rahN-tahN. el mah ah-pree lah ruh-set",
+          "Auntie Rose has been making Odette's tart for forty years. She taught me the recipe.", "proud",
+          ["Tata Rose fait la tarte d'Odette depuis 40 ans. Elle m'a appris la recette.", "Tata Rose fait la tarte d'Odette depuis quarante ans. Elle m'a donné la recette.", "Ma grand-tante fait la tarte d'Odette depuis quarante ans. Elle m'a appris la recette.", "Tata Rose fait la tarte d'Odette depuis quarante ans, et elle m'a appris la recette."]),
+        eline("l12", "hugo", "Ce n'est pas la mer à boire. Je vous montre ?", "suh neh pah lah mair ah bwahr. zhuh voo mohN-truh",
+          "It's not that hard. Shall I show you? (literally: it's not the sea to drink)", "hopeful",
+          ["C'est pas la mer à boire. Je vous montre ?", "Ce n'est pas difficile. Je vous montre ?", "Ce n'est pas la mer à boire. Je vous montre comment ?", "Ce n'est pas la mer à boire, madame. Je vous montre ?"]),
+        eline("l13", "nadia", "D'accord ! Mais regardez Socrate : il mange déjà les pommes !", "dah-kor. meh ruh-gar-day soh-krat. eel mahNzh day-zhah lay pum",
+          "All right! But look at Socrate: he's already eating the apples!", "amused",
+          ["D'accord ! Mais regardez : Socrate mange déjà les pommes !", "D'accord ! Regardez Socrate : il mange déjà les pommes !", "Avec plaisir ! Mais regardez Socrate : il mange déjà les pommes !", "D'accord ! Oh, regardez Socrate, il mange déjà une pomme !"])
+      ],
+      vocab: [
+        word("v1", "c'était mon gâteau", "say-teh mohN gah-toh", "it was my cake (c'était: imparfait of c'est)", "l1", "table", "imparfait"),
+        word("v2", "Enfin", "ahN-faN", "Well… / I mean (correcting yourself)", "l1", "expression", "enfin"),
+        word("v3", "huit ans", "wee‿tahN", "eight years old (huit + ans: t liaison)", "l3", "table", "numbers-0-20"),
+        word("v4", "qu'est-ce qu'elle aimait manger", "kes-kel eh-meh mahN-zhay", "what did she like to eat (aimait: imparfait)", "l6", "verb", "manger"),
+        word("v5", "du beurre et du sucre", "dew buhr ay dew sew-kruh", "butter and sugar (du: some, partitive)", "l8", "table", "partitive-articles"),
+        word("v6", "Il faut faire simple", "eel foh fair saN-pluh", "You have to keep it simple (il faut + infinitive)", "l9", "verb", "falloir"),
+        word("v7", "Vous devriez faire une tarte aux pommes", "voo duh-vree-yay fair ewn tart oh pum", "You should make an apple tart (advice)", "l9", "verb", "devoir"),
+        word("v8", "Elle m'a appris la recette", "el mah ah-pree lah ruh-set", "She taught me the recipe (apprendre quelque chose à quelqu'un)", "l11", "verb", "apprendre"),
+        word("v9", "Ce n'est pas la mer à boire", "suh neh pah lah mair ah bwahr", "It's not that hard", "l12", "expression", "pas-la-mer-a-boire"),
+        word("v10", "Je vous montre ?", "zhuh voo mohN-truh", "Shall I show you?", "l12", "verb", "montrer")
+      ],
+      questions: [
+        q("q1", "What happened to Nadia's cake?", "It burnt, twice", ["It fell on the floor", "Socrate ate half of it", "She left it at home"], "en", "l4"),
+        q("q2", "How old will Lina be on Saturday?", "Eight", ["Six", "Ten", "Eighteen"], "en", "l3"),
+        q("q3", "What did Lina love when she was little?", "Her grandmother's apple tart", ["Her mother's chocolate cake", "Strawberries with sugar", "Bread and jam"], "en", "l7"),
+        q("q4", "What does Hugo advise Nadia?", "Vous devriez faire une tarte aux pommes.", ["Vous devriez acheter un gâteau.", "Vous devriez refaire le gâteau du magazine.", "Vous devriez demander à Madame Rose."], "fr", "l9")
+      ],
+      notice: {
+        title: "Giving advice: il faut, vous devriez",
+        text: "Hugo gives advice two ways: Il faut faire simple and Vous devriez faire une tarte aux pommes. Il faut + infinitive states a general rule (you have to), while vous devriez + infinitive, devoir in the conditional, is a softer, personal suggestion (you should). To a friend it's tu devrais: Tu devrais essayer.",
+        examples: [
+          eg("Il faut faire simple.", "eel foh fair saN-pluh", "You have to keep it simple. (general rule)"),
+          eg("Vous devriez faire une tarte aux pommes.", "voo duh-vree-yay fair ewn tart oh pum", "You should make an apple tart. (polite advice)"),
+          eg("Tu devrais essayer.", "tew duh-vreh eh-seh-yay", "You should try. (to a friend)")
+        ],
+        table: "conditionnel"
+      },
+      proverb: {
+        fr: "Le mieux est l'ennemi du bien.",
+        respelling: "luh myuh eh len-mee dew byaN",
+        literal: "The best is the enemy of the good.",
+        meaning: "Trying to make something perfect can spoil what was already good.",
+        englishEquivalent: "Perfect is the enemy of good."
+      }
+    },
+    {
+      id: "cafe-13-why-why-why", number: 53, level: "A2", series: "le-cafe-des-questions", episode: 13, act: 3,
+      title: "Why, why, why", titleFr: "Pourquoi, pourquoi, pourquoi",
+      recap: "Hugo asked Nadia what Lina liked as a child: her grandmother's apple tart. Hugo bakes Odette's tart; Rose taught him.",
+      summary: "Samuel's son asks why all day; Rose's question shows Samuel he answers 'because', just like his father.",
+      scene: "On Friday at eight, Samuel collapses at one of the three little tables of the Montmartre café. Every morning he walks past the window with his son Noé, six, who asks 'why' from seven o'clock. Rose puts the white cup on her side of the counter and looks at him over her glasses. Socrate, silent as always, watches from his perch by the window.",
+      keywords: ["pourquoi", "why", "parce que", "because", "father", "père", "pere", "noé", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "samuel", name: "Samuel", role: "tired father", initial: "S", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Bonjour, monsieur. Vous avez l'air fatigué.", "bohN-zhoor, muh-syuh. voo‿zah-vay lair fah-tee-gay",
+          "Good morning. You look tired.", "teasing",
+          ["Bonjour. Vous avez l'air fatigué.", "Bonjour, monsieur. Vous avez l'air très fatigué.", "Vous avez l'air fatigué, monsieur.", "Bonjour, monsieur. Vous êtes fatigué ?"]),
+        eline("l2", "samuel", "Un café. Double. Ne me posez pas de question.", "uhN kah-fay. doo-bluh. nuh muh poh-zay pah duh kes-tyohN",
+          "A coffee. A double. Don't ask me any questions.", "annoyed",
+          ["Un double, s'il vous plaît. Ne me posez pas de question.", "Un double expresso, s'il vous plaît. Pas de question.", "Un café double, s'il vous plaît. Pas de question.", "Un café. Double. Pas de question, s'il vous plaît."]),
+        eline("l3", "rose", "Ah, ça, c'est impossible. Ici, une question, puis un café.", "ah, sah, seh aN-poh-see-bluh. ee-see, ewn kes-tyohN, pwee uhN kah-fay",
+          "Ah, that's impossible. Here: one question, then a coffee.", "amused",
+          ["Ça, c'est impossible. Ici, une question, puis un café.", "Ah, ça, impossible. Ici, une question, puis un café.", "Ah non, c'est impossible. Ici, une question, puis un café.", "Impossible, monsieur. Ici, une question, puis un café."]),
+        eline("l4", "samuel", "Mon fils a six ans. Ce matin : « Pourquoi le perroquet ne dit rien ? »", "mohN fees ah see‿zahN. suh mah-taN. poor-kwah luh peh-roh-keh nuh dee ryaN",
+          "My son is six. This morning: 'Why doesn't the parrot say anything?'", "annoyed",
+          ["Mon fils a 6 ans. Ce matin : « Pourquoi le perroquet ne dit rien ? »", "Mon fils a six ans. Ce matin, il a demandé : « Pourquoi le perroquet ne dit rien ? »", "Mon fils a six ans. Ce matin : « Pourquoi le perroquet ne dit jamais rien ? »", "Mon fils a six ans. Et ce matin : « Pourquoi le perroquet ne dit rien ? »"]),
+        eline("l5", "rose", "Il réfléchit. Socrate réfléchit depuis cinquante ans.", "eel ray-flay-shee. soh-krat ray-flay-shee duh-pwee saN-kahN-tahN",
+          "He's thinking. Socrate has been thinking for fifty years.", "amused",
+          ["Il réfléchit. Socrate réfléchit depuis 50 ans.", "Il réfléchit. Il réfléchit depuis cinquante ans.", "Socrate réfléchit. Depuis cinquante ans.", "Il réfléchit, monsieur. Socrate réfléchit depuis cinquante ans."]),
+        eline("l6", "rose", "Et vous, quand vous étiez petit, vous posiez des questions ?", "ay voo, kahN voo‿zay-tyay puh-tee, voo poh-zyay day kes-tyohN",
+          "And you, when you were little, did you ask questions?", "curious",
+          ["Et vous, quand vous étiez petit, est-ce que vous posiez des questions ?", "Quand vous étiez petit, vous posiez des questions ?", "Et vous, petit, vous posiez des questions ?", "Et vous, quand vous étiez enfant, vous posiez des questions ?"]),
+        eline("l7", "samuel", "Oui… tout le temps. Et mon père disait : « Parce que. »", "wee… too luh tahN. ay mohN pair dee-zeh. pars kuh",
+          "Yes… all the time. And my father used to say: 'Because.'", "sad",
+          ["Oui… tout le temps. Et mon père répondait : « Parce que. »", "Tout le temps. Et mon père disait : « Parce que. »", "Oui, toujours. Et mon père disait : « Parce que. »", "Oui… tout le temps. Mais mon père disait : « Parce que. »"]),
+        eline("l8", "samuel", "Je n'aimais pas ça… Et moi, je dis la même chose !", "zhuh neh-meh pah sah… ay mwah, zhuh dee lah mem shohz",
+          "I didn't like that… And I say the same thing!", "surprised",
+          ["Je n'aimais pas ça. Et moi, maintenant, je dis la même chose !", "Je détestais ça… Et moi, je dis la même chose !", "Je n'aimais pas ça… Et moi aussi, je dis la même chose !", "Je n'aimais pas ça… Et maintenant, je dis la même chose !"]),
+        eline("l9", "rose", "Quand j'étais jeune, je ne posais pas de questions. Je courais.", "kahN zhay-teh zhuhn, zhuh nuh poh-zeh pah duh kes-tyohN. zhuh koo-reh",
+          "When I was young, I didn't ask questions. I ran.", "moved",
+          ["Quand j'étais jeune, je ne posais pas de questions. Je courais tout le temps.", "Moi, quand j'étais jeune, je ne posais pas de questions. Je courais.", "Quand j'étais jeune, je ne posais pas de question. Je courais.", "Jeune, je ne posais pas de questions. Je courais."]),
+        eline("l10", "samuel", "Alors, qu'est-ce que je dois faire ?", "ah-lor, kes-kuh zhuh dwah fair",
+          "So what should I do?", "curious",
+          ["Alors, je dois faire quoi ?", "Qu'est-ce que je dois faire, alors ?", "Alors, qu'est-ce que je fais ?", "Alors, qu'est-ce que je dois faire, madame ?"]),
+        eline("l11", "rose", "Vous devriez lui poser une question, à lui.", "voo duh-vree-yay lwee poh-zay ewn kes-tyohN, ah lwee",
+          "You should be the one asking him a question.", "neutral",
+          ["Vous devriez lui poser une question.", "Vous devriez poser une question à votre fils.", "Posez-lui une question, à lui.", "Vous devriez lui poser une question, à votre fils."]),
+        eline("l12", "rose", "« Et toi, pourquoi tu penses que le ciel est bleu ? »", "ay twah, poor-kwah tew pahNs kuh luh syel eh bluh",
+          "'And you, why do you think the sky is blue?'", "teasing",
+          ["« Et toi, à ton avis, pourquoi le ciel est bleu ? »", "« Et toi, pourquoi tu crois que le ciel est bleu ? »", "« Toi, pourquoi tu penses que le ciel est bleu ? »", "« Et toi, tu penses que le ciel est bleu pour quelle raison ? »"]),
+        eline("l13", "samuel", "Alors, moi, je vais lui demander : « Et toi ? »", "ah-lor, mwah, zhuh veh lwee duh-mahN-day. ay twah",
+          "So I'm going to ask him: 'And you?'", "hopeful",
+          ["Alors, je vais lui demander : « Et toi ? »", "Alors, moi, je vais lui poser la question : « Et toi ? »", "Bon, moi, je vais lui demander : « Et toi ? »", "Alors, moi, ce soir, je vais lui demander : « Et toi ? »"])
+      ],
+      vocab: [
+        word("v1", "fatigué", "fah-tee-gay", "tired (Vous avez l'air fatigué: you look tired)", "l1", "expression", "je-suis-fatigue"),
+        word("v2", "Ne me posez pas de question", "nuh muh poh-zay pah duh kes-tyohN", "Don't ask me any questions", "l2", "verb", "poser"),
+        word("v3", "vous posiez des questions", "voo poh-zyay day kes-tyohN", "you used to ask questions (posiez: imparfait)", "l6", "table", "imparfait"),
+        word("v4", "mon père disait", "mohN pair dee-zeh", "my father used to say (dire: imparfait)", "l7", "verb", "dire"),
+        word("v5", "Et moi", "ay mwah", "And me / And I (moi: stressed pronoun)", "l8", "table", "stressed-pronouns"),
+        word("v6", "qu'est-ce que je dois faire", "kes-kuh zhuh dwah fair", "what should I do (devoir: must, should)", "l10", "verb", "devoir"),
+        word("v7", "Vous devriez lui poser une question", "voo duh-vree-yay lwee poh-zay ewn kes-tyohN", "You should ask him a question (advice)", "l11", "table", "conditionnel"),
+        word("v8", "tu penses que", "tew pahNs kuh", "you think that (tu: to a child)", "l12", "verb", "penser")
+      ],
+      questions: [
+        q("q1", "How old is Samuel's son?", "Six", ["Eight", "Four", "Ten"], "en", "l4"),
+        q("q2", "What did Samuel's father use to answer?", "'Because.'", ["'Ask your mother.'", "'I don't know.'", "'Later.'"], "en", "l7"),
+        q("q3", "What did Rose do when she was young, instead of asking questions?", "She ran", ["She danced", "She painted", "She read"], "en", "l9"),
+        q("q4", "What is Samuel going to ask his son?", "Et toi ?", ["Pourquoi ?", "Parce que.", "Et vous ?"], "fr", "l13")
+      ],
+      notice: {
+        title: "Stressed pronouns: moi, toi, lui, vous",
+        text: "Rose asks Et vous, quand vous étiez petit… ? and Samuel answers Et moi, je dis la même chose ! After et, on their own, or to stress a person, French uses moi, toi, lui, vous instead of je, tu, il: Alors, moi…, une question, à lui. Et toi ? is tu because it's what Samuel will say to his six-year-old son; Rose and Samuel still say vous to each other.",
+        examples: [
+          eg("Et moi, je dis la même chose !", "ay mwah, zhuh dee lah mem shohz", "And I say the same thing! (moi stresses je)"),
+          eg("Vous devriez lui poser une question, à lui.", "voo duh-vree-yay lwee poh-zay ewn kes-tyohN, ah lwee", "You should be the one asking him a question. (à lui: stressed, for emphasis)"),
+          eg("Et toi ?", "ay twah", "And you? (to a child: tu → toi)")
+        ],
+        table: "stressed-pronouns"
+      },
+      proverb: {
+        fr: "La vérité sort de la bouche des enfants.",
+        respelling: "lah vay-ree-tay sor duh lah boosh day‿zahN-fahN",
+        literal: "The truth comes out of children's mouths.",
+        meaning: "Children often say simple true things that adults avoid.",
+        englishEquivalent: "Out of the mouths of babes."
+      }
+    },
+    {
+      id: "cafe-14-the-postcard", number: 54, level: "A2", series: "le-cafe-des-questions", episode: 14, act: 3,
+      title: "The postcard", titleFr: "La carte postale",
+      recap: "Samuel will ask his son questions back. Rose said that when she was young, she didn't ask questions: she ran.",
+      summary: "On Rose's 70th birthday a postcard comes from Odette; Hugo asks the postwoman about her dream, and she asks him back.",
+      scene: "On Tuesday 23 June, Madame Rose's seventieth birthday, Rose is at the market and Hugo runs the Montmartre café alone. Juliette, the street's postwoman, comes in with the post, a camera hanging from her bag. Hugo's thick law textbook (Droit civil) lies open on the counter next to the till; later, Juliette sees it and turns Hugo's question back on him. Socrate tries to eat the postcard, so Hugo hides it in the sugar bowl, then puts the white cup on his side of the counter.",
+      keywords: ["carte postale", "postcard", "factrice", "postwoman", "photographe", "photographer", "anniversaire", "birthday", "odette", "saint-malo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question"],
+      speakers: [
+        { id: "juliette", name: "Juliette", role: "postwoman", initial: "J", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "hugo", name: "Hugo", role: "Rose's stand-in", initial: "H", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "juliette", "Bonjour ! Une carte pour Madame Rose. De Saint-Malo, comme chaque année.", "bohN-zhoor. ewn kart poor mah-dahm rohz. duh saN-mah-loh, kohm shahk ah-nay",
+          "Hello! A card for Madame Rose. From Saint-Malo, like every year.", "neutral",
+          ["Bonjour ! Voilà une carte pour Madame Rose. De Saint-Malo, comme chaque année.", "Une carte pour Madame Rose. De Saint-Malo, comme chaque année.", "Bonjour, monsieur ! Une carte pour Madame Rose. De Saint-Malo, comme chaque année.", "Bonjour ! Une carte postale pour Madame Rose. De Saint-Malo, comme tous les ans."]),
+        eline("l2", "hugo", "« Bon anniversaire, Rose. Tu cours encore ? O. »", "boh‿nah-nee-vair-sair, rohz. tew koor ahN-kor. oh",
+          "'Happy birthday, Rose. Are you still running? O.'", "curious",
+          ["« Bon anniversaire, Rose. Tu cours toujours ? O. »", "« Joyeux anniversaire, Rose. Tu cours encore ? O. »", "« Bon anniversaire, Rose ! Tu cours encore ? »", "Bon anniversaire, Rose. Tu cours encore ? Signé O."]),
+        eline("l3", "hugo", "O… Odette ! Elle est à Saint-Malo ! Elle écrit chaque année !", "oh… oh-det. el eh ah saN-mah-loh. el ay-kree shahk ah-nay",
+          "O… Odette! She's in Saint-Malo! She writes every year!", "surprised",
+          ["Odette ! Elle est à Saint-Malo ! Elle écrit chaque année !", "O… C'est Odette ! Elle est à Saint-Malo ! Elle écrit chaque année !", "O… Odette ! Elle habite à Saint-Malo ! Elle écrit chaque année !", "O… Odette ! Elle est à Saint-Malo ! Elle écrit tous les ans !"]),
+        eline("l4", "juliette", "Attention ! Socrate veut manger la carte !", "ah-tahN-syohN. soh-krat vuh mahN-zhay lah kart",
+          "Watch out! Socrate wants to eat the card!", "amused",
+          ["Attention ! Socrate veut manger la carte postale !", "Attention ! Le perroquet veut manger la carte !", "Oh ! Socrate veut manger la carte !", "Attention ! Socrate mange la carte !"]),
+        eline("l5", "hugo", "Bon. Un café pour la factrice ? Ici, une question, puis un café.", "bohN. uhN kah-fay poor lah fahk-trees. ee-see, ewn kes-tyohN, pwee uhN kah-fay",
+          "Right. A coffee for the postwoman? Here: one question, then a coffee.", "teasing",
+          ["Un café pour la factrice ? Ici, une question, puis un café.", "Bon. Un café, madame ? Ici, une question, puis un café.", "Bon. Vous voulez un café ? Ici, une question, puis un café.", "Bon. Un café pour la factrice ? Mais ici, une question, puis un café."]),
+        eline("l6", "hugo", "Qu'est-ce que vous vouliez faire, quand vous étiez petite ?", "kes-kuh voo voo-lyay fair, kahN voo‿zay-tyay puh-teet",
+          "What did you want to do when you were little?", "curious",
+          ["Quand vous étiez petite, qu'est-ce que vous vouliez faire ?", "Petite, qu'est-ce que vous vouliez faire ?", "Qu'est-ce que vous vouliez faire comme métier, quand vous étiez petite ?", "Quand vous étiez petite, vous vouliez faire quoi ?"]),
+        eline("l7", "juliette", "Je voulais être photographe. Je prenais des photos de tout.", "zhuh voo-leh eh-truh foh-toh-grahf. zhuh pruh-neh day foh-toh duh too",
+          "I wanted to be a photographer. I took photos of everything.", "moved",
+          ["Je voulais être photographe. Je faisais des photos de tout.", "Photographe. Je prenais des photos de tout.", "Je voulais être photographe. Je prenais tout en photo.", "Moi, je voulais être photographe. Je prenais des photos de tout."]),
+        eline("l8", "hugo", "Mais vous avez un appareil photo ! Vous devriez essayer.", "meh voo‿zah-vay uhN‿nah-pah-rey foh-toh. voo duh-vree-yay eh-seh-yay",
+          "But you've got a camera! You should try.", "hopeful",
+          ["Vous avez un appareil photo ! Vous devriez essayer.", "Mais vous avez un appareil photo ! Il faut essayer.", "Mais vous avez un appareil photo, madame ! Vous devriez essayer.", "Mais vous avez un appareil photo ! Vous devriez essayer, madame."]),
+        eline("l9", "juliette", "Et vous, vous aimez le droit ?", "ay voo, voo‿zeh-may luh drwah",
+          "And you, do you like law?", "teasing",
+          ["Et vous, est-ce que vous aimez le droit ?", "Et vous, ça vous plaît, le droit ?", "Et vous, vous aimez vos études de droit ?", "Et vous, monsieur, vous aimez le droit ?"]),
+        eline("l10", "hugo", "Moi ? Euh… Mes parents aiment le droit.", "mwah. uh… may pah-rahN em luh drwah",
+          "Me? Er… My parents like law.", "surprised",
+          ["Moi ? Euh… Mes parents, eux, aiment le droit.", "Moi ? Mes parents aiment le droit.", "Euh… Moi ? Mes parents aiment le droit.", "Moi ? Euh… Mes parents adorent le droit."]),
+        eline("l11", "hugo", "Moi, j'aime faire des gâteaux…", "mwah, zhem fair day gah-toh…",
+          "What I like is making cakes…", "sad",
+          ["J'aime faire des gâteaux…", "Moi, j'adore faire des gâteaux…", "Moi, ce que j'aime, c'est faire des gâteaux…", "Moi, j'aime faire des gâteaux, des tartes…"]),
+        eline("l12", "juliette", "C'est génial ! Vous devriez essayer, vous aussi.", "seh zhay-nyahl. voo duh-vree-yay eh-seh-yay, voo oh-see",
+          "That's great! You should try too.", "hopeful",
+          ["C'est génial ! Alors, vous devriez essayer, vous aussi.", "C'est super ! Vous devriez essayer, vous aussi.", "C'est génial ! Il faut essayer, vous aussi.", "Génial ! Vous aussi, vous devriez essayer."]),
+        eline("l13", "juliette", "Souriez ! Une photo avec la carte. Pour Madame Rose, pour ses soixante-dix ans.", "soo-ree-yay. ewn foh-toh ah-vek lah kart. poor mah-dahm rohz, poor say swah-sahNt-dee‿zahN",
+          "Smile! A photo with the card. For Madame Rose, for her seventieth birthday.", "proud",
+          ["Souriez ! Une photo avec la carte. Pour Madame Rose, pour ses 70 ans.", "Souriez ! Une photo avec la carte, pour les soixante-dix ans de Madame Rose.", "Souriez, monsieur ! Une photo avec la carte. Pour Madame Rose, pour ses soixante-dix ans.", "Souriez ! Une photo avec la carte. C'est pour les soixante-dix ans de Madame Rose."])
+      ],
+      vocab: [
+        word("v1", "comme chaque année", "kohm shahk ah-nay", "like every year", "l1", "table", "time-expressions"),
+        word("v2", "Tu cours encore ?", "tew koor ahN-kor", "Are you still running? (tu: old friends)", "l2", "verb", "courir"),
+        word("v3", "Elle écrit chaque année", "el ay-kree shahk ah-nay", "She writes every year", "l3", "verb", "ecrire"),
+        word("v4", "Qu'est-ce que vous vouliez faire", "kes-kuh voo voo-lyay fair", "What did you want to do (vouliez: imparfait of vouloir)", "l6", "verb", "vouloir"),
+        word("v5", "Je voulais être photographe", "zhuh voo-leh eh-truh foh-toh-grahf", "I wanted to be a photographer (a past dream: imparfait)", "l7", "table", "imparfait"),
+        word("v6", "Je prenais des photos", "zhuh pruh-neh day foh-toh", "I used to take photos (prendre: imparfait)", "l7", "verb", "prendre"),
+        word("v7", "Vous devriez essayer", "voo duh-vree-yay eh-seh-yay", "You should try (advice)", "l8", "verb", "essayer"),
+        word("v8", "vous aimez le droit", "voo‿zeh-may luh drwah", "you like law (le droit: law, the subject)", "l9", "verb", "aimer"),
+        word("v9", "C'est génial !", "seh zhay-nyahl", "That's great!", "l12", "expression", "cest-genial"),
+        word("v10", "ses soixante-dix ans", "say swah-sahNt-dee‿zahN", "her seventieth birthday (ses: her, before a plural noun)", "l13", "table", "possessive-adjectives")
+      ],
+      questions: [
+        q("q1", "Where does the postcard for Rose come from?", "Saint-Malo", ["Lyon", "Rouen", "Manchester"], "en", "l1"),
+        q("q2", "What does Hugo discover about Odette?", "She lives in Saint-Malo and writes every year", ["She works at the post office in Montmartre", "She is coming to Paris for the birthday", "She sends Hugo a card every year"], "en", "l3"),
+        q("q3", "What did Juliette want to be as a child?", "A photographer", ["A pastry chef", "A lawyer", "A painter"], "en", "l7"),
+        q("q4", "What does Hugo really like doing?", "Faire des gâteaux.", ["Étudier le droit.", "Prendre des photos.", "Écrire des cartes."], "fr", "l11")
+      ],
+      notice: {
+        title: "Imparfait or passé composé: je voulais, elle a écrit",
+        text: "Juliette describes her childhood dream: Je voulais être photographe. Je prenais des photos de tout. A dream or a habit in the past takes the imparfait, but one finished event takes the passé composé: Odette a écrit une carte. The postcard says Tu cours encore ? in tu because Odette and Rose are old friends; Hugo and Juliette say vous.",
+        examples: [
+          eg("Je prenais des photos de tout.", "zhuh pruh-neh day foh-toh duh too", "I used to take photos of everything. (habit: imparfait)"),
+          eg("Odette a écrit une carte.", "oh-det ah ay-kree ewn kart", "Odette wrote a card. (one event: passé composé)"),
+          eg("Tu cours encore ?", "tew koor ahN-kor", "Are you still running? (tu: old friends)")
+        ],
+        table: "imparfait"
+      },
+      proverb: {
+        fr: "Qui ne tente rien n'a rien.",
+        respelling: "kee nuh tahNt ryaN nah ryaN",
+        literal: "Who tries nothing has nothing.",
+        meaning: "If you never try, you never get anything.",
+        englishEquivalent: "Nothing ventured, nothing gained."
+      }
+    },
+    {
+      id: "cafe-15-the-portrait", number: 55, level: "A2", series: "le-cafe-des-questions", episode: 15, act: 3,
+      title: "The portrait", titleFr: "Le portrait",
+      recap: "On Rose's 70th birthday a postcard came from Saint-Malo: Odette is alive and asks « Tu cours encore ? ». Juliette asked Hugo if he likes law.",
+      summary: "Karim, a painter who no longer wants to paint, starts drawing Rose and finds the desire again while he draws.",
+      scene: "On a Thursday in July, at half past five, the Montmartre café is almost closing. Karim, a portrait painter from the place du Tertre, sits at a table with his box of pencils closed. Rose puts the white cup on her side of the counter and looks at him over her glasses. While he draws her, Socrate sits perfectly still on her shoulder, posing like a statue.",
+      keywords: ["portrait", "painter", "peintre", "dessin", "drawing", "place du tertre", "tertre", "karim", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "karim", name: "Karim", role: "painter", initial: "K", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Bonjour, monsieur. On ferme bientôt.", "bohN-zhoor, muh-syuh. ohN fairm byaN-toh",
+          "Hello. We're closing soon.", "neutral",
+          ["Bonjour. On ferme bientôt.", "Bonjour, monsieur. Nous fermons bientôt.", "Bonsoir, monsieur. On ferme bientôt.", "Bonjour, monsieur. Attention, on ferme bientôt."]),
+        eline("l2", "karim", "Un thé, s'il vous plaît. Sans question.", "uhN tay, seel voo pleh. sahN kes-tyohN",
+          "A tea, please. No question.", "sad",
+          ["Un thé, s'il vous plaît. Pas de question.", "Un thé, sans question, s'il vous plaît.", "Un thé, s'il vous plaît. Et sans question.", "Bonjour. Un thé, s'il vous plaît. Sans question."]),
+        eline("l3", "rose", "Sans question, sans thé.", "sahN kes-tyohN, sahN tay",
+          "No question, no tea.", "teasing",
+          ["Pas de question, pas de thé.", "Sans question, pas de thé.", "Sans question, sans thé, monsieur.", "Pas de question, pas de thé, monsieur."]),
+        eline("l4", "karim", "Je peins dix touristes par jour. Je ne veux plus peindre.", "zhuh paN dee too-reest par zhoor. zhuh nuh vuh plew paN-druh",
+          "I paint ten tourists a day. I don't want to paint any more. (US: anymore)", "annoyed",
+          ["Je peins 10 touristes par jour. Je ne veux plus peindre.", "Je peins dix touristes par jour, et je ne veux plus peindre.", "Dix touristes par jour ! Je ne veux plus peindre.", "Je fais dix portraits par jour. Je ne veux plus peindre."]),
+        eline("l5", "rose", "Quand vous aviez dix ans, qui est-ce que vous dessiniez ?", "kahN voo‿zah-vyay dee‿zahN, kee es-kuh voo deh-see-nyay",
+          "When you were ten, who did you draw?", "curious",
+          ["Quand vous aviez 10 ans, qui est-ce que vous dessiniez ?", "Quand vous aviez dix ans, vous dessiniez qui ?", "À dix ans, qui est-ce que vous dessiniez ?", "Quand vous étiez petit, qui est-ce que vous dessiniez ?"]),
+        eline("l6", "karim", "Ma grand-mère. Je la dessinais tous les dimanches. Elle riait.", "mah grahN-mair. zhuh lah deh-see-neh too lay dee-mahNsh. el ree-yeh",
+          "My grandmother. I drew her every Sunday. She used to laugh.", "moved",
+          ["Ma grand-mère. Je la dessinais chaque dimanche. Elle riait.", "Ma grand-mère. Je la dessinais tous les dimanches, et elle riait.", "Ma grand-mère. Tous les dimanches, je la dessinais. Elle riait.", "Ma grand-mère. Je la dessinais le dimanche. Elle riait beaucoup."]),
+        eline("l7", "rose", "Il faut commencer. Dessinez-moi.", "eel foh koh-mahN-say. deh-see-nay mwah",
+          "You have to start. Draw me.", "hopeful",
+          ["Il faut commencer. Dessinez-moi, monsieur.", "Il faut recommencer. Dessinez-moi.", "Alors, il faut commencer. Dessinez-moi.", "Il faut commencer quelque part. Dessinez-moi."]),
+        eline("l8", "karim", "Maintenant ? Ici ?", "maNt-nahN. ee-see",
+          "Now? Here?", "worried",
+          ["Maintenant ? Ici, au comptoir ?", "Quoi, maintenant ? Ici ?", "Maintenant ? Ici, dans le café ?", "Vous voulez maintenant ? Ici ?"]),
+        eline("l9", "rose", "Pas mes rides, s'il vous plaît.", "pah may reed, seel voo pleh",
+          "Not my wrinkles, please.", "amused",
+          ["Mais pas mes rides, s'il vous plaît.", "Pas les rides, s'il vous plaît.", "Pas mes rides, monsieur, s'il vous plaît.", "Oui. Mais pas mes rides, s'il vous plaît."]),
+        eline("l10", "rose", "Avant, je courais tout le temps. Une dame m'a arrêtée.", "ah-vahN, zhuh koo-reh too luh tahN. ewn dahm mah ah-reh-tay",
+          "Before, I ran all the time. A lady stopped me.", "neutral",
+          ["Avant, je courais tout le temps. Un jour, une dame m'a arrêtée.", "Moi, avant, je courais tout le temps. Une dame m'a arrêtée.", "Avant, je courais toujours. Une dame m'a arrêtée.", "Avant, je courais tout le temps. Et une dame m'a arrêtée."]),
+        eline("l11", "karim", "Socrate ne bouge pas ! Et moi, j'ai envie de dessiner encore.", "soh-krat nuh boozh pah. ay mwah, zhay ahN-vee duh deh-see-nay ahN-kor",
+          "Socrate isn't moving! And I feel like drawing more.", "amused",
+          ["Socrate ne bouge pas ! Et moi, j'ai envie de continuer.", "Regardez, Socrate ne bouge pas ! Et moi, j'ai envie de dessiner encore.", "Socrate ne bouge plus ! Et moi, j'ai envie de dessiner encore.", "Socrate ne bouge pas ! Et moi, j'ai encore envie de dessiner."]),
+        eline("l12", "rose", "C'est pour moi ?", "seh poor mwah",
+          "Is it for me?", "moved",
+          ["C'est pour moi, ce dessin ?", "Ce dessin, c'est pour moi ?", "C'est pour moi, monsieur ?", "Pour moi ?"]),
+        eline("l13", "karim", "Oui. Je vous le donne. Ça me fait plaisir.", "wee. zhuh voo luh dun. sah muh feh pleh-zeer",
+          "Yes. I'm giving it to you. It's my pleasure.", "proud",
+          ["Oui. Il est pour vous. Ça me fait plaisir.", "Oui. Je vous le donne, avec plaisir.", "Bien sûr. Je vous le donne. Ça me fait plaisir.", "Oui, c'est pour vous. Ça me fait plaisir."])
+      ],
+      vocab: [
+        word("v1", "Je ne veux plus peindre", "zhuh nuh vuh plew paN-druh", "I don't want to paint any more (ne… plus)", "l4", "table", "negative-words"),
+        word("v2", "dix touristes", "dee too-reest", "ten tourists (dix before a consonant: the x is silent)", "l4", "table", "numbers-0-20"),
+        word("v3", "Quand vous aviez dix ans", "kahN voo‿zah-vyay dee‿zahN", "When you were ten (avoir for age, imparfait)", "l5", "table", "imparfait"),
+        word("v4", "Je la dessinais", "zhuh lah deh-see-neh", "I used to draw her (la = her, before the verb)", "l6", "table", "direct-object-pronouns"),
+        word("v5", "Elle riait", "el ree-yeh", "She used to laugh (rire: imparfait)", "l6", "verb", "rire"),
+        word("v6", "Il faut commencer", "eel foh koh-mahN-say", "You have to start (il faut + infinitive)", "l7", "verb", "falloir"),
+        word("v7", "je courais tout le temps", "zhuh koo-reh too luh tahN", "I used to run all the time (courir: imparfait)", "l10", "verb", "courir"),
+        word("v8", "j'ai envie de dessiner", "zhay ahN-vee duh deh-see-nay", "I feel like drawing (avoir envie de + infinitive)", "l11", "verb", "avoir"),
+        word("v9", "Je vous le donne", "zhuh voo luh dun", "I'm giving it to you (le: it; vous: to you)", "l13", "verb", "donner"),
+        word("v10", "Ça me fait plaisir", "sah muh feh pleh-zeer", "It makes me happy / It's my pleasure", "l13", "expression", "ca-me-fait-plaisir")
+      ],
+      questions: [
+        q("q1", "How many tourists does Karim paint a day?", "Ten", ["Two", "Twenty", "Five"], "en", "l4"),
+        q("q2", "Who did Karim draw when he was a child?", "His grandmother, every Sunday", ["His mother, every evening", "His dog, every morning", "His brother, at school"], "en", "l6"),
+        q("q3", "What does Rose tell Karim about her past?", "She used to run all the time, until a lady stopped her", ["She used to paint portraits on the place du Tertre", "She drew her grandmother every Sunday", "She worked at the post office in Montmartre"], "en", "l10"),
+        q("q4", "What does Karim say when he gives Rose the drawing?", "Ça me fait plaisir.", ["Ça me fait peur.", "Ça ne me plaît pas.", "Ça m'est égal."], "fr", "l13")
+      ],
+      notice: {
+        title: "Object pronouns: je la dessinais, je vous le donne",
+        text: "Karim says Je la dessinais tous les dimanches: la replaces ma grand-mère and goes before the verb. Rose's Dessinez-moi is a command, so the pronoun goes after the verb and me becomes moi. In Je vous le donne, le (the drawing) is the direct object and vous is indirect, because you give something to someone (donner quelque chose à quelqu'un).",
+        examples: [
+          eg("Je la dessinais tous les dimanches.", "zhuh lah deh-see-neh too lay dee-mahNsh", "I used to draw her every Sunday. (la = ma grand-mère)"),
+          eg("Dessinez-moi.", "deh-see-nay mwah", "Draw me. (command: pronoun after the verb)"),
+          eg("Je vous le donne.", "zhuh voo luh dun", "I'm giving it to you. (le: direct; vous: indirect)")
+        ],
+        table: "direct-object-pronouns"
+      },
+      proverb: {
+        fr: "L'appétit vient en mangeant.",
+        respelling: "lah-pay-tee vyaN ahN mahN-zhahN",
+        literal: "Appetite comes while eating.",
+        meaning: "Once you start doing something, the desire to do it grows."
+      }
+    },
+    {
+      id: "cafe-16-a-hundred-euros", number: 56, level: "B1", series: "le-cafe-des-questions", episode: 16, act: 4,
+      title: "A hundred euros", titleFr: "Cent euros",
+      recap: "Karim drew Rose while Socrate posed on her shoulder, and his wish to draw came back. Rose said a lady once stopped her running.",
+      summary: "A rich man offers Rose a hundred euros to skip her question; the question finds the call he would like to make.",
+      scene: "On a Thursday in September Frédéric, in a perfect coat, walks into Madame Rose's tiny Montmartre café and puts a hundred-euro note on the counter: he has heard about the rule and would like to skip it. Socrate the grey parrot hops down from his perch and nibbles one corner of the note. Rose pulls the white cup back to her side of the counter and looks at him over her glasses.",
+      keywords: ["cent euros", "hundred euros", "argent", "money", "frère", "frere", "brother", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "frederic", name: "Frédéric", role: "rich customer", initial: "F", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "frederic", "Bonjour, madame. Je voudrais un café. Sans la question. Voilà cent euros.", "bohN-zhoor, mah-dahm. zhuh voo-dreh uhN kah-fay. sahN lah kes-tyohN. vwah-lah sahN‿tuh-roh",
+          "Hello. I'd like a coffee. Without the question. Here's a hundred euros.", "proud",
+          ["Je voudrais un café. Sans la question. Voilà cent euros.", "Bonjour, madame. Je voudrais un café, sans question. Voilà 100 euros.", "Bonjour. Un café, s'il vous plaît, sans la question. Voilà cent euros.", "Bonjour, madame. Je voudrais un café sans la question. Voici cent euros.", "Bonjour, madame. Je voudrais un café. Pas de question. Voilà cent euros."]),
+        eline("l2", "rose", "Vous avez de la monnaie ? Le café coûte deux euros. La question est gratuite.", "voo‿zah-vay duh lah mu-neh. luh kah-fay koot duh‿zuh-roh. lah kes-tyohN eh grah-tweet",
+          "Have you got any change? The coffee costs two euros. The question is free.", "teasing",
+          ["Vous avez de la monnaie ? Le café coûte 2 euros. La question est gratuite.", "Vous n'avez pas de monnaie ? Le café coûte deux euros. La question est gratuite.", "Vous avez de la monnaie ? Le café, c'est deux euros. La question est gratuite.", "Le café coûte deux euros. La question est gratuite.", "Vous avez de la monnaie ? Un café coûte deux euros, et la question est gratuite."]),
+        eline("l3", "frederic", "Alors, j'achète l'ardoise. Ou le perroquet, même s'il coûte les yeux de la tête !", "ah-lor, zhah-shet lar-dwahz. oo luh peh-roh-keh, mem seel koot lay‿zyuh duh lah tet",
+          "Then I'll buy the slate. Or the parrot, even if it costs an arm and a leg! (literally: the eyes of the head)", "annoyed",
+          ["Alors, j'achète l'ardoise. Ou le perroquet, même s'il coûte cher !", "Alors je vous achète l'ardoise. Ou le perroquet, même s'il coûte les yeux de la tête !", "Bon, j'achète l'ardoise. Ou le perroquet, même s'il coûte les yeux de la tête !", "Alors, j'achète l'ardoise. Ou alors le perroquet, même s'il coûte les yeux de la tête !", "Alors, je voudrais acheter l'ardoise. Ou le perroquet, même s'il coûte les yeux de la tête !"]),
+        eline("l4", "rose", "Regardez Socrate. Il mange le coin de votre billet !", "ruh-gar-day soh-krat. eel mahNzh luh kwaN duh voh-truh bee-yeh",
+          "Look at Socrate. He's eating the corner of your note! (US: bill)", "amused",
+          ["Regardez Socrate ! Il mange votre billet !", "Regardez Socrate. Il mange le coin du billet !", "Regardez, Socrate mange le coin de votre billet !", "Oh, regardez Socrate. Il mange le coin de votre billet !", "Regardez Socrate. Il mange votre billet de cent euros !"]),
+        eline("l5", "rose", "Qui est-ce que vous aimeriez appeler ce soir ?", "kee es-kuh voo‿zeh-muh-ryay ah-puh-lay suh swahr",
+          "Who would you like to call tonight?", "curious",
+          ["Qui aimeriez-vous appeler ce soir ?", "Ce soir, qui est-ce que vous aimeriez appeler ?", "Vous aimeriez appeler qui, ce soir ?", "Qui est-ce que vous voudriez appeler ce soir ?", "Qui est-ce que vous aimeriez appeler ce soir, monsieur ?"]),
+        eline("l6", "frederic", "Personne… Personne ne m'appelle. Mon téléphone ne sonne jamais.", "pair-sun… pair-sun nuh mah-pel. mohN tay-lay-fun nuh sun zhah-meh",
+          "Nobody… Nobody calls me. My phone never rings.", "sad",
+          ["Personne. Personne ne m'appelle.", "Personne… Mon téléphone ne sonne jamais.", "Personne… Personne ne m'appelle. Mon portable ne sonne jamais.", "Personne… On ne m'appelle jamais. Mon téléphone ne sonne jamais.", "Personne. Personne ne m'appelle, jamais."]),
+        eline("l7", "frederic", "Mon frère, Marc, habite à Lyon. On ne s'appelle plus depuis dix ans.", "mohN frair, mark, ah-beet ah lee-ohN. ohN nuh sah-pel plew duh-pwee dee‿zahN",
+          "My brother, Marc, lives in Lyon. We haven't phoned each other for ten years.", "sad",
+          ["Mon frère, Marc, habite à Lyon. On ne s'appelle plus depuis 10 ans.", "Mon frère Marc vit à Lyon. On ne s'appelle plus depuis dix ans.", "Mon frère, Marc, habite à Lyon. Nous ne nous appelons plus depuis dix ans.", "J'ai un frère, Marc, à Lyon. On ne s'appelle plus depuis dix ans.", "Mon frère, Marc, habite à Lyon. Ça fait dix ans qu'on ne s'appelle plus."]),
+        eline("l8", "frederic", "Une histoire d'argent. La maison de nos parents. C'est bête.", "ewn ees-twahr dar-zhahN. lah meh-zohN duh noh pah-rahN. seh bet",
+          "It was about money. Our parents' house. It's silly.", "annoyed",
+          ["Une histoire d'argent. La maison de nos parents.", "Une histoire d'argent. La maison de nos parents. C'est idiot.", "C'est une histoire d'argent. La maison de nos parents. C'est bête.", "Une histoire d'argent, pour la maison de nos parents. C'est bête.", "Une histoire d'argent. La maison de nos parents. C'est stupide."]),
+        eline("l9", "rose", "Le plus beau cadeau de ma vie ? C'était une question.", "luh plew boh kah-doh duh mah vee. say-teh ewn kes-tyohN",
+          "The best present of my life? It was a question. (US: gift)", "moved",
+          ["Vous savez, le plus beau cadeau de ma vie ? C'était une question.", "Le plus beau cadeau de ma vie ? C'était une simple question.", "Mon plus beau cadeau ? C'était une question.", "Le plus beau cadeau de ma vie ? Une question."]),
+        eline("l10", "frederic", "Je voudrais l'appeler. J'aimerais lui dire pardon.", "zhuh voo-dreh lah-puh-lay. zhem-reh lwee deer par-dohN",
+          "I'd like to call him. I'd like to say sorry to him.", "hopeful",
+          ["Je voudrais l'appeler. Je voudrais lui dire pardon.", "J'aimerais l'appeler. J'aimerais lui dire pardon.", "Je voudrais l'appeler et lui dire pardon.", "Je voudrais appeler Marc. J'aimerais lui dire pardon.", "Je voudrais l'appeler. J'aimerais lui demander pardon."]),
+        eline("l11", "rose", "On pourrait commencer par un café, non ?", "ohN poo-reh koh-mahN-say par uhN kah-fay, nohN",
+          "We could start with a coffee, couldn't we?", "teasing",
+          ["On pourrait commencer par un café ?", "On pourrait d'abord commencer par un café, non ?", "On pourrait commencer par un petit café, non ?", "Vous pourriez commencer par un café, non ?", "On pourrait commencer par boire un café, non ?"]),
+        eline("l12", "frederic", "Merci, madame. Je paie : deux euros. Et… mon billet ?", "mair-see, mah-dahm. zhuh peh. duh‿zuh-roh. ay… mohN bee-yeh",
+          "Thank you. I'm paying: two euros. And… my note? (US: bill)", "relieved",
+          ["Merci. Je paie : deux euros. Et… mon billet ?", "Merci, madame. Je paie : 2 euros. Et… mon billet ?", "Merci, madame. Voilà deux euros. Et… mon billet ?", "Merci, madame. Je vous paie : deux euros. Et mon billet ?", "Merci, madame. Je paie deux euros. Et mon billet de cent euros ?"]),
+        eline("l13", "rose", "Reprenez votre billet. Il n'est pas à vendre, mon perroquet.", "ruh-pruh-nay voh-truh bee-yeh. eel neh pah ah vahN-druh, mohN peh-roh-keh",
+          "Take your note back. My parrot is not for sale. (US: bill)", "amused",
+          ["Reprenez-le. Il n'est pas à vendre, mon perroquet.", "Reprenez votre billet. Mon perroquet n'est pas à vendre.", "Gardez votre billet. Il n'est pas à vendre, mon perroquet.", "Tenez, votre billet. Il n'est pas à vendre, mon perroquet.", "Reprenez votre billet, monsieur. Il n'est pas à vendre, mon perroquet."])
+      ],
+      vocab: [
+        word("v1", "Je voudrais un café", "zhuh voo-dreh uhN kah-fay", "I'd like a coffee (polite)", "l1", "expression", "je-voudrais"),
+        word("v2", "cent euros", "sahN‿tuh-roh", "a hundred euros (t liaison: cent euros)", "l1", "table", "numbers-21-100"),
+        word("v3", "j'achète l'ardoise", "zhah-shet lar-dwahz", "I'll buy the slate (acheter: j'achète)", "l3", "verb", "acheter"),
+        word("v4", "coûte les yeux de la tête", "koot lay‿zyuh duh lah tet", "costs an arm and a leg (literally: the eyes of the head)", "l3", "expression", "couter-les-yeux-de-la-tete"),
+        word("v5", "Qui est-ce que vous aimeriez appeler", "kee es-kuh voo‿zeh-muh-ryay ah-puh-lay", "Who would you like to call (a wish: conditional)", "l5", "table", "conditionnel"),
+        word("v6", "Personne ne m'appelle", "pair-sun nuh mah-pel", "Nobody calls me (appeler: two l before a silent e)", "l6", "verb", "appeler"),
+        word("v7", "Je voudrais l'appeler", "zhuh voo-dreh lah-puh-lay", "I'd like to call him (vouloir, polite)", "l10", "verb", "vouloir"),
+        word("v8", "J'aimerais lui dire pardon", "zhem-reh lwee deer par-dohN", "I'd like to say sorry to him (aimer, a wish)", "l10", "verb", "aimer"),
+        word("v9", "On pourrait commencer", "ohN poo-reh koh-mahN-say", "We could start (pouvoir, a soft suggestion)", "l11", "verb", "pouvoir"),
+        word("v10", "Je paie", "zhuh peh", "I'm paying (payer)", "l12", "verb", "payer")
+      ],
+      questions: [
+        q("q1", "How much does Frédéric offer to skip the question?", "A hundred euros", ["Twenty euros", "Fifty euros", "Two hundred euros"], "en", "l1"),
+        q("q2", "Where does Frédéric's brother live?", "In Lyon", ["In Paris", "In Saint-Malo", "In Marseille"], "en", "l7"),
+        q("q3", "Why don't Frédéric and Marc phone each other?", "They quarrelled about money", ["Marc moved abroad", "They quarrelled about work", "Frédéric lost his number"], "en", "l8"),
+        q("q4", "What is Rose's question?", "Qui est-ce que vous aimeriez appeler ce soir ?", ["Qui est-ce que vous aimeriez voir ce soir ?", "Pourquoi vous voulez payer cent euros ?", "Qu'est-ce que vous aimeriez acheter ce soir ?"], "fr", "l5")
+      ],
+      notice: {
+        title: "Polite and wishing forms: je voudrais, j'aimerais, on pourrait",
+        text: "Frédéric orders with Je voudrais un café and later says J'aimerais lui dire pardon. Rose asks Qui est-ce que vous aimeriez appeler ? and suggests On pourrait commencer par un café. These conditional forms soften a request, state a wish or make a gentle suggestion; Je veux un café is much blunter.",
+        examples: [
+          eg("Je voudrais un café.", "zhuh voo-dreh uhN kah-fay", "I'd like a coffee. (polite)"),
+          eg("J'aimerais lui dire pardon.", "zhem-reh lwee deer par-dohN", "I'd like to say sorry to him. (a wish)"),
+          eg("Je veux un café.", "zhuh vuh uhN kah-fay", "I want a coffee. (blunt present)")
+        ],
+        table: "conditionnel"
+      },
+      proverb: {
+        fr: "L'argent ne fait pas le bonheur.",
+        respelling: "lar-zhahN nuh feh pah luh bu-nuhr",
+        literal: "Money doesn't make happiness.",
+        meaning: "Being rich doesn't make you happy.",
+        englishEquivalent: "Money can't buy happiness."
+      }
+    },
+    {
+      id: "cafe-17-like-father", number: 57, level: "B1", series: "le-cafe-des-questions", episode: 17, act: 4,
+      title: "Like father…", titleFr: "Tel père…",
+      recap: "Frédéric tried to pay a hundred euros to skip the question. Rose asked who he'd like to call: his brother Marc. Her best present was a question.",
+      summary: "Paul, the groom from March, is going to be a father, and he is afraid of becoming like his own.",
+      scene: "On a Friday in September Paul, the groom from March, comes back to Madame Rose's tiny Montmartre café. He is holding a small black-and-white scan picture: his wife Léa is expecting a baby in December. Rose puts the white cup on her side of the counter, and Socrate watches from his perch by the window.",
+      keywords: ["bébé", "bebe", "baby", "père", "pere", "father", "tel père tel fils", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "paul", name: "Paul", role: "father-to-be", initial: "P", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "paul", "Bonjour, madame Rose ! Vous vous souvenez de moi ? Le discours de trois phrases !", "bohN-zhoor, mah-dahm rohz. voo voo soo-vuh-nay duh mwah. luh dees-koor duh trwah frahz",
+          "Hello, Madame Rose! Do you remember me? The three-sentence speech!", "proud",
+          ["Bonjour, madame Rose ! Vous vous souvenez de moi ?", "Bonjour, madame Rose ! Vous vous souvenez de moi ? Le discours de 3 phrases !", "Bonjour, madame ! Vous vous souvenez de moi ? Le discours de trois phrases !", "Bonjour, madame Rose ! Vous vous souvenez de moi ? Le discours en trois phrases !", "Madame Rose ! Vous vous souvenez de moi ? Le discours de trois phrases !"]),
+        eline("l2", "rose", "Bien sûr ! Le discours le plus court de Paris. Et Léa, ça va ?", "byaN sewr. luh dees-koor luh plew koor duh pah-ree. ay lay-ah, sah vah",
+          "Of course! The shortest speech in Paris. And how's Léa?", "amused",
+          ["Bien sûr ! Le plus court discours de Paris. Et Léa, ça va ?", "Bien sûr ! Le discours le plus court de Paris. Et Léa, elle va bien ?", "Bien sûr ! Le discours le plus court de Paris. Et Léa ?", "Évidemment ! Le discours le plus court de Paris. Et Léa, ça va ?", "Bien sûr, monsieur Paul ! Le discours le plus court de Paris. Et Léa, ça va ?"]),
+        eline("l3", "paul", "Très bien. Regardez cette photo… Léa attend un bébé. Il va naître en décembre !", "treh byaN. ruh-gar-day set foh-toh… lay-ah ah-tahN uhN bay-bay. eel vah neh-truh ahN day-sahN-bruh",
+          "Very well. Look at this picture… Léa's expecting a baby. It's due in December!", "proud",
+          ["Très bien. Regardez… Léa attend un bébé. Il va naître en décembre !", "Très bien. Regardez cette photo. Léa est enceinte. Le bébé va naître en décembre !", "Très bien ! Regardez cette photo… Léa attend un bébé pour décembre !", "Très bien. Regardez cette photo… On attend un bébé. Il va naître en décembre !", "Très bien. Regardez cette photo… Léa attend un bébé. Il naît en décembre !"]),
+        eline("l4", "rose", "Un bébé ! C'est génial ! Félicitations, monsieur Paul !", "uhN bay-bay. seh zhay-nyahl. fay-lee-see-tah-syohN, muh-syuh pohl",
+          "A baby! That's brilliant! Congratulations, Paul!", "surprised",
+          ["Un bébé ! C'est génial ! Félicitations !", "Un bébé ! C'est génial ! Félicitations, Paul !", "Un bébé ! C'est merveilleux ! Félicitations, monsieur Paul !", "Oh, un bébé ! C'est génial ! Félicitations, monsieur Paul !", "Un bébé ! C'est formidable ! Félicitations, monsieur Paul !"]),
+        eline("l5", "paul", "Merci. Mais j'ai peur. Mon père n'était jamais là. Il travaillait tout le temps.", "mair-see. meh zhay puhr. mohN pair neh-teh zhah-meh lah. eel trah-vah-yeh too luh tahN",
+          "Thank you. But I'm scared. My father was never there. He worked all the time.", "worried",
+          ["Merci. Mais j'ai peur. Mon père n'était jamais là.", "Merci. Mais j'ai peur. Mon père n'était jamais à la maison. Il travaillait tout le temps.", "Merci. Mais j'ai un peu peur. Mon père n'était jamais là. Il travaillait tout le temps.", "Merci. Pourtant, j'ai peur. Mon père n'était jamais là. Il travaillait tout le temps.", "Merci. Mais j'ai peur. Mon père n'était jamais là, il travaillait toujours."]),
+        eline("l6", "paul", "Tel père, tel fils, non ?", "tel pair, tel fees, nohN",
+          "Like father, like son, right?", "sad",
+          ["Tel père, tel fils, n'est-ce pas ?", "Tel père, tel fils.", "On dit tel père, tel fils, non ?", "Tel père, tel fils, non ? C'est le proverbe."]),
+        eline("l7", "rose", "Quel père est-ce que vous aimeriez être ?", "kel pair es-kuh voo‿zeh-muh-ryay eh-truh",
+          "What kind of father would you like to be?", "curious",
+          ["Quel père aimeriez-vous être ?", "Vous aimeriez être quel père ?", "Quel père est-ce que vous voudriez être ?", "Et vous, quel père est-ce que vous aimeriez être ?", "Quel genre de père est-ce que vous aimeriez être ?"]),
+        eline("l8", "paul", "Le père que je voudrais être ? Un père qui est là.", "luh pair kuh zhuh voo-dreh eh-truh. uhN pair kee eh lah",
+          "The father I'd like to be? A father who's there.", "hopeful",
+          ["Le père que j'aimerais être ? Un père qui est là.", "Le père que je voudrais être ? Un père présent.", "Un père qui est là.", "Le père que je voudrais être ? Un père qui est toujours là.", "Je voudrais être un père qui est là."]),
+        eline("l9", "paul", "Qui joue. Qui pose des questions.", "kee zhoo. kee pohz day kes-tyohN",
+          "Who plays. Who asks questions.", "hopeful",
+          ["Qui joue avec son enfant. Qui pose des questions.", "Qui joue. Et qui pose des questions.", "Un père qui joue. Qui pose des questions.", "Qui joue, qui pose des questions, qui écoute."]),
+        eline("l10", "rose", "Mon père voulait une avocate. Il a eu une patronne de café.", "mohN pair voo-leh ewn ah-voh-kaht. eel ah ew ewn pah-trun duh kah-fay",
+          "My father wanted a lawyer for a daughter. He got a café owner.", "amused",
+          ["Mon père voulait une fille avocate. Il a eu une patronne de café.", "Mon père voulait une avocate. Et il a eu une patronne de café.", "Mon père rêvait d'une avocate. Il a eu une patronne de café.", "Moi, mon père voulait une avocate. Il a eu une patronne de café."]),
+        eline("l11", "rose", "Mais il venait chaque dimanche pour la tarte.", "meh eel vuh-neh shahk dee-mahNsh poor lah tart",
+          "But he came every Sunday for the tart.", "moved",
+          ["Mais il venait tous les dimanches pour la tarte.", "Mais il venait chaque dimanche manger la tarte.", "Mais chaque dimanche, il venait pour la tarte.", "Pourtant, il venait chaque dimanche pour la tarte."]),
+        eline("l12", "rose", "Alors, tel père, tel fils… c'est vous qui choisissez le père.", "ah-lor, tel pair, tel fees… seh voo kee shwah-zee-say luh pair",
+          "So, like father, like son… but you're the one who chooses the father.", "hopeful",
+          ["Alors, tel père, tel fils… C'est vous qui choisissez.", "Alors, tel père, tel fils… mais c'est vous qui choisissez le père.", "Tel père, tel fils… mais c'est vous qui choisissez le père.", "Alors, tel père, tel fils… et c'est vous qui choisissez le père.", "Alors, tel père, tel fils… le père, c'est vous qui le choisissez."]),
+        eline("l13", "paul", "J'aimerais l'appeler Rose… si c'est une fille.", "zhem-reh lah-puh-lay rohz… see seh‿tewn feey",
+          "I'd like to call her Rose… if it's a girl.", "moved",
+          ["Je voudrais l'appeler Rose… si c'est une fille.", "Si c'est une fille, j'aimerais l'appeler Rose.", "J'aimerais l'appeler Rose… si c'est une petite fille.", "Si c'est une fille, on aimerait l'appeler Rose."]),
+        eline("l14", "rose", "Regardez Socrate, il vous tourne le dos ! Socrate voudrait Socrate.", "ruh-gar-day soh-krat, eel voo toorn luh doh. soh-krat voo-dreh soh-krat",
+          "Look at Socrate, he's turning his back on you! Socrate would rather it was called Socrate.", "amused",
+          ["Regardez Socrate, il vous tourne le dos !", "Regardez, Socrate vous tourne le dos ! Socrate voudrait Socrate.", "Socrate vous tourne le dos ! Il voudrait Socrate.", "Regardez Socrate, il vous tourne le dos ! Lui, il voudrait Socrate."])
+      ],
+      vocab: [
+        word("v1", "Vous vous souvenez de moi", "voo voo soo-vuh-nay duh mwah", "Do you remember me? (se souvenir de)", "l1", "verb", "se-souvenir"),
+        word("v2", "Il va naître", "eel vah neh-truh", "It's going to be born (naître, near future)", "l3", "verb", "naitre"),
+        word("v3", "en décembre", "ahN day-sahN-bruh", "in December (en + month)", "l3", "table", "months"),
+        word("v4", "C'est génial", "seh zhay-nyahl", "That's brilliant", "l4", "expression", "cest-genial"),
+        word("v5", "Il travaillait tout le temps", "eel trah-vah-yeh too luh tahN", "He worked all the time (imparfait: a habit)", "l5", "verb", "travailler"),
+        word("v6", "Quel père est-ce que vous aimeriez être", "kel pair es-kuh voo‿zeh-muh-ryay eh-truh", "What kind of father would you like to be (a wish)", "l7", "table", "conditionnel"),
+        word("v7", "Le père que je voudrais être", "luh pair kuh zhuh voo-dreh eh-truh", "The father I'd like to be (que: not the subject)", "l8", "table", "relative-pronouns"),
+        word("v8", "Un père qui est là", "uhN pair kee eh lah", "A father who's there (qui: the subject)", "l8", "table", "relative-pronouns"),
+        word("v9", "c'est vous qui choisissez", "seh voo kee shwah-zee-say", "you're the one who chooses (choisir)", "l12", "verb", "choisir")
+      ],
+      questions: [
+        q("q1", "What is Paul's news?", "Léa is expecting a baby", ["Léa has a new job", "They are moving to Lyon", "Paul has a new school"], "en", "l3"),
+        q("q2", "When is the baby due?", "In December", ["In September", "In March", "In October"], "en", "l3"),
+        q("q3", "Why is Paul afraid?", "His father was never there", ["His father was very strict", "He works too much at school", "He thinks he is too young"], "en", "l5"),
+        q("q4", "What father would Paul like to be?", "Un père qui est là.", ["Un père qui travaille beaucoup.", "Un père très sévère.", "Un père comme le sien."], "fr", "l8")
+      ],
+      notice: {
+        title: "Qui and que: un père qui est là",
+        text: "Paul says Le père que je voudrais être ? Un père qui est là. Qui is the subject of its clause (the father is there), so a verb follows it directly; que is used when the clause already has its own subject, here je. Rose uses qui too: c'est vous qui choisissez le père.",
+        examples: [
+          eg("Un père qui est là.", "uhN pair kee eh lah", "A father who's there. (qui = subject)"),
+          eg("Le père que je voudrais être.", "luh pair kuh zhuh voo-dreh eh-truh", "The father I'd like to be. (que + je)")
+        ],
+        table: "relative-pronouns"
+      },
+      proverb: {
+        fr: "Tel père, tel fils.",
+        respelling: "tel pair, tel fees",
+        literal: "Such father, such son.",
+        meaning: "Children often grow up like their parents.",
+        englishEquivalent: "Like father, like son."
+      }
+    },
+    {
+      id: "cafe-18-rose-s-story", number: 58, level: "B1", series: "le-cafe-des-questions", episode: 18, act: 4,
+      title: "Rose's story", titleFr: "L'histoire de Rose",
+      recap: "Paul is going to be a father and feared being like his own. Rose said her father wanted a lawyer but came every Sunday for the tart.",
+      summary: "At closing time Hugo dusts forty postcards from Saint-Malo, and Rose finally tells him why she kept the rule.",
+      scene: "On Friday at six, closing time, the chairs are up on the three little tables of Madame Rose's Montmartre café. Hugo, her great-nephew, has taken down the postcards to dust them: forty cards of the sea, all signed O. Rose sits down with her blue cup, and Socrate sleeps on the counter.",
+      keywords: ["odette", "histoire de rose", "rose's story", "cartes postales", "postcards", "saint-malo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "hugo", name: "Hugo", role: "Rose's great-nephew", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "hugo", "Quarante cartes, Tata. Et toujours la même question ?", "kah-rahNt kart, tah-tah. ay too-zhoor lah mem kes-tyohN",
+          "Forty cards, Auntie. And always the same question?", "curious",
+          ["Quarante cartes, Tata. Toujours la même question ?", "Quarante cartes, Tata ! Et c'est toujours la même question ?", "40 cartes, Tata. Et toujours la même question ?", "Tata, quarante cartes. Et toujours la même question ?"]),
+        eline("l2", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "C'est moi qui pose les questions, ici.", "Ici, les questions, c'est moi."]),
+        eline("l3", "hugo", "Il n'y a pas de clients. C'est fermé.", "eel nyah pah duh klee-yahN. seh fair-may",
+          "There are no customers. We're closed.", "teasing",
+          ["Il n'y a pas de clients. Le café est fermé.", "Pas de clients. C'est fermé.", "Il n'y a personne. C'est fermé.", "Il n'y a pas de clients, Tata. C'est fermé."]),
+        eline("l4", "rose", "Bon. Assieds-toi. Tu sais pourquoi j'ai gardé cette règle ?", "bohN. ah-syay twah. tew seh poor-kwah zhay gar-day set reh-gluh",
+          "Right. Sit down. Do you know why I kept this rule?", "curious",
+          ["Bon. Assieds-toi. Tu sais pourquoi j'ai gardé la règle ?", "Bon. Assieds-toi. Est-ce que tu sais pourquoi j'ai gardé cette règle ?", "Bon. Assieds-toi. Tu sais pourquoi je garde cette règle ?", "Bon. Viens, assieds-toi. Tu sais pourquoi j'ai gardé cette règle ?"]),
+        eline("l5", "hugo", "Non. Tu n'en dis jamais rien.", "nohN. tew nahN dee zhah-meh ryaN",
+          "No. You never say anything about it.", "curious",
+          ["Non. Tu ne dis jamais rien.", "Non. Tu n'en dis jamais rien, Tata.", "Non. Tu ne racontes jamais rien.", "Non. Tu ne m'en dis jamais rien."]),
+        eline("l6", "rose", "À vingt-deux ans, j'étais étudiante en droit. Je courais partout.", "ah vaNt-duh‿zahN, zhay-teh ay-tew-dyahNt ahN drwah. zhuh koo-reh par-too",
+          "At twenty-two, I was a law student. I ran everywhere.", "neutral",
+          ["À vingt-deux ans, j'étais étudiante en droit. Je courais tout le temps.", "À 22 ans, j'étais étudiante en droit. Je courais partout.", "À vingt-deux ans, j'étudiais le droit. Je courais partout.", "J'avais vingt-deux ans, j'étais étudiante en droit. Je courais partout."]),
+        eline("l7", "rose", "Un matin, Odette m'a demandé : « Pourquoi vous courez ? »", "uhN mah-taN, oh-det mah duh-mahN-day. poor-kwah voo koo-ray",
+          "One morning, Odette asked me: 'Why are you running?'", "moved",
+          ["Un matin, Odette m'a demandé : « Pourquoi est-ce que vous courez ? »", "Un matin, Odette m'a posé une question : « Pourquoi vous courez ? »", "Un jour, Odette m'a demandé : « Pourquoi vous courez ? »", "Un matin, Odette m'a demandé pourquoi je courais."]),
+        eline("l8", "rose", "Je lui ai répondu : « Parce que je suis en retard. » — « En retard pour quoi ? »", "zhuh lwee ay ray-pohN-dew. pars kuh zhuh swee‿zahN ruh-tar. ahN ruh-tar poor kwah",
+          "I answered: 'Because I'm late.' And she said: 'Late for what?'", "amused",
+          ["Je lui ai répondu : « Parce que je suis en retard. » Et elle : « En retard pour quoi ? »", "J'ai répondu : « Parce que je suis en retard. » — « En retard pour quoi ? »", "Je lui ai dit : « Parce que je suis en retard. » — « En retard pour quoi ? »", "Je lui ai répondu : « Je suis en retard. » — « En retard pour quoi ? »"]),
+        eline("l9", "rose", "Je n'avais pas de réponse. Je me suis assise. Je suis restée une heure.", "zhuh nah-veh pah duh ray-pohNs. zhuh muh swee ah-seez. zhuh swee res-tay ewn uhr",
+          "I had no answer. I sat down. I stayed an hour.", "moved",
+          ["Je n'avais pas de réponse. Alors je me suis assise. Je suis restée une heure.", "Je n'avais pas de réponse. Je me suis assise et je suis restée une heure.", "Je n'avais aucune réponse. Je me suis assise. Je suis restée une heure."]),
+        eline("l10", "rose", "J'ai quitté le droit. En quatre-vingt-six, elle m'a laissé le café, la tarte et Socrate.", "zhay kee-tay luh drwah. ahN kah-truh-vaN-sees, el mah leh-say luh kah-fay, lah tart ay soh-krat",
+          "I gave up law. In '86 she left me the café, the tart and Socrate.", "proud",
+          ["J'ai quitté le droit. En 1986, elle m'a laissé le café, la tarte et Socrate.", "J'ai arrêté le droit. En quatre-vingt-six, elle m'a laissé le café, la tarte et Socrate.", "J'ai quitté la fac de droit. En quatre-vingt-six, elle m'a laissé le café, la tarte et Socrate.", "J'ai quitté le droit. En mille neuf cent quatre-vingt-six, elle m'a laissé le café, la tarte et Socrate.", "J'ai quitté le droit. En quatre-vingt-six, elle m'a donné le café, la tarte et Socrate."]),
+        eline("l11", "rose", "« Il aime le café, pas la mer. » Rien ne sert de courir… tu connais la suite ?", "eel em luh kah-fay, pah lah mair. ryaN nuh sair duh koo-reer… tew koh-neh lah sweet",
+          "'He loves the café, not the sea,' she said. There's no point running… do you know the rest?", "amused",
+          ["Rien ne sert de courir… tu connais la suite ?", "« Il aime le café, pas la mer. » Rien ne sert de courir… tu connais la fin ?", "« Il aime le café, pas la mer. » Rien ne sert de courir… tu sais la suite ?", "« Il aime le café, pas la mer », disait-elle. Rien ne sert de courir… tu connais la suite ?", "« Il aime le café, pas la mer. » Rien ne sert de courir… Et la suite, tu la connais ?"]),
+        eline("l12", "hugo", "Il faut partir à point. Mais pourquoi tu n'y es jamais allée, à Saint-Malo ?", "eel foh par-teer ah pwaN. meh poor-kwah tew nee eh zhah-meh ah-lay, ah saN-mah-loh",
+          "You have to set off at the right time. But why have you never been there, to Saint-Malo?", "curious",
+          ["Il faut partir à point. Mais pourquoi tu n'es jamais allée à Saint-Malo ?", "Il faut partir à point. Mais pourquoi est-ce que tu n'y es jamais allée, à Saint-Malo ?", "Il faut partir à point. Mais toi, pourquoi tu n'y es jamais allée, à Saint-Malo ?", "Il faut partir à point. Mais Saint-Malo, pourquoi tu n'y es jamais allée ?"]),
+        eline("l13", "rose", "Je… Le café ne peut pas attendre.", "zhuh… luh kah-fay nuh puh pah ah-tahN-druh",
+          "I… The café can't wait.", "surprised",
+          ["Je… Le café ne peut pas attendre, mon grand.", "Le café ne peut pas attendre.", "Je… Mais le café ne peut pas attendre.", "Eh bien… Le café ne peut pas attendre."]),
+        eline("l14", "hugo", "Un café, ça réveille. Une question, ça réveille plus.", "uhN kah-fay, sah ray-vehy. ewn kes-tyohN, sah ray-vehy plews",
+          "A coffee wakes you up. A question wakes you up more.", "proud",
+          ["Un café, ça réveille. Mais une question, ça réveille plus.", "Un café, ça réveille. Une question, ça réveille encore plus.", "Un café, ça réveille, Tata. Une question, ça réveille plus.", "Un café, ça réveille. Une question, ça réveille davantage."])
+      ],
+      vocab: [
+        word("v1", "Tu n'en dis jamais rien", "tew nahN dee zhah-meh ryaN", "You never say anything about it (en = about it)", "l5", "table", "y-and-en"),
+        word("v2", "j'étais étudiante en droit", "zhay-teh ay-tew-dyahNt ahN drwah", "I was a law student (imparfait: description)", "l6", "table", "imparfait"),
+        word("v3", "Je courais partout", "zhuh koo-reh par-too", "I ran everywhere (courir, imparfait: a habit)", "l6", "verb", "courir"),
+        word("v4", "Parce que je suis en retard", "pars kuh zhuh swee‿zahN ruh-tar", "Because I'm late", "l8", "expression", "je-suis-en-retard"),
+        word("v5", "Je me suis assise", "zhuh muh swee ah-seez", "I sat down (s'asseoir; assise: Rose is a woman)", "l9", "verb", "s-asseoir"),
+        word("v6", "Je suis restée une heure", "zhuh swee res-tay ewn uhr", "I stayed an hour (rester takes être)", "l9", "verb", "rester"),
+        word("v7", "J'ai quitté le droit", "zhay kee-tay luh drwah", "I gave up law (quitter: to leave a place, a job, studies)", "l10", "verb", "quitter"),
+        word("v8", "elle m'a laissé le café", "el mah leh-say luh kah-fay", "she left me the café (laisser: to leave something to someone)", "l10", "verb", "laisser"),
+        word("v9", "tu n'y es jamais allée", "tew nee eh zhah-meh ah-lay", "you've never been there (y = to Saint-Malo)", "l12", "table", "y-and-en")
+      ],
+      questions: [
+        q("q1", "What was Rose at twenty-two?", "A law student", ["A medical student", "A waitress at Odette's", "A primary-school teacher"], "en", "l6"),
+        q("q2", "What did Rose do after Odette's question?", "She sat down and stayed an hour", ["She ran to her lecture", "She paid and left at once", "She phoned her father"], "en", "l9"),
+        q("q3", "In which year did Odette leave Rose the café?", "1986", ["1978", "1962", "1975"], "en", "l10"),
+        q("q4", "What was Odette's question?", "Pourquoi vous courez ?", ["Pourquoi vous êtes en retard ?", "Où est-ce que vous allez ?", "Qu'est-ce que vous aimez ?"], "fr", "l7")
+      ],
+      notice: {
+        title: "En and y: tu n'en dis rien, tu n'y es jamais allée",
+        text: "Hugo says Tu n'en dis jamais rien: en stands for 'about it' (de cette histoire). Then he asks Pourquoi tu n'y es jamais allée, à Saint-Malo ?: y stands for 'there' (à Saint-Malo), and both go before the verb. Notice too that in 1978 Odette said vous to Rose (Pourquoi vous courez ?), a customer she didn't know yet; today her cards say tu.",
+        examples: [
+          eg("Tu n'en dis jamais rien.", "tew nahN dee zhah-meh ryaN", "You never say anything about it. (en = about it)"),
+          eg("Tu n'y es jamais allée.", "tew nee eh zhah-meh ah-lay", "You've never been there. (y = to Saint-Malo)"),
+          eg("Pourquoi vous courez ?", "poor-kwah voo koo-ray", "Why are you running? (1978: vous, to a customer)")
+        ],
+        table: "y-and-en"
+      },
+      proverb: {
+        fr: "Rien ne sert de courir ; il faut partir à point.",
+        respelling: "ryaN nuh sair duh koo-reer, eel foh par-teer ah pwaN",
+        literal: "Running is no use; you must set off at the right time.",
+        meaning: "Rushing doesn't help; start calmly, at the right moment.",
+        englishEquivalent: "Slow and steady wins the race."
+      }
+    },
+    {
+      id: "cafe-19-why-are-you-running", number: 59, level: "B1", series: "le-cafe-des-questions", episode: 19, act: 4,
+      title: "Why are you running?", titleFr: "Pourquoi tu cours ?",
+      recap: "At closing time Rose told Hugo her story: Odette's question in 1978, leaving law, the café in 1986. But why has she never gone to Saint-Malo?",
+      summary: "Hugo runs in late after a night of law revision, and Rose asks him the question Odette once asked her.",
+      scene: "On Saturday at a quarter past eight Hugo runs into the café with a law textbook under his arm: he revised all night for Monday's exam. Madame Rose is waiting at the counter with her blue cup and a white one. She pours his coffee and keeps it on her side. Later she takes a card from the drawer under the till.",
+      keywords: ["pâtissier", "patissier", "pastry chef", "pourquoi tu cours", "running", "recette", "recipe", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
+        { id: "hugo", name: "Hugo", role: "Rose's great-nephew", initial: "H", side: "end", voice: "qwen3-fr-m-bf16", gender: "male" }
+      ],
+      lines: [
+        eline("l1", "rose", "Huit heures et quart, mon grand.", "wee‿tuhr ay kar, mohN grahN",
+          "A quarter past eight, my boy.", "teasing",
+          ["8 heures et quart, mon grand.", "Huit heures quinze, mon grand.", "Il est huit heures et quart, mon grand.", "Huit heures et quart, Hugo."]),
+        eline("l2", "hugo", "J'arrive ! Pardon, Tata ! Je suis en retard !", "zhah-reev. par-dohN, tah-tah. zhuh swee‿zahN ruh-tar",
+          "Coming! Sorry, Auntie! I'm late!", "worried",
+          ["J'arrive ! Pardon ! Je suis en retard !", "J'arrive ! Désolé, Tata ! Je suis en retard !", "J'arrive, j'arrive ! Pardon, Tata ! Je suis en retard !", "Pardon, Tata ! Je suis en retard !", "J'arrive ! Excuse-moi, Tata ! Je suis en retard !"]),
+        eline("l3", "rose", "Pourquoi tu cours ?", "poor-kwah tew koor",
+          "Why are you running?", "curious",
+          ["Pourquoi est-ce que tu cours ?", "Tu cours pourquoi ?", "Mais pourquoi tu cours ?", "Pourquoi tu cours, mon grand ?"]),
+        eline("l4", "hugo", "Parce que je suis en retard.", "pars kuh zhuh swee‿zahN ruh-tar",
+          "Because I'm late.", "neutral",
+          ["Parce que je suis en retard, Tata.", "Je suis en retard.", "Eh bien, parce que je suis en retard.", "Parce que je suis très en retard."]),
+        eline("l5", "rose", "En retard pour quoi ?", "ahN ruh-tar poor kwah",
+          "Late for what?", "neutral",
+          ["En retard pour quoi, mon grand ?", "Tu es en retard pour quoi ?", "Et en retard pour quoi ?", "Mais en retard pour quoi ?"]),
+        eline("l6", "hugo", "Parce que… le droit, c'est bien ?", "pars kuh… luh drwah, seh byaN",
+          "Because… law is good?", "amused",
+          ["Parce que… le droit, c'est bien, non ?", "Parce que… le droit, c'est important ?", "Euh… le droit, c'est bien ?", "Parce que… c'est bien, le droit ?"]),
+        eline("l7", "rose", "Regarde Socrate. Il te tourne le dos.", "ruh-gard soh-krat. eel tuh toorn luh doh",
+          "Look at Socrate. He's turning his back on you.", "teasing",
+          ["Regarde, Socrate te tourne le dos.", "Regarde Socrate. Il n'est pas d'accord.", "Regarde Socrate. Il te tourne le dos, lui.", "Tu vois Socrate ? Il te tourne le dos."]),
+        eline("l8", "hugo", "Attends… Tu m'as posé la question d'Odette.", "ah-tahN… tew mah poh-zay lah kes-tyohN doh-det",
+          "Wait… You've just asked me Odette's question.", "surprised",
+          ["Attends… C'est la question d'Odette !", "Attends… Tu viens de me poser la question d'Odette.", "Attends… Tu m'as posé la même question qu'Odette.", "Attends, Tata… Tu m'as posé la question d'Odette."]),
+        eline("l9", "hugo", "J'aimerais être pâtissier. Je voudrais faire un CAP. Mais mes parents…", "zhem-reh eh-truh pah-tee-syay. zhuh voo-dreh fair uhN say-ah-pay. meh may pah-rahN…",
+          "I'd like to be a pastry chef. I'd like to do a CAP (a vocational diploma). But my parents…", "sad",
+          ["J'aimerais être pâtissier. Je voudrais faire un CAP pâtissier. Mais mes parents…", "Je voudrais être pâtissier. J'aimerais faire un CAP. Mais mes parents…", "J'aimerais devenir pâtissier. Je voudrais faire un CAP. Mais mes parents…", "J'aimerais être pâtissier. Je voudrais faire un CAP. Mais mes parents, eux…"]),
+        eline("l10", "rose", "C'est ta vie, mon grand. Et c'est une bonne idée.", "seh tah vee, mohN grahN. ay seh‿tewn bun ee-day",
+          "It's your life, my boy. And it's a good idea.", "hopeful",
+          ["C'est ta vie, mon grand. C'est une bonne idée.", "C'est ta vie, Hugo. Et c'est une bonne idée.", "C'est ta vie, mon grand. Et c'est une très bonne idée.", "C'est ta vie. Et c'est une bonne idée."]),
+        eline("l11", "hugo", "Tu as raison. Je vais le dire à mes parents. Ce soir.", "tew ah reh-zohN. zhuh veh luh deer ah may pah-rahN. suh swahr",
+          "You're right. I'm going to tell my parents. Tonight.", "proud",
+          ["Tu as raison. Je vais le dire à mes parents.", "Tu as raison. Ce soir, je vais le dire à mes parents.", "Tu as raison. Je le dis à mes parents. Ce soir.", "Tu as raison, Tata. Je vais le dire à mes parents. Ce soir.", "Tu as raison. Je vais l'annoncer à mes parents. Ce soir."]),
+        eline("l12", "rose", "Voilà la recette d'Odette. Elle est à toi, maintenant.", "vwah-lah lah ruh-set doh-det. el eh ah twah, maNt-nahN",
+          "Here's Odette's recipe. It's yours now.", "moved",
+          ["Voilà la recette d'Odette. Elle est à toi.", "Voilà la recette d'Odette. Maintenant, elle est à toi.", "Tiens, la recette d'Odette. Elle est à toi, maintenant.", "Voici la recette d'Odette. Elle est à toi, maintenant."]),
+        eline("l13", "hugo", "Merci, Tata. Et… mon café ?", "mair-see, tah-tah. ay… mohN kah-fay",
+          "Thanks, Auntie. And… my coffee?", "amused",
+          ["Merci, Tata. Et… et mon café ?", "Merci beaucoup, Tata. Et… mon café ?", "Merci, Tata. Et… je peux avoir mon café ?", "Merci. Et… mon café ?"])
+      ],
+      vocab: [
+        word("v1", "Huit heures et quart", "wee‿tuhr ay kar", "A quarter past eight (t liaison after huit; none after et)", "l1", "table", "telling-time"),
+        word("v2", "J'arrive", "zhah-reev", "Coming! / I'm on my way", "l2", "expression", "jarrive"),
+        word("v3", "Je suis en retard", "zhuh swee‿zahN ruh-tar", "I'm late", "l2", "expression", "je-suis-en-retard"),
+        word("v4", "Pourquoi tu cours", "poor-kwah tew koor", "Why are you running? (courir: tu cours)", "l3", "verb", "courir"),
+        word("v5", "J'aimerais être pâtissier", "zhem-reh eh-truh pah-tee-syay", "I'd like to be a pastry chef (a wish; no article before the job)", "l9", "verb", "aimer"),
+        word("v6", "Je voudrais faire un CAP", "zhuh voo-dreh fair uhN say-ah-pay", "I'd like to do a CAP (a vocational diploma)", "l9", "verb", "vouloir"),
+        word("v7", "C'est ta vie", "seh tah vee", "It's your life (c'est + ta + noun)", "l10", "table", "cest-vs-il-est"),
+        word("v8", "Je vais le dire à mes parents", "zhuh veh luh deer ah may pah-rahN", "I'm going to tell my parents (dire, near future)", "l11", "verb", "dire"),
+        word("v9", "Elle est à toi", "el eh ah twah", "It's yours (à toi: stressed pronoun)", "l12", "table", "stressed-pronouns")
+      ],
+      questions: [
+        q("q1", "What time does Hugo arrive?", "At a quarter past eight", ["At eight o'clock", "At half past eight", "At a quarter to nine"], "en", "l1"),
+        q("q2", "What does Socrate do when Hugo says law is good?", "He turns his back on Hugo", ["He whistles", "He steals a sugar cube", "He fluffs up his feathers"], "en", "l7"),
+        q("q3", "What would Hugo like to be?", "A pastry chef", ["A lawyer", "A teacher", "A painter"], "en", "l9"),
+        q("q4", "What does Rose give Hugo?", "La recette d'Odette.", ["La tasse bleue d'Odette.", "Une carte de Saint-Malo.", "La clé du café."], "fr", "l12")
+      ],
+      notice: {
+        title: "C'est ta vie, but il est pâtissier",
+        text: "Rose says C'est ta vie and C'est une bonne idée: c'est comes before a determiner (ta, une) and a noun. For a job after être, French uses no article: Hugo says J'aimerais être pâtissier, and you say Il est pâtissier or Il est étudiant.",
+        examples: [
+          eg("C'est ta vie.", "seh tah vee", "It's your life. (c'est + ta + noun)"),
+          eg("Il est pâtissier.", "eel eh pah-tee-syay", "He's a pastry chef. (il est + job, no article)"),
+          eg("Il est étudiant.", "eel eh ay-tew-dyahN", "He's a student. (no article)")
+        ],
+        table: "cest-vs-il-est"
+      },
+      proverb: {
+        fr: "Vouloir, c'est pouvoir.",
+        respelling: "voo-lwahr, seh poo-vwahr",
+        literal: "To want is to be able.",
+        meaning: "If you really want something, you find a way.",
+        englishEquivalent: "Where there's a will, there's a way."
+      }
+    },
+    {
+      id: "cafe-20-the-question-for-rose", number: 60, level: "B1", series: "le-cafe-des-questions", episode: 20, act: 4,
+      title: "The question for Rose", titleFr: "La question pour Rose",
+      recap: "Rose asked Hugo Odette's question, Pourquoi tu cours ? He chose pastry school over law, and Rose gave him Odette's recipe card.",
+      summary: "Thomas, the man in a hurry from the first episode, comes back calm and asks Rose the question nobody asks her.",
+      scene: "On Saturday 17 October Thomas, the man in a hurry from the first episode, walks slowly into Madame Rose's Montmartre café, with no phone. Hugo, silent behind the counter, has told him Rose's story, and Thomas pushes the white cup across to Rose's side. When Thomas says that Socrate likes travelling, the grey parrot whistles for the first time in years: his yes to Saint-Malo. At the end Rose picks up the chalk and writes two sentences on the slate, under Odette's rule.",
+      keywords: ["saint-malo", "la mer", "the sea", "odette", "ardoise", "slate", "voyage", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
+      speakers: [
+        { id: "thomas", name: "Thomas", role: "regular", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
+        { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "end", voice: "qwen3-fr-bf16", gender: "female" }
+      ],
+      lines: [
+        eline("l1", "thomas", "Bonjour, madame Rose. Aujourd'hui, c'est moi qui pose la question.", "bohN-zhoor, mah-dahm rohz. oh-zhoor-dwee, seh mwah kee pohz lah kes-tyohN",
+          "Good morning, Madame Rose. Today, I'm the one asking the question.", "proud",
+          ["Bonjour, madame Rose. Aujourd'hui, la question, c'est moi qui la pose.", "Bonjour, madame Rose. Aujourd'hui, c'est moi qui pose une question.", "Bonjour, madame. Aujourd'hui, c'est moi qui pose la question.", "Aujourd'hui, c'est moi qui pose la question."]),
+        eline("l2", "rose", "Ici, c'est moi qui pose les questions.", "ee-see, seh mwah kee pohz lay kes-tyohN",
+          "Here, I'm the one who asks the questions.", "teasing",
+          ["Ici, c'est moi qui pose la question.", "C'est moi qui pose les questions, ici.", "Ici, les questions, c'est moi.", "Ici, c'est moi qui pose les questions, monsieur."]),
+        eline("l3", "thomas", "Pas aujourd'hui.", "pah oh-zhoor-dwee",
+          "Not today.", "teasing",
+          ["Pas aujourd'hui, madame Rose.", "Non, pas aujourd'hui.", "Aujourd'hui, non.", "Pas aujourd'hui, madame."]),
+        eline("l4", "rose", "Vous marchez, maintenant ?", "voo mar-shay, maNt-nahN",
+          "So you walk now?", "teasing",
+          ["Maintenant, vous marchez ?", "Alors, vous marchez, maintenant ?", "Vous ne courez plus ?", "Vous marchez, à présent ?"]),
+        eline("l5", "thomas", "Je marche. Chaque chose en son temps. Et vous, madame Rose, qu'est-ce que vous aimeriez ?", "zhuh marsh. shahk shohz ahN sohN tahN. ay voo, mah-dahm rohz, kes-kuh voo‿zeh-muh-ryay",
+          "I walk. All in good time. And you, Madame Rose, what would you like?", "curious",
+          ["Je marche. Chaque chose en son temps. Et vous, qu'est-ce que vous aimeriez ?", "Je marche. Chaque chose en son temps. Et vous, madame Rose, qu'aimeriez-vous ?", "Oui, je marche. Chaque chose en son temps. Et vous, madame Rose, qu'est-ce que vous aimeriez ?", "Je marche. Chaque chose en son temps. Et vous, madame Rose, qu'est-ce que vous voudriez ?", "Et vous, madame Rose, qu'est-ce que vous aimeriez ?"]),
+        eline("l6", "rose", "Moi ? Personne ne me pose jamais la question.", "mwah. pair-sun nuh muh pohz zhah-meh lah kes-tyohN",
+          "Me? Nobody ever asks me that.", "surprised",
+          ["Moi ? Personne ne me pose jamais cette question.", "Moi ? On ne me pose jamais la question.", "Moi ? Personne ne me demande jamais ça.", "Moi ? Mais personne ne me pose jamais la question."]),
+        eline("l7", "rose", "J'aimerais revoir Odette. Lui dire merci. Et voir la mer.", "zhem-reh ruh-vwahr oh-det. lwee deer mair-see. ay vwahr lah mair",
+          "I'd like to see Odette again. To say thank you. And to see the sea.", "moved",
+          ["J'aimerais revoir Odette. Lui dire merci. Et puis voir la mer.", "Je voudrais revoir Odette. Lui dire merci. Et voir la mer.", "J'aimerais revoir Odette et lui dire merci. Et voir la mer.", "J'aimerais revoir Odette. La remercier. Et voir la mer."]),
+        eline("l8", "thomas", "Saint-Malo, c'est à deux heures et demie de train.", "saN-mah-loh, seh ah duh‿zuhr ay duh-mee duh traN",
+          "Saint-Malo is two and a half hours by train.", "neutral",
+          ["Saint-Malo, c'est à 2 heures et demie de train.", "Saint-Malo est à deux heures et demie de train.", "Saint-Malo ? C'est à deux heures et demie en train.", "Saint-Malo, c'est seulement à deux heures et demie de train."]),
+        eline("l9", "rose", "Et le café ? Et Socrate ?", "ay luh kah-fay. ay soh-krat",
+          "And the café? And Socrate?", "worried",
+          ["Et le café ? Et mon perroquet ?", "Mais le café ? Et Socrate ?", "Et le café, alors ? Et Socrate ?", "Et qui garde le café ? Et Socrate ?"]),
+        eline("l10", "thomas", "Hugo est là. Et Socrate aime les voyages, non ?", "ew-goh eh lah. ay soh-krat em lay vwah-yahzh, nohN",
+          "Hugo's here. And Socrate likes travelling, doesn't he? (US: traveling)", "amused",
+          ["Hugo est là. Et Socrate adore les voyages, non ?", "Il y a Hugo. Et Socrate aime les voyages, non ?", "Hugo est là, madame Rose. Et Socrate aime les voyages, non ?", "Hugo est là. Et Socrate aime bien les voyages, non ?"]),
+        eline("l11", "rose", "Il a sifflé ! Il ne siffle jamais !", "eel ah see-flay. eel nuh seefl zhah-meh",
+          "He whistled! He never whistles!", "surprised",
+          ["Il a sifflé ! Mais il ne siffle jamais !", "Socrate a sifflé ! Il ne siffle jamais !", "Il a sifflé ! Il ne siffle jamais, d'habitude !", "Vous avez entendu ? Il a sifflé ! Il ne siffle jamais !"]),
+        eline("l12", "rose", "On pourrait partir lundi… À quelle heure part le train ?", "ohN poo-reh par-teer luhN-dee… ah kel uhr par luh traN",
+          "We could leave on Monday… What time does the train leave?", "hopeful",
+          ["On pourrait partir lundi… Le train part à quelle heure ?", "On pourrait partir lundi. À quelle heure est le train ?", "Je pourrais partir lundi… À quelle heure part le train ?", "On pourrait partir lundi… Il part à quelle heure, le train ?"]),
+        eline("l13", "thomas", "À huit heures.", "ah wee‿tuhr",
+          "At eight o'clock.", "neutral",
+          ["À 8 heures.", "Il part à huit heures.", "Le train part à huit heures.", "À huit heures du matin."]),
+        eline("l14", "rose", "Lundi, c'est Hugo. Je vais répondre à une question. Votre café. Aujourd'hui, sans question.", "luhN-dee, seh ew-goh. zhuh veh ray-pohN-druh ah ewn kes-tyohN. voh-truh kah-fay. oh-zhoor-dwee, sahN kes-tyohN",
+          "On Monday, Hugo's in charge. I'm going to answer a question. Your coffee. Today, no question.", "amused",
+          ["Lundi, c'est Hugo. Je vais répondre à une question. Votre café. Aujourd'hui, pas de question.", "Lundi, c'est Hugo. Je vais répondre à une question. Voilà votre café. Aujourd'hui, sans question.", "Lundi, c'est Hugo. Moi, je vais répondre à une question. Votre café. Aujourd'hui, sans question.", "Lundi, c'est Hugo. Je vais répondre à une question. Votre café, monsieur. Aujourd'hui, sans question."])
+      ],
+      vocab: [
+        word("v1", "c'est moi qui pose la question", "seh mwah kee pohz lah kes-tyohN", "I'm the one asking the question (poser une question)", "l1", "verb", "poser"),
+        word("v2", "Vous marchez", "voo mar-shay", "You walk (marcher)", "l4", "verb", "marcher"),
+        word("v3", "qu'est-ce que vous aimeriez", "kes-kuh voo‿zeh-muh-ryay", "what would you like (a wish: conditional)", "l5", "table", "conditionnel"),
+        word("v4", "J'aimerais revoir Odette", "zhem-reh ruh-vwahr oh-det", "I'd like to see Odette again (aimer, a wish)", "l7", "verb", "aimer"),
+        word("v5", "voir la mer", "vwahr lah mair", "to see the sea (voir)", "l7", "verb", "voir"),
+        word("v6", "deux heures et demie", "duh‿zuhr ay duh-mee", "two and a half hours (z liaison after deux)", "l8", "table", "numbers-0-20"),
+        word("v7", "On pourrait partir lundi", "ohN poo-reh par-teer luhN-dee", "We could leave on Monday (a soft suggestion)", "l12", "verb", "partir"),
+        word("v8", "À quelle heure part le train", "ah kel uhr par luh traN", "What time does the train leave?", "l12", "expression", "a-quelle-heure-part-le-train"),
+        word("v9", "À quelle heure", "ah kel uhr", "At what time (quelle: heure is feminine)", "l12", "table", "quel")
+      ],
+      questions: [
+        q("q1", "What has changed about Thomas?", "He walks now, slowly", ["He has a new phone", "He works in Lyon now", "He drinks tea now"], "en", "l4"),
+        q("q2", "What would Rose like to do?", "See Odette again and see the sea", ["Close the café for a month", "Visit her sister in Lyon", "Buy a new slate"], "en", "l7"),
+        q("q3", "How long is the train journey to Saint-Malo?", "Two and a half hours", ["One and a half hours", "Eight hours", "Four hours"], "en", "l8"),
+        q("q4", "What is Thomas's question for Rose?", "Et vous, madame Rose, qu'est-ce que vous aimeriez ?", ["Et vous, madame Rose, qu'est-ce que vous aimez ?", "Et vous, madame Rose, pourquoi vous courez ?", "Et vous, madame Rose, où est-ce que vous allez ?"], "fr", "l5")
+      ],
+      notice: {
+        title: "Wishing: vous aimeriez, j'aimerais, on pourrait",
+        text: "Thomas asks Qu'est-ce que vous aimeriez ? and Rose answers J'aimerais revoir Odette. Aimer in the conditional states a wish, and On pourrait partir lundi… makes a soft suggestion. Compare the present J'aime la mer: a fact, not a wish.",
+        examples: [
+          eg("Qu'est-ce que vous aimeriez ?", "kes-kuh voo‿zeh-muh-ryay", "What would you like? (a wish)"),
+          eg("J'aimerais revoir Odette.", "zhem-reh ruh-vwahr oh-det", "I'd like to see Odette again."),
+          eg("On pourrait partir lundi.", "ohN poo-reh par-teer luhN-dee", "We could leave on Monday. (a soft suggestion)")
+        ],
+        table: "conditionnel"
+      },
+      proverb: {
+        fr: "Tout est bien qui finit bien.",
+        respelling: "too‿teh byaN kee fee-nee byaN",
+        literal: "All is well that ends well.",
+        meaning: "A happy ending makes the difficulties worth it.",
+        englishEquivalent: "All's well that ends well."
+      }
     }
   ];
   var data = {
@@ -3501,6 +5198,17 @@
           { number: 2, title: "The search", titleFr: "L'enquête", level: "A2" },
           { number: 3, title: "Vineyards and doubt", titleFr: "Les vignes et le doute", level: "B1" },
           { number: 4, title: "The answer", titleFr: "La réponse", level: "B1" }
+        ]
+      },
+      {
+        id: "le-cafe-des-questions", title: "The Café of Questions", titleFr: "Le Café des Questions",
+        summary: "A 20-episode story in a tiny Montmartre café whose owner serves you only after one question.",
+        intro: "In a tiny café on a steep street in Montmartre, Madame Rose, 70, has one rule, chalked on the slate by the door and signed O.: one question, then a coffee. Each customer walks in with a problem, and her simple question helps them see it differently, while Socrate, her grumpy grey parrot, gives his opinion without a word. Episode by episode, small clues show why she made the rule.",
+        acts: [
+          { number: 1, title: "One question, then a coffee", titleFr: "Une question, puis un café", level: "A1" },
+          { number: 2, title: "What happened", titleFr: "Ce qui s'est passé", level: "A2" },
+          { number: 3, title: "Memories (A2+)", titleFr: "Les souvenirs", level: "A2" },
+          { number: 4, title: "The answers", titleFr: "Les réponses", level: "B1" }
         ]
       }
     ]

@@ -14,6 +14,7 @@ var REF = require("../js/reference-data.js");
 var EXD = require("../js/expressions-data.js");
 var DATA_D = require("../js/dialogues-data.js");
 var DLG = require("../js/dialogues.js");
+var PENDING = require("./fixtures/pending-recording.js");
 var ROOT = path.join(__dirname, "..");
 var REPO = path.join(ROOT, "..");
 var DIA_PRON_RE = /^[A-Za-z \-\/'(),.…‿]+$/;
@@ -87,8 +88,8 @@ test("content: 20 everyday dialogues numbered 1-20, levels A1 → A2 → B1, one
 });
 test("scale: stats and Review my mistakes cover every dialogue's questions", function () {
   var LEARN = require("../js/learn.js");
-  assert.equal(DLG.stats({}, DATA_D).total, 160);          // 80 everyday + 80 story questions
-  assert.equal(DLG.knownHeads(DATA_D).length, 160);
+  assert.equal(DLG.stats({}, DATA_D).total, 240);          // 80 everyday + 80 Lyon + 80 café questions
+  assert.equal(DLG.knownHeads(DATA_D).length, 240);
   var k = "dlg:hobbies-and-free-time.q2|dlg-quiz|-";
   var st = { stats: {} };
   st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
@@ -630,7 +631,7 @@ test("voices: the female manifest keeps its format, default voice and pre-dialog
   Object.keys(M.items).forEach(function (k) { assert.equal(M.items[k].voiceId, "qwen3-fr-m-bf16"); });
 });
 
-/* ---------- all 40 records (20 everyday dialogues + 20 story episodes): per-line content, role-play, quiz, clips ---------- */
+/* ---------- all 60 records (20 everyday dialogues + 2 × 20 story episodes): per-line content, role-play, quiz, clips ---------- */
 var VOICE_DIRS = { "qwen3-fr-bf16": "qwen3-fr-bf16", "qwen3-fr-m-bf16": "qwen3-fr-m-bf16" };
 /* Dialogue lines with no clip on purpose (failed-excluded, the device voice reads them). Empty now:
    at-the-bakery l7 "Un euro vingt pièce." was reviewed and shipped as failed-kept (Whisper writes "1,20€"
@@ -640,10 +641,10 @@ function clipHash(text) { return require("node:crypto").createHash("sha256").upd
 function voiceManifest(voice) {
   return voice === SHIPPED.VT_TTS.defaultVoice ? SHIPPED.VT_TTS : SHIPPED.VT_TTS_VOICES[voice];
 }
-test("all 40: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
+test("all 60: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
   var ids = DATA_D.dialogues.map(function (d) { return d.id; });
-  assert.equal(ids.length, 40);
-  assert.equal(new Set(ids).size, 40);
+  assert.equal(ids.length, 60);
+  assert.equal(new Set(ids).size, 60);
   DATA_D.dialogues.forEach(function (d) {
     ["lines", "vocab", "questions"].forEach(function (k) {
       var xs = d[k].map(function (x) { return x.id; });
@@ -665,7 +666,7 @@ test("all 40: unique dialogue, line, vocab and question ids; every line has fr, 
     d.speakers.forEach(function (s) { assert.ok(d.lines.some(function (l) { return l.speaker === s.id; }), d.id + " " + s.id); });
   });
 });
-test("all 40: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
+test("all 60: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.vocab.forEach(function (v) {
@@ -679,7 +680,7 @@ test("all 40: every vocab link and Notice table resolves to a real verb / expres
   });
   assert.ok(n > 40, "links checked " + n);
 });
-test("all 40: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
+test("all 60: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
   var storyLines = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.lines.forEach(function (l, i) {
@@ -697,11 +698,13 @@ test("all 40: role-play accepts every listed alternative (accents strict) and re
     });
   });
   var expected = 0;
-  DLG.episodes(DATA_D, "la-lettre-de-lyon").forEach(function (d) { expected += d.lines.length; });
+  DLG.seriesList(DATA_D).forEach(function (ser) {
+    DLG.episodes(DATA_D, ser.id).forEach(function (d) { expected += d.lines.length; });
+  });
   assert.ok(expected > 0);
   assert.equal(storyLines, expected, "every story line was checked");
 });
-test("all 40: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
+test("all 60: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     var byLine = {};
@@ -718,11 +721,13 @@ test("all 40: every quiz item offers its answer among 4 unique options, voiced b
       n++;
     });
   });
-  assert.equal(n, 160);
+  assert.equal(n, 240);
 });
 test("all dialogues and episodes: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
   var fallback = [];
   DATA_D.dialogues.forEach(function (d) {
+    // series awaiting the recording step (fixtures/pending-recording.js; a guard test below expires it)
+    if (d.series && PENDING.series.indexOf(d.series) !== -1) return;
     d.lines.forEach(function (l) {
       var voice = DLG.voiceOf(d, l.speaker);
       var M = voiceManifest(voice);
@@ -742,7 +747,9 @@ test("all dialogues and episodes: every line has a clip in its speaker's voice f
   });
   assert.deepEqual(fallback, DEVICE_VOICE_LINES);
 });
-test("all 40: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
+// clip hashes re-recorded on the user's request ("longue" had no clip at HEAD)
+var USER_RERECORDS = { "qwen3-fr-bf16": ["95be775656230941"] };
+test("all 60: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
   var cp = require("node:child_process");
   function git(args) { return cp.execFileSync("git", ["-C", REPO].concat(args), { encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] }); }
   try { git(["rev-parse", "HEAD"]); } catch (e) { t.skip("not a git checkout"); return; }
@@ -759,7 +766,17 @@ test("all 40: existing clips and manifest records are unchanged versus HEAD (git
     });
     var before = JSON.parse(git(["show", "HEAD:" + dir + "/manifest.json"])).items;
     var after = JSON.parse(fs.readFileSync(path.join(REPO, dir, "manifest.json"), "utf8")).items;
-    Object.keys(before).forEach(function (h) { assert.deepEqual(after[h], before[h], voice + " record " + h); });
+    Object.keys(before).forEach(function (h) {
+      // a failed-excluded text re-recorded on the user's request: it may only gain a passing clip
+      if ((USER_RERECORDS[voice] || []).indexOf(h) !== -1) {
+        assert.equal(before[h].status, "failed-excluded", voice + " record " + h + " was excluded at HEAD");
+        assert.equal(after[h].reason, "user-rerecord", voice + " record " + h);
+        assert.equal(after[h].status, "pass", voice + " record " + h);
+        assert.equal(after[h].key, before[h].key, voice + " record " + h);
+        return;
+      }
+      assert.deepEqual(after[h], before[h], voice + " record " + h);
+    });
     var jsf = voice === SHIPPED.VT_TTS.defaultVoice ? "verb-trainer/js/tts-manifest.js" : "verb-trainer/js/tts-manifest-" + voice + ".js";
     var sb = {}; sb.window = sb;
     require("node:vm").runInNewContext(git(["show", "HEAD:" + jsf]), sb);
@@ -769,7 +786,7 @@ test("all 40: existing clips and manifest records are unchanged versus HEAD (git
     Object.keys(old).forEach(function (k) { assert.deepEqual(now[k], old[k], voice + " entry " + k); });
   });
 });
-test("all 40: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
+test("all 60: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
   var k = L.ttsKey("je me suis assis"), h = clipHash("je me suis assis");
   Object.keys(VOICE_DIRS).forEach(function (voice) {
     assert.equal(voiceManifest(voice).items[k], undefined, voice);
@@ -1022,4 +1039,240 @@ test("docs: both READMEs carry the stale-cache sentence; the root README links t
   assert.ok(site.indexOf("older cached copy of the site") !== -1);
   assert.ok(root.indexOf("french-dialogues.md") !== -1);
   assert.ok(root.indexOf("verb-trainer/reference/french-dialogues.pdf") !== -1);
+});
+
+/* ---------- schema: line.emotion and episode.proverb (synthetic fixture) ---------- */
+function emoFixture() {
+  var f = storyFixture();
+  var EMO = ["curious", "amused", "teasing", "worried"];
+  [1, 2, 3].forEach(function (n) {
+    var d = ep(f, n);
+    d.lines.forEach(function (l, i) { l.emotion = EMO[i % EMO.length]; });
+    d.proverb = { fr: ["Chaque chose en son temps.", "Qui ne tente rien n'a rien.", "Vouloir, c'est pouvoir."][n - 1],
+      respelling: "shahk shohz ahN sohN tahN", literal: "Each thing in its time.", meaning: "One thing at a time.", englishEquivalent: "All in good time." };
+  });
+  return f;
+}
+test("schema (emotion, proverb): the fixture with both validates; the old fixture without them still does", function () {
+  assert.deepEqual(DLG.validate(emoFixture()), []);
+  assert.deepEqual(DLG.validate(storyFixture()), []);
+  assert.equal(DLG.EMOTIONS.length, 12);
+  var f = emoFixture(); delete ep(f, 2).proverb.englishEquivalent;
+  assert.deepEqual(DLG.validate(f), []);
+});
+test("schema (emotion, proverb): each broken field yields its specific error", function () {
+  function one(mut, expected) { var f = emoFixture(); mut(f); assert.deepEqual(DLG.validate(f), [expected]); }
+  one(function (f) { ep(f, 1).lines[0].emotion = "happy"; }, "fake-ep-1/l1.emotion: must be one of " + DLG.EMOTIONS.join(", "));
+  one(function (f) { delete ep(f, 2).lines[3].emotion; }, "fake-ep-2/lines: 1 line(s) without an emotion in fake, which uses emotions");
+  one(function (f) { delete ep(f, 1).proverb.meaning; }, "fake-ep-1/proverb.meaning: must be a non-empty string");
+  one(function (f) { ep(f, 1).proverb.source = "x"; }, "fake-ep-1/proverb.source: unknown key");
+  one(function (f) { ep(f, 1).proverb.fr = "Chaque chose‿en son temps."; }, "fake-ep-1/proverb.fr: contains ‿");
+  one(function (f) { ep(f, 1).proverb.fr = "« Chaque chose en son temps. »"; }, "fake-ep-1/proverb.fr: contains « or »");
+  one(function (f) { ep(f, 1).proverb.respelling = "shahk ʃohz"; }, "fake-ep-1/proverb.respelling: respelling has a character outside the alphabet");
+  one(function (f) { ep(f, 1).proverb.meaning = "x".repeat(141); }, "fake-ep-1/proverb.meaning: longer than 140 characters");
+  one(function (f) { ep(f, 1).proverb.englishEquivalent = ""; }, "fake-ep-1/proverb.englishEquivalent: must be absent or a non-empty string");
+  one(function (f) { ep(f, 3).proverb.fr = "chaque chose en son temps"; }, "fake-ep-3/proverb.fr: duplicate of the proverb in fake-ep-1");
+  one(function (f) { f.dialogues[0].proverb = clone(ep(f, 1).proverb); f.dialogues[0].proverb.fr = "Tel père, tel fils."; }, "at-the-cafe/proverb: only story episodes have a proverb");
+  one(function (f) { delete ep(f, 3).proverb; }, "fake-ep-3/proverb: missing; every episode of fake needs a proverb");
+});
+test("listenEntries: a proverb adds one default-voice dialogue-proverb entry", function () {
+  var f = emoFixture();
+  var es = DLG.listenEntries({ dialogues: [ep(f, 1)] }).filter(function (e) { return e.category === "dialogue-proverb"; });
+  assert.deepEqual(es, [{ text: "Chaque chose en son temps.", voice: null, category: "dialogue-proverb" }]);
+  assert.equal(DLG.listenEntries(CAFE).filter(function (e) { return e.category === "dialogue-proverb"; }).length, 0);
+});
+test("progress: the optional now argument sets lastAt only when given", function () {
+  var st = { stats: {} };
+  DLG.recordQuiz(st, "a", 50, "2026-10-16");
+  assert.equal("lastAt" in st.dialogues.a, false);
+  DLG.recordQuiz(st, "a", 50, "2026-10-16", 1760000000000);
+  assert.equal(st.dialogues.a.lastAt, 1760000000000);
+  DLG.markListened(st, "b", "2026-10-16", 1760000000001);
+  DLG.recordRolePlay(st, "c", "x", 10, "2026-10-16", 1760000000002);
+  DLG.markListened(st, "d", "2026-10-16", -5);
+  assert.deepEqual([st.dialogues.b.lastAt, st.dialogues.c.lastAt, "lastAt" in st.dialogues.d], [1760000000001, 1760000000002, false]);
+});
+test("activeSeries: no records → first series; lastAt beats lastDate; a later lastDate wins over an older lastAt", function () {
+  var lyon = "la-lettre-de-lyon", cafe = "le-cafe-des-questions";
+  assert.equal(DLG.activeSeries({}, DATA_D).id, lyon);
+  var st = { stats: {} };
+  DLG.markListened(st, "cafe-03-the-nephew", "2026-10-16", Date.parse("2026-10-16T10:00:00Z"));
+  assert.equal(DLG.activeSeries(st, DATA_D).id, cafe);
+  DLG.recordQuiz(st, "lyon-02-the-letters", 50, "2026-10-16", Date.parse("2026-10-16T11:00:00Z"));
+  assert.equal(DLG.activeSeries(st, DATA_D).id, lyon);
+  DLG.markListened(st, "cafe-04-one-day-in-paris", "2026-10-18");   // no lastAt, but a later day
+  assert.equal(DLG.activeSeries(st, DATA_D).id, cafe);
+  var only = { dialogues: { "cafe-01-the-rule": { listened: true, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "" } } };
+  assert.equal(DLG.activeSeries(only, DATA_D).id, cafe, "no dates: the first series with a started episode");
+  assert.equal(DLG.hasProverbs(DATA_D, cafe), true);
+  assert.equal(DLG.hasProverbs(DATA_D, lyon), false);
+});
+
+/* ---------- story: Le Café des Questions ---------- */
+var CAFE_SERIES = "le-cafe-des-questions";
+var CAFE_EPS = DLG.episodes(DATA_D, CAFE_SERIES);
+test("café: series metadata; 20 episodes 1..20, numbers 41..60, acts 5×4, levels A1, A2, A2, B1", function () {
+  var ser = DLG.seriesById(DATA_D, CAFE_SERIES);
+  assert.equal(ser.titleFr, "Le Café des Questions");
+  assert.deepEqual(ser.acts.map(function (a) { return a.number + ":" + a.level; }), ["1:A1", "2:A2", "3:A2", "4:B1"]);
+  assert.equal(CAFE_EPS.length, 20);
+  assert.deepEqual(CAFE_EPS.map(function (d) { return d.episode; }), Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  assert.deepEqual(CAFE_EPS.map(function (d) { return d.number; }), Array.from({ length: 20 }, function (_, i) { return i + 41; }));
+  assert.deepEqual(CAFE_EPS.map(function (d) { return d.act; }), [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]);
+  CAFE_EPS.forEach(function (d) { assert.equal(d.level, ["A1", "A2", "A2", "B1"][d.act - 1], d.id); });
+});
+test("café: episodeNav stays within the series; recap on 2-20 only, at most 160 characters", function () {
+  var ix = DLG.index(DATA_D);
+  CAFE_EPS.forEach(function (d, i) {
+    var nav = DLG.episodeNav(DATA_D, d);
+    assert.equal(nav.n, i + 1);
+    assert.equal(nav.total, 20);
+    assert.equal(nav.series.id, CAFE_SERIES);
+    if (i === 0) assert.equal(nav.prev, null); else assert.equal(nav.prev, ix.byId[CAFE_EPS[i - 1].id]);
+    if (i === 19) assert.equal(nav.next, null); else assert.equal(nav.next, ix.byId[CAFE_EPS[i + 1].id]);
+    [nav.prev, nav.next].forEach(function (x) { if (x) assert.equal(x.series, CAFE_SERIES); });
+    if (d.episode === 1) assert.ok(!("recap" in d));
+    else assert.ok(typeof d.recap === "string" && d.recap.length > 0 && d.recap.length <= 160, d.id);
+  });
+});
+test("café: every line has fr/pron/en/speaker and an emotion from the set; ≥ 4 emotions, neutral ≤ 1/3, ≤ 3 in a row", function () {
+  CAFE_EPS.forEach(function (d) {
+    var sp = {};
+    d.speakers.forEach(function (s) { sp[s.id] = true; });
+    var run = 0, prev = null;
+    d.lines.forEach(function (l) {
+      var where = d.id + "/" + l.id;
+      ["fr", "pron", "en"].forEach(function (k) { assert.ok(typeof l[k] === "string" && l[k].trim() !== "", where + " " + k); });
+      assert.ok(sp[l.speaker], where);
+      assert.ok(DLG.EMOTIONS.indexOf(l.emotion) !== -1, where + " " + l.emotion);
+      run = l.emotion === prev ? run + 1 : 1; prev = l.emotion;
+      assert.ok(run <= 3, where + ": " + l.emotion + " more than 3 in a row");
+    });
+    var emos = d.lines.map(function (l) { return l.emotion; });
+    assert.ok(new Set(emos).size >= 4, d.id);
+    assert.ok(emos.filter(function (e) { return e === "neutral"; }).length * 3 <= d.lines.length, d.id);
+  });
+});
+test("café: one female and one male speaker per episode, each on the voice of its gender", function () {
+  var VOICE = { female: "qwen3-fr-bf16", male: "qwen3-fr-m-bf16" };
+  CAFE_EPS.forEach(function (d) {
+    assert.deepEqual(d.speakers.map(function (s) { return s.gender; }).sort(), ["female", "male"], d.id);
+    d.speakers.forEach(function (s) { assert.equal(s.voice, VOICE[s.gender], d.id + "/" + s.id); });
+  });
+});
+test("café: every episode has a valid proverb (englishEquivalent absent only on ep 15); the 20 are unique", function () {
+  var seen = {};
+  CAFE_EPS.forEach(function (d) {
+    var p = d.proverb;
+    ["fr", "respelling", "literal", "meaning"].forEach(function (k) { assert.ok(typeof p[k] === "string" && p[k].trim() !== "", d.id + " " + k); });
+    assert.equal("englishEquivalent" in p, d.episode !== 15, d.id);
+    assert.ok(p.meaning.length <= 140, d.id);
+    var k = L.normalize(p.fr);
+    assert.ok(!seen[k], d.id + " duplicate proverb");
+    seen[k] = true;
+  });
+  assert.equal(Object.keys(seen).length, 20);
+});
+test("café respelling (lines, vocab, examples, proverb): alphabet, no IPA or ?!:;, no false liaisons, numbers", function () {
+  var BAD = ["truh‿z", "saN‿z", "saNk‿", "set‿z", "nuhf‿z", "nuh‿vuh-roh", "ohNz‿z", "ahNt‿z", "aNt‿z", "vaN‿z", "kah-truh‿"];
+  var AFTER_ET = /(^|[\s,.…])ay‿/;   // no liaison after et (les‿ = lay‿ is fine)
+  var n = 0;
+  CAFE_EPS.forEach(function (d) {
+    var items = d.lines.map(function (l) { return [l.pron, l.fr, d.id + "/" + l.id]; })
+      .concat(d.vocab.map(function (v) { return [v.pron, v.fr, d.id + "/" + v.id]; }))
+      .concat(d.notice.examples.map(function (x, i) { return [x.pron, x.fr, d.id + "/notice[" + i + "]"]; }))
+      .concat([[d.proverb.respelling, d.proverb.fr, d.id + "/proverb"]]);
+    items.forEach(function (it) {
+      var p = it[0], fr = it[1], where = it[2];
+      n++;
+      assert.match(p, DLG.PRON_RE, where);
+      assert.ok(!IPA_RE.test(p) && !/[?!:;]/.test(p) && !/ ‿|‿ /.test(p), where);
+      BAD.forEach(function (b) { assert.ok(p.indexOf(b) === -1, where + ": " + b + " in " + p); });
+      assert.ok(!AFTER_ET.test(p), where + ": liaison after et in " + p);
+      if (/\bquatre (ans|heures|euros)\b/i.test(fr)) assert.ok(p.indexOf("kah-tr") !== -1 && !/kah-tr\S*‿z/.test(p), where + ": " + p);
+      if (/\bdeux euros\b/i.test(fr)) assert.ok(p.indexOf("duh‿zuh-roh") !== -1, where + ": " + p);
+      if (/\bhuit heures\b/i.test(fr)) assert.ok(p.indexOf("wee‿tuhr") !== -1, where + ": " + p);
+    });
+  });
+  assert.ok(n > 400, "checked " + n);
+});
+test("café links: every vocab link and Notice table resolves", function () {
+  CAFE_EPS.forEach(function (d) {
+    assert.ok(Object.prototype.hasOwnProperty.call(TABLES, d.notice.table), d.id);
+    d.vocab.forEach(function (v) {
+      if (v.link) assert.ok(Object.prototype.hasOwnProperty.call({ verb: VERBS, expression: EXPR, table: TABLES }[v.link.kind], v.link.id), d.id + "/" + v.id);
+    });
+  });
+});
+test("café quiz: answers among 4 unique options, legend names the episode; Review my mistakes picks up a missed question", function () {
+  CAFE_EPS.forEach(function (d) {
+    DLG.quizKeys(DATA_D, d.id).forEach(function (k, qi) {
+      var it = DLG.choiceItem(DATA_D, k, rng(qi + 13));
+      assert.equal(it.options.length, 4, k);
+      assert.equal(new Set(it.options).size, 4, k);
+      assert.ok(it.options.indexOf(d.questions[qi].answer) !== -1, k);
+      assert.equal(it.legend.before, "Le Café des Questions, episode " + d.episode + ": ", k);
+    });
+  });
+  var LEARN = require("../js/learn.js");
+  var k = "dlg:cafe-10-the-old-photo.q1|dlg-quiz|-";
+  var st = { stats: {} };
+  st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
+  assert.deepEqual(LEARN.mistakesDeck(st, global.window.VERB_DATA, null, DATA_D), [k]);
+});
+test("old records: the 40 Lyon and everyday records have no emotion or proverb keys", function () {
+  DATA_D.dialogues.filter(function (d) { return d.series !== CAFE_SERIES; }).forEach(function (d) {
+    assert.ok(!("proverb" in d), d.id);
+    d.lines.forEach(function (l) { assert.ok(!("emotion" in l), d.id + "/" + l.id); });
+  });
+});
+test("pending recording (self-expiring): once any café line or proverb has a clip, fixtures/pending-recording.js must list no series", function () {
+  var recorded = 0;
+  DATA_D.dialogues.filter(function (d) { return PENDING.series.indexOf(d.series) !== -1; }).forEach(function (d) {
+    d.lines.forEach(function (l) { if (voiceManifest(DLG.voiceOf(d, l.speaker)).items[L.ttsKey(l.fr)]) recorded++; });
+    if (d.proverb && SHIPPED.VT_TTS.items[L.ttsKey(d.proverb.fr)]) recorded++;
+  });
+  if (recorded) assert.deepEqual(PENDING.series, [], recorded + " pending-series clip(s) exist: empty fixtures/pending-recording.js");
+});
+test("static: the café UI: emotion tag, Sagesse du jour card, per-series printables, Home picks the active series", function () {
+  var src = fs.readFileSync(path.join(ROOT, "js", "views-dialogues.js"), "utf8");
+  ['"Sagesse du jour"', '"dia-emotion"', "storyHref(", "proverbSection(", "Date.now()"].forEach(function (s) { assert.ok(src.indexOf(s) !== -1, s); });
+  assert.ok(src.indexOf("la-lettre-de-lyon.pdf") === -1, "no hard-coded story PDF");
+  var home = fs.readFileSync(path.join(ROOT, "js", "views-home.js"), "utf8");
+  assert.ok(home.indexOf("DLG.activeSeries(") !== -1 && home.indexOf("SI.series === ser.id") !== -1);
+  var css = fs.readFileSync(path.join(ROOT, "css", "styles.css"), "utf8");
+  assert.ok(/\.dia-emotion \{/.test(css) && /\.dia-proverb \{/.test(css));
+});
+test("printables (café): both le-cafe-des-questions.md equal markdown(…, series); 4 acts, 20 episodes, 20 proverb cards, index, key; PDF clean", function () {
+  var BS = require("../../tools/build-story.js");
+  var md = BS.markdown(undefined, "le-cafe-des-questions");
+  assert.equal(fs.readFileSync(path.join(REPO, "le-cafe-des-questions.md"), "utf8"), md, "stale: node tools/build-story.js --series le-cafe-des-questions");
+  assert.equal(fs.readFileSync(path.join(ROOT, "reference", "le-cafe-des-questions.md"), "utf8"), md);
+  assert.equal((md.match(/^## Act /gm) || []).length, 4);
+  var eps = (md.match(/^### Episode (\d+) /gm) || []).map(function (h) { return Number(/\d+/.exec(h)[0]); });
+  assert.deepEqual(eps, Array.from({ length: 20 }, function (_, i) { return i + 1; }));
+  assert.equal((md.match(/^#### Sagesse du jour$/gm) || []).length, 20);
+  var idx = md.slice(md.indexOf("## Proverb index"));
+  assert.ok(md.indexOf("## Proverb index") > md.indexOf("## Answer key"));
+  assert.equal((idx.match(/^- Episode \d+ · « /gm) || []).length, 20);
+  assert.ok(md.indexOf("CC BY-SA 4.0") !== -1);
+  assert.ok(/^> \*.+\* \((teasing|curious|amused)\)$/m.test(md), "emotion tag after the English");
+  var html = BS.printHtml(undefined, "le-cafe-des-questions");
+  assert.ok(html.indexOf("<img") === -1, "no pictures for a series without images");
+  assert.ok(html.indexOf("A story in 20 episodes · A1–B1") !== -1);
+  var pdf = fs.readFileSync(path.join(ROOT, "reference", "le-cafe-des-questions.pdf"));
+  assert.equal(pdf.slice(0, 4).toString("latin1"), "%PDF");
+  var s = pdf.toString("latin1");
+  ["/Creator", "CreationDate", "ModDate"].forEach(function (k) { assert.ok(s.indexOf(k) === -1, k); });
+  assert.ok(!/\/U[s]ers\/|\/h[o]me\//.test(s));
+  assert.ok(!new RegExp("vta" + "sing").test(s));
+  var lyon = fs.readFileSync(path.join(REPO, "la-lettre-de-lyon.md"), "utf8");
+  assert.ok(lyon.indexOf("Sagesse du jour") === -1 && lyon.indexOf("Proverb index") === -1);
+  assert.ok(BS.printHtml().indexOf("A story in 20 episodes · A2–B1") !== -1);
+});
+test("docs (café): the root README links both café printables; LICENSE-CONTENT lists le-cafe-des-questions.md", function () {
+  var root = fs.readFileSync(path.join(REPO, "README.md"), "utf8");
+  assert.ok(root.indexOf("verb-trainer/reference/le-cafe-des-questions.pdf") !== -1);
+  assert.ok(root.indexOf("(le-cafe-des-questions.md)") !== -1);
+  assert.ok(fs.readFileSync(path.join(REPO, "LICENSE-CONTENT.md"), "utf8").indexOf("le-cafe-des-questions.md") !== -1);
 });

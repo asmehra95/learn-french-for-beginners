@@ -72,6 +72,17 @@ native-speaker audio clips.
   Stories list shows each episode's progress, Home has a "Story: Continue: Episode n" link, search finds
   the episodes ("traboule", "Lucienne", "la lettre de lyon"), and the episode quizzes count in Progress
   (its own per-episode table) and in Review my mistakes. Printable as its own PDF and Markdown.
+  *Le Café des Questions* (The Café of Questions) is a second 20-episode story, A1 → B1 (dialogues 41–60):
+  in a tiny Montmartre café, Madame Rose serves you only after you answer one question. It starts genuinely
+  easy (present tense, short lines) and rises to the polite conditional. Every line shows an emotion tag
+  after the English, such as "(teasing)", which hides with Show English, and every episode ends with a
+  *Sagesse du jour*: a real French proverb with a Listen button, its respelling, literal translation,
+  meaning and English equivalent. The Stories list shows both series with their own progress and
+  Continue link; Home's Story link follows the series you used most recently. Search finds the proverbs
+  ("proverbe", "oiseau"). The story has no pictures for now.
+- **Proverbs deck** — the 20 proverbs as flashcards (French → meaning, meaning → French), with the same
+  spaced repetition as the expressions decks, an act filter in the practice set, Review my mistakes and a
+  Proverbs block in Progress.
 - **Global search** — press `/` or Ctrl/⌘+K (or the Search button; on phones, Search in the bottom
   bar) on any page to search all 125 verbs, every conjugated form (suis, j'ai, je me lève, allé,
   ferai), English meanings ("to eat"), the grammar tables ("cette", "quatre-vingts"), the everyday expressions ("excuse me", "lapin"), the dialogues ("café", "boulangerie", "dialogue") and the topic
@@ -115,18 +126,21 @@ These PDFs are in the repo and served from the site:
 | [french-dialogues.md](french-dialogues.md) | Markdown version of the 20 dialogues |
 | [verb-trainer/reference/la-lettre-de-lyon.pdf](verb-trainer/reference/la-lettre-de-lyon.pdf) | Story: *La Lettre de Lyon*, 20 episodes in 4 acts (A2–B1), with word lists, questions and answer key |
 | [la-lettre-de-lyon.md](la-lettre-de-lyon.md) | Markdown version of the story |
+| [verb-trainer/reference/le-cafe-des-questions.pdf](verb-trainer/reference/le-cafe-des-questions.pdf) | Story: *Le Café des Questions*, 20 episodes in 4 acts (A1–B1), with emotion tags, a Sagesse du jour proverb per episode, word lists, questions, answer key and proverb index |
+| [le-cafe-des-questions.md](le-cafe-des-questions.md) | Markdown version of the café story |
 
 ## Audio
 
 Three layers, selectable in Settings → Voice:
 
-1. **Pre-recorded synthetic voice (default)** — 2,886 of the site's 2,896 Listen texts generated with the open-source
+1. **Pre-recorded synthetic voice (default)** — 3,233 of the site's 3,242 Listen texts generated with the open-source
    Qwen3-TTS 1.7B Base model (`mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16`, Apache-2.0). One
    consistent designed voice (not a real person's voice). Covers every present-tense form, past,
    future, example sentences, topic answers, the Grammar tables (cells and examples) and all 100 everyday expressions with
    their examples. In the Dialogues each line plays in its speaker's voice: the female speakers use this
    voice, the male speakers a second designed synthetic voice (`qwen3-fr-m-bf16`). The
-   Credits view has a download link for the native-speaker recordings zip.
+   Credits view has a download link for the native-speaker recordings zip. The lines, word lists and
+   proverbs of *Le Café des Questions* are recorded in the same two voices (the male voice covers 379 of 379 texts).
 
 2. **869 Lingua Libre native-speaker clips** — recorded by volunteer native French speakers on
    [Lingua Libre](https://lingualibre.org/) / Wikimedia Commons, under CC0, CC BY, or CC BY-SA
@@ -200,9 +214,13 @@ printables all follow the data. Three non-code steps remain for each new dialogu
    table of contents grouped by level.
 
 `french-dialogues.md`/`.pdf` hold the 20 everyday conversations only. The story records (those with
-`series`, `episode` and `act`) are printed by `node tools/build-story.js`, which writes both
-`la-lettre-de-lyon.md` files; its `--html <file>` output is printed to
-`verb-trainer/reference/la-lettre-de-lyon.pdf` with headless Chrome and the metadata stripped the same way.
+`series`, `episode` and `act`) are printed by `node tools/build-story.js`, one series at a time:
+`node tools/build-story.js --series <id>` writes `<id>.md` at the repo root and in `verb-trainer/reference/`
+(the default is `la-lettre-de-lyon`; `--all` writes every series). With `--html <file>` it also writes that
+series' print HTML, which is printed to `verb-trainer/reference/<id>.pdf` with headless Chrome and the
+metadata stripped the same way. Pictures are added only for the illustrated series; a series with emotion
+tags prints them after the English, and a series with proverbs gets a Sagesse du jour box per episode and a
+proverb index.
 
 ## Regenerating the story illustrations
 The prompts, seeds and alt texts live in `tools/story-images/manifest.json`; `tools/story-images/generate.py`

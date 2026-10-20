@@ -31,15 +31,39 @@ Then reload the site. If you use the Explain helper (`explainer/start.sh`), rest
 
 Texts with no clip keep working: the site falls back to the device voice for them.
 
-Coverage now: 2,886 of 2,896 Listen texts have a clip in the default voice (2,875 pass, 9 `failed-kept`,
+Coverage now: 3,233 of 3,242 Listen texts have a clip in the default voice (3,220 pass, 11 `failed-kept`,
 2 `short-unverified`; all 198 everyday-expression texts passed QA on the first run). Left to the device voice
-(`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`, `cher, chère`, `ceux`, `longue`, `tes`, and the
+(`failed-excluded` in the voice manifest): `il naît`, `m'`, `s'`, `cher, chère`, `ceux`, `tes`, and the
 dialogue vocabulary items `six euros cinquante` (Whisper hears "6,50 euros", which the scorer can't match) and
 `à Étretat` (heard "À être ta."). The dialogue line `Un euro vingt pièce.` is `failed-kept`: Whisper writes "1,20€"
 and drops `pièce`, but the word is spoken (the clip's tail alone transcribes as "Une pièce."), so it ships.
-`je me suis assis` is excluded by the user (`excludedByUser`). The second voice covers 260 of 260 texts (257 pass,
-3 `failed-kept`: the spelled names `L, A, U, R, E, N, T. Laurent.` and `Vincent Roux. R, O, U, X.` run longer than
-the length estimate, and `Oui, bien sûr. Ça fait six euros cinquante.` for the same digits reason as above).
+`je me suis assis` is excluded by the user (`excludedByUser`). The second voice covers 379 of 379 texts (369 pass,
+10 `failed-kept`: the spelled names `L, A, U, R, E, N, T. Laurent.` and `Vincent Roux. R, O, U, X.` run longer than
+the length estimate, `Oui, bien sûr. Ça fait six euros cinquante.` for the same digits reason as above, and 7
+*Le Café des Questions* lines, below).
+
+### Le Café des Questions clips (approach D)
+
+The 465 clips added for *Le Café des Questions* (episodes 1–20 = dialogues 41–60: lines, word lists and the 20
+proverbs; 346 texts in the default voice, 119 in the second) and the re-recorded `longue` were made with a
+variant of the steps below, chosen by ear for a more natural conversation:
+
+- Same model, revision, reference voices, `ref_text`, normalization and settings fingerprint, so `generate.py`
+  treats them as up to date and never regenerates them.
+- Temperature 0.9 on every attempt (first and retries). Seeds as in `generate.py`: 1234 + corpus position, then
+  `+ 7919·n` for retry n. Up to 1 + 3 attempts (1 + 5 for single words under `--strict-short`).
+- Generation text: the site text (`VT_LOGIC.ttsSpeak` plus the final-period rule) with punctuation cues only
+  (ellipses for pauses, commas, `!`, `?`) where the line's emotion calls for it. The words are the site words.
+  The cue text is stored as `cueText` in the voice manifest; clips stay keyed to the normalized site text.
+- QA as in `generate.py --strict-short`, and a D take also fails on any of `internal-gap` (checked at every length),
+  `silent`, `too-short`, `clipping`, `duration-outlier`, `last-word-missing`, `lead-silence` or `trail-silence`.
+- A line that failed every D attempt was regenerated alone with the normal settings (temperature ladder 0.7, 0.6,
+  0.5, 0.8 …, same seed ladder continued): `approach: "A-fallback"` in the manifest (13 clips, including `longue`).
+  If A failed too, the best D take shipped as `failed-kept` when Whisper heard every word.
+
+Every attempt's temperature, seed, cue text and approach is in the voice manifest. The café `failed-kept` clips are
+`deux cent mille abonnés` and `Sans question, sans thé.` (default voice: digits; the homophone "santé", approved by
+ear) and 7 second-voice lines with a pause over 0.7 s or digits.
 ## What generate.py does per text
 
 1. Synthesizes the text with Qwen3-TTS 1.7B Base (bf16, MLX), the reference voice above,

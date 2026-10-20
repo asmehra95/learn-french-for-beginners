@@ -72,7 +72,22 @@
   var DLG_ID_RE = /^[a-z0-9-]{1,40}$/;
   var DLG_SPEAKER_RE = /^[a-z0-9-]{1,20}$/;
   var DLG_STAT_RE = /^dlg:([a-z0-9-]{1,40})\.(q\d)$/;
-  var DIALOGUES_MAX = 50;
+  var DIALOGUES_MAX = 200;   // 60 dialogues ship now; room for more series without dropping progress
+  /* Proverb flashcards (Le Café des Questions): "prov:<dialogueId>|flash-fr-en|-" / "|flash-en-fr|-". With
+     dialogues-data.js loaded the id must be a dialogue that has a proverb (built inline, like dialogueHeads). */
+  var PROV_ID_RE = /^prov:([a-z0-9-]{1,40})$/;
+  var PROV_MODES = { "flash-fr-en": true, "flash-en-fr": true };
+  function proverbIds() {
+    var d = root.VT_DIALOGUES, out = {};
+    ((d && d.dialogues) || []).forEach(function (x) { if (x.proverb) out[x.id] = true; });
+    return out;
+  }
+  function proverbActs() {
+    var d = root.VT_DIALOGUES, out = {};
+    ((d && d.dialogues) || []).forEach(function (x) { if (x.proverb && Number.isInteger(x.act)) out[x.act] = true; });
+    return out;
+  }
+  var PROV_ACTS_MAX = 4;
   var ROLES_MAX = 4;
 
   function defaults() {
@@ -147,11 +162,17 @@
       // Dialogue quiz keys are "dlg:<dialogue>.<question>|dlg-quiz|-": a known head when dialogues-data.js is loaded.
       var knownDlg = dialogueHeads();
       var checkDlg = Object.keys(knownDlg).length > 0;
+      var knownProv = proverbIds();
+      var checkProv = !!(root.VT_DIALOGUES && root.VT_DIALOGUES.dialogues);
       Object.keys(raw.stats).forEach(function (k) {
         var s = raw.stats[k];
         if (!isObject(s) || UNSAFE_KEYS[k] || k.length > STAT_KEY_MAX) return;
         var head = k.split("|")[0];
-        if (head.indexOf("dlg:") === 0) {
+        if (head.indexOf("prov:") === 0) {
+          var pm = PROV_ID_RE.exec(head), parts = k.split("|");
+          if (!pm || UNSAFE_KEYS[pm[1]] || parts.length !== 3 || !PROV_MODES[parts[1]] || parts[2] !== "-") return;
+          if (checkProv && !Object.prototype.hasOwnProperty.call(knownProv, pm[1])) return;
+        } else if (head.indexOf("dlg:") === 0) {
           if (!DLG_STAT_RE.test(head) || UNSAFE_KEYS[head.slice(4).split(".")[0]]) return;
           if (checkDlg && !Object.prototype.hasOwnProperty.call(knownDlg, head)) return;
         } else if (head.indexOf("expr:") === 0) {
@@ -213,6 +234,16 @@
       // additive v2 field (recorded voice): absent in v1 data and older v2 saves/exports -> default "recorded"
       if (VOICE_SOURCES.indexOf(s.voiceSource) !== -1) ds.voiceSource = s.voiceSource;
       bool(ds, s, "dialogueShowEnglish");
+      // optional field (Proverbs deck act filter): absent -> every act; integers 1-4, deduped, sorted
+      if (Array.isArray(s.selectedProverbActs)) {
+        var kActs = proverbActs(), haveActs = Object.keys(kActs).length > 0, seenAct = {};
+        ds.selectedProverbActs = s.selectedProverbActs.filter(function (n) {
+          if (!Number.isInteger(n) || n < 1 || n > PROV_ACTS_MAX || seenAct[n]) return false;
+          if (haveActs && !kActs[n]) return false;
+          seenAct[n] = true;
+          return true;
+        }).sort(function (a, b) { return a - b; });
+      }
     }
     if (isObject(raw.daily)) {
       var dl = raw.daily;
@@ -268,6 +299,8 @@
         if (typeof r.quizBest === "number" && Math.floor(r.quizBest) === r.quizBest && r.quizBest >= -1 && r.quizBest <= 100) out.quizBest = r.quizBest;
         out.quizAttempts = count(r.quizAttempts, 0);
         out.lastDate = dateOr(r.lastDate, "");
+        // optional: ms timestamp of the last activity (Home "Continue" picks the most recently used story)
+        if (typeof r.lastAt === "number" && Number.isInteger(r.lastAt) && r.lastAt > 0 && r.lastAt <= 8.64e15) out.lastAt = r.lastAt;
         if (isObject(r.roles)) {
           var speakers = dlgIds.length ? dialogueSpeakers(k) : null;
           var nRoles = 0;

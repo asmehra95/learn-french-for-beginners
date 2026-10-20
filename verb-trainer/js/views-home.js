@@ -250,8 +250,8 @@
         // Started = listened, quizzed or role-played (VT_DLG.isStarted, shared with views-dialogues.js).
         var dlgBy = DLG.stats(ctx.state(), ctx.DIALOGUES).byDialogue;
         var dlgDone = function (d) { return DLG.isStarted(dlgBy[d.id]); };
-        // The story (La Lettre de Lyon): a separate link to the first episode not yet started.
-        var storyP = null, ser = DLG.seriesList(ctx.DIALOGUES)[0];
+        // The stories: a separate link to the first episode not yet started of the most recently used series.
+        var storyP = null, ser = DLG.activeSeries(ctx.state(), ctx.DIALOGUES);
         var nx = ser ? DLG.nextEpisode(ctx.state(), ctx.DIALOGUES, ser.id) : null;
         if (nx && nx.dialogue) {
           var verbWord = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
@@ -261,7 +261,7 @@
             cov ? el("img", { className: "dia-home-cover", src: cov.src, width: String(cov.width), height: String(cov.height), alt: "",
               loading: "lazy", decoding: "async" }) : null,
             el("a", { className: "text-link", id: "home-story-link", href: "#dialogues/" + nx.dialogue.id,
-              text: "Story: " + verbWord + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title })]);
+              text: "Story (" + ser.titleFr + "): " + verbWord + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title })]);
         }
         var dlgAny = dlgList.some(dlgDone);
         var dlgNext = dlgList.filter(function (d) { return !dlgDone(d); })[0] || dlgList[0];
@@ -365,6 +365,7 @@
     { name: "Sentences", icon: "text", href: "#sentences", text: "Fill in the missing verb in a real sentence." },
     { name: "Multiple choice", icon: "list", href: "#choice", text: "Pick the right answer from four options." },
     { name: "Expression flashcards", icon: "message-circle", href: "#flashcards/expressions", text: "Everyday phrases: French → English, English → French, or listen first.", expressions: true },
+    { name: "Proverb flashcards", icon: "message-circle", href: "#flashcards/proverbs", text: "The stories' Sagesse du jour: French → meaning or meaning → French.", proverbs: true },
     { name: "Review my mistakes", icon: "rotate-ccw", href: "#review", text: "Practise the items you missed until they stick.", review: true }
   ];
 
@@ -377,6 +378,7 @@
       var deck = ctx.LEARN.mistakesDeck(ctx.state(), ctx.DATA, ctx.EXPRESSIONS, ctx.DIALOGUES).length;
       HUB.forEach(function (c, i) {
         if (c.expressions && !ctx.EXPRESSIONS) return;
+        if (c.proverbs && !(window.VT_PROV && ctx.DIALOGUES && window.VT_PROV.list(ctx.DIALOGUES).length)) return;
         var hid = "hub-h-" + i;
         var extra = c.review
           ? el("p", { className: "hub-count", text: deck === 0 ? "Nothing to review yet." : deck + (deck === 1 ? " item to review" : " items to review") })

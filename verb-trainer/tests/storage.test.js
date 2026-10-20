@@ -431,13 +431,14 @@ test("dialogues: records sanitized: unknown dialogue/speaker ids dropped, malfor
   assert.deepEqual(STORE.sanitize(raw).dialogues["at-the-cafe"], { listened: false, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "" });
   raw.dialogues = "nope";
   assert.deepEqual(STORE.sanitize(raw).dialogues, {});
-  // caps, with only the regexes (no data loaded): 50 dialogues, 4 roles
+  // caps, with only the regexes (no data loaded): 200 dialogues, 4 roles. The cap was raised from 50 when the
+  // 60-dialogue set shipped (a scoped update so real progress is never dropped; overflow is still capped)
   var bare = loadFull(null, false);
   raw.dialogues = {};
-  for (var i = 0; i < 60; i++) raw.dialogues["d-" + i] = { listened: true, quizBest: 1, quizAttempts: 1, lastDate: "", roles: {} };
+  for (var i = 0; i < 210; i++) raw.dialogues["d-" + i] = { listened: true, quizBest: 1, quizAttempts: 1, lastDate: "", roles: {} };
   raw.dialogues["d-0"].roles = { a: { best: 1, attempts: 1 }, b: { best: 2, attempts: 1 }, c: { best: 3, attempts: 1 }, d: { best: 4, attempts: 1 }, e: { best: 5, attempts: 1 } };
   var capped = bare.sanitize(raw);
-  assert.equal(Object.keys(capped.dialogues).length, 50);
+  assert.equal(Object.keys(capped.dialogues).length, 200);
   assert.equal(Object.keys(capped.dialogues["d-0"].roles).length, 4);
 });
 test("dialogues: a story episode record (lyon-05-a-closed-door, role berthier) and its quiz stat survive sanitize", function () {
@@ -474,4 +475,83 @@ test("dialogues: dialogueShowEnglish survives save/load; invalid values fall bac
   var raw = clone(PRE_DLG);
   raw.settings.dialogueShowEnglish = "no";
   assert.equal(STORE.sanitize(raw).settings.dialogueShowEnglish, true);
+});
+
+/* ---------- Le Café des Questions: lastAt, prov: stats, selectedProverbActs, 60 dialogues ---------- */
+var PK = "prov:cafe-03-the-nephew|flash-fr-en|-", PK2 = "prov:cafe-17-like-father|flash-en-fr|-";
+function cafeState(STORE) {
+  var st = STORE.sanitize(clone(PRE_DLG));
+  st.dialogues["lyon-05-a-closed-door"] = { listened: true, quizBest: 50, quizAttempts: 1, roles: { berthier: { best: 80, attempts: 2 } }, lastDate: "2026-10-17" };
+  st.dialogues["cafe-03-the-nephew"] = { listened: true, quizBest: 75, quizAttempts: 1, roles: {}, lastDate: "2026-10-18", lastAt: 1760780000000 };
+  st.stats[PK] = { box: 2, seen: 3, correct: 2, wrong: 1, last: 1760780000000 };
+  st.stats[PK2] = { box: 0, seen: 1, correct: 0, wrong: 1, last: 1760780000001 };
+  st.stats["dlg:cafe-03-the-nephew.q1|dlg-quiz|-"] = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1760780000002 };
+  st.settings.selectedProverbActs = [1, 3];
+  return st;
+}
+test("café storage: an older v2 save plus Lyon and café records loads with nothing lost", function () {
+  var STORE0 = loadFull();
+  var saved = cafeState(STORE0);
+  var STORE = loadFull(fakeStorage({ "verbTrainer.v1": JSON.stringify(saved) }));
+  var state = STORE.load();
+  assert.deepEqual(state, saved);
+  assert.equal(state.dialogues["cafe-03-the-nephew"].lastAt, 1760780000000);
+  assert.deepEqual(state.settings.selectedProverbActs, [1, 3]);
+  assert.ok(state.stats[PK] && state.stats[PK2]);
+  // the pre-dialogues save still gains exactly its two defaults (no selectedProverbActs added)
+  var pre = loadFull(fakeStorage({ "verbTrainer.v1": JSON.stringify(PRE_DLG) })).load();
+  assert.equal("selectedProverbActs" in pre.settings, false);
+  assert.equal("selectedProverbActs" in STORE.defaults().settings, false);
+});
+test("café storage: the v1 fixture still migrates with data loaded", function () {
+  var STORE = loadFull(fakeStorage({ "verbTrainer.v1": V1_TEXT }));
+  var state = STORE.load();
+  assert.equal(STORE.wasMigrated(), true);
+  assert.equal(state.version, 2);
+  assert.equal(JSON.stringify(state.stats), JSON.stringify(V1.stats));
+});
+test("café storage: all 60 dialogue records survive sanitize", function () {
+  var STORE = loadFull();
+  var raw = clone(PRE_DLG);
+  raw.dialogues = {};
+  DLG_DATA.dialogues.forEach(function (d) { raw.dialogues[d.id] = { listened: true, quizBest: 50, quizAttempts: 1, roles: {}, lastDate: "2026-10-18" }; });
+  assert.equal(Object.keys(raw.dialogues).length, 60);
+  assert.equal(Object.keys(STORE.sanitize(raw).dialogues).length, 60);
+});
+test("café storage: malformed lastAt, prov: keys and selectedProverbActs are dropped", function () {
+  var STORE = loadFull();
+  var raw = clone(PRE_DLG);
+  raw.dialogues = {};
+  [1.5, -1, 0, "1760780000000", 9e15, null].forEach(function (v, i) {
+    raw.dialogues[DLG_DATA.dialogues[i].id] = { listened: true, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "", lastAt: v };
+  });
+  var s = STORE.sanitize(raw);
+  Object.keys(s.dialogues).forEach(function (k) { assert.equal("lastAt" in s.dialogues[k], false, k); });
+  var st = { box: 1, seen: 1, correct: 1, wrong: 0, last: 1 };
+  raw.stats = {};
+  ["prov:cafe-03-the-nephew|flash-fr-en|-", "prov:at-the-cafe|flash-fr-en|-", "prov:lyon-01-moving-in|flash-en-fr|-",
+    "prov:cafe-03-the-nephew|dlg-quiz|-", "prov:cafe-03-the-nephew|flash-fr-en|x", "prov:__proto__|flash-fr-en|-",
+    "prov:Bad|flash-fr-en|-", "prov:nope-not-here|flash-fr-en|-"].forEach(function (k) { raw.stats[k] = clone(st); });
+  assert.deepEqual(Object.keys(STORE.sanitize(raw).stats), ["prov:cafe-03-the-nephew|flash-fr-en|-"]);
+  var bare = loadFull(null, false).sanitize(raw);
+  assert.deepEqual(Object.keys(bare.stats).sort(), ["prov:at-the-cafe|flash-fr-en|-", "prov:cafe-03-the-nephew|flash-fr-en|-",
+    "prov:lyon-01-moving-in|flash-en-fr|-", "prov:nope-not-here|flash-fr-en|-"], "shape only without the data");
+  raw.settings.selectedProverbActs = [3, 1, 3, 0, 5, 2.5, "2", 4];
+  assert.deepEqual(STORE.sanitize(raw).settings.selectedProverbActs, [1, 3, 4]);
+  raw.settings.selectedProverbActs = "1,2";
+  assert.equal("selectedProverbActs" in STORE.sanitize(raw).settings, false);
+  raw.settings.selectedProverbActs = [];
+  assert.deepEqual(STORE.sanitize(raw).settings.selectedProverbActs, []);
+});
+test("café storage: export → parseImport keeps lastAt, prov: stats and selectedProverbActs; an export without them imports with defaults", function () {
+  var STORE = loadFull();
+  var state = cafeState(STORE);
+  var back = STORE.parseImport(STORE.exportText(state, 1760780000000));
+  assert.equal(back.ok, true);
+  assert.deepEqual(back.state, state);
+  var plain = STORE.sanitize(clone(PRE_DLG));
+  var b2 = STORE.parseImport(STORE.exportText(plain, 1760780000000));
+  assert.equal(b2.ok, true);
+  assert.deepEqual(b2.state, plain);
+  assert.equal("selectedProverbActs" in b2.state.settings, false);
 });

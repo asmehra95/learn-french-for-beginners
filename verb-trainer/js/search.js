@@ -243,7 +243,9 @@
      summary and scene 40. Same scoring rule as the expressions. Story episodes (records with a series) also
      match the series titles and the story keywords at 85, and carry series, episode, total and seriesTitleFr. */
   var DLG_GLOBAL_KEYWORDS = ["dialogue", "dialogues", "conversation", "conversations", "role-play", "role play"];
-  var DLG_STORY_KEYWORDS = ["story", "stories", "histoire", "episode", "épisode", "la lettre de lyon"];
+  // each episode also gets its own series' titles (so one story's title never matches the other's episodes)
+  var DLG_STORY_KEYWORDS = ["story", "stories", "histoire", "episode", "épisode"];
+  var DLG_PROVERB_KEYWORDS = ["proverbe", "proverbes", "proverb", "proverbs", "sagesse", "sagesse du jour", "saying"];
   function buildDialogueDocs(dd) {
     var docs = [];
     var seriesById = {}, totals = {};
@@ -264,6 +266,15 @@
       field(d.summary + " " + d.scene, 40, "scene");
       var ser = d.series ? seriesById[d.series] || null : null;
       if (ser) [ser.titleFr, ser.title].concat(DLG_STORY_KEYWORDS).forEach(function (w) { field(w, 85, "keyword"); });
+      // the episode's Sagesse du jour: its French 80, English equivalent 75, literal and meaning 50
+      var pv = d.series && d.proverb ? d.proverb : null;
+      if (pv) {
+        DLG_PROVERB_KEYWORDS.forEach(function (w) { field(w, 85, "keyword"); });
+        field(pv.fr, 80, "proverb", pv.fr);
+        if (pv.englishEquivalent) field(pv.englishEquivalent, 75, "proverb", pv.fr);
+        field(pv.literal, 50, "proverb", pv.fr);
+        field(pv.meaning, 50, "proverb", pv.fr);
+      }
       var doc = { id: d.id, title: d.title, titleFr: d.titleFr, level: d.level,
         speakers: (d.speakers || []).map(function (sp) { return sp.name; }), href: "#dialogues/" + d.id, order: i, fields: fields };
       if (d.series) {
@@ -289,7 +300,7 @@
       if (!best) return;
       var kind = best.field.kind;
       var hit = { id: doc.id, title: doc.title, titleFr: doc.titleFr, level: doc.level, speakers: doc.speakers, href: doc.href,
-        score: best.score, matchDetail: best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order };
+        score: best.score, matchDetail: kind === "proverb" ? "proverb: « " + best.field.fr + " »" : best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order };
       if (doc.series) { hit.series = doc.series; hit.episode = doc.episode; hit.total = doc.total; hit.seriesTitleFr = doc.seriesTitleFr; }
       out.push(hit);
     });

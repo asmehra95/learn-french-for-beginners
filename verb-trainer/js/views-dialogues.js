@@ -22,8 +22,8 @@
   var printing = false;
   var PDF_HREF = "reference/french-dialogues.pdf";
   var MD_HREF = "reference/french-dialogues.md";
-  var STORY_PDF_HREF = "reference/la-lettre-de-lyon.pdf";
-  var STORY_MD_HREF = "reference/la-lettre-de-lyon.md";
+  /* Each story series has its own printables: reference/<series id>.pdf / .md (tools/build-story.js). */
+  function storyHref(seriesId, ext) { return "reference/" + seriesId + "." + ext; }
   var focusStories = false;  // set by an episode's "All episodes" link: focus the Stories heading on the index
   var GAP_MS = 500;
 
@@ -105,7 +105,9 @@
           C.listenButton(line.fr, null, { compact: true, voice: sp.voice, who: sp.name })
         ]),
         el("p", { className: "dia-pron", text: line.pron }),
-        el("p", { className: "dia-en", text: line.en }),
+        // the emotion tag is part of the English layer: "Show English" hides both (story lines only)
+        line.emotion ? el("p", { className: "dia-en" }, [line.en, " ", el("span", { className: "dia-emotion", text: "(" + line.emotion + ")" })])
+          : el("p", { className: "dia-en", text: line.en }),
         el("span", { className: "dia-now", hidden: true, text: "Now playing" })
       ])
     ]);
@@ -133,8 +135,8 @@
     });
     return el("div", { className: "actions tables-toolbar" }, [
       print, key,
-      el("a", { className: "btn", href: story ? STORY_PDF_HREF : PDF_HREF }, [el("span", { text: "Printable PDF" })]),
-      el("a", { className: "btn", href: story ? STORY_MD_HREF : MD_HREF }, [el("span", { text: "Markdown" })])
+      el("a", { className: "btn", href: story ? storyHref(d.series, "pdf") : PDF_HREF }, [el("span", { text: "Printable PDF" })]),
+      el("a", { className: "btn", href: story ? storyHref(d.series, "md") : MD_HREF }, [el("span", { text: "Markdown" })])
     ]);
   }
   function statusText(d, b) {
@@ -235,8 +237,9 @@
       el("div", { className: "actions" }, [
         nx.dialogue ? el("a", { className: "btn btn-primary", href: "#dialogues/" + nx.dialogue.id }, [
           el("span", { text: verb + "Episode " + nx.dialogue.episode + " · " + nx.dialogue.title }), C.UI.icon("arrow-right")]) : null,
-        el("a", { className: "text-link", href: STORY_PDF_HREF, text: "Story PDF" }),
-        el("a", { className: "text-link", href: STORY_MD_HREF, text: "Markdown" })
+        // The name starts with the visible text and adds the series, so the two cards' links stay unique in a links list.
+        el("a", { className: "text-link", href: storyHref(ser.id, "pdf"), "aria-label": "Story PDF: " + ser.titleFr, text: "Story PDF" }),
+        el("a", { className: "text-link", href: storyHref(ser.id, "md"), "aria-label": "Markdown: " + ser.titleFr, text: "Markdown" })
       ])
     ];
     (ser.acts || []).forEach(function (act) {
@@ -321,6 +324,7 @@
       renderListen(d, modeSection);
       art.appendChild(vocabSection(d));
       art.appendChild(noticeSection(d));
+      if (d.proverb) art.appendChild(proverbSection(d));
     } else if (mode === "roleplay") {
       renderRolePlay(d, modeSection);
     } else {
@@ -374,7 +378,7 @@
         else if (st === "idle") status.textContent = "Stopped.";
         else if (st === "finished") {
           status.textContent = "Finished.";
-          DLG.markListened(state(), d.id, today());
+          DLG.markListened(state(), d.id, today(), Date.now());
           C.save();
         }
       }
@@ -469,6 +473,22 @@
         ]);
       })),
       t ? el("p", null, ["See the table: ", el("a", { href: "#tables/" + t.categoryId + "/" + n.table, text: t.title })]) : null
+    ]);
+  }
+
+  /* Sagesse du jour: the episode's proverb card (story series with proverbs only; default voice). */
+  function proverbSection(d) {
+    var p = d.proverb;
+    return el("section", { className: "dia-proverb", "aria-labelledby": "dia-proverb-h" }, [
+      el("h4", { id: "dia-proverb-h", text: "Sagesse du jour" }),
+      el("p", { className: "dia-proverb-fr" }, [
+        el("strong", { lang: "fr", text: "« " + p.fr + " »" }), " ",
+        C.listenButton(p.fr, null, { compact: false, who: "the proverb" })
+      ]),
+      el("p", { className: "pron", text: p.respelling }),
+      el("p", null, [el("span", { className: "ref-label", text: "Literally: " }), p.literal]),
+      el("p", null, [el("span", { className: "ref-label", text: "Meaning: " }), p.meaning]),
+      p.englishEquivalent ? el("p", null, [el("span", { className: "ref-label", text: "English equivalent: " }), p.englishEquivalent]) : null
     ]);
   }
 
@@ -779,7 +799,7 @@
     var pct = learnerTurns ? Math.round((100 * correctTurns) / learnerTurns) : 0;
     if (!run.summary) {
       run.summary = true;
-      DLG.recordRolePlay(state(), d.id, run.role, pct, today());
+      DLG.recordRolePlay(state(), d.id, run.role, pct, today(), Date.now());
       C.save();
     }
     var st = state();
@@ -839,7 +859,7 @@
       onNext: function () { s.current = null; C.SESSION.resetUi(s); renderQuizItem(s, true); },
       onDone: function () {
         var pct = s.length ? Math.round((100 * s.correct) / s.length) : 0;
-        DLG.recordQuiz(state(), d.id, pct, today());
+        DLG.recordQuiz(state(), d.id, pct, today(), Date.now());
         C.save();
         var st = state();
         var slot = $("diaq-summary");

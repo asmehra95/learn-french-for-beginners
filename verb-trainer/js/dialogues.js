@@ -15,6 +15,12 @@
   var LINE_RE = /^l\d{1,2}$/;
   var LEVELS = ["A1", "A2", "B1"];
   var PRON_RE = /^[A-Za-z \-\/'(),.…‿]+$/;
+  // line.emotion (optional; story series use it on every line or on none)
+  var EMOTIONS = ["neutral", "amused", "teasing", "curious", "surprised", "worried",
+    "sad", "annoyed", "relieved", "moved", "proud", "hopeful"];
+  // episode.proverb (optional; story series only, on every episode or on none)
+  var PROVERB_KEYS = ["fr", "respelling", "literal", "meaning", "englishEquivalent"];
+  var PROVERB_MEANING_MAX = 140;
   var hasOwn = Object.prototype.hasOwnProperty;
   function own(o, k) { return !!o && hasOwn.call(o, k); }
 
@@ -89,7 +95,7 @@
     var ds = (data && data.dialogues) || [];
     var ids = {}, numbers = {};
     if (!Array.isArray(ds)) return ["dialogues: not an array"];
-    var seriesMap = {}, bySeries = {};
+    var seriesMap = {}, bySeries = {}, emoInfo = {}, proverbFr = {};
     if (own(data, "series")) {
       if (!Array.isArray(data.series)) errs.push("series: not an array");
       else data.series.forEach(function (s, si) {
@@ -168,7 +174,7 @@
       });
       // lines
       var lines = Array.isArray(d.lines) ? d.lines : [];
-      var lineIds = {}, perSpeaker = {};
+      var lineIds = {}, perSpeaker = {}, emoLines = 0;
       if (lines.length < 6 || lines.length > 20) err("lines", "6-20 lines");
       lines.forEach(function (l, i) {
         var lid = l && LINE_RE.test(String(l.id)) ? l.id : "lines[" + i + "]";
@@ -178,6 +184,10 @@
         else perSpeaker[l.speaker] = (perSpeaker[l.speaker] || 0) + 1;
         ["fr", "pron", "en"].forEach(function (k) { if (!str(l[k])) err(lid + "." + k, "must be a non-empty string"); });
         if (str(l.fr) && l.fr.indexOf("‿") !== -1) err(lid + ".fr", "contains ‿");
+        if (own(l, "emotion")) {
+          if (EMOTIONS.indexOf(l.emotion) === -1) err(lid + ".emotion", "must be one of " + EMOTIONS.join(", "));
+          emoLines++;
+        }
         checkPron(l.pron, lid + ".pron", err);
         var acc = l.accept;
         if (!Array.isArray(acc) || acc.length < 1 || acc.length > 12) { err(lid + ".accept", "1-12 strings"); return; }
@@ -192,6 +202,7 @@
         });
       });
       Object.keys(spIds).forEach(function (sid) { if ((perSpeaker[sid] || 0) < 2) err("speakers." + sid, "needs at least 2 lines"); });
+      if (ser && hasE && Number.isInteger(d.episode)) emoInfo[d.id] = { withEmotion: emoLines, lines: lines.length };
       // vocab
       var vocab = Array.isArray(d.vocab) ? d.vocab : [];
       if (vocab.length < 6 || vocab.length > 10) err("vocab", "6-10 items");
@@ -253,6 +264,26 @@
           else if (refs && refs.tableById && !own(refs.tableById, nt.table)) err("notice.table", "unknown table " + nt.table);
         }
       }
+      // proverb (Sagesse du jour; optional, story series only)
+      if (own(d, "proverb")) {
+        var pv = d.proverb;
+        if (!hasS) err("proverb", "only story episodes have a proverb");
+        if (!pv || typeof pv !== "object" || Array.isArray(pv)) err("proverb", "must be an object");
+        else {
+          Object.keys(pv).forEach(function (k) { if (PROVERB_KEYS.indexOf(k) === -1) err("proverb." + k, "unknown key"); });
+          ["fr", "respelling", "literal", "meaning"].forEach(function (k) { if (!str(pv[k])) err("proverb." + k, "must be a non-empty string"); });
+          if (own(pv, "englishEquivalent") && !str(pv.englishEquivalent)) err("proverb.englishEquivalent", "must be absent or a non-empty string");
+          if (str(pv.fr) && pv.fr.indexOf("‿") !== -1) err("proverb.fr", "contains ‿");
+          if (str(pv.fr) && /[«»]/.test(pv.fr)) err("proverb.fr", "contains « or »");
+          checkPron(pv.respelling, "proverb.respelling", err);
+          if (str(pv.meaning) && pv.meaning.length > PROVERB_MEANING_MAX) err("proverb.meaning", "longer than " + PROVERB_MEANING_MAX + " characters");
+          if (str(pv.fr)) {
+            var pk = L.normalize(pv.fr);
+            if (own(proverbFr, pk)) err("proverb.fr", "duplicate of the proverb in " + proverbFr[pk]);
+            else proverbFr[pk] = did;
+          }
+        }
+      }
     });
     // per series: episodes 1..N, no gaps or duplicates, in number order, level = the act's level
     Object.keys(bySeries).forEach(function (sid) {
@@ -271,6 +302,16 @@
       for (var i = 0; i < byEp.length; i++) {
         if (byEp[i] !== byNum[i]) { errs.push("series/" + sid + "/episodes: episode order differs from number order in " + sid); break; }
       }
+      // all or nothing per series: emotions on every line, a proverb on every episode
+      var anyEmo = recs.some(function (d) { return emoInfo[d.id] && emoInfo[d.id].withEmotion > 0; });
+      if (anyEmo) recs.forEach(function (d) {
+        var e = emoInfo[d.id];
+        if (e && e.withEmotion !== e.lines) errs.push(d.id + "/lines: " + (e.lines - e.withEmotion) + " line(s) without an emotion in " + sid + ", which uses emotions");
+      });
+      var anyProv = recs.some(function (d) { return own(d, "proverb"); });
+      if (anyProv) recs.forEach(function (d) {
+        if (!own(d, "proverb")) errs.push(d.id + "/proverb: missing; every episode of " + sid + " needs a proverb");
+      });
     });
     return errs;
   }
@@ -333,6 +374,7 @@
       (d.lines || []).forEach(function (l) { out.push({ text: l.fr, voice: voiceOf(d, l.speaker), category: "dialogue-line" }); });
       (d.vocab || []).forEach(function (v) { out.push({ text: v.fr, voice: null, category: "dialogue-vocab" }); });
       ((d.notice && d.notice.examples) || []).forEach(function (x) { out.push({ text: x.fr, voice: null, category: "dialogue-example" }); });
+      if (d.proverb && str(d.proverb.fr)) out.push({ text: d.proverb.fr, voice: null, category: "dialogue-proverb" });
     });
     return out;
   }
@@ -344,18 +386,51 @@
     if (!own(state.dialogues, did)) state.dialogues[did] = { listened: false, quizBest: -1, quizAttempts: 0, roles: {}, lastDate: "" };
     return state.dialogues[did];
   }
-  function markListened(state, did, day) { var r = record(state, did); r.listened = true; r.lastDate = String(day || ""); return r; }
-  function recordQuiz(state, did, pct, day) {
+  /* `now` (optional, ms epoch) stamps r.lastAt so Home can tell which story series was used last. */
+  function stamp(r, now) { if (Number.isInteger(now) && now > 0) r.lastAt = now; }
+  function markListened(state, did, day, now) { var r = record(state, did); r.listened = true; r.lastDate = String(day || ""); stamp(r, now); return r; }
+  function recordQuiz(state, did, pct, day, now) {
     var r = record(state, did);
     r.quizBest = Math.max(r.quizBest, pctOf(pct)); r.quizAttempts += 1; r.lastDate = String(day || "");
+    stamp(r, now);
     return r;
   }
-  function recordRolePlay(state, did, speakerId, pct, day) {
+  function recordRolePlay(state, did, speakerId, pct, day, now) {
     var r = record(state, did);
     var cur = own(r.roles, speakerId) ? r.roles[speakerId] : { best: 0, attempts: 0 };
     r.roles[speakerId] = { best: cur.attempts ? Math.max(cur.best, pctOf(pct)) : pctOf(pct), attempts: cur.attempts + 1 };
     r.lastDate = String(day || "");
+    stamp(r, now);
     return r;
+  }
+  /* The story series used most recently: the greatest lastAt (or the start of lastDate's day) over its episodes.
+     Ties and no activity fall back to the first series with a started episode, then to the first series. */
+  function activityOf(rec) {
+    if (!rec) return 0;
+    if (Number.isInteger(rec.lastAt) && rec.lastAt > 0) return rec.lastAt;
+    var t = rec.lastDate ? Date.parse(rec.lastDate) : NaN;
+    return isFinite(t) && t > 0 ? t : 0;
+  }
+  function activeSeries(state, data) {
+    var list = seriesList(data).filter(function (s) { return episodes(data, s.id).length; });
+    if (!list.length) return seriesList(data)[0] || null;
+    var recs = (state && state.dialogues) || {};
+    var best = null, bestAt = 0, tie = false, firstStarted = null;
+    list.forEach(function (s) {
+      var at = 0, any = false;
+      episodes(data, s.id).forEach(function (d) {
+        var rec = own(recs, d.id) ? recs[d.id] : null;
+        if (isStarted(rec)) any = true;
+        at = Math.max(at, activityOf(rec));
+      });
+      if (any && !firstStarted) firstStarted = s;
+      if (at > bestAt) { best = s; bestAt = at; tie = false; } else if (at && at === bestAt) tie = true;
+    });
+    if (best && !tie) return best;
+    return firstStarted || list[0];
+  }
+  function hasProverbs(data, seriesId) {
+    return episodes(data, seriesId).some(function (d) { return !!d.proverb; });
   }
   function emptyStat() { return { answered: 0, correct: 0, mastered: 0, total: 0 }; }
   function stats(state, data) {
@@ -483,6 +558,7 @@
     MODE: MODE,
     KEY_RE: KEY_RE,
     PRON_RE: PRON_RE,
+    EMOTIONS: EMOTIONS,
     index: index,
     everyday: everyday,
     seriesList: seriesList,
@@ -491,6 +567,8 @@
     episodeNav: episodeNav,
     isStarted: isStarted,
     nextEpisode: nextEpisode,
+    activeSeries: activeSeries,
+    hasProverbs: hasProverbs,
     validate: validate,
     lineKey: lineKey,
     acceptKey: acceptKey,

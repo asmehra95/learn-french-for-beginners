@@ -63,10 +63,24 @@
     return it;
   }
 
+  function isProvKey(k) { return !!window.VT_PROV && window.VT_PROV.isKey(k); }
+
+  /* A proverb flashcard key ("prov:<dialogue>|flash-…|-"): a multiple-choice item from VT_PROV.choiceItem. */
+  function proverbItem(origKey) {
+    var D = C.DIALOGUES;
+    if (!window.VT_PROV || !D) return null;
+    var it = window.VT_PROV.choiceItem(D, origKey, Math.random);
+    if (!it) return null;
+    var el = C.UI.el, g = it.legend;
+    it.legendParts = [g.before, el("strong", { lang: g.strongLang, text: g.strong }), g.after];
+    return it;
+  }
+
   /* Map an original key to an item per the §11.2 table, recorded against that key (AC13). null = unbuildable. */
   function buildItem(origKey) {
     if (isExprKey(origKey)) return expressionItem(origKey);
     if (isDlgKey(origKey)) return dialogueItem(origKey);
+    if (isProvKey(origKey)) return proverbItem(origKey);
     var k = parseKey(origKey);
     var verb = C.verbsById[k.id];
     if (!verb) return null;
@@ -107,7 +121,7 @@
     return function () {
       var keys;
       if (r.scope === "session") {
-        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k) || isDlgKey(k); });
+        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k) || isDlgKey(k) || isProvKey(k); });
       } else {
         keys = C.LEARN.mistakesDeck(C.state(), C.DATA, C.EXPRESSIONS, C.DIALOGUES);
         if (r.lessonId != null) {

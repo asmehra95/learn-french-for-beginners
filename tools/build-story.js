@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-/* Builds the story printable, La Lettre de Lyon, as Markdown (and, with --html, a print HTML for the PDF)
-   from the story records in verb-trainer/js/dialogues-data.js (the records with series "la-lettre-de-lyon").
-     node tools/build-story.js                 writes la-lettre-de-lyon.md and
-                                               verb-trainer/reference/la-lettre-de-lyon.md (identical)
-     node tools/build-story.js --html out.html also writes the print HTML (print it to PDF with headless
-                                               Chrome --print-to-pdf, then strip the PDF metadata)
+/* Builds a story printable (one per series in verb-trainer/js/dialogues-data.js) as Markdown and, with --html,
+   a print HTML for the PDF. The default series is La Lettre de Lyon.
+     node tools/build-story.js [--series <id>] writes <id>.md and verb-trainer/reference/<id>.md (identical)
+     node tools/build-story.js --all           writes the Markdown of every series
+     node tools/build-story.js --series <id> --html out.html
+                                               also writes that series' print HTML (print it to PDF with
+                                               headless Chrome --print-to-pdf, then strip the PDF metadata)
        [--print-images DIR]                    use DIR/<id>.jpg for the pictures (generate.py printjpg)
+   Pictures appear only for the series story-images.js illustrates. Series whose lines carry emotion tags print
+   them in brackets after the English; series with proverbs end each episode with its Sagesse du jour card and
+   add a proverb index after the answer key.
    A lighter layout than tools/build-dialogues.js: each line shows the speaker, the French and the English;
    respellings appear only in each episode's word list; questions and the answer key are in an appendix.
    Reuses loadSite() from build-dialogues.js and the key, licence, CSS and escaping of build-grammar-tables.js.
@@ -18,20 +22,28 @@ var B = require("./build-dialogues.js");
 var G = require("./build-grammar-tables.js");
 var REPO = path.join(__dirname, "..");
 var SITE = path.join(REPO, "verb-trainer");
-var SERIES = "la-lettre-de-lyon";
+var DEFAULT_SERIES = "la-lettre-de-lyon";
 var LETTERS = ["a", "b", "c", "d"];
 
-function check(site) {
+function check(site, seriesId) {
   var errs = site.DLG.validate(site.data, site.refs);
   if (errs.length) throw new Error("dialogues-data.js is invalid:\n" + errs.join("\n"));
-  if (!site.DLG.seriesById(site.data, SERIES) || !site.DLG.episodes(site.data, SERIES).length) throw new Error("no " + SERIES + " episodes");
+  if (!site.DLG.seriesById(site.data, seriesId) || !site.DLG.episodes(site.data, seriesId).length) throw new Error("no " + seriesId + " episodes");
 }
-function story(site) {
-  var ser = site.DLG.seriesById(site.data, SERIES);
-  var eps = site.DLG.episodes(site.data, SERIES);
-  return { ser: ser, eps: eps, acts: ser.acts.map(function (a) {
-    return { act: a, eps: eps.filter(function (d) { return d.act === a.number; }) };
-  }).filter(function (g) { return g.eps.length; }) };
+function story(site, seriesId) {
+  var ser = site.DLG.seriesById(site.data, seriesId);
+  var eps = site.DLG.episodes(site.data, seriesId);
+  return { ser: ser, eps: eps,
+    emotions: eps.some(function (d) { return d.lines.some(function (l) { return !!l.emotion; }); }),
+    proverbs: eps.some(function (d) { return !!d.proverb; }),
+    acts: ser.acts.map(function (a) {
+      return { act: a, eps: eps.filter(function (d) { return d.act === a.number; }) };
+    }).filter(function (g) { return g.eps.length; }) };
+}
+/* "A2–B1": the lowest and highest act levels (one level alone when they agree). */
+function levelRange(ser) {
+  var lv = ser.acts.map(function (a) { return a.level; }).sort();
+  return lv[0] === lv[lv.length - 1] ? lv[0] : lv[0] + "–" + lv[lv.length - 1];
 }
 function speaker(d, id) { return d.speakers.filter(function (s) { return s.id === id; })[0]; }
 /* The people: every speaker id once, with the role of their first episode and the episodes they speak in. */
@@ -62,16 +74,18 @@ function epHeading(d) { return "Episode " + d.episode + " · " + d.titleFr + " (
 function slug(text) { return text.toLowerCase().replace(/[^\p{L}\p{N} _-]/gu, "").replace(/ /g, "-"); }
 var HOW_TO_READ = "Each line gives the speaker and the French, then the English in italics. The respellings (English-style pronunciation, not IPA) are only in the word list at the end of each episode; **‿** marks a liaison there (*vous avez* = voo‿zah-vay). The questions for every episode and the answer key are at the end.";
 
+var EMOTION_NOTE = "The word in brackets after the English, such as *(teasing)*, says how the line is said.";
 /* ---------- Markdown ---------- */
-function markdown(site) {
+function markdown(site, seriesId) {
+  seriesId = seriesId || DEFAULT_SERIES;
   site = site || B.loadSite();
-  check(site);
-  var S = story(site);
+  check(site, seriesId);
+  var S = story(site, seriesId);
   var out = [];
   out.push("<!-- Generated from verb-trainer/js/dialogues-data.js by tools/build-story.js. Do not edit by hand. -->");
   out.push("# " + S.ser.titleFr, "", "*" + S.ser.title + "*", "");
   out.push(S.ser.summary + " " + S.ser.intro, "");
-  out.push("## How to read", "", HOW_TO_READ, "");
+  out.push("## How to read", "", HOW_TO_READ + (S.emotions ? " " + EMOTION_NOTE : ""), "");
   out.push("### Pronunciation key", "");
   out = out.concat(G.KEY_MD);
   out.push("", G.TIPS, "");
@@ -90,12 +104,18 @@ function markdown(site) {
       out.push("### " + epHeading(d), "");
       out.push("*" + d.scene + "*", "");
       d.lines.forEach(function (l) {
-        out.push("**" + speaker(d, l.speaker).name + ":** " + l.fr, "> *" + l.en + "*", "");
+        out.push("**" + speaker(d, l.speaker).name + ":** " + l.fr, "> *" + l.en + "*" + (l.emotion ? " (" + l.emotion + ")" : ""), "");
       });
       out.push("#### Words from this episode", "");
       d.vocab.forEach(function (v) { out.push("- **" + v.fr + "** (" + v.pron + ") — " + v.en); });
       out.push("", "#### Notice: " + d.notice.title, "");
       out.push(d.notice.text + (d.notice.table ? " " + seeTable(site, d) : ""), "");
+      if (d.proverb) {
+        var p = d.proverb;
+        out.push("#### Sagesse du jour", "", "**« " + p.fr + " »** (" + p.respelling + ")", "");
+        out.push("*Literally:* " + p.literal, "", "*Meaning:* " + p.meaning, "");
+        if (p.englishEquivalent) out.push("*English equivalent:* " + p.englishEquivalent, "");
+      }
       out.push("---", "");
     });
   });
@@ -113,6 +133,10 @@ function markdown(site) {
   });
   out.push("## Answer key", "");
   answers.forEach(function (a) { out.push("- " + a); });
+  if (S.proverbs) {
+    out.push("", "## Proverb index", "");
+    S.eps.forEach(function (d) { if (d.proverb) out.push("- Episode " + d.episode + " · « " + d.proverb.fr + " » — " + d.proverb.meaning); });
+  }
   out.push("", "---", "");
   out.push(G.LICENCE + ". Part of *Learn French for Beginners*.");
   return out.join("\n") + "\n";
@@ -137,6 +161,10 @@ var CSS = G.CSS + "\n" + [
   ".cover { display: block; width: 7.5cm; height: auto; margin: 12pt auto 8pt; } .credit { font-size: 8pt; color: #555; }",
   ".ep-img { display: block; width: 100%; height: auto; max-height: 8.6cm; object-fit: contain; margin: 0 0 6pt; break-inside: avoid; }"
 ].join("\n");
+/* Only for series with emotion tags / proverbs, so the other printables stay byte-identical. */
+var CSS_EMOTION = "\np.ln .emo { color: #555; font-size: 9pt; }";
+var CSS_PROVERB = "\n.box.proverb { border-left-color: #8a5a00; } .box.proverb .fr { font-size: 11pt; }" +
+  "\n.proverbs-index { page-break-before: always; } .proverbs-index ul { padding-left: 14pt; } .proverbs-index li { margin: 0 0 3pt; }";
 
 /* Story illustrations (verb-trainer/js/story-images.js), inlined as data: URIs so the print HTML works from any
    folder and the PDF carries no file paths. Episodes without an entry get no picture.
@@ -153,19 +181,22 @@ function imgTag(rec, cls, alt) {
     "\" height=\"" + rec.height + "\" alt=\"" + G.esc(alt) + "\">";
 }
 
-function printHtml(site) {
+function printHtml(site, seriesId) {
+  seriesId = seriesId || DEFAULT_SERIES;
   site = site || B.loadSite();
-  check(site);
+  check(site, seriesId);
   var esc = G.esc;
-  var S = story(site);
+  var S = story(site, seriesId);
+  var pics = !!IMAGES && IMAGES.series === seriesId;   // only the illustrated series gets the cover, credit and pictures
   var h = [];
-  h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + "</style></head><body>");
+  h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + (S.emotions ? CSS_EMOTION : "") + (S.proverbs ? CSS_PROVERB : "") + "</style></head><body>");
   h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1 lang=\"fr\">" + esc(S.ser.titleFr) + "</h1>" +
-    "<p class=\"sub\">A story in " + S.eps.length + " episodes · A2–B1</p>" +
-    (IMAGES.cover ? imgTag(IMAGES.cover, "cover", IMAGES.cover.alt) : "") +
-    "<p class=\"lic\">" + esc(G.LICENCE) + "</p><p class=\"credit\">" + esc(IMAGES.credit) + "</p></section>");
+    "<p class=\"sub\">A story in " + S.eps.length + " episodes · " + esc(levelRange(S.ser)) + "</p>" +
+    (pics && IMAGES.cover ? imgTag(IMAGES.cover, "cover", IMAGES.cover.alt) : "") +
+    "<p class=\"lic\">" + esc(G.LICENCE) + "</p>" + (pics ? "<p class=\"credit\">" + esc(IMAGES.credit) + "</p>" : "") + "</section>");
   h.push("<section class=\"front\"><h2>" + esc(S.ser.title) + "</h2><p class=\"intro\">" + esc(S.ser.summary + " " + S.ser.intro) + "</p>");
-  h.push("<h2>How to read</h2><p>Each line gives the speaker and the French, then the English in italics. The respellings (English-style pronunciation, not IPA) are only in the word list at the end of each episode; <b>‿</b> marks a liaison there (<em>vous avez</em> = voo‿zah-vay). The questions for every episode and the answer key are at the end.</p>");
+  h.push("<h2>How to read</h2><p>Each line gives the speaker and the French, then the English in italics. The respellings (English-style pronunciation, not IPA) are only in the word list at the end of each episode; <b>‿</b> marks a liaison there (<em>vous avez</em> = voo‿zah-vay). The questions for every episode and the answer key are at the end." +
+    (S.emotions ? " The word in brackets after the English, such as <i>(teasing)</i>, says how the line is said." : "") + "</p>");
   h.push("<table class=\"key\"><thead><tr><th>Spelling</th><th>Sounds like</th></tr></thead><tbody>");
   // keyRows are VERB_DATA.pronunciationKey: generator-escaped HTML from the verb guide, inserted as is.
   site.keyRows.concat([G.LIAISON_HTML]).forEach(function (k) { h.push("<tr><td>" + k.spellingHtml + "</td><td>" + k.soundsLikeHtml + "</td></tr>"); });
@@ -186,17 +217,24 @@ function printHtml(site) {
       "<p class=\"lvl\">Level " + esc(g.act.level) + "</p>");
     g.eps.forEach(function (d) {
       h.push("<section class=\"ep\" id=\"e-" + esc(d.id) + "\"><h3>Episode " + d.episode + " · <span lang=\"fr\">" + esc(d.titleFr) + "</span> (" + esc(d.title) + ")</h3>");
-      var pic = IMAGES.episodes[String(d.episode)];
+      var pic = pics ? IMAGES.episodes[String(d.episode)] : null;
       if (pic) h.push(imgTag(pic, "ep-img", pic.alt));
       h.push("<p class=\"scene\">" + esc(d.scene) + "</p>");
       d.lines.forEach(function (l) {
-        h.push("<p class=\"ln\"><b>" + esc(speaker(d, l.speaker).name) + "</b> <span lang=\"fr\">" + esc(l.fr) + "</span><br><i>" + esc(l.en) + "</i></p>");
+        h.push("<p class=\"ln\"><b>" + esc(speaker(d, l.speaker).name) + "</b> <span lang=\"fr\">" + esc(l.fr) + "</span><br><i>" + esc(l.en) + "</i>" +
+          (l.emotion ? " <span class=\"emo\">(" + esc(l.emotion) + ")</span>" : "") + "</p>");
       });
       h.push("<div class=\"box\"><h4>Words from this episode</h4><ul>" + d.vocab.map(function (v) {
         return "<li><b lang=\"fr\">" + esc(v.fr) + "</b> <span class=\"pron\">(" + esc(v.pron) + ")</span> — " + esc(v.en) + "</li>";
       }).join("") + "</ul>");
       h.push("<h4>Notice: " + esc(d.notice.title) + "</h4><p>" + esc(d.notice.text) + "</p>" +
-        (d.notice.table ? "<p class=\"also\">" + esc(seeTable(site, d)) + "</p>" : "") + "</div></section>");
+        (d.notice.table ? "<p class=\"also\">" + esc(seeTable(site, d)) + "</p>" : "") + "</div>" + (d.proverb ? "" : "</section>"));
+      if (d.proverb) {
+        var p = d.proverb;
+        h.push("<div class=\"box proverb\"><h4>Sagesse du jour</h4><p class=\"fr\"><b lang=\"fr\">« " + esc(p.fr) + " »</b> <span class=\"pron\">(" + esc(p.respelling) + ")</span></p>" +
+          "<p><i>Literally:</i> " + esc(p.literal) + "</p><p><i>Meaning:</i> " + esc(p.meaning) + "</p>" +
+          (p.englishEquivalent ? "<p><i>English equivalent:</i> " + esc(p.englishEquivalent) + "</p>" : "") + "</div></section>");
+      }
     });
     h.push("</section>");
   });
@@ -213,6 +251,11 @@ function printHtml(site) {
   });
   h.push("</section>");
   h.push("<section class=\"answers\"><h2>Answer key</h2><ul>" + answers.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join("") + "</ul>");
+  if (S.proverbs) {
+    h.push("</section><section class=\"proverbs-index\"><h2>Proverb index</h2><ul>" + S.eps.filter(function (d) { return !!d.proverb; }).map(function (d) {
+      return "<li>Episode " + d.episode + " · <span lang=\"fr\">« " + esc(d.proverb.fr) + " »</span> — " + esc(d.proverb.meaning) + "</li>";
+    }).join("") + "</ul>");
+  }
   h.push("<p class=\"also\">" + esc(G.LICENCE) + ". Part of <i>Learn French for Beginners</i>.</p></section>");
   h.push("</body></html>");
   return h.join("\n") + "\n";
@@ -220,17 +263,26 @@ function printHtml(site) {
 
 if (require.main === module) {
   var site = B.loadSite();
-  var md = markdown(site);
-  var html = null;
-  var i = process.argv.indexOf("--html");
-  var pi = process.argv.indexOf("--print-images");
-  if (pi !== -1 && process.argv[pi + 1]) printImages = path.resolve(process.argv[pi + 1]);
-  if (i !== -1 && process.argv[i + 1]) html = printHtml(site);
-  var targets = [path.join(REPO, "la-lettre-de-lyon.md"), path.join(SITE, "reference", "la-lettre-de-lyon.md")];
+  var argv = process.argv;
+  var si = argv.indexOf("--series");
+  var all = argv.indexOf("--all") !== -1;
+  var i = argv.indexOf("--html");
+  var pi = argv.indexOf("--print-images");
+  if (si !== -1 && !argv[si + 1]) throw new Error("--series needs a series id");
+  if (all && i !== -1) throw new Error("--html needs a single series (use --series <id>)");
+  var ids = all ? site.DLG.seriesList(site.data).map(function (s) { return s.id; }) : [si !== -1 ? argv[si + 1] : DEFAULT_SERIES];
+  if (pi !== -1 && argv[pi + 1]) printImages = path.resolve(argv[pi + 1]);
   fs.mkdirSync(path.join(SITE, "reference"), { recursive: true });
-  targets.forEach(function (f) { fs.writeFileSync(f, md); console.log("wrote " + path.relative(REPO, f)); });
-  if (html) {
-    fs.writeFileSync(path.resolve(process.argv[i + 1]), html);
+  ids.forEach(function (id) {
+    if (!/^[a-z0-9-]{1,40}$/.test(id)) throw new Error("bad series id " + id);
+    var md = markdown(site, id);
+    [path.join(REPO, id + ".md"), path.join(SITE, "reference", id + ".md")].forEach(function (out) {
+      fs.writeFileSync(out, md);
+      console.log("wrote " + path.relative(REPO, out));
+    });
+  });
+  if (i !== -1 && argv[i + 1]) {
+    fs.writeFileSync(path.resolve(argv[i + 1]), printHtml(site, ids[0]));
     console.log("wrote print HTML");
   }
 }

@@ -664,6 +664,7 @@
     // Dialogue comprehension questions ("dlg:<dialogue>.<question>"), built inline so learn.js needs no dialogues.js.
     ((dlgData && dlgData.dialogues) || []).forEach(function (d) {
       (d.questions || []).forEach(function (q) { known["dlg:" + d.id + "." + q.id] = true; });
+      if (d.series && d.proverb) known["prov:" + d.id] = true;   // Proverbs deck ("prov:<dialogue>")
     });
     var stats = state.stats || {};
     return Object.keys(stats).filter(function (k) {
@@ -815,6 +816,11 @@
       }
       return info("browse", "lesson", { lessonId: bid, redirect: "#browse/lesson/" + bid });
     }
+    if (name === "flashcards" && seg[1] === "proverbs") {
+      // #flashcards/proverbs, #flashcards/proverbs/<act 1-4>; app.js checks the act has proverbs.
+      if (seg.length === 2) return info("flashcards", "proverbs", { act: null });
+      return seg.length === 3 && /^[1-9]$/.test(seg[2]) ? info("flashcards", "proverbs", { act: Number(seg[2]) }) : home;
+    }
     if (name === "flashcards" && seg[1] === "expressions") {
       // #flashcards/expressions, #flashcards/expressions/<themeId>; app.js checks the theme exists.
       if (seg.length === 2) return info("flashcards", "expressions", { themeId: null });
@@ -899,6 +905,11 @@
     if (item.expr) {
       var e = item.expr;
       return { french: e.fr, pronunciation: e.pron, audioKey: null, listenText: EXPR().speakText(e) };
+    }
+    if (item.prov) {
+      // proverb flashcards and Review items (proverbs.js): the proverb, its respelling, the default voice
+      var pv = item.prov.proverb;
+      return { french: pv.fr, pronunciation: pv.respelling, audioKey: null, listenText: pv.fr };
     }
     var verb = item.verb;
     if (item.kind === "choice" && item.listen) {
