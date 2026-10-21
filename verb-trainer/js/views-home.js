@@ -256,7 +256,8 @@
         if (nx && nx.dialogue) {
           var verbWord = nx.allStarted ? "Read again: " : nx.anyStarted ? "Continue: " : "Start: ";
           // The story cover (story-images.js) sits beside the link as a decorative thumbnail (alt "").
-          var SI = window.VT_STORY_IMAGES, cov = SI && SI.series === ser.id ? SI.cover : null;
+          var SI = window.VT_STORY_IMAGES, pics = SI && SI.series && Object.prototype.hasOwnProperty.call(SI.series, ser.id) ? SI.series[ser.id] : null;
+          var cov = pics ? pics.cover : null;
           storyP = el("p", { className: cov ? "dia-home-story" : null }, [
             cov ? el("img", { className: "dia-home-cover", src: cov.src, width: String(cov.width), height: String(cov.height), alt: "",
               loading: "lazy", decoding: "async" }) : null,

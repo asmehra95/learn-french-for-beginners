@@ -7,7 +7,7 @@
                                                also writes that series' print HTML (print it to PDF with
                                                headless Chrome --print-to-pdf, then strip the PDF metadata)
        [--print-images DIR]                    use DIR/<id>.jpg for the pictures (generate.py printjpg)
-   Pictures appear only for the series story-images.js illustrates. Series whose lines carry emotion tags print
+   Pictures appear only for the series story-images.js illustrates (series[<id>]). Series whose lines carry emotion tags print
    them in brackets after the English; series with proverbs end each episode with its Sagesse du jour card and
    add a proverb index after the answer key.
    A lighter layout than tools/build-dialogues.js: each line shows the speaker, the French and the English;
@@ -187,13 +187,15 @@ function printHtml(site, seriesId) {
   check(site, seriesId);
   var esc = G.esc;
   var S = story(site, seriesId);
-  var pics = !!IMAGES && IMAGES.series === seriesId;   // only the illustrated series gets the cover, credit and pictures
+  // Only an illustrated series (story-images.js series[<id>]) gets the credit, its pictures and its cover (if any).
+  var set = IMAGES && IMAGES.series && Object.prototype.hasOwnProperty.call(IMAGES.series, seriesId) ? IMAGES.series[seriesId] : null;
+  var pics = !!set;
   var h = [];
   h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + (S.emotions ? CSS_EMOTION : "") + (S.proverbs ? CSS_PROVERB : "") + "</style></head><body>");
   h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1 lang=\"fr\">" + esc(S.ser.titleFr) + "</h1>" +
     "<p class=\"sub\">A story in " + S.eps.length + " episodes · " + esc(levelRange(S.ser)) + "</p>" +
-    (pics && IMAGES.cover ? imgTag(IMAGES.cover, "cover", IMAGES.cover.alt) : "") +
-    "<p class=\"lic\">" + esc(G.LICENCE) + "</p>" + (pics ? "<p class=\"credit\">" + esc(IMAGES.credit) + "</p>" : "") + "</section>");
+    (pics && set.cover ? imgTag(set.cover, "cover", set.cover.alt) : "") +
+    "<p class=\"lic\">" + esc(G.LICENCE) + "</p>" + (pics ? "<p class=\"credit\">" + esc(set.credit) + "</p>" : "") + "</section>");
   h.push("<section class=\"front\"><h2>" + esc(S.ser.title) + "</h2><p class=\"intro\">" + esc(S.ser.summary + " " + S.ser.intro) + "</p>");
   h.push("<h2>How to read</h2><p>Each line gives the speaker and the French, then the English in italics. The respellings (English-style pronunciation, not IPA) are only in the word list at the end of each episode; <b>‿</b> marks a liaison there (<em>vous avez</em> = voo‿zah-vay). The questions for every episode and the answer key are at the end." +
     (S.emotions ? " The word in brackets after the English, such as <i>(teasing)</i>, says how the line is said." : "") + "</p>");
@@ -217,7 +219,7 @@ function printHtml(site, seriesId) {
       "<p class=\"lvl\">Level " + esc(g.act.level) + "</p>");
     g.eps.forEach(function (d) {
       h.push("<section class=\"ep\" id=\"e-" + esc(d.id) + "\"><h3>Episode " + d.episode + " · <span lang=\"fr\">" + esc(d.titleFr) + "</span> (" + esc(d.title) + ")</h3>");
-      var pic = pics ? IMAGES.episodes[String(d.episode)] : null;
+      var pic = pics ? set.episodes[String(d.episode)] || null : null;
       if (pic) h.push(imgTag(pic, "ep-img", pic.alt));
       h.push("<p class=\"scene\">" + esc(d.scene) + "</p>");
       d.lines.forEach(function (l) {

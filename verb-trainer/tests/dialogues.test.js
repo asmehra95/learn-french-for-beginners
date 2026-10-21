@@ -1239,7 +1239,7 @@ test("static: the café UI: emotion tag, Sagesse du jour card, per-series printa
   ['"Sagesse du jour"', '"dia-emotion"', "storyHref(", "proverbSection(", "Date.now()"].forEach(function (s) { assert.ok(src.indexOf(s) !== -1, s); });
   assert.ok(src.indexOf("la-lettre-de-lyon.pdf") === -1, "no hard-coded story PDF");
   var home = fs.readFileSync(path.join(ROOT, "js", "views-home.js"), "utf8");
-  assert.ok(home.indexOf("DLG.activeSeries(") !== -1 && home.indexOf("SI.series === ser.id") !== -1);
+  assert.ok(home.indexOf("DLG.activeSeries(") !== -1 && home.indexOf("SI.series[ser.id]") !== -1);
   var css = fs.readFileSync(path.join(ROOT, "css", "styles.css"), "utf8");
   assert.ok(/\.dia-emotion \{/.test(css) && /\.dia-proverb \{/.test(css));
 });
@@ -1258,7 +1258,10 @@ test("printables (café): both le-cafe-des-questions.md equal markdown(…, seri
   assert.ok(md.indexOf("CC BY-SA 4.0") !== -1);
   assert.ok(/^> \*.+\* \((teasing|curious|amused)\)$/m.test(md), "emotion tag after the English");
   var html = BS.printHtml(undefined, "le-cafe-des-questions");
-  assert.ok(html.indexOf("<img") === -1, "no pictures for a series without images");
+  // The café has episode pictures (story-images.js series["le-cafe-des-questions"]) but no cover.
+  var cafeEps = Object.keys(require("../js/story-images.js").series["le-cafe-des-questions"].episodes).length;
+  assert.equal((html.match(/<img /g) || []).length, cafeEps, "one picture per illustrated episode, no cover");
+  assert.equal((html.match(/<img class="ep-img" src="data:image\//g) || []).length, cafeEps);
   assert.ok(html.indexOf("A story in 20 episodes · A1–B1") !== -1);
   var pdf = fs.readFileSync(path.join(ROOT, "reference", "le-cafe-des-questions.pdf"));
   assert.equal(pdf.slice(0, 4).toString("latin1"), "%PDF");

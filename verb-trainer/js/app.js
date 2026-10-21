@@ -2464,8 +2464,10 @@
       ]));
     });
     // Story illustrations (js/story-images.js): separate terms from the CC BY-SA text.
-    var SI = window.VT_STORY_IMAGES;
-    if (SI && SI.cover) {
+    // One paragraph per illustrated series (VT_STORY_IMAGES.series), whether or not it has a cover.
+    var SIS = (window.VT_STORY_IMAGES && window.VT_STORY_IMAGES.series) || {};
+    var SI = SIS["la-lettre-de-lyon"];
+    if (SI) {
       body.appendChild(el("h3", { text: "Illustrations (La Lettre de Lyon)" }));
       body.appendChild(el("p", null, [
         "The story pictures are AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large and Stable Image Ultra), from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text. Because the models were used through Amazon Bedrock, the terms that apply are the ",
@@ -2476,6 +2478,19 @@
         el("span", { className: "filename", text: "tools/story-images/manifest.json" }), "."
       ]));
       body.appendChild(el("p", { text: "In plain terms: as between the author and Stability AI, the author owns the pictures to the extent the law allows (AI-generated images may have little or no copyright protection). The terms do not forbid publishing them or using them commercially and require no attribution, but they must not be used to mislead, harass, infringe others' rights or break the law, and any provenance marks the service adds must not be removed (no provenance metadata was found in these files; invisible watermarks were not checked). The author is responsible for how they are shared. The site, pictures included, is published publicly on GitHub Pages. This is a summary, not legal advice; see LICENSE-CONTENT.md for what was and was not checked." }));
+    }
+    var CAFE = SIS["le-cafe-des-questions"];
+    if (CAFE) {
+      body.appendChild(el("h3", { text: "Illustrations (Le Café des Questions)" }));
+      body.appendChild(el("p", null, [
+        "The café pictures are AI-generated with the open image-editing model ",
+        el("a", { href: "https://huggingface.co/Qwen/Qwen-Image-Edit-2511", text: "Qwen-Image-Edit-2511" }), " (Qwen team, Alibaba Cloud), licensed under the ",
+        el("a", { href: "https://www.apache.org/licenses/LICENSE-2.0", text: "Apache License 2.0" }),
+        ", run on the author's own AWS GPU, from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text. " +
+        Object.keys(CAFE.episodes).length + " of the 20 episodes have a picture; the others had no take that passed review and have none. The prompts, seeds and model revision are in ",
+        el("span", { className: "filename", text: "tools/story-images/manifest-cafe.json" }), "."
+      ]));
+      body.appendChild(el("p", { text: "In plain terms: the Apache License covers the model weights, not the pictures made with them, and the model was not used through a hosted model service, so no provider's end-user terms for outputs apply. The pictures are published publicly with the site on GitHub Pages. This is a summary, not legal advice; see LICENSE-CONTENT.md." }));
     }
     body.appendChild(el("h3", { text: "Native-speaker recordings" }));
     var keys = Object.keys(AUDIO);

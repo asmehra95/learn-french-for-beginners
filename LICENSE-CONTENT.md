@@ -38,7 +38,7 @@ voice was designed from a text description; neither voice is a recording or clon
 
 ---
 ## Illustrations — separate terms
-The *La Lettre de Lyon* pictures (verb-trainer/images/story/*.webp and the copies embedded in
+The *La Lettre de Lyon* pictures (verb-trainer/images/story/cover.webp and ep*.webp, and the copies embedded in
 verb-trainer/reference/la-lettre-de-lyon.pdf) are **not** covered by the CC BY-SA licence above. They were
 AI-generated with Stability AI models via Amazon Bedrock (Stable Diffusion 3.5 Large for the cover and
 episodes 1–19, including episode 8; Stable Image Ultra for episode 20), from prompts and character designs by the project
@@ -80,3 +80,37 @@ metadata removed no provenance data. Not checked: whether the images carry an in
 (the resize, WebP compression and the two retouches could weaken one), copyright law in any particular country, and any terms the terms
 pages incorporate by reference beyond those named here. The terms can change; the links above are the
 current versions.
+
+### Le Café des Questions
+The *Le Café des Questions* pictures (verb-trainer/images/story/cafe-ep*.webp and the copies embedded in
+verb-trainer/reference/le-cafe-des-questions.pdf) are **not** covered by the CC BY-SA licence above. They were
+AI-generated with the open image-editing model
+[Qwen-Image-Edit-2511](https://huggingface.co/Qwen/Qwen-Image-Edit-2511) (Qwen team, Alibaba Cloud), released
+under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), run on the author's own AWS GPU
+(an Amazon EC2 GPU instance in the author's account), from prompts and character designs by the project
+author. Each episode picture is an edit of a cast sheet of the recurring characters, which the same model
+painted from text descriptions on a blank canvas. Every prompt, negative prompt, seed, reference-sheet hash and
+the model revision is in tools/story-images/manifest-cafe.json. They show fictional characters only.
+12 of the 20 episodes have a picture (dialogues 42, 44, 46, 47, 48, 49, 50, 52, 53, 56, 57 and 59); the other
+8 had no take that passed review and have none.
+
+**Public.** Like the other pictures, they are published publicly with the site on GitHub Pages and in the
+public repository.
+
+**Which terms apply.** The model weights were downloaded and run by the author, not used through a hosted
+model service, so the governing licence is the Apache License 2.0 of the model, which covers the model
+weights and code.
+
+**In plain language** (a summary, not legal advice):
+
+- *Ownership.* The Apache License 2.0 places no conditions on images made with the model. Purely
+  AI-generated images may have little or no copyright protection in some countries, so others may be free to
+  reuse them.
+- *Public and commercial redistribution.* Not restricted by the model licence. No attribution is required for
+  the pictures; the Credits page names the model anyway.
+- *Conditions.* The author is responsible for how the pictures are shared; they show fictional characters
+  only.
+
+**What was checked and what was not.** Checked on 21 October 2026: the model card at
+huggingface.co/Qwen/Qwen-Image-Edit-2511 states that Qwen-Image is licensed under Apache 2.0. The WebPs were
+written from fresh pixel buffers with no metadata. Not checked: copyright law in any particular country.

@@ -1,0 +1,808 @@
+{
+ "about": "Illustrations for Le Café des Questions (dialogues 41-60). AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU (one EC2 g7e.2xlarge instance, kit gpu-batch); character designs by the project author. Each episode is an image edit of a cast sheet (the chosen character portraits, painted by the same model on a blank canvas) with the scene prompt. Images marked \"published\": false had no take that passed QA and are not on the site.",
+ "series": "le-cafe-des-questions",
+ "model": "Qwen/Qwen-Image-Edit-2511",
+ "model_name": "Qwen-Image-Edit-2511",
+ "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+ "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+ "license": "Apache-2.0",
+ "provider": "self-hosted on the author's own AWS account (Amazon EC2 GPU)",
+ "profile": "qwen-edit-2511",
+ "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+ "no_text": "No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+ "setting": "The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea.",
+ "models": {
+  "Qwen/Qwen-Image-Edit-2511": "Qwen-Image-Edit-2511"
+ },
+ "images": [
+  {
+   "id": "cafe-ep01",
+   "episode": 1,
+   "number": 41,
+   "file": "cafe-ep01.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4113,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "thomas",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-thomas-socrate",
+     "sha256": "e5b61800afcb7c95099eb358d4a592663fad9682c426ba98c0332eef8858a2ab"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, THOMAS, a 45-year-old man with light-tan skin, short dark hair greying at the temples, clean-shaven, a lean face, a navy suit jacket over a light-blue open-collared shirt, no tie; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: Medium-wide shot. THOMAS hurries up to the counter, a smartphone in each hand, one pressed to his ear, looking stressed. Behind the zinc counter ROSE calmly keeps a white cup on her own side of the counter and looks at him over her glasses with a small amused smile. On his perch by the window SOCRATE sits with his grey back and red tail turned to Thomas, facing the window. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "869b212630440f9d534a518610b28ae79541cf82d631a5d4379449353665298a",
+   "alt": "Thomas rushes in with a phone in each hand while Rose calmly keeps a white cup on her side of the counter; Socrate the parrot turns his back.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "chalkboard with garbled lettering still present top-left (ignored NO_SLATE); otherwise cast ok",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4113 has only chalkboard lettering top-left (cast ok) - crop/inpaint or regenerate"
+  },
+  {
+   "id": "cafe-ep02",
+   "episode": 2,
+   "number": 42,
+   "file": "cafe-ep02.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4122,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "paul",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-paul-socrate",
+     "sha256": "918301baded788b2ca1bb0c840b5f366f30f593a0ddd916311952ba22c717c54"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, PAUL, a 32-year-old man with fair skin, short sandy-blond hair, a neat short ginger-blond beard and a round, friendly face, a green corduroy jacket over a blue-and-white checked shirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: PAUL sits nervously at one of the small round tables, pale, a pen in his hand and a thick pile of loose pages in front of him (seen at an angle, only faint grey lines, nothing readable). ROSE stands beside the table with a steaming cup of tea for him and her own chipped blue cup with a white ring, smiling kindly. SOCRATE perches on the edge of the table, nibbling the corner of one page. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Bright late-morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4052ea3c6bbaea61756ab1bed68b1032b2ec2315410e6d3b2d2a3b5d1c5e2fa6",
+   "alt": "Paul writes at a café table over a pile of speech pages while Rose stands beside him with a steaming cup of tea; Socrate the parrot perches on the table edge.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "Paul, Rose and Socrate match the cast sheet; Socrate on the table edge by the pages; pages show only faint lines. Minor: no second tea cup for Paul, faint marks on the slate.",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep03",
+   "episode": 3,
+   "number": 43,
+   "file": "cafe-ep03.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4134,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-hugo-socrate",
+     "sha256": "5c342b27b21aed442d86550db0abdcdff5f958dab2a6ef9e63e846e123a7922d"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: HUGO has just run in, out of breath, in his apron that is too short, and a white cup lies broken in pieces on the floor at his feet; he raises both palms in apology, embarrassed. ROSE, behind the counter, holds a new white cup on her side and looks at him over her glasses, teasing but loving. SOCRATE on his perch by the window fluffs up his feathers, offended. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "d8baff293fe8d61940420fa5c7097e5b2c40db767d00fa6e9c75c4a71cb768b6",
+   "alt": "Hugo, in an apron too short for him, stands over a broken white cup while Rose looks at him over her glasses; Socrate fluffs up his feathers.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "faint garbled lettering on wall board top-right and small sign under postcards; otherwise on brief (one Hugo, one Socrate, broken cup)",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4134 is on brief except faint garbled lettering on a wall board and small sign"
+  },
+  {
+   "id": "cafe-ep04",
+   "episode": 4,
+   "number": 44,
+   "file": "cafe-ep04.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4143,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate",
+    "emma"
+   ],
+   "refs": [
+    {
+     "name": "hugo-socrate",
+     "sha256": "29bacac0bd8536abaac94411d5c67cb9772c979023e9c405c09f6bc8f967ef45"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: EMMA, a 35-year-old English tourist with fair skin, auburn hair in a ponytail, a yellow rain jacket and a canvas tote bag. Scene: HUGO, alone behind the counter, points towards the tall window. EMMA stands at the counter holding a folded paper plan (seen from behind, plain) and has turned her head away from Hugo to look out of the window at the rooftops and the white dome, surprised and delighted. SOCRATE, on the counter next to her saucer, steals a sugar cube. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Bright late-morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "e4afb02da185692a656e318617a00a96f0fe2884b04e4c30e489e96b51cacf83",
+   "alt": "By the café window, Hugo points out at the Sacré-Cœur while Emma, in a yellow rain jacket and holding a printed plan, looks at him; Socrate steals a sugar cube.",
+   "attempts": 3,
+   "qa": "PASS-notes",
+   "qa_notes": "no slate; faint unreadable marks on door glass; Hugo at window counter not behind main counter; Emma looks toward Hugo rather than out window",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep05",
+   "episode": 5,
+   "number": 45,
+   "file": "cafe-ep05.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4154,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "antoine"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: ANTOINE, a thin 40-year-old man with thinning light-brown hair and a beige raincoat, an eager, worried smile. Scene: ANTOINE arrives at the counter loaded down: in his left hand a thin red lead goes down to one small brown long-bodied dachshund at his feet; under his right arm a stack of plain beige cardboard office folders, and in his right hand a full shopping bag of vegetables; he nods eagerly. ROSE, behind the counter, keeps a white cup on her side and raises one eyebrow. SOCRATE, on his perch by the window, stares down at the dog. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "6bf49add0d4bed7ba418211a4914b32cf8df2af5dfd731aa0c1ed8296986884a",
+   "alt": "Antoine arrives loaded with a dog on a lead, office files and a shopping bag; Rose raises an eyebrow from behind the counter.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "Antoine carries a grocery bag instead of the office folders; lead not clearly held in his hand; cropped dark board top-left",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4154 has one dachshund on a red lead but a grocery bag instead of office folders"
+  },
+  {
+   "id": "cafe-ep06",
+   "episode": 6,
+   "number": 46,
+   "file": "cafe-ep06.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4163,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "leo"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: LÉO, a 17-year-old boy with light-brown skin, messy black hair, a grey hoodie and jeans. Scene: LÉO has slumped into a chair at a small round table, head in his hands, downcast. ROSE is standing beside the table, not sitting, holding a big cup of hot chocolate, and leans towards him with a gentle, encouraging smile. SOCRATE, on his perch by the window, fluffs up his feathers. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Bright late-morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "77881adb713469b30b5f23bb7ce9dfde0c71b58a08584e4ec4179d6628ca859e",
+   "alt": "Léo, a teenager in a grey hoodie, sits at a table with his head in his hands as Rose comes over with a hot drink; Socrate watches from the window.",
+   "attempts": 3,
+   "qa": "PASS",
+   "qa_notes": "no text; Léo head in hands, Rose standing with cup, Socrate on window perch; odd small Panthéon model behind counter (harmless)",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep07",
+   "episode": 7,
+   "number": 47,
+   "file": "cafe-ep07.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4171,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "max"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: MAX, a stylish 26-year-old man with a dark quiff, a light stubble, a denim jacket and white trainers. Scene: MAX holds his smartphone up at arm's length next to the parrot perch, grinning for a selfie (the screen faces away from us), while SOCRATE turns his back on the phone. ROSE watches from behind the counter, arms folded, amused. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Warm afternoon light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "8515b8eba60286078cf1356c6b9f3d37165de61b9e9fc8e8db44b82c85977d58",
+   "alt": "Max holds up his phone for a selfie with Socrate the parrot on his perch while Rose watches, arms folded, with an amused smile.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "Max takes a selfie by the perch and Rose watches with folded arms, amused. Cast matches. Slate shows only blank lines. Minor: Rose stands in front of the counter, and Socrate faces the phone instead of turning away.",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep08",
+   "episode": 8,
+   "number": 48,
+   "file": "cafe-ep08.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4181,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "bruno"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: BRUNO, a 52-year-old man with a round face, thinning grey hair and a plain grey suit. Scene: BRUNO sits at the counter staring sadly into his white cup; there are small black smudges of bicycle grease on his fingers. ROSE, behind the counter, leans forward and points gently at his greasy hands, curious. SOCRATE, on the counter, steals the sugar cube from Bruno's saucer. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "515bfa0843338f7835e648eb5d4a15688f619906215a1425ee1de89e4d3c1580",
+   "alt": "Bruno, in a grey suit, sits at the counter with a cup and bike grease on his fingers as Rose leans over and points at them; Socrate stands on a nearby table.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "Bruno is sad with greasy fingers; Rose leans in and points; sugar cube on the saucer. No readable text. Minor: Socrate stands on a table, not the counter, and a grease smudge appears on Rose's hand.",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep09",
+   "episode": 9,
+   "number": 49,
+   "file": "cafe-ep09.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4194,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate",
+    "ines"
+   ],
+   "refs": [
+    {
+     "name": "hugo-socrate",
+     "sha256": "29bacac0bd8536abaac94411d5c67cb9772c979023e9c405c09f6bc8f967ef45"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: INÈS, a 31-year-old nurse with warm brown skin and dark hair tied back, in a plain pale-blue nurse's tunic. Scene: INÈS sits, tired, at a small round table near the front, her phone face down beside her hand. HUGO stands right next to her table, close to her, wearing an old lady's small reading glasses on a chain, too small for him and slipping down his nose, trying to look serious; Inès laughs a little despite herself. SOCRATE, on his perch by the window, fluffs up his feathers. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "a42b988bc463a19361487d41975caad06ebb7cf509355c6112a3d6900f53e67f",
+   "alt": "Inès, a nurse in a pale-blue uniform, laughs at a café table beside her phone while Hugo, sitting next to her, holds up small reading glasses on a chain.",
+   "attempts": 4,
+   "qa": "PASS-notes",
+   "qa_notes": "Hugo sits beside Ines instead of standing; Ines laughs rather than tired; one Socrate, no lettering",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep10",
+   "episode": 10,
+   "number": 50,
+   "file": "cafe-ep10.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4204,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "victor"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: VICTOR, a 44-year-old man with round tortoiseshell glasses, a short dark beard and a brown tweed jacket. Scene: VICTOR, a plain notebook under his arm, holds out a small old black-and-white photograph across the counter (grey tones only, no colour); it shows a laughing woman in a big hat in front of a plain café door. ROSE, behind the counter, has taken off her reading glasses and holds them in one hand, deeply moved, looking at the photo. SOCRATE, a normal grey parrot, sits quietly on his perch by the window, watching. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Warm afternoon light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "d4faefd3ca8c545fccf39e47ecfbe7df3d1de218e409d36ee06615a4f6035faa",
+   "alt": "Victor, with glasses and a beard, holds out an old black-and-white photo of a woman across the counter; Rose, in a black hat, her glasses in her hand, smiles at it.",
+   "attempts": 4,
+   "qa": "PASS-notes",
+   "qa_notes": "Rose wears a black hat (not in cast sheet); photo woman has no hat; notebook on counter not under arm; one Socrate, no lettering",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep11",
+   "episode": 11,
+   "number": 51,
+   "file": "cafe-ep11.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4213,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "albert"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: ALBERT, a tall, thin 82-year-old man, bald with a white fringe of hair, round wire glasses, clean-shaven, a navy-blue jacket, leaning on a wooden cane. Scene: ALBERT stands on the customer side of the counter with a warm, nostalgic smile, leaning on his cane with one hand and holding out his free hand across the counter as if inviting her to dance. ROSE, alone behind the counter, laughs with one hand on her cheek, surprised and touched. SOCRATE, on his perch by the window, fluffs up his feathers for Albert. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c53638e8ce56ba710839836955838536206d72362efe4eb5b27513ccdc2caf5e",
+   "alt": "Albert, an old man with a cane, holds out his hand at the counter as if asking Rose to dance; Rose laughs, a hand on her cheek.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "chalkboard lettering top-right; extra small red bird figurine",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4213 has chalkboard lettering top-right and an extra small red bird figurine"
+  },
+  {
+   "id": "cafe-ep12",
+   "episode": 12,
+   "number": 52,
+   "file": "cafe-ep12.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4223,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate",
+    "nadia"
+   ],
+   "refs": [
+    {
+     "name": "hugo-socrate",
+     "sha256": "29bacac0bd8536abaac94411d5c67cb9772c979023e9c405c09f6bc8f967ef45"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: NADIA, a 41-year-old woman with olive skin, a neat black bob and a white blouse. Scene: On the zinc counter stands one single burnt black three-tier birthday cake with drooping gold decorations. NADIA, on the customer side, looks at it, half dismayed, half laughing. HUGO, behind the counter, holds out a folded white cloth apron to her with both hands, smiling encouragingly; a bowl of fresh green apples stands beside him. SOCRATE, on the counter by the bowl, pecks at a slice of apple. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "15f441407b94114592864dc74aaa8b973a9e24f6d1e1977c9b432102a7816bab",
+   "alt": "Nadia laughs beside her burnt two-tier cake on the counter while Hugo holds a folded white apron; Socrate pecks at a green apple next to a bowl of apples.",
+   "attempts": 3,
+   "qa": "PASS-notes",
+   "qa_notes": "no text; cake two tiers not three; Hugo's folded white apron reads like paper; Nadia near counter end",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep13",
+   "episode": 13,
+   "number": 53,
+   "file": "cafe-ep13.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4231,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "samuel"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: SAMUEL, a 38-year-old man with dark-brown skin, short black hair and stubble, in a grey parka. Scene: SAMUEL has collapsed into a chair at a small round table, exhausted, rubbing his eyes. ROSE stands by the table holding a white cup on her side and looks at him over her glasses with kind amusement. SOCRATE watches silently from his perch by the window. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c7a85f2098bb8bdaf88116b43a38abab49f79b5db6ca32276f5cb4a0614ac8b9",
+   "alt": "Samuel, in a grey parka, slumps at a table with a hand over his eyes while Rose stands nearby with a cup; Socrate watches from his perch by the window.",
+   "attempts": 2,
+   "qa": "PASS",
+   "qa_notes": "on brief; chalkboard blank; minor: Rose stands a step back from the table",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep14",
+   "episode": 14,
+   "number": 54,
+   "file": "cafe-ep14.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4244,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate",
+    "juliette"
+   ],
+   "refs": [
+    {
+     "name": "hugo-socrate",
+     "sha256": "29bacac0bd8536abaac94411d5c67cb9772c979023e9c405c09f6bc8f967ef45"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: JULIETTE, a 27-year-old postwoman with fair skin, freckles and a long red braid, in a plain navy postal jacket with no logos. Scene: JULIETTE, a camera hanging from her shoulder bag, lifts the camera up to her eye with both hands to take a photo of HUGO, who stands behind the counter holding up a postcard whose picture of the blue sea faces us, smiling shyly. A thick closed book with a plain blank cover lies on the counter. SOCRATE stretches his beak towards the postcard. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Bright late-morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0829938ffd96a2866837b2d4ee977a20f9e851af7d3f40aca901826105fdd84d",
+   "alt": "Juliette the postwoman raises her camera to photograph Hugo, who holds up a postcard of the sea; Socrate reaches for the card.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "framed documents with scribbled pseudo-lettering (top centre, left wall); otherwise on brief",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4244 is on brief except scribbled pseudo-lettering inside framed documents"
+  },
+  {
+   "id": "cafe-ep15",
+   "episode": 15,
+   "number": 55,
+   "file": "cafe-ep15.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4251,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "karim"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: KARIM, a 45-year-old painter with olive skin, black curly hair going grey and a short beard, in a paint-stained smock. Scene: KARIM sits at a small round table drawing on a sketchpad with a pencil, concentrating happily; we see the back of the sketchpad. Across the table ROSE sits very upright, posing with a shy smile, and SOCRATE sits perfectly still on her shoulder like a statue. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Golden early-evening light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "82bdeadbadea0e676125929dfdd842279ac4267b6bced21adb996448cfeadd55",
+   "alt": "Karim, in a paint-stained smock, sketches Rose at a table in the evening light while Socrate poses perfectly still on her shoulder.",
+   "attempts": 4,
+   "qa": "fail",
+   "qa_notes": "Rose sits at a separate table, not across from Karim; front of sketchpad shown; chalkboard blank",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4251 has no lettering or duplicates but Rose sits at a separate table from Karim"
+  },
+  {
+   "id": "cafe-ep16",
+   "episode": 16,
+   "number": 56,
+   "file": "cafe-ep16.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4262,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "socrate",
+    "frederic"
+   ],
+   "refs": [
+    {
+     "name": "rose-socrate",
+     "sha256": "5bb0289f2c9ba5996e542d027d6d4166215a695b731077747fe1fa211167cfc7"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Also in the scene: FRÉDÉRIC, a tall 50-year-old man with silver hair swept back, a perfect camel coat and a grey cashmere scarf. Scene: FRÉDÉRIC stands stiffly at the counter; he has laid a folded green banknote on the zinc (no readable print). SOCRATE has hopped down onto the counter and nibbles one corner of the banknote. ROSE, behind the counter, has pulled the white cup back to her side and looks at him over her glasses, unimpressed but kind. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Warm afternoon light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "9ccfe9da2c8642974385c478f647cf7137657191b6652abb19ca8acdeb8bbfcd",
+   "alt": "Frédéric, in a camel coat, holds out a green banknote at the counter; Socrate nibbles its corner while Rose looks on from behind the counter.",
+   "attempts": 2,
+   "qa": "PASS",
+   "qa_notes": "on brief; chalkboard blank; minor: Frederic holds the note instead of laying it on the zinc, note has faint unreadable marks",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep17",
+   "episode": 17,
+   "number": 57,
+   "file": "cafe-ep17.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps",
+   "seed": 4271,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "paul",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-paul-socrate",
+     "sha256": "918301baded788b2ca1bb0c840b5f366f30f593a0ddd916311952ba22c717c54"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, PAUL, a 32-year-old man with fair skin, short sandy-blond hair, a neat short ginger-blond beard and a round, friendly face, a green corduroy jacket over a blue-and-white checked shirt; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: PAUL leans on the counter holding up a small black-and-white baby scan picture (soft abstract grey shapes only), smiling but anxious. ROSE, behind the counter, clasps her hands together with joy. SOCRATE, on his perch by the window, turns his back with a jealous look. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, a small dark chalkboard slate on the wall by the door with nothing written on it, and behind the counter a row of small postcards whose pictures show only the blue sea. Warm afternoon light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "10fcce4938aa9f60362ec111d5be1a8f12642ec7fcbff1a14e6f9df9178806cd",
+   "alt": "Paul holds up a small black-and-white baby scan picture at the counter; Rose clasps her hands with joy while Socrate watches from his perch by the window.",
+   "attempts": 3,
+   "qa": "PASS-notes",
+   "qa_notes": "faint unreadable marks on board; Socrate faces forward instead of turning his back",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep18",
+   "episode": 18,
+   "number": 58,
+   "file": "cafe-ep18.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4284,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-hugo-socrate",
+     "sha256": "5c342b27b21aed442d86550db0abdcdff5f958dab2a6ef9e63e846e123a7922d"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: Closing time: wooden chairs stand upside down, legs in the air, on top of two of the little round tables. ROSE sits at the third table with her chipped blue cup with a white ring, telling a story with a faraway, gentle look. HUGO sits at the same table directly across from her, listening intently; many small postcards of the blue sea lie spread out on the table between them, picture side up. SOCRATE dozes on his perch by the window, eyes closed. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter an empty row of small hooks where postcards usually hang. Warm lamp light at closing time, dusk blue in the window. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "9a4d26c573eda88cadaaba06b4e442795eac8549f8c7e09f5471cbcc1d084cbb",
+   "alt": "At closing time, chairs on the tables, Rose tells Hugo her story over postcards of the sea; Socrate sleeps on the counter.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "chairs not upside down on tables (closing-time brief); otherwise clean: one Socrate, no lettering, night scene",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4284 is clean (one Socrate, no lettering) but chairs are not upside down"
+  },
+  {
+   "id": "cafe-ep19",
+   "episode": 19,
+   "number": 59,
+   "file": "cafe-ep19.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r1",
+   "seed": 4293,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-hugo-socrate",
+     "sha256": "5c342b27b21aed442d86550db0abdcdff5f958dab2a6ef9e63e846e123a7922d"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: HUGO, out of breath, his curly hair messy, holds a thick law textbook with a plain blank dark cover tucked under his own arm, and with both hands takes a small plain cream card that ROSE holds out to him across the counter (the card seen edge-on, blank); both are moved and smiling. Her chipped blue cup with a white ring and a white cup stand on the counter. SOCRATE watches from his perch by the window. Each person appears only once, and there is exactly one parrot in the whole picture: SOCRATE, the grey parrot with a red tail. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, plain cream walls by the door with no chalkboard, no slate, no menu board and no signs, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "f83b2423c2a973a2d53f3c8dc121b0fb2bad8377838e89b3f81820d9abaa0750",
+   "alt": "Across the counter, Rose hands Hugo, a book under his arm, a small blank card; both are smiling, and Socrate watches from a perch by the window.",
+   "attempts": 3,
+   "qa": "PASS-notes",
+   "qa_notes": "card and book blank; one Socrate; faint unreadable lines on a wall notice; good match",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep20",
+   "episode": 20,
+   "number": 60,
+   "file": "cafe-ep20.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-eps-r2",
+   "seed": 4304,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "thomas",
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "rose-thomas-hugo-socrate",
+     "sha256": "2c5fb8c84b09b6bc006e9f8cb725e32e75f8ac2317e1480c86a3dda024494716"
+    }
+   ],
+   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: first from the left, ROSE, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; second from the left, THOMAS, a 45-year-old man with light-tan skin, short dark hair greying at the temples, clean-shaven, a lean face, a navy suit jacket over a light-blue open-collared shirt, no tie; third from the left, HUGO, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, SOCRATE, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: THOMAS, now calm, with no phone, his navy suit jacket open, sits on a bar stool in front of the counter, on the customer side, facing Rose, and has pushed a white cup across the zinc to her. ROSE, standing behind the counter, surprised and delighted, a hand on her chest, turns towards SOCRATE, who has puffed up on his perch by the window with his beak open, whistling. HUGO, behind the counter at its far end, smiles silently while drying a cup. Only one grey parrot exists in this picture, painted once, exactly where described. The setting is a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, cream walls, a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left, bare cream plaster walls by the door with only a few small framed watercolours of the blue sea, and behind the counter a row of small postcards whose pictures show only the blue sea. Soft warm autumn afternoon light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, speech bubble, signage, sign with writing, logo, brand name, watermark, signature, scribbles, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, duplicate people, duplicate parrot, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, chalkboard, blackboard, menu board, slate, poster, two parrots, second parrot, twins, clone",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "6e59ea4628d57a677d061cd7d5c7473ff6a62d262426dcf7dad6725273f7ac82",
+   "alt": "Calm Thomas sits at the counter as Rose, a hand on her chest, turns in delight to Socrate, who whistles; Hugo smiles behind the counter.",
+   "attempts": 4,
+   "qa": "FAIL",
+   "qa_notes": "chalkboard with lettering; extra man peering behind counter; second small green bird on wall shelf",
+   "published": false,
+   "note": "Not published: no take passed QA (4 takes, 2 retries). Best take recorded: all 4 takes fail; s4304 has chalkboard lettering, an extra man behind the counter and a second small bird"
+  }
+ ]
+}

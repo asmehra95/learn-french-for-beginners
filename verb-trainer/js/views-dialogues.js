@@ -28,15 +28,19 @@
   var GAP_MS = 500;
 
   function DATA() { return C && C.DIALOGUES; }
-  /* Story illustrations (story-images.js, window.VT_STORY_IMAGES): rec is { src, width, height, alt } or null.
-     alt "" marks a decorative copy (list thumbnails beside a link that already names the episode). */
-  function storyImage(d) {
+  /* Story illustrations (story-images.js, window.VT_STORY_IMAGES.series[<series id>]): rec is { src, width, height, alt }
+     or null. alt "" marks a decorative copy (list thumbnails beside a link that already names the episode). */
+  function storySet(id) {
     var S = window.VT_STORY_IMAGES;
-    return S && d && d.series === S.series && d.episode ? S.episodes[String(d.episode)] || null : null;
+    return S && S.series && id && Object.prototype.hasOwnProperty.call(S.series, id) ? S.series[id] : null;
+  }
+  function storyImage(d) {
+    var S = d && d.episode ? storySet(d.series) : null;
+    return S ? S.episodes[String(d.episode)] || null : null;
   }
   function storyCover(ser) {
-    var S = window.VT_STORY_IMAGES;
-    return S && ser && ser.id === S.series ? S.cover : null;
+    var S = ser ? storySet(ser.id) : null;
+    return S ? S.cover : null;
   }
   function imgNode(rec, cls, alt, lazy) {
     return el("img", { className: cls, src: rec.src, width: String(rec.width), height: String(rec.height), alt: alt,

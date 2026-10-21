@@ -79,7 +79,8 @@ native-speaker audio clips.
   *Sagesse du jour*: a real French proverb with a Listen button, its respelling, literal translation,
   meaning and English equivalent. The Stories list shows both series with their own progress and
   Continue link; Home's Story link follows the series you used most recently. Search finds the proverbs
-  ("proverbe", "oiseau"). The story has no pictures for now.
+  ("proverbe", "oiseau"). 12 of the 20 episodes have a picture under the title (with alt text), also in
+  the PDF; the other 8 have none yet.
 - **Proverbs deck** — the 20 proverbs as flashcards (French → meaning, meaning → French), with the same
   spaced repetition as the expressions decks, an act filter in the practice set, Review my mistakes and a
   Proverbs block in Progress.
@@ -234,6 +235,14 @@ that `node tools/build-story.js --html out.html --print-images DIR` embeds in th
 `"published": false` are skipped (none at the moment: the cover and all 20 episodes are published; episode 8 is
 M. Brun alone, made with Stable Diffusion 3.5 Large).
 
+The *Le Café des Questions* pictures (`verb-trainer/images/story/cafe-epNN.webp`) were made with
+Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU with the gpu-batch kit, not with
+`generate.py generate`. Their prompts, seeds, cast-sheet hashes and model revision are in
+`tools/story-images/manifest-cafe.json`; the 8 episodes without a passing take are marked `"published": false`.
+From the chosen 1344×768 PNGs (`cafe-epNN__s<seed>.png` in one folder), `generate.py --manifest
+tools/story-images/manifest-cafe.json webp --src DIR` and `… printjpg --dest DIR` work as above; `site` reads
+both manifests and writes one `series` table per story into `story-images.js`.
+
 ## Regenerating audio
 
 See [tts-tools/README.md](tts-tools/README.md). The short version: activate the Python venv and run
@@ -271,3 +280,7 @@ changes.
   required, and outputs must not mislead, infringe others' rights or break the law. They are published
   publicly with the site on GitHub Pages. Summary and what was verified in
   [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+- **Story illustrations** (*Le Café des Questions*, `verb-trainer/images/story/cafe-ep*.webp`) — separate
+  terms, not CC BY-SA: AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU;
+  character designs by the project author. The Apache License 2.0 covers the model, not the pictures. They
+  are published publicly with the site on GitHub Pages. Details in [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
