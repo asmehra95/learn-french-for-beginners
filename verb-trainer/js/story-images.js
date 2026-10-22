@@ -141,17 +141,35 @@
      "credit": "Illustrations: AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU; character designs by the project author. Not covered by the CC BY-SA licence of the text.",
      "cover": null,
      "episodes": {
+      "1": {
+       "src": "images/story/cafe-ep01.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Thomas talks on his phone in the middle of the café while Rose smiles behind the zinc counter with a cup; Socrate the grey parrot sits by the window."
+      },
       "2": {
        "src": "images/story/cafe-ep02.webp",
        "width": 1200,
        "height": 686,
        "alt": "Paul writes at a café table over a pile of speech pages while Rose stands beside him with a steaming cup of tea; Socrate the parrot perches on the table edge."
       },
+      "3": {
+       "src": "images/story/cafe-ep03.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Hugo, in a green sweater and apron, grins awkwardly over a broken cup on the floor while Rose sips from a cup behind the counter; Socrate sits by the window."
+      },
       "4": {
        "src": "images/story/cafe-ep04.webp",
        "width": 1200,
        "height": 686,
        "alt": "By the café window, Hugo points out at the Sacré-Cœur while Emma, in a yellow rain jacket and holding a printed plan, looks at him; Socrate steals a sugar cube."
+      },
+      "5": {
+       "src": "images/story/cafe-ep05.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Antoine, in a beige coat with folders under his arm, talks to Rose at the counter, a dachshund on a red lead at his feet; Socrate watches from the window perch."
       },
       "6": {
        "src": "images/story/cafe-ep06.webp",
@@ -183,6 +201,12 @@
        "height": 686,
        "alt": "Victor, with glasses and a beard, holds out an old black-and-white photo of a woman across the counter; Rose, in a black hat, her glasses in her hand, smiles at it."
       },
+      "11": {
+       "src": "images/story/cafe-ep11.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Albert, leaning on his cane, holds out his hand to Rose, who laughs with both hands on her cheeks; Socrate the grey parrot sits on the window perch."
+      },
       "12": {
        "src": "images/story/cafe-ep12.webp",
        "width": 1200,
@@ -194,6 +218,12 @@
        "width": 1200,
        "height": 686,
        "alt": "Samuel, in a grey parka, slumps at a table with a hand over his eyes while Rose stands nearby with a cup; Socrate watches from his perch by the window."
+      },
+      "15": {
+       "src": "images/story/cafe-ep15.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Karim sketches in a pad at a café table beside Rose, who has Socrate the grey parrot perched on her shoulder."
       },
       "16": {
        "src": "images/story/cafe-ep16.webp",
@@ -212,6 +242,12 @@
        "width": 1200,
        "height": 686,
        "alt": "Across the counter, Rose hands Hugo, a book under his arm, a small blank card; both are smiling, and Socrate watches from a perch by the window."
+      },
+      "20": {
+       "src": "images/story/cafe-ep20.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Thomas, on a stool at the zinc counter, slides a white cup across; behind it Hugo holds a cloth and Rose smiles with her hands on her chest."
       }
      }
     }

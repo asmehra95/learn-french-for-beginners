@@ -15,8 +15,11 @@ var MANIFEST = JSON.parse(fs.readFileSync(path.join(REPO, "tools", "story-images
 var MCAFE = JSON.parse(fs.readFileSync(path.join(REPO, "tools", "story-images", "manifest-cafe.json"), "utf8"));
 var D = require("../js/dialogues-data.js");
 var MAX_BYTES = 250 * 1024;
-// Dialogues 41-60 whose chosen take passed image QA (reviews/image-selection.json); the other 8 have no picture.
-var CAFE_PASSED = [42, 44, 46, 47, 48, 49, 50, 52, 53, 56, 57, 59];
+// Dialogues 41-60 whose chosen take passed image QA: 12 from the first run (reviews/image-selection.json) and
+// 41, 43, 45, 51, 55, 60 from the regeneration (reviews/regen-selection.json). 54 and 58 were regenerated too, but
+// their takes failed the site review (pseudo-lettering), so they have no picture.
+var CAFE_PASSED = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 57, 59, 60];
+var CAFE_REGEN = [41, 43, 45, 51, 54, 55, 58, 60];
 
 function published(m) { return (m || MANIFEST).images.filter(function (i) { return i.published !== false; }); }
 function webpSize(buf) {
@@ -153,6 +156,10 @@ test("café manifest: 20 entries (cafe-ep01..20, dialogues 41-60) with model, re
     else assert.ok(/^(pass|PASS|PASS-notes)$/.test(i.qa) && i.accepted === true, i.id + " passed QA");
   });
   assert.deepEqual(published(MCAFE).map(function (i) { return i.number; }), CAFE_PASSED);
+  // the regenerated episodes come from the regen batches; episode 20 is a multi-image edit (3 refs)
+  CAFE_REGEN.forEach(function (n) { assert.match(MCAFE.images[n - 41].batch, /^cafe-regen/, n + " batch"); });
+  assert.equal(MCAFE.images[19].mode, "multi-image-edit");
+  assert.equal(MCAFE.images[19].refs.length, 3);
 });
 
 test("café: every dialogue 41-60 with a QA-passed take maps to an existing image with English alt text; the others have none", function () {

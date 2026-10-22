@@ -747,7 +747,7 @@ test("all dialogues and episodes: every line has a clip in its speaker's voice f
   });
   assert.deepEqual(fallback, DEVICE_VOICE_LINES);
 });
-// clip hashes re-recorded on the user's request ("longue" had no clip at HEAD)
+// clip hashes re-recorded on the user's request ("longue"; committed in 6ef802b, so HEAD may already hold the pass)
 var USER_RERECORDS = { "qwen3-fr-bf16": ["95be775656230941"] };
 test("all 60: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
   var cp = require("node:child_process");
@@ -767,9 +767,15 @@ test("all 60: existing clips and manifest records are unchanged versus HEAD (git
     var before = JSON.parse(git(["show", "HEAD:" + dir + "/manifest.json"])).items;
     var after = JSON.parse(fs.readFileSync(path.join(REPO, dir, "manifest.json"), "utf8")).items;
     Object.keys(before).forEach(function (h) {
-      // a failed-excluded text re-recorded on the user's request: it may only gain a passing clip
+      // a text re-recorded on the user's request: either still failed-excluded at HEAD and now gaining its
+      // passing clip, or already committed as that pass (then it must be unchanged)
       if ((USER_RERECORDS[voice] || []).indexOf(h) !== -1) {
-        assert.equal(before[h].status, "failed-excluded", voice + " record " + h + " was excluded at HEAD");
+        if (before[h].status === "pass") {
+          assert.equal(before[h].reason, "user-rerecord", voice + " record " + h + " is the re-record at HEAD");
+          assert.deepEqual(after[h], before[h], voice + " record " + h);
+          return;
+        }
+        assert.equal(before[h].status, "failed-excluded", voice + " record " + h + " was excluded or re-recorded at HEAD");
         assert.equal(after[h].reason, "user-rerecord", voice + " record " + h);
         assert.equal(after[h].status, "pass", voice + " record " + h);
         assert.equal(after[h].key, before[h].key, voice + " record " + h);

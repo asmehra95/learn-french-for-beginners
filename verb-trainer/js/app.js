@@ -2487,7 +2487,9 @@
         el("a", { href: "https://huggingface.co/Qwen/Qwen-Image-Edit-2511", text: "Qwen-Image-Edit-2511" }), " (Qwen team, Alibaba Cloud), licensed under the ",
         el("a", { href: "https://www.apache.org/licenses/LICENSE-2.0", text: "Apache License 2.0" }),
         ", run on the author's own AWS GPU, from prompts and character designs by the project author. They are not covered by the CC BY-SA licence of the text. " +
-        Object.keys(CAFE.episodes).length + " of the 20 episodes have a picture; the others had no take that passed review and have none. The prompts, seeds and model revision are in ",
+        Object.keys(CAFE.episodes).length + " of the 20 episodes have a picture" +
+        (Object.keys(CAFE.episodes).length < 20 ? "; the others had no take that passed review and have none" : "") +
+        ". The prompts, seeds and model revision are in ",
         el("span", { className: "filename", text: "tools/story-images/manifest-cafe.json" }), "."
       ]));
       body.appendChild(el("p", { text: "In plain terms: the Apache License covers the model weights, not the pictures made with them, and the model was not used through a hosted model service, so no provider's end-user terms for outputs apply. The pictures are published publicly with the site on GitHub Pages. This is a summary, not legal advice; see LICENSE-CONTENT.md." }));

@@ -91,8 +91,10 @@ under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), run
 author. Each episode picture is an edit of a cast sheet of the recurring characters, which the same model
 painted from text descriptions on a blank canvas. Every prompt, negative prompt, seed, reference-sheet hash and
 the model revision is in tools/story-images/manifest-cafe.json. They show fictional characters only.
-12 of the 20 episodes have a picture (dialogues 42, 44, 46, 47, 48, 49, 50, 52, 53, 56, 57 and 59); the other
-8 had no take that passed review and have none.
+18 of the 20 episodes have a picture (dialogues 41-53, 55-57, 59 and 60); the other 2 (dialogues 54 and 58)
+had no take that passed review and have none. The pictures for episodes 1, 3, 5, 11, 15 and 20 were
+regenerated later with stricter prompts; episode 20 is a multi-image edit of the published episode 16 picture
+and two character portraits.
 
 **Public.** Like the other pictures, they are published publicly with the site on GitHub Pages and in the
 public repository.
