@@ -173,6 +173,7 @@ async function launchChrome() {
   profileDir = fs.mkdtempSync("/tmp/explainer-chrome-");
   chrome = spawn(CHROME, [
     "--headless=new",
+    "--mute-audio",
     "--disable-gpu",
     "--no-first-run",
     "--no-default-browser-check",
