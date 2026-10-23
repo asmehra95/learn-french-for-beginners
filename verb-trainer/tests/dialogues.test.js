@@ -88,8 +88,8 @@ test("content: 20 everyday dialogues numbered 1-20, levels A1 → A2 → B1, one
 });
 test("scale: stats and Review my mistakes cover every dialogue's questions", function () {
   var LEARN = require("../js/learn.js");
-  assert.equal(DLG.stats({}, DATA_D).total, 240);          // 80 everyday + 80 Lyon + 80 café questions
-  assert.equal(DLG.knownHeads(DATA_D).length, 240);
+  assert.equal(DLG.stats({}, DATA_D).total, 320);          // 80 everyday + 80 Lyon + 80 café + 80 colis questions
+  assert.equal(DLG.knownHeads(DATA_D).length, 320);
   var k = "dlg:hobbies-and-free-time.q2|dlg-quiz|-";
   var st = { stats: {} };
   st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
@@ -631,7 +631,7 @@ test("voices: the female manifest keeps its format, default voice and pre-dialog
   Object.keys(M.items).forEach(function (k) { assert.equal(M.items[k].voiceId, "qwen3-fr-m-bf16"); });
 });
 
-/* ---------- all 60 records (20 everyday dialogues + 2 × 20 story episodes): per-line content, role-play, quiz, clips ---------- */
+/* ---------- all records (20 everyday dialogues + 3 × 20 story episodes): per-line content, role-play, quiz, clips ---------- */
 var VOICE_DIRS = { "qwen3-fr-bf16": "qwen3-fr-bf16", "qwen3-fr-m-bf16": "qwen3-fr-m-bf16" };
 /* Dialogue lines with no clip on purpose (failed-excluded, the device voice reads them). Empty now:
    at-the-bakery l7 "Un euro vingt pièce." was reviewed and shipped as failed-kept (Whisper writes "1,20€"
@@ -641,10 +641,10 @@ function clipHash(text) { return require("node:crypto").createHash("sha256").upd
 function voiceManifest(voice) {
   return voice === SHIPPED.VT_TTS.defaultVoice ? SHIPPED.VT_TTS : SHIPPED.VT_TTS_VOICES[voice];
 }
-test("all 60: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
+test("all records: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
   var ids = DATA_D.dialogues.map(function (d) { return d.id; });
-  assert.equal(ids.length, 60);
-  assert.equal(new Set(ids).size, 60);
+  assert.equal(ids.length, 80);
+  assert.equal(new Set(ids).size, 80);
   DATA_D.dialogues.forEach(function (d) {
     ["lines", "vocab", "questions"].forEach(function (k) {
       var xs = d[k].map(function (x) { return x.id; });
@@ -666,7 +666,7 @@ test("all 60: unique dialogue, line, vocab and question ids; every line has fr, 
     d.speakers.forEach(function (s) { assert.ok(d.lines.some(function (l) { return l.speaker === s.id; }), d.id + " " + s.id); });
   });
 });
-test("all 60: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
+test("all records: every vocab link and Notice table resolves to a real verb / expression / table id", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.vocab.forEach(function (v) {
@@ -680,7 +680,7 @@ test("all 60: every vocab link and Notice table resolves to a real verb / expres
   });
   assert.ok(n > 40, "links checked " + n);
 });
-test("all 60: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
+test("all records: role-play accepts every listed alternative (accents strict) and rejects another line / a wrong answer", function () {
   var storyLines = 0;
   DATA_D.dialogues.forEach(function (d) {
     d.lines.forEach(function (l, i) {
@@ -704,7 +704,7 @@ test("all 60: role-play accepts every listed alternative (accents strict) and re
   assert.ok(expected > 0);
   assert.equal(storyLines, expected, "every story line was checked");
 });
-test("all 60: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
+test("all records: every quiz item offers its answer among 4 unique options, voiced by its line's speaker", function () {
   var n = 0;
   DATA_D.dialogues.forEach(function (d) {
     var byLine = {};
@@ -721,7 +721,7 @@ test("all 60: every quiz item offers its answer among 4 unique options, voiced b
       n++;
     });
   });
-  assert.equal(n, 240);
+  assert.equal(n, 320);
 });
 test("all dialogues and episodes: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
   var fallback = [];
@@ -749,7 +749,7 @@ test("all dialogues and episodes: every line has a clip in its speaker's voice f
 });
 // clip hashes re-recorded on the user's request ("longue"; committed in 6ef802b, so HEAD may already hold the pass)
 var USER_RERECORDS = { "qwen3-fr-bf16": ["95be775656230941"] };
-test("all 60: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
+test("all records: existing clips and manifest records are unchanged versus HEAD (git)", function (t) {
   var cp = require("node:child_process");
   function git(args) { return cp.execFileSync("git", ["-C", REPO].concat(args), { encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] }); }
   try { git(["rev-parse", "HEAD"]); } catch (e) { t.skip("not a git checkout"); return; }
@@ -792,7 +792,7 @@ test("all 60: existing clips and manifest records are unchanged versus HEAD (git
     Object.keys(old).forEach(function (k) { assert.deepEqual(now[k], old[k], voice + " entry " + k); });
   });
 });
-test("all 60: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
+test("all records: 'je me suis assis' stays excluded (no entry in either voice, no clip, excludedByUser record)", function () {
   var k = L.ttsKey("je me suis assis"), h = clipHash("je me suis assis");
   Object.keys(VOICE_DIRS).forEach(function (voice) {
     assert.equal(voiceManifest(voice).items[k], undefined, voice);
@@ -1270,18 +1270,23 @@ test("café quiz: answers among 4 unique options, legend names the episode; Revi
   assert.deepEqual(LEARN.mistakesDeck(st, global.window.VERB_DATA, null, DATA_D), [k]);
 });
 test("old records: the 40 Lyon and everyday records have no emotion or proverb keys", function () {
-  DATA_D.dialogues.filter(function (d) { return d.series !== CAFE_SERIES; }).forEach(function (d) {
+  DATA_D.dialogues.filter(function (d) { return !d.series || d.series === "la-lettre-de-lyon"; }).forEach(function (d) {
     assert.ok(!("proverb" in d), d.id);
     d.lines.forEach(function (l) { assert.ok(!("emotion" in l), d.id + "/" + l.id); });
   });
 });
-test("pending recording (self-expiring): once any café line or proverb has a clip, fixtures/pending-recording.js must list no series", function () {
-  var recorded = 0;
+test("pending recording (self-expiring): once a pending series' own Listen text has a clip, fixtures/pending-recording.js must drop it", function () {
+  // texts shared with other records ("Bonjour") may already have clips; only the series' own texts count
+  // (and only lines: short vocab and example phrases often have clips from the rest of the corpus), as ./story integrate decides
+  var only = {}, recorded = [];
+  VOICE_IDS.forEach(function (voice) { only[voice] = PENDING.onlyPendingKeys(DATA_D, DLG, L, voice, SHIPPED.VT_TTS.defaultVoice); });
   DATA_D.dialogues.filter(function (d) { return PENDING.series.indexOf(d.series) !== -1; }).forEach(function (d) {
-    d.lines.forEach(function (l) { if (voiceManifest(DLG.voiceOf(d, l.speaker)).items[L.ttsKey(l.fr)]) recorded++; });
-    if (d.proverb && SHIPPED.VT_TTS.items[L.ttsKey(d.proverb.fr)]) recorded++;
+    d.lines.forEach(function (l) {
+      var voice = DLG.voiceOf(d, l.speaker), k = L.ttsKey(l.fr);
+      if (only[voice][k] && voiceManifest(voice).items[k]) recorded.push(d.id + "/" + l.id);
+    });
   });
-  if (recorded) assert.deepEqual(PENDING.series, [], recorded + " pending-series clip(s) exist: empty fixtures/pending-recording.js");
+  assert.deepEqual(recorded, [], "pending-series clip(s) exist: remove the recorded series from fixtures/pending-recording.js");
 });
 test("static: the café UI: emotion tag, Sagesse du jour card, per-series printables, Home picks the active series", function () {
   var src = fs.readFileSync(path.join(ROOT, "js", "views-dialogues.js"), "utf8");

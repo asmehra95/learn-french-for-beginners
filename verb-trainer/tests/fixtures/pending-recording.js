@@ -1,9 +1,9 @@
 /* Story series whose clips are not recorded yet. The three clip-coverage tests (dialogues.test.js "every line has
    a clip…", tts.test.js "coverage…" and "coverage (second voice)…") skip texts that come only from these series'
-   records; until then the device voice reads them. A guard test empties this list as soon as any of their lines or
-   proverbs has a clip, so the coverage tests apply to them in full once recording starts. */
+   records; until then the device voice reads them. A guard test fails as soon as one of their own lines (a text
+   no other record uses) has a clip, so the coverage tests apply to them in full once recording starts. */
 "use strict";
-var series = [];
+var series = ["le-mauvais-colis"];
 /* ttsKeys of the Listen texts (VT_DLG.listenEntries) in `voice` that only pending-series records use. */
 function onlyPendingKeys(data, DLG, L, voice, defaultVoice) {
   var pending = {}, other = {};

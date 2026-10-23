@@ -30,11 +30,15 @@ function rng(seed) {
   };
 }
 var CAFE = DLG.episodes(DLGD, "le-cafe-des-questions");
+/* The shipped data without the series that already have expression cards, so the fixture's counts stay its own. */
+var EXPR_SERIES = DLGD.dialogues.filter(function (d) { return d.expression; }).map(function (d) { return d.series; });
+var BASE = { version: DLGD.version, series: DLGD.series.filter(function (s) { return EXPR_SERIES.indexOf(s.id) === -1; }),
+  dialogues: DLGD.dialogues.filter(function (d) { return EXPR_SERIES.indexOf(d.series) === -1; }) };
 /* The first words of a line (up to n), punctuation dropped: always contained in that line. */
 function head(line, n) { return line.fr.replace(/[.,;:!?…«»]/g, " ").trim().split(/\s+/).slice(0, n).join(" "); }
 /* fake-a: café episodes 1-3; fake-b: café episodes 4-5. Each episode gets an expression from its second line. */
 function fixture() {
-  var f = { version: 1, dialogues: [], series: clone(DLGD.series) };
+  var f = { version: 1, dialogues: [], series: clone(BASE.series) };
   [["fake-a", [1, 2, 3]], ["fake-b", [4, 5]]].forEach(function (g, gi) {
     f.series.push({ id: g[0], title: "Fake " + gi, titleFr: "Faux " + gi, summary: "A test.", intro: "A test story.",
       acts: [{ number: 1, title: "One", titleFr: "Un", level: "A1" }] });
@@ -49,7 +53,7 @@ function fixture() {
       f.dialogues.push(d);
     });
   });
-  f.dialogues = clone(DLGD.dialogues).concat(f.dialogues);
+  f.dialogues = clone(BASE.dialogues).concat(f.dialogues);
   f.dialogues.filter(function (d) { return d.id === "fake-a-ep-2"; })[0].expression.voice = "qwen3-fr-m-bf16";
   return f;
 }
@@ -88,11 +92,11 @@ test("listenEntries: an expression adds its French and its example in the card's
   assert.deepEqual(es, [
     { text: a.fr, voice: null, category: "dialogue-expression" }, { text: a.example, voice: null, category: "dialogue-expression-example" },
     { text: b.fr, voice: "qwen3-fr-m-bf16", category: "dialogue-expression" }, { text: b.example, voice: "qwen3-fr-m-bf16", category: "dialogue-expression-example" }]);
-  var f = clone(DLGD); f.dialogues[f.dialogues.length - 1].proverb.voice = "qwen3-fr-m-bf16";
+  var f = clone(BASE); f.dialogues[f.dialogues.length - 1].proverb.voice = "qwen3-fr-m-bf16";
   var pv = DLG.listenEntries(f).filter(function (e) { return e.category === "dialogue-proverb"; });
   assert.equal(pv.length, 20);
   assert.deepEqual(pv.map(function (e) { return e.voice; }).filter(Boolean), ["qwen3-fr-m-bf16"]);
-  assert.equal(DLG.listenEntries(DLGD).filter(function (e) { return /^dialogue-expression/.test(e.category); }).length, 0);
+  assert.equal(DLG.listenEntries(BASE).filter(function (e) { return /^dialogue-expression/.test(e.category); }).length, 0);
   assert.equal(DLG.hasExpressions(FX, "fake-a"), true);
   assert.equal(DLG.hasExpressions(FX, "le-cafe-des-questions"), false);
 });
@@ -101,7 +105,7 @@ test("deck: 5 expressions grouped by series in series order; the Proverbs deck k
   assert.deepEqual(X.allSeries(FX), ["fake-a", "fake-b"]);
   assert.equal(X.bySeries(FX, "fake-b").length, 2);
   assert.deepEqual(X.bySeries(FX, "nope"), []);
-  assert.equal(X.list(DLGD).length, 0);
+  assert.equal(X.list(BASE).length, 0);
   assert.equal(P.list(FX).length, 20);
   P.list(FX).forEach(function (it) { assert.equal(it.series, "le-cafe-des-questions"); });
   assert.equal(X.flashItems(FX, null, "sexpr-fr-en").length, 5);
@@ -182,7 +186,7 @@ test("search: an expression's French finds its episode with an expression: match
   var h = S.search(idx, x.fr).dialogues.filter(function (d) { return d.series === "fake-b"; })[0];
   assert.equal(h.id, "fake-b-ep-1");
   assert.equal(h.matchDetail, "expression: « " + x.fr + " »");
-  var plain = S.buildIndex(DATA, global.window.TOPICS_DATA, require("../js/reference-data.js"), require("../js/expressions-data.js"), DLGD);
+  var plain = S.buildIndex(DATA, global.window.TOPICS_DATA, require("../js/reference-data.js"), require("../js/expressions-data.js"), BASE);
   assert.equal(S.search(plain, "expression à retenir").dialogues.length, 0);
 });
 test("storage: sexpr: keys of known episodes survive sanitize; unknown or malformed ones are dropped", function () {
