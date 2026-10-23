@@ -25,6 +25,7 @@ directory (run from the repository root).
 """
 import argparse
 import base64
+import glob
 import json
 import os
 import re
@@ -36,6 +37,7 @@ from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MANIFEST = os.path.join(HERE, "manifest.json")
+CAFE_MANIFEST = os.path.join(HERE, "manifest-cafe.json")
 # Conservative per-image estimates in USD (at or above the published Bedrock list prices).
 PRICE = {
     "stability.sd3-5-large-v1:0": 0.08,
@@ -206,13 +208,35 @@ def cmd_printjpg(args):
             dest = os.path.join(args.dest, img["id"] + ".jpg")
             clean.save(dest, "JPEG", quality=args.quality, optimize=True)
         print("%s %dx%d %d KB" % (dest, clean.size[0], clean.size[1], os.path.getsize(dest) // 1024))
+def site_manifests(args):
+    """--manifest, --cafe-manifest (unless ''), then every other manifest-*.json next to this script, sorted by name.
+    A globbed file is skipped when it is --manifest, --cafe-manifest or the default café manifest (so
+    --cafe-manifest '' still leaves manifest-cafe.json out)."""
+    paths, seen = [], {os.path.realpath(CAFE_MANIFEST)}
+    for p in [args.manifest] + ([args.cafe_manifest] if args.cafe_manifest else []):
+        if not any(os.path.realpath(p) == os.path.realpath(q) for q in paths):
+            paths.append(p)
+    seen.update(os.path.realpath(p) for p in paths)
+    for p in sorted(glob.glob(os.path.join(HERE, "manifest-*.json"))):
+        if os.path.realpath(p) not in seen:
+            paths.append(p)
+    return paths
+
+
 def cmd_site(args):
     """Write verb-trainer/js/story-images.js: per series, the credit and the file, size and alt text of each
-    published image (manifest.json for La Lettre de Lyon, manifest-cafe.json for Le Café des Questions)."""
-    series = {}
-    for path in [args.manifest] + ([args.cafe_manifest] if args.cafe_manifest else []):
+    published image (manifest.json for La Lettre de Lyon, manifest-cafe.json for Le Café des Questions, and any other
+    manifest-<slug>.json, whose own "credit" is used)."""
+    loaded = []
+    for path in site_manifests(args):
         m = load_manifest(path)
         sid = m.get("series", "la-lettre-de-lyon")
+        if any(sid == s for s, _ in loaded):
+            print("two manifests for series " + sid, file=sys.stderr)
+            sys.exit(2)
+        loaded.append((sid, m))
+    series = {}
+    for sid, m in loaded:
         cover, eps = None, {}
         for img in m["images"]:
             if img.get("published") is False:
@@ -222,7 +246,7 @@ def cmd_site(args):
                 cover = rec
             else:
                 eps[str(img["episode"])] = rec
-        series[sid] = {"credit": CREDITS[sid], "cover": cover, "episodes": eps}
+        series[sid] = {"credit": m.get("credit") or CREDITS[sid], "cover": cover, "episodes": eps}
         print("%s: cover %s, %d episodes" % (sid, "yes" if cover else "no", len(eps)))
     data = json.dumps({"series": series}, indent=1, ensure_ascii=False)
     with open(args.dest, "w", encoding="utf-8") as f:
@@ -262,8 +286,9 @@ def main():
     w.add_argument("--quality", type=int, default=80)
     s = sub.add_parser("site")
     s.add_argument("--dest", default=os.path.join("verb-trainer", "js", "story-images.js"))
-    s.add_argument("--cafe-manifest", default=os.path.join(HERE, "manifest-cafe.json"),
-                   help="second series' manifest (Le Café des Questions); pass '' to leave it out")
+    s.add_argument("--cafe-manifest", default=CAFE_MANIFEST,
+                   help="second series' manifest (Le Café des Questions); pass '' to leave it out. Every other "
+                        "manifest-*.json in this folder is read too (sorted; two manifests for one series is exit 2)")
     pj = sub.add_parser("printjpg")
     pj.add_argument("--src", default=os.path.join("verb-trainer", "images", "story"))
     pj.add_argument("--dest", required=True)
