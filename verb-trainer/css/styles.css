@@ -1365,6 +1365,11 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 /* Story illustrations (images/story/*.webp, story-images.js): width/height attributes reserve the space */
 .dia-illus { margin: 0 0 var(--s-3); }
 .dia-illus-img { display: block; width: 100%; max-width: 48rem; height: auto; border-radius: var(--r-md); border: 1px solid var(--border); }
+/* Scene images between dialogue lines (d.sceneImages, story-images.js inserts); --muted is AA on --bg in both themes */
+.dia-scene-item { list-style: none; }
+.dia-scene-img { margin: var(--s-1) 0; }
+.dia-scene-img-pic { display: block; width: 100%; max-width: 100%; height: auto; border-radius: var(--r-md); border: 1px solid var(--border); }
+.dia-scene-cap { margin-top: var(--s-1); color: var(--muted); font-size: var(--fs-sm); }
 .dia-series-cover { float: right; width: clamp(6rem, 28%, 11rem); height: auto; margin: 0 0 var(--s-3) var(--s-3); border-radius: var(--r-md); border: 1px solid var(--border); }
 .dia-series h5 { clear: both; }
 .dia-episode-pic ~ .dia-episode:not(.dia-episode-pic) { padding-left: calc(5.5rem + var(--s-3)); } /* episode 8: no picture */

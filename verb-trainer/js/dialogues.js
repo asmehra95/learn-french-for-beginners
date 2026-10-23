@@ -21,6 +21,10 @@
   // episode.proverb (optional; story series only, on every episode or on none)
   var PROVERB_KEYS = ["fr", "respelling", "literal", "meaning", "englishEquivalent"];
   var PROVERB_MEANING_MAX = 140;
+  // d.sceneImages (optional): [{ afterLine, image, alt }], pixels in story-images.js series[<id>].inserts[image]
+  var SCENE_IMAGES_MAX = 3, SCENE_ALT_MIN = 21, SCENE_ALT_MAX = 199;
+  var SCENE_IMAGE_KEYS = ["afterLine", "image", "alt"];
+  var SCENE_IMAGE_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
   var hasOwn = Object.prototype.hasOwnProperty;
   function own(o, k) { return !!o && hasOwn.call(o, k); }
 
@@ -282,6 +286,32 @@
             if (own(proverbFr, pk)) err("proverb.fr", "duplicate of the proverb in " + proverbFr[pk]);
             else proverbFr[pk] = did;
           }
+        }
+      }
+      // sceneImages (optional): up to 3 pictures shown between lines, each after an earlier line than the next
+      if (own(d, "sceneImages")) {
+        var si = d.sceneImages;
+        if (!Array.isArray(si) || si.length > SCENE_IMAGES_MAX) err("sceneImages", "must be an array of at most " + SCENE_IMAGES_MAX + " items");
+        else {
+          var lineOrder = {}, lastLine = lines.length ? lines[lines.length - 1].id : null, prevAt = -1;
+          lines.forEach(function (l, i) { if (l && LINE_RE.test(String(l.id)) && !own(lineOrder, l.id)) lineOrder[l.id] = i; });
+          si.forEach(function (x, i) {
+            var p = "sceneImages[" + i + "]";
+            if (!x || typeof x !== "object" || Array.isArray(x)) { err(p, "must be an object"); return; }
+            Object.keys(x).forEach(function (k) { if (SCENE_IMAGE_KEYS.indexOf(k) === -1) err(p + "." + k, "unknown key"); });
+            if (typeof x.afterLine !== "string" || !own(lineOrder, x.afterLine)) err(p + ".afterLine", "unknown line " + x.afterLine);
+            else if (x.afterLine === lastLine) err(p + ".afterLine", "must not be the last line");
+            else {
+              var at = lineOrder[x.afterLine];
+              if (at === prevAt) err(p + ".afterLine", "duplicate line " + x.afterLine);
+              else if (at < prevAt) err(p + ".afterLine", "must come after the previous scene image's line");
+              prevAt = Math.max(prevAt, at);
+            }
+            if (typeof x.image !== "string" || !SCENE_IMAGE_RE.test(x.image)) err(p + ".image", "must match ^[a-z0-9]+(-[a-z0-9]+)*$");
+            if (typeof x.alt !== "string" || x.alt.trim().length < SCENE_ALT_MIN || x.alt.length > SCENE_ALT_MAX) {
+              err(p + ".alt", "must be a string of " + SCENE_ALT_MIN + "-" + SCENE_ALT_MAX + " characters");
+            }
+          });
         }
       }
     });

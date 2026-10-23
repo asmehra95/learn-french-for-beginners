@@ -93,6 +93,35 @@ test("story-images.js matches the manifest: cover + one entry per published epis
   Object.keys(SI.episodes).forEach(function (n) { assert.ok(story.indexOf(Number(n)) !== -1, "episode " + n + " exists"); });
 });
 
+/* generate.py site writing to stdout (no file is written); returns the story-images.js text it would write. */
+function genSite(args, input) {
+  var out = require("child_process").execFileSync("python3", [path.join(REPO, "tools", "story-images", "generate.py")].concat(args)
+    .concat(["site", "--dest", "/dev/stdout"]), { cwd: REPO, encoding: "utf8", input: input || "" });
+  var a = out.indexOf("/* Story illustrations"), b = out.indexOf("})(typeof window !== \"undefined\" ? window : null);\n");
+  assert.ok(a !== -1 && b > a, "generate.py site output");
+  return out.slice(a, b + "})(typeof window !== \"undefined\" ? window : null);\n".length);
+}
+test("generate.py site: story-images.js is byte-identical to a regeneration from the current manifests (no inserts key)", function () {
+  assert.equal(genSite([]), fs.readFileSync(path.join(ROOT, "js", "story-images.js"), "utf8"));
+  Object.keys(ALL.series).forEach(function (sid) { assert.ok(!("inserts" in ALL.series[sid]), sid + " has no scene images yet"); });
+});
+test("generate.py site: manifest entries with an insert key become series[<id>].inserts[<image id>] = { src, width, height } (published only)", function () {
+  var m = { series: "fake-x", credit: "Illustrations: test credit.", images: [
+    { id: "fake-x-ep01", episode: 1, file: "fake-x-ep01.webp", width: 1200, height: 686, alt: "An episode picture for the test." },
+    { id: "fake-x-ep01-i1", episode: 1, insert: 1, afterLine: "l4", file: "fake-x-ep01-i1.webp", width: 1200, height: 686, alt: "A scene image for the test." },
+    { id: "fake-x-ep01-i2", episode: 1, insert: 2, afterLine: "l8", file: "fake-x-ep01-i2.webp", width: 1200, height: 686, alt: "Not published.", published: false }] };
+  var sb = {};
+  require("vm").runInNewContext(genSite(["--manifest", "/dev/stdin"], JSON.stringify(m)), { window: sb, module: undefined });
+  var S = sb.VT_STORY_IMAGES.series["fake-x"];
+  assert.ok(S, "fake-x series");
+  assert.deepEqual(Object.keys(S.episodes), ["1"], "an insert is not an episode picture");
+  assert.deepEqual(JSON.parse(JSON.stringify(S.inserts)), { "fake-x-ep01-i1": { src: "images/story/fake-x-ep01-i1.webp", width: 1200, height: 686 } });
+  m.images = m.images.slice(0, 1);
+  sb = {};
+  require("vm").runInNewContext(genSite(["--manifest", "/dev/stdin"], JSON.stringify(m)), { window: sb, module: undefined });
+  assert.ok(!("inserts" in sb.VT_STORY_IMAGES.series["fake-x"]), "no inserts key without scene images");
+});
+
 test("index.html loads story-images.js (versioned) before the views", function () {
   var html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
   var a = html.indexOf('<script src="js/story-images.js?v=__BUILD__"></script>');
@@ -130,6 +159,38 @@ test("the story PDF embeds the pictures and the credit, and the licence file has
   assert.match(lic, /Episode 8 shows M\. Brun alone/);
   assert.match(lic, /GitHub Pages/);
   assert.match(lic, /\*In plain language\*|\*\*In plain language\*\*/);
+});
+
+test("story printables: a published scene image follows its line in the Markdown and the print HTML; an unpublished one is skipped", function () {
+  var B = require(path.join(REPO, "tools", "build-story.js"));
+  var BD = require(path.join(REPO, "tools", "build-dialogues.js"));
+  var src = SC.episodes["1"];
+  var alt = "Synthetic scene image: the café terrace at dusk.";
+  function site() {
+    var s = BD.loadSite();
+    var d = s.DLG.episodes(s.data, CAFE)[0];
+    d.sceneImages = [{ afterLine: d.lines[3].id, image: "cafe-ep01-i1", alt: alt }, { afterLine: d.lines[7].id, image: "cafe-ep01-i2", alt: alt }];
+    return { site: s, d: d };
+  }
+  var plainMd = B.markdown(undefined, CAFE), plainHtml = B.printHtml(undefined, CAFE);
+  var t = site();
+  assert.equal(B.markdown(t.site, CAFE), plainMd, "no inserts in story-images.js: output unchanged");
+  SC.inserts = { "cafe-ep01-i1": { src: src.src, width: src.width, height: src.height } };
+  try {
+    t = site();
+    var md = B.markdown(t.site, CAFE);
+    var line = t.d.lines[3];
+    var pic = "![" + alt + "](../" + src.src + ")";
+    assert.equal(md.split(pic).length - 1, 1, "one picture in the Markdown");
+    assert.ok(md.indexOf("> *" + line.en + "*") < md.indexOf(pic), "after its line");
+    assert.equal(md.replace(pic + "\n\n", ""), plainMd, "only the picture is added");
+    var html = B.printHtml(site().site, CAFE);
+    var figs = html.match(/<figure class="ins"><img class="ins-img" src="data:image\/webp;base64,[A-Za-z0-9+/=]+" width="1200" height="686" alt="([^"]*)"><\/figure>/g) || [];
+    assert.equal(figs.length, 1, "one figure in the print HTML");
+    assert.ok(figs[0].indexOf("alt=\"" + alt + "\"") !== -1);
+    assert.ok(html.indexOf(".ins-img {") !== -1 && plainHtml.indexOf(".ins-img {") === -1, "scene CSS only when needed");
+    assert.ok(html.indexOf(require(path.join(REPO, "tools", "build-grammar-tables.js")).esc(line.en)) < html.indexOf(figs[0]), "after its line");
+  } finally { delete SC.inserts; }
 });
 
 /* ---------- Le Café des Questions (dialogues 41-60): Qwen-Image-Edit-2511, tools/story-images/manifest-cafe.json ---------- */

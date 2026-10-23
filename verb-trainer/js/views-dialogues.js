@@ -42,6 +42,22 @@
     var S = ser ? storySet(ser.id) : null;
     return S ? S.cover : null;
   }
+  function own(o, k) { return !!o && Object.prototype.hasOwnProperty.call(o, k); }
+  /* Scene images (d.sceneImages, at most 3): line id -> { rec, alt } for the pictures already published in
+     story-images.js series[<series id>].inserts[<image id>]; a missing picture is skipped (not published yet). */
+  function sceneImagesByLine(d) {
+    var S = d && Array.isArray(d.sceneImages) ? storySet(d.series) : null;
+    var ins = S && S.inserts ? S.inserts : null, out = {};
+    if (ins) d.sceneImages.forEach(function (x) { if (own(ins, x.image)) out[x.afterLine] = { rec: ins[x.image], alt: x.alt }; });
+    return out;
+  }
+  /* An <li> wrapper keeps the <ol> valid; the figure carries the picture and a short visible label. */
+  function sceneImageNode(s) {
+    return el("li", { className: "dia-scene-item" }, [el("figure", { className: "dia-scene-img" }, [
+      imgNode(s.rec, "dia-scene-img-pic", s.alt, true),
+      el("figcaption", { className: "dia-scene-cap", text: "Scene change" })
+    ])]);
+  }
   function imgNode(rec, cls, alt, lazy) {
     return el("img", { className: cls, src: rec.src, width: String(rec.width), height: String(rec.height), alt: alt,
       loading: lazy ? "lazy" : null, decoding: "async" });
@@ -358,7 +374,11 @@
   function renderListen(d, section) {
     var lines = d.lines;
     var list = linesList(d);
-    lines.forEach(function (l) { list.appendChild(lineNode(d, l)); });
+    var scenes = sceneImagesByLine(d);
+    lines.forEach(function (l) {
+      list.appendChild(lineNode(d, l));
+      if (own(scenes, l.id)) list.appendChild(sceneImageNode(scenes[l.id]));
+    });
     var toggleText = el("span", { text: "Play all" });
     var playAll = el("button", { type: "button", className: "btn btn-primary dia-playall", "aria-label": "Play all" }, [C.UI.icon("volume-2"), toggleText]);
     var stopBtn = el("button", { type: "button", className: "btn", disabled: true }, [C.UI.icon("x"), el("span", { text: "Stop" })]);

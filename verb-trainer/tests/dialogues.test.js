@@ -1087,6 +1087,49 @@ test("listenEntries: a proverb adds one default-voice dialogue-proverb entry", f
   assert.deepEqual(es, [{ text: "Chaque chose en son temps.", voice: null, category: "dialogue-proverb" }]);
   assert.equal(DLG.listenEntries(CAFE).filter(function (e) { return e.category === "dialogue-proverb"; }).length, 0);
 });
+/* ---------- schema: sceneImages (synthetic fixture) ---------- */
+var SCENE_ALT = "Two friends cross a rainy square at night.";
+function sceneFixture() {
+  var f = storyFixture();
+  ep(f, 1).sceneImages = [{ afterLine: "l3", image: "fake-ep01-i1", alt: SCENE_ALT },
+    { afterLine: "l6", image: "fake-ep01-i2", alt: SCENE_ALT }, { afterLine: "l9", image: "fake-ep01-i3", alt: SCENE_ALT }];
+  return f;
+}
+test("schema (sceneImages): up to three valid entries validate; the fixture without them still does", function () {
+  assert.deepEqual(DLG.validate(sceneFixture()), []);
+  var f = sceneFixture(); ep(f, 1).sceneImages = [];
+  assert.deepEqual(DLG.validate(f), []);
+  f = sceneFixture(); ep(f, 1).sceneImages[0].alt = "x".repeat(21);
+  ep(f, 1).sceneImages[1].alt = "x".repeat(199);
+  assert.deepEqual(DLG.validate(f), [], "alt of 21 and 199 characters");
+});
+test("schema (sceneImages): each broken field yields its specific error", function () {
+  function one(mut, expected) { var f = sceneFixture(); mut(ep(f, 1)); assert.deepEqual(DLG.validate(f), [expected]); }
+  one(function (d) { d.sceneImages.push({ afterLine: "l10", image: "fake-ep01-i4", alt: SCENE_ALT }); }, "fake-ep-1/sceneImages: must be an array of at most 3 items");
+  one(function (d) { d.sceneImages = { afterLine: "l3" }; }, "fake-ep-1/sceneImages: must be an array of at most 3 items");
+  one(function (d) { d.sceneImages[0] = "l3"; }, "fake-ep-1/sceneImages[0]: must be an object");
+  one(function (d) { d.sceneImages[0].afterLine = "l40"; }, "fake-ep-1/sceneImages[0].afterLine: unknown line l40");
+  one(function (d) { d.sceneImages[2].afterLine = "l12"; }, "fake-ep-1/sceneImages[2].afterLine: must not be the last line");
+  one(function (d) { d.sceneImages[1].afterLine = "l3"; }, "fake-ep-1/sceneImages[1].afterLine: duplicate line l3");
+  one(function (d) { d.sceneImages[1].afterLine = "l2"; }, "fake-ep-1/sceneImages[1].afterLine: must come after the previous scene image's line");
+  one(function (d) { d.sceneImages[0].image = "Fake_ep01"; }, "fake-ep-1/sceneImages[0].image: must match ^[a-z0-9]+(-[a-z0-9]+)*$");
+  one(function (d) { d.sceneImages[0].image = "fake--ep01"; }, "fake-ep-1/sceneImages[0].image: must match ^[a-z0-9]+(-[a-z0-9]+)*$");
+  one(function (d) { d.sceneImages[0].alt = "x".repeat(20); }, "fake-ep-1/sceneImages[0].alt: must be a string of 21-199 characters");
+  one(function (d) { d.sceneImages[0].alt = "x".repeat(200); }, "fake-ep-1/sceneImages[0].alt: must be a string of 21-199 characters");
+  one(function (d) { delete d.sceneImages[0].alt; }, "fake-ep-1/sceneImages[0].alt: must be a string of 21-199 characters");
+  one(function (d) { d.sceneImages[0].caption = "x"; }, "fake-ep-1/sceneImages[0].caption: unknown key");
+});
+test("views (sceneImages): Listen mode puts a lazy figure with the record's alt and a caption after the line, only when published", function () {
+  var v = fs.readFileSync(path.join(ROOT, "js", "views-dialogues.js"), "utf8");
+  assert.match(v, /if \(own\(scenes, l\.id\)\) list\.appendChild\(sceneImageNode\(scenes\[l\.id\]\)\)/);
+  assert.match(v, /el\("figure", \{ className: "dia-scene-img" \}/);
+  assert.match(v, /imgNode\(s\.rec, "dia-scene-img-pic", s\.alt, true\)/);
+  assert.match(v, /el\("figcaption", \{ className: "dia-scene-cap", text: "Scene change" \}\)/);
+  assert.match(v, /if \(own\(ins, x\.image\)\) out\[x\.afterLine\]/, "unpublished pictures are skipped");
+  var css = fs.readFileSync(path.join(ROOT, "css", "styles.css"), "utf8");
+  assert.match(css, /\.dia-scene-img-pic \{[^}]*max-width: 100%;[^}]*height: auto;/);
+  assert.match(css, /\.dia-scene-cap \{[^}]*color: var\(--muted\)/);
+});
 test("progress: the optional now argument sets lastAt only when given", function () {
   var st = { stats: {} };
   DLG.recordQuiz(st, "a", 50, "2026-10-16");

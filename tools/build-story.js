@@ -7,7 +7,8 @@
                                                also writes that series' print HTML (print it to PDF with
                                                headless Chrome --print-to-pdf, then strip the PDF metadata)
        [--print-images DIR]                    use DIR/<id>.jpg for the pictures (generate.py printjpg)
-   Pictures appear only for the series story-images.js illustrates (series[<id>]). Series whose lines carry emotion tags print
+   Pictures appear only for the series story-images.js illustrates (series[<id>]); scene images (d.sceneImages,
+   pixels in series[<id>].inserts) follow their line in both outputs. Series whose lines carry emotion tags print
    them in brackets after the English; series with proverbs end each episode with its Sagesse du jour card and
    add a proverb index after the answer key.
    A lighter layout than tools/build-dialogues.js: each line shows the speaker, the French and the English;
@@ -103,8 +104,11 @@ function markdown(site, seriesId) {
     g.eps.forEach(function (d) {
       out.push("### " + epHeading(d), "");
       out.push("*" + d.scene + "*", "");
+      var scenes = sceneImages(seriesId, d);
       d.lines.forEach(function (l) {
         out.push("**" + speaker(d, l.speaker).name + ":** " + l.fr, "> *" + l.en + "*" + (l.emotion ? " (" + l.emotion + ")" : ""), "");
+        // relative to verb-trainer/reference/<id>.md, the copy the site serves
+        if (scenes[l.id]) out.push("![" + mdAlt(scenes[l.id].alt) + "](../" + scenes[l.id].rec.src + ")", "");
       });
       out.push("#### Words from this episode", "");
       d.vocab.forEach(function (v) { out.push("- **" + v.fr + "** (" + v.pron + ") — " + v.en); });
@@ -161,10 +165,11 @@ var CSS = G.CSS + "\n" + [
   ".cover { display: block; width: 7.5cm; height: auto; margin: 12pt auto 8pt; } .credit { font-size: 8pt; color: #555; }",
   ".ep-img { display: block; width: 100%; height: auto; max-height: 8.6cm; object-fit: contain; margin: 0 0 6pt; break-inside: avoid; }"
 ].join("\n");
-/* Only for series with emotion tags / proverbs, so the other printables stay byte-identical. */
+/* Only for series with emotion tags / proverbs / published scene images, so the other printables stay byte-identical. */
 var CSS_EMOTION = "\np.ln .emo { color: #555; font-size: 9pt; }";
 var CSS_PROVERB = "\n.box.proverb { border-left-color: #8a5a00; } .box.proverb .fr { font-size: 11pt; }" +
   "\n.proverbs-index { page-break-before: always; } .proverbs-index ul { padding-left: 14pt; } .proverbs-index li { margin: 0 0 3pt; }";
+var CSS_SCENES = "\n.ins { margin: 4pt 0 8pt; break-inside: avoid; page-break-inside: avoid; } .ins-img { display: block; width: 100%; height: auto; max-height: 7cm; object-fit: contain; }";
 
 /* Story illustrations (verb-trainer/js/story-images.js), inlined as data: URIs so the print HTML works from any
    folder and the PDF carries no file paths. Episodes without an entry get no picture.
@@ -181,6 +186,18 @@ function imgTag(rec, cls, alt) {
     "\" height=\"" + rec.height + "\" alt=\"" + G.esc(alt) + "\">";
 }
 
+/* Scene images (d.sceneImages): line id -> { rec, alt } for those published in story-images.js
+   series[<id>].inserts[<image id>]; the others are skipped, as on the site. */
+function sceneImages(seriesId, d) {
+  var set = IMAGES && IMAGES.series && Object.prototype.hasOwnProperty.call(IMAGES.series, seriesId) ? IMAGES.series[seriesId] : null;
+  var ins = set && set.inserts ? set.inserts : null, out = {};
+  if (ins && Array.isArray(d.sceneImages)) d.sceneImages.forEach(function (x) {
+    if (Object.prototype.hasOwnProperty.call(ins, x.image)) out[x.afterLine] = { rec: ins[x.image], alt: x.alt };
+  });
+  return out;
+}
+function mdAlt(t) { return String(t).replace(/[\[\]\\]/g, "\\$&"); }
+
 function printHtml(site, seriesId) {
   seriesId = seriesId || DEFAULT_SERIES;
   site = site || B.loadSite();
@@ -191,7 +208,8 @@ function printHtml(site, seriesId) {
   var set = IMAGES && IMAGES.series && Object.prototype.hasOwnProperty.call(IMAGES.series, seriesId) ? IMAGES.series[seriesId] : null;
   var pics = !!set;
   var h = [];
-  h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + (S.emotions ? CSS_EMOTION : "") + (S.proverbs ? CSS_PROVERB : "") + "</style></head><body>");
+  h.push("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>" + esc(S.ser.titleFr) + "</title><style>" + CSS + (S.emotions ? CSS_EMOTION : "") + (S.proverbs ? CSS_PROVERB : "") +
+    (S.eps.some(function (d) { return Object.keys(sceneImages(seriesId, d)).length; }) ? CSS_SCENES : "") + "</style></head><body>");
   h.push("<section class=\"title-page\"><p class=\"brand\">Learn French for Beginners</p><h1 lang=\"fr\">" + esc(S.ser.titleFr) + "</h1>" +
     "<p class=\"sub\">A story in " + S.eps.length + " episodes · " + esc(levelRange(S.ser)) + "</p>" +
     (pics && set.cover ? imgTag(set.cover, "cover", set.cover.alt) : "") +
@@ -222,9 +240,11 @@ function printHtml(site, seriesId) {
       var pic = pics ? set.episodes[String(d.episode)] || null : null;
       if (pic) h.push(imgTag(pic, "ep-img", pic.alt));
       h.push("<p class=\"scene\">" + esc(d.scene) + "</p>");
+      var scenes = sceneImages(seriesId, d);
       d.lines.forEach(function (l) {
         h.push("<p class=\"ln\"><b>" + esc(speaker(d, l.speaker).name) + "</b> <span lang=\"fr\">" + esc(l.fr) + "</span><br><i>" + esc(l.en) + "</i>" +
           (l.emotion ? " <span class=\"emo\">(" + esc(l.emotion) + ")</span>" : "") + "</p>");
+        if (scenes[l.id]) h.push("<figure class=\"ins\">" + imgTag(scenes[l.id].rec, "ins-img", scenes[l.id].alt) + "</figure>");
       });
       h.push("<div class=\"box\"><h4>Words from this episode</h4><ul>" + d.vocab.map(function (v) {
         return "<li><b lang=\"fr\">" + esc(v.fr) + "</b> <span class=\"pron\">(" + esc(v.pron) + ")</span> — " + esc(v.en) + "</li>";
