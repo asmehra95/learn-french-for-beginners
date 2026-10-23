@@ -117,7 +117,7 @@ async function launchChrome() {
   profileDir = fs.mkdtempSync("/tmp/vt-native-chrome-");
   chrome = spawn(CHROME, [
     "--headless=new", "--disable-gpu", "--no-first-run", "--no-default-browser-check", "--remote-debugging-port=0",
-    "--autoplay-policy=no-user-gesture-required", "--mute-audio", `--user-data-dir=${profileDir}`, "about:blank"
+    "--autoplay-policy=no-user-gesture-required", "--mute-audio", "--disable-audio-output", `--user-data-dir=${profileDir}`, "about:blank"
   ], { stdio: ["ignore", "ignore", "ignore"] });
   const file = path.join(profileDir, "DevToolsActivePort");
   const end = Date.now() + 10000;

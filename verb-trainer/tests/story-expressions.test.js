@@ -30,8 +30,10 @@ function rng(seed) {
   };
 }
 var CAFE = DLG.episodes(DLGD, "le-cafe-des-questions");
-/* The shipped data without the series that already have expression cards, so the fixture's counts stay its own. */
-var EXPR_SERIES = DLGD.dialogues.filter(function (d) { return d.expression; }).map(function (d) { return d.series; });
+/* The shipped data without the series that already have expression cards or other proverbs than the café's, so the
+   fixture's counts stay its own (5 expressions, 20 café proverbs). */
+var EXPR_SERIES = DLGD.dialogues.filter(function (d) { return d.expression || (d.proverb && d.series !== "le-cafe-des-questions"); })
+  .map(function (d) { return d.series; });
 var BASE = { version: DLGD.version, series: DLGD.series.filter(function (s) { return EXPR_SERIES.indexOf(s.id) === -1; }),
   dialogues: DLGD.dialogues.filter(function (d) { return EXPR_SERIES.indexOf(d.series) === -1; }) };
 /* The first words of a line (up to n), punctuation dropped: always contained in that line. */

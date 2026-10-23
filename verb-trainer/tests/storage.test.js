@@ -510,13 +510,13 @@ test("café storage: the v1 fixture still migrates with data loaded", function (
   assert.equal(state.version, 2);
   assert.equal(JSON.stringify(state.stats), JSON.stringify(V1.stats));
 });
-test("café storage: all 80 dialogue records survive sanitize", function () {
+test("café storage: all 100 dialogue records survive sanitize", function () {
   var STORE = loadFull();
   var raw = clone(PRE_DLG);
   raw.dialogues = {};
   DLG_DATA.dialogues.forEach(function (d) { raw.dialogues[d.id] = { listened: true, quizBest: 50, quizAttempts: 1, roles: {}, lastDate: "2026-10-18" }; });
-  assert.equal(Object.keys(raw.dialogues).length, 80);
-  assert.equal(Object.keys(STORE.sanitize(raw).dialogues).length, 80);
+  assert.equal(Object.keys(raw.dialogues).length, 100);
+  assert.equal(Object.keys(STORE.sanitize(raw).dialogues).length, 100);
 });
 test("café storage: malformed lastAt, prov: keys and selectedProverbActs are dropped", function () {
   var STORE = loadFull();

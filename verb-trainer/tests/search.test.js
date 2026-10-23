@@ -321,11 +321,13 @@ test("static: views-search.js renders sg-dia in the §6 order and Enter chains i
   assert.ok(HTML.indexOf("everyday expressions, dialogues and the topic lessons</label>") !== -1);
 });
 /* ---------- Le Café des Questions: proverbs and the series title ---------- */
-test("café: 'proverbe' returns the 20 café episodes and no Lyon or everyday dialogue", function () {
+test("café: 'proverbe' returns the episodes with a proverb (the café's 20 among them) and no Lyon or everyday dialogue", function () {
   var hs = qd("proverbe").dialogues;
-  assert.equal(hs.length, 20);
-  hs.forEach(function (h) { assert.equal(h.series, "le-cafe-des-questions", h.id); });
-  assert.equal(qd("sagesse du jour").dialogues.length, 20);
+  var withProverb = require("../js/dialogues-data.js").dialogues.filter(function (d) { return d.proverb; });
+  assert.equal(hs.length, withProverb.length);
+  assert.equal(hs.filter(function (h) { return h.series === "le-cafe-des-questions"; }).length, 20);
+  hs.forEach(function (h) { assert.ok(h.series && h.series !== "la-lettre-de-lyon", h.id); });
+  assert.equal(qd("sagesse du jour").dialogues.length, withProverb.length);
 });
 test("café: 'oiseau' finds episode 3 first with a proverb: match detail; the English equivalent finds its episode too", function () {
   var h = qd("oiseau").dialogues[0];

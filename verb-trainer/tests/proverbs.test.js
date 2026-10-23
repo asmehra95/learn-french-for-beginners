@@ -9,7 +9,12 @@ global.window = {};
 ["data", "data-100", "verb-types", "topics-data", "merge-data", "verb-meta", "logic"].forEach(function (f) { require("../js/" + f + ".js"); });
 var L = require("../js/logic.js");
 var LEARN = require("../js/learn.js");
-var DLGD = require("../js/dialogues-data.js");
+var DLGD_ALL = require("../js/dialogues-data.js");
+/* The café's 20 proverbs: the shipped data without the other proverb series, so the act filter and the counts below
+   stay the café's (a second proverb series shares act numbers 1-4; see the last test for the shipped list). */
+var OTHER_PROV = DLGD_ALL.dialogues.filter(function (d) { return d.proverb && d.series !== "le-cafe-des-questions"; }).map(function (d) { return d.series; });
+var DLGD = { version: DLGD_ALL.version, series: DLGD_ALL.series.filter(function (s) { return OTHER_PROV.indexOf(s.id) === -1; }),
+  dialogues: DLGD_ALL.dialogues.filter(function (d) { return OTHER_PROV.indexOf(d.series) === -1; }) };
 var P = require("../js/proverbs.js");
 var ROOT = path.join(__dirname, "..");
 var DATA = global.window.VERB_DATA;
@@ -125,4 +130,13 @@ test("static: index.html has the Proverbs optgroup and loads proverbs.js (versio
   assert.ok(rv.indexOf("VT_PROV.choiceItem") !== -1);
   var src = fs.readFileSync(path.join(ROOT, "js", "proverbs.js"), "utf8");
   assert.ok(!/fetch\(|XMLHttpRequest|innerHTML|document\./.test(src));
+});
+test("shipped data: every story proverb in series order, then episode order", function () {
+  var order = DLGD_ALL.series.map(function (s) { return s.id; }), want = [];
+  order.forEach(function (sid) {
+    DLGD_ALL.dialogues.filter(function (d) { return d.series === sid && d.proverb; })
+      .sort(function (a, b) { return a.episode - b.episode; }).forEach(function (d) { want.push(d.id); });
+  });
+  assert.ok(want.length >= 20);
+  assert.deepEqual(P.list(DLGD_ALL).map(function (it) { return it.id; }), want);
 });

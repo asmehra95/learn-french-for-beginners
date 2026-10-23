@@ -88,8 +88,8 @@ test("content: 20 everyday dialogues numbered 1-20, levels A1 → A2 → B1, one
 });
 test("scale: stats and Review my mistakes cover every dialogue's questions", function () {
   var LEARN = require("../js/learn.js");
-  assert.equal(DLG.stats({}, DATA_D).total, 320);          // 80 everyday + 80 Lyon + 80 café + 80 colis questions
-  assert.equal(DLG.knownHeads(DATA_D).length, 320);
+  assert.equal(DLG.stats({}, DATA_D).total, 400);          // 80 everyday + 80 Lyon + 80 café + 80 colis + 80 hôtel questions
+  assert.equal(DLG.knownHeads(DATA_D).length, 400);
   var k = "dlg:hobbies-and-free-time.q2|dlg-quiz|-";
   var st = { stats: {} };
   st.stats[k] = { seen: 1, correct: 0, wrong: 1, box: 0, last: 1 };
@@ -631,7 +631,7 @@ test("voices: the female manifest keeps its format, default voice and pre-dialog
   Object.keys(M.items).forEach(function (k) { assert.equal(M.items[k].voiceId, "qwen3-fr-m-bf16"); });
 });
 
-/* ---------- all records (20 everyday dialogues + 3 × 20 story episodes): per-line content, role-play, quiz, clips ---------- */
+/* ---------- all records (20 everyday dialogues + 4 × 20 story episodes): per-line content, role-play, quiz, clips ---------- */
 var VOICE_DIRS = { "qwen3-fr-bf16": "qwen3-fr-bf16", "qwen3-fr-m-bf16": "qwen3-fr-m-bf16" };
 /* Dialogue lines with no clip on purpose (failed-excluded, the device voice reads them). Empty now:
    at-the-bakery l7 "Un euro vingt pièce." was reviewed and shipped as failed-kept (Whisper writes "1,20€"
@@ -643,8 +643,8 @@ function voiceManifest(voice) {
 }
 test("all records: unique dialogue, line, vocab and question ids; every line has fr, pron, en and a known speaker with a shipped voice", function () {
   var ids = DATA_D.dialogues.map(function (d) { return d.id; });
-  assert.equal(ids.length, 80);
-  assert.equal(new Set(ids).size, 80);
+  assert.equal(ids.length, 100);
+  assert.equal(new Set(ids).size, 100);
   DATA_D.dialogues.forEach(function (d) {
     ["lines", "vocab", "questions"].forEach(function (k) {
       var xs = d[k].map(function (x) { return x.id; });
@@ -721,7 +721,7 @@ test("all records: every quiz item offers its answer among 4 unique options, voi
       n++;
     });
   });
-  assert.equal(n, 320);
+  assert.equal(n, 400);
 });
 test("all dialogues and episodes: every line has a clip in its speaker's voice folder, or is on the documented device-voice list", function () {
   var fallback = [];
