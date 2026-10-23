@@ -665,6 +665,7 @@
     ((dlgData && dlgData.dialogues) || []).forEach(function (d) {
       (d.questions || []).forEach(function (q) { known["dlg:" + d.id + "." + q.id] = true; });
       if (d.series && d.proverb) known["prov:" + d.id] = true;   // Proverbs deck ("prov:<dialogue>")
+      if (d.series && d.expression) known["sexpr:" + d.id] = true;   // Story expressions deck ("sexpr:<dialogue>")
     });
     var stats = state.stats || {};
     return Object.keys(stats).filter(function (k) {
@@ -816,6 +817,11 @@
       }
       return info("browse", "lesson", { lessonId: bid, redirect: "#browse/lesson/" + bid });
     }
+    if (name === "flashcards" && seg[1] === "story-expressions") {
+      // #flashcards/story-expressions, #flashcards/story-expressions/<seriesId>; app.js checks the series has expressions.
+      if (seg.length === 2) return info("flashcards", "story-expressions", { seriesId: null });
+      return seg.length === 3 && /^[a-z0-9-]{1,40}$/.test(seg[2]) ? info("flashcards", "story-expressions", { seriesId: seg[2] }) : home;
+    }
     if (name === "flashcards" && seg[1] === "proverbs") {
       // #flashcards/proverbs, #flashcards/proverbs/<act 1-4>; app.js checks the act has proverbs.
       if (seg.length === 2) return info("flashcards", "proverbs", { act: null });
@@ -909,7 +915,16 @@
     if (item.prov) {
       // proverb flashcards and Review items (proverbs.js): the proverb, its respelling, the default voice
       var pv = item.prov.proverb;
-      return { french: pv.fr, pronunciation: pv.respelling, audioKey: null, listenText: pv.fr };
+      var po = { french: pv.fr, pronunciation: pv.respelling, audioKey: null, listenText: pv.fr };
+      if (pv.voice) po.voiceId = pv.voice;   // the card's own recorded voice
+      return po;
+    }
+    if (item.sexpr) {
+      // story-expression flashcards and Review items (story-expressions.js): the card's voice, else the default voice
+      var ex = item.sexpr.expression;
+      var xo = { french: ex.fr, pronunciation: ex.respelling, audioKey: null, listenText: ex.fr };
+      if (ex.voice) xo.voiceId = ex.voice;
+      return xo;
     }
     var verb = item.verb;
     if (item.kind === "choice" && item.listen) {

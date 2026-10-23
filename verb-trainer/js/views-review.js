@@ -76,11 +76,23 @@
     return it;
   }
 
+  function isSexprKey(k) { return !!window.VT_SEXPR && window.VT_SEXPR.isKey(k); }
+  /* A story-expression flashcard key ("sexpr:<dialogue>|flash-…|-"): a multiple-choice item from VT_SEXPR.choiceItem. */
+  function storyExpressionItem(origKey) {
+    var D = C.DIALOGUES;
+    if (!window.VT_SEXPR || !D) return null;
+    var it = window.VT_SEXPR.choiceItem(D, origKey, Math.random);
+    if (!it) return null;
+    var el = C.UI.el, g = it.legend;
+    it.legendParts = [g.before, el("strong", { lang: g.strongLang, text: g.strong }), g.after];
+    return it;
+  }
   /* Map an original key to an item per the §11.2 table, recorded against that key (AC13). null = unbuildable. */
   function buildItem(origKey) {
     if (isExprKey(origKey)) return expressionItem(origKey);
     if (isDlgKey(origKey)) return dialogueItem(origKey);
     if (isProvKey(origKey)) return proverbItem(origKey);
+    if (isSexprKey(origKey)) return storyExpressionItem(origKey);
     var k = parseKey(origKey);
     var verb = C.verbsById[k.id];
     if (!verb) return null;
@@ -121,7 +133,7 @@
     return function () {
       var keys;
       if (r.scope === "session") {
-        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k) || isDlgKey(k) || isProvKey(k); });
+        keys = C.SESSION.lastMissed.filter(function (k) { return !!C.verbsById[parseKey(k).id] || isExprKey(k) || isDlgKey(k) || isProvKey(k) || isSexprKey(k); });
       } else {
         keys = C.LEARN.mistakesDeck(C.state(), C.DATA, C.EXPRESSIONS, C.DIALOGUES);
         if (r.lessonId != null) {

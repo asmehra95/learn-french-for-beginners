@@ -1342,6 +1342,13 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
 .dia-proverb-fr { font-size: var(--fs-md); }
 .dia-proverb-fr .listen-group { margin-left: var(--s-1); }
 .dia-proverb .pron { color: var(--muted); font-size: var(--fs-sm); }
+/* Story expressions: the end-of-episode Expression à retenir card (same look as the proverb card) */
+.dia-expression { margin: var(--s-4) 0; padding: var(--s-3) var(--s-4); border: 1px solid var(--border-strong); border-left: 4px solid var(--border-strong); background: var(--surface-2); border-radius: var(--r-md); overflow-wrap: anywhere; }
+.dia-expression h4 { margin: 0 0 var(--s-2); }
+.dia-expression p { margin: var(--s-1) 0; }
+.dia-expression-fr { font-size: var(--fs-md); }
+.dia-expression-fr .listen-group { margin-left: var(--s-1); }
+.dia-expression .pron { color: var(--muted); font-size: var(--fs-sm); }
 .dia-vocab th[scope="row"] { font-weight: 600; }
 .dia-card-home h3 .icon { color: var(--primary); }
 .diaq-panel { margin: var(--s-3) 0; }
@@ -1419,6 +1426,8 @@ progress { width: 100%; height: 1rem; accent-color: var(--success); }
   #view-dialogues a { color: #000 !important; text-decoration: none !important; }
   .dia-notice { background: #fff !important; border-left: 3px solid #000 !important; color: #000 !important; }
   .dia-proverb { background: #fff !important; border: 1px solid #000 !important; border-left: 3px solid #000 !important; color: #000 !important; }
+  .dia-expression { background: #fff !important; border: 1px solid #000 !important; border-left: 3px solid #000 !important; color: #000 !important; }
+  #view-dialogues .dia-expression .pron { color: #333 !important; }
   #view-dialogues .dia-emotion, #view-dialogues .dia-proverb .pron { color: #333 !important; }
   #view-expressions .muted, #view-expressions .pron, #view-expressions .expr-literal, #view-expressions .expr-note, #view-expressions .lesson-summary-count { color: #333 !important; }
   #view-expressions h2, #view-expressions h3, #view-expressions h4 { color: #000 !important; }

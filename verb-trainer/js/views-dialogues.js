@@ -345,6 +345,7 @@
       art.appendChild(vocabSection(d));
       art.appendChild(noticeSection(d));
       if (d.proverb) art.appendChild(proverbSection(d));
+      if (d.expression) art.appendChild(expressionSection(d));
     } else if (mode === "roleplay") {
       renderRolePlay(d, modeSection);
     } else {
@@ -500,14 +501,14 @@
     ]);
   }
 
-  /* Sagesse du jour: the episode's proverb card (story series with proverbs only; default voice). */
+  /* Sagesse du jour: the episode's proverb card (story series with proverbs only; the card's voice, else the default voice). */
   function proverbSection(d) {
     var p = d.proverb;
     return el("section", { className: "dia-proverb", "aria-labelledby": "dia-proverb-h" }, [
       el("h4", { id: "dia-proverb-h", text: "Sagesse du jour" }),
       el("p", { className: "dia-proverb-fr" }, [
         el("strong", { lang: "fr", text: "« " + p.fr + " »" }), " ",
-        C.listenButton(p.fr, null, { compact: false, who: "the proverb" })
+        C.listenButton(p.fr, null, { compact: false, who: "the proverb", voice: p.voice || null })
       ]),
       el("p", { className: "pron", text: p.respelling }),
       el("p", null, [el("span", { className: "ref-label", text: "Literally: " }), p.literal]),
@@ -516,6 +517,24 @@
     ]);
   }
 
+  /* Expression à retenir: the episode's expression card (story series with expressions only): the expression as
+     heard in the dialogue, its meaning, when to use it and a reuse example; the card's voice, else the default voice. */
+  function expressionSection(d) {
+    var x = d.expression, voice = x.voice || null;
+    return el("section", { className: "dia-expression", "aria-labelledby": "dia-expression-h" }, [
+      el("h4", { id: "dia-expression-h", text: "Expression à retenir" }),
+      el("p", { className: "dia-expression-fr" }, [
+        el("strong", { lang: "fr", text: "« " + x.fr + " »" }), " ",
+        C.listenButton(x.fr, null, { compact: false, who: "the expression", voice: voice })
+      ]),
+      el("p", { className: "pron", text: x.respelling }),
+      el("p", null, [el("span", { className: "ref-label", text: "Meaning: " }), x.meaning]),
+      el("p", null, [el("span", { className: "ref-label", text: "When to use it: " }), x.usage]),
+      el("p", null, [el("span", { className: "ref-label", text: "Example: " }),
+        el("span", { lang: "fr", text: x.example }), " ", C.listenButton(x.example, null, { compact: true, who: "the example", voice: voice }), " ",
+        el("span", { className: "pron", text: "(" + x.exampleRespelling + ")" }), " ", x.exampleEn])
+    ]);
+  }
   /* ---------- mode 2: Role-play ---------- */
   function prefsFor(d) {
     if (!rpPrefs[d.id]) {

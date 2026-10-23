@@ -245,6 +245,7 @@
   var DLG_GLOBAL_KEYWORDS = ["dialogue", "dialogues", "conversation", "conversations", "role-play", "role play"];
   // each episode also gets its own series' titles (so one story's title never matches the other's episodes)
   var DLG_STORY_KEYWORDS = ["story", "stories", "histoire", "episode", "épisode"];
+  var DLG_EXPRESSION_KEYWORDS = ["expression", "expressions", "expression à retenir", "phrase to reuse"];
   var DLG_PROVERB_KEYWORDS = ["proverbe", "proverbes", "proverb", "proverbs", "sagesse", "sagesse du jour", "saying"];
   function buildDialogueDocs(dd) {
     var docs = [];
@@ -275,6 +276,15 @@
         field(pv.literal, 50, "proverb", pv.fr);
         field(pv.meaning, 50, "proverb", pv.fr);
       }
+      // the episode's Expression à retenir: its French 80, meaning 50, example 50 (French) and 45 (English)
+      var ex = d.series && d.expression ? d.expression : null;
+      if (ex) {
+        DLG_EXPRESSION_KEYWORDS.forEach(function (w) { field(w, 85, "keyword"); });
+        field(ex.fr, 80, "expression", ex.fr);
+        field(ex.meaning, 50, "expression", ex.fr);
+        field(ex.example, 50, "expression", ex.fr);
+        field(ex.exampleEn, 45, "expression", ex.fr);
+      }
       var doc = { id: d.id, title: d.title, titleFr: d.titleFr, level: d.level,
         speakers: (d.speakers || []).map(function (sp) { return sp.name; }), href: "#dialogues/" + d.id, order: i, fields: fields };
       if (d.series) {
@@ -300,7 +310,7 @@
       if (!best) return;
       var kind = best.field.kind;
       var hit = { id: doc.id, title: doc.title, titleFr: doc.titleFr, level: doc.level, speakers: doc.speakers, href: doc.href,
-        score: best.score, matchDetail: kind === "proverb" ? "proverb: « " + best.field.fr + " »" : best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order };
+        score: best.score, matchDetail: kind === "proverb" || kind === "expression" ? kind + ": « " + best.field.fr + " »" : best.field.fr ? "line: " + best.field.fr : kind === "keyword" ? "keyword" : null, order: doc.order };
       if (doc.series) { hit.series = doc.series; hit.episode = doc.episode; hit.total = doc.total; hit.seriesTitleFr = doc.seriesTitleFr; }
       out.push(hit);
     });

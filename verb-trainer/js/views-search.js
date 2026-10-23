@@ -160,7 +160,7 @@
         el("span", { className: "search-why" }, [x.series
           ? "Story: " + x.seriesTitleFr + " · Episode " + x.episode + " of " + x.total + " · " + x.level + " · " + x.speakers.join(" and ")
           : "Dialogues: " + x.level + " · " + x.speakers.join(" and ")].concat(
-          x.matchDetail ? [" · ", /^(line|proverb): /.test(x.matchDetail) ? el("span", { lang: "fr", text: x.matchDetail }) : x.matchDetail] : []))
+          x.matchDetail ? [" · ", (/^(line|proverb): /.test(x.matchDetail) || /^expression: /.test(x.matchDetail)) ? el("span", { lang: "fr", text: x.matchDetail }) : x.matchDetail] : []))
       ])
     ]);
   }

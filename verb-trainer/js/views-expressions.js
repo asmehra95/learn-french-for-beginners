@@ -3,7 +3,9 @@
    #expressions/<themeId>/<exprId> (that card focused). One page for all three; unknown ids are rewritten
    to the nearest valid route. All strings go through textContent (VT_UI.el); no inline styles (CSP).
    Every card has a respelling and two compact Listen buttons (the expression and its example), whose
-   texts the corpus extractor mirrors (tts-tools/extract-corpus.js). */
+   texts the corpus extractor mirrors (tts-tools/extract-corpus.js).
+   After the themes, "From the stories" lists the story episodes' Expression à retenir cards (VT_SEXPR), one fold
+   per series, each linking to its episode and its flashcard deck (#flashcards/story-expressions/<seriesId>). */
 (function () {
   "use strict";
   window.VT_VIEWS = window.VT_VIEWS || {};
@@ -81,6 +83,51 @@
       e.note ? el("p", { className: "expr-note", role: "note" }, [el("span", { className: "ref-label", text: "Note: " }), e.note]) : null,
       seeAlso(e, tableById, byId)
     ]);
+  }
+
+  /* ---------- story expressions (episode.expression, js/story-expressions.js) ---------- */
+  function storyCard(it) {
+    var x = it.expression, d = it.dialogue, voice = x.voice || null, hid = "sexpr-h-" + it.id;
+    function say(text) { return C.listenButton(text, null, { compact: true, voice: voice }); }
+    return el("article", { className: "ref-card expr-card", id: "sexpr-" + it.id, "aria-labelledby": hid }, [
+      el("h4", { id: hid, tabindex: "-1" }, [el("span", { lang: "fr", text: x.fr })]),
+      el("p", { className: "expr-say" }, [el("span", { className: "pron", text: x.respelling }), " ", say(x.fr)]),
+      el("p", { className: "expr-en", text: x.meaning }),
+      el("p", { className: "expr-note" }, [el("span", { className: "ref-label", text: "When to use it: " }), x.usage]),
+      el("div", { className: "expr-example" }, [
+        el("p", { className: "ref-label", text: "Example" }),
+        el("p", null, [
+          el("strong", { lang: "fr", text: x.example }), " ", say(x.example), " ",
+          el("span", { className: "pron", text: "(" + x.exampleRespelling + ")" }), " ",
+          el("span", { className: "ref-en", text: x.exampleEn })
+        ])
+      ]),
+      el("p", { className: "ref-links" }, ["From ", el("a", { href: "#dialogues/" + d.id, text: "episode " + d.episode + ": " + d.title })])
+    ]);
+  }
+  function storySection() {
+    var SX = window.VT_SEXPR, DD = C.DIALOGUES;
+    if (!SX || !DD || !SX.list(DD).length) return null;
+    var DLG = window.VT_DLG;
+    return el("section", { className: "expr-stories", id: "xstories", "aria-labelledby": "xstories-h" }, [
+      el("h3", { id: "xstories-h", tabindex: "-1", text: "From the stories" }),
+      el("p", { className: "intro", text: "One expression from each story episode, as the characters use it, with when to use it and an example to reuse." })
+    ].concat(SX.allSeries(DD).map(function (sid) {
+      var ser = DLG && DLG.seriesById(DD, sid), items = SX.bySeries(DD, sid), key = "story:" + sid, hid = "xstory-h-" + sid;
+      var fold = el("details", { className: "lesson-fold expr-fold", "data-theme": key }, [
+        el("summary", { className: "lesson-summary" }, [
+          el("h4", { id: hid, lang: "fr", text: ser ? ser.titleFr : sid }),
+          el("span", { className: "lesson-summary-count", text: items.length + (items.length === 1 ? " expression" : " expressions") })
+        ]),
+        el("div", { className: "tables-cat-body" }, [
+          el("p", { className: "expr-practise" }, [el("a", { href: "#flashcards/story-expressions/" + sid, text: "Practise these with flashcards" })]),
+          el("div", { className: "cards ref-cards expr-cards" }, items.map(storyCard))
+        ])
+      ]);
+      fold.open = !!openState[key];
+      fold.addEventListener("toggle", function () { if (!printRestore) openState[key] = fold.open; });
+      return el("section", { className: "expr-theme", id: "xstory-" + sid, "aria-labelledby": hid }, [fold]);
+    })));
   }
 
   /* ---------- page ---------- */
@@ -164,6 +211,8 @@
     body.appendChild(toolbar());
     body.appendChild(toc(D));
     D.themes.forEach(function (t) { body.appendChild(theme(t, ix.byTheme[t.id] || [], tableById, ix.byId)); });
+    var stories = storySection();
+    if (stories) body.appendChild(stories);
 
     var target = scope === "item" ? $("expr-h-" + item.id) : scope === "theme" ? $("xtheme-h-" + th.id) : null;
     if (target) {

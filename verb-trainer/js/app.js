@@ -34,6 +34,10 @@
   var PROV = window.VT_PROV || null;
   var PROV_DATA = PROV && DLG_DATA && PROV.list(DLG_DATA).length ? DLG_DATA : null;
   var PROV_DECKS = PROV_DATA ? PROV.DECKS : [];
+  /* Story expressions deck (the stories' Expression à retenir, story-expressions.js); null without any or the helper. */
+  var SEXPR = window.VT_SEXPR || null;
+  var SEXPR_DATA = SEXPR && DLG_DATA && SEXPR.list(DLG_DATA).length ? DLG_DATA : null;
+  var SEXPR_DECKS = SEXPR_DATA ? SEXPR.DECKS : [];
 
   /* Nothing at this level may dereference DATA, STORE, L, SPEECH or state: init() checks them first (§16). */
   var LEARN = window.VT_LEARN;
@@ -81,6 +85,14 @@
 
   function isExprDeck(deck) { return EXPR_DECKS.indexOf(deck) !== -1; }
   function isProvDeck(deck) { return PROV_DECKS.indexOf(deck) !== -1; }
+  function isSexprDeck(deck) { return SEXPR_DECKS.indexOf(deck) !== -1; }
+  /* Story-expression series for the active flashcards route: the route's series (or all); every series elsewhere. */
+  function scopeStorySeries() {
+    var r = currentRouteInfo;
+    if (!SEXPR_DATA || !r || r.scope === "lesson" || r.scope === "expressions" || r.scope === "proverbs") return [];
+    if (r.scope === "story-expressions" && r.seriesId) return [r.seriesId];
+    return SEXPR.allSeries(SEXPR_DATA);
+  }
   /* Proverb acts for the active flashcards route: the route's act (or all), else the practice set's acts. */
   function scopeProverbActs() {
     var r = currentRouteInfo;
@@ -105,11 +117,12 @@
   /* The deck the Flashcards view uses for a route: expression routes need an expression deck, lesson routes a verb deck. */
   function effectiveDeck(info) {
     var deck = state.settings.flashDeck;
-    var known = DECKS.indexOf(deck) !== -1 || isExprDeck(deck) || isProvDeck(deck);
+    var known = DECKS.indexOf(deck) !== -1 || isExprDeck(deck) || isProvDeck(deck) || isSexprDeck(deck);
     if (!known) deck = "inf-meaning";
+    if (info && info.scope === "story-expressions") return isSexprDeck(deck) ? deck : "sexpr-fr-en";
     if (info && info.scope === "proverbs") return isProvDeck(deck) ? deck : "prov-fr-en";
     if (info && info.scope === "expressions") return isExprDeck(deck) ? deck : "expr-fr-en";
-    if (info && info.scope === "lesson") return isExprDeck(deck) || isProvDeck(deck) ? "inf-meaning" : deck;
+    if (info && info.scope === "lesson") return isExprDeck(deck) || isProvDeck(deck) || isSexprDeck(deck) ? "inf-meaning" : deck;
     return deck;
   }
 
@@ -117,6 +130,7 @@
   function sessionKey() {
     var flash = currentRouteInfo && currentRouteInfo.name === "flashcards";
     var deck = flash ? effectiveDeck(currentRouteInfo) : null;
+    if (flash && isSexprDeck(deck)) return location.hash.slice(1) + "#sexpr:" + scopeStorySeries().slice().sort().join(",") + "|" + deck;
     if (flash && isProvDeck(deck)) return location.hash.slice(1) + "#prov:" + scopeProverbActs().slice().sort().join(",") + "|" + deck;
     if (flash && isExprDeck(deck)) return location.hash.slice(1) + "#expr:" + scopeThemeIds().slice().sort().join(",") + "|" + deck;
     var k = location.hash.slice(1) + "#" + scopeVerbs().map(function (v) { return v.id; }).sort().join(",");
@@ -630,12 +644,17 @@
     var section = $("view-" + route);
     var exprDeck = route === "flashcards" && isExprDeck(effectiveDeck(currentRouteInfo));
     var provDeck = route === "flashcards" && isProvDeck(effectiveDeck(currentRouteInfo));
-    var empty = provDeck ? PROV.flashItems(PROV_DATA, scopeProverbActs(), "prov-fr-en").length === 0
+    var sexprDeck = route === "flashcards" && isSexprDeck(effectiveDeck(currentRouteInfo));
+    var empty = sexprDeck ? SEXPR.flashItems(SEXPR_DATA, scopeStorySeries(), "sexpr-fr-en").length === 0
+      : provDeck ? PROV.flashItems(PROV_DATA, scopeProverbActs(), "prov-fr-en").length === 0
       : exprDeck ? scopeExpressions().length === 0 : scopeVerbs().length === 0;
     var box = section.querySelector(".empty-msg");
     section.querySelector(".practice-area").hidden = empty;
     clear(box);
-    if (empty && provDeck) {
+    if (empty && sexprDeck) {
+      box.appendChild(el("p", { text: "There are no story expressions to practise here." }));
+      box.appendChild(el("a", { className: "btn", href: "#dialogues", text: "Open the stories" }));
+    } else if (empty && provDeck) {
       if (!currentRouteInfo || currentRouteInfo.scope === "filter") {
         var abtn = el("button", { type: "button", className: "btn btn-primary", text: "Select all acts" });
         abtn.addEventListener("click", function () { if (selectAllActs) selectAllActs(); });
@@ -709,6 +728,14 @@
     filter.hidden = true;
     if (!chip) return;
     clear(chip);
+    if (info.scope === "story-expressions") {
+      var sser = info.seriesId && DLG_DATA ? window.VT_DLG.seriesById(DLG_DATA, info.seriesId) : null;
+      chip.appendChild(document.createTextNode(sser ? "Story expressions: " : "All story expressions · "));
+      if (sser) { chip.appendChild(el("span", { lang: "fr", text: sser.titleFr })); chip.appendChild(document.createTextNode(" · ")); }
+      chip.appendChild(el("a", { href: "#flashcards", text: "Use my practice set instead" }));
+      chip.hidden = false;
+      return;
+    }
     if (info.scope === "proverbs") {
       chip.appendChild(document.createTextNode(info.act ? "Proverbs · Act " + info.act + " · " : "All proverbs · "));
       chip.appendChild(el("a", { href: "#flashcards", text: "Use my practice set instead" }));
@@ -1204,7 +1231,7 @@
       var text = item.options[s.ui.selected];
       var ok = text === item.correct;
       var fam = item.family === "choice-infinitive" ? item.family : "choice-" + item.family;
-      var cls = ok || item.expr || item.dialogue || item.prov ? null : safeClassify(text, item, fam);
+      var cls = ok || item.expr || item.dialogue || item.prov || item.sexpr ? null : safeClassify(text, item, fam);
       record(item.key, ok);
       window.VT_SESSION.recordResult(s, item, ok, false);
       s.ui.answered = true;
@@ -1784,17 +1811,21 @@
   /* The deck <select> shows the route's effective deck; the other family's optgroup is disabled
      (lesson routes: verbs only; expression routes: expressions only). */
   function syncDeckSelect() {
-    var sel = $("flash-deck"), verbs = $("flash-deck-verbs"), expr = $("flash-deck-expr"), prov = $("flash-deck-prov");
+    var sel = $("flash-deck"), verbs = $("flash-deck-verbs"), expr = $("flash-deck-expr"), prov = $("flash-deck-prov"), sexpr = $("flash-deck-sexpr");
     var scope = currentRouteInfo && currentRouteInfo.name === "flashcards" ? currentRouteInfo.scope : null;
     if (expr) {
       expr.hidden = !EXPR_DATA;
-      expr.disabled = !EXPR_DATA || scope === "lesson" || scope === "proverbs";
+      expr.disabled = !EXPR_DATA || scope === "lesson" || scope === "proverbs" || scope === "story-expressions";
     }
     if (prov) {
       prov.hidden = !PROV_DATA;
-      prov.disabled = !PROV_DATA || scope === "lesson" || scope === "expressions";
+      prov.disabled = !PROV_DATA || scope === "lesson" || scope === "expressions" || scope === "story-expressions";
     }
-    if (verbs) verbs.disabled = scope === "expressions" || scope === "proverbs";
+    if (sexpr) {
+      sexpr.hidden = !SEXPR_DATA;
+      sexpr.disabled = !SEXPR_DATA || scope === "lesson" || scope === "expressions" || scope === "proverbs";
+    }
+    if (verbs) verbs.disabled = scope === "expressions" || scope === "proverbs" || scope === "story-expressions";
     sel.value = effectiveDeck(currentRouteInfo);
   }
 
@@ -1811,6 +1842,7 @@
 
     function items() {
       var deck = effectiveDeck(currentRouteInfo);
+      if (isSexprDeck(deck)) return SEXPR.flashItems(SEXPR_DATA, scopeStorySeries(), deck);
       if (isProvDeck(deck)) return PROV.flashItems(PROV_DATA, scopeProverbActs(), deck);
       if (isExprDeck(deck)) return EXPR.flashItems(EXPR_DATA, scopeThemeIds(), deck);
       var out = [];
@@ -1894,6 +1926,29 @@
         setListen("flash-listen-slot", ui.flipped ? pv.fr : null, null);
       }
     }
+    /* Story-expression decks: « fr » + Listen (the card's voice) on the front, or the meaning; usage and example on the back. */
+    function renderSexpr(s, front, answer) {
+      var it = s.current, ui = s.ui, ex = it.sexpr.expression, d = it.sexpr.dialogue, deck = it.deck, voice = ex.voice || null;
+      var extra = $("flash-extra");
+      clear(extra);
+      var usage = cardLine(["When to use it: " + ex.usage]);
+      var example = cardLine(["Example: ", el("span", { lang: "fr", text: ex.example }), " — " + ex.exampleEn]);
+      var from = cardLine(["From ", el("a", { href: "#dialogues/" + d.id, text: "episode " + d.episode + ": " + d.title })]);
+      $("flash-pron").textContent = ex.respelling;
+      if (deck === "sexpr-fr-en") {
+        $("flash-front-label").textContent = "What does this expression mean?";
+        front.setAttribute("lang", "fr");
+        front.textContent = "« " + ex.fr + " »";
+        answer.textContent = ex.meaning;
+        setListen("flash-listen-slot", ex.fr, null, voice);
+      } else {
+        $("flash-front-label").textContent = "Which French expression means…";
+        front.textContent = ex.meaning;
+        answer.appendChild(fr("« " + ex.fr + " »"));
+        setListen("flash-listen-slot", ui.flipped ? ex.fr : null, null, voice);
+      }
+      appendParts(extra, [usage, example, from]);
+    }
     function render(s) {
       var it = s.current, ui = s.ui;
       if (!it) return;
@@ -1908,7 +1963,9 @@
       cueLine.textContent = "";
       cueLine.hidden = true;
       // No verb type on either face (the learner guesses it); it is shown only inside the Conjugation peek.
-      if (it.prov) {
+      if (it.sexpr) {
+        renderSexpr(s, front, answer);
+      } else if (it.prov) {
         renderProv(s, front, answer);
       } else if (it.expr) {
         renderExpr(s, front, answer);
@@ -1945,7 +2002,7 @@
       knew.hidden = !ui.flipped;
       notYet.hidden = !ui.flipped;
       if (it.expr) peek.update(null, false);
-      else if (it.prov) peek.update(null, false);
+      else if (it.prov || it.sexpr) peek.update(null, false);
       else peek.update(v, deck === "inf-meaning" || ui.flipped);
       renderBar($("flash-bar"), s);
     }
@@ -2291,6 +2348,32 @@
         }))
       ])));
     }
+    // Story expressions deck: its own totals, per series (also part of the overall Answered / Accuracy above).
+    if (SEXPR_DATA) {
+      var xst = SEXPR.stats(state, SEXPR_DATA);
+      body.appendChild(el("h3", { text: "Story expressions" }));
+      body.appendChild(el("dl", { className: "totals" }, [
+        el("div", null, [el("dt", { text: "Story expression answers" }), el("dd", { text: String(xst.answered) })]),
+        el("div", null, [el("dt", { text: "Story expression accuracy" }), el("dd", { text: xst.answered ? Math.round((100 * xst.correct) / xst.answered) + "%" : "–" })]),
+        el("div", null, [el("dt", { text: "Cards mastered" }), el("dd", { text: xst.mastered + " of " + xst.total })])
+      ]));
+      body.appendChild(tableRegion("Accuracy by story", el("table", { className: "stats-table" }, [
+        el("caption", { text: "Story expression flashcard answers per story, across the two decks" }),
+        el("thead", null, [el("tr", null, ["Story", "Answered", "Correct", "Accuracy", "Mastered cards", "Practise"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+        el("tbody", null, SEXPR.allSeries(SEXPR_DATA).map(function (sid) {
+          var p = xst.bySeries[sid], ser = window.VT_DLG.seriesById(SEXPR_DATA, sid);
+          var name = ser ? ser.titleFr : sid;
+          return el("tr", null, [
+            el("th", { scope: "row" }, [el("span", { lang: "fr", text: name })]),
+            el("td", { text: String(p.answered) }),
+            el("td", { text: String(p.correct) }),
+            el("td", { text: p.answered ? Math.round((100 * p.correct) / p.answered) + "%" : "–" }),
+            el("td", { text: p.mastered + " of " + p.total }),
+            el("td", null, [el("a", { href: "#flashcards/story-expressions/" + sid, "aria-label": "Practise the expressions of " + name + " with flashcards", text: "Practise" })])
+          ]);
+        }))
+      ])));
+    }
     // Dialogues: comprehension-quiz answers (dlg: stats) plus the listened / role-play records (state.dialogues).
     if (DLG_DATA) {
       var ds = window.VT_DLG.stats(state, DLG_DATA);
@@ -2595,6 +2678,15 @@
         !(EXPR_DATA && EXPR.index(EXPR_DATA).themeById[info.themeId])) {
       history.replaceState(null, "", "#flashcards/expressions"); // unknown theme: all expressions
       info.themeId = null;
+    }
+    if (info.name === "flashcards" && info.scope === "story-expressions" && !SEXPR_DATA) {
+      history.replaceState(null, "", "#flashcards"); // no story expressions loaded: the practice set
+      info = LEARN.parseRoute("#flashcards", lessonsById);
+    }
+    if (info.name === "flashcards" && info.scope === "story-expressions" && info.seriesId &&
+        SEXPR.allSeries(SEXPR_DATA).indexOf(info.seriesId) === -1) {
+      history.replaceState(null, "", "#flashcards/story-expressions"); // unknown series: all story expressions
+      info.seriesId = null;
     }
     if (info.name === "flashcards" && info.scope === "proverbs" && !PROV_DATA) {
       history.replaceState(null, "", "#flashcards"); // no proverbs loaded: the practice set

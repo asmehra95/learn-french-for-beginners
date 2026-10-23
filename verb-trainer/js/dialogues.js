@@ -19,8 +19,14 @@
   var EMOTIONS = ["neutral", "amused", "teasing", "curious", "surprised", "worried",
     "sad", "annoyed", "relieved", "moved", "proud", "hopeful"];
   // episode.proverb (optional; story series only, on every episode or on none)
-  var PROVERB_KEYS = ["fr", "respelling", "literal", "meaning", "englishEquivalent"];
+  // proverb.voice / expression.voice (optional): the recorded voice of that card's Listen (default voice when absent)
+  var PROVERB_KEYS = ["fr", "respelling", "literal", "meaning", "englishEquivalent", "voice"];
   var PROVERB_MEANING_MAX = 140;
+  // episode.expression (optional; story series only, on every episode or on none): an expression from the
+  // episode's lines to learn and reuse. Kept apart from the proverbs (its own deck, js/story-expressions.js).
+  var EXPRESSION_KEYS = ["fr", "respelling", "meaning", "usage", "example", "exampleRespelling", "exampleEn", "voice"];
+  var EXPRESSION_REQUIRED = ["fr", "respelling", "meaning", "usage", "example", "exampleRespelling", "exampleEn"];
+  var EXPRESSION_USAGE_MAX = 200;
   // d.sceneImages (optional): [{ afterLine, image, alt }], pixels in story-images.js series[<id>].inserts[image]
   var SCENE_IMAGES_MAX = 3, SCENE_ALT_MIN = 21, SCENE_ALT_MAX = 199;
   var SCENE_IMAGE_KEYS = ["afterLine", "image", "alt"];
@@ -281,11 +287,32 @@
           if (str(pv.fr) && /[«»]/.test(pv.fr)) err("proverb.fr", "contains « or »");
           checkPron(pv.respelling, "proverb.respelling", err);
           if (str(pv.meaning) && pv.meaning.length > PROVERB_MEANING_MAX) err("proverb.meaning", "longer than " + PROVERB_MEANING_MAX + " characters");
+          checkCardVoice(pv, "proverb.voice", refs, err);
           if (str(pv.fr)) {
             var pk = L.normalize(pv.fr);
             if (own(proverbFr, pk)) err("proverb.fr", "duplicate of the proverb in " + proverbFr[pk]);
             else proverbFr[pk] = did;
           }
+        }
+      }
+      // expression (optional, story series only): fr must occur in one of the episode's lines
+      if (own(d, "expression")) {
+        var ex = d.expression;
+        if (!hasS) err("expression", "only story episodes have an expression");
+        if (!ex || typeof ex !== "object" || Array.isArray(ex)) err("expression", "must be an object");
+        else {
+          Object.keys(ex).forEach(function (k) { if (EXPRESSION_KEYS.indexOf(k) === -1) err("expression." + k, "unknown key"); });
+          EXPRESSION_REQUIRED.forEach(function (k) { if (!str(ex[k])) err("expression." + k, "must be a non-empty string"); });
+          ["fr", "example"].forEach(function (k) {
+            if (str(ex[k]) && ex[k].indexOf("‿") !== -1) err("expression." + k, "contains ‿");
+            if (str(ex[k]) && /[«»]/.test(ex[k])) err("expression." + k, "contains « or »");
+          });
+          checkPron(ex.respelling, "expression.respelling", err);
+          checkPron(ex.exampleRespelling, "expression.exampleRespelling", err);
+          if (str(ex.meaning) && ex.meaning.length > PROVERB_MEANING_MAX) err("expression.meaning", "longer than " + PROVERB_MEANING_MAX + " characters");
+          if (str(ex.usage) && ex.usage.length > EXPRESSION_USAGE_MAX) err("expression.usage", "longer than " + EXPRESSION_USAGE_MAX + " characters");
+          if (str(ex.fr) && !inLines(lines, ex.fr)) err("expression.fr", "not found in any line of the episode");
+          checkCardVoice(ex, "expression.voice", refs, err);
         }
       }
       // sceneImages (optional): up to 3 pictures shown between lines, each after an earlier line than the next
@@ -342,8 +369,23 @@
       if (anyProv) recs.forEach(function (d) {
         if (!own(d, "proverb")) errs.push(d.id + "/proverb: missing; every episode of " + sid + " needs a proverb");
       });
+      var anyExpr = recs.some(function (d) { return own(d, "expression"); });
+      if (anyExpr) recs.forEach(function (d) {
+        if (!own(d, "expression")) errs.push(d.id + "/expression: missing; every episode of " + sid + " needs an expression");
+      });
     });
     return errs;
+  }
+  /* An end-of-episode card's optional voice: absent, or a known voice id. */
+  function checkCardVoice(card, path, refs, err) {
+    if (!own(card, "voice")) return;
+    if (!str(card.voice)) err(path, "must be absent or a voice id");
+    else if (refs && refs.voiceIds && refs.voiceIds.indexOf(card.voice) === -1) err(path, "unknown voice " + card.voice);
+  }
+  /* True when text occurs in one of the lines (lineKey on both sides, as the vocab rule). */
+  function inLines(lines, text) {
+    var k = lineKey(text);
+    return !!k && lines.some(function (l) { return l && str(l.fr) && (" " + lineKey(l.fr) + " ").indexOf(" " + k + " ") !== -1; });
   }
   function checkPron(p, path, err) {
     if (typeof p !== "string" || !p) return;
@@ -397,6 +439,8 @@
         pronunciation: "", listenText: line.fr, voiceId: speaker.voice } };
   }
 
+  /* The recorded voice of an end-of-episode card's Listen buttons (null = the default voice). */
+  function cardVoice(card) { return card && str(card.voice) ? card.voice : null; }
   /* ---------- Listen texts per voice (shared by the view and tts-tools/extract-corpus.js) ---------- */
   function listenEntries(data) {
     var out = [];
@@ -404,7 +448,11 @@
       (d.lines || []).forEach(function (l) { out.push({ text: l.fr, voice: voiceOf(d, l.speaker), category: "dialogue-line" }); });
       (d.vocab || []).forEach(function (v) { out.push({ text: v.fr, voice: null, category: "dialogue-vocab" }); });
       ((d.notice && d.notice.examples) || []).forEach(function (x) { out.push({ text: x.fr, voice: null, category: "dialogue-example" }); });
-      if (d.proverb && str(d.proverb.fr)) out.push({ text: d.proverb.fr, voice: null, category: "dialogue-proverb" });
+      if (d.proverb && str(d.proverb.fr)) out.push({ text: d.proverb.fr, voice: cardVoice(d.proverb), category: "dialogue-proverb" });
+      if (d.expression && str(d.expression.fr)) {
+        out.push({ text: d.expression.fr, voice: cardVoice(d.expression), category: "dialogue-expression" });
+        if (str(d.expression.example)) out.push({ text: d.expression.example, voice: cardVoice(d.expression), category: "dialogue-expression-example" });
+      }
     });
     return out;
   }
@@ -461,6 +509,9 @@
   }
   function hasProverbs(data, seriesId) {
     return episodes(data, seriesId).some(function (d) { return !!d.proverb; });
+  }
+  function hasExpressions(data, seriesId) {
+    return episodes(data, seriesId).some(function (d) { return !!d.expression; });
   }
   function emptyStat() { return { answered: 0, correct: 0, mastered: 0, total: 0 }; }
   function stats(state, data) {
@@ -599,6 +650,8 @@
     nextEpisode: nextEpisode,
     activeSeries: activeSeries,
     hasProverbs: hasProverbs,
+    hasExpressions: hasExpressions,
+    cardVoice: cardVoice,
     validate: validate,
     lineKey: lineKey,
     acceptKey: acceptKey,

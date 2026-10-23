@@ -88,6 +88,14 @@
     return out;
   }
   var PROV_ACTS_MAX = 4;
+  /* Story-expression flashcards: "sexpr:<dialogueId>|flash-fr-en|-" / "|flash-en-fr|-"; with dialogues-data.js
+     loaded the id must be a dialogue that has an expression. */
+  var SEXPR_ID_RE = /^sexpr:([a-z0-9-]{1,40})$/;
+  function storyExpressionIds() {
+    var d = root.VT_DIALOGUES, out = {};
+    ((d && d.dialogues) || []).forEach(function (x) { if (x.expression) out[x.id] = true; });
+    return out;
+  }
   var ROLES_MAX = 4;
 
   function defaults() {
@@ -164,11 +172,16 @@
       var checkDlg = Object.keys(knownDlg).length > 0;
       var knownProv = proverbIds();
       var checkProv = !!(root.VT_DIALOGUES && root.VT_DIALOGUES.dialogues);
+      var knownSexpr = storyExpressionIds();
       Object.keys(raw.stats).forEach(function (k) {
         var s = raw.stats[k];
         if (!isObject(s) || UNSAFE_KEYS[k] || k.length > STAT_KEY_MAX) return;
         var head = k.split("|")[0];
-        if (head.indexOf("prov:") === 0) {
+        if (head.indexOf("sexpr:") === 0) {
+          var xm = SEXPR_ID_RE.exec(head), xparts = k.split("|");
+          if (!xm || UNSAFE_KEYS[xm[1]] || xparts.length !== 3 || !PROV_MODES[xparts[1]] || xparts[2] !== "-") return;
+          if (checkProv && !Object.prototype.hasOwnProperty.call(knownSexpr, xm[1])) return;
+        } else if (head.indexOf("prov:") === 0) {
           var pm = PROV_ID_RE.exec(head), parts = k.split("|");
           if (!pm || UNSAFE_KEYS[pm[1]] || parts.length !== 3 || !PROV_MODES[parts[1]] || parts[2] !== "-") return;
           if (checkProv && !Object.prototype.hasOwnProperty.call(knownProv, pm[1])) return;
