@@ -3,7 +3,7 @@
    records; until then the device voice reads them. A guard test fails as soon as one of their own lines (a text
    no other record uses) has a clip, so the coverage tests apply to them in full once recording starts. */
 "use strict";
-var series = ["le-mauvais-colis", "l-hotel-des-fantomes-gentils"];
+var series = [];
 /* ttsKeys of the Listen texts (VT_DLG.listenEntries) in `voice` that only pending-series records use. */
 function onlyPendingKeys(data, DLG, L, voice, defaultVoice) {
   var pending = {}, other = {};

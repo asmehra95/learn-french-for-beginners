@@ -1,7 +1,7 @@
 {
  "normalization": "v1",
- "generatedAt": "2026-10-20T15:57:20.154Z",
- "count": 379,
+ "generatedAt": "2026-10-23T17:27:01.191Z",
+ "count": 636,
  "excluded": [],
  "items": [
   {
@@ -14,6 +14,17 @@
     "dialogue-line"
    ],
    "hash": "9dba8aa86464be2f"
+  },
+  {
+   "key": "Ah bon ? Et qui est le chien ?",
+   "speak": "Ah bon ? Et qui est le chien ?",
+   "texts": [
+    "Ah bon ? Et qui est le chien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ac9952ec5ee712a7"
   },
   {
    "key": "Ah bon ? Pourquoi ?",
@@ -47,6 +58,17 @@
     "dialogue-line"
    ],
    "hash": "9e9e3b0b17dd4ed3"
+  },
+  {
+   "key": "Ah oui ? Lequel ?",
+   "speak": "Ah oui ? Lequel ?",
+   "texts": [
+    "Ah oui ? Lequel ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3b01e9f57baf7dca"
   },
   {
    "key": "Ah, d'accord ! Alors voilà : Mme Vial ne veut pas de visite cette semaine. Son père est trop fatigué.",
@@ -104,6 +126,17 @@
    "hash": "53543ac84ab07b74"
   },
   {
+   "key": "Ah. Bonsoir, madame.",
+   "speak": "Ah. Bonsoir, madame.",
+   "texts": [
+    "Ah. Bonsoir, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "50e54142e0da8ec6"
+  },
+  {
    "key": "Ah… oui. Pardon. Pardon aussi, monsieur le perroquet !",
    "speak": "Ah… oui. Pardon. Pardon aussi, monsieur le perroquet !",
    "texts": [
@@ -113,6 +146,17 @@
     "dialogue-line"
    ],
    "hash": "5574f69982fca2b6"
+  },
+  {
+   "key": "Aide-toi, le ciel t'aidera.",
+   "speak": "Aide-toi, le ciel t'aidera.",
+   "texts": [
+    "Aide-toi, le ciel t'aidera."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "c72186ac6e46463e"
   },
   {
    "key": "Alors il faut finir son travail. Tu as une idée, toi, la graphiste ?",
@@ -214,6 +258,39 @@
    "hash": "1880a25e69fb6ac0"
   },
   {
+   "key": "Alors… pas de musique après dix heures ?",
+   "speak": "Alors… pas de musique après dix heures ?",
+   "texts": [
+    "Alors… pas de musique après dix heures ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e99efc282d2175a0"
+  },
+  {
+   "key": "Anselme, aubergiste. Ici, c'est mon auberge depuis seize cent quatre-vingts.",
+   "speak": "Anselme, aubergiste. Ici, c'est mon auberge depuis seize cent quatre-vingts.",
+   "texts": [
+    "Anselme, aubergiste. Ici, c'est mon auberge depuis seize cent quatre-vingts."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "331d34df304cfeae"
+  },
+  {
+   "key": "Après cet hiver, l'hôtel était calme. Je pensais toujours à ces jours-là.",
+   "speak": "Après cet hiver, l'hôtel était calme. Je pensais toujours à ces jours-là.",
+   "texts": [
+    "Après cet hiver, l'hôtel était calme. Je pensais toujours à ces jours-là."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7ebed2b231c96c65"
+  },
+  {
    "key": "Après la fermeture, certains sont partis, d'autres sont restés à Lyon.",
    "speak": "Après la fermeture, certains sont partis, d'autres sont restés à Lyon.",
    "texts": [
@@ -313,6 +390,28 @@
    "hash": "3c89ba04799fae48"
   },
   {
+   "key": "Attention, Zoé ! Ne touche pas. Cette boîte est très fragile.",
+   "speak": "Attention, Zoé ! Ne touche pas. Cette boîte est très fragile.",
+   "texts": [
+    "Attention, Zoé ! Ne touche pas. Cette boîte est très fragile."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "475b878f7ee732e9"
+  },
+  {
+   "key": "Au début, moi aussi, je voulais du silence. Tu te souviens ?",
+   "speak": "Au début, moi aussi, je voulais du silence. Tu te souviens ?",
+   "texts": [
+    "Au début, moi aussi, je voulais du silence. Tu te souviens ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7a9880207e706e67"
+  },
+  {
    "key": "Au quatrième ? Chez Mme Laurent ? Vous êtes de la famille ?",
    "speak": "Au quatrième ? Chez Mme Laurent ? Vous êtes de la famille ?",
    "texts": [
@@ -324,6 +423,17 @@
    "hash": "d3b8d1d72809cad0"
   },
   {
+   "key": "Aujourd'hui plus qu'hier et bien moins que demain.",
+   "speak": "Aujourd'hui plus qu'hier et bien moins que demain.",
+   "texts": [
+    "Aujourd'hui plus qu'hier et bien moins que demain."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "c88c208168d44d81"
+  },
+  {
    "key": "Aux Tilleuls, à Caluire. Jacques Vial… Il est vivant, mademoiselle. Mais il est fragile.",
    "speak": "Aux Tilleuls, à Caluire. Jacques Vial… Il est vivant, mademoiselle. Mais il est fragile.",
    "texts": [
@@ -333,6 +443,28 @@
     "dialogue-line"
    ],
    "hash": "e5d0b56eed50f260"
+  },
+  {
+   "key": "Avec ma femme, Monique. Elle adorerait cette soupe.",
+   "speak": "Avec ma femme, Monique. Elle adorerait cette soupe.",
+   "texts": [
+    "Avec ma femme, Monique. Elle adorerait cette soupe."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8b6b6ace2adfd79f"
+  },
+  {
+   "key": "Avec moi. Chaque dimanche. Elle trichait toujours, et je perdais toujours.",
+   "speak": "Avec moi. Chaque dimanche. Elle trichait toujours, et je perdais toujours.",
+   "texts": [
+    "Avec moi. Chaque dimanche. Elle trichait toujours, et je perdais toujours."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "923ce882f46cce7e"
   },
   {
    "key": "Avec plaisir ! Et après, on va dîner ?",
@@ -355,6 +487,17 @@
     "dialogue-line"
    ],
    "hash": "e998c013eeeb77c1"
+  },
+  {
+   "key": "Belle robe ! Vous faites un film ?",
+   "speak": "Belle robe ! Vous faites un film ?",
+   "texts": [
+    "Belle robe ! Vous faites un film ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0a05ce3bd576ee79"
   },
   {
    "key": "Bien sûr ! J'ai bu mon café là-bas pendant des années.",
@@ -423,6 +566,17 @@
    "hash": "c6009b3971450665"
   },
   {
+   "key": "Bienvenue, madame ! Nous vous attendions… depuis trente et un ans.",
+   "speak": "Bienvenue, madame ! Nous vous attendions… depuis trente et un ans.",
+   "texts": [
+    "Bienvenue, madame ! Nous vous attendions… depuis trente et un ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2135dfbf899c8d1c"
+  },
+  {
    "key": "Bon, bon. Et la question, je la filme ?",
    "speak": "Bon, bon. Et la question, je la filme ?",
    "texts": [
@@ -456,6 +610,28 @@
    "hash": "fe1e2feb9142c09f"
   },
   {
+   "key": "Bon. Je prends votre mot. Vous prenez mon mot ?",
+   "speak": "Bon. Je prends votre mot. Vous prenez mon mot ?",
+   "texts": [
+    "Bon. Je prends votre mot. Vous prenez mon mot ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1f45e7c819662fd7"
+  },
+  {
+   "key": "Bon. On remet les pendules à l'heure ?",
+   "speak": "Bon. On remet les pendules à l'heure ?",
+   "texts": [
+    "Bon. On remet les pendules à l'heure ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d86ce5e8089e5971"
+  },
+  {
    "key": "Bon. Un café pour la factrice ? Ici, une question, puis un café.",
    "speak": "Bon. Un café pour la factrice ? Ici, une question, puis un café.",
    "texts": [
@@ -476,6 +652,17 @@
     "dialogue-line"
    ],
    "hash": "e92f6b1dfd00acec"
+  },
+  {
+   "key": "Bonjour ! On m'a dit : la plus belle vue de la vallée est ici.",
+   "speak": "Bonjour ! On m'a dit : la plus belle vue de la vallée est ici.",
+   "texts": [
+    "Bonjour ! On m'a dit : la plus belle vue de la vallée est ici."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2fce31d0d6471a05"
   },
   {
    "key": "Bonjour ! Oui, oui, d'accord !",
@@ -511,6 +698,17 @@
    "hash": "c136f40011ba015b"
   },
   {
+   "key": "Bonjour ? Oh ! Pardon, madame. Je suis Bastien, le menuisier.",
+   "speak": "Bonjour ? Oh ! Pardon, madame. Je suis Bastien, le menuisier.",
+   "texts": [
+    "Bonjour ? Oh ! Pardon, madame. Je suis Bastien, le menuisier."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "43f3262da4b0575c"
+  },
+  {
    "key": "Bonjour, Maya. J'ai ma boîte à outils pour le carreau. Vous l'ouvrez ?",
    "speak": "Bonjour, Maya. J'ai ma boîte à outils pour le carreau. Vous l'ouvrez ?",
    "texts": [
@@ -533,6 +731,17 @@
    "hash": "468ba56db4aceb1b"
   },
   {
+   "key": "Bonjour, Zoé. Je vais vous aider. On porte le sac à deux ?",
+   "speak": "Bonjour, Zoé. Je vais vous aider. On porte le sac à deux ?",
+   "texts": [
+    "Bonjour, Zoé. Je vais vous aider. On porte le sac à deux ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ac10da4311fdd624"
+  },
+  {
    "key": "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?",
    "speak": "Bonjour, madame ! Qu'est-ce qu'il vous faut aujourd'hui ?",
    "texts": [
@@ -553,6 +762,17 @@
     "dialogue-line"
    ],
    "hash": "35b47dfa0263fe07"
+  },
+  {
+   "key": "Bonjour, madame Diallo. Ce n'est pas pour me plaindre, mais…",
+   "speak": "Bonjour, madame Diallo. Ce n'est pas pour me plaindre, mais…",
+   "texts": [
+    "Bonjour, madame Diallo. Ce n'est pas pour me plaindre, mais…"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3560c9de4fa61098"
   },
   {
    "key": "Bonjour, madame Rose ! Vous vous souvenez de moi ? Le discours de trois phrases !",
@@ -586,6 +806,17 @@
     "dialogue-line"
    ],
    "hash": "2c77735319f23216"
+  },
+  {
+   "key": "Bonjour, madame. Ici Olivier Garnier. C'est bien l'hôtel du Belvédère ?",
+   "speak": "Bonjour, madame. Ici Olivier Garnier. C'est bien l'hôtel du Belvédère ?",
+   "texts": [
+    "Bonjour, madame. Ici Olivier Garnier. C'est bien l'hôtel du Belvédère ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f95571d4f9c397e4"
   },
   {
    "key": "Bonjour, madame. Ici, une question, puis un café.",
@@ -643,6 +874,17 @@
    "hash": "b6e3c5d0f3873d6f"
   },
   {
+   "key": "Bonjour, madame. Je voudrais voir les sorties de secours, s'il vous plaît.",
+   "speak": "Bonjour, madame. Je voudrais voir les sorties de secours, s'il vous plaît.",
+   "texts": [
+    "Bonjour, madame. Je voudrais voir les sorties de secours, s'il vous plaît."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "38532a3196842045"
+  },
+  {
    "key": "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.",
    "speak": "Bonjour, madame. Un aller-retour pour Lyon, s'il vous plaît.",
    "texts": [
@@ -676,6 +918,17 @@
    "hash": "959678daf728f175"
   },
   {
+   "key": "Bonjour. Je crois que c'est à nous.",
+   "speak": "Bonjour. Je crois que c'est à nous.",
+   "texts": [
+    "Bonjour. Je crois que c'est à nous."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "459064f93ff3d1f4"
+  },
+  {
    "key": "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
    "speak": "Bonjour. Vous pouvez m'aider ? J'ai mal à la gorge et je suis enrhumé.",
    "texts": [
@@ -685,6 +938,28 @@
     "dialogue-line"
    ],
    "hash": "4fc926185d39d147"
+  },
+  {
+   "key": "Bonne nuit, madame… ? Moi, c'est Gabriel Garnier.",
+   "speak": "Bonne nuit, madame… ? Moi, c'est Gabriel Garnier.",
+   "texts": [
+    "Bonne nuit, madame… ? Moi, c'est Gabriel Garnier."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "04b29512dc2a7a88"
+  },
+  {
+   "key": "Bonne nuit. Demain, soupe aux choux. Comme en seize cent quatre-vingts.",
+   "speak": "Bonne nuit. Demain, soupe aux choux. Comme en seize cent quatre-vingts.",
+   "texts": [
+    "Bonne nuit. Demain, soupe aux choux. Comme en seize cent quatre-vingts."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a451a637479ddb80"
   },
   {
    "key": "Bonsoir ! Ici Yanis, de la résidence Les Tilleuls. Je suis bien à La Page Tournée ?",
@@ -709,6 +984,28 @@
    "hash": "0dde9d8299331d35"
   },
   {
+   "key": "Bonsoir, Zoé. Je crois que c'est à toi.",
+   "speak": "Bonsoir, Zoé. Je crois que c'est à toi.",
+   "texts": [
+    "Bonsoir, Zoé. Je crois que c'est à toi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9e2ac4521c2ba4c0"
+  },
+  {
+   "key": "Bonsoir, Zoé. Je suis un peu en avance. Pardon.",
+   "speak": "Bonsoir, Zoé. Je suis un peu en avance. Pardon.",
+   "texts": [
+    "Bonsoir, Zoé. Je suis un peu en avance. Pardon."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "700c0fe4898c5234"
+  },
+  {
    "key": "Bonsoir, madame Berthier ! Je vous apporte votre roman policier.",
    "speak": "Bonsoir, madame Berthier ! Je vous apporte votre roman policier.",
    "texts": [
@@ -718,6 +1015,28 @@
     "dialogue-line"
    ],
    "hash": "802527e35e3a5423"
+  },
+  {
+   "key": "Bonsoir, madame. Bienvenue. Vous avez une réservation ?",
+   "speak": "Bonsoir, madame. Bienvenue. Vous avez une réservation ?",
+   "texts": [
+    "Bonsoir, madame. Bienvenue. Vous avez une réservation ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f38b726cf88d3ed5"
+  },
+  {
+   "key": "Bonsoir, madame. Je crois que c'est à vous.",
+   "speak": "Bonsoir, madame. Je crois que c'est à vous.",
+   "texts": [
+    "Bonsoir, madame. Je crois que c'est à vous."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6cc19254cf59d296"
   },
   {
    "key": "Bonsoir, madame. Voici la carte.",
@@ -742,6 +1061,39 @@
    "hash": "8e83f97da1613e40"
   },
   {
+   "key": "Bonsoir. C'est une panne. Tout l'immeuble.",
+   "speak": "Bonsoir. C'est une panne. Tout l'immeuble.",
+   "texts": [
+    "Bonsoir. C'est une panne. Tout l'immeuble."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "71a7e39bd5a56c44"
+  },
+  {
+   "key": "Bonsoir… Excusez-moi. Je suis perdu, et il fait très froid.",
+   "speak": "Bonsoir… Excusez-moi. Je suis perdu, et il fait très froid.",
+   "texts": [
+    "Bonsoir… Excusez-moi. Je suis perdu, et il fait très froid."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b7bd317d8329392d"
+  },
+  {
+   "key": "Bravo ! Vous êtes une actrice formidable.",
+   "speak": "Bravo ! Vous êtes une actrice formidable.",
+   "texts": [
+    "Bravo ! Vous êtes une actrice formidable."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5ed4d57f80c199c8"
+  },
+  {
    "key": "C'est bête, quand même. Un vélo… Mais j'ai été heureux.",
    "speak": "C'est bête, quand même. Un vélo… Mais j'ai été heureux.",
    "texts": [
@@ -762,6 +1114,17 @@
     "dialogue-line"
    ],
    "hash": "ff5dc35a2a88aea2"
+  },
+  {
+   "key": "C'est la nuit qu'il est beau de croire à la lumière.",
+   "speak": "C'est la nuit qu'il est beau de croire à la lumière.",
+   "texts": [
+    "C'est la nuit qu'il est beau de croire à la lumière."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "c408ded304aec35a"
   },
   {
    "key": "C'est lui, J. ! Relisez la première lettre, maintenant.",
@@ -797,6 +1160,17 @@
    "hash": "41546d5a73c9bea0"
   },
   {
+   "key": "C'est sa toute première boîte. Elle nous la donne.",
+   "speak": "C'est sa toute première boîte. Elle nous la donne.",
+   "texts": [
+    "C'est sa toute première boîte. Elle nous la donne."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6ed6b8e7eae85880"
+  },
+  {
    "key": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
    "speak": "C'est vrai, il a fait très chaud. J'espère un automne plus doux.",
    "texts": [
@@ -806,6 +1180,61 @@
     "dialogue-line"
    ],
    "hash": "70eafc56a9ff6fc5"
+  },
+  {
+   "key": "C'est vrai. Je ne dors pas. Je ne travaille pas.",
+   "speak": "C'est vrai. Je ne dors pas. Je ne travaille pas.",
+   "texts": [
+    "C'est vrai. Je ne dors pas. Je ne travaille pas."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b5e072cafcc4427f"
+  },
+  {
+   "key": "C'est épatant ! On y va, demain ? Ensemble ?",
+   "speak": "C'est épatant ! On y va, demain ? Ensemble ?",
+   "texts": [
+    "C'est épatant ! On y va, demain ? Ensemble ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "78f326d23bc904ed"
+  },
+  {
+   "key": "C'étaient les premiers Jeux olympiques d'hiver. À Chamonix !",
+   "speak": "C'étaient les premiers Jeux olympiques d'hiver. À Chamonix !",
+   "texts": [
+    "C'étaient les premiers Jeux olympiques d'hiver. À Chamonix !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dd08e73158c90ea7"
+  },
+  {
+   "key": "C'était Eulalie. Elle est ici depuis deux cent quarante ans.",
+   "speak": "C'était Eulalie. Elle est ici depuis deux cent quarante ans.",
+   "texts": [
+    "C'était Eulalie. Elle est ici depuis deux cent quarante ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "89f514db0167b66f"
+  },
+  {
+   "key": "C'était Hélène, ma sœur. Elle conduit des TGV. Elle passe la semaine chez moi.",
+   "speak": "C'était Hélène, ma sœur. Elle conduit des TGV. Elle passe la semaine chez moi.",
+   "texts": [
+    "C'était Hélène, ma sœur. Elle conduit des TGV. Elle passe la semaine chez moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3a23bdedb6a89403"
   },
   {
    "key": "Ce n'est pas grave. Après, moi aussi, j'avais le cafard. Je voulais tout arrêter.",
@@ -830,6 +1259,17 @@
    "hash": "94f5aeca264ec2af"
   },
   {
+   "key": "Ce n'est pas seulement la chanson, Zoé. C'est moi qui te le dis.",
+   "speak": "Ce n'est pas seulement la chanson, Zoé. C'est moi qui te le dis.",
+   "texts": [
+    "Ce n'est pas seulement la chanson, Zoé. C'est moi qui te le dis."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a8b7b48eeb59f741"
+  },
+  {
    "key": "Ce n'est pas votre faute, madame. Vous avez couru aussi vite que possible.",
    "speak": "Ce n'est pas votre faute, madame. Vous avez couru aussi vite que possible.",
    "texts": [
@@ -841,6 +1281,28 @@
    "hash": "45378b9739cd90b8"
   },
   {
+   "key": "Ce palier, sans toi, ce serait trop calme. Beaucoup trop calme.",
+   "speak": "Ce palier, sans toi, ce serait trop calme. Beaucoup trop calme.",
+   "texts": [
+    "Ce palier, sans toi, ce serait trop calme. Beaucoup trop calme."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5f4e59c994913c61"
+  },
+  {
+   "key": "Ce serait dommage… pour l'immeuble. J'ai le cœur gros, rien que d'y penser.",
+   "speak": "Ce serait dommage… pour l'immeuble. J'ai le cœur gros, rien que d'y penser.",
+   "texts": [
+    "Ce serait dommage… pour l'immeuble. J'ai le cœur gros, rien que d'y penser."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "fed97d2233c63459"
+  },
+  {
    "key": "Ce soir, je vais écouter ma femme. Une heure. Sans carnet.",
    "speak": "Ce soir, je vais écouter ma femme. Une heure. Sans carnet.",
    "texts": [
@@ -850,6 +1312,50 @@
     "dialogue-line"
    ],
    "hash": "169ba21cd9ed6b47"
+  },
+  {
+   "key": "Ce soir, on va commencer une tradition !",
+   "speak": "Ce soir, on va commencer une tradition !",
+   "texts": [
+    "Ce soir, on va commencer une tradition !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f15c6e40f51982d6"
+  },
+  {
+   "key": "Cette soupe… Je l'ai mangée ici, en mille neuf cent soixante-douze. Avec mes parents.",
+   "speak": "Cette soupe… Je l'ai mangée ici, en mille neuf cent soixante-douze. Avec mes parents.",
+   "texts": [
+    "Cette soupe… Je l'ai mangée ici, en mille neuf cent soixante-douze. Avec mes parents."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "abdb52bf14c399a3"
+  },
+  {
+   "key": "Chez nous, à Besançon, c'était le contraire. On chuchotait.",
+   "speak": "Chez nous, à Besançon, c'était le contraire. On chuchotait.",
+   "texts": [
+    "Chez nous, à Besançon, c'était le contraire. On chuchotait."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5f1b0a81c477b3f7"
+  },
+  {
+   "key": "Chic ! Vous avez trouvé les cartes de madame Hortense !",
+   "speak": "Chic ! Vous avez trouvé les cartes de madame Hortense !",
+   "texts": [
+    "Chic ! Vous avez trouvé les cartes de madame Hortense !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "504282a4eaf7b454"
   },
   {
    "key": "Cinq cents grammes de fraises. Je vous mets autre chose ?",
@@ -907,6 +1413,17 @@
    "hash": "177446584ecabf02"
   },
   {
+   "key": "D'abord le toit, après la peinture. On va commencer aujourd'hui.",
+   "speak": "D'abord le toit, après la peinture. On va commencer aujourd'hui.",
+   "texts": [
+    "D'abord le toit, après la peinture. On va commencer aujourd'hui."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "685b7ff9336d05c9"
+  },
+  {
    "key": "D'accord ! Mais vous venez avec moi, mademoiselle Rose ?",
    "speak": "D'accord ! Mais vous venez avec moi, mademoiselle Rose ?",
    "texts": [
@@ -916,6 +1433,17 @@
     "dialogue-line"
    ],
    "hash": "1cd74b1ee338c14c"
+  },
+  {
+   "key": "D'accord, Zoé. Et moi, c'est Gabriel.",
+   "speak": "D'accord, Zoé. Et moi, c'est Gabriel.",
+   "texts": [
+    "D'accord, Zoé. Et moi, c'est Gabriel."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "24937ec98835c789"
   },
   {
    "key": "D'accord, j'y vais si ça ne va pas mieux. C'est combien ?",
@@ -973,6 +1501,17 @@
    "hash": "26892f2b3cd0b77f"
   },
   {
+   "key": "De l'eau… Encore de l'eau, s'il vous plaît !",
+   "speak": "De l'eau… Encore de l'eau, s'il vous plaît !",
+   "texts": [
+    "De l'eau… Encore de l'eau, s'il vous plaît !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b24aac11d9817433"
+  },
+  {
    "key": "De rien. Bonne visite !",
    "speak": "De rien. Bonne visite !",
    "texts": [
@@ -1006,6 +1545,17 @@
    "hash": "59e8d08bedbff782"
   },
   {
+   "key": "Demain, avec des tuiles.",
+   "speak": "Demain, avec des tuiles.",
+   "texts": [
+    "Demain, avec des tuiles."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bddae7e28583a9ab"
+  },
+  {
    "key": "Demain, dix heures, en haut de la montée de la Grande-Côte ?",
    "speak": "Demain, dix heures, en haut de la montée de la Grande-Côte ?",
    "texts": [
@@ -1015,6 +1565,28 @@
     "dialogue-line"
    ],
    "hash": "2996d3d99b5189b6"
+  },
+  {
+   "key": "Demain, douze chambres pleines. J'aimerais être content… mais j'ai peur des clients.",
+   "speak": "Demain, douze chambres pleines. J'aimerais être content… mais j'ai peur des clients.",
+   "texts": [
+    "Demain, douze chambres pleines. J'aimerais être content… mais j'ai peur des clients."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9853ae45c5e880ff"
+  },
+  {
+   "key": "Demain, je vais prendre mon courage à deux mains.",
+   "speak": "Demain, je vais prendre mon courage à deux mains.",
+   "texts": [
+    "Demain, je vais prendre mon courage à deux mains."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a18c3ac0c37148c1"
   },
   {
    "key": "Demandez à Mme Berthier, au cinquième. Elle sait tout… mais elle ne dit rien.",
@@ -1028,6 +1600,116 @@
    "hash": "421f7163b004a8cf"
   },
   {
+   "key": "Depuis le tambour. Ou depuis tes fautes d'orthographe.",
+   "speak": "Depuis le tambour. Ou depuis tes fautes d'orthographe.",
+   "texts": [
+    "Depuis le tambour. Ou depuis tes fautes d'orthographe."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0094e33a045a107a"
+  },
+  {
+   "key": "Depuis lundi, tu es bizarre. Tu ne joues plus. Tu ne ris plus.",
+   "speak": "Depuis lundi, tu es bizarre. Tu ne joues plus. Tu ne ris plus.",
+   "texts": [
+    "Depuis lundi, tu es bizarre. Tu ne joues plus. Tu ne ris plus."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d6a8562c4d8a78ea"
+  },
+  {
+   "key": "Depuis, il manque une note. J'ai peur de la casser encore.",
+   "speak": "Depuis, il manque une note. J'ai peur de la casser encore.",
+   "texts": [
+    "Depuis, il manque une note. J'ai peur de la casser encore."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "332ee2152cf2b059"
+  },
+  {
+   "key": "Des boîtes à musique. Je répare les boîtes à musique.",
+   "speak": "Des boîtes à musique. Je répare les boîtes à musique.",
+   "texts": [
+    "Des boîtes à musique. Je répare les boîtes à musique."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "14175563dfc9fa84"
+  },
+  {
+   "key": "Des clients. On s'ennuie depuis trente et un ans.",
+   "speak": "Des clients. On s'ennuie depuis trente et un ans.",
+   "texts": [
+    "Des clients. On s'ennuie depuis trente et un ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a5344b51d4816a98"
+  },
+  {
+   "key": "Des fleurs ? Un hôtel a des numéros, madame.",
+   "speak": "Des fleurs ? Un hôtel a des numéros, madame.",
+   "texts": [
+    "Des fleurs ? Un hôtel a des numéros, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "5457a0d3144aeb49"
+  },
+  {
+   "key": "Des histoires au salon… C'est épatant ! Les skis changent, les gens non.",
+   "speak": "Des histoires au salon… C'est épatant ! Les skis changent, les gens non.",
+   "texts": [
+    "Des histoires au salon… C'est épatant ! Les skis changent, les gens non."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0d53848683f7bf4e"
+  },
+  {
+   "key": "Deux adultes et deux enfants : Margot, huit ans, et Sacha, cinq ans.",
+   "speak": "Deux adultes et deux enfants : Margot, huit ans, et Sacha, cinq ans.",
+   "texts": [
+    "Deux adultes et deux enfants : Margot, huit ans, et Sacha, cinq ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9434dc527846d0a1"
+  },
+  {
+   "key": "Dix heures et demie ?",
+   "speak": "Dix heures et demie ?",
+   "texts": [
+    "Dix heures et demie ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "266443c03b262992"
+  },
+  {
+   "key": "Douze chambres pleines, madame. C'est épatant ! Comme en janvier mille neuf cent vingt-quatre.",
+   "speak": "Douze chambres pleines, madame. C'est épatant ! Comme en janvier mille neuf cent vingt-quatre.",
+   "texts": [
+    "Douze chambres pleines, madame. C'est épatant ! Comme en janvier mille neuf cent vingt-quatre."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7edc8f246974a4be"
+  },
+  {
    "key": "Du coup, je vais passer au magasin de vélos, rue Lepic.",
    "speak": "Du coup, je vais passer au magasin de vélos, rue Lepic.",
    "texts": [
@@ -1039,6 +1721,28 @@
    "hash": "80286707dede1ca0"
   },
   {
+   "key": "Du fromage, des oignons… Moi aussi, j'ai fait ça !",
+   "speak": "Du fromage, des oignons… Moi aussi, j'ai fait ça !",
+   "texts": [
+    "Du fromage, des oignons… Moi aussi, j'ai fait ça !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a8513317fff5d41f"
+  },
+  {
+   "key": "Du plastique ? Sur une véranda de mille neuf cent huit ?",
+   "speak": "Du plastique ? Sur une véranda de mille neuf cent huit ?",
+   "texts": [
+    "Du plastique ? Sur une véranda de mille neuf cent huit ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ea7218dbed37c568"
+  },
+  {
    "key": "Elle a dit oui… C'est la réponse que j'attendais.",
    "speak": "Elle a dit oui… C'est la réponse que j'attendais.",
    "texts": [
@@ -1048,6 +1752,17 @@
     "dialogue-line"
    ],
    "hash": "8bdd75d3b182e235"
+  },
+  {
+   "key": "Elle a gardé l'hôtel seule pendant seize ans.",
+   "speak": "Elle a gardé l'hôtel seule pendant seize ans.",
+   "texts": [
+    "Elle a gardé l'hôtel seule pendant seize ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4c88aa9b18a23911"
   },
   {
    "key": "Elle est mignonne ! Et là, ce sont tes parents ?",
@@ -1070,6 +1785,28 @@
     "dialogue-line"
    ],
    "hash": "eb0c3f4d939f9722"
+  },
+  {
+   "key": "Elle était fatiguée. Elle n'avait personne pour continuer.",
+   "speak": "Elle était fatiguée. Elle n'avait personne pour continuer.",
+   "texts": [
+    "Elle était fatiguée. Elle n'avait personne pour continuer."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9f2113bc844f6892"
+  },
+  {
+   "key": "Elle était petite et forte. Elle riait tout le temps.",
+   "speak": "Elle était petite et forte. Elle riait tout le temps.",
+   "texts": [
+    "Elle était petite et forte. Elle riait tout le temps."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dbfe50990175ea76"
   },
   {
    "key": "Elle, oui ! La fille du canut de la rue Dumenge. Elle venait le dimanche avec son foulard.",
@@ -1105,6 +1842,17 @@
    "hash": "d4d42d8c6fdc2332"
   },
   {
+   "key": "En mille sept cent quatre-vingt-six ? Vous êtes bien conservée, madame !",
+   "speak": "En mille sept cent quatre-vingt-six ? Vous êtes bien conservée, madame !",
+   "texts": [
+    "En mille sept cent quatre-vingt-six ? Vous êtes bien conservée, madame !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "26268d5e71edc762"
+  },
+  {
    "key": "En quatre-vingt-cinq. Il est fermé depuis quarante ans, mademoiselle.",
    "speak": "En quatre-vingt-cinq. Il est fermé depuis quarante ans, mademoiselle.",
    "texts": [
@@ -1138,6 +1886,28 @@
    "hash": "eb0e3f44870181f5"
   },
   {
+   "key": "Et Yanis ne se tromperait plus jamais.",
+   "speak": "Et Yanis ne se tromperait plus jamais.",
+   "texts": [
+    "Et Yanis ne se tromperait plus jamais."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7642e2f06e01a7f3"
+  },
+  {
+   "key": "Et ce soir, c'est ton chili. Je vais apporter le dessert.",
+   "speak": "Et ce soir, c'est ton chili. Je vais apporter le dessert.",
+   "texts": [
+    "Et ce soir, c'est ton chili. Je vais apporter le dessert."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "51e4b0c1dcf4a337"
+  },
+  {
    "key": "Et cette petite boîte, qu'est-ce que c'est ?",
    "speak": "Et cette petite boîte, qu'est-ce que c'est ?",
    "texts": [
@@ -1158,6 +1928,17 @@
     "dialogue-line"
    ],
    "hash": "5396bd96da4f73af"
+  },
+  {
+   "key": "Et je me lève à six heures. Tous les jours.",
+   "speak": "Et je me lève à six heures. Tous les jours.",
+   "texts": [
+    "Et je me lève à six heures. Tous les jours."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f0c5fcdc419535ab"
   },
   {
    "key": "Et je n'aime pas les chiens.",
@@ -1226,6 +2007,17 @@
    "hash": "107347ef7be585c7"
   },
   {
+   "key": "Et les fantômes ?",
+   "speak": "Et les fantômes ?",
+   "texts": [
+    "Et les fantômes ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "83328613a2372241"
+  },
+  {
    "key": "Et là : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est donc un homme.",
    "speak": "Et là : « Mais je suis prêt à tout recommencer avec toi, là-bas. » Prêt, pas prête. J. est donc un homme.",
    "texts": [
@@ -1235,6 +2027,72 @@
     "dialogue-line"
    ],
    "hash": "98de121e797b9652"
+  },
+  {
+   "key": "Et moi, je lui ai acheté deux cents bouchons d'oreille.",
+   "speak": "Et moi, je lui ai acheté deux cents bouchons d'oreille.",
+   "texts": [
+    "Et moi, je lui ai acheté deux cents bouchons d'oreille."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8a4fb326cd1f37e8"
+  },
+  {
+   "key": "Et mon ascenseur est fermé. Tout change.",
+   "speak": "Et mon ascenseur est fermé. Tout change.",
+   "texts": [
+    "Et mon ascenseur est fermé. Tout change."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4625e62590a4819a"
+  },
+  {
+   "key": "Et que les enfants du mercredi méritaient une vraie salle. La cave.",
+   "speak": "Et que les enfants du mercredi méritaient une vraie salle. La cave.",
+   "texts": [
+    "Et que les enfants du mercredi méritaient une vraie salle. La cave."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7fff995e3a227b10"
+  },
+  {
+   "key": "Et si je la casse encore ?",
+   "speak": "Et si je la casse encore ?",
+   "texts": [
+    "Et si je la casse encore ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9ecac964d122216a"
+  },
+  {
+   "key": "Et toi, la prochaine fois, tu devrais me demander.",
+   "speak": "Et toi, la prochaine fois, tu devrais me demander.",
+   "texts": [
+    "Et toi, la prochaine fois, tu devrais me demander."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "403775f4cf63c56c"
+  },
+  {
+   "key": "Et ton concierge en rouge ? Il est parti ?",
+   "speak": "Et ton concierge en rouge ? Il est parti ?",
+   "texts": [
+    "Et ton concierge en rouge ? Il est parti ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c23123fecc72847c"
   },
   {
    "key": "Et un garçon, en mille neuf cent soixante-deux ? Un certain J. ?",
@@ -1270,6 +2128,17 @@
    "hash": "2ef71564e0331867"
   },
   {
+   "key": "Et vous, vous avez acheté un jardin entier ?",
+   "speak": "Et vous, vous avez acheté un jardin entier ?",
+   "texts": [
+    "Et vous, vous avez acheté un jardin entier ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bcf975651a107604"
+  },
+  {
    "key": "Et vous, vous l'avez appelée ? Dimanche, c'est la fête des Mères.",
    "speak": "Et vous, vous l'avez appelée ? Dimanche, c'est la fête des Mères.",
    "texts": [
@@ -1281,6 +2150,39 @@
    "hash": "03db37d7f666bf34"
   },
   {
+   "key": "Et… vous avez vu ce qu'il y a dedans ?",
+   "speak": "Et… vous avez vu ce qu'il y a dedans ?",
+   "texts": [
+    "Et… vous avez vu ce qu'il y a dedans ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2d33f40f7b020174"
+  },
+  {
+   "key": "Fort bien, madame ! Moi, je me contente de l'odeur. Maintenant, c'est Lucie qui cuisine.",
+   "speak": "Fort bien, madame ! Moi, je me contente de l'odeur. Maintenant, c'est Lucie qui cuisine.",
+   "texts": [
+    "Fort bien, madame ! Moi, je me contente de l'odeur. Maintenant, c'est Lucie qui cuisine."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ed1dc1e73ac1cf3a"
+  },
+  {
+   "key": "Français ? Point du tout ! J'étais savoyard. La Savoie était un pays.",
+   "speak": "Français ? Point du tout ! J'étais savoyard. La Savoie était un pays.",
+   "texts": [
+    "Français ? Point du tout ! J'étais savoyard. La Savoie était un pays."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1a6bdb4909c5fc96"
+  },
+  {
    "key": "G, A, R, N, I, E, R. Et voici le numéro de la librairie : zéro quatre, soixante-dix-huit…",
    "speak": "G, A, R, N, I, E, R. Et voici le numéro de la librairie : zéro quatre, soixante-dix-huit…",
    "texts": [
@@ -1290,6 +2192,72 @@
     "dialogue-line"
    ],
    "hash": "1f2865e7ed10b7e2"
+  },
+  {
+   "key": "Garnier ? Bonjour, madame ! Un colis pour… vous, cette fois !",
+   "speak": "Garnier ? Bonjour, madame ! Un colis pour… vous, cette fois !",
+   "texts": [
+    "Garnier ? Bonjour, madame ! Un colis pour… vous, cette fois !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8ef60b6ccbfd517f"
+  },
+  {
+   "key": "Garnier, sixième étage ? Vous êtes deux Garnier !",
+   "speak": "Garnier, sixième étage ? Vous êtes deux Garnier !",
+   "texts": [
+    "Garnier, sixième étage ? Vous êtes deux Garnier !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "61d99db6941536d5"
+  },
+  {
+   "key": "Germaine, la femme de chambre. Elle chantait tout le temps.",
+   "speak": "Germaine, la femme de chambre. Elle chantait tout le temps.",
+   "texts": [
+    "Germaine, la femme de chambre. Elle chantait tout le temps."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "84a5122c11568071"
+  },
+  {
+   "key": "Gratuits ? Depuis quand ?",
+   "speak": "Gratuits ? Depuis quand ?",
+   "texts": [
+    "Gratuits ? Depuis quand ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f3353b51bcd98131"
+  },
+  {
+   "key": "Ha ! Et moi, je suis Napoléon.",
+   "speak": "Ha ! Et moi, je suis Napoléon.",
+   "texts": [
+    "Ha ! Et moi, je suis Napoléon."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "375ffdec9b08856f"
+  },
+  {
+   "key": "Hier, Zoé m'a dit bonjour très froidement. Pourquoi, à ton avis ?",
+   "speak": "Hier, Zoé m'a dit bonjour très froidement. Pourquoi, à ton avis ?",
+   "texts": [
+    "Hier, Zoé m'a dit bonjour très froidement. Pourquoi, à ton avis ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8be9bfdeb904cf2c"
   },
   {
    "key": "Hugo est là. Et Socrate aime les voyages, non ?",
@@ -1380,6 +2348,39 @@
    "hash": "2d0b049ebd6bcbb0"
   },
   {
+   "key": "Il est très lourd. Et il fait « boum ».",
+   "speak": "Il est très lourd. Et il fait « boum ».",
+   "texts": [
+    "Il est très lourd. Et il fait « boum »."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "929ba420c808a37d"
+  },
+  {
+   "key": "Il faisait moins vingt. Mais tout le monde riait quand même.",
+   "speak": "Il faisait moins vingt. Mais tout le monde riait quand même.",
+   "texts": [
+    "Il faisait moins vingt. Mais tout le monde riait quand même."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0506782a7834499e"
+  },
+  {
+   "key": "Il fait un temps de chien, mais demain, il va faire beau.",
+   "speak": "Il fait un temps de chien, mais demain, il va faire beau.",
+   "texts": [
+    "Il fait un temps de chien, mais demain, il va faire beau."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9ebb8bb92ee68334"
+  },
+  {
    "key": "Il faut faire simple. Vous devriez faire une tarte aux pommes.",
    "speak": "Il faut faire simple. Vous devriez faire une tarte aux pommes.",
    "texts": [
@@ -1389,6 +2390,17 @@
     "dialogue-line"
    ],
    "hash": "04f22fe64f363e89"
+  },
+  {
+   "key": "Il faut manger pour vivre et non pas vivre pour manger.",
+   "speak": "Il faut manger pour vivre et non pas vivre pour manger.",
+   "texts": [
+    "Il faut manger pour vivre et non pas vivre pour manger."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "9657b84b3488dbd5"
   },
   {
    "key": "Il faut partir à point. Mais pourquoi tu n'y es jamais allée, à Saint-Malo ?",
@@ -1413,6 +2425,61 @@
    "hash": "29f46850986aacc5"
   },
   {
+   "key": "Il ne faut pas mettre la charrue avant les bœufs.",
+   "speak": "Il ne faut pas mettre la charrue avant les bœufs.",
+   "texts": [
+    "Il ne faut pas mettre la charrue avant les bœufs."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "267b5f2f85226abc"
+  },
+  {
+   "key": "Il y a des courants d'air, ici.",
+   "speak": "Il y a des courants d'air, ici.",
+   "texts": [
+    "Il y a des courants d'air, ici."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "46c789a333818f03"
+  },
+  {
+   "key": "Il y a trois fautes. Dans six mots.",
+   "speak": "Il y a trois fautes. Dans six mots.",
+   "texts": [
+    "Il y a trois fautes. Dans six mots."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "606fc161b5c6da55"
+  },
+  {
+   "key": "Il y avait des mules, des marchands, du sel. Ils allaient en Italie.",
+   "speak": "Il y avait des mules, des marchands, du sel. Ils allaient en Italie.",
+   "texts": [
+    "Il y avait des mules, des marchands, du sel. Ils allaient en Italie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a75f4b079c6d75ca"
+  },
+  {
+   "key": "Impossible ? Je ne connais pas ce mot, madame.",
+   "speak": "Impossible ? Je ne connais pas ce mot, madame.",
+   "texts": [
+    "Impossible ? Je ne connais pas ce mot, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b8c467b971273576"
+  },
+  {
    "key": "J'ai appris… à regarder à droite. Et à partir doucement.",
    "speak": "J'ai appris… à regarder à droite. Et à partir doucement.",
    "texts": [
@@ -1433,6 +2500,17 @@
     "dialogue-line"
    ],
    "hash": "70295bc4c27803a8"
+  },
+  {
+   "key": "J'ai pris mon courage à deux mains. Et mes genoux tremblaient.",
+   "speak": "J'ai pris mon courage à deux mains. Et mes genoux tremblaient.",
+   "texts": [
+    "J'ai pris mon courage à deux mains. Et mes genoux tremblaient."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f1ba70aee7afdf60"
   },
   {
    "key": "J'ai raté mon permis ce matin. Je suis nul.",
@@ -1488,6 +2566,28 @@
     "dialogue-line"
    ],
    "hash": "d71e8afd9985ca35"
+  },
+  {
+   "key": "J'aime la petite musique. Écoutez.",
+   "speak": "J'aime la petite musique. Écoutez.",
+   "texts": [
+    "J'aime la petite musique. Écoutez."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8e104531dc317555"
+  },
+  {
+   "key": "J'aimerais construire la salle avec toi. On pourrait commencer samedi ?",
+   "speak": "J'aimerais construire la salle avec toi. On pourrait commencer samedi ?",
+   "texts": [
+    "J'aimerais construire la salle avec toi. On pourrait commencer samedi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "547685c8598d0964"
   },
   {
    "key": "J'aimerais l'appeler Rose… si c'est une fille.",
@@ -1611,6 +2711,17 @@
    "hash": "a82bceca7c4b776f"
   },
   {
+   "key": "Je choisis une porte. Et c'est toujours la mauvaise !",
+   "speak": "Je choisis une porte. Et c'est toujours la mauvaise !",
+   "texts": [
+    "Je choisis une porte. Et c'est toujours la mauvaise !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4dda5bdd2689a453"
+  },
+  {
    "key": "Je comprends. À mon avis, ce serait mieux sans escaliers.",
    "speak": "Je comprends. À mon avis, ce serait mieux sans escaliers.",
    "texts": [
@@ -1699,6 +2810,39 @@
    "hash": "57b90d6597bd2214"
   },
   {
+   "key": "Je les ai achetés pour vous. Enfin, pour votre tambour.",
+   "speak": "Je les ai achetés pour vous. Enfin, pour votre tambour.",
+   "texts": [
+    "Je les ai achetés pour vous. Enfin, pour votre tambour."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d22f17a7854f5979"
+  },
+  {
+   "key": "Je les ai jetés mercredi.",
+   "speak": "Je les ai jetés mercredi.",
+   "texts": [
+    "Je les ai jetés mercredi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "15ad129a2032623f"
+  },
+  {
+   "key": "Je leur ai dit que ta musique faisait vivre l'immeuble.",
+   "speak": "Je leur ai dit que ta musique faisait vivre l'immeuble.",
+   "texts": [
+    "Je leur ai dit que ta musique faisait vivre l'immeuble."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "015097589c7bb97f"
+  },
+  {
    "key": "Je marche. Chaque chose en son temps. Et vous, madame Rose, qu'est-ce que vous aimeriez ?",
    "speak": "Je marche. Chaque chose en son temps. Et vous, madame Rose, qu'est-ce que vous aimeriez ?",
    "texts": [
@@ -1708,6 +2852,17 @@
     "dialogue-line"
    ],
    "hash": "0e52e6989839e164"
+  },
+  {
+   "key": "Je n'ai rien pour payer…",
+   "speak": "Je n'ai rien pour payer…",
+   "texts": [
+    "Je n'ai rien pour payer…"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2a3065e025851b97"
   },
   {
    "key": "Je n'aimais pas ça… Et moi, je dis la même chose !",
@@ -1732,6 +2887,28 @@
    "hash": "bd9b6d965f4d1a9e"
   },
   {
+   "key": "Je ne peux pas. Mes mains ne tiennent rien.",
+   "speak": "Je ne peux pas. Mes mains ne tiennent rien.",
+   "texts": [
+    "Je ne peux pas. Mes mains ne tiennent rien."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ff0d6285f54cc7d9"
+  },
+  {
+   "key": "Je ne sais pas. Moi, je ne regarde pas !",
+   "speak": "Je ne sais pas. Moi, je ne regarde pas !",
+   "texts": [
+    "Je ne sais pas. Moi, je ne regarde pas !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "41fcaeab3ad0c5f8"
+  },
+  {
    "key": "Je ne sais pas. Mystère !",
    "speak": "Je ne sais pas. Mystère !",
    "texts": [
@@ -1741,6 +2918,17 @@
     "dialogue-line"
    ],
    "hash": "447dc31381edb4df"
+  },
+  {
+   "key": "Je ne sais pas. On pourrait l'écouter… tous les deux.",
+   "speak": "Je ne sais pas. On pourrait l'écouter… tous les deux.",
+   "texts": [
+    "Je ne sais pas. On pourrait l'écouter… tous les deux."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ffe1d05bd961fea8"
   },
   {
    "key": "Je peins dix touristes par jour. Je ne veux plus peindre.",
@@ -1754,6 +2942,28 @@
    "hash": "e49c067b753aaeeb"
   },
   {
+   "key": "Je pourrais dormir près du feu ? Juste cette nuit ?",
+   "speak": "Je pourrais dormir près du feu ? Juste cette nuit ?",
+   "texts": [
+    "Je pourrais dormir près du feu ? Juste cette nuit ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "041746d01e91327d"
+  },
+  {
+   "key": "Je pourrais isoler la porte et le plafond. Je sais faire.",
+   "speak": "Je pourrais isoler la porte et le plafond. Je sais faire.",
+   "texts": [
+    "Je pourrais isoler la porte et le plafond. Je sais faire."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a02fa2a8518ccb53"
+  },
+  {
    "key": "Je sais, mais on n'a pas fini.",
    "speak": "Je sais, mais on n'a pas fini.",
    "texts": [
@@ -1763,6 +2973,17 @@
     "dialogue-line"
    ],
    "hash": "a9d18009802cee46"
+  },
+  {
+   "key": "Je sais. J'ai vu Marcel en mille neuf cent quatre-vingt-seize.",
+   "speak": "Je sais. J'ai vu Marcel en mille neuf cent quatre-vingt-seize.",
+   "texts": [
+    "Je sais. J'ai vu Marcel en mille neuf cent quatre-vingt-seize."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "95e059aaedcdbf5f"
   },
   {
    "key": "Je sais. J'écris, j'écris… et j'ai peur.",
@@ -1809,6 +3030,17 @@
    "hash": "244c8f0601211446"
   },
   {
+   "key": "Je suis désolé, madame. Moi, c'est Marcel. Le concierge.",
+   "speak": "Je suis désolé, madame. Moi, c'est Marcel. Le concierge.",
+   "texts": [
+    "Je suis désolé, madame. Moi, c'est Marcel. Le concierge."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9404b8098830d88d"
+  },
+  {
    "key": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
    "speak": "Je suis désolé, madame. Vous avez le ticket de caisse ?",
    "texts": [
@@ -1853,6 +3085,28 @@
    "hash": "3c3164197b312d16"
   },
   {
+   "key": "Je suis savoyard, l'hôtel est français, et je suis chez moi.",
+   "speak": "Je suis savoyard, l'hôtel est français, et je suis chez moi.",
+   "texts": [
+    "Je suis savoyard, l'hôtel est français, et je suis chez moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6eb7a6490c071a10"
+  },
+  {
+   "key": "Je suis à Lyon ! Je voudrais une chambre, le dix-neuf décembre.",
+   "speak": "Je suis à Lyon ! Je voudrais une chambre, le dix-neuf décembre.",
+   "texts": [
+    "Je suis à Lyon ! Je voudrais une chambre, le dix-neuf décembre."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8d5fe8c5afa1abf9"
+  },
+  {
    "key": "Je travaille dans les assurances depuis vingt-cinq ans. J'en ai assez.",
    "speak": "Je travaille dans les assurances depuis vingt-cinq ans. J'en ai assez.",
    "texts": [
@@ -1886,6 +3140,17 @@
    "hash": "26dd28c74cbdb423"
   },
   {
+   "key": "Je vais venir. Et je vais trouver une idée.",
+   "speak": "Je vais venir. Et je vais trouver une idée.",
+   "texts": [
+    "Je vais venir. Et je vais trouver une idée."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "583a9fd15247856e"
+  },
+  {
    "key": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
    "speak": "Je viens de Lyon, mais j'habite à Paris depuis deux ans.",
    "texts": [
@@ -1906,6 +3171,17 @@
     "dialogue-line"
    ],
    "hash": "275a729c49b0a1e3"
+  },
+  {
+   "key": "Je voudrais. Mais d'abord, j'aimerais sauver sa musique.",
+   "speak": "Je voudrais. Mais d'abord, j'aimerais sauver sa musique.",
+   "texts": [
+    "Je voudrais. Mais d'abord, j'aimerais sauver sa musique."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4e4a84d370187e7d"
   },
   {
    "key": "Je vous écoute. J'attends cette réponse depuis soixante-quatre ans.",
@@ -1930,6 +3206,28 @@
    "hash": "1abc691c2ed3b550"
   },
   {
+   "key": "Joli costume. L'hôtel a un thème ?",
+   "speak": "Joli costume. L'hôtel a un thème ?",
+   "texts": [
+    "Joli costume. L'hôtel a un thème ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "97757749ed43d02f"
+  },
+  {
+   "key": "Josette ! La petite Josette ! Vous avez grandi !",
+   "speak": "Josette ! La petite Josette ! Vous avez grandi !",
+   "texts": [
+    "Josette ! La petite Josette ! Vous avez grandi !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "22b46e5b040020f3"
+  },
+  {
    "key": "Juste une question. Vous vous souvenez de Simone à vingt ans ?",
    "speak": "Juste une question. Vous vous souvenez de Simone à vingt ans ?",
    "texts": [
@@ -1939,6 +3237,50 @@
     "dialogue-line"
    ],
    "hash": "1cdbe8b4a5f88a7e"
+  },
+  {
+   "key": "L'ascenseur date de mille neuf cent huit ? Je regrette, il faudrait le fermer.",
+   "speak": "L'ascenseur date de mille neuf cent huit ? Je regrette, il faudrait le fermer.",
+   "texts": [
+    "L'ascenseur date de mille neuf cent huit ? Je regrette, il faudrait le fermer."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "095c5ef4217c442e"
+  },
+  {
+   "key": "L'hôtel était plein. Il y avait des patineurs, des skieurs, des Américains…",
+   "speak": "L'hôtel était plein. Il y avait des patineurs, des skieurs, des Américains…",
+   "texts": [
+    "L'hôtel était plein. Il y avait des patineurs, des skieurs, des Américains…"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "37c5f9da6c9caaa0"
+  },
+  {
+   "key": "L'important dans la vie, ce n'est point le triomphe mais le combat.",
+   "speak": "L'important dans la vie, ce n'est point le triomphe mais le combat.",
+   "texts": [
+    "L'important dans la vie, ce n'est point le triomphe mais le combat."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "f49ba50f88ab2ed3"
+  },
+  {
+   "key": "L'été, j'habitais chez elle, dans le Jura. Elle réparait des boîtes à musique.",
+   "speak": "L'été, j'habitais chez elle, dans le Jura. Elle réparait des boîtes à musique.",
+   "texts": [
+    "L'été, j'habitais chez elle, dans le Jura. Elle réparait des boîtes à musique."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "27f2e27ca6ca2e9f"
   },
   {
    "key": "L, A, U, R, E, N, T. Laurent.",
@@ -1963,6 +3305,50 @@
    "hash": "1127111dbdf30b9f"
   },
   {
+   "key": "La Savoie est devenue française en mille huit cent soixante.",
+   "speak": "La Savoie est devenue française en mille huit cent soixante.",
+   "texts": [
+    "La Savoie est devenue française en mille huit cent soixante."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8e105fd94482208f"
+  },
+  {
+   "key": "La chambre sept, c'est Myosotis. Pour madame Lucie.",
+   "speak": "La chambre sept, c'est Myosotis. Pour madame Lucie.",
+   "texts": [
+    "La chambre sept, c'est Myosotis. Pour madame Lucie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "07b953f52390ac57"
+  },
+  {
+   "key": "La dame qui la servait riait tout le temps. Hortense, je crois.",
+   "speak": "La dame qui la servait riait tout le temps. Hortense, je crois.",
+   "texts": [
+    "La dame qui la servait riait tout le temps. Hortense, je crois."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4951c9f4e4da517e"
+  },
+  {
+   "key": "La mauvaise porte, c'était la bonne.",
+   "speak": "La mauvaise porte, c'était la bonne.",
+   "texts": [
+    "La mauvaise porte, c'était la bonne."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "188d0615b4e2c511"
+  },
+  {
    "key": "La météo dit qu'il va faire beau demain après-midi.",
    "speak": "La météo dit qu'il va faire beau demain après-midi.",
    "texts": [
@@ -1972,6 +3358,39 @@
     "dialogue-line"
    ],
    "hash": "2ea9431149551871"
+  },
+  {
+   "key": "La petite n'avait pas peur. Elle a dit : « Bonjour, fantôme. On joue ? »",
+   "speak": "La petite n'avait pas peur. Elle a dit : « Bonjour, fantôme. On joue ? »",
+   "texts": [
+    "La petite n'avait pas peur. Elle a dit : « Bonjour, fantôme. On joue ? »"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6f63f37ff1c06e50"
+  },
+  {
+   "key": "La porte, madame ? C'est à vous, maintenant.",
+   "speak": "La porte, madame ? C'est à vous, maintenant.",
+   "texts": [
+    "La porte, madame ? C'est à vous, maintenant."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6c6c5090a20416c9"
+  },
+  {
+   "key": "La première femme est montée en mille huit cent huit. Marie Paradis.",
+   "speak": "La première femme est montée en mille huit cent huit. Marie Paradis.",
+   "texts": [
+    "La première femme est montée en mille huit cent huit. Marie Paradis."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f309c4f9e0934bc1"
   },
   {
    "key": "La règle vient d'une dame, Odette. Tata Rose ne parle jamais d'elle.",
@@ -1996,6 +3415,17 @@
    "hash": "9bdfd6718418fdc1"
   },
   {
+   "key": "Le dîner est à sept heures : ma soupe aux choux. Ici, qui dort dîne !",
+   "speak": "Le dîner est à sept heures : ma soupe aux choux. Ici, qui dort dîne !",
+   "texts": [
+    "Le dîner est à sept heures : ma soupe aux choux. Ici, qui dort dîne !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1b725faf85e349ce"
+  },
+  {
    "key": "Le grand, là… C'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.",
    "speak": "Le grand, là… C'était Jacques, de l'imprimerie. Ils achetaient des pêches, tous les deux.",
    "texts": [
@@ -2016,6 +3446,39 @@
     "dialogue-line"
    ],
    "hash": "89bf37706ad6b19e"
+  },
+  {
+   "key": "Le mercredi, c'est toujours plus fort. Pourquoi ?",
+   "speak": "Le mercredi, c'est toujours plus fort. Pourquoi ?",
+   "texts": [
+    "Le mercredi, c'est toujours plus fort. Pourquoi ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6aeb08418ce1b950"
+  },
+  {
+   "key": "Le personnel, en janvier mille neuf cent vingt-quatre ! Et là, c'est moi.",
+   "speak": "Le personnel, en janvier mille neuf cent vingt-quatre ! Et là, c'est moi.",
+   "texts": [
+    "Le personnel, en janvier mille neuf cent vingt-quatre ! Et là, c'est moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9f676788c0da0e91"
+  },
+  {
+   "key": "Le piano joue tout seul ?",
+   "speak": "Le piano joue tout seul ?",
+   "texts": [
+    "Le piano joue tout seul ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b23e25287556c592"
   },
   {
    "key": "Le plat du jour, c'est le poulet aux champignons. Il est très bon.",
@@ -2040,6 +3503,72 @@
    "hash": "d98f6025958a8e46"
   },
   {
+   "key": "Le reste ? Hélène, on est trop différents, elle et moi.",
+   "speak": "Le reste ? Hélène, on est trop différents, elle et moi.",
+   "texts": [
+    "Le reste ? Hélène, on est trop différents, elle et moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8b6bdb0f3dec8e69"
+  },
+  {
+   "key": "Le silence aussi, madame.",
+   "speak": "Le silence aussi, madame.",
+   "texts": [
+    "Le silence aussi, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7eccee30f830e220"
+  },
+  {
+   "key": "Le toit est vieux. Les fenêtres sont vieilles.",
+   "speak": "Le toit est vieux. Les fenêtres sont vieilles.",
+   "texts": [
+    "Le toit est vieux. Les fenêtres sont vieilles."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f047183bb63a0a84"
+  },
+  {
+   "key": "Le treize, elle va jouer au parc. Je vais aller l'écouter.",
+   "speak": "Le treize, elle va jouer au parc. Je vais aller l'écouter.",
+   "texts": [
+    "Le treize, elle va jouer au parc. Je vais aller l'écouter."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "fa9b9c0567f73807"
+  },
+  {
+   "key": "Le vent se lève, il faut tenter de vivre.",
+   "speak": "Le vent se lève, il faut tenter de vivre.",
+   "texts": [
+    "Le vent se lève, il faut tenter de vivre."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "4ffa362c3f41f0cb"
+  },
+  {
+   "key": "Le vôtre aussi, madame.",
+   "speak": "Le vôtre aussi, madame.",
+   "texts": [
+    "Le vôtre aussi, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e7041876af00813c"
+  },
+  {
    "key": "Les Deux Collines, un bon bouchon sur la place. La salle est au rez-de-chaussée.",
    "speak": "Les Deux Collines, un bon bouchon sur la place. La salle est au rez-de-chaussée.",
    "texts": [
@@ -2062,6 +3591,28 @@
    "hash": "c8195a0f84143349"
   },
   {
+   "key": "Les enfants nous voient toujours. Dites-lui bonjour de ma part.",
+   "speak": "Les enfants nous voient toujours. Dites-lui bonjour de ma part.",
+   "texts": [
+    "Les enfants nous voient toujours. Dites-lui bonjour de ma part."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a44defdfb116de17"
+  },
+  {
+   "key": "Les fantômes gentils… J'aimerais bien garder ce nom, moi.",
+   "speak": "Les fantômes gentils… J'aimerais bien garder ce nom, moi.",
+   "texts": [
+    "Les fantômes gentils… J'aimerais bien garder ce nom, moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "751a19f910ef0f29"
+  },
+  {
    "key": "Les livres. Et les gens du quartier. Viens, regarde encore les lettres avec moi.",
    "speak": "Les livres. Et les gens du quartier. Viens, regarde encore les lettres avec moi.",
    "texts": [
@@ -2071,6 +3622,39 @@
     "dialogue-line"
    ],
    "hash": "230892f443328738"
+  },
+  {
+   "key": "Les muletiers étaient malins. Ils ne fatiguaient jamais leurs mules.",
+   "speak": "Les muletiers étaient malins. Ils ne fatiguaient jamais leurs mules.",
+   "texts": [
+    "Les muletiers étaient malins. Ils ne fatiguaient jamais leurs mules."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "60b2e65bc7e52444"
+  },
+  {
+   "key": "Les murs sont épais… On pourrait en faire une salle de musique !",
+   "speak": "Les murs sont épais… On pourrait en faire une salle de musique !",
+   "texts": [
+    "Les murs sont épais… On pourrait en faire une salle de musique !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "19f996a4292ebca4"
+  },
+  {
+   "key": "Les vieilles choses, il faut les réparer. Pas les jeter.",
+   "speak": "Les vieilles choses, il faut les réparer. Pas les jeter.",
+   "texts": [
+    "Les vieilles choses, il faut les réparer. Pas les jeter."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "60434555bae0e2d9"
   },
   {
    "key": "Lucienne ? Ça marche. Je monte la voir ce soir.",
@@ -2095,6 +3679,17 @@
    "hash": "750f0fc1d06e78bf"
   },
   {
+   "key": "M'ennuyer ? Avec douze chambres, deux enfants et un ascenseur plein de trésors ?",
+   "speak": "M'ennuyer ? Avec douze chambres, deux enfants et un ascenseur plein de trésors ?",
+   "texts": [
+    "M'ennuyer ? Avec douze chambres, deux enfants et un ascenseur plein de trésors ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f2c5289486ce3759"
+  },
+  {
    "key": "Ma femme ? Je ne sais pas. Je n'ai pas écouté.",
    "speak": "Ma femme ? Je ne sais pas. Je n'ai pas écouté.",
    "texts": [
@@ -2106,6 +3701,50 @@
    "hash": "6198df44951a8c3a"
   },
   {
+   "key": "Ma fiancée ? Mais tu es ma sœur !",
+   "speak": "Ma fiancée ? Mais tu es ma sœur !",
+   "texts": [
+    "Ma fiancée ? Mais tu es ma sœur !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d9672ec780764760"
+  },
+  {
+   "key": "Ma grand-mère a appelé tout le village. Samedi, on vient tous.",
+   "speak": "Ma grand-mère a appelé tout le village. Samedi, on vient tous.",
+   "texts": [
+    "Ma grand-mère a appelé tout le village. Samedi, on vient tous."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c8d4fa048da97bc5"
+  },
+  {
+   "key": "Ma grand-mère a toujours dit : « Pour un dîner, on fait un effort. »",
+   "speak": "Ma grand-mère a toujours dit : « Pour un dîner, on fait un effort. »",
+   "texts": [
+    "Ma grand-mère a toujours dit : « Pour un dîner, on fait un effort. »"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "852677b7757a5c89"
+  },
+  {
+   "key": "Ma grand-mère m'a tout raconté. Et ils sont gentils, non ?",
+   "speak": "Ma grand-mère m'a tout raconté. Et ils sont gentils, non ?",
+   "texts": [
+    "Ma grand-mère m'a tout raconté. Et ils sont gentils, non ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8da7c7dda47da1e2"
+  },
+  {
    "key": "Ma grand-mère. Je la dessinais tous les dimanches. Elle riait.",
    "speak": "Ma grand-mère. Je la dessinais tous les dimanches. Elle riait.",
    "texts": [
@@ -2115,6 +3754,94 @@
     "dialogue-line"
    ],
    "hash": "3bdaedcf849b6ba6"
+  },
+  {
+   "key": "Ma sœur et moi, on lisait. Toute la maison faisait « chut ».",
+   "speak": "Ma sœur et moi, on lisait. Toute la maison faisait « chut ».",
+   "texts": [
+    "Ma sœur et moi, on lisait. Toute la maison faisait « chut »."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a20d41c968986ed8"
+  },
+  {
+   "key": "Madame Diallo, je voudrais aider Zoé. Mais je ne sais pas comment.",
+   "speak": "Madame Diallo, je voudrais aider Zoé. Mais je ne sais pas comment.",
+   "texts": [
+    "Madame Diallo, je voudrais aider Zoé. Mais je ne sais pas comment."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2d2a4481fa31fb5f"
+  },
+  {
+   "key": "Madame Hortense disait : « Une maison, c'est une porte ouverte. »",
+   "speak": "Madame Hortense disait : « Une maison, c'est une porte ouverte. »",
+   "texts": [
+    "Madame Hortense disait : « Une maison, c'est une porte ouverte. »"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c825a1d1bedaec80"
+  },
+  {
+   "key": "Madame Hortense serait fière de vous. Et nous aussi, nous sommes fiers.",
+   "speak": "Madame Hortense serait fière de vous. Et nous aussi, nous sommes fiers.",
+   "texts": [
+    "Madame Hortense serait fière de vous. Et nous aussi, nous sommes fiers."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "32766be68da392c5"
+  },
+  {
+   "key": "Madame Lucie… vous avez trouvé ce que vous cherchiez ?",
+   "speak": "Madame Lucie… vous avez trouvé ce que vous cherchiez ?",
+   "texts": [
+    "Madame Lucie… vous avez trouvé ce que vous cherchiez ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "29f4dab3b2e4f1b1"
+  },
+  {
+   "key": "Madame Zoé, vous vous faites un film !",
+   "speak": "Madame Zoé, vous vous faites un film !",
+   "texts": [
+    "Madame Zoé, vous vous faites un film !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "60ff7c2574af3b90"
+  },
+  {
+   "key": "Madame, nous avons une proposition. Nous trois.",
+   "speak": "Madame, nous avons une proposition. Nous trois.",
+   "texts": [
+    "Madame, nous avons une proposition. Nous trois."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e97530796e8ed7b2"
+  },
+  {
+   "key": "Madame, vous mangez quoi, le soir ? De la soupe ?",
+   "speak": "Madame, vous mangez quoi, le soir ? De la soupe ?",
+   "texts": [
+    "Madame, vous mangez quoi, le soir ? De la soupe ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "14fcbf77f97548b2"
   },
   {
    "key": "Mademoiselle Rose ? La petite étudiante ? Moi, c'est Albert, le facteur !",
@@ -2139,6 +3866,17 @@
    "hash": "7359276fbff6d808"
   },
   {
+   "key": "Maintenant, on est comme le matin et le soir. Ensemble, on fait une journée.",
+   "speak": "Maintenant, on est comme le matin et le soir. Ensemble, on fait une journée.",
+   "texts": [
+    "Maintenant, on est comme le matin et le soir. Ensemble, on fait une journée."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "10192ff8f98c39f9"
+  },
+  {
    "key": "Mais après, pourquoi personne ne lui a écrit à Montréal ?",
    "speak": "Mais après, pourquoi personne ne lui a écrit à Montréal ?",
    "texts": [
@@ -2148,6 +3886,17 @@
     "dialogue-line"
    ],
    "hash": "dee3f16b631f8a62"
+  },
+  {
+   "key": "Mais je sais. Vous coupez, je dirige. D'accord ?",
+   "speak": "Mais je sais. Vous coupez, je dirige. D'accord ?",
+   "texts": [
+    "Mais je sais. Vous coupez, je dirige. D'accord ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b20ee5654a098391"
   },
   {
    "key": "Mais madame, vous habitez ici depuis soixante-six ans !",
@@ -2170,6 +3919,17 @@
     "dialogue-line"
    ],
    "hash": "185b5bd59bd78c41"
+  },
+  {
+   "key": "Mais un été, elle est venue avec une petite fille de huit ans.",
+   "speak": "Mais un été, elle est venue avec une petite fille de huit ans.",
+   "texts": [
+    "Mais un été, elle est venue avec une petite fille de huit ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d5ad9f597919b27b"
   },
   {
    "key": "Mais vous avez un appareil photo ! Vous devriez essayer.",
@@ -2203,6 +3963,17 @@
     "dialogue-line"
    ],
    "hash": "5f5c912585272c29"
+  },
+  {
+   "key": "Merci beaucoup.",
+   "speak": "Merci beaucoup.",
+   "texts": [
+    "Merci beaucoup."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a89ca2a88da9c093"
   },
   {
    "key": "Merci beaucoup. Bonne soirée !",
@@ -2247,6 +4018,28 @@
     "dialogue-line"
    ],
    "hash": "425ee047348aa498"
+  },
+  {
+   "key": "Merci, madame. Vous avez un accent… très ancien.",
+   "speak": "Merci, madame. Vous avez un accent… très ancien.",
+   "texts": [
+    "Merci, madame. Vous avez un accent… très ancien."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e97beeddf5d347c3"
+  },
+  {
+   "key": "Merci, madame. Vous êtes debout à sept heures et demie ?",
+   "speak": "Merci, madame. Vous êtes debout à sept heures et demie ?",
+   "texts": [
+    "Merci, madame. Vous êtes debout à sept heures et demie ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bcd1362d9f4447f6"
   },
   {
    "key": "Merci, vous aussi ! À bientôt !",
@@ -2326,6 +4119,17 @@
    "hash": "635a0e667eb7d035"
   },
   {
+   "key": "Mes moustaches sont parfaites depuis cent ans, madame.",
+   "speak": "Mes moustaches sont parfaites depuis cent ans, madame.",
+   "texts": [
+    "Mes moustaches sont parfaites depuis cent ans, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "afa400b7362a0316"
+  },
+  {
    "key": "Mes yeux sont fatigués. Vous voudriez bien me la lire ?",
    "speak": "Mes yeux sont fatigués. Vous voudriez bien me la lire ?",
    "texts": [
@@ -2403,6 +4207,17 @@
    "hash": "dcb683e33108c88e"
   },
   {
+   "key": "Moi, je me couche à neuf heures et demie.",
+   "speak": "Moi, je me couche à neuf heures et demie.",
+   "texts": [
+    "Moi, je me couche à neuf heures et demie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "007bf7f20f1974c5"
+  },
+  {
    "key": "Mon fils a six ans. Ce matin : « Pourquoi le perroquet ne dit rien ? »",
    "speak": "Mon fils a six ans. Ce matin : « Pourquoi le perroquet ne dit rien ? »",
    "texts": [
@@ -2423,6 +4238,72 @@
     "dialogue-line"
    ],
    "hash": "4448dc8325f8a203"
+  },
+  {
+   "key": "Mon prix : cent mille euros. Vous vendez vite ?",
+   "speak": "Mon prix : cent mille euros. Vous vendez vite ?",
+   "texts": [
+    "Mon prix : cent mille euros. Vous vendez vite ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2679371af8e90db3"
+  },
+  {
+   "key": "Monsieur Perrot a un petit-fils qui voudrait apprendre la batterie.",
+   "speak": "Monsieur Perrot a un petit-fils qui voudrait apprendre la batterie.",
+   "texts": [
+    "Monsieur Perrot a un petit-fils qui voudrait apprendre la batterie."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "2137f185ccf5913a"
+  },
+  {
+   "key": "Morbleu ! Des biscuits, dans ma cuisine ?",
+   "speak": "Morbleu ! Des biscuits, dans ma cuisine ?",
+   "texts": [
+    "Morbleu ! Des biscuits, dans ma cuisine ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7ba35d384c689557"
+  },
+  {
+   "key": "Ne touche pas ! Ce n'est rien. De vieux papiers.",
+   "speak": "Ne touche pas ! Ce n'est rien. De vieux papiers.",
+   "texts": [
+    "Ne touche pas ! Ce n'est rien. De vieux papiers."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "91e0333815337871"
+  },
+  {
+   "key": "Ne vous inquiétez pas. Moi, j'ai des bougies. Entrez.",
+   "speak": "Ne vous inquiétez pas. Moi, j'ai des bougies. Entrez.",
+   "texts": [
+    "Ne vous inquiétez pas. Moi, j'ai des bougies. Entrez."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "98adc15961bdc365"
+  },
+  {
+   "key": "Neuf ? Et c'était bruyant ?",
+   "speak": "Neuf ? Et c'était bruyant ?",
+   "texts": [
+    "Neuf ? Et c'était bruyant ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4c9d9ca0e1873d1a"
   },
   {
    "key": "Non ! Non, merci. Mon premier non !",
@@ -2513,6 +4394,17 @@
    "hash": "552018b84c6b6f55"
   },
   {
+   "key": "Non… Mais deux cents, c'est moins cher.",
+   "speak": "Non… Mais deux cents, c'est moins cher.",
+   "texts": [
+    "Non… Mais deux cents, c'est moins cher."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "232ecc646c33d0c9"
+  },
+  {
    "key": "Non… Pas encore. Le numéro, c'est seulement le mien.",
    "speak": "Non… Pas encore. Le numéro, c'est seulement le mien.",
    "texts": [
@@ -2535,6 +4427,17 @@
    "hash": "bef820833ae9d342"
   },
   {
+   "key": "Nous connaissons tout. Les clés, les recettes, les secrets.",
+   "speak": "Nous connaissons tout. Les clés, les recettes, les secrets.",
+   "texts": [
+    "Nous connaissons tout. Les clés, les recettes, les secrets."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4bfd423994284d55"
+  },
+  {
    "key": "Nous pouvons l'envoyer en réparation, si vous voulez.",
    "speak": "Nous pouvons l'envoyer en réparation, si vous voulez.",
    "texts": [
@@ -2555,6 +4458,17 @@
     "dialogue-line"
    ],
    "hash": "5c54f84b46e7912c"
+  },
+  {
+   "key": "Oh ! Je ne regarde jamais la montagne. Je travaille.",
+   "speak": "Oh ! Je ne regarde jamais la montagne. Je travaille.",
+   "texts": [
+    "Oh ! Je ne regarde jamais la montagne. Je travaille."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c38a6cc266c16acf"
   },
   {
    "key": "Oh là là ! Même Socrate ne veut pas le regarder !",
@@ -2610,6 +4524,17 @@
     "dialogue-line"
    ],
    "hash": "b7ff12cd00f81eb2"
+  },
+  {
+   "key": "On se dit tu ? À la montagne, tout le monde dit tu.",
+   "speak": "On se dit tu ? À la montagne, tout le monde dit tu.",
+   "texts": [
+    "On se dit tu ? À la montagne, tout le monde dit tu."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "03207d4e5a7f2fae"
   },
   {
    "key": "On va demander à M. Rossi. Il buvait son café là-bas.",
@@ -2865,6 +4790,28 @@
    "hash": "bd06b94916d3a065"
   },
   {
+   "key": "Oui, madame. Je suis un fantôme. Un fantôme poli.",
+   "speak": "Oui, madame. Je suis un fantôme. Un fantôme poli.",
+   "texts": [
+    "Oui, madame. Je suis un fantôme. Un fantôme poli."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "37eea785c275c4c9"
+  },
+  {
+   "key": "Oui, madame. Quinze colis ce matin. Pas le temps !",
+   "speak": "Oui, madame. Quinze colis ce matin. Pas le temps !",
+   "texts": [
+    "Oui, madame. Quinze colis ce matin. Pas le temps !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a3179cf1fabcd0e6"
+  },
+  {
    "key": "Oui, merci. Où sont les cabines ?",
    "speak": "Oui, merci. Où sont les cabines ?",
    "texts": [
@@ -2931,6 +4878,17 @@
    "hash": "61f9088ed634f235"
   },
   {
+   "key": "Oui. C'était la boîte de ma grand-mère, Mamie Jeanne.",
+   "speak": "Oui. C'était la boîte de ma grand-mère, Mamie Jeanne.",
+   "texts": [
+    "Oui. C'était la boîte de ma grand-mère, Mamie Jeanne."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "50f99084b3330698"
+  },
+  {
    "key": "Oui. Je t'attendrai dans le jardin.",
    "speak": "Oui. Je t'attendrai dans le jardin.",
    "texts": [
@@ -2964,6 +4922,28 @@
    "hash": "b6b52aa6760ff243"
   },
   {
+   "key": "Oui. Petit et lourd, comme toujours. Vous le prenez ?",
+   "speak": "Oui. Petit et lourd, comme toujours. Vous le prenez ?",
+   "texts": [
+    "Oui. Petit et lourd, comme toujours. Vous le prenez ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "343883250ae0080a"
+  },
+  {
+   "key": "Oui. Plus d'instruments de musique dans les appartements.",
+   "speak": "Oui. Plus d'instruments de musique dans les appartements.",
+   "texts": [
+    "Oui. Plus d'instruments de musique dans les appartements."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d03ff53fe0f2ac99"
+  },
+  {
    "key": "Oui. Son cœur est faible. Mais elle a dit oui : lundi, à quinze heures.",
    "speak": "Oui. Son cœur est faible. Mais elle a dit oui : lundi, à quinze heures.",
    "texts": [
@@ -2973,6 +4953,17 @@
     "dialogue-line"
    ],
    "hash": "6d4336030c7c0977"
+  },
+  {
+   "key": "Oui. Tous. Dans l'ordre.",
+   "speak": "Oui. Tous. Dans l'ordre.",
+   "texts": [
+    "Oui. Tous. Dans l'ordre."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "34652b4f9c2f0d14"
   },
   {
    "key": "Oui. Vous avez des tartes aux fruits ?",
@@ -3217,6 +5208,17 @@
    "hash": "cc5eced7046c680d"
   },
   {
+   "key": "Partir ? Tu aimerais partir d'ici ?",
+   "speak": "Partir ? Tu aimerais partir d'ici ?",
+   "texts": [
+    "Partir ? Tu aimerais partir d'ici ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f2c9c484dcb5ebbf"
+  },
+  {
    "key": "Pas aujourd'hui.",
    "speak": "Pas aujourd'hui.",
    "texts": [
@@ -3237,6 +5239,28 @@
     "dialogue-line"
    ],
    "hash": "eaf163f9812fd926"
+  },
+  {
+   "key": "Pas de tambour. Pas de lumière. Vous entendez ?",
+   "speak": "Pas de tambour. Pas de lumière. Vous entendez ?",
+   "texts": [
+    "Pas de tambour. Pas de lumière. Vous entendez ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a091b156622261bd"
+  },
+  {
+   "key": "Pas du tout. Moi, je monte, c'est tout.",
+   "speak": "Pas du tout. Moi, je monte, c'est tout.",
+   "texts": [
+    "Pas du tout. Moi, je monte, c'est tout."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1912b340014a697f"
   },
   {
    "key": "Pas mal, merci. Je suis resté à la maison. Et toi ?",
@@ -3272,6 +5296,17 @@
    "hash": "d92ef3b2f93e993c"
   },
   {
+   "key": "Peur ? De moi ? Oh, ça sent bon ! Qu'est-ce que c'est ?",
+   "speak": "Peur ? De moi ? Oh, ça sent bon ! Qu'est-ce que c'est ?",
+   "texts": [
+    "Peur ? De moi ? Oh, ça sent bon ! Qu'est-ce que c'est ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "77eaee30b2ec0fe0"
+  },
+  {
    "key": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
    "speak": "Peut-être, mais je déteste courir. Je préfère les sports d'équipe.",
    "texts": [
@@ -3281,6 +5316,17 @@
     "dialogue-line"
    ],
    "hash": "d258f8d302aafc92"
+  },
+  {
+   "key": "Pierre qui roule n'amasse pas mousse.",
+   "speak": "Pierre qui roule n'amasse pas mousse.",
+   "texts": [
+    "Pierre qui roule n'amasse pas mousse."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "79ec096ec443d656"
   },
   {
    "key": "Plus lentement, s'il vous plaît.",
@@ -3305,6 +5351,17 @@
    "hash": "c358b093b70a090b"
   },
   {
+   "key": "Pour le reste, tout est parfait. Vous pourriez ouvrir le dix-neuf.",
+   "speak": "Pour le reste, tout est parfait. Vous pourriez ouvrir le dix-neuf.",
+   "texts": [
+    "Pour le reste, tout est parfait. Vous pourriez ouvrir le dix-neuf."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "bd1fa577820ae033"
+  },
+  {
    "key": "Pour les métiers à tisser ! Ici, c'est le quartier de la soie, la colline qui travaille.",
    "speak": "Pour les métiers à tisser ! Ici, c'est le quartier de la soie, la colline qui travaille.",
    "texts": [
@@ -3314,6 +5371,28 @@
     "dialogue-line"
    ],
    "hash": "d9ec017b66dfd602"
+  },
+  {
+   "key": "Pour une fois, il n'a pas choisi la mauvaise porte.",
+   "speak": "Pour une fois, il n'a pas choisi la mauvaise porte.",
+   "texts": [
+    "Pour une fois, il n'a pas choisi la mauvaise porte."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dbbe4c5ad97e8650"
+  },
+  {
+   "key": "Qu'est-ce que c'est, ces lumières qui marchent dans le couloir ?",
+   "speak": "Qu'est-ce que c'est, ces lumières qui marchent dans le couloir ?",
+   "texts": [
+    "Qu'est-ce que c'est, ces lumières qui marchent dans le couloir ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "67e5f267f9338074"
   },
   {
    "key": "Qu'est-ce que vous vouliez faire, quand vous étiez petite ?",
@@ -3349,6 +5428,17 @@
    "hash": "b6816613ffbc1f76"
   },
   {
+   "key": "Quand j'étais petit, je regardais cette véranda. Elle brillait comme un bijou.",
+   "speak": "Quand j'étais petit, je regardais cette véranda. Elle brillait comme un bijou.",
+   "texts": [
+    "Quand j'étais petit, je regardais cette véranda. Elle brillait comme un bijou."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "71becf598df36afb"
+  },
+  {
    "key": "Quarante cartes, Tata. Et toujours la même question ?",
    "speak": "Quarante cartes, Tata. Et toujours la même question ?",
    "texts": [
@@ -3358,6 +5448,17 @@
     "dialogue-line"
    ],
    "hash": "a9f0a3e7b3410eb6"
+  },
+  {
+   "key": "Qui dort dîne.",
+   "speak": "Qui dort dîne.",
+   "texts": [
+    "Qui dort dîne."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "a97c2ce969893fb4"
   },
   {
    "key": "Qui est Lucienne ? Une amie de Simone, peut-être ?",
@@ -3382,6 +5483,28 @@
    "hash": "66b2908021497d68"
   },
   {
+   "key": "Qui veut voyager loin ménage sa monture.",
+   "speak": "Qui veut voyager loin ménage sa monture.",
+   "texts": [
+    "Qui veut voyager loin ménage sa monture."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "149570b24b8220e6"
+  },
+  {
+   "key": "Raté ? Non. J'ai passé une très bonne soirée.",
+   "speak": "Raté ? Non. J'ai passé une très bonne soirée.",
+   "texts": [
+    "Raté ? Non. J'ai passé une très bonne soirée."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e19446a3539da552"
+  },
+  {
    "key": "Raymond Brun, oui. Mais c'est mon fils qui tient le stand, maintenant.",
    "speak": "Raymond Brun, oui. Mais c'est mon fils qui tient le stand, maintenant.",
    "texts": [
@@ -3402,6 +5525,50 @@
     "dialogue-line"
    ],
    "hash": "4b3bc2dc48d99135"
+  },
+  {
+   "key": "Rhodo… quoi ? N'importe quoi ! Les clients ne vont jamais dire ça !",
+   "speak": "Rhodo… quoi ? N'importe quoi ! Les clients ne vont jamais dire ça !",
+   "texts": [
+    "Rhodo… quoi ? N'importe quoi ! Les clients ne vont jamais dire ça !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d19df2ebf014b013"
+  },
+  {
+   "key": "Rien ? J'ai fait briller les douze clés. Deux fois !",
+   "speak": "Rien ? J'ai fait briller les douze clés. Deux fois !",
+   "texts": [
+    "Rien ? J'ai fait briller les douze clés. Deux fois !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "e0163858a32f0c3d"
+  },
+  {
+   "key": "Rien de nouveau sous le soleil.",
+   "speak": "Rien de nouveau sous le soleil.",
+   "texts": [
+    "Rien de nouveau sous le soleil."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "e0ba05fd72ef040f"
+  },
+  {
+   "key": "Règle numéro deux : un fantôme ne ment jamais.",
+   "speak": "Règle numéro deux : un fantôme ne ment jamais.",
+   "texts": [
+    "Règle numéro deux : un fantôme ne ment jamais."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "82156f87e1ab5ddb"
   },
   {
    "key": "Sa fille, Odile ? Est-ce que je peux lui laisser un message ?",
@@ -3437,6 +5604,17 @@
    "hash": "6c63c865f0702203"
   },
   {
+   "key": "Samedi prochain, je vais faire le dîner. Chez moi.",
+   "speak": "Samedi prochain, je vais faire le dîner. Chez moi.",
+   "texts": [
+    "Samedi prochain, je vais faire le dîner. Chez moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "db113626c11160e8"
+  },
+  {
    "key": "Samedi, j'ai regardé le match de foot à la télé.",
    "speak": "Samedi, j'ai regardé le match de foot à la télé.",
    "texts": [
@@ -3468,6 +5646,28 @@
     "dialogue-line"
    ],
    "hash": "fd60d81647d97d1e"
+  },
+  {
+   "key": "Se cacher ? Nous y sommes restés cachés trente et un ans. Non, merci.",
+   "speak": "Se cacher ? Nous y sommes restés cachés trente et un ans. Non, merci.",
+   "texts": [
+    "Se cacher ? Nous y sommes restés cachés trente et un ans. Non, merci."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "f637f55d4fa2647c"
+  },
+  {
+   "key": "Se tutoyer ? Je… je n'ai pas l'habitude.",
+   "speak": "Se tutoyer ? Je… je n'ai pas l'habitude.",
+   "texts": [
+    "Se tutoyer ? Je… je n'ai pas l'habitude."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "371cdf699f7f4663"
   },
   {
    "key": "Seize heures, c'est parfait.",
@@ -3569,6 +5769,17 @@
    "hash": "d6be51369bdd529f"
   },
   {
+   "key": "Tant pis. Recommence. Moi, j'ai raté ma première fenêtre dix fois.",
+   "speak": "Tant pis. Recommence. Moi, j'ai raté ma première fenêtre dix fois.",
+   "texts": [
+    "Tant pis. Recommence. Moi, j'ai raté ma première fenêtre dix fois."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7fc8c13645fcec61"
+  },
+  {
    "key": "Tata Rose fait la tarte d'Odette depuis quarante ans. Elle m'a appris la recette.",
    "speak": "Tata Rose fait la tarte d'Odette depuis quarante ans. Elle m'a appris la recette.",
    "texts": [
@@ -3602,6 +5813,17 @@
    "hash": "f3e65aeab4c12a1b"
   },
   {
+   "key": "Tenez, pour monsieur Garnier. La porte bleue, madame !",
+   "speak": "Tenez, pour monsieur Garnier. La porte bleue, madame !",
+   "texts": [
+    "Tenez, pour monsieur Garnier. La porte bleue, madame !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "abcaa65bcaa756b7"
+  },
+  {
    "key": "Théo Garnier, de la librairie La Page Tournée. Je peux lui dire un mot ?",
    "speak": "Théo Garnier, de la librairie La Page Tournée. Je peux lui dire un mot ?",
    "texts": [
@@ -3613,6 +5835,61 @@
    "hash": "3a99d2c6e1dc8e1c"
   },
   {
+   "key": "Tiens. Je l'ai réparée pour toi. Écoute.",
+   "speak": "Tiens. Je l'ai réparée pour toi. Écoute.",
+   "texts": [
+    "Tiens. Je l'ai réparée pour toi. Écoute."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3c81adcfd572b5b3"
+  },
+  {
+   "key": "Toi ? Le trac ? Tu n'as peur de rien !",
+   "speak": "Toi ? Le trac ? Tu n'as peur de rien !",
+   "texts": [
+    "Toi ? Le trac ? Tu n'as peur de rien !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7afa723a83c74eb8"
+  },
+  {
+   "key": "Toi, le tambour, et moi, la petite boîte ? La même longueur d'onde ?",
+   "speak": "Toi, le tambour, et moi, la petite boîte ? La même longueur d'onde ?",
+   "texts": [
+    "Toi, le tambour, et moi, la petite boîte ? La même longueur d'onde ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "124d5b7d41362856"
+  },
+  {
+   "key": "Toujours ? Et tu as joué combien de fois ?",
+   "speak": "Toujours ? Et tu as joué combien de fois ?",
+   "texts": [
+    "Toujours ? Et tu as joué combien de fois ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9d99990793262472"
+  },
+  {
+   "key": "Toujours une toute petite boîte. Très lourde.",
+   "speak": "Toujours une toute petite boîte. Très lourde.",
+   "texts": [
+    "Toujours une toute petite boîte. Très lourde."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "8a7b7b235a1db248"
+  },
+  {
    "key": "Tous les ans, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.",
    "speak": "Tous les ans, pour la revole. Mais pas cette année : sa fille Odile a dit non, à cause de son cœur.",
    "texts": [
@@ -3622,6 +5899,39 @@
     "dialogue-line"
    ],
    "hash": "af893575c6e820fd"
+  },
+  {
+   "key": "Tous les jours, je vais de mieux en mieux.",
+   "speak": "Tous les jours, je vais de mieux en mieux.",
+   "texts": [
+    "Tous les jours, je vais de mieux en mieux."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "b0e4ab9e026c4d1b"
+  },
+  {
+   "key": "Tous les jours, à tous points de vue, je vais de mieux en mieux.",
+   "speak": "Tous les jours, à tous points de vue, je vais de mieux en mieux.",
+   "texts": [
+    "Tous les jours, à tous points de vue, je vais de mieux en mieux."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "2fea9d32d0a39765"
+  },
+  {
+   "key": "Traditionnel ? Je n'ai jamais mangé ça. Et je suis savoyard !",
+   "speak": "Traditionnel ? Je n'ai jamais mangé ça. Et je suis savoyard !",
+   "texts": [
+    "Traditionnel ? Je n'ai jamais mangé ça. Et je suis savoyard !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "010b8a2d0be1bb48"
   },
   {
    "key": "Trois fois ? Moi, j'ai souvent la flemme de faire du sport après le travail.",
@@ -3655,6 +5965,17 @@
     "dialogue-line"
    ],
    "hash": "c059e62e59d48d7c"
+  },
+  {
+   "key": "Trois trous dans le toit. Là, là et là.",
+   "speak": "Trois trous dans le toit. Là, là et là.",
+   "texts": [
+    "Trois trous dans le toit. Là, là et là."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "279c7ce2a92aa61d"
   },
   {
    "key": "Très bien, merci. Et vous, madame Lefèvre ?",
@@ -3734,6 +6055,28 @@
    "hash": "217bd214b7edfb1c"
   },
   {
+   "key": "Tu as acheté de la peinture ? Et le toit ?",
+   "speak": "Tu as acheté de la peinture ? Et le toit ?",
+   "texts": [
+    "Tu as acheté de la peinture ? Et le toit ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "471de96e09e988ed"
+  },
+  {
+   "key": "Tu as demandé de l'aide ? À quelqu'un ?",
+   "speak": "Tu as demandé de l'aide ? À quelqu'un ?",
+   "texts": [
+    "Tu as demandé de l'aide ? À quelqu'un ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dc58eba630546cac"
+  },
+  {
    "key": "Tu as décidé ça toute seule ? Moi, je crois que tu as peur.",
    "speak": "Tu as décidé ça toute seule ? Moi, je crois que tu as peur.",
    "texts": [
@@ -3765,6 +6108,94 @@
     "dialogue-line"
    ],
    "hash": "7d89fd098279d183"
+  },
+  {
+   "key": "Tu as trouvé la note. Bon… je devrais peut-être la réparer.",
+   "speak": "Tu as trouvé la note. Bon… je devrais peut-être la réparer.",
+   "texts": [
+    "Tu as trouvé la note. Bon… je devrais peut-être la réparer."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "951316b81b2e6f3e"
+  },
+  {
+   "key": "Tu as été formidable. Et… c'est pour le premier rang, ce bisou ?",
+   "speak": "Tu as été formidable. Et… c'est pour le premier rang, ce bisou ?",
+   "texts": [
+    "Tu as été formidable. Et… c'est pour le premier rang, ce bisou ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "38cb6d3d5039509f"
+  },
+  {
+   "key": "Tu avais des plantes, quand tu étais petite ?",
+   "speak": "Tu avais des plantes, quand tu étais petite ?",
+   "texts": [
+    "Tu avais des plantes, quand tu étais petite ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a942acc596939dde"
+  },
+  {
+   "key": "Tu devrais essayer le silence. Cinq minutes. Avec moi.",
+   "speak": "Tu devrais essayer le silence. Cinq minutes. Avec moi.",
+   "texts": [
+    "Tu devrais essayer le silence. Cinq minutes. Avec moi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "eea24b4052b2bd70"
+  },
+  {
+   "key": "Tu devrais la garder. On la répare, une vitre à la fois.",
+   "speak": "Tu devrais la garder. On la répare, une vitre à la fois.",
+   "texts": [
+    "Tu devrais la garder. On la répare, une vitre à la fois."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c9171b820ff6ad8b"
+  },
+  {
+   "key": "Tu es… têtue, Zoé.",
+   "speak": "Tu es… têtue, Zoé.",
+   "texts": [
+    "Tu es… têtue, Zoé."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9458d4dfde9f77c0"
+  },
+  {
+   "key": "Tu vas jouer. Et moi, je vais être au premier rang.",
+   "speak": "Tu vas jouer. Et moi, je vais être au premier rang.",
+   "texts": [
+    "Tu vas jouer. Et moi, je vais être au premier rang."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "891da0c6a28cd480"
+  },
+  {
+   "key": "Un cabinet de curiosités ? Ce serait original… et sans danger.",
+   "speak": "Un cabinet de curiosités ? Ce serait original… et sans danger.",
+   "texts": [
+    "Un cabinet de curiosités ? Ce serait original… et sans danger."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9448d13dc31ae0a5"
   },
   {
    "key": "Un café, s'il te plaît. Je suis de la famille !",
@@ -3811,6 +6242,39 @@
    "hash": "e90992791f657abc"
   },
   {
+   "key": "Un facteur qui se trompe ? Et vous êtes mariés depuis… ?",
+   "speak": "Un facteur qui se trompe ? Et vous êtes mariés depuis… ?",
+   "texts": [
+    "Un facteur qui se trompe ? Et vous êtes mariés depuis… ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "12b8c57159c2103d"
+  },
+  {
+   "key": "Un fantôme gentil, madame. Règle numéro un : on ne fait jamais peur.",
+   "speak": "Un fantôme gentil, madame. Règle numéro un : on ne fait jamais peur.",
+   "texts": [
+    "Un fantôme gentil, madame. Règle numéro un : on ne fait jamais peur."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "ae41aa1672500419"
+  },
+  {
+   "key": "Un long film. Avec une fin très triste.",
+   "speak": "Un long film. Avec une fin très triste.",
+   "texts": [
+    "Un long film. Avec une fin très triste."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1db4f351eec46188"
+  },
+  {
    "key": "Un matin, Odette vous a posé une question. C'était quoi ?",
    "speak": "Un matin, Odette vous a posé une question. C'était quoi ?",
    "texts": [
@@ -3831,6 +6295,39 @@
     "dialogue-line"
    ],
    "hash": "95f976e22c598488"
+  },
+  {
+   "key": "Un peigne… pour la boîte de Mamie Jeanne ? Où est-ce que tu l'as trouvé ?",
+   "speak": "Un peigne… pour la boîte de Mamie Jeanne ? Où est-ce que tu l'as trouvé ?",
+   "texts": [
+    "Un peigne… pour la boîte de Mamie Jeanne ? Où est-ce que tu l'as trouvé ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "812744ca239dc7bc"
+  },
+  {
+   "key": "Un peu ? Vous avez mis combien de piments ?",
+   "speak": "Un peu ? Vous avez mis combien de piments ?",
+   "texts": [
+    "Un peu ? Vous avez mis combien de piments ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "c89fc12843d7c8c9"
+  },
+  {
+   "key": "Un peu. C'est mon métier.",
+   "speak": "Un peu. C'est mon métier.",
+   "texts": [
+    "Un peu. C'est mon métier."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "9c1e8bff6d848ef9"
   },
   {
    "key": "Un selfie avec lui ? Oh ! Il m'a tourné le dos !",
@@ -3855,6 +6352,17 @@
    "hash": "061fbc8a5da7fe46"
   },
   {
+   "key": "Un télescope ? C'est génial ! On va la prendre. C'est combien ?",
+   "speak": "Un télescope ? C'est génial ! On va la prendre. C'est combien ?",
+   "texts": [
+    "Un télescope ? C'est génial ! On va la prendre. C'est combien ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "63ec3ca9cc80a390"
+  },
+  {
    "key": "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites en soixante-deux.",
    "speak": "Une amie, Maya Clarke, a retrouvé des lettres. M. Vial les a écrites en soixante-deux.",
    "texts": [
@@ -3866,6 +6374,39 @@
    "hash": "d76fe7415cc32a8f"
   },
   {
+   "key": "Une dernière question : pourquoi vos pieds ne touchent pas le sol ?",
+   "speak": "Une dernière question : pourquoi vos pieds ne touchent pas le sol ?",
+   "texts": [
+    "Une dernière question : pourquoi vos pieds ne touchent pas le sol ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a583a01d7deb704c"
+  },
+  {
+   "key": "Une femme ? Elle était comment ?",
+   "speak": "Une femme ? Elle était comment ?",
+   "texts": [
+    "Une femme ? Elle était comment ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "25d81eccdff8f248"
+  },
+  {
+   "key": "Une femme de Chamonix. Aujourd'hui, de plus en plus de femmes sont guides.",
+   "speak": "Une femme de Chamonix. Aujourd'hui, de plus en plus de femmes sont guides.",
+   "texts": [
+    "Une femme de Chamonix. Aujourd'hui, de plus en plus de femmes sont guides."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "813ff444c519a429"
+  },
+  {
    "key": "Une histoire d'argent. La maison de nos parents. C'est bête.",
    "speak": "Une histoire d'argent. La maison de nos parents. C'est bête.",
    "texts": [
@@ -3875,6 +6416,28 @@
     "dialogue-line"
    ],
    "hash": "d2c560155568a292"
+  },
+  {
+   "key": "Une maison commence dans la cuisine.",
+   "speak": "Une maison commence dans la cuisine.",
+   "texts": [
+    "Une maison commence dans la cuisine."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "256b73dca6b9324b"
+  },
+  {
+   "key": "Une montre, au moins, ça ne met pas de terre partout.",
+   "speak": "Une montre, au moins, ça ne met pas de terre partout.",
+   "texts": [
+    "Une montre, au moins, ça ne met pas de terre partout."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "13f1aa91b7062057"
   },
   {
    "key": "Une petite table près de la fenêtre, un dîner simple. Ce n'est pas la mer à boire.",
@@ -3930,6 +6493,17 @@
     "dialogue-line"
    ],
    "hash": "41d170f8ef548d49"
+  },
+  {
+   "key": "Vingt fois sur le métier remettez votre ouvrage.",
+   "speak": "Vingt fois sur le métier remettez votre ouvrage.",
+   "texts": [
+    "Vingt fois sur le métier remettez votre ouvrage."
+   ],
+   "categories": [
+    "dialogue-proverb"
+   ],
+   "hash": "d45da111bf0e7e4a"
   },
   {
    "key": "Voilà votre plat. Bon appétit !",
@@ -3998,6 +6572,72 @@
    "hash": "8371696ac4d1f474"
   },
   {
+   "key": "Votre chambre est prête, madame. Depuis trente et un ans.",
+   "speak": "Votre chambre est prête, madame. Depuis trente et un ans.",
+   "texts": [
+    "Votre chambre est prête, madame. Depuis trente et un ans."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "55c382723327c2c6"
+  },
+  {
+   "key": "Votre grand-mère ! Vous avez son sourire, madame.",
+   "speak": "Votre grand-mère ! Vous avez son sourire, madame.",
+   "texts": [
+    "Votre grand-mère ! Vous avez son sourire, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6db64c97c235df5c"
+  },
+  {
+   "key": "Votre hôtel ? Et madame Hortense ?",
+   "speak": "Votre hôtel ? Et madame Hortense ?",
+   "texts": [
+    "Votre hôtel ? Et madame Hortense ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "fcdf4a763c99d117"
+  },
+  {
+   "key": "Votre musique… Il est neuf heures du soir.",
+   "speak": "Votre musique… Il est neuf heures du soir.",
+   "texts": [
+    "Votre musique… Il est neuf heures du soir."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a22d62814e29ddb4"
+  },
+  {
+   "key": "Votre tambour, ce soir : onze heures moins le quart.",
+   "speak": "Votre tambour, ce soir : onze heures moins le quart.",
+   "texts": [
+    "Votre tambour, ce soir : onze heures moins le quart."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0303327de13ad12b"
+  },
+  {
+   "key": "Votre tambour, le soir, ça casse les oreilles.",
+   "speak": "Votre tambour, le soir, ça casse les oreilles.",
+   "texts": [
+    "Votre tambour, le soir, ça casse les oreilles."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d1aaca38ed9c7768"
+  },
+  {
    "key": "Vous ? Moi ? Personne ne me dit vous !",
    "speak": "Vous ? Moi ? Personne ne me dit vous !",
    "texts": [
@@ -4020,6 +6660,17 @@
    "hash": "7dd122240976e8b9"
   },
   {
+   "key": "Vous avez ouvert mon colis ?",
+   "speak": "Vous avez ouvert mon colis ?",
+   "texts": [
+    "Vous avez ouvert mon colis ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7e1845973c3d6311"
+  },
+  {
    "key": "Vous avez raison. On lit la première lettre ?",
    "speak": "Vous avez raison. On lit la première lettre ?",
    "texts": [
@@ -4031,6 +6682,72 @@
    "hash": "e8dd7b5036826f62"
   },
   {
+   "key": "Vous avez vu une valise. Le reste, c'est votre film.",
+   "speak": "Vous avez vu une valise. Le reste, c'est votre film.",
+   "texts": [
+    "Vous avez vu une valise. Le reste, c'est votre film."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "cdc4ac3be8732ccb"
+  },
+  {
+   "key": "Vous devriez dormir, madame. Une mule fatiguée ne monte pas le col.",
+   "speak": "Vous devriez dormir, madame. Une mule fatiguée ne monte pas le col.",
+   "texts": [
+    "Vous devriez dormir, madame. Une mule fatiguée ne monte pas le col."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "7e6b35ed8621e080"
+  },
+  {
+   "key": "Vous devriez lui demander. C'est plus simple.",
+   "speak": "Vous devriez lui demander. C'est plus simple.",
+   "texts": [
+    "Vous devriez lui demander. C'est plus simple."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d796eadf5b4004f3"
+  },
+  {
+   "key": "Vous devriez montrer la montagne aux clients. Avec ce télescope.",
+   "speak": "Vous devriez montrer la montagne aux clients. Avec ce télescope.",
+   "texts": [
+    "Vous devriez montrer la montagne aux clients. Avec ce télescope."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "3b30d5d0760930a9"
+  },
+  {
+   "key": "Vous dites ça depuis trois nuits, madame.",
+   "speak": "Vous dites ça depuis trois nuits, madame.",
+   "texts": [
+    "Vous dites ça depuis trois nuits, madame."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "490f746903c8a464"
+  },
+  {
+   "key": "Vous ouvrez l'hôtel. Et nous, nous aidons.",
+   "speak": "Vous ouvrez l'hôtel. Et nous, nous aidons.",
+   "texts": [
+    "Vous ouvrez l'hôtel. Et nous, nous aidons."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "d71ceaac719a4c23"
+  },
+  {
    "key": "Vous savez pourquoi Simone n'est pas venue, madame ?",
    "speak": "Vous savez pourquoi Simone n'est pas venue, madame ?",
    "texts": [
@@ -4040,6 +6757,17 @@
     "dialogue-line"
    ],
    "hash": "32ef01587da37819"
+  },
+  {
+   "key": "Vous savez, madame Eulalie ? Après cent ans, on pourrait se dire tu ?",
+   "speak": "Vous savez, madame Eulalie ? Après cent ans, on pourrait se dire tu ?",
+   "texts": [
+    "Vous savez, madame Eulalie ? Après cent ans, on pourrait se dire tu ?"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "0a0d91af4d98bb85"
   },
   {
    "key": "Vous vous appelez Lucienne, n'est-ce pas ?",
@@ -4064,6 +6792,28 @@
    "hash": "3fd676967edf096c"
   },
   {
+   "key": "Vous êtes sûre ? C'est une vieille maison.",
+   "speak": "Vous êtes sûre ? C'est une vieille maison.",
+   "texts": [
+    "Vous êtes sûre ? C'est une vieille maison."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "417e681ef9493342"
+  },
+  {
+   "key": "Zoé… je voudrais te dire quelque chose. Depuis longtemps.",
+   "speak": "Zoé… je voudrais te dire quelque chose. Depuis longtemps.",
+   "texts": [
+    "Zoé… je voudrais te dire quelque chose. Depuis longtemps."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "16b7784e3bbccd19"
+  },
+  {
    "key": "« BRUN, primeurs »… Les Brun ! Ils sont encore au marché de la Croix-Rousse.",
    "speak": "« BRUN, primeurs »… Les Brun ! Ils sont encore au marché de la Croix-Rousse.",
    "texts": [
@@ -4086,6 +6836,28 @@
    "hash": "7d2d9786d872fb2e"
   },
   {
+   "key": "« Il y a longtemps que je t'aime, jamais je ne t'oublierai. »",
+   "speak": "« Il y a longtemps que je t'aime, jamais je ne t'oublierai. »",
+   "texts": [
+    "« Il y a longtemps que je t'aime, jamais je ne t'oublierai. »"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "27b63d22d3332b31"
+  },
+  {
+   "key": "« À la claire fontaine ». Le soir, Mamie chantait avec elle.",
+   "speak": "« À la claire fontaine ». Le soir, Mamie chantait avec elle.",
+   "texts": [
+    "« À la claire fontaine ». Le soir, Mamie chantait avec elle."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "1170790f9d37153e"
+  },
+  {
    "key": "À Saint-Malo. Tata Rose reçoit une carte chaque année.",
    "speak": "À Saint-Malo. Tata Rose reçoit une carte chaque année.",
    "texts": [
@@ -4106,6 +6878,28 @@
     "dialogue-line"
    ],
    "hash": "77550c21f3ccde71"
+  },
+  {
+   "key": "À demain, madame l'actrice !",
+   "speak": "À demain, madame l'actrice !",
+   "texts": [
+    "À demain, madame l'actrice !"
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "dcfdb8d1b3e48f6e"
+  },
+  {
+   "key": "À dix ans, je l'ai trop remontée. Une dent du peigne s'est cassée.",
+   "speak": "À dix ans, je l'ai trop remontée. Une dent du peigne s'est cassée.",
+   "texts": [
+    "À dix ans, je l'ai trop remontée. Une dent du peigne s'est cassée."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "4b593494d63aea16"
   },
   {
    "key": "À huit heures.",
@@ -4141,6 +6935,17 @@
    "hash": "12d792f01ee08c9c"
   },
   {
+   "key": "À ta porte ? Alors il est pour toi.",
+   "speak": "À ta porte ? Alors il est pour toi.",
+   "texts": [
+    "À ta porte ? Alors il est pour toi."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "a42ed4b4d8e38547"
+  },
+  {
    "key": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
    "speak": "Ça dépend. Il va peut-être encore pleuvoir un peu.",
    "texts": [
@@ -4172,6 +6977,28 @@
     "dialogue-line"
    ],
    "hash": "caa6373b5e01f8de"
+  },
+  {
+   "key": "Ça ne fait rien. Et moi aussi, pardon. Pour mes petits mots.",
+   "speak": "Ça ne fait rien. Et moi aussi, pardon. Pour mes petits mots.",
+   "texts": [
+    "Ça ne fait rien. Et moi aussi, pardon. Pour mes petits mots."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "41c9120a9058e0f3"
+  },
+  {
+   "key": "Épatant ! Règle numéro un : on ne fait jamais peur.",
+   "speak": "Épatant ! Règle numéro un : on ne fait jamais peur.",
+   "texts": [
+    "Épatant ! Règle numéro un : on ne fait jamais peur."
+   ],
+   "categories": [
+    "dialogue-line"
+   ],
+   "hash": "6104897b1f12bb33"
   }
  ]
 }

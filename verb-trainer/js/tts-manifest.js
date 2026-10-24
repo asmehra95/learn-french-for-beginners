@@ -16,28 +16,36 @@ window.VT_TTS = {
    "synthetic": true,
    "note": "One synthetic voice designed from a text description with Qwen3-TTS VoiceDesign (\"native Parisian female voice, clear and calm, teacher's diction\"); no real person was cloned.",
    "credits": "audio/tts/qwen3-fr-bf16/CREDITS.md",
-   "generatedAt": "2026-10-20T16:28:56+00:00"
+   "generatedAt": "2026-10-23T18:33:29+00:00"
   }
  },
  "coverage": {
-  "total": 3242,
-  "recorded": 3233,
+  "total": 3971,
+  "recorded": 3962,
   "byCategory": {
    "dialogue-example": {
-    "recorded": 150,
-    "total": 150
+    "recorded": 258,
+    "total": 258
    },
-   "dialogue-line": {
-    "recorded": 374,
-    "total": 374
-   },
-   "dialogue-proverb": {
+   "dialogue-expression": {
     "recorded": 20,
     "total": 20
    },
+   "dialogue-expression-example": {
+    "recorded": 20,
+    "total": 20
+   },
+   "dialogue-line": {
+    "recorded": 632,
+    "total": 632
+   },
+   "dialogue-proverb": {
+    "recorded": 27,
+    "total": 27
+   },
    "dialogue-vocab": {
-    "recorded": 462,
-    "total": 464
+    "recorded": 778,
+    "total": 780
    },
    "expression": {
     "recorded": 98,
@@ -103,10 +111,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.96
   },
+  "Ah ! Le tambour du mercredi ? Tout le monde s'est plaint, au début.": {
+   "file": "audio/tts/qwen3-fr-bf16/7a6828cbc6db3729.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.0
+  },
+  "Ah bon ?": {
+   "file": "audio/tts/qwen3-fr-bf16/0298c6480c60102f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.46
+  },
   "Ah bon ? Je voudrais savoir qui travaillait là-bas en soixante-deux.": {
    "file": "audio/tts/qwen3-fr-bf16/6359186400be08e1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.68
+  },
+  "Ah, l'hôtel a un thème : les fantômes ! C'est très bien fait.": {
+   "file": "audio/tts/qwen3-fr-bf16/a63b1638c21bcec0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.04
   },
   "Ah, mon petit Théo ! Merci. Entrez, mais ne restez pas longtemps.": {
    "file": "audio/tts/qwen3-fr-bf16/a8d254044d2c01ec.mp3",
@@ -143,6 +166,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.96
   },
+  "Allô ? Oh ! Il y a une voix dans la boîte !": {
+   "file": "audio/tts/qwen3-fr-bf16/3636d945832cbcce.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.3
+  },
   "Alors": {
    "file": "audio/tts/qwen3-fr-bf16/dd946d7b765d0cc3.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -158,10 +186,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.64
   },
+  "Alors on va en trouver un autre. Vas-y, je tiens la lampe.": {
+   "file": "audio/tts/qwen3-fr-bf16/d62fe81507e82d2d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.72
+  },
+  "Alors tout va bien. Les enfants adorent les fantômes gentils.": {
+   "file": "audio/tts/qwen3-fr-bf16/3193e68fa6f05933.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.58
+  },
   "Alors tu as décidé pour moi. Tu voulais me protéger, c'est ça ?": {
    "file": "audio/tts/qwen3-fr-bf16/99dc73e9fc5faae0.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.44
+  },
+  "Alors, je vais vous raconter un secret. Asseyez-vous.": {
+   "file": "audio/tts/qwen3-fr-bf16/ff4d9d39de6e64a4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.66
   },
   "Alors, ma question. Qu'est-ce que vous avez appris ce matin ?": {
    "file": "audio/tts/qwen3-fr-bf16/52914b0b0a008d38.mp3",
@@ -183,6 +226,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.0
   },
+  "Alors, s'ils rient, on rit avec eux. Et on rit les premiers.": {
+   "file": "audio/tts/qwen3-fr-bf16/31892f26c06f89fb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.02
+  },
   "Alors, tel père, tel fils… c'est vous qui choisissez le père.": {
    "file": "audio/tts/qwen3-fr-bf16/a2633ee0eb5772b6.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -193,10 +241,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.48
   },
+  "Alors, vous êtes français depuis cent soixante-six ans !": {
+   "file": "audio/tts/qwen3-fr-bf16/81e110fb1bc8d172.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.84
+  },
+  "Alors… on se tutoie ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e280d241e980fc01.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.8
+  },
   "Amusez-vous bien !": {
    "file": "audio/tts/qwen3-fr-bf16/f4150c098386a193.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.0
+  },
+  "Anselme, comment c'était, ici, avant ? Votre auberge ?": {
+   "file": "audio/tts/qwen3-fr-bf16/57c98e12af141d65.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.74
   },
   "Après vous": {
    "file": "audio/tts/qwen3-fr-bf16/1545c061f53e88d5.mp3",
@@ -208,10 +271,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.12
   },
+  "Asseyez-vous": {
+   "file": "audio/tts/qwen3-fr-bf16/db1ddd6bda89e9d8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
   "Asseyez-vous !": {
    "file": "audio/tts/qwen3-fr-bf16/f07ba0e0bf2ac09c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
+  },
+  "Asseyez-vous. J'ai fait mon chili. Avec un peu de piment.": {
+   "file": "audio/tts/qwen3-fr-bf16/83a38aa6875bfdc6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.66
   },
   "Assieds-toi !": {
    "file": "audio/tts/qwen3-fr-bf16/81311bfc07db69c3.mp3",
@@ -233,6 +306,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.02
   },
+  "Au premier rang ? Sans bouchons d'oreille ?": {
+   "file": "audio/tts/qwen3-fr-bf16/8271973ea9a538c5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.32
+  },
   "Au revoir": {
    "file": "audio/tts/qwen3-fr-bf16/94fe11b9885e9259.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -248,10 +326,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.34
   },
+  "Avant, nous nous ennuyions. Maintenant, nous travaillons.": {
+   "file": "audio/tts/qwen3-fr-bf16/0f28c9aca8d8cc88.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.98
+  },
   "Avec plaisir": {
    "file": "audio/tts/qwen3-fr-bf16/1bcd42b6979858eb.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
+  },
+  "Avec plaisir. Vous aimeriez commencer par le grenier ou par la cave ?": {
+   "file": "audio/tts/qwen3-fr-bf16/fdc0babaef1f9624.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.92
   },
   "Avec qui": {
    "file": "audio/tts/qwen3-fr-bf16/2a2a8dd20c9e3c89.mp3",
@@ -268,10 +356,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.84
   },
+  "Avec un peu de piment.": {
+   "file": "audio/tts/qwen3-fr-bf16/ee98610c5b12348d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "Avec une cravate, monsieur Gabriel ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ec84c8fd5625b0d6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.06
+  },
   "Avez-vous faim ?": {
    "file": "audio/tts/qwen3-fr-bf16/f24e3b024369c8fd.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
+  },
+  "Bastien est sur le toit.": {
+   "file": "audio/tts/qwen3-fr-bf16/6795d5711bb57bbc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
+  "Bastien, je dois te dire… Les acteurs, ce sont des fantômes.": {
+   "file": "audio/tts/qwen3-fr-bf16/e5a7b3c8cb3597cc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.14
   },
   "Beaucoup de bébés naissent au printemps.": {
    "file": "audio/tts/qwen3-fr-bf16/40f9ad25d233939b.mp3",
@@ -303,6 +411,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.94
   },
+  "Bien sûr. Ici, la porte est toujours ouverte.": {
+   "file": "audio/tts/qwen3-fr-bf16/1f32a745d4dc6dc3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.68
+  },
   "Bien sûr. Je peux vous proposer mardi ou jeudi.": {
    "file": "audio/tts/qwen3-fr-bf16/776aa610ba423453.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -328,6 +441,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.72
   },
+  "Bon": {
+   "file": "audio/tts/qwen3-fr-bf16/8c2bab1a74c91de1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.48
+  },
   "Bon appétit !": {
    "file": "audio/tts/qwen3-fr-bf16/2d26c47fd1e96a34.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -343,10 +461,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.4
   },
+  "Bon. Alors, j'ouvre la porte. Pour elle. Et maintenant… on joue ?": {
+   "file": "audio/tts/qwen3-fr-bf16/2bf7282e77645ad1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.98
+  },
   "Bon. Assieds-toi. Tu sais pourquoi j'ai gardé cette règle ?": {
    "file": "audio/tts/qwen3-fr-bf16/299a6b8560a82dc9.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.9
+  },
+  "Bon. Je reste une nuit. Une seule.": {
+   "file": "audio/tts/qwen3-fr-bf16/8f91fbde9bea7841.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.84
+  },
+  "Bon. On brise la glace ? Appelez-moi Zoé.": {
+   "file": "audio/tts/qwen3-fr-bf16/556bcd142cdeb823.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.02
   },
   "Bonjour": {
    "file": "audio/tts/qwen3-fr-bf16/9172e8eec99f144f.mp3",
@@ -357,6 +490,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/129ba373381cd725.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.96
+  },
+  "Bonjour ! Nous sommes les Garnier. Mon mari a réservé en octobre, au téléphone.": {
+   "file": "audio/tts/qwen3-fr-bf16/531218a99e44774c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.8
   },
   "Bonjour ! Oui, je voudrais un café, s'il vous plaît.": {
    "file": "audio/tts/qwen3-fr-bf16/3cddddc8cc4d882b.mp3",
@@ -383,6 +521,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.56
   },
+  "Bonjour ? Il y a quelqu'un ?": {
+   "file": "audio/tts/qwen3-fr-bf16/bdbfd8f6dfba4c27.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.66
+  },
+  "Bonjour, Anselme ! Vous ne m'avez pas oubliée ?": {
+   "file": "audio/tts/qwen3-fr-bf16/18e18630e9efc325.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.66
+  },
   "Bonjour, Théo ! Entrez. La boîte est sur la table.": {
    "file": "audio/tts/qwen3-fr-bf16/3652b82a93298479.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -408,6 +556,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.64
   },
+  "Bonjour, monsieur ! C'est vous, les colis du sixième ?": {
+   "file": "audio/tts/qwen3-fr-bf16/fede81565a5290f9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.12
+  },
   "Bonjour, monsieur ! Qu'est-ce que je vous sers ?": {
    "file": "audio/tts/qwen3-fr-bf16/d4da906e623baf7c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -417,6 +570,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/57fdbe51a178dd7e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.62
+  },
+  "Bonjour, monsieur Garnier. Votre petit colis. Et votre petit mot.": {
+   "file": "audio/tts/qwen3-fr-bf16/6a44b5120ed63416.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.95
   },
   "Bonjour, monsieur Petit ! Comment allez-vous ?": {
    "file": "audio/tts/qwen3-fr-bf16/d4d8f10525151974.mp3",
@@ -467,6 +625,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/627b844ec2457401.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.0
+  },
+  "Bonjour, monsieur. Voilà l'hôtel. Entrez !": {
+   "file": "audio/tts/qwen3-fr-bf16/4a7b98a0e4798326.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.86
   },
   "Bonjour, monsieur. Vous avez l'air fatigué.": {
    "file": "audio/tts/qwen3-fr-bf16/104a76d3b2d37b71.mp3",
@@ -548,6 +711,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.72
   },
+  "Bonsoir ! Entrez, entrez. Bienvenue chez nous.": {
+   "file": "audio/tts/qwen3-fr-bf16/bec805d7cb65ceed.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.72
+  },
   "Bonsoir ! Je m'appelle Léa. Et vous ?": {
    "file": "audio/tts/qwen3-fr-bf16/91cd23c7753f65db.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -613,6 +781,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
   },
+  "C'est combien": {
+   "file": "audio/tts/qwen3-fr-bf16/bd6aedeaf7fead6c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
   "C'est combien ?": {
    "file": "audio/tts/qwen3-fr-bf16/79b8e7f73b6e55ba.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -623,10 +796,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.54
   },
+  "C'est doux… Mon cœur va moins vite.": {
+   "file": "audio/tts/qwen3-fr-bf16/ff151e56426c44d1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.7
+  },
   "C'est en forgeant qu'on devient forgeron.": {
    "file": "audio/tts/qwen3-fr-bf16/9b06db8cef3b56be.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.1
+  },
+  "C'est facile. Répète après moi : « Tu es géniale, Zoé. »": {
+   "file": "audio/tts/qwen3-fr-bf16/f61bcdd007676e60.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.5
   },
   "C'est génial": {
    "file": "audio/tts/qwen3-fr-bf16/b1bf17821df4cfde.mp3",
@@ -738,6 +921,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.64
   },
+  "C'est mon métier": {
+   "file": "audio/tts/qwen3-fr-bf16/52f5a3f2a6db02e4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "C'est mon métier.": {
+   "file": "audio/tts/qwen3-fr-bf16/cda94b5b94f18d57.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "C'est monsieur Perrot, le nouveau du cinquième. Il ne m'a jamais dit bonjour.": {
+   "file": "audio/tts/qwen3-fr-bf16/94a93fbe6c4074c3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.26
+  },
   "C'est notre développeur.": {
    "file": "audio/tts/qwen3-fr-bf16/2ec0ce3906cb3bd1.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -843,25 +1041,50 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.7
   },
+  "C'est une vieille maison.": {
+   "file": "audio/tts/qwen3-fr-bf16/88e011c3f057acaf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
   "C'est vous et elle, sur le quai Saint-Antoine, en juin mille neuf cent soixante-deux.": {
    "file": "audio/tts/qwen3-fr-bf16/370be73b75785cdf.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.66
+  },
+  "C'est vrai. En mille sept cent quatre-vingt-six, je regardais le sommet d'ici.": {
+   "file": "audio/tts/qwen3-fr-bf16/54c689b790505089.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.38
   },
   "C'est à quel nom ?": {
    "file": "audio/tts/qwen3-fr-bf16/f90af6a96242d026.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
   },
+  "C'est épatant": {
+   "file": "audio/tts/qwen3-fr-bf16/efea93a959e2594d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
   "C'était ma grand-mère, Simone. Et lui ? Vous vous souvenez de lui ?": {
    "file": "audio/tts/qwen3-fr-bf16/51f004b91a5f4e51.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.1
   },
+  "C'était ma tante. Vous êtes le premier client qui dort ici depuis trente et un ans.": {
+   "file": "audio/tts/qwen3-fr-bf16/dc0f0158217b5671.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.04
+  },
   "C'était mon livre préféré": {
    "file": "audio/tts/qwen3-fr-bf16/9c9780a6bda8a528.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.44
+  },
+  "Cachée, je suis tranquille. Mais je m'ennuie.": {
+   "file": "audio/tts/qwen3-fr-bf16/a6c76918513097b4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
   },
   "Ce café est délicieux.": {
    "file": "audio/tts/qwen3-fr-bf16/a96365beff9abb5f.mp3",
@@ -897,6 +1120,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/61a224b712810247.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.44
+  },
+  "Ce n'est pas pour me plaindre, mais la soupe est froide.": {
+   "file": "audio/tts/qwen3-fr-bf16/4273cd1fb0b57f34.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.02
+  },
+  "Ce n'est pas pour me plaindre, mais…": {
+   "file": "audio/tts/qwen3-fr-bf16/72869cbfa9b6c5d4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.04
   },
   "Ce n'est pas ton stylo, c'est le mien.": {
    "file": "audio/tts/qwen3-fr-bf16/4c3f8969b91adc98.mp3",
@@ -938,20 +1171,70 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.76
   },
+  "Ce serait dommage": {
+   "file": "audio/tts/qwen3-fr-bf16/966e304248ba0ef7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
+  },
+  "Ce serait le nom parfait": {
+   "file": "audio/tts/qwen3-fr-bf16/f9431ed6aefd1b05.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.72
+  },
+  "Ce serait le nom parfait.": {
+   "file": "audio/tts/qwen3-fr-bf16/b896b85329047f69.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
+  },
+  "Ce serait original": {
+   "file": "audio/tts/qwen3-fr-bf16/0935ae697642fb5f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
+  "Ce serait original.": {
+   "file": "audio/tts/qwen3-fr-bf16/1c413b9a776dd249.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
+  "Ce serait trop calme.": {
+   "file": "audio/tts/qwen3-fr-bf16/ab4272dcb199af2e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
   "Ce soir": {
    "file": "audio/tts/qwen3-fr-bf16/c3e9405b3270af4d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
+  },
+  "Ce soir, c'est gratuit. Vous pourriez revenir le dix-neuf, pour l'ouverture ?": {
+   "file": "audio/tts/qwen3-fr-bf16/101a88cf1d89112e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.56
+  },
+  "Ce soir, je vais jouer plus doucement. Promis.": {
+   "file": "audio/tts/qwen3-fr-bf16/ab6b38f5f9679a87.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.32
   },
   "Ce soir, je vais écouter ma femme.": {
    "file": "audio/tts/qwen3-fr-bf16/5f4843817707424d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.16
   },
+  "Ce soir, on va commencer une tradition !": {
+   "file": "audio/tts/qwen3-fr-bf16/f15c6e40f51982d6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
+  },
   "Ce sont tes parents ?": {
    "file": "audio/tts/qwen3-fr-bf16/e901c40cfc895c30.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
+  },
+  "Ce sont… les employés. Ils sont un peu spéciaux.": {
+   "file": "audio/tts/qwen3-fr-bf16/ecb89be531299de9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.52
   },
   "Celui de la photo": {
    "file": "audio/tts/qwen3-fr-bf16/69755c8a300e804f.mp3",
@@ -967,6 +1250,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/3612e289e2f4a410.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.48
+  },
+  "Cent fois. Et cent fois, mes mains ont tremblé.": {
+   "file": "audio/tts/qwen3-fr-bf16/d4906caf99b636c8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.68
+  },
+  "Cent vingt euros": {
+   "file": "audio/tts/qwen3-fr-bf16/cb603469b997b8d3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
+  "Cent vingt euros, monsieur.": {
+   "file": "audio/tts/qwen3-fr-bf16/80039c4acb6db41a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.5
   },
   "Certains sont partis.": {
    "file": "audio/tts/qwen3-fr-bf16/73c74cf136b348c8.mp3",
@@ -993,10 +1291,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.94
   },
+  "Chacun son métier, les vaches seront bien gardées.": {
+   "file": "audio/tts/qwen3-fr-bf16/ddd4200a82f6fd60.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
+  "Chacun son travail": {
+   "file": "audio/tts/qwen3-fr-bf16/f81a79fc6c113b9e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Chambre un, Edelweiss. Chambre deux, Gentiane. Et le numéro reste.": {
+   "file": "audio/tts/qwen3-fr-bf16/8801c4b47b5d923c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 5.64
+  },
   "Chaque chose en son temps.": {
    "file": "audio/tts/qwen3-fr-bf16/28eef5d7b8dc4cf3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
+  },
+  "Chaque semaine, je les montais au troisième. Un jour, Moussa m'a invitée.": {
+   "file": "audio/tts/qwen3-fr-bf16/f56e1f2a66cf7935.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.56
   },
   "Chez qui": {
    "file": "audio/tts/qwen3-fr-bf16/0810bb48cad9860e.mp3",
@@ -1008,10 +1326,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.28
   },
+  "Chut ! Regardez. Quelle merveille ! Le mont Blanc est rose.": {
+   "file": "audio/tts/qwen3-fr-bf16/8aec3c9184c2177b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.9
+  },
   "Cinq euros": {
    "file": "audio/tts/qwen3-fr-bf16/92beae870dcd32c7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.74
+  },
+  "Cinq minutes… Avec toi, le silence, c'est doux. Ça me plaît.": {
+   "file": "audio/tts/qwen3-fr-bf16/647ad3494ab13f42.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.8
   },
   "Cinq. Regardez, Socrate vous tourne le dos.": {
    "file": "audio/tts/qwen3-fr-bf16/2c90154020ec330e.mp3",
@@ -1078,10 +1406,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.48
   },
+  "Comme les vieilles maisons. Et les gens un peu cassés.": {
+   "file": "audio/tts/qwen3-fr-bf16/c8c01923a455f6d4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
+  },
   "Comment allez-vous ?": {
    "file": "audio/tts/qwen3-fr-bf16/dd072d9d411f2c43.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
+  },
+  "Comment c'était, les Jeux ?": {
+   "file": "audio/tts/qwen3-fr-bf16/4026fecc96d944ef.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.28
   },
   "Comment dit-on ça en français ?": {
    "file": "audio/tts/qwen3-fr-bf16/573fb08c3ad923d2.mp3",
@@ -1133,6 +1471,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.78
   },
+  "D'accord, chef ! Du chou, des carottes, de l'eau…": {
+   "file": "audio/tts/qwen3-fr-bf16/b6dba52b3d8e2904.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.58
+  },
+  "D'accord. Alors… tu peux m'aider ?": {
+   "file": "audio/tts/qwen3-fr-bf16/4fbc9dbe88d5df58.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.48
+  },
   "D'accord. Je vais réfléchir et je vous rappelle demain.": {
    "file": "audio/tts/qwen3-fr-bf16/5381bcff75be9e22.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1148,6 +1496,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.06
   },
+  "D'accord. On ouvre le dix-neuf décembre. Ensemble.": {
+   "file": "audio/tts/qwen3-fr-bf16/3c4ab9dc96b4b619.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.64
+  },
   "D'accord. Vous savez, mon père n'a pas souri comme ça depuis des années.": {
    "file": "audio/tts/qwen3-fr-bf16/819f753a29f35190.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1162,6 +1515,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c3ee834e766f5d81.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.52
+  },
+  "De la soupe": {
+   "file": "audio/tts/qwen3-fr-bf16/9d7ef6ee49a0e77b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
+  "De la soupe ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e5e8cf20a5a85b16.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "De ma mère. On s'est disputées il y a trois mois.": {
    "file": "audio/tts/qwen3-fr-bf16/a49cfbeed86f41f5.mp3",
@@ -1198,6 +1561,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.24
   },
+  "Demain soir, je fais un chili. Ça te dit ? Hélène aussi est invitée.": {
+   "file": "audio/tts/qwen3-fr-bf16/176d2b920e4875ce.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.58
+  },
   "Demain à huit heures ? Ça marche !": {
    "file": "audio/tts/qwen3-fr-bf16/4d84a70f1d4771c0.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1208,10 +1576,40 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.72
   },
+  "Demain, j'ai un examen. J'ai le trac !": {
+   "file": "audio/tts/qwen3-fr-bf16/b34b7dc311d85f81.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.32
+  },
   "Demain, je me lèverai tôt.": {
    "file": "audio/tts/qwen3-fr-bf16/8f84cd32f842db09.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.66
+  },
+  "Demander de l'aide ? Je ne sais pas faire ça.": {
+   "file": "audio/tts/qwen3-fr-bf16/d72b76b6f3189f79.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
+  },
+  "Depuis deux ans": {
+   "file": "audio/tts/qwen3-fr-bf16/3a9da5e66b6dbc76.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
+  "Depuis deux ans.": {
+   "file": "audio/tts/qwen3-fr-bf16/bffbacf83030f5e1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "Depuis deux ans. Le petit Adam du troisième a retrouvé le sourire.": {
+   "file": "audio/tts/qwen3-fr-bf16/0763e5a6870851e2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.4
+  },
+  "Des biscuits": {
+   "file": "audio/tts/qwen3-fr-bf16/59c73c60ed23f077.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "Des lettres… Je comprends. Et Garnier, comment ça s'écrit ?": {
    "file": "audio/tts/qwen3-fr-bf16/50ceb27d9568fb3e.mp3",
@@ -1223,15 +1621,85 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.52
   },
+  "Des plantes ? Non ! À Marseille, on était neuf dans trois pièces.": {
+   "file": "audio/tts/qwen3-fr-bf16/2ca1130eb39b96e0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.08
+  },
+  "Des vis ? Des bonbons ? Je donne ma langue au chat.": {
+   "file": "audio/tts/qwen3-fr-bf16/3ad6ee5bd68f875d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.96
+  },
   "Dessinez-moi.": {
    "file": "audio/tts/qwen3-fr-bf16/8cf4f44873395a36.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "Deux cents ? Je joue si fort que ça ?": {
+   "file": "audio/tts/qwen3-fr-bf16/3a23446107b8509c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.28
+  },
+  "Deux hommes montaient": {
+   "file": "audio/tts/qwen3-fr-bf16/98279ba99f0e596c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.28
+  },
+  "Deux hommes montaient.": {
+   "file": "audio/tts/qwen3-fr-bf16/9e0f3cee1526902d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
+  },
+  "Deux hommes montaient. Balmat et Paccard. Toute la vallée les regardait.": {
+   "file": "audio/tts/qwen3-fr-bf16/ca4197d5495dba17.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.98
+  },
+  "Devant deux cents personnes, si. J'ai toujours eu le trac.": {
+   "file": "audio/tts/qwen3-fr-bf16/b1a53b7b4b1113d9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.44
+  },
+  "Devine qui vient ce soir ! — Je donne ma langue au chat.": {
+   "file": "audio/tts/qwen3-fr-bf16/4f06f5ae872a346c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.3
+  },
   "Dis-moi quand tu arrives.": {
    "file": "audio/tts/qwen3-fr-bf16/b20e88dc55daff36.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.24
+  },
+  "Dites-lui bonjour": {
+   "file": "audio/tts/qwen3-fr-bf16/e92d6417ca1142fa.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Dites-lui bonjour.": {
+   "file": "audio/tts/qwen3-fr-bf16/baa34ef3b68be59f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Dites-lui ce que vous ressentez.": {
+   "file": "audio/tts/qwen3-fr-bf16/8161339a8f27d15e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
+  },
+  "Dix heures et demie": {
+   "file": "audio/tts/qwen3-fr-bf16/6a68b520d2839605.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "Douze chambres pleines": {
+   "file": "audio/tts/qwen3-fr-bf16/ac11c843f6bf80f7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.58
+  },
+  "Douze fleurs": {
+   "file": "audio/tts/qwen3-fr-bf16/8a20bdfa7e9214b7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
   },
   "Douze pages": {
    "file": "audio/tts/qwen3-fr-bf16/876af67b2e519c80.mp3",
@@ -1243,6 +1711,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.96
   },
+  "Du chou, des carottes, de l'eau…": {
+   "file": "audio/tts/qwen3-fr-bf16/f9fe0908aa45c03b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.32
+  },
   "Du coup": {
    "file": "audio/tts/qwen3-fr-bf16/a55400a6b838ec04.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1252,6 +1725,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/d789797016640b52.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.64
+  },
+  "Du fromage, des oignons": {
+   "file": "audio/tts/qwen3-fr-bf16/8552e12b2761728b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.98
   },
   "Dépêchez-vous !": {
    "file": "audio/tts/qwen3-fr-bf16/74af2da269aa7ad9.mp3",
@@ -1263,10 +1741,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.42
   },
+  "Elle a dit : « Mon petit ne devrait plus avoir peur. »": {
+   "file": "audio/tts/qwen3-fr-bf16/766db49172249ca4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
+  },
   "Elle a fermé": {
    "file": "audio/tts/qwen3-fr-bf16/57bd552f06c25c22.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
+  },
+  "Elle a fermé l'hôtel.": {
+   "file": "audio/tts/qwen3-fr-bf16/e72996a7f25c9e8f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "Elle a gardé l'hôtel": {
+   "file": "audio/tts/qwen3-fr-bf16/8e96574b55d79452.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "Elle a le cœur sur la main, cette petite.": {
+   "file": "audio/tts/qwen3-fr-bf16/7cc2c10cd8f132ab.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.54
   },
   "Elle a pleuré": {
    "file": "audio/tts/qwen3-fr-bf16/6fd18fd8183fce72.mp3",
@@ -1293,10 +1791,40 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.0
   },
+  "Elle avait une valise verte": {
+   "file": "audio/tts/qwen3-fr-bf16/8ea98159dc2331a2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
+  "Elle avait une valise verte.": {
+   "file": "audio/tts/qwen3-fr-bf16/f2d026340588a918.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
+  "Elle chantait tout le temps": {
+   "file": "audio/tts/qwen3-fr-bf16/b6f53c5b4a4d568e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
   "Elle chante dans une chorale.": {
    "file": "audio/tts/qwen3-fr-bf16/9dae0893ebf99822.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.5
+  },
+  "Elle conduit des TGV": {
+   "file": "audio/tts/qwen3-fr-bf16/730510c02fbabb1c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "Elle croit que": {
+   "file": "audio/tts/qwen3-fr-bf16/63baf22a4c7c7104.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
+  "Elle croit que je suis ta fiancée, petit frère !": {
+   "file": "audio/tts/qwen3-fr-bf16/b793225071a014c8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.32
   },
   "Elle dit toujours la vérité.": {
    "file": "audio/tts/qwen3-fr-bf16/d63bbbb954a28f5c.mp3",
@@ -1307,6 +1835,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7965b614e67ebb0f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.24
+  },
+  "Elle est complète… Tu connais les paroles ?": {
+   "file": "audio/tts/qwen3-fr-bf16/9651d18eaf507e9c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.26
   },
   "Elle est ingénieure": {
    "file": "audio/tts/qwen3-fr-bf16/2ade0175b5f5311f.mp3",
@@ -1342,6 +1875,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/33cbd4d6b6301b88.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.52
+  },
+  "Elle jouait aux cartes": {
+   "file": "audio/tts/qwen3-fr-bf16/a732bda44b311bdb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
+  "Elle jouait aux cartes ? Avec qui ?": {
+   "file": "audio/tts/qwen3-fr-bf16/fb9fc713ea6d1628.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.08
   },
   "Elle m'a appris la recette": {
    "file": "audio/tts/qwen3-fr-bf16/9c8ec63c2e9518e1.mp3",
@@ -1383,6 +1926,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.14
   },
+  "Elle ne le savait pas": {
+   "file": "audio/tts/qwen3-fr-bf16/a776a8d16139b11c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "Elle ne le savait pas, gros malin.": {
+   "file": "audio/tts/qwen3-fr-bf16/11560080c1a24195.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.78
+  },
+  "Elle ne le savait pas.": {
+   "file": "audio/tts/qwen3-fr-bf16/662315db5fe1dd24.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
   "Elle ne m'a pas appelée.": {
    "file": "audio/tts/qwen3-fr-bf16/076a6b074357f711.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1397,6 +1955,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/6d7cd43d12e8954f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.48
+  },
+  "Elle ne tourne pas rond": {
+   "file": "audio/tts/qwen3-fr-bf16/59bcea006c902115.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Elle ne tourne pas rond, ta boîte. Un peu comme toi.": {
+   "file": "audio/tts/qwen3-fr-bf16/3d0df62d9e7fc120.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.74
+  },
+  "Elle nous a vus": {
+   "file": "audio/tts/qwen3-fr-bf16/4df8af1097bdaf01.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "Elle nous a vus.": {
+   "file": "audio/tts/qwen3-fr-bf16/ce0ab74203c627dd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "Elle nous la donne": {
+   "file": "audio/tts/qwen3-fr-bf16/6971ad916cf0a688.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
   },
   "Elle porte une robe blanche.": {
    "file": "audio/tts/qwen3-fr-bf16/530c07a6652a0f3b.mp3",
@@ -1417,6 +2000,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/86a32bac2ec370ac.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.64
+  },
+  "Elle riait fort": {
+   "file": "audio/tts/qwen3-fr-bf16/7d5d29234803108d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
+  "Elle riait si fort.": {
+   "file": "audio/tts/qwen3-fr-bf16/c5712266a48c3f9a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "Elle réparait": {
+   "file": "audio/tts/qwen3-fr-bf16/fba82554a43cb94e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
   },
   "Elle réussit toujours ses examens.": {
    "file": "audio/tts/qwen3-fr-bf16/108db57ab7bcf2fb.mp3",
@@ -1478,6 +2076,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.7
   },
+  "Elle trichait toujours": {
+   "file": "audio/tts/qwen3-fr-bf16/761113eaed2a7310.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "Elle trichait toujours.": {
+   "file": "audio/tts/qwen3-fr-bf16/92b5f7d7252c5a8f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Elle va rester": {
+   "file": "audio/tts/qwen3-fr-bf16/bac750fb7f026be0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "Elle va rester. Ils vont se marier. Et moi, je vais déménager !": {
+   "file": "audio/tts/qwen3-fr-bf16/c651cc12390a81f9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.0
+  },
   "Elle venait le dimanche": {
    "file": "audio/tts/qwen3-fr-bf16/cce55003728dee6b.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1502,6 +2120,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/43ec565e15db333b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.06
+  },
+  "Elle était dans mon grenier": {
+   "file": "audio/tts/qwen3-fr-bf16/c45b657ee7537f02.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
   },
   "Elles s' occupent du chien.": {
    "file": "audio/tts/qwen3-fr-bf16/ea7246493fa8303e.mp3",
@@ -1543,10 +2166,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.94
   },
+  "En mille neuf cent cinquante-huit": {
+   "file": "audio/tts/qwen3-fr-bf16/68fefa47c9354a55.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.52
+  },
+  "En mille neuf cent cinquante-huit, je vous ai vu. J'ai eu peur !": {
+   "file": "audio/tts/qwen3-fr-bf16/6c8e135c14b07fbb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.08
+  },
+  "En quatre-vingt-onze, le facteur mettait les lettres de Moussa dans ma boîte.": {
+   "file": "audio/tts/qwen3-fr-bf16/6b4d6e24d973c75c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.1
+  },
   "En retard pour quoi ?": {
    "file": "audio/tts/qwen3-fr-bf16/ff709f00074044fc.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.02
+  },
+  "En septembre, je n'étais chez moi nulle part. Ce soir, je suis chez moi.": {
+   "file": "audio/tts/qwen3-fr-bf16/52c917a1e20336d0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.92
   },
   "Enchanté": {
    "file": "audio/tts/qwen3-fr-bf16/072566dbb3cd7887.mp3",
@@ -1573,6 +2216,41 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.6
   },
+  "Encore de l'eau": {
+   "file": "audio/tts/qwen3-fr-bf16/e91594be6f8c39ff.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.92
+  },
+  "Encore de l'eau, s'il vous plaît !": {
+   "file": "audio/tts/qwen3-fr-bf16/0ca79f51b7f4d49e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
+  "Encore toi ! Merci. Tu peux le poser là.": {
+   "file": "audio/tts/qwen3-fr-bf16/e590243634d784b8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.96
+  },
+  "Encore un fantôme ! Vous êtes qui ?": {
+   "file": "audio/tts/qwen3-fr-bf16/cdfd477bd8124770.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.44
+  },
+  "Encore une porte, et après, je vais dormir. Promis.": {
+   "file": "audio/tts/qwen3-fr-bf16/bc2527845609cd78.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.2
+  },
+  "Encore vous": {
+   "file": "audio/tts/qwen3-fr-bf16/7118ee22ca1e1610.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
+  "Encore vous ! Vous aussi, vous avez un petit mot ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ed22648aaa78f7b1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.62
+  },
   "Enfin": {
    "file": "audio/tts/qwen3-fr-bf16/5c5bb71c14e18a0a.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1582,6 +2260,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/2e05f6b7c16f70a9.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.5
+  },
+  "Entrez ! Mais l'hôtel n'est pas encore ouvert. Il n'y a pas d'électricité.": {
+   "file": "audio/tts/qwen3-fr-bf16/39b7ba7bd602c5eb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.46
+  },
+  "Entrez, entrez": {
+   "file": "audio/tts/qwen3-fr-bf16/6bd024e5fee3963a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.52
   },
   "Est-ce qu'elle habite ici ?": {
    "file": "audio/tts/qwen3-fr-bf16/e8735b8aef4e0751.mp3",
@@ -1728,10 +2416,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.16
   },
+  "Et alors ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e887bd0290ba4bad.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
+  },
   "Et alors ? Je ne regarde jamais en arrière. Allez à la bibliothèque, à la Part-Dieu.": {
    "file": "audio/tts/qwen3-fr-bf16/b2251926998f35a4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.14
+  },
+  "Et alors ? Neuf heures, c'est tôt !": {
+   "file": "audio/tts/qwen3-fr-bf16/27b0572e2b111c77.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.48
+  },
+  "Et après la réunion, vous allez lui dire le reste ?": {
+   "file": "audio/tts/qwen3-fr-bf16/c4b46d4b84e9f3c7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.18
   },
   "Et avec ceci ? — C'est tout, merci.": {
    "file": "audio/tts/qwen3-fr-bf16/9d316f80d24d2b34.mp3",
@@ -1758,6 +2461,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.1
   },
+  "Et cette boîte, qu'est-ce qu'elle jouait ?": {
+   "file": "audio/tts/qwen3-fr-bf16/89a99a3acf891129.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.9
+  },
+  "Et cette jeune femme, à côté de vous ?": {
+   "file": "audio/tts/qwen3-fr-bf16/7f86f53dbb854683.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.94
+  },
+  "Et elle joue quoi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/913937c471242fdc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "Et en face, de l'autre côté de la Saône, c'est Fourvière ?": {
    "file": "audio/tts/qwen3-fr-bf16/3072e4e96f1460db.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1768,10 +2486,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.26
   },
+  "Et l'hiver dernier, elle a porté mes courses. Tous les jours.": {
+   "file": "audio/tts/qwen3-fr-bf16/8798f10b41280171.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.34
+  },
   "Et la guitare, ça te plaît ?": {
    "file": "audio/tts/qwen3-fr-bf16/a54112c088b82f1f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.6
+  },
+  "Et la petite Margot a donné un nom à l'hôtel.": {
+   "file": "audio/tts/qwen3-fr-bf16/be4061b4e715883f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.22
   },
   "Et le café ? Et Socrate ?": {
    "file": "audio/tts/qwen3-fr-bf16/b104941860298904.mp3",
@@ -1813,6 +2541,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.84
   },
+  "Et règle numéro trois : on prend les portes !": {
+   "file": "audio/tts/qwen3-fr-bf16/295e55063f1e7607.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
+  },
+  "Et s'ils se moquent de nous ? De ma robe, de vos moustaches ?": {
+   "file": "audio/tts/qwen3-fr-bf16/42bc12543ef87593.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.46
+  },
+  "Et ses colis à lui ? Qu'est-ce qu'il achète ?": {
+   "file": "audio/tts/qwen3-fr-bf16/d2751c58c4e4bdf3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.48
+  },
+  "Et si… ?": {
+   "file": "audio/tts/qwen3-fr-bf16/9298bc212284dfbb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
+  },
   "Et tes grands-parents, ils vivent où ?": {
    "file": "audio/tts/qwen3-fr-bf16/3772a52df3a36ea8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1822,6 +2570,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/5f9a25029500f4df.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.56
+  },
+  "Et toi, tu devrais essayer le bruit. Samedi, je t'apprends le tambour !": {
+   "file": "audio/tts/qwen3-fr-bf16/be703aa9e33e4adc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.72
   },
   "Et ton équipe a gagné ?": {
    "file": "audio/tts/qwen3-fr-bf16/0e0d530c0f78d336.mp3",
@@ -1838,6 +2591,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.46
   },
+  "Et vous étiez français ?": {
+   "file": "audio/tts/qwen3-fr-bf16/19c71323f7ec3969.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "Et vous, Marcel ? Vous vous ennuyez encore ?": {
+   "file": "audio/tts/qwen3-fr-bf16/89ee82c149faf5a0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.74
+  },
   "Et vous, qu'est-ce que vous voulez ?": {
    "file": "audio/tts/qwen3-fr-bf16/ccff7c98caabbdd8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1852,6 +2615,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/bccb1a2ebab6368b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.58
+  },
+  "Et vous, vous connaissez les fleurs, là-haut ?": {
+   "file": "audio/tts/qwen3-fr-bf16/57dd582768b9ebea.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.62
+  },
+  "Et vous, vous n'avez rien fait de la nuit !": {
+   "file": "audio/tts/qwen3-fr-bf16/3e8ae79c5954070e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.02
+  },
+  "Et vous, vous écrivez « merci » partout. C'est bizarre.": {
+   "file": "audio/tts/qwen3-fr-bf16/b8e65e2e4444b35a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.48
+  },
+  "Euh… il est parti en vacances.": {
+   "file": "audio/tts/qwen3-fr-bf16/4ec8b062cdaf46ba.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.98
+  },
+  "Eulalie est devant la fenêtre.": {
+   "file": "audio/tts/qwen3-fr-bf16/b3dfcb3078bc9e1c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
   },
   "Excusez-moi": {
    "file": "audio/tts/qwen3-fr-bf16/3b1073b7e074af8e.mp3",
@@ -1898,6 +2686,51 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.0
   },
+  "Gabriel ! Tu es venu ! J'ai le trac. Je vais tout rater.": {
+   "file": "audio/tts/qwen3-fr-bf16/be95f6d2a329974a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.9
+  },
+  "Gabriel ! Tu t'es levé devant tout l'immeuble. Toi, le timide !": {
+   "file": "audio/tts/qwen3-fr-bf16/5f2e060020a0b76d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.3
+  },
+  "Gabriel ! Un colis du Jura ! Il est arrivé chez moi, ce matin.": {
+   "file": "audio/tts/qwen3-fr-bf16/9dbb9f10c580fefa.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.34
+  },
+  "Gabriel ? Votre colis est arrivé chez moi. Et je l'ai ouvert.": {
+   "file": "audio/tts/qwen3-fr-bf16/997b63a2bde9e57b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.88
+  },
+  "Gabriel, c'est quoi, cette boîte en fer ? Des petits papiers jaunes ?": {
+   "file": "audio/tts/qwen3-fr-bf16/9972ccf68ed1c150.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.95
+  },
+  "Gabriel, tu as lu la lettre ? Jeudi, l'immeuble va voter.": {
+   "file": "audio/tts/qwen3-fr-bf16/2769ad3d4ee342ae.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.26
+  },
+  "Garnier ? Moi aussi ! Zoé Garnier !": {
+   "file": "audio/tts/qwen3-fr-bf16/a52938789d392a0d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.54
+  },
+  "Germaine, c'était ma grand-mère.": {
+   "file": "audio/tts/qwen3-fr-bf16/ce8293fa83103765.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.52
+  },
+  "Grande, très belle. Elle avait une valise verte. Elle riait fort.": {
+   "file": "audio/tts/qwen3-fr-bf16/447325dba2ae4886.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.18
+  },
   "Habillons-nous !": {
    "file": "audio/tts/qwen3-fr-bf16/e31a093ad82e7da8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -1912,6 +2745,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/1a83c40241cf9639.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.62
+  },
+  "Hortense m'a demandé une chose : aider la petite.": {
+   "file": "audio/tts/qwen3-fr-bf16/1bbfc3125688f18c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.14
   },
   "Huit heures et quart": {
    "file": "audio/tts/qwen3-fr-bf16/06b4765d8fd2a46c.mp3",
@@ -1942,6 +2780,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/4454406e859812df.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
+  },
+  "Il a plu": {
+   "file": "audio/tts/qwen3-fr-bf16/3152fc1238d2bdbc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "Il a plu toute la nuit. L'eau est entrée dans ma chambre.": {
+   "file": "audio/tts/qwen3-fr-bf16/ee24b48284280122.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.24
   },
   "Il a quitté Delorme": {
    "file": "audio/tts/qwen3-fr-bf16/e6bd8867642fa63a.mp3",
@@ -2028,6 +2876,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
+  "Il est minuit ! — Et alors ? Demain, c'est dimanche.": {
+   "file": "audio/tts/qwen3-fr-bf16/13c4262d756673a1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.12
+  },
   "Il est minuit.": {
    "file": "audio/tts/qwen3-fr-bf16/0598f8736607bf7e.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2037,6 +2890,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/83b33787d8bbc462.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
+  },
+  "Il est parti": {
+   "file": "audio/tts/qwen3-fr-bf16/0db99e2d241e8361.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
+  },
+  "Il est parti ?": {
+   "file": "audio/tts/qwen3-fr-bf16/21c27cc271e0a359.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "Il est parti au Canada": {
    "file": "audio/tts/qwen3-fr-bf16/490bf4bafe204bb6.mp3",
@@ -2123,6 +2986,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.5
   },
+  "Il fait si beau ! Ce serait dommage de rester à la maison.": {
+   "file": "audio/tts/qwen3-fr-bf16/bbf72b96c9b2da84.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.1
+  },
   "Il fait un temps de chien": {
    "file": "audio/tts/qwen3-fr-bf16/91b6bf2f35414f27.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2143,6 +3011,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.36
   },
+  "Il faut cultiver notre jardin.": {
+   "file": "audio/tts/qwen3-fr-bf16/f69a38321b97e5f5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.62
+  },
+  "Il faut dormir.": {
+   "file": "audio/tts/qwen3-fr-bf16/ca2c1fc462feab56.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
   "Il faut faire simple": {
    "file": "audio/tts/qwen3-fr-bf16/42e78814438a7f01.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2157,6 +3035,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/994436445b471d25.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "Il la serrait dans ses bras. Ils avaient l'air très contents.": {
+   "file": "audio/tts/qwen3-fr-bf16/74cca9250e22757f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.3
   },
   "Il les a composées en soixante-deux, pour une carte qu'il n'a jamais imprimée.": {
    "file": "audio/tts/qwen3-fr-bf16/5c701c5b4dba7a4b.mp3",
@@ -2178,6 +3061,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
   },
+  "Il manque une assiette : on est six à table.": {
+   "file": "audio/tts/qwen3-fr-bf16/1a045e4814d478ce.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
+  "Il manque…": {
+   "file": "audio/tts/qwen3-fr-bf16/f0a6237a9a650b8d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
+  },
   "Il me le donne.": {
    "file": "audio/tts/qwen3-fr-bf16/138f93abb857cc85.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2192,6 +3085,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c275a22c1d496e1d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.92
+  },
+  "Il n'y a pas de lumière.": {
+   "file": "audio/tts/qwen3-fr-bf16/90efdb567461a26f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
   },
   "Il n'y a pas de pain.": {
    "file": "audio/tts/qwen3-fr-bf16/6bd5bcfa92f06613.mp3",
@@ -2232,6 +3130,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/05c712f4a4eb289f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.52
+  },
+  "Il ne répond pas ? Tu te fais un film : il dort !": {
+   "file": "audio/tts/qwen3-fr-bf16/9a66bac5e63b6a49.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.02
   },
   "Il ne s'habille pas.": {
    "file": "audio/tts/qwen3-fr-bf16/a8c5afe469270e79.mp3",
@@ -2393,6 +3296,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.86
   },
+  "Il y a la vieille cave, sous la cour, où personne ne va.": {
+   "file": "audio/tts/qwen3-fr-bf16/955a00afb9519771.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.1
+  },
   "Il y a longtemps.": {
    "file": "audio/tts/qwen3-fr-bf16/183a40ae2530a1b9.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2407,6 +3315,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ed4f52664731296c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.84
+  },
+  "Il y a trois fautes": {
+   "file": "audio/tts/qwen3-fr-bf16/9b934f6bdd167e01.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
   },
   "Il y a un ascenseur ?": {
    "file": "audio/tts/qwen3-fr-bf16/7bdb39342d86fbb6.mp3",
@@ -2458,6 +3371,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.62
   },
+  "Il y a écrit : « Pour les deux Garnier. » C'est Mamie Jeanne !": {
+   "file": "audio/tts/qwen3-fr-bf16/60e49c2da79ecc55.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.08
+  },
   "Il y en a trois.": {
    "file": "audio/tts/qwen3-fr-bf16/c57546dd8ad07bab.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2468,10 +3386,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.34
   },
+  "Ils allaient en Italie": {
+   "file": "audio/tts/qwen3-fr-bf16/bf90694cf4516e24.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
   "Ils arrivent demain.": {
    "file": "audio/tts/qwen3-fr-bf16/8a4d40b566f35897.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
+  },
+  "Ils avaient l'air très contents": {
+   "file": "audio/tts/qwen3-fr-bf16/cb70bd9895d2b79e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.6
+  },
+  "Ils avaient l'air très contents.": {
+   "file": "audio/tts/qwen3-fr-bf16/44318ad44b705641.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
   },
   "Ils habitent à Lyon": {
    "file": "audio/tts/qwen3-fr-bf16/1d94c157b9cb4e4b.mp3",
@@ -2503,10 +3436,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.6
   },
+  "Ils ne vont jamais dire ça.": {
+   "file": "audio/tts/qwen3-fr-bf16/7fcc6e861e7c8731.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.4
+  },
   "Ils ont eu le coup de foudre à Paris.": {
    "file": "audio/tts/qwen3-fr-bf16/861a454f09b91283.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.72
+  },
+  "Ils ont voté oui": {
+   "file": "audio/tts/qwen3-fr-bf16/8fc6e2c0001ac09c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
+  "Ils ont voté oui. Même monsieur Perrot ! Je n'en reviens pas !": {
+   "file": "audio/tts/qwen3-fr-bf16/f649541bea7d6840.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.9
   },
   "Ils s'écrivent.": {
    "file": "audio/tts/qwen3-fr-bf16/d20cd12f89631a33.mp3",
@@ -2573,6 +3521,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.6
   },
+  "J'ai appelé Hélène": {
+   "file": "audio/tts/qwen3-fr-bf16/b3d45a66ed8f0a49.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "J'ai appelé Hélène. Hélène a appelé Mamie Jeanne. Elle l'avait dans son vieux tiroir.": {
+   "file": "audio/tts/qwen3-fr-bf16/7fa34e7502f83ca2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 5.92
+  },
   "J'ai appris à regarder à droite.": {
    "file": "audio/tts/qwen3-fr-bf16/ce31d7524331c050.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2608,6 +3566,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.58
   },
+  "J'ai fait briller les douze clés": {
+   "file": "audio/tts/qwen3-fr-bf16/9b886339aeeddea0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.7
+  },
+  "J'ai fait mon chili": {
+   "file": "audio/tts/qwen3-fr-bf16/4a91d1dc552a737b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
   "J'ai hâte": {
    "file": "audio/tts/qwen3-fr-bf16/45a7e7d7d239e439.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2628,6 +3596,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.24
   },
+  "J'ai le cœur gros": {
+   "file": "audio/tts/qwen3-fr-bf16/d7aaef705256fd7b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "J'ai le cœur gros, rien que d'y penser.": {
+   "file": "audio/tts/qwen3-fr-bf16/1f8aeb68cc1b427b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.52
+  },
+  "J'ai le trac": {
+   "file": "audio/tts/qwen3-fr-bf16/244c7ace18432ef9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
   "J'ai mal à la gorge": {
    "file": "audio/tts/qwen3-fr-bf16/83fd17c98293ff1b.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2642,6 +3625,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/69aaeac3c0660783.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.92
+  },
+  "J'ai mis les pieds dans le plat": {
+   "file": "audio/tts/qwen3-fr-bf16/2c84e7a6f7da9cdc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "J'ai passé une très bonne soirée": {
+   "file": "audio/tts/qwen3-fr-bf16/13ead6f70ef26865.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.68
+  },
+  "J'ai pleuré de joie": {
+   "file": "audio/tts/qwen3-fr-bf16/3c9e1a40c15142a3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "J'ai pleuré de joie.": {
+   "file": "audio/tts/qwen3-fr-bf16/c3c74d77f18382a6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
+  },
+  "J'ai pris mon courage à deux mains et j'ai appelé ma patronne.": {
+   "file": "audio/tts/qwen3-fr-bf16/7a771e1d5ff83350.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.4
   },
   "J'ai promis à Simone": {
    "file": "audio/tts/qwen3-fr-bf16/26b0cb20c841ba6f.mp3",
@@ -2668,6 +3676,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
   },
+  "J'ai soixante-seize ans, Anselme.": {
+   "file": "audio/tts/qwen3-fr-bf16/7392b70502385f40.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.84
+  },
+  "J'ai toujours tout fait seule. Je vais vendre.": {
+   "file": "audio/tts/qwen3-fr-bf16/9ab5e00e19f4ae63.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.66
+  },
   "J'ai travaillé toute la nuit": {
    "file": "audio/tts/qwen3-fr-bf16/ad0948aefc59f0a3.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2677,6 +3695,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/3c24a7810dfa9751.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.88
+  },
+  "J'ai trouvé douze noms": {
+   "file": "audio/tts/qwen3-fr-bf16/b21a9908e1603a10.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
   },
   "J'ai un bon ami.": {
    "file": "audio/tts/qwen3-fr-bf16/98ddaf2033d59ef8.mp3",
@@ -2703,6 +3726,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
   },
+  "J'ai voulu aller trop vite.": {
+   "file": "audio/tts/qwen3-fr-bf16/a379fcebdf38ae7a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
   "J'aime faire des gâteaux": {
    "file": "audio/tts/qwen3-fr-bf16/35bda2d762144049.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2723,6 +3751,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
   },
+  "J'aimerais bien garder ce nom": {
+   "file": "audio/tts/qwen3-fr-bf16/bbbc9d1d8f622c88.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.5
+  },
+  "J'aimerais bien garder ce nom.": {
+   "file": "audio/tts/qwen3-fr-bf16/1685a9ad43a88146.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "J'aimerais construire": {
+   "file": "audio/tts/qwen3-fr-bf16/af1a6ddb3b413a0b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
   "J'aimerais faire un petit livre": {
    "file": "audio/tts/qwen3-fr-bf16/527c2281bb522c03.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -2737,6 +3780,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/6d907ed54d70b3af.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "J'aimerais rester": {
+   "file": "audio/tts/qwen3-fr-bf16/e6a4d2cff5f81437.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.92
+  },
+  "J'aimerais rester.": {
+   "file": "audio/tts/qwen3-fr-bf16/f50acdcbe3b9d696.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "J'aimerais revoir Odette": {
    "file": "audio/tts/qwen3-fr-bf16/f23933de5860b2c4.mp3",
@@ -2757,6 +3810,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/2dd7c7b8b621c7f6.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
+  },
+  "J'aimerais être content": {
+   "file": "audio/tts/qwen3-fr-bf16/9b9e4031d2ab175c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
   },
   "J'aimerais être pâtissier": {
    "file": "audio/tts/qwen3-fr-bf16/73cfdad0d7219220.mp3",
@@ -2802,6 +3860,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/41a3c49a5d15b363.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
+  },
+  "J'attends": {
+   "file": "audio/tts/qwen3-fr-bf16/a51938926dd6ff36.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.6
+  },
+  "J'attends des graines. Même taille, même papier… Pardon !": {
+   "file": "audio/tts/qwen3-fr-bf16/d3346934f4c25e1a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.62
   },
   "J'attends le bus depuis dix minutes.": {
    "file": "audio/tts/qwen3-fr-bf16/70164ad89b5bc35c.mp3",
@@ -2872,6 +3940,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/56f4aee38a10383a.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.66
+  },
+  "J'habite ici": {
+   "file": "audio/tts/qwen3-fr-bf16/461afefa55636c35.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.77
   },
   "J'habite près du parc.": {
    "file": "audio/tts/qwen3-fr-bf16/d9b7b51516a1d18e.mp3",
@@ -2983,10 +4056,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.74
   },
+  "Jamais de la vie, monsieur Marcel. Bonne nuit.": {
+   "file": "audio/tts/qwen3-fr-bf16/c8b2393c4e0b7745.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.84
+  },
   "Je bois un café chaque matin.": {
    "file": "audio/tts/qwen3-fr-bf16/cb323609b7b1847a.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.58
+  },
+  "Je change de ville": {
+   "file": "audio/tts/qwen3-fr-bf16/cfc95d8981c07829.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Je change de ville tous les ans.": {
+   "file": "audio/tts/qwen3-fr-bf16/cffec8048115455e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.62
   },
   "Je cherche": {
    "file": "audio/tts/qwen3-fr-bf16/357e3e461de09077.mp3",
@@ -3002,6 +4090,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/f241f51a1094b91b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.92
+  },
+  "Je choisis": {
+   "file": "audio/tts/qwen3-fr-bf16/c46b2d4402944fb0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
   },
   "Je choisis la tarte aux pommes.": {
    "file": "audio/tts/qwen3-fr-bf16/2b2f89b1f9a73f8f.mp3",
@@ -3048,6 +4141,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.44
   },
+  "Je crois que": {
+   "file": "audio/tts/qwen3-fr-bf16/f96c0b521c246d12.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "Je crois que c'est à nous.": {
+   "file": "audio/tts/qwen3-fr-bf16/eea762759a60ff44.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
   "Je dansais très bien.": {
    "file": "audio/tts/qwen3-fr-bf16/b38e335d0863425d.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3078,6 +4181,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.24
   },
+  "Je donne ma langue au chat": {
+   "file": "audio/tts/qwen3-fr-bf16/32d1e4f5139ff323.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
+  },
   "Je donne un livre à mon ami.": {
    "file": "audio/tts/qwen3-fr-bf16/9a99d1c76347731c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3102,6 +4210,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/036f9eff2c7d9031.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.2
+  },
+  "Je l'ai mangée": {
+   "file": "audio/tts/qwen3-fr-bf16/26d7f5062518c548.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "Je l'ai ratée": {
+   "file": "audio/tts/qwen3-fr-bf16/6f59f9355fd5877a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
+  "Je l'ai ratée.": {
+   "file": "audio/tts/qwen3-fr-bf16/43960c7f6083c456.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
+  "Je l'ai ratée. Encore !": {
+   "file": "audio/tts/qwen3-fr-bf16/07cf48eef274844d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.04
+  },
+  "Je l'ai réparée": {
+   "file": "audio/tts/qwen3-fr-bf16/5945375e636e2395.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
   },
   "Je l'ouvre": {
    "file": "audio/tts/qwen3-fr-bf16/a8d259808458b298.mp3",
@@ -3147,6 +4280,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/e5612ea12ff5c3d7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.0
+  },
+  "Je les ai achetés": {
+   "file": "audio/tts/qwen3-fr-bf16/0cef157aefbf9d84.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "Je les ai achetés pour vous.": {
+   "file": "audio/tts/qwen3-fr-bf16/2a7054082b9c3246.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
+  "Je les ai jetés": {
+   "file": "audio/tts/qwen3-fr-bf16/2b9981a6da48f749.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
+  "Je leur ai dit": {
+   "file": "audio/tts/qwen3-fr-bf16/38ee4283a69bbc46.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "Je leur ai dit.": {
+   "file": "audio/tts/qwen3-fr-bf16/12d797881cda0bb9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "Je leur laisse un message.": {
    "file": "audio/tts/qwen3-fr-bf16/26df791f485e16ac.mp3",
@@ -3208,6 +4366,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
   },
+  "Je me couche à neuf heures et demie.": {
+   "file": "audio/tts/qwen3-fr-bf16/cb20209bdbcbade6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.72
+  },
   "Je me demande s'il vient.": {
    "file": "audio/tts/qwen3-fr-bf16/56dfa29a3f715d75.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3233,10 +4396,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.26
   },
+  "Je me lève à six heures.": {
+   "file": "audio/tts/qwen3-fr-bf16/22a8e8badc0e7c76.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
+  "Je me presse de rire de tout, de peur d'être obligé d'en pleurer.": {
+   "file": "audio/tts/qwen3-fr-bf16/70e580d0382633f7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.74
+  },
   "Je me réveille tôt le lundi.": {
    "file": "audio/tts/qwen3-fr-bf16/3af2b2d29caf2d6d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.6
+  },
+  "Je me souviens": {
+   "file": "audio/tts/qwen3-fr-bf16/e353c3c220efc6ea.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
   },
   "Je me souviens de toi.": {
    "file": "audio/tts/qwen3-fr-bf16/87094b9438e817ae.mp3",
@@ -3273,6 +4451,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
   },
+  "Je n'ai jamais mangé ça": {
+   "file": "audio/tts/qwen3-fr-bf16/2477237c43897d96.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
   "Je n'ai jamais rien dit": {
    "file": "audio/tts/qwen3-fr-bf16/74000e095b698893.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3287,6 +4470,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/a0bbe0d72747001f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "Je n'ai jamais vu ça.": {
+   "file": "audio/tts/qwen3-fr-bf16/f897514c11091db7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "Je n'ai pas de bougie.": {
+   "file": "audio/tts/qwen3-fr-bf16/3b343964ef490855.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "Je n'ai pas de bougie. Pas de téléphone. Rien !": {
+   "file": "audio/tts/qwen3-fr-bf16/dc987281e9a03376.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.26
   },
   "Je n'ai pas de voiture.": {
    "file": "audio/tts/qwen3-fr-bf16/6b86b6c791fa78cc.mp3",
@@ -3358,6 +4556,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.6
   },
+  "Je n'en reviens pas !": {
+   "file": "audio/tts/qwen3-fr-bf16/a31bf948c5cc33ee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
   "Je n'habite plus ici.": {
    "file": "audio/tts/qwen3-fr-bf16/d0ded79dfa24408a.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3383,6 +4586,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.22
   },
+  "Je ne connais pas ce mot": {
+   "file": "audio/tts/qwen3-fr-bf16/dcb614c9f8c79f3d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
   "Je ne connais pas ce vin. Qu'est-ce que vous me conseillez ?": {
    "file": "audio/tts/qwen3-fr-bf16/a1335067d6914180.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3397,6 +4605,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/39e3880173cd61e2.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.96
+  },
+  "Je ne dors pas": {
+   "file": "audio/tts/qwen3-fr-bf16/a05d8fa2fa29777a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
+  "Je ne dors pas.": {
+   "file": "audio/tts/qwen3-fr-bf16/ac25604c22569b39.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
   },
   "Je ne l'ai dit à personne.": {
    "file": "audio/tts/qwen3-fr-bf16/83eb12eaf3a45411.mp3",
@@ -3478,6 +4696,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
   },
+  "Je ne peux pas": {
+   "file": "audio/tts/qwen3-fr-bf16/2755e2c69d039f61.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
   "Je ne regarde jamais en arrière": {
    "file": "audio/tts/qwen3-fr-bf16/76f6412e14b53e24.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3488,10 +4711,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.88
   },
+  "Je ne regarde jamais la montagne": {
+   "file": "audio/tts/qwen3-fr-bf16/484e8a47751f28f0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.72
+  },
   "Je ne sais pas": {
    "file": "audio/tts/qwen3-fr-bf16/2fa28673e50805d9.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.76
+  },
+  "Je ne sais pas cuisiner": {
+   "file": "audio/tts/qwen3-fr-bf16/238f68ae114aff31.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
+  "Je ne sais pas faire ça": {
+   "file": "audio/tts/qwen3-fr-bf16/93e4bee36ad66094.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
   },
   "Je ne sais pas où il habite.": {
    "file": "audio/tts/qwen3-fr-bf16/83855ee3f5e32fc9.mp3",
@@ -3528,10 +4766,40 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
   },
+  "Je ne suis chez moi nulle part": {
+   "file": "audio/tts/qwen3-fr-bf16/f7bec1ef0bf45bbf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.6
+  },
+  "Je ne suis chez moi nulle part.": {
+   "file": "audio/tts/qwen3-fr-bf16/514f3d26a713890f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
+  "Je ne suis jamais montée": {
+   "file": "audio/tts/qwen3-fr-bf16/624565bb59d6b161.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
   "Je ne suis pas allé.": {
    "file": "audio/tts/qwen3-fr-bf16/9418b70bbbe56aea.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
+  },
+  "Je ne suis pas debout": {
+   "file": "audio/tts/qwen3-fr-bf16/0fd2269ebe751cfd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
+  "Je ne suis pas debout.": {
+   "file": "audio/tts/qwen3-fr-bf16/9bf1e5c981e2eefa.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
+  "Je ne travaille pas": {
+   "file": "audio/tts/qwen3-fr-bf16/a55d7317b479310f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
   },
   "Je ne trouve pas mes clés.": {
    "file": "audio/tts/qwen3-fr-bf16/2e63f783bef7aabd.mp3",
@@ -3582,6 +4850,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/14110d05f86a14a3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.08
+  },
+  "Je pensais que": {
+   "file": "audio/tts/qwen3-fr-bf16/267a78d3e2d29b7c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
+  "Je pensais que tu avais une amoureuse.": {
+   "file": "audio/tts/qwen3-fr-bf16/06431e1d79501268.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.68
+  },
+  "Je pensais que tu avais une amoureuse. Voilà.": {
+   "file": "audio/tts/qwen3-fr-bf16/ceaac5808fd146fe.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.66
   },
   "Je pense que": {
    "file": "audio/tts/qwen3-fr-bf16/917c5ee5b23279ce.mp3",
@@ -3638,6 +4921,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.3
   },
+  "Je peux payer par carte ? — Pas de souci.": {
+   "file": "audio/tts/qwen3-fr-bf16/1828d3d77383d125.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.52
+  },
   "Je peux payer par carte ou seulement en espèces ?": {
    "file": "audio/tts/qwen3-fr-bf16/637ba31676bc046e.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3663,6 +4951,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.8
   },
+  "Je pourrais dormir": {
+   "file": "audio/tts/qwen3-fr-bf16/aaab931898bccd42.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
+  },
+  "Je pourrais partir": {
+   "file": "audio/tts/qwen3-fr-bf16/b25dce259d965715.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "Je pourrais partir. Il y a un studio à Montreuil, avec un garage.": {
+   "file": "audio/tts/qwen3-fr-bf16/d72faccc7ff33d8e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.08
+  },
   "Je prenais des photos": {
    "file": "audio/tts/qwen3-fr-bf16/2f581e49c9fb8acb.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3672,6 +4975,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7eeb98d59ccb6892.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "Je prends": {
+   "file": "audio/tts/qwen3-fr-bf16/a7472cd875b3a389.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
   },
   "Je prends celui-ci.": {
    "file": "audio/tts/qwen3-fr-bf16/250ca70595082375.mp3",
@@ -3687,6 +4995,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/d73a49be6f0f6fc5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.7
+  },
+  "Je prends votre mot.": {
+   "file": "audio/tts/qwen3-fr-bf16/86a990d012be6d17.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
   },
   "Je promène le chien.": {
    "file": "audio/tts/qwen3-fr-bf16/d98cd559fda20126.mp3",
@@ -3753,6 +5066,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.24
   },
+  "Je reste une nuit": {
+   "file": "audio/tts/qwen3-fr-bf16/920c1f3557ade6df.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "Je reste. J'ai décidé. Ici, entre la colline qui travaille et la colline qui prie.": {
    "file": "audio/tts/qwen3-fr-bf16/b91eee14bcfb3f4d.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3788,6 +5106,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.38
   },
+  "Je sais. Moi, je ne dis rien… mais je vois tout.": {
+   "file": "audio/tts/qwen3-fr-bf16/c58f2503b1cb7e84.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.2
+  },
+  "Je suis Eulalie. J'habite ici depuis mille sept cent quatre-vingt-six.": {
+   "file": "audio/tts/qwen3-fr-bf16/e4c65489f853e81e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.4
+  },
   "Je suis arrivé il y a deux jours.": {
    "file": "audio/tts/qwen3-fr-bf16/12feb7dc315bc41e.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3808,6 +5136,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.5
   },
+  "Je suis désolée": {
+   "file": "audio/tts/qwen3-fr-bf16/a07c23e759cd6f04.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
+  "Je suis désolée, Gabriel. Pour le colis, et pour le bruit.": {
+   "file": "audio/tts/qwen3-fr-bf16/0b51f046ef92ea70.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.72
+  },
   "Je suis désolée, monsieur. Pour les visites et les appels, il faut passer par sa fille.": {
    "file": "audio/tts/qwen3-fr-bf16/250a1636690033f0.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3817,6 +5155,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/a5f5e80b8374d4e9.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.18
+  },
+  "Je suis en colère": {
+   "file": "audio/tts/qwen3-fr-bf16/71b67285e4f94d8c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
   },
   "Je suis en retard": {
    "file": "audio/tts/qwen3-fr-bf16/9cf5cec138083fec.mp3",
@@ -3847,6 +5190,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/a93f3732950cc3c3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.1
+  },
+  "Je suis montée": {
+   "file": "audio/tts/qwen3-fr-bf16/86fa48aa12de69b0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
+  },
+  "Je suis montée !": {
+   "file": "audio/tts/qwen3-fr-bf16/c19bbea9288958e3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
+  "Je suis montée ! Trois marches !": {
+   "file": "audio/tts/qwen3-fr-bf16/647919b97c6a74ee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.0
   },
   "Je suis nerveuse.": {
    "file": "audio/tts/qwen3-fr-bf16/4200ce7dc35daecb.mp3",
@@ -3908,6 +5266,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.22
   },
+  "Je suis un fantôme": {
+   "file": "audio/tts/qwen3-fr-bf16/78ee63470743d18c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
+  "Je suis venue": {
+   "file": "audio/tts/qwen3-fr-bf16/b818f0a7ea283dcd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
+  "Je suis venue une fois, à huit ans. C'est tout.": {
+   "file": "audio/tts/qwen3-fr-bf16/4b164d53299be03f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.78
+  },
   "Je t'aime": {
    "file": "audio/tts/qwen3-fr-bf16/b8081e4d5884700b.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -3952,6 +5325,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7fe3e1cb27686a6e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.18
+  },
+  "Je vais aller l'écouter": {
+   "file": "audio/tts/qwen3-fr-bf16/1e15ca224fb35b84.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Je vais apporter le dessert": {
+   "file": "audio/tts/qwen3-fr-bf16/712532499a8a29ee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.44
   },
   "Je vais au cinéma.": {
    "file": "audio/tts/qwen3-fr-bf16/16605cd2f90a28ab.mp3",
@@ -4023,6 +5406,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.24
   },
+  "Je vais prendre mon courage à deux mains": {
+   "file": "audio/tts/qwen3-fr-bf16/f52fe5a425274a7c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.66
+  },
   "Je vais repasser le permis": {
    "file": "audio/tts/qwen3-fr-bf16/a1a79e77ac25dcb5.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4043,10 +5431,40 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
   },
+  "Je vais tout rater": {
+   "file": "audio/tts/qwen3-fr-bf16/30fb29f9639aa1ad.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
+  "Je vais tout rater.": {
+   "file": "audio/tts/qwen3-fr-bf16/39417f82a84d6c52.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "Je vais vendre": {
+   "file": "audio/tts/qwen3-fr-bf16/6e2a84d790cad417.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "Je vais vendre.": {
+   "file": "audio/tts/qwen3-fr-bf16/3c5ea1fbad667637.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
+  },
+  "Je vais vous aider": {
+   "file": "audio/tts/qwen3-fr-bf16/77a8d1b6379c96ac.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
   "Je vais à la boulangerie. À tout à l'heure !": {
    "file": "audio/tts/qwen3-fr-bf16/edd1835e4d5c2732.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.56
+  },
+  "Je vais être au premier rang.": {
+   "file": "audio/tts/qwen3-fr-bf16/71a24740d5c8109a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
   },
   "Je veux apprendre le français.": {
    "file": "audio/tts/qwen3-fr-bf16/2eb6a97949ac5570.mp3",
@@ -4108,6 +5526,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.48
   },
+  "Je voudrais te dire quelque chose.": {
+   "file": "audio/tts/qwen3-fr-bf16/3b87066065063dde.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
+  },
   "Je voudrais un café": {
    "file": "audio/tts/qwen3-fr-bf16/17ae3252bc2cdbe8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4137,6 +5560,26 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/8239ac9e80d156ec.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.62
+  },
+  "Je voudrais une chambre": {
+   "file": "audio/tts/qwen3-fr-bf16/bfef92cb29636665.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
+  "Je voudrais voir": {
+   "file": "audio/tts/qwen3-fr-bf16/3f4bfaa7887f25cb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "Je voudrais voir les sorties de secours.": {
+   "file": "audio/tts/qwen3-fr-bf16/8003eff75541c5e8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.84
+  },
+  "Je voulais monter.": {
+   "file": "audio/tts/qwen3-fr-bf16/1a1f73f7d0713993.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
   },
   "Je voulais être photographe": {
    "file": "audio/tts/qwen3-fr-bf16/df4d4bcd5ed28469.mp3",
@@ -4258,6 +5701,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.5
   },
+  "L'ascenseur est encore en panne ! Et mes trente kilos de terre !": {
+   "file": "audio/tts/qwen3-fr-bf16/60a43436a4dbc91e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.82
+  },
+  "L'eau est entrée": {
+   "file": "audio/tts/qwen3-fr-bf16/d5e074f18aea0acf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
+  },
+  "L'hiver dernier, elle a porté mes courses.": {
+   "file": "audio/tts/qwen3-fr-bf16/5cc311b0c7d0f43d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.12
+  },
   "L'homme qui parle est mon père.": {
    "file": "audio/tts/qwen3-fr-bf16/673236e9e63f0887.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4273,10 +5731,45 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.3
   },
+  "L'été, j'habitais chez elle.": {
+   "file": "audio/tts/qwen3-fr-bf16/65eb77ec319f327c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.88
+  },
+  "La Savoie est devenue française": {
+   "file": "audio/tts/qwen3-fr-bf16/1908eabafac92c6f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.94
+  },
+  "La banque a dit non. Il me manque vingt mille euros.": {
+   "file": "audio/tts/qwen3-fr-bf16/fcfcb2e512f25c9e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
+  },
   "La banque est à côté de la poste.": {
    "file": "audio/tts/qwen3-fr-bf16/030d4fd376fce785.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.7
+  },
+  "La cave où personne ne va.": {
+   "file": "audio/tts/qwen3-fr-bf16/50645927926c9ea9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.58
+  },
+  "La chambre sept": {
+   "file": "audio/tts/qwen3-fr-bf16/ffbd89904cc2b268.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "La critique est aisée, et l'art est difficile.": {
+   "file": "audio/tts/qwen3-fr-bf16/5cae63b8b73c7249.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.94
+  },
+  "La dame qui la servait": {
+   "file": "audio/tts/qwen3-fr-bf16/74a4c436601b9f02.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
   },
   "La deuxième à gauche. Et le musée est où ?": {
    "file": "audio/tts/qwen3-fr-bf16/b1725cdf96c25b60.mp3",
@@ -4293,6 +5786,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.12
   },
+  "La musique, c'est la vie, monsieur !": {
+   "file": "audio/tts/qwen3-fr-bf16/0d62a9a8e5d2441c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.88
+  },
   "La même photo… Monsieur Vial, j'aimerais savoir. Qu'est-ce qui s'est passé, ce samedi de septembre ?": {
    "file": "audio/tts/qwen3-fr-bf16/d85ebf8406302cec.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4302,6 +5800,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/3ebba9eaf14ea013.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.8
+  },
+  "La première femme": {
+   "file": "audio/tts/qwen3-fr-bf16/b7c3900fda496875.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "La prochaine fois, tu devrais me présenter ta famille !": {
+   "file": "audio/tts/qwen3-fr-bf16/4ac8a06318c18443.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
   },
   "La règle a quarante ans": {
    "file": "audio/tts/qwen3-fr-bf16/b363f10d9c0611a8.mp3",
@@ -4317,6 +5825,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/45e7008069dbb252.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.72
+  },
+  "La vue est belle.": {
+   "file": "audio/tts/qwen3-fr-bf16/4838ef0e157e5c21.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "La vérité sort de la bouche des enfants.": {
    "file": "audio/tts/qwen3-fr-bf16/51b9ec7fedc812bb.mp3",
@@ -4398,10 +5911,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.9
   },
+  "Le dîner est fini": {
+   "file": "audio/tts/qwen3-fr-bf16/87ea91660c604f9d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
   "Le dîner est prêt ! — J'arrive !": {
    "file": "audio/tts/qwen3-fr-bf16/4df7ed5deb2520d4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.12
+  },
+  "Le feu a besoin d'air": {
+   "file": "audio/tts/qwen3-fr-bf16/b947112d82a63d2f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.44
+  },
+  "Le feu a besoin d'air. Monsieur Lavoisier l'a montré, il y a longtemps.": {
+   "file": "audio/tts/qwen3-fr-bf16/742b8923fa6dcd31.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.36
   },
   "Le film commence à huit heures. On y va ?": {
    "file": "audio/tts/qwen3-fr-bf16/ebb26321f62f01f7.mp3",
@@ -4423,6 +5951,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 6.22
   },
+  "Le huit août, le soir, ils étaient en haut. J'ai pleuré de joie.": {
+   "file": "audio/tts/qwen3-fr-bf16/e7153e79476cf1da.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.26
+  },
   "Le jeudi, le salon ferme à dix-neuf heures.": {
    "file": "audio/tts/qwen3-fr-bf16/f9b391f0894ebf36.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4432,6 +5965,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/5cd783669e784cd7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.82
+  },
+  "Le matin, dans le métro, on est serrés comme des sardines.": {
+   "file": "audio/tts/qwen3-fr-bf16/bbad9f73fde99bf1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.34
   },
   "Le matin, je me lave.": {
    "file": "audio/tts/qwen3-fr-bf16/fe162e0ebda3685d.mp3",
@@ -4443,20 +5981,45 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.28
   },
+  "Le mercredi, c'est toujours plus fort.": {
+   "file": "audio/tts/qwen3-fr-bf16/0e2cf9f735bdfb81.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.42
+  },
   "Le mieux est l'ennemi du bien.": {
    "file": "audio/tts/qwen3-fr-bf16/be4e11a62b3d2167.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
+  },
+  "Le monsieur des fenêtres a dit : tout en plastique, en une semaine.": {
+   "file": "audio/tts/qwen3-fr-bf16/989c07a4bfa32ba1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.58
   },
   "Le musée des Beaux-Arts. C'est loin d'ici ?": {
    "file": "audio/tts/qwen3-fr-bf16/902e4254477221a2.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.84
   },
+  "Le musée est fermé le lundi. — Ah bon ?": {
+   "file": "audio/tts/qwen3-fr-bf16/4364e366ed1cf4ee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.58
+  },
   "Le musée, c'est loin d'ici ?": {
    "file": "audio/tts/qwen3-fr-bf16/8689279782eaeb68.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.82
+  },
+  "Le noir, encore ! Tu vas me le dire demain, alors.": {
+   "file": "audio/tts/qwen3-fr-bf16/662ec8d2b87c2bc1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.1
+  },
+  "Le piano joue tout seul": {
+   "file": "audio/tts/qwen3-fr-bf16/846471254cc7c88f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.46
   },
   "Le plus beau cadeau de ma vie ? C'était une question.": {
    "file": "audio/tts/qwen3-fr-bf16/1c2a7f953bbeaa0b.mp3",
@@ -4493,6 +6056,31 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.08
   },
+  "Le soir, Mamie chantait avec elle.": {
+   "file": "audio/tts/qwen3-fr-bf16/117f75efbe5dd596.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
+  },
+  "Le superflu, chose très nécessaire.": {
+   "file": "audio/tts/qwen3-fr-bf16/032a27272cb0dc74.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.48
+  },
+  "Le tambour garde le rythme. La petite boîte garde la mélodie. Ensemble, ce serait une chanson.": {
+   "file": "audio/tts/qwen3-fr-bf16/ef28cf29ed80fcb5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 6.14
+  },
+  "Le toit est vieux": {
+   "file": "audio/tts/qwen3-fr-bf16/b6c073afae338019.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.52
+  },
+  "Le toit est vieux.": {
+   "file": "audio/tts/qwen3-fr-bf16/380293774c777888.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "Le train arrive à midi.": {
    "file": "audio/tts/qwen3-fr-bf16/f77874037619181d.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4512,6 +6100,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/44c143c9ca6aef84.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "Le travail éloigne de nous trois grands maux : l'ennui, le vice et le besoin.": {
+   "file": "audio/tts/qwen3-fr-bf16/22dd27bb5001fe12.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.66
   },
   "Lequel": {
    "file": "audio/tts/qwen3-fr-bf16/aba3d6ab392b0924.mp3",
@@ -4538,6 +6131,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.3
   },
+  "Les clients ne vont jamais dire ça": {
+   "file": "audio/tts/qwen3-fr-bf16/7bb5350ae09fbe07.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.68
+  },
+  "Les deux enfants le répètent": {
+   "file": "audio/tts/qwen3-fr-bf16/af743eeb9e016fc0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.46
+  },
   "Les enfants dorment-ils ?": {
    "file": "audio/tts/qwen3-fr-bf16/3a18d28510f7ac64.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4547,6 +6150,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/60e25efafee0efa9.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.6
+  },
+  "Les enfants nous voient": {
+   "file": "audio/tts/qwen3-fr-bf16/f28195751ec82941.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "Les enfants s'amusent dans le jardin.": {
    "file": "audio/tts/qwen3-fr-bf16/2c0fba790093508a.mp3",
@@ -4563,15 +6171,35 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.1
   },
+  "Les fantômes, on les garde comme ils sont.": {
+   "file": "audio/tts/qwen3-fr-bf16/56156ea5cf6aa007.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.52
+  },
+  "Les fenêtres sont vieilles": {
+   "file": "audio/tts/qwen3-fr-bf16/cc3de8a733d9380d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.46
+  },
   "Les feuilles tombent en automne.": {
    "file": "audio/tts/qwen3-fr-bf16/e29b11ff0607c63e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.66
   },
+  "Les numéros, c'est triste. Rhododendron… quelle merveille !": {
+   "file": "audio/tts/qwen3-fr-bf16/a743adadeed6a0a5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.96
+  },
   "Les pastilles et le spray, ça fait douze euros quarante.": {
    "file": "audio/tts/qwen3-fr-bf16/f058cfa9a8bfa5d4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.38
+  },
+  "Les skis changent": {
+   "file": "audio/tts/qwen3-fr-bf16/f720255cf06010d7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
   },
   "Les vestes sont ici. Quelle taille faites-vous ?": {
    "file": "audio/tts/qwen3-fr-bf16/06cc2499fe0c431b.mp3",
@@ -4598,6 +6226,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
   },
+  "Lucie dort en bas. Elle n'a plus peur, elle.": {
+   "file": "audio/tts/qwen3-fr-bf16/a454ae5cf56285af.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.1
+  },
   "Lui, il adore": {
    "file": "audio/tts/qwen3-fr-bf16/b71a3ef9bfbafa12.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4612,6 +6245,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7b9ab11b836377fb.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.08
+  },
+  "Lundi soir, je t'ai vu sur le palier.": {
+   "file": "audio/tts/qwen3-fr-bf16/de5f93401009fbd7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.4
+  },
+  "Lundi soir, je t'ai vu sur le palier. Avec une femme.": {
+   "file": "audio/tts/qwen3-fr-bf16/53b412273f0106a5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.84
+  },
+  "Lundi soir, sur le palier… Elle nous a vus ! Toi et moi !": {
+   "file": "audio/tts/qwen3-fr-bf16/7462ea46f5c3948a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.68
   },
   "Lundi, c'est Hugo. Je vais répondre à une question. Votre café. Aujourd'hui, sans question.": {
    "file": "audio/tts/qwen3-fr-bf16/3d4e9103a61271c1.mp3",
@@ -4638,6 +6286,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.16
   },
+  "Ma fille vous dit bonjour": {
+   "file": "audio/tts/qwen3-fr-bf16/2562476c3c88d057.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.28
+  },
+  "Ma fille vous dit bonjour.": {
+   "file": "audio/tts/qwen3-fr-bf16/f12a4106bc060e08.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
+  "Ma fille vous dit bonjour. Elle dit que vous brillez.": {
+   "file": "audio/tts/qwen3-fr-bf16/533413611f19809e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.88
+  },
+  "Ma grand-mère a appelé tout le village": {
+   "file": "audio/tts/qwen3-fr-bf16/315891a716614b63.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.12
+  },
   "Ma grand-mère a quatre-vingts ans.": {
    "file": "audio/tts/qwen3-fr-bf16/e1bde064b4e37c59.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4663,6 +6331,51 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.14
   },
+  "Ma tante": {
+   "file": "audio/tts/qwen3-fr-bf16/25c82f06665d5e59.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "Ma tante Hortense": {
+   "file": "audio/tts/qwen3-fr-bf16/d3127fb6b45d1e87.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "Ma tante Hortense n'est plus là. Je suis Lucie.": {
+   "file": "audio/tts/qwen3-fr-bf16/7851950c68fc4f5e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.9
+  },
+  "Ma tante trichait ? Racontez-moi, Marcel. Comment était-elle ?": {
+   "file": "audio/tts/qwen3-fr-bf16/0761a50030c7c459.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.18
+  },
+  "Madame Hortense disait…": {
+   "file": "audio/tts/qwen3-fr-bf16/c2b069438f4288d5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.36
+  },
+  "Madame Hortense serait fière de vous.": {
+   "file": "audio/tts/qwen3-fr-bf16/847f3605f8d751ab.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.82
+  },
+  "Maintenant, la nuit, le silence… ça me fait un peu peur.": {
+   "file": "audio/tts/qwen3-fr-bf16/78a98430d94ca91c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.76
+  },
+  "Mais c'est mon hôtel !": {
+   "file": "audio/tts/qwen3-fr-bf16/dbe09c650f41933b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Mais c'est ton métier ! Pourquoi tu ne la répares pas ?": {
+   "file": "audio/tts/qwen3-fr-bf16/787ba7c84696fd66.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.82
+  },
   "Mais il venait chaque dimanche pour la tarte.": {
    "file": "audio/tts/qwen3-fr-bf16/7efc906eb02619b6.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4672,6 +6385,46 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/edb3601dbfa58f1e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.62
+  },
+  "Mais la vue est belle, non ?": {
+   "file": "audio/tts/qwen3-fr-bf16/0034502588e1751f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "Mamie Jeanne disait : les boîtes qui vont bien ensemble ne sont jamais pareilles.": {
+   "file": "audio/tts/qwen3-fr-bf16/ff1bd6121d4fd4bb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.14
+  },
+  "Mamie chantait": {
+   "file": "audio/tts/qwen3-fr-bf16/ee9f548f5957969b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
+  "Marcel va être triste. Il l'aime tant, cet ascenseur.": {
+   "file": "audio/tts/qwen3-fr-bf16/0ea72ca928c62dea.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.6
+  },
+  "Marcel, regardez cette photo. Elle était dans mon grenier.": {
+   "file": "audio/tts/qwen3-fr-bf16/cca381e73a3bd9bd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.8
+  },
+  "Marcel… vous êtes transparent !": {
+   "file": "audio/tts/qwen3-fr-bf16/4c6e3d2516395876.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.26
+  },
+  "Marché conclu !": {
+   "file": "audio/tts/qwen3-fr-bf16/05e5945e7d3f3aaf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "Marché conclu ! Dix heures et demie. Pas une minute avant !": {
+   "file": "audio/tts/qwen3-fr-bf16/cd1ed46951137d6f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.72
   },
   "Marie aime son père.": {
    "file": "audio/tts/qwen3-fr-bf16/9cf75e91b82fa99c.mp3",
@@ -4708,10 +6461,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.98
   },
+  "Merci pour le coup de main": {
+   "file": "audio/tts/qwen3-fr-bf16/a25124d55f5f6e97.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
+  "Merci pour le coup de main avec le déménagement !": {
+   "file": "audio/tts/qwen3-fr-bf16/0db40ffcbc240a5c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.14
+  },
   "Merci pour tout, à bientôt !": {
    "file": "audio/tts/qwen3-fr-bf16/757959f8c295bd06.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.84
+  },
+  "Merci, Yanis. Et pour le voisin, vous avez quelque chose ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e78151fbe5d5fdbc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.74
   },
   "Merci, au revoir !": {
    "file": "audio/tts/qwen3-fr-bf16/8fa294d665f52af1.mp3",
@@ -4778,6 +6546,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.14
   },
+  "Mes colis arrivent": {
+   "file": "audio/tts/qwen3-fr-bf16/883e029cb4a84ef6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "Mes colis arrivent toujours chez le voisin. Pourquoi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e507eab6421ce7d7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.72
+  },
+  "Mes mains ne tiennent rien": {
+   "file": "audio/tts/qwen3-fr-bf16/68095207c83d42c7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.5
+  },
   "Mes parents me permettent de sortir le samedi.": {
    "file": "audio/tts/qwen3-fr-bf16/7dcecb6cbe564215.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4792,6 +6575,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/824d2aa4b5f1c598.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.98
+  },
+  "Mmm… C'est bon ! J'ai faim, maintenant.": {
+   "file": "audio/tts/qwen3-fr-bf16/9b8dcaa83db6aa5f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.8
+  },
+  "Moi ? En deux mille cinq ? Je me souviens ! Le monsieur en rouge !": {
+   "file": "audio/tts/qwen3-fr-bf16/2e7401b727afca23.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.4
   },
   "Moi ? Oh non, je suis trop vieille !": {
    "file": "audio/tts/qwen3-fr-bf16/f62b9933f62e95e8.mp3",
@@ -4828,10 +6621,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.98
   },
+  "Moi aussi, je voulais monter. Mais une dame, à cette époque…": {
+   "file": "audio/tts/qwen3-fr-bf16/6c6ce1965c46e2dd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.68
+  },
+  "Moi aussi. Ce serait le nom parfait. On le garde !": {
+   "file": "audio/tts/qwen3-fr-bf16/257229541f721db5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.26
+  },
+  "Moi aussi. Depuis la bougie.": {
+   "file": "audio/tts/qwen3-fr-bf16/22053f36d00676ec.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.04
+  },
   "Moi, au deuxième. Vous venez d'où ?": {
    "file": "audio/tts/qwen3-fr-bf16/0ee0459cf74f5796.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.82
+  },
+  "Moi, j'ai des bougies.": {
+   "file": "audio/tts/qwen3-fr-bf16/7dbf7e7e75025bd4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
   },
   "Moi, j'ai un perroquet. Il ne m'aime pas non plus.": {
    "file": "audio/tts/qwen3-fr-bf16/8a24f9b57f870f32.mp3",
@@ -4842,6 +6655,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/786c732767e2a214.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.6
+  },
+  "Moi, je me couche à deux heures du matin !": {
+   "file": "audio/tts/qwen3-fr-bf16/2e68514df35a16b8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.5
   },
   "Moi, je préfère le thé.": {
    "file": "audio/tts/qwen3-fr-bf16/071c6ca35c78bfb9.mp3",
@@ -4858,6 +6676,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.6
   },
+  "Moi, sur le toit ? Je ne suis jamais montée sur une échelle !": {
+   "file": "audio/tts/qwen3-fr-bf16/5ae346efb02d2dd2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.78
+  },
   "Mon anniversaire est en juillet.": {
    "file": "audio/tts/qwen3-fr-bf16/e6412aa574b09d8f.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4872,6 +6695,26 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/e4f01fac5cbae3c0.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.18
+  },
+  "Mon mari a réservé en octobre": {
+   "file": "audio/tts/qwen3-fr-bf16/173752ff997a6893.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.74
+  },
+  "Mon mari m'a dit": {
+   "file": "audio/tts/qwen3-fr-bf16/d675942a534d1373.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "Mon mari m'a dit que la dame au téléphone avait un accent ancien.": {
+   "file": "audio/tts/qwen3-fr-bf16/4839a38eb9a9e2fc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.88
+  },
+  "Mon mari m'a dit…": {
+   "file": "audio/tts/qwen3-fr-bf16/b47a519339e0b2ec.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
   },
   "Mon plan ! À dix heures douze, une photo du Sacré-Cœur.": {
    "file": "audio/tts/qwen3-fr-bf16/53ec66aac197cdfb.mp3",
@@ -4898,6 +6741,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.8
   },
+  "Mon tambour ! Enfin ! Merci, voisin !": {
+   "file": "audio/tts/qwen3-fr-bf16/ff849d123a8f795f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.46
+  },
   "Mon téléphone ne marche pas.": {
    "file": "audio/tts/qwen3-fr-bf16/6dbf79e6ee894d1a.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -4908,10 +6756,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.62
   },
+  "Monsieur Gabriel, vous avez la tête des mauvais jours.": {
+   "file": "audio/tts/qwen3-fr-bf16/deb4819ac90558a6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.0
+  },
+  "Monsieur Garnier ? Il n'y a pas de lumière !": {
+   "file": "audio/tts/qwen3-fr-bf16/c74b25e8e9176ee5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.54
+  },
+  "Monsieur Garnier, vous êtes notre premier client !": {
+   "file": "audio/tts/qwen3-fr-bf16/b8e1ab57302a739a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.62
+  },
   "Monsieur Vial… Est-ce que je pourrais revenir jeudi ?": {
    "file": "audio/tts/qwen3-fr-bf16/87f97db2842b4a4f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.94
+  },
+  "Moussa m'a invitée": {
+   "file": "audio/tts/qwen3-fr-bf16/b267ee8b74e8a80a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
   },
   "N'a-t-il pas faim ?": {
    "file": "audio/tts/qwen3-fr-bf16/98df62706d5ae2f4.mp3",
@@ -4993,15 +6861,35 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "Ne touche pas": {
+   "file": "audio/tts/qwen3-fr-bf16/0ba925b38bb1fc18.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "Ne vous dépêchez pas !": {
    "file": "audio/tts/qwen3-fr-bf16/01b666cd3e800dda.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
   },
+  "Ne vous inquiétez pas": {
+   "file": "audio/tts/qwen3-fr-bf16/93923007304a0446.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "Ne vous inquiétez pas, madame. Le bus arrive.": {
+   "file": "audio/tts/qwen3-fr-bf16/170a778ace02f130.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
   "Ne vous levez pas !": {
    "file": "audio/tts/qwen3-fr-bf16/7db7d0e831954ed7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
+  },
+  "Non, il est pour toi. Mais c'est moi qui l'ai commandé.": {
+   "file": "audio/tts/qwen3-fr-bf16/e73ca7509e1fe841.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.28
   },
   "Non, je ne la connais pas. Mais je connais son père… enfin, ses lettres.": {
    "file": "audio/tts/qwen3-fr-bf16/ee6c9ded85af277f.mp3",
@@ -5013,6 +6901,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.82
   },
+  "Non, pas comme ça ! Doucement. Une plante, ce n'est pas une montre.": {
+   "file": "audio/tts/qwen3-fr-bf16/a727d310a76ef8a2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.32
+  },
   "Non, vous la vivez. Qu'avez-vous vu aujourd'hui ? Pas filmé : vu.": {
    "file": "audio/tts/qwen3-fr-bf16/f8f5e34537f64067.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5023,15 +6916,40 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.84
   },
+  "Non. Il a de la visite. Une femme.": {
+   "file": "audio/tts/qwen3-fr-bf16/2f83f4741d7d3413.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.7
+  },
+  "Non. J'aimerais rester. Mais je voudrais aussi jouer.": {
+   "file": "audio/tts/qwen3-fr-bf16/0d7652017f063724.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.36
+  },
   "Non. Je ne sais rien, je ne connais personne. C'est loin, tout ça.": {
    "file": "audio/tts/qwen3-fr-bf16/6084a9cd1cc199e0.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.34
   },
+  "Non. Je ne suis pas debout. Je suis en colère.": {
+   "file": "audio/tts/qwen3-fr-bf16/641290d130844f41.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.36
+  },
+  "Non. Je ne vends pas. Pas aujourd'hui.": {
+   "file": "audio/tts/qwen3-fr-bf16/13ea93c23070e8fd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.88
+  },
   "Non. À vingt et une heures, la mère Jeanne fermait. Elle m'a dit : « Il est parti. »": {
    "file": "audio/tts/qwen3-fr-bf16/4cbeea55a82e2653.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.54
+  },
+  "Normal, monsieur. C'est mon tambour.": {
+   "file": "audio/tts/qwen3-fr-bf16/08a4e228341c705d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.26
   },
   "Nos enfants jouent avec les leurs.": {
    "file": "audio/tts/qwen3-fr-bf16/ac777b1d658c8334.mp3",
@@ -5062,6 +6980,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c36cf4648536c2af.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
+  },
+  "Nous connaissons tout": {
+   "file": "audio/tts/qwen3-fr-bf16/086f5a331c89815c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "Nous continuons la leçon demain.": {
    "file": "audio/tts/qwen3-fr-bf16/a64601a66d85b829.mp3",
@@ -5183,10 +7106,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.5
   },
+  "Nous vous attendions": {
+   "file": "audio/tts/qwen3-fr-bf16/cfdec77334677518.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.92
+  },
   "Nous voyageons en train cet été.": {
    "file": "audio/tts/qwen3-fr-bf16/ab3f6b7403245bb1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.78
+  },
+  "Nous y sommes restés.": {
+   "file": "audio/tts/qwen3-fr-bf16/272778f75f426f4a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
   },
   "Nul ? Vous avez dix-sept ans, monsieur.": {
    "file": "audio/tts/qwen3-fr-bf16/c2ea4559965cd681.mp3",
@@ -5208,10 +7141,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.1
   },
+  "Oh ! Qu'est-ce que c'est, toutes ces boîtes ?": {
+   "file": "audio/tts/qwen3-fr-bf16/3dbb1aebed2efc2b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.36
+  },
+  "Oh là là. J'ai mis les pieds dans le plat.": {
+   "file": "audio/tts/qwen3-fr-bf16/5cc87e3729c24eac.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.3
+  },
+  "Oh là là. Je me faisais un film.": {
+   "file": "audio/tts/qwen3-fr-bf16/58dcfb5468079171.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.3
+  },
   "Oh, regardez : Le Petit Prince. C'était mon livre préféré.": {
    "file": "audio/tts/qwen3-fr-bf16/5e30679854bab015.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.34
+  },
+  "Oh… C'est tout petit. Et très joli.": {
+   "file": "audio/tts/qwen3-fr-bf16/06beedc81418ecb3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.88
   },
   "Oh… Je vois les toits. Et le Sacré-Cœur. C'est beau.": {
    "file": "audio/tts/qwen3-fr-bf16/b648b85cd5fbc8c2.mp3",
@@ -5223,20 +7176,65 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.42
   },
+  "Oh… en fait, c'est difficile, votre travail.": {
+   "file": "audio/tts/qwen3-fr-bf16/267584fe92e12191.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.38
+  },
+  "On a dîné ensemble deux fois. On a porté la terre ensemble.": {
+   "file": "audio/tts/qwen3-fr-bf16/e60da826d81322ea.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.08
+  },
+  "On a inventé la tartiflette dans les années quatre-vingt. Pour le reblochon !": {
+   "file": "audio/tts/qwen3-fr-bf16/ef2e0709aa7cd21d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.2
+  },
   "On a raté le train, il pleuvait… bref, une journée horrible.": {
    "file": "audio/tts/qwen3-fr-bf16/1a52a97f7072927b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.96
+  },
+  "On brise la glace": {
+   "file": "audio/tts/qwen3-fr-bf16/c0d277182d1a3e37.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
   },
   "On change de train à Lyon.": {
    "file": "audio/tts/qwen3-fr-bf16/d65a63085f588827.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.38
   },
+  "On chuchotait": {
+   "file": "audio/tts/qwen3-fr-bf16/6f34138b50113cbd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
   "On dirait un marché, au bord de la Saône. Il y a un panneau…": {
    "file": "audio/tts/qwen3-fr-bf16/f2bde1d223803516.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.92
+  },
+  "On est comme le jour et la nuit, voisin.": {
+   "file": "audio/tts/qwen3-fr-bf16/a1d83711468c481e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.1
+  },
+  "On la répare": {
+   "file": "audio/tts/qwen3-fr-bf16/3067c1bd6c164fc5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "On la répare.": {
+   "file": "audio/tts/qwen3-fr-bf16/3a37baf9d90d5e39.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "On les garde.": {
+   "file": "audio/tts/qwen3-fr-bf16/3ffa1335fc9bb6e7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
   },
   "On lit la première lettre ?": {
    "file": "audio/tts/qwen3-fr-bf16/4db821fe2ea7a0f7.mp3",
@@ -5258,6 +7256,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
   },
+  "On part demain. Et si le train est en retard ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ec7040c00e576af0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.74
+  },
   "On peut avoir l'addition, s'il vous plaît ?": {
    "file": "audio/tts/qwen3-fr-bf16/5b62891c49c9a1b7.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5268,6 +7271,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.3
   },
+  "On porte le sac à deux": {
+   "file": "audio/tts/qwen3-fr-bf16/4c522306583f8e8b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
+  "On pourrait": {
+   "file": "audio/tts/qwen3-fr-bf16/0f76865233705f42.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
+  },
   "On pourrait commencer": {
    "file": "audio/tts/qwen3-fr-bf16/5e11439d733a9b37.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5277,6 +7290,31 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/03e341cf68e89bd1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.82
+  },
+  "On pourrait l'écouter tous les deux.": {
+   "file": "audio/tts/qwen3-fr-bf16/f9842e45596ce0ca.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.48
+  },
+  "On pourrait laisser les deux portes ouvertes. Le palier, ce serait notre salon.": {
+   "file": "audio/tts/qwen3-fr-bf16/77656e2de4afb714.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.58
+  },
+  "On pourrait le transformer": {
+   "file": "audio/tts/qwen3-fr-bf16/02d08d49f4c10b77.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
+  "On pourrait le transformer ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ee0eef4843f5909a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "On pourrait le transformer ? En petit cabinet de curiosités ?": {
+   "file": "audio/tts/qwen3-fr-bf16/4cb4799564c9f2b7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.36
   },
   "On pourrait partir lundi": {
    "file": "audio/tts/qwen3-fr-bf16/d01b135a6f9aafad.mp3",
@@ -5298,10 +7336,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
   },
+  "On pourrait se cacher": {
+   "file": "audio/tts/qwen3-fr-bf16/95cf0afe58ab1497.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "On pourrait se cacher, comme avant ?": {
+   "file": "audio/tts/qwen3-fr-bf16/5695a801fbab5c55.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.64
+  },
+  "On remet les pendules à l'heure": {
+   "file": "audio/tts/qwen3-fr-bf16/2eb2dd98b14bfeb4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.52
+  },
   "On retrouve nos amis au café.": {
    "file": "audio/tts/qwen3-fr-bf16/01b3eed6273a74be.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.58
+  },
+  "On se dit tu": {
+   "file": "audio/tts/qwen3-fr-bf16/6a022b3ec39a2381.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
   },
   "On se retrouve": {
    "file": "audio/tts/qwen3-fr-bf16/1360bf75f9b9a2cf.mp3",
@@ -5338,6 +7396,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.02
   },
+  "On va commencer": {
+   "file": "audio/tts/qwen3-fr-bf16/df0f8963e477def8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "On va demander à M. Rossi": {
    "file": "audio/tts/qwen3-fr-bf16/661f3cf61c0d572c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5347,6 +7410,26 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/bd05bdba4cbe712a.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.64
+  },
+  "On va en trouver un autre.": {
+   "file": "audio/tts/qwen3-fr-bf16/a8600316a4c30744.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "On va faire du chocolat chaud": {
+   "file": "audio/tts/qwen3-fr-bf16/c6101e8484bb9473.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.4
+  },
+  "On va faire du chocolat chaud. Et les étoiles, au télescope !": {
+   "file": "audio/tts/qwen3-fr-bf16/84d7c187142f5667.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.38
+  },
+  "On va la prendre": {
+   "file": "audio/tts/qwen3-fr-bf16/cdec290e96afab6c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
   },
   "On va prendre une traboule": {
    "file": "audio/tts/qwen3-fr-bf16/850a72d066b707cc.mp3",
@@ -5368,6 +7451,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "On voudrait quatre bols": {
+   "file": "audio/tts/qwen3-fr-bf16/4c9f93670817a211.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.36
+  },
+  "On voudrait quatre bols. Et un pour le fantôme ?": {
+   "file": "audio/tts/qwen3-fr-bf16/9bb04e55e4117767.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.88
+  },
+  "On y va": {
+   "file": "audio/tts/qwen3-fr-bf16/ed0797dcbfb8749c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.6
+  },
   "On y va ?": {
    "file": "audio/tts/qwen3-fr-bf16/53f0d677fa3fe44d.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5377,6 +7475,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/caa187158d8a6351.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.94
+  },
+  "Onze heures.": {
+   "file": "audio/tts/qwen3-fr-bf16/436fe3ca6ad2706a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
+  "Ouf. Le dîner est fini. Tout le monde est content, je crois.": {
+   "file": "audio/tts/qwen3-fr-bf16/8fc99e9038f73ccb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.1
   },
   "Oui, M. Vial est un de nos résidents. C'est de la part de qui ?": {
    "file": "audio/tts/qwen3-fr-bf16/e9b2aac33ce28c01.mp3",
@@ -5453,10 +7561,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.38
   },
+  "Oui, mais toi, au moins, tu as frappé à ma porte.": {
+   "file": "audio/tts/qwen3-fr-bf16/8b142d05629dac11.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.02
+  },
   "Oui, mes parents. Ils habitent à Lyon. Et toi, tu as des frères et sœurs ?": {
    "file": "audio/tts/qwen3-fr-bf16/7f49b8e98be517e7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.3
+  },
+  "Oui, monsieur. Quelle merveille ! Vous êtes où ? Dans la boîte ?": {
+   "file": "audio/tts/qwen3-fr-bf16/2cea0a542d435aca.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.72
   },
   "Oui, sans problème, à la réception. Bonne soirée, monsieur !": {
    "file": "audio/tts/qwen3-fr-bf16/b255a92d7db77797.mp3",
@@ -5472,6 +7590,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/a214abb722169336.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.42
+  },
+  "Oui. Deux Garnier, deux portes. La porte verte, c'est moi.": {
+   "file": "audio/tts/qwen3-fr-bf16/b583e38390074b57.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.58
+  },
+  "Oui. Deux cents bouchons d'oreille. Orange.": {
+   "file": "audio/tts/qwen3-fr-bf16/1634fb98fe968edb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
   },
   "Oui. Il y a des lettres… trois lettres, signées J.": {
    "file": "audio/tts/qwen3-fr-bf16/de63346a2022c3d2.mp3",
@@ -5523,6 +7651,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.12
   },
+  "Où est-ce que tu l'as trouvé ?": {
+   "file": "audio/tts/qwen3-fr-bf16/fdde52670575dc90.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.36
+  },
   "Où sont les toilettes ?": {
    "file": "audio/tts/qwen3-fr-bf16/6558ada62c1b1e07.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5542,6 +7675,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/39c6fa8e072cc8ed.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.72
+  },
+  "Parce que Zoé donne des cours aux enfants de l'immeuble. Gratuits.": {
+   "file": "audio/tts/qwen3-fr-bf16/466d4724adf1599a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.46
   },
   "Parce que je suis en retard": {
    "file": "audio/tts/qwen3-fr-bf16/cf14f19fad123904.mp3",
@@ -5567,6 +7705,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/13536cf74d6860a5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.86
+  },
+  "Pardon, j'ai oublié ton livre ! — Ça ne fait rien.": {
+   "file": "audio/tts/qwen3-fr-bf16/73063e9fb34ae031.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.4
   },
   "Pardon, je ne comprends pas. Vous pouvez répéter ?": {
    "file": "audio/tts/qwen3-fr-bf16/d2509ae7fc519469.mp3",
@@ -5613,6 +7756,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.74
   },
+  "Pas de musique après dix heures.": {
+   "file": "audio/tts/qwen3-fr-bf16/67dd9993799e6ad3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.5
+  },
   "Pas de problème": {
    "file": "audio/tts/qwen3-fr-bf16/638a2436585a73e2.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5628,6 +7776,41 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.68
   },
+  "Pas de souci": {
+   "file": "audio/tts/qwen3-fr-bf16/da89382dcf9194b9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "Pas de souci, Gabriel ! Une cravate ? Pour mon chili ?": {
+   "file": "audio/tts/qwen3-fr-bf16/17cba50799ea2323.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.4
+  },
+  "Pas de soupe": {
+   "file": "audio/tts/qwen3-fr-bf16/6dffb266c822b942.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
+  },
+  "Pas de soupe.": {
+   "file": "audio/tts/qwen3-fr-bf16/654e43edb2e4bf1e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.58
+  },
+  "Pas de soupe. Des biscuits. Je ne sais pas cuisiner.": {
+   "file": "audio/tts/qwen3-fr-bf16/cf7fbdf1ab2405a6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.34
+  },
+  "Pas du tout": {
+   "file": "audio/tts/qwen3-fr-bf16/d20cb8ff0ca93cc1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "Pas les jeter": {
+   "file": "audio/tts/qwen3-fr-bf16/beb4dfa1f49a1875.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
   "Pas mal": {
    "file": "audio/tts/qwen3-fr-bf16/43ff035aca6c40a4.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5637,6 +7820,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/5509f5db77bf37f3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.46
+  },
+  "Pas vraiment. Je suis un fantôme de mille sept cent quatre-vingt-six.": {
+   "file": "audio/tts/qwen3-fr-bf16/60672779fc2ce348.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.98
   },
   "Paul aime sa mère.": {
    "file": "audio/tts/qwen3-fr-bf16/64d45ef63f8ef19f.mp3",
@@ -5658,10 +7846,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.38
   },
+  "Personne ne m'écoutait": {
+   "file": "audio/tts/qwen3-fr-bf16/e51f20b39e3f24a3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
+  "Petit et lourd": {
+   "file": "audio/tts/qwen3-fr-bf16/b6cff8850f0be5f3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Petit et lourd, comme toujours.": {
+   "file": "audio/tts/qwen3-fr-bf16/14548c45b710078d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.28
+  },
   "Petit à petit, l'oiseau fait son nid.": {
    "file": "audio/tts/qwen3-fr-bf16/51c985bf7c6fa9b3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.12
+  },
+  "Petite et lourde ? Qu'est-ce que c'est ? De l'or ?": {
+   "file": "audio/tts/qwen3-fr-bf16/8b6a2fa82e7795c8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.24
   },
   "Peur de quoi ? Moi, j'étais en colère quand j'ai entendu le message.": {
    "file": "audio/tts/qwen3-fr-bf16/9e8b92a2a0c6592d.mp3",
@@ -5672,6 +7880,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/54304e909b655f55.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.36
+  },
+  "Plus lentement, s'il vous plaît.": {
+   "file": "audio/tts/qwen3-fr-bf16/4801e341ded832d1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.72
+  },
+  "Point du tout": {
+   "file": "audio/tts/qwen3-fr-bf16/1c5a94fefe8d814d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
   },
   "Pour la première fois, je me sens chez moi ici.": {
    "file": "audio/tts/qwen3-fr-bf16/1a195ac89990ac99.mp3",
@@ -5693,10 +7911,35 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.42
   },
+  "Pour une fois": {
+   "file": "audio/tts/qwen3-fr-bf16/1792f258b9392a37.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
+  "Pour une fois, le bus est à l'heure !": {
+   "file": "audio/tts/qwen3-fr-bf16/8ec514a9596dc479.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.3
+  },
+  "Pour vivre heureux, vivons cachés.": {
+   "file": "audio/tts/qwen3-fr-bf16/a66b594c58942496.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.54
+  },
   "Pourquoi": {
    "file": "audio/tts/qwen3-fr-bf16/d2b63ab064dad2d1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
+  },
+  "Pourquoi elle est toute seule, là-haut ? Elle est cassée ?": {
+   "file": "audio/tts/qwen3-fr-bf16/af2b5cbaf4cf4a1b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.8
+  },
+  "Pourquoi est-ce qu'elle a fermé l'hôtel ?": {
+   "file": "audio/tts/qwen3-fr-bf16/943181ab311bc098.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.78
   },
   "Pourquoi est-ce que tu apprends le français ?": {
    "file": "audio/tts/qwen3-fr-bf16/efb187a8c6255e91.mp3",
@@ -5712,6 +7955,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ee1b9c76a644079e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.94
+  },
+  "Pourquoi mes colis arrivent chez le voisin ?": {
+   "file": "audio/tts/qwen3-fr-bf16/1583558857298f7c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.2
   },
   "Pourquoi tu cours": {
    "file": "audio/tts/qwen3-fr-bf16/7e5598de607162a4.mp3",
@@ -5758,6 +8006,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.74
   },
+  "Qu'est-ce qu'il achète ?": {
+   "file": "audio/tts/qwen3-fr-bf16/6ea8961f2cb8a084.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
   "Qu'est-ce qu'il dit ?": {
    "file": "audio/tts/qwen3-fr-bf16/ec0d606c60483f97.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -5802,6 +8055,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/d14de9656b934cec.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
+  },
+  "Qu'est-ce que tu leur as dit, exactement ? J'avais trop le trac pour écouter.": {
+   "file": "audio/tts/qwen3-fr-bf16/f00caf30392ef168.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.8
   },
   "Qu'est-ce que tu lis ?": {
    "file": "audio/tts/qwen3-fr-bf16/a18d70c4b69a6598.mp3",
@@ -5918,6 +8176,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.32
   },
+  "Quand tu étais petit": {
+   "file": "audio/tts/qwen3-fr-bf16/a5ae1fd65ebb2e7a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
+  },
+  "Quand tu étais petit, tu étais déjà fleur bleue.": {
+   "file": "audio/tts/qwen3-fr-bf16/45e2163c61bc921c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
+  },
   "Quand vous aviez dix ans": {
    "file": "audio/tts/qwen3-fr-bf16/d30b44b45934e424.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6028,6 +8296,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.74
   },
+  "Quelle merveille ! Votre ascenseur est devenu le plus joli cabinet de curiosités des Alpes.": {
+   "file": "audio/tts/qwen3-fr-bf16/df1818f93d62bcde.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 5.04
+  },
   "Quelle musique aimes-tu ?": {
    "file": "audio/tts/qwen3-fr-bf16/e72f9b42deb4f455.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6088,6 +8361,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.58
   },
+  "Quinze colis": {
+   "file": "audio/tts/qwen3-fr-bf16/7a9606afd4a7d12b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "Quinze minutes ! Vous êtes une horloge, monsieur ?": {
+   "file": "audio/tts/qwen3-fr-bf16/29846d498f7b5ca5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.34
+  },
+  "Recommence": {
+   "file": "audio/tts/qwen3-fr-bf16/ab7fcde8699366d2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "Regarde Socrate. Il te tourne le dos.": {
    "file": "audio/tts/qwen3-fr-bf16/04265f985d4ef314.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6107,6 +8395,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/451dcbda1540b2a5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.96
+  },
+  "Regardez": {
+   "file": "audio/tts/qwen3-fr-bf16/21807a3d4b18a4f3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
   },
   "Regardez Socrate, il vous tourne le dos ! Socrate voudrait Socrate.": {
    "file": "audio/tts/qwen3-fr-bf16/77aca27838027b31.mp3",
@@ -6147,6 +8440,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/6daf7061e36a94ff.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.46
+  },
+  "Règle numéro deux": {
+   "file": "audio/tts/qwen3-fr-bf16/18d4346619981708.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "Règle numéro un": {
+   "file": "audio/tts/qwen3-fr-bf16/6210af5530e18cee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
+  "Réparer, c'est trop long. Il y a quarante vitres !": {
+   "file": "audio/tts/qwen3-fr-bf16/ef3fc3012d0d3a30.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.8
   },
   "Résidence Les Tilleuls, bonjour. Sabine à l'appareil.": {
    "file": "audio/tts/qwen3-fr-bf16/f0a7f78e81fc6616.mp3",
@@ -6193,6 +8501,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.72
   },
+  "Samedi, on va réparer l'hôtel.": {
+   "file": "audio/tts/qwen3-fr-bf16/2e17b52eed6aead2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.24
+  },
+  "Samedi, on va réparer l'hôtel. Ensemble.": {
+   "file": "audio/tts/qwen3-fr-bf16/ff247eb2330b2d1b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.12
+  },
+  "Samedi, on vient tous.": {
+   "file": "audio/tts/qwen3-fr-bf16/c7971529c0f94960.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.78
+  },
+  "Sans musique, je ne pourrais plus donner mes cours du mercredi.": {
+   "file": "audio/tts/qwen3-fr-bf16/efc542398c5a40af.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.18
+  },
   "Sans question, sans thé.": {
    "file": "audio/tts/qwen3-fr-bf16/46beb3b06c123bf6.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6202,6 +8530,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/e8564df4f2fc616d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
+  },
+  "Serrés comme des sardines": {
+   "file": "audio/tts/qwen3-fr-bf16/c6ec7a3fefe1faeb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.66
   },
   "Serveur : Bonjour ! Qu'est-ce que vous prenez ? — Un café, s'il vous plaît.": {
    "file": "audio/tts/qwen3-fr-bf16/7d515a0dad652fcb.mp3",
@@ -6222,6 +8555,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/407f2c44f2e6b8f2.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.3
+  },
+  "Seulement six ! À Marseille, ma mère met dix piments.": {
+   "file": "audio/tts/qwen3-fr-bf16/91626e0c7394de69.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.78
   },
   "Si": {
    "file": "audio/tts/qwen3-fr-bf16/243a7b77913ebb81.mp3",
@@ -6257,6 +8595,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ea98e368801e6abd.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.56
+  },
+  "Six enfants, mes parents, ma grand-mère… On était serrés comme des sardines !": {
+   "file": "audio/tts/qwen3-fr-bf16/83faaafbf742d4cb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.72
+  },
+  "Six étages ! Merci pour le coup de main, Gabriel.": {
+   "file": "audio/tts/qwen3-fr-bf16/4aed7185bea969ad.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.02
   },
   "Socrate a connu": {
    "file": "audio/tts/qwen3-fr-bf16/dde9d1a73ba77abc.mp3",
@@ -6333,6 +8681,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
+  "Ta sœur ? Mais elle riait si fort… comme moi !": {
+   "file": "audio/tts/qwen3-fr-bf16/6fe0f8666e264bbc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.2
+  },
   "Ta sœur travaille-t-elle ici ?": {
    "file": "audio/tts/qwen3-fr-bf16/9ef252fbae590a87.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6378,6 +8731,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.48
   },
+  "Toi ? Le monsieur aux deux cents bouchons d'oreille ?": {
+   "file": "audio/tts/qwen3-fr-bf16/d93b3e3daa7faa1c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.2
+  },
+  "Toi, le roi du silence, tu as défendu mon tambour. C'est génial !": {
+   "file": "audio/tts/qwen3-fr-bf16/232a951a87367c2d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.58
+  },
   "Toi, tu ne sais pas": {
    "file": "audio/tts/qwen3-fr-bf16/897a9d7935d4d9c9.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6408,6 +8771,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.62
   },
+  "Tout change": {
+   "file": "audio/tts/qwen3-fr-bf16/28cd6a789de4b8f4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
+  },
   "Tout de suite": {
    "file": "audio/tts/qwen3-fr-bf16/aeb2c2126a265474.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6417,6 +8785,51 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c62760e73258d49a.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.46
+  },
+  "Tout le temps. Personne ne m'écoutait. Alors je tapais sur les casseroles.": {
+   "file": "audio/tts/qwen3-fr-bf16/d7be884ee770658f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.9
+  },
+  "Tout le village ? Pour moi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/b8e25d4bf0e7b769.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.8
+  },
+  "Toute la vallée les regardait": {
+   "file": "audio/tts/qwen3-fr-bf16/e39a1e11e0be6d3b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
+  "Toutes les traditions ont été nouvelles, un jour.": {
+   "file": "audio/tts/qwen3-fr-bf16/c534e468b81e77b2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
+  "Trente-cinq ans ! Les erreurs de facteur, ça marche.": {
+   "file": "audio/tts/qwen3-fr-bf16/06e0a0264d4a7499.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.02
+  },
+  "Trois fantômes et moi… Les trois mousquetaires !": {
+   "file": "audio/tts/qwen3-fr-bf16/c2f0eefdaa5ec1f5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.08
+  },
+  "Trois trous": {
+   "file": "audio/tts/qwen3-fr-bf16/ce2de8044da51acd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "Trois trous dans le toit.": {
+   "file": "audio/tts/qwen3-fr-bf16/27402bbab439e9c6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.28
+  },
+  "Tu aimerais": {
+   "file": "audio/tts/qwen3-fr-bf16/367d168ee3f312b3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
   },
   "Tu aimes le chocolat ?": {
    "file": "audio/tts/qwen3-fr-bf16/c6b9ed52fd710f9e.mp3",
@@ -6433,10 +8846,35 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.9
   },
+  "Tu as acheté": {
+   "file": "audio/tts/qwen3-fr-bf16/45deb26b34b75823.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
+  "Tu as acheté de la peinture ?": {
+   "file": "audio/tts/qwen3-fr-bf16/c58edf68ebe08700.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
   "Tu as choisi ?": {
    "file": "audio/tts/qwen3-fr-bf16/d9af4a6e94b5cdc3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.84
+  },
+  "Tu as couru un marathon ? Je n'en reviens pas !": {
+   "file": "audio/tts/qwen3-fr-bf16/88c69e0f8959b804.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.52
+  },
+  "Tu as demandé de l'aide": {
+   "file": "audio/tts/qwen3-fr-bf16/7df86dc5a812dda9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "Tu as dit « tu » !": {
+   "file": "audio/tts/qwen3-fr-bf16/941a1a59b8696237.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
   },
   "Tu as décidé": {
    "file": "audio/tts/qwen3-fr-bf16/f83b1c1c181a139c.mp3",
@@ -6458,10 +8896,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.66
   },
+  "Tu as trouvé": {
+   "file": "audio/tts/qwen3-fr-bf16/3daecd6a9912ab38.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
   "Tu as un chien ? — non, je n'ai pas d'animal.": {
    "file": "audio/tts/qwen3-fr-bf16/84bd720a0bde79c1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.94
+  },
+  "Tu as vu ?": {
+   "file": "audio/tts/qwen3-fr-bf16/3d31f3837267cfb9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.58
+  },
+  "Tu as vu ? Je n'ai rien raté ! C'est génial !": {
+   "file": "audio/tts/qwen3-fr-bf16/76b21dbff34e3853.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
   },
   "Tu avais un foulard bleu": {
    "file": "audio/tts/qwen3-fr-bf16/f89528b70a6394bf.mp3",
@@ -6493,25 +8946,95 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
   },
+  "Tu connais les paroles ?": {
+   "file": "audio/tts/qwen3-fr-bf16/b7b214bdbfde2f65.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "Tu cours encore ?": {
    "file": "audio/tts/qwen3-fr-bf16/58de0bea4561899e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
+  },
+  "Tu cuisines, je fais la vaisselle ? — Marché conclu !": {
+   "file": "audio/tts/qwen3-fr-bf16/d44cfdc05d063228.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.28
+  },
+  "Tu devrais": {
+   "file": "audio/tts/qwen3-fr-bf16/846117f2a2ade45f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
+  },
+  "Tu devrais aller lui expliquer. Et lui dire le reste.": {
+   "file": "audio/tts/qwen3-fr-bf16/ed797f4f27fa4fee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
+  "Tu devrais dormir.": {
+   "file": "audio/tts/qwen3-fr-bf16/e8d0ae109a92ee72.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "Tu devrais essayer": {
+   "file": "audio/tts/qwen3-fr-bf16/5fa0185cf006386e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
+  "Tu devrais essayer le bruit.": {
+   "file": "audio/tts/qwen3-fr-bf16/9bc32de231fb0e70.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "Tu devrais essayer le silence.": {
+   "file": "audio/tts/qwen3-fr-bf16/1e2e638007b5f320.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.6
   },
   "Tu devrais essayer.": {
    "file": "audio/tts/qwen3-fr-bf16/9d108a929f325eab.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
   },
+  "Tu devrais la garder": {
+   "file": "audio/tts/qwen3-fr-bf16/c3d8723cc1ee0cda.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
   "Tu devrais lui écrire.": {
    "file": "audio/tts/qwen3-fr-bf16/1a22f8619c8ecc75.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.18
   },
+  "Tu en pinces pour moi": {
+   "file": "audio/tts/qwen3-fr-bf16/b0098baf4ea3e1a5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
+  "Tu en pinces pour moi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/018887fecf78dcee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "Tu en pinces pour moi depuis quand, monsieur Garnier ?": {
+   "file": "audio/tts/qwen3-fr-bf16/d3cb1464676c1ab9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.64
+  },
   "Tu entends la musique ?": {
    "file": "audio/tts/qwen3-fr-bf16/c86e8800275b9cbf.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.22
+  },
+  "Tu es": {
+   "file": "audio/tts/qwen3-fr-bf16/079b5b6da8e6c64e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.52
+  },
+  "Tu es au courant ? Depuis le début ?": {
+   "file": "audio/tts/qwen3-fr-bf16/4fec0a463e375a6f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.82
   },
   "Tu es libre ce soir ?": {
    "file": "audio/tts/qwen3-fr-bf16/4b75d86d47a7bb47.mp3",
@@ -6527,6 +9050,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/4e469667e13cb7ff.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
+  },
+  "Tu es têtue, Zoé.": {
+   "file": "audio/tts/qwen3-fr-bf16/3c4875b1edaf4e0b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
+  "Tu es venu": {
+   "file": "audio/tts/qwen3-fr-bf16/ceedc325fd21cd1f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
   },
   "Tu es venu ! Ça me fait plaisir.": {
    "file": "audio/tts/qwen3-fr-bf16/aa7a83e8d305057a.mp3",
@@ -6557,6 +9090,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/356a6f01350b080c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
+  },
+  "Tu les as tous gardés ?": {
+   "file": "audio/tts/qwen3-fr-bf16/a13f748425441176.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
   },
   "Tu leur téléphones ?": {
    "file": "audio/tts/qwen3-fr-bf16/6b011507732c269a.mp3",
@@ -6618,6 +9156,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
   },
+  "Tu ne ris plus": {
+   "file": "audio/tts/qwen3-fr-bf16/e4c1fd18e7aa6295.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "Tu ne te dépêches pas.": {
    "file": "audio/tts/qwen3-fr-bf16/51d95d6f5d5cc652.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6638,6 +9181,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.66
   },
+  "Tu peux le poser là": {
+   "file": "audio/tts/qwen3-fr-bf16/a639389c8b5df549.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
   "Tu peux m'aider ? — Pas de problème !": {
    "file": "audio/tts/qwen3-fr-bf16/daca95bad5171176.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6647,6 +9195,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/6aaea863160b0e1e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.96
+  },
+  "Tu pourrais venir": {
+   "file": "audio/tts/qwen3-fr-bf16/79e7e3f667b83170.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "Tu pourrais venir jeudi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/2610bb8d45ab0c3d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "Tu pourrais venir jeudi ? À la réunion ?": {
+   "file": "audio/tts/qwen3-fr-bf16/7fc0d67877bb0f7f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.14
   },
   "Tu prends quel bus ?": {
    "file": "audio/tts/qwen3-fr-bf16/8e89e4799fd38bdf.mp3",
@@ -6662,6 +9225,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/341e6e4e0b3f2314.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.22
+  },
+  "Tu sais quoi ? On est sur la même longueur d'onde.": {
+   "file": "audio/tts/qwen3-fr-bf16/9ad9c4c2a412c40f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.52
+  },
+  "Tu sais, j'ai trouvé chaussure à mon pied. Une chaussure très bien rangée.": {
+   "file": "audio/tts/qwen3-fr-bf16/d65616e86a022823.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.9
   },
   "Tu sais, l'enveloppe de Mamie… je ne l'ai toujours pas ouverte.": {
    "file": "audio/tts/qwen3-fr-bf16/737f739d6e9c6d34.mp3",
@@ -6708,6 +9281,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.64
   },
+  "Tu t'es levé": {
+   "file": "audio/tts/qwen3-fr-bf16/f42dc8dc21872b19.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
   "Tu te coucheras tard ce soir.": {
    "file": "audio/tts/qwen3-fr-bf16/56512b0486029795.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6728,6 +9306,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.22
   },
+  "Tu te souviens ?": {
+   "file": "audio/tts/qwen3-fr-bf16/cf6233fc85b0c542.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
+  "Tu te souviens ? Le premier soir, on était comme le jour et la nuit.": {
+   "file": "audio/tts/qwen3-fr-bf16/2c6abd57a6409903.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.52
+  },
   "Tu te souviens de Paul ?": {
    "file": "audio/tts/qwen3-fr-bf16/a4868330d2bb81a0.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6742,6 +9330,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/9926c52e1c0a0dd1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.48
+  },
+  "Tu vas jouer.": {
+   "file": "audio/tts/qwen3-fr-bf16/9db131705a2fd706.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
+  },
+  "Tu vas me le dire demain.": {
+   "file": "audio/tts/qwen3-fr-bf16/40ba937c8fadc911.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.36
   },
   "Tu vas où ? — Au cinéma.": {
    "file": "audio/tts/qwen3-fr-bf16/b201ee54cdcae087.mp3",
@@ -6853,6 +9451,36 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
   },
+  "Un facteur qui se trompe": {
+   "file": "audio/tts/qwen3-fr-bf16/ef3fa08889c18b34.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
+  "Un facteur qui se trompe.": {
+   "file": "audio/tts/qwen3-fr-bf16/2ab26da305873f0d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.56
+  },
+  "Un fantôme ne ment jamais": {
+   "file": "audio/tts/qwen3-fr-bf16/1f74be5cccfe5348.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.58
+  },
+  "Un fantôme ne ment jamais, monsieur.": {
+   "file": "audio/tts/qwen3-fr-bf16/e5c27d4f22f19174.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.86
+  },
+  "Un fantôme, un toit cassé, pas de chauffage… C'est impossible !": {
+   "file": "audio/tts/qwen3-fr-bf16/f28a36e3d9b79b5f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.62
+  },
+  "Un film ? Je l'ai vue, Yanis !": {
+   "file": "audio/tts/qwen3-fr-bf16/48d03be1c5bacfc3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.36
+  },
   "Un garçon de l'imprimerie, oui. Grand, timide…": {
    "file": "audio/tts/qwen3-fr-bf16/2b1b0600ff813345.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6867,6 +9495,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7bd72a4725c96e15.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.66
+  },
+  "Un pour toi, un pour moi": {
+   "file": "audio/tts/qwen3-fr-bf16/52995442a34e2ec0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.92
+  },
+  "Un pour toi, un pour moi.": {
+   "file": "audio/tts/qwen3-fr-bf16/8e27fa8e08119918.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.82
   },
   "Un père qui est là": {
    "file": "audio/tts/qwen3-fr-bf16/c0622089e58bad30.mp3",
@@ -6883,6 +9521,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.1
   },
+  "Une actrice… Il est gentil, ce monsieur.": {
+   "file": "audio/tts/qwen3-fr-bf16/6c2cc20fb29d7fd5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.66
+  },
   "Une baguette, une tarte et deux pains au chocolat. C'est tout ?": {
    "file": "audio/tts/qwen3-fr-bf16/08e833389f8ae475.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6892,6 +9535,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/f45be10f3f4d844b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.22
+  },
+  "Une boîte à musique… avec deux oiseaux. Un pour toi, un pour moi.": {
+   "file": "audio/tts/qwen3-fr-bf16/eb71b80e4e899a12.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.8
+  },
+  "Une dent du peigne s'est cassée.": {
+   "file": "audio/tts/qwen3-fr-bf16/6056736e3cf255e5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.72
+  },
+  "Une femme ! Quelle merveille ! Qui était-elle ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ae262519b65567c4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.04
   },
   "Une jeune femme… avec un foulard ?": {
    "file": "audio/tts/qwen3-fr-bf16/9ad354f9fd8771b3.mp3",
@@ -6913,10 +9571,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "Une proposition ? Quelle proposition ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e03e4887258f2107.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.34
+  },
   "Une question. Une. C'est moi qui la pose.": {
    "file": "audio/tts/qwen3-fr-bf16/6d3240aa7c7e91c4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.2
+  },
+  "Une réservation ? Mais c'est mon hôtel !": {
+   "file": "audio/tts/qwen3-fr-bf16/9bf8fcff379d0edf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.34
+  },
+  "Une soupe, je parie ? Avec une cravate ?": {
+   "file": "audio/tts/qwen3-fr-bf16/79e4efc4974a5c20.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.68
   },
   "Une table pour deux, s'il vous plaît": {
    "file": "audio/tts/qwen3-fr-bf16/427ae63fabe380e1.mp3",
@@ -6928,10 +9601,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.88
   },
+  "Une tartiflette. Le plat traditionnel de la Savoie.": {
+   "file": "audio/tts/qwen3-fr-bf16/be0354c7bb03d1e8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.26
+  },
   "Une traboule ? Ça veut dire quoi ?": {
    "file": "audio/tts/qwen3-fr-bf16/4df00dc0c1e45bae.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.94
+  },
+  "Une vieille maison… et une belle maison.": {
+   "file": "audio/tts/qwen3-fr-bf16/a62bf0360e2ac95f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.7
   },
   "Vas-y. Mais tu me racontes tout.": {
    "file": "audio/tts/qwen3-fr-bf16/8e73f321851bb417.mp3",
@@ -6968,6 +9651,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.76
   },
+  "Voilà ! Tu as dit « tu » !": {
+   "file": "audio/tts/qwen3-fr-bf16/701b4667f1f288bb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.68
+  },
   "Voilà dix euros.": {
    "file": "audio/tts/qwen3-fr-bf16/75c30803a332de00.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -6985,6 +9673,11 @@ window.VT_TTS = {
   },
   "Voilà la recette d'Odette. Elle est à toi, maintenant.": {
    "file": "audio/tts/qwen3-fr-bf16/7e891eccf280c500.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.56
+  },
+  "Voilà une soupe que j'ai faite moi-même. La recette d'Anselme.": {
+   "file": "audio/tts/qwen3-fr-bf16/26bb610e82ebda00.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.56
   },
@@ -7008,6 +9701,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "Votre auberge ? Pardon, monsieur, c'est mon hôtel.": {
+   "file": "audio/tts/qwen3-fr-bf16/15ac2537aeeaf240.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.26
+  },
   "Votre café, monsieur. Paris est là, derrière la fenêtre.": {
    "file": "audio/tts/qwen3-fr-bf16/62f3bb0c0ec7317c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7017,6 +9715,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/07cbb0bb4da94b7f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.5
+  },
+  "Votre chambre est prête.": {
+   "file": "audio/tts/qwen3-fr-bf16/082e48a3e16d58c0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
+  "Votre colis est arrivé": {
+   "file": "audio/tts/qwen3-fr-bf16/d340b84648b5ccc4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.5
+  },
+  "Votre colis est arrivé chez moi.": {
+   "file": "audio/tts/qwen3-fr-bf16/aae0e5e6d32471b7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.74
   },
   "Votre couleur préférée": {
    "file": "audio/tts/qwen3-fr-bf16/8d31e1fb8ca10625.mp3",
@@ -7038,6 +9751,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.76
   },
+  "Vous ! Vous grognez tout le temps.": {
+   "file": "audio/tts/qwen3-fr-bf16/16ad14e67c78f445.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.08
+  },
+  "Vous ? La musique ? Vous n'aimez pas la musique !": {
+   "file": "audio/tts/qwen3-fr-bf16/b7de863d8e8fb6ad.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.92
+  },
+  "Vous aidez ? Mais vous ne portez rien !": {
+   "file": "audio/tts/qwen3-fr-bf16/b28389b172b1b7c9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.1
+  },
+  "Vous aimeriez commencer": {
+   "file": "audio/tts/qwen3-fr-bf16/e12f2bd243a9911d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.36
+  },
   "Vous allez voir": {
    "file": "audio/tts/qwen3-fr-bf16/db1dc5b1ed4f417a.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7057,6 +9790,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/a5c2f3ed0f9b9909.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.02
+  },
+  "Vous avez bu": {
+   "file": "audio/tts/qwen3-fr-bf16/db506a0342423a13.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
+  "Vous avez bu toute la carafe ! Bon… le dîner est raté.": {
+   "file": "audio/tts/qwen3-fr-bf16/042417f91355a23f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.7
   },
   "Vous avez cette veste en bleu ?": {
    "file": "audio/tts/qwen3-fr-bf16/ed2cc90ffc132f3c.mp3",
@@ -7093,15 +9836,60 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.94
   },
+  "Vous avez mis": {
+   "file": "audio/tts/qwen3-fr-bf16/1694378d17139214.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "Vous avez mis combien de piments ?": {
+   "file": "audio/tts/qwen3-fr-bf16/c57aee25f8c2f8a7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
+  },
+  "Vous avez ouvert": {
+   "file": "audio/tts/qwen3-fr-bf16/ee4d934d1d83a6f7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "Vous avez ouvert mon colis ?": {
+   "file": "audio/tts/qwen3-fr-bf16/7e1845973c3d6311.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
+  },
   "Vous avez pris votre température ce matin ?": {
    "file": "audio/tts/qwen3-fr-bf16/65ef0860f4a05205.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.08
   },
+  "Vous avez raison": {
+   "file": "audio/tts/qwen3-fr-bf16/6601af7129662048.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
+  "Vous avez raison. Bonne nuit, Anselme.": {
+   "file": "audio/tts/qwen3-fr-bf16/6425a701b13536f5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.56
+  },
+  "Vous avez raison. Je vais lui demander… demain.": {
+   "file": "audio/tts/qwen3-fr-bf16/7bdf34ef89292e1f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.98
+  },
   "Vous avez trouvé Odette": {
    "file": "audio/tts/qwen3-fr-bf16/5af0def5174bf6b3.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.34
+  },
+  "Vous avez une réservation": {
+   "file": "audio/tts/qwen3-fr-bf16/ada4c5f7cbd27b31.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.38
+  },
+  "Vous avez vu ? J'ai trouvé douze noms. Douze fleurs !": {
+   "file": "audio/tts/qwen3-fr-bf16/970d0d49538c9771.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.62
   },
   "Vous buviez votre café debout": {
    "file": "audio/tts/qwen3-fr-bf16/9ae18a52159e40b7.mp3",
@@ -7118,6 +9906,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.76
   },
+  "Vous corrigez mes fautes ?": {
+   "file": "audio/tts/qwen3-fr-bf16/af0081c98de43a07.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
+  },
+  "Vous corrigez mes fautes ? En rouge ?": {
+   "file": "audio/tts/qwen3-fr-bf16/7e3d87eaebd27fec.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.18
+  },
   "Vous couchez-vous tard ?": {
    "file": "audio/tts/qwen3-fr-bf16/802d6c8c292bd607.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7128,6 +9926,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
   },
+  "Vous devriez": {
+   "file": "audio/tts/qwen3-fr-bf16/05a406939eb360d0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
   "Vous devriez danser": {
    "file": "audio/tts/qwen3-fr-bf16/b99e3958c05ce49c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7137,6 +9940,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/beb473bbfdbf25a4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.24
+  },
+  "Vous devriez dormir": {
+   "file": "audio/tts/qwen3-fr-bf16/0c5bbf96288842b1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
+  "Vous devriez dormir.": {
+   "file": "audio/tts/qwen3-fr-bf16/5f504d2a379ad9ee.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
   },
   "Vous devriez essayer": {
    "file": "audio/tts/qwen3-fr-bf16/e2318af1bc833f3a.mp3",
@@ -7153,6 +9966,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.64
   },
+  "Vous devriez lui demander.": {
+   "file": "audio/tts/qwen3-fr-bf16/c67acdc5a759cb6d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
+  "Vous devriez lui dire ce que vous ressentez. Avant jeudi.": {
+   "file": "audio/tts/qwen3-fr-bf16/6837f1928829bd95.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.42
+  },
   "Vous devriez lui poser une question": {
    "file": "audio/tts/qwen3-fr-bf16/6b656f7221181db3.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7163,15 +9986,55 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.56
   },
+  "Vous devriez montrer": {
+   "file": "audio/tts/qwen3-fr-bf16/373d2de495832922.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Vous devriez raconter ces histoires": {
+   "file": "audio/tts/qwen3-fr-bf16/3eb857e924ac6129.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.66
+  },
+  "Vous devriez raconter ces histoires aux clients. Le soir, au salon.": {
+   "file": "audio/tts/qwen3-fr-bf16/8b18c5a77bddfa45.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.92
+  },
   "Vous dites pardon à Socrate ?": {
    "file": "audio/tts/qwen3-fr-bf16/1c715a0606457934.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.66
   },
+  "Vous dites ça": {
+   "file": "audio/tts/qwen3-fr-bf16/d5957efec661d396.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
+  },
+  "Vous dites ça depuis cent ans, monsieur Marcel.": {
+   "file": "audio/tts/qwen3-fr-bf16/b49757829729294a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.32
+  },
   "Vous dormez bien ?": {
    "file": "audio/tts/qwen3-fr-bf16/d5688383ed8aeb95.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
+  },
+  "Vous en avez peur": {
+   "file": "audio/tts/qwen3-fr-bf16/c8d0703ba5b1605a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "Vous en avez peur ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e9d0a50d65d92027.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "Vous en avez peur, vous aussi ? Moi, j'en ai peur depuis une semaine.": {
+   "file": "audio/tts/qwen3-fr-bf16/46f702f4ab851cef.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.42
   },
   "Vous en prenez une": {
    "file": "audio/tts/qwen3-fr-bf16/8d37abd969aa9692.mp3",
@@ -7182,6 +10045,26 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/4d29df105ce9d43b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
+  },
+  "Vous entendez ?": {
+   "file": "audio/tts/qwen3-fr-bf16/a17b133a6e0b1760.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.66
+  },
+  "Vous et moi, on est comme chien et chat.": {
+   "file": "audio/tts/qwen3-fr-bf16/33d1f6a1ef4dcf3a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.94
+  },
+  "Vous faites la soupe": {
+   "file": "audio/tts/qwen3-fr-bf16/244005e536925a26.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
+  "Vous faites la soupe, vous ?": {
+   "file": "audio/tts/qwen3-fr-bf16/255e0b98a67f354b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
   },
   "Vous habitez": {
    "file": "audio/tts/qwen3-fr-bf16/83b4292626de36b6.mp3",
@@ -7208,6 +10091,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
   },
+  "Vous le prenez ?": {
+   "file": "audio/tts/qwen3-fr-bf16/476df304dc1baeab.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
   "Vous marchez": {
    "file": "audio/tts/qwen3-fr-bf16/3a220938affed173.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7218,10 +10106,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.44
   },
+  "Vous montez, je regarde, et je raconte. Chacun son travail !": {
+   "file": "audio/tts/qwen3-fr-bf16/59cc20a051399f77.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.08
+  },
+  "Vous n'aimez pas": {
+   "file": "audio/tts/qwen3-fr-bf16/5009009a170ddd5d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
   "Vous n'avez pas faim ? — non, merci, je n'ai pas faim.": {
    "file": "audio/tts/qwen3-fr-bf16/2a0b987c1a9e192c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.22
+  },
+  "Vous n'avez rien fait.": {
+   "file": "audio/tts/qwen3-fr-bf16/aded162d22c12d26.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
   },
   "Vous ne changez pas": {
    "file": "audio/tts/qwen3-fr-bf16/9ddceb6f1e07734d.mp3",
@@ -7238,10 +10141,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.24
   },
+  "Vous ne m'avez pas oubliée": {
+   "file": "audio/tts/qwen3-fr-bf16/bbef4d952793207d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
   "Vous ne vous amusez pas.": {
    "file": "audio/tts/qwen3-fr-bf16/52139e9c8986dc31.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.2
+  },
+  "Vous ouvrez l'hôtel": {
+   "file": "audio/tts/qwen3-fr-bf16/4e4ec5210fe25a3c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
   },
   "Vous parlez anglais ?": {
    "file": "audio/tts/qwen3-fr-bf16/f62e50d63f1b0676.mp3",
@@ -7278,8 +10191,28 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.02
   },
+  "Vous pourriez ouvrir": {
+   "file": "audio/tts/qwen3-fr-bf16/1d121072f0f66efe.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.28
+  },
+  "Vous pourriez revenir": {
+   "file": "audio/tts/qwen3-fr-bf16/fd426769a79a6c85.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
   "Vous pouvez m'aider ?": {
    "file": "audio/tts/qwen3-fr-bf16/ecba332d9d8b39b1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "Vous revenez demain": {
+   "file": "audio/tts/qwen3-fr-bf16/4ddf6b1227e80073.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
+  "Vous revenez demain ?": {
+   "file": "audio/tts/qwen3-fr-bf16/d3948c2532a0bc56.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.86
   },
@@ -7312,6 +10245,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ab924368b046d55b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
+  },
+  "Vous vendez vite": {
+   "file": "audio/tts/qwen3-fr-bf16/47321620af54d5cc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
   },
   "Vous venez d'où ?": {
    "file": "audio/tts/qwen3-fr-bf16/b7adcbd3d99bd1b1.mp3",
@@ -7363,6 +10301,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.74
   },
+  "Vous vous couchez à deux heures du matin.": {
+   "file": "audio/tts/qwen3-fr-bf16/5bc8159fbff695df.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.24
+  },
+  "Vous vous faites un film": {
+   "file": "audio/tts/qwen3-fr-bf16/fc17ae74f50db784.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
   "Vous vous habillez vite !": {
    "file": "audio/tts/qwen3-fr-bf16/06b2cb2f2072a827.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7393,6 +10341,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.86
   },
+  "Vous vous êtes mis sur votre trente et un !": {
+   "file": "audio/tts/qwen3-fr-bf16/9d17c89d03fe96f6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.02
+  },
   "Vous vous êtes promenée au bord de la mer, Madame ?": {
    "file": "audio/tts/qwen3-fr-bf16/339ca9b514660d13.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7413,6 +10366,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.8
   },
+  "Vous êtes fort, pour un monsieur qui répare de petites boîtes.": {
+   "file": "audio/tts/qwen3-fr-bf16/cc7db17371b344eb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.24
+  },
+  "Vous êtes fort.": {
+   "file": "audio/tts/qwen3-fr-bf16/cbbe94c54e7fc714.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "Vous êtes français ?": {
    "file": "audio/tts/qwen3-fr-bf16/ea9692a483e1b24c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7428,10 +10391,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "Vous êtes… vraiment un fantôme ?": {
+   "file": "audio/tts/qwen3-fr-bf16/ffe8ffc5930e817f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.02
+  },
+  "Yanis l'a posé": {
+   "file": "audio/tts/qwen3-fr-bf16/d53d1301ddf3a7a9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "Zoé donne des cours": {
+   "file": "audio/tts/qwen3-fr-bf16/bc7e0b53ed8dd129.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
   "Zéro un… quarante-deux… dix-huit… trente… douze. À jeudi, monsieur !": {
    "file": "audio/tts/qwen3-fr-bf16/e5c2767cb4808c22.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 5.0
+  },
+  "a retrouvé le sourire": {
+   "file": "audio/tts/qwen3-fr-bf16/4fc103a523c73e06.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
   },
   "a-t-elle": {
    "file": "audio/tts/qwen3-fr-bf16/5d489a09f564bc70.mp3",
@@ -7503,6 +10486,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
   },
+  "apprendre la batterie": {
+   "file": "audio/tts/qwen3-fr-bf16/8b71095ae31908a9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
+  },
   "arriver": {
    "file": "audio/tts/qwen3-fr-bf16/351f2bcba3fba21b.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7537,6 +10525,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/144fc0edab9e7222.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.4
+  },
+  "au premier rang": {
+   "file": "audio/tts/qwen3-fr-bf16/e233cc59afc4c35b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
   },
   "au premier étage": {
    "file": "audio/tts/qwen3-fr-bf16/9cdc397b078ff3ae.mp3",
@@ -7638,6 +10631,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.38
   },
+  "bouchons d'oreille": {
+   "file": "audio/tts/qwen3-fr-bf16/6439915cd3b7ea1e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
   "bref": {
    "file": "audio/tts/qwen3-fr-bf16/7a1aea65a2c840e8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7723,6 +10721,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.84
   },
+  "ce serait notre salon": {
+   "file": "audio/tts/qwen3-fr-bf16/16ea3d1653601673.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
   "ce soir": {
    "file": "audio/tts/qwen3-fr-bf16/3cbc16c722aa9858.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7768,6 +10771,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "cent mille euros": {
+   "file": "audio/tts/qwen3-fr-bf16/8cfe4ab2b3caf25b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.04
+  },
+  "cent soixante-six ans": {
+   "file": "audio/tts/qwen3-fr-bf16/63b05d2220736d82.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
   "certains sont partis": {
    "file": "audio/tts/qwen3-fr-bf16/6b27e7af0e90f0b8.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7778,6 +10791,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.48
   },
+  "ces histoires": {
+   "file": "audio/tts/qwen3-fr-bf16/5857299276268e96.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.92
+  },
+  "ces lumières qui marchent": {
+   "file": "audio/tts/qwen3-fr-bf16/ad5d7a74fdf9f1e7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
   "ces pains au chocolat": {
    "file": "audio/tts/qwen3-fr-bf16/287343e1527b1e14.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7787,6 +10810,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/0d7dcc6b04a1a77f.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.84
+  },
+  "cet hiver": {
+   "file": "audio/tts/qwen3-fr-bf16/5524eec11c82a9fd.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
   },
   "cet hôtel": {
    "file": "audio/tts/qwen3-fr-bf16/3e907604d635787a.mp3",
@@ -7883,6 +10911,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "comme chien et chat": {
+   "file": "audio/tts/qwen3-fr-bf16/6d53b90bfb180d6d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.44
+  },
+  "comme le jour et la nuit": {
+   "file": "audio/tts/qwen3-fr-bf16/efcbbd42dc460151.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
   "commencer": {
    "file": "audio/tts/qwen3-fr-bf16/0caa078228a9e1a3.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -7892,6 +10930,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c44bb2fd516909da.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.58
+  },
+  "comment c'était": {
+   "file": "audio/tts/qwen3-fr-bf16/c97ba45e30cb40b6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
   },
   "comment il s'appelle": {
    "file": "audio/tts/qwen3-fr-bf16/8a720bc745a9d933.mp3",
@@ -7983,10 +11026,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
   },
+  "d'y penser": {
+   "file": "audio/tts/qwen3-fr-bf16/4e6cc00a303adb7b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
   "dans": {
    "file": "audio/tts/qwen3-fr-bf16/0b135e8de8f42b4b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.52
+  },
+  "dans le toit": {
+   "file": "audio/tts/qwen3-fr-bf16/af44545fa6122dc3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
+  "dans les années quatre-vingt": {
+   "file": "audio/tts/qwen3-fr-bf16/a259aa40b7887a60.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
   },
   "de": {
    "file": "audio/tts/qwen3-fr-bf16/959a45d44e6fcf58.mp3",
@@ -8063,6 +11121,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.46
   },
+  "des bougies": {
+   "file": "audio/tts/qwen3-fr-bf16/483b11e7a809eb61.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
   "des chaussures marron": {
    "file": "audio/tts/qwen3-fr-bf16/38ee683a1de27b86.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -8087,6 +11150,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c1450d9b0d1da8fa.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
+  },
+  "deux heures du matin": {
+   "file": "audio/tts/qwen3-fr-bf16/86c8ae1b7c223133.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
   },
   "deux heures et demie": {
    "file": "audio/tts/qwen3-fr-bf16/e3c610595bba8667.mp3",
@@ -8123,6 +11191,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.5
   },
+  "dit bonjour": {
+   "file": "audio/tts/qwen3-fr-bf16/9d8bbc78d0bd50e1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
   "dix": {
    "file": "audio/tts/qwen3-fr-bf16/1828cb7d38ef0139.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -8132,6 +11205,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/73f4b5a14f5170b6.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
+  },
+  "dix piments": {
+   "file": "audio/tts/qwen3-fr-bf16/8a8f591ba2670951.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
   },
   "dix touristes": {
    "file": "audio/tts/qwen3-fr-bf16/87b8832a017b695d.mp3",
@@ -8233,10 +11311,30 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.44
   },
+  "elle a fermé l'hôtel": {
+   "file": "audio/tts/qwen3-fr-bf16/f8782793da5c1184.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
+  "elle a porté mes courses": {
+   "file": "audio/tts/qwen3-fr-bf16/eccd14b1146b4f51.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
+  },
   "elle est": {
    "file": "audio/tts/qwen3-fr-bf16/fcbd447c06bf0c7d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.44
+  },
+  "elle est venue": {
+   "file": "audio/tts/qwen3-fr-bf16/e1e5d68c133cda4a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "elle et moi": {
+   "file": "audio/tts/qwen3-fr-bf16/1c22552533bb05d0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
   },
   "elle m'a laissé le café": {
    "file": "audio/tts/qwen3-fr-bf16/568b77e5bf9d0e2a.mp3",
@@ -8318,6 +11416,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.66
   },
+  "en janvier": {
+   "file": "audio/tts/qwen3-fr-bf16/5a80ffc0f184040a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "en panne": {
+   "file": "audio/tts/qwen3-fr-bf16/7c77d123eef45fc5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
   "enfin": {
    "file": "audio/tts/qwen3-fr-bf16/d64a1b1737ddd2a9.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -8355,6 +11463,21 @@ window.VT_TTS = {
   },
   "essayer": {
    "file": "audio/tts/qwen3-fr-bf16/c34c62aae11d5dad.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
+  },
+  "essayer le silence": {
+   "file": "audio/tts/qwen3-fr-bf16/b5e4a670a169e5c9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.26
+  },
+  "est devenu": {
+   "file": "audio/tts/qwen3-fr-bf16/6ac8e56adf2fdff6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
+  "est invitée": {
+   "file": "audio/tts/qwen3-fr-bf16/861e17d34910ee7c.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
@@ -8417,6 +11540,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/d68b385de734c4a4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
+  },
+  "fleur bleue": {
+   "file": "audio/tts/qwen3-fr-bf16/bcd180840af25601.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
   },
   "février": {
    "file": "audio/tts/qwen3-fr-bf16/31a8d44abceb4e98.mp3",
@@ -8708,10 +11836,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
+  "il faudrait le fermer": {
+   "file": "audio/tts/qwen3-fr-bf16/f8a8ab91757fdaa4.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
   "il faut": {
    "file": "audio/tts/qwen3-fr-bf16/6bf1b9b451a679ca.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
+  },
+  "il faut les réparer": {
+   "file": "audio/tts/qwen3-fr-bf16/96725a1c43b102c0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
   },
   "il faut passer par sa fille": {
    "file": "audio/tts/qwen3-fr-bf16/bf6f69ee6a912385.mp3",
@@ -8797,6 +11935,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c0c1c3b86c85d71d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.76
+  },
+  "il n'a pas choisi": {
+   "file": "audio/tts/qwen3-fr-bf16/c8f05895bbad39ca.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
   },
   "il n'est jamais revenu": {
    "file": "audio/tts/qwen3-fr-bf16/cbd3356c39d144c6.mp3",
@@ -10348,6 +13491,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
+  "j'ai trouvé chaussure à mon pied": {
+   "file": "audio/tts/qwen3-fr-bf16/7fa1f780972609f5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.62
+  },
   "j'ai utilisé": {
    "file": "audio/tts/qwen3-fr-bf16/08bb8867f18142c6.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -10518,6 +13666,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "j'en ai peur": {
+   "file": "audio/tts/qwen3-fr-bf16/bafe008ecf919842.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
   "j'en veux": {
    "file": "audio/tts/qwen3-fr-bf16/7f5d5bd417ef77d0.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -10583,6 +13736,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "j'habitais chez elle": {
+   "file": "audio/tts/qwen3-fr-bf16/b0916c3744f10e37.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
+  },
   "j'habite": {
    "file": "audio/tts/qwen3-fr-bf16/8ab7268c9591d49e.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -10642,6 +13800,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/1c27702b866da983.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
+  },
+  "j'ouvre la porte": {
+   "file": "audio/tts/qwen3-fr-bf16/ce152477ab07a1f8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "j'ouvrirai": {
    "file": "audio/tts/qwen3-fr-bf16/3ab95c2601b5041a.mp3",
@@ -10712,6 +13875,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/197c2f3dcd604e93.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.94
+  },
+  "jamais je ne t'oublierai": {
+   "file": "audio/tts/qwen3-fr-bf16/dfc80fbccb4d2615.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
   },
   "janvier": {
    "file": "audio/tts/qwen3-fr-bf16/201f33e6faca9fe2.mp3",
@@ -10908,6 +14076,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.74
   },
+  "je devrais peut-être la réparer": {
+   "file": "audio/tts/qwen3-fr-bf16/293bc46508b094d1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.46
+  },
   "je dirai": {
    "file": "audio/tts/qwen3-fr-bf16/a519f23dddb0543c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -11082,6 +14255,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/51ec1a104ca35825.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.58
+  },
+  "je lui ai acheté": {
+   "file": "audio/tts/qwen3-fr-bf16/90e019a8ad06230c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
   },
   "je m'appelle": {
    "file": "audio/tts/qwen3-fr-bf16/7bd7457667348e32.mp3",
@@ -11343,6 +14521,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
   },
+  "je ne pourrais plus": {
+   "file": "audio/tts/qwen3-fr-bf16/9765fabfc9471aed.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
+  "je ne regarde pas": {
+   "file": "audio/tts/qwen3-fr-bf16/824d60a90fa0aef1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
+  "je ne sais pas": {
+   "file": "audio/tts/qwen3-fr-bf16/dceb9a24a0b3021c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
   "je paie": {
    "file": "audio/tts/qwen3-fr-bf16/2bf4bce53d1911bf.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -11402,6 +14595,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/43a855f72c6834b1.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
+  },
+  "je perdais toujours": {
+   "file": "audio/tts/qwen3-fr-bf16/fcab5710ad9ff524.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
   },
   "je perdrai": {
    "file": "audio/tts/qwen3-fr-bf16/da96e92b09d39f6a.mp3",
@@ -11552,6 +14750,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/cc7447af3ea214e5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.86
+  },
+  "je regardais cette véranda": {
+   "file": "audio/tts/qwen3-fr-bf16/be9eb72933a51b7a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
+  "je regardais le sommet": {
+   "file": "audio/tts/qwen3-fr-bf16/50b652cf4700cd1c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
   },
   "je regarde": {
    "file": "audio/tts/qwen3-fr-bf16/51ff9e0685b4caaa.mp3",
@@ -11763,6 +14971,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.92
   },
+  "je suis chez moi": {
+   "file": "audio/tts/qwen3-fr-bf16/167f753795cbff3b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
   "je suis descendu": {
    "file": "audio/tts/qwen3-fr-bf16/7ca1c9e2058c3804.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -11863,10 +15076,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.8
   },
+  "je t'aime": {
+   "file": "audio/tts/qwen3-fr-bf16/6d732026539a3aa5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "je t'apprends": {
+   "file": "audio/tts/qwen3-fr-bf16/99cee6527587cf79.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
   "je t'explique": {
    "file": "audio/tts/qwen3-fr-bf16/5d294d9dcdf3c8ea.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
+  },
+  "je tapais": {
+   "file": "audio/tts/qwen3-fr-bf16/327540fc9a5bc571.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
   },
   "je tiendrai": {
    "file": "audio/tts/qwen3-fr-bf16/cda0531a2360c5c9.mp3",
@@ -11877,6 +15105,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ed2c72a385c4aac8.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.6
+  },
+  "je tiens la lampe": {
+   "file": "audio/tts/qwen3-fr-bf16/6402d954f98d7377.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
   },
   "je tombe": {
    "file": "audio/tts/qwen3-fr-bf16/9bb164667e721f05.mp3",
@@ -11933,6 +15166,21 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.56
   },
+  "je vais de mieux en mieux": {
+   "file": "audio/tts/qwen3-fr-bf16/bad9a2615bc35499.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.22
+  },
+  "je vais dormir": {
+   "file": "audio/tts/qwen3-fr-bf16/53df9214d6f0a24d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
+  },
+  "je vais jouer": {
+   "file": "audio/tts/qwen3-fr-bf16/c15dd84c59dcce78.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
   "je vais lui dire pardon": {
    "file": "audio/tts/qwen3-fr-bf16/5229dd4f5a8c4218.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -11952,6 +15200,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7cf600cb53434f9b.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
+  },
+  "je vais vous raconter": {
+   "file": "audio/tts/qwen3-fr-bf16/018d3711c992a2dc.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
   },
   "je vais écouter": {
    "file": "audio/tts/qwen3-fr-bf16/4866a7637d5b345e.mp3",
@@ -12023,8 +15276,18 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
   },
+  "je voudrais aider Zoé": {
+   "file": "audio/tts/qwen3-fr-bf16/b8809149f6c098d7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.42
+  },
   "je voudrais savoir": {
    "file": "audio/tts/qwen3-fr-bf16/62756e8065c1a802.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
+  "je voudrais te dire": {
+   "file": "audio/tts/qwen3-fr-bf16/cf70e9791943b584.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
   },
@@ -12032,6 +15295,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/e562ba51bbd13cd2.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.58
+  },
+  "je voulais": {
+   "file": "audio/tts/qwen3-fr-bf16/9dd79b0c07bd65c6.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
+  "je voulais monter": {
+   "file": "audio/tts/qwen3-fr-bf16/094116d17cc1c79b.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
   },
   "je vous apporte": {
    "file": "audio/tts/qwen3-fr-bf16/bb5249f134d735c7.mp3",
@@ -12098,6 +15371,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.02
   },
+  "l'a montré": {
+   "file": "audio/tts/qwen3-fr-bf16/93dc07b44760e942.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.64
+  },
   "l'addition": {
    "file": "audio/tts/qwen3-fr-bf16/8b64682e0084922a.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12117,6 +15395,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/cfe439fb3e83904e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.74
+  },
+  "l'hiver dernier": {
+   "file": "audio/tts/qwen3-fr-bf16/ad70ae7282bac301.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
   },
   "l'hôtel": {
    "file": "audio/tts/qwen3-fr-bf16/2357650d9bb683f0.mp3",
@@ -12138,6 +15421,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.88
   },
+  "la dame qui la servait": {
+   "file": "audio/tts/qwen3-fr-bf16/35d14446371e3e57.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.34
+  },
   "la lettre qu'elle a écrite": {
    "file": "audio/tts/qwen3-fr-bf16/f0523938c3a645aa.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12148,6 +15436,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.66
   },
+  "la mauvaise": {
+   "file": "audio/tts/qwen3-fr-bf16/969f86753d9f640a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
+  },
   "la mienne": {
    "file": "audio/tts/qwen3-fr-bf16/f2e70a30065ed74c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12157,6 +15450,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/d2cc9f18a6b173c5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
+  },
+  "la note qui manque": {
+   "file": "audio/tts/qwen3-fr-bf16/27f9a6dc6409e0e7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.08
   },
   "la nôtre": {
    "file": "audio/tts/qwen3-fr-bf16/499fa68da8a2571c.mp3",
@@ -12188,6 +15486,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
   },
+  "la vue est belle": {
+   "file": "audio/tts/qwen3-fr-bf16/6507b89b467ea172.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.96
+  },
   "la vôtre": {
    "file": "audio/tts/qwen3-fr-bf16/141eebee27a45b95.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12197,6 +15500,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c004da0d35e56eb5.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.64
+  },
+  "laisser les deux portes ouvertes": {
+   "file": "audio/tts/qwen3-fr-bf16/6dc9f6a83ded8b82.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.74
   },
   "laisser ma valise": {
    "file": "audio/tts/qwen3-fr-bf16/0a61ce226df0a8c7.mp3",
@@ -12233,10 +15541,25 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.14
   },
+  "le cœur sur la main": {
+   "file": "audio/tts/qwen3-fr-bf16/d2e1f9cc0ae48d61.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
+  "le dix-neuf décembre": {
+   "file": "audio/tts/qwen3-fr-bf16/edef146e7abd0683.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.18
+  },
   "le droit": {
    "file": "audio/tts/qwen3-fr-bf16/c637af45f05b4c5a.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.64
+  },
+  "le facteur mettait": {
+   "file": "audio/tts/qwen3-fr-bf16/e2d63a6e4e6e7b69.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
   },
   "le leur": {
    "file": "audio/tts/qwen3-fr-bf16/9bb4644839098e0f.mp3",
@@ -12257,6 +15580,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/ec50efb9aa69c320.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.1
+  },
+  "le premier octobre": {
+   "file": "audio/tts/qwen3-fr-bf16/b71a5c71265a52f5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.12
   },
   "le quartier où j'habite": {
    "file": "audio/tts/qwen3-fr-bf16/2d5dfac4b63acf7b.mp3",
@@ -12408,6 +15736,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.44
   },
+  "lui demander": {
+   "file": "audio/tts/qwen3-fr-bf16/02301ebfa37e257a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "lui expliquer": {
+   "file": "audio/tts/qwen3-fr-bf16/24cfe5f5d4517c73.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.0
+  },
   "lui laisser un message": {
    "file": "audio/tts/qwen3-fr-bf16/159394e7b59bef58.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12427,6 +15765,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/311802b258ed28ec.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.54
+  },
+  "m'a tout raconté": {
+   "file": "audio/tts/qwen3-fr-bf16/f5e2974659c910a8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
   },
   "m'assieds": {
    "file": "audio/tts/qwen3-fr-bf16/a5e021ae6fd6e4c8.mp3",
@@ -12533,6 +15876,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.54
   },
+  "mes fautes": {
+   "file": "audio/tts/qwen3-fr-bf16/3b865b5b5207d933.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "mettre": {
    "file": "audio/tts/qwen3-fr-bf16/4658a34c5c5e8cc3.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12557,6 +15905,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/47ba0bae6fd70ce7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.76
+  },
+  "mon hôtel": {
+   "file": "audio/tts/qwen3-fr-bf16/32e7780f74bd03fe.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
   },
   "mon père disait": {
    "file": "audio/tts/qwen3-fr-bf16/66d4147ba927d827.mp3",
@@ -12593,6 +15946,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
   },
+  "ne devrait plus avoir peur": {
+   "file": "audio/tts/qwen3-fr-bf16/53866b7381d23dd9.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.54
+  },
   "ne me suis pas réveillée": {
    "file": "audio/tts/qwen3-fr-bf16/9123ab70a86d2e23.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -12617,6 +15975,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/48d53bdb06149a12.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.3
+  },
+  "neuf heures et demie": {
+   "file": "audio/tts/qwen3-fr-bf16/517b32331e15d879.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.94
   },
   "neuvième": {
    "file": "audio/tts/qwen3-fr-bf16/eaae2db34bfafce1.mp3",
@@ -13278,6 +16641,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.66
   },
+  "nous y sommes restés": {
+   "file": "audio/tts/qwen3-fr-bf16/ac3fb2a9d7560768.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
+  },
   "nous écoutons": {
    "file": "audio/tts/qwen3-fr-bf16/4a3e04aaf49d28fa.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -13328,6 +16696,26 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.84
   },
+  "on les garde": {
+   "file": "audio/tts/qwen3-fr-bf16/a750f599f1a34a76.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
+  },
+  "on lisait": {
+   "file": "audio/tts/qwen3-fr-bf16/ae03c5993c36185d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
+  },
+  "on prend les portes": {
+   "file": "audio/tts/qwen3-fr-bf16/ce90d0edf320464d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
+  "on rit avec eux": {
+   "file": "audio/tts/qwen3-fr-bf16/5f8e0d29eb76c129.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.06
+  },
   "on se tutoie": {
    "file": "audio/tts/qwen3-fr-bf16/f5af754230b55618.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -13338,15 +16726,35 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "on va commencer": {
+   "file": "audio/tts/qwen3-fr-bf16/4f6b0b3396ef98ab.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
+  "on va en trouver un autre": {
+   "file": "audio/tts/qwen3-fr-bf16/d5495627c1a9c326.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.44
+  },
   "on va monter là-haut": {
    "file": "audio/tts/qwen3-fr-bf16/494cde35f166d02d.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.98
   },
+  "on va réparer": {
+   "file": "audio/tts/qwen3-fr-bf16/f1b4b51bfa429fe0.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
   "on écrit": {
    "file": "audio/tts/qwen3-fr-bf16/01e44682836e9266.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
+  },
+  "on était neuf dans trois pièces": {
+   "file": "audio/tts/qwen3-fr-bf16/8e4bbba60a0bb420.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.9
   },
   "ont-ils": {
    "file": "audio/tts/qwen3-fr-bf16/c5c9feabdb4381ff.mp3",
@@ -13362,6 +16770,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/4042e47beee1e16e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.58
+  },
+  "onze heures moins le quart": {
+   "file": "audio/tts/qwen3-fr-bf16/5218be8a34c7899c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
   },
   "oublier": {
    "file": "audio/tts/qwen3-fr-bf16/7592461b77b1793d.mp3",
@@ -13392,6 +16805,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/5d0a05ce24089534.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
+  },
+  "où personne ne va": {
+   "file": "audio/tts/qwen3-fr-bf16/618f245afa08bacb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
   },
   "parce que": {
    "file": "audio/tts/qwen3-fr-bf16/1cd2d210c78aee5e.mp3",
@@ -13438,6 +16856,16 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.72
   },
+  "pas de lumière": {
+   "file": "audio/tts/qwen3-fr-bf16/e2828f80e8b2feb2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "pas de musique": {
+   "file": "audio/tts/qwen3-fr-bf16/2ce7f39c878cea5a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.84
+  },
   "pas de voiture": {
    "file": "audio/tts/qwen3-fr-bf16/99765af6cd1e0a99.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -13482,6 +16910,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/34e586cbe2046f16.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.32
+  },
+  "petit mot": {
+   "file": "audio/tts/qwen3-fr-bf16/0298b39b40ab0e11.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
   },
   "petit, petite": {
    "file": "audio/tts/qwen3-fr-bf16/6f3c49b761a69e00.mp3",
@@ -13858,6 +17291,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.18
   },
+  "qui dort dîne": {
+   "file": "audio/tts/qwen3-fr-bf16/c7046336d7f959fb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
   "qui veut du café ? — Moi !": {
    "file": "audio/tts/qwen3-fr-bf16/1ad1f70bbe391a71.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -13913,6 +17351,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.06
   },
+  "regardez cette photo": {
+   "file": "audio/tts/qwen3-fr-bf16/1ec16cb7532384c2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.02
+  },
   "rencontrer": {
    "file": "audio/tts/qwen3-fr-bf16/9b9a6c9d5de0ed07.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -13967,6 +17410,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/02179775e5ea6cf0.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.46
+  },
+  "règle numéro un": {
+   "file": "audio/tts/qwen3-fr-bf16/65b371d73ba4714e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.14
   },
   "réfléchir": {
    "file": "audio/tts/qwen3-fr-bf16/3d780c78170ede4d.mp3",
@@ -14143,6 +17591,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.66
   },
+  "seize ans": {
+   "file": "audio/tts/qwen3-fr-bf16/0f85dd9514395eac.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.72
+  },
   "sembler": {
    "file": "audio/tts/qwen3-fr-bf16/b8737a7f4076167e.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -14188,6 +17641,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
   },
+  "sixième étage": {
+   "file": "audio/tts/qwen3-fr-bf16/197901957e760193.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
   "soixante": {
    "file": "audio/tts/qwen3-fr-bf16/15bc210013d3661f.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -14207,6 +17665,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/8a4ca475de84bcba.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.04
+  },
+  "soixante-seize ans": {
+   "file": "audio/tts/qwen3-fr-bf16/730d4920d30393f3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.16
   },
   "son": {
    "file": "audio/tts/qwen3-fr-bf16/98aa667548255288.mp3",
@@ -14247,6 +17710,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/c89b6c3d164a6509.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
+  },
+  "sur la même longueur d'onde": {
+   "file": "audio/tts/qwen3-fr-bf16/1b19cdea32ab4fdb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.46
   },
   "sur la place": {
    "file": "audio/tts/qwen3-fr-bf16/144a1efa7551f1c1.mp3",
@@ -14333,6 +17801,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.82
   },
+  "tout le monde riait": {
+   "file": "audio/tts/qwen3-fr-bf16/a1cba05ecbf4fa1f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.24
+  },
   "toutes les trois heures": {
    "file": "audio/tts/qwen3-fr-bf16/f7789cdcbd1c5a23.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -14357,6 +17830,21 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/41a563fd36ae6a20.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.86
+  },
+  "trente et un ans": {
+   "file": "audio/tts/qwen3-fr-bf16/2ba2c863411abc78.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
+  "trente kilos": {
+   "file": "audio/tts/qwen3-fr-bf16/8756b7ef00f3117e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "trente-neuf": {
+   "file": "audio/tts/qwen3-fr-bf16/5ffbea3abf0f1848.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
   },
   "trois": {
    "file": "audio/tts/qwen3-fr-bf16/a69cf3d89f86a833.mp3",
@@ -14428,10 +17916,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
   },
+  "tu as joué": {
+   "file": "audio/tts/qwen3-fr-bf16/9a16e4a5ab671779.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
   "tu attends": {
    "file": "audio/tts/qwen3-fr-bf16/1ed6d8f3afc8c2e4.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.64
+  },
+  "tu avais": {
+   "file": "audio/tts/qwen3-fr-bf16/7192eefda4401752.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.6
   },
   "tu bois": {
    "file": "audio/tts/qwen3-fr-bf16/d83dce0355741285.mp3",
@@ -14512,6 +18010,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/eda54327ce13121e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.7
+  },
+  "tu devrais": {
+   "file": "audio/tts/qwen3-fr-bf16/9abd855e92ab8070.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
+  "tu devrais me demander": {
+   "file": "audio/tts/qwen3-fr-bf16/5c575d2cd50fdd43.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.3
   },
   "tu dis": {
    "file": "audio/tts/qwen3-fr-bf16/c9d131f892fdcba1.mp3",
@@ -14632,6 +18140,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/223cd0e96c7af983.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.84
+  },
+  "tu leur as dit": {
+   "file": "audio/tts/qwen3-fr-bf16/7ee752b2e0300bcf.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.74
   },
   "tu lis": {
    "file": "audio/tts/qwen3-fr-bf16/99127e95b4d51e98.mp3",
@@ -15083,6 +18596,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.9
   },
+  "un peu de piment": {
+   "file": "audio/tts/qwen3-fr-bf16/2de4bd4707f0c0e1.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.98
+  },
   "un peu petite": {
    "file": "audio/tts/qwen3-fr-bf16/cdd46e77086c1fbf.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -15122,6 +18640,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/7d5f4c168de017ff.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.16
+  },
+  "une panne": {
+   "file": "audio/tts/qwen3-fr-bf16/c5dfcfa6ef0704eb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.8
+  },
+  "une soupe que j'ai faite": {
+   "file": "audio/tts/qwen3-fr-bf16/c0f92e6196d155eb.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
   },
   "une tarte": {
    "file": "audio/tts/qwen3-fr-bf16/ed7c89666147e2dd.mp3",
@@ -15188,6 +18716,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.34
   },
+  "vingt mille euros": {
+   "file": "audio/tts/qwen3-fr-bf16/2df42f934a290b29.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.2
+  },
   "vingt-deux": {
    "file": "audio/tts/qwen3-fr-bf16/258a9f20342d6447.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -15212,6 +18745,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/cde43be19cb36120.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.0
+  },
+  "voisin": {
+   "file": "audio/tts/qwen3-fr-bf16/0017e6def0eae4e7.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.6
   },
   "vos": {
    "file": "audio/tts/qwen3-fr-bf16/d6c1aaf96588e292.mp3",
@@ -15307,6 +18845,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/21fa1cf76a8ea298.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.68
+  },
+  "vous avez acheté": {
+   "file": "audio/tts/qwen3-fr-bf16/eb6c5cb8e0d6ed1c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.86
+  },
+  "vous avez trouvé ce que vous cherchiez": {
+   "file": "audio/tts/qwen3-fr-bf16/98bdaa39e8001793.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.68
   },
   "vous avez été": {
    "file": "audio/tts/qwen3-fr-bf16/80b85e8b44e9e30f.mp3",
@@ -15528,6 +19076,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
   },
+  "vous mangez quoi": {
+   "file": "audio/tts/qwen3-fr-bf16/7136dbfe3e87bcb8.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
   "vous marchez": {
    "file": "audio/tts/qwen3-fr-bf16/0d4ec71313d08f4f.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -15553,10 +19106,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.72
   },
+  "vous n'avez rien fait": {
+   "file": "audio/tts/qwen3-fr-bf16/88bee1243d040ab2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.9
+  },
   "vous naissez": {
    "file": "audio/tts/qwen3-fr-bf16/26dd06fead20df89.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.78
+  },
+  "vous ne portez rien": {
+   "file": "audio/tts/qwen3-fr-bf16/abda9aa246ca668c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
   },
   "vous offrez": {
    "file": "audio/tts/qwen3-fr-bf16/1b30bd3e79cdbe3b.mp3",
@@ -15923,6 +19486,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.96
   },
+  "vous êtes transparent": {
+   "file": "audio/tts/qwen3-fr-bf16/07ede992aa00187f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.1
+  },
   "voyager": {
    "file": "audio/tts/qwen3-fr-bf16/e6e62ee55819cdc1.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -15947,6 +19515,11 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/0b9555deef54462e.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.6
+  },
+  "« Ce soir, pas de stylo rouge. Zoé. » Tu les as tous gardés ?": {
+   "file": "audio/tts/qwen3-fr-bf16/689f11291e2ca200.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 4.32
   },
   "« Depuis samedi, je pense à toi tout le temps. » Et puis : le Café des Canuts, un foulard bleu, Lucienne…": {
    "file": "audio/tts/qwen3-fr-bf16/7e28c67cbab7172c.mp3",
@@ -15973,10 +19546,20 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 4.44
   },
+  "« L'hôtel des fantômes gentils ». Les deux enfants le répètent.": {
+   "file": "audio/tts/qwen3-fr-bf16/879f5ce58620efb5.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.34
+  },
   "« Ma réponse est oui. Oui à Montréal, oui à toi. »": {
    "file": "audio/tts/qwen3-fr-bf16/6ab30cdc1cc96837.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 3.52
+  },
+  "« Madame, le soir, la musique est trop forte. Merci. »": {
+   "file": "audio/tts/qwen3-fr-bf16/f7f67bd677357690.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.68
   },
   "« Si ta réponse est oui, retrouve-moi samedi, à dix-huit heures, au Café des Canuts. »": {
    "file": "audio/tts/qwen3-fr-bf16/70f0ce5a2b90d9ce.mp3",
@@ -16033,6 +19616,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.02
   },
+  "À nous ? Yanis l'a posé au milieu ? Entre les deux portes ?": {
+   "file": "audio/tts/qwen3-fr-bf16/098bad4b3bfa350e.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.8
+  },
   "À onze heures, le Louvre.": {
    "file": "audio/tts/qwen3-fr-bf16/b62a321b54bc9893.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -16077,6 +19665,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/166d642477ec9d87.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.04
+  },
+  "À ton avis ?": {
+   "file": "audio/tts/qwen3-fr-bf16/002f0184aa2d918a.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.7
+  },
+  "À ton avis, il va neiger demain ?": {
+   "file": "audio/tts/qwen3-fr-bf16/451ee82f44ec1086.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 2.12
   },
   "À tout à l'heure": {
    "file": "audio/tts/qwen3-fr-bf16/ed7f5196db612460.mp3",
@@ -16148,6 +19746,11 @@ window.VT_TTS = {
    "voiceId": "qwen3-fr-bf16",
    "duration": 2.94
   },
+  "Ça ne fait rien": {
+   "file": "audio/tts/qwen3-fr-bf16/fa5ea163925a8e56.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.88
+  },
   "Ça prendrait combien de temps ?": {
    "file": "audio/tts/qwen3-fr-bf16/26453e63cfd5643c.mp3",
    "voiceId": "qwen3-fr-bf16",
@@ -16157,6 +19760,16 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/73f5ffe5dae2b506.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 1.26
+  },
+  "Ça te dit ?": {
+   "file": "audio/tts/qwen3-fr-bf16/e06bd2aa031f72c3.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.68
+  },
+  "Ça te dit d'aller au cinéma samedi ?": {
+   "file": "audio/tts/qwen3-fr-bf16/73bab61347b01cac.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.8
   },
   "Ça va": {
    "file": "audio/tts/qwen3-fr-bf16/5448f478b6e7eb8f.mp3",
@@ -16185,6 +19798,26 @@ window.VT_TTS = {
   },
   "Ça vous va ?": {
    "file": "audio/tts/qwen3-fr-bf16/f7508d0d5517b69c.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.62
+  },
+  "Ça y est ! Elle est parfaite. Plus que trente-neuf.": {
+   "file": "audio/tts/qwen3-fr-bf16/4a2d0f2e1ea58cea.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.0
+  },
+  "Écoute": {
+   "file": "audio/tts/qwen3-fr-bf16/f141f6490c60e371.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.58
+  },
+  "Écoute. Je chante la note qui manque… Là !": {
+   "file": "audio/tts/qwen3-fr-bf16/2c18270ed458ae66.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 3.04
+  },
+  "Écoutez": {
+   "file": "audio/tts/qwen3-fr-bf16/138bd7de6eb32a36.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.62
   },
@@ -16237,6 +19870,26 @@ window.VT_TTS = {
    "file": "audio/tts/qwen3-fr-bf16/da1580b6468b0cf7.mp3",
    "voiceId": "qwen3-fr-bf16",
    "duration": 0.86
+  },
+  "à sept heures": {
+   "file": "audio/tts/qwen3-fr-bf16/9d132f8b659d7af2.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.78
+  },
+  "ça casse les oreilles": {
+   "file": "audio/tts/qwen3-fr-bf16/e25bdbc39a1ec334.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 1.32
+  },
+  "ça marche": {
+   "file": "audio/tts/qwen3-fr-bf16/ee6b3933e7ca394f.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.82
+  },
+  "ça sent bon": {
+   "file": "audio/tts/qwen3-fr-bf16/245c8c1b1353e27d.mp3",
+   "voiceId": "qwen3-fr-bf16",
+   "duration": 0.76
   },
   "écouter": {
    "file": "audio/tts/qwen3-fr-bf16/6fdfa15443a78355.mp3",
