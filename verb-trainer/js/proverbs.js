@@ -18,7 +18,7 @@
   /* Episodes with a proverb, in series order then episode order: [{ id, dialogue, series, act, proverb }]. */
   function index(data) {
     for (var i = 0; i < cache.length; i++) if (cache[i].data === data) return cache[i].ix;
-    var ix = { list: [], byId: {} };
+    var ix = { list: [], byId: {}, series: [] };
     var ds = (data && data.dialogues) || [];
     var order = ((data && data.series) || []).map(function (s) { return s.id; });
     ds.filter(function (d) { return d && d.series && d.proverb; }).sort(function (a, b) {
@@ -28,6 +28,7 @@
       var it = { id: d.id, dialogue: d, series: d.series, act: d.act, proverb: d.proverb };
       ix.list.push(it);
       ix.byId[d.id] = it;
+      if (ix.series.indexOf(d.series) === -1) ix.series.push(d.series);
     });
     cache.push({ data: data, ix: ix });
     return ix;
@@ -46,10 +47,15 @@
     list(data).forEach(function (it) { if (!seen[it.act]) { seen[it.act] = true; out.push(it.act); } });
     return out.sort(function (a, b) { return a - b; });
   }
-  /** Flashcard items for the proverbs of the given acts (all acts when acts is null), for one deck. */
-  function flashItems(data, acts, deck) {
+  /** Series ids that have proverbs, in the data's series order. */
+  function allSeries(data) { return index(data).series.slice(); }
+  /** Flashcard items for the proverbs of the given acts (all acts when acts is null) and series (all series when
+      seriesIds is null or absent), for one deck. */
+  function flashItems(data, acts, deck, seriesIds) {
     if (MODE_OF[deck] == null) return [];
-    return list(data).filter(function (it) { return acts == null || acts.indexOf(it.act) !== -1; }).map(function (it) {
+    return list(data).filter(function (it) {
+      return (acts == null || acts.indexOf(it.act) !== -1) && (seriesIds == null || seriesIds.indexOf(it.series) !== -1);
+    }).map(function (it) {
       return { key: keyFor(it.id, deck), kind: "flash", deck: deck, prov: it };
     });
   }
@@ -123,6 +129,7 @@
     itemKeys: itemKeys,
     knownIds: knownIds,
     allActs: allActs,
+    allSeries: allSeries,
     flashItems: flashItems,
     choiceItem: choiceItem,
     stats: stats

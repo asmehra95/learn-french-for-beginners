@@ -131,6 +131,33 @@ test("static: index.html has the Proverbs optgroup and loads proverbs.js (versio
   var src = fs.readFileSync(path.join(ROOT, "js", "proverbs.js"), "utf8");
   assert.ok(!/fetch\(|XMLHttpRequest|innerHTML|document\./.test(src));
 });
+test("series filter: allSeries in series order; flashItems by series (absent or null = every series), combined with the acts", function () {
+  var ids = P.allSeries(DLGD_ALL);
+  assert.deepEqual(ids, DLGD_ALL.series.map(function (s) { return s.id; }).filter(function (sid) {
+    return DLGD_ALL.dialogues.some(function (d) { return d.series === sid && d.proverb; });
+  }));
+  assert.ok(ids.length >= 2 && ids.indexOf("le-cafe-des-questions") !== -1);
+  assert.deepEqual(P.allSeries(DLGD), ["le-cafe-des-questions"]);
+  var all = P.flashItems(DLGD_ALL, null, "prov-fr-en");
+  assert.deepEqual(P.flashItems(DLGD_ALL, null, "prov-fr-en", null), all);
+  assert.deepEqual(P.flashItems(DLGD_ALL, null, "prov-fr-en", ids), all);
+  var cafe = P.flashItems(DLGD_ALL, null, "prov-fr-en", ["le-cafe-des-questions"]);
+  assert.equal(cafe.length, 20);
+  cafe.forEach(function (it) { assert.equal(it.prov.series, "le-cafe-des-questions"); });
+  var other = P.flashItems(DLGD_ALL, null, "prov-en-fr", [ids[1]]);
+  assert.ok(other.length > 0 && other.every(function (it) { return it.prov.series === ids[1]; }));
+  assert.equal(cafe.length + P.flashItems(DLGD_ALL, null, "prov-fr-en", ids.slice(1)).length, all.length);
+  var act1 = P.flashItems(DLGD_ALL, [1], "prov-fr-en", ["le-cafe-des-questions"]);
+  assert.ok(act1.length > 0 && act1.every(function (it) { return it.prov.act === 1 && it.prov.series === "le-cafe-des-questions"; }));
+  assert.deepEqual(P.flashItems(DLGD_ALL, null, "prov-fr-en", []), []);
+  assert.deepEqual(P.flashItems(DLGD_ALL, null, "prov-fr-en", ["no-such-series"]), []);
+});
+test("static: app.js has the labelled series filter (a fieldset with a legend, one checkbox and label per series) and no single-series act labels", function () {
+  var app = fs.readFileSync(path.join(ROOT, "js", "app.js"), "utf8");
+  ['id: "filter-proverb-series"', 'el("legend", { text: "Proverbs: series" })', '"flt-prov-series-" + sid', '"for": id', "selectedProverbSeries",
+    "scopeProverbSeries()", "Select all series"].forEach(function (s) { assert.ok(app.indexOf(s) !== -1, s); });
+  assert.ok(!/PROV\.list\([A-Z_]+\)\[0\]\.series/.test(app), "the act filter is not labelled from the first series only");
+});
 test("shipped data: every story proverb in series order, then episode order", function () {
   var order = DLGD_ALL.series.map(function (s) { return s.id; }), want = [];
   order.forEach(function (sid) {

@@ -88,6 +88,13 @@
     return out;
   }
   var PROV_ACTS_MAX = 4;
+  /* Series ids with proverbs ({} without dialogues-data.js: then any well-formed id is kept). */
+  function proverbSeries() {
+    var d = root.VT_DIALOGUES, out = {};
+    ((d && d.dialogues) || []).forEach(function (x) { if (x.proverb && x.series) out[x.series] = true; });
+    return out;
+  }
+  var SERIES_ID_RE = /^[a-z0-9-]{1,40}$/;
   /* Story-expression flashcards: "sexpr:<dialogueId>|flash-fr-en|-" / "|flash-en-fr|-"; with dialogues-data.js
      loaded the id must be a dialogue that has an expression. */
   var SEXPR_ID_RE = /^sexpr:([a-z0-9-]{1,40})$/;
@@ -256,6 +263,17 @@
           seenAct[n] = true;
           return true;
         }).sort(function (a, b) { return a - b; });
+      }
+      // optional field (Proverbs deck series filter): absent -> every series; series ids, deduped, known ones only
+      // when dialogues-data.js is loaded, in the order given
+      if (Array.isArray(s.selectedProverbSeries)) {
+        var kSer = proverbSeries(), haveSer = Object.keys(kSer).length > 0, seenSer = {};
+        ds.selectedProverbSeries = s.selectedProverbSeries.filter(function (id) {
+          if (typeof id !== "string" || !SERIES_ID_RE.test(id) || Object.prototype.hasOwnProperty.call(seenSer, id)) return false;
+          if (haveSer && !Object.prototype.hasOwnProperty.call(kSer, id)) return false;
+          seenSer[id] = true;
+          return true;
+        });
       }
     }
     if (isObject(raw.daily)) {

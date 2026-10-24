@@ -543,6 +543,26 @@ test("café storage: malformed lastAt, prov: keys and selectedProverbActs are dr
   raw.settings.selectedProverbActs = [];
   assert.deepEqual(STORE.sanitize(raw).settings.selectedProverbActs, []);
 });
+test("proverb series filter: selectedProverbSeries keeps known series ids once, in order; malformed or unknown ids are dropped; absent stays absent", function () {
+  var STORE = loadFull();
+  var raw = clone(PRE_DLG);
+  raw.settings.selectedProverbSeries = ["l-hotel-des-fantomes-gentils", "le-cafe-des-questions", "le-cafe-des-questions", "la-lettre-de-lyon",
+    "no-such-series", "Bad", 3, null, "__proto__"];
+  assert.deepEqual(STORE.sanitize(raw).settings.selectedProverbSeries, ["l-hotel-des-fantomes-gentils", "le-cafe-des-questions"]);
+  raw.settings.selectedProverbSeries = [];
+  assert.deepEqual(STORE.sanitize(raw).settings.selectedProverbSeries, []);
+  raw.settings.selectedProverbSeries = "le-cafe-des-questions";
+  assert.equal("selectedProverbSeries" in STORE.sanitize(raw).settings, false);
+  delete raw.settings.selectedProverbSeries;
+  assert.equal("selectedProverbSeries" in STORE.sanitize(raw).settings, false);
+  assert.equal("selectedProverbSeries" in STORE.defaults().settings, false);
+  raw.settings.selectedProverbSeries = ["le-cafe-des-questions"];
+  var back = STORE.parseImport(STORE.exportText(STORE.sanitize(raw), 1760780000000));
+  assert.equal(back.ok, true);
+  assert.deepEqual(back.state.settings.selectedProverbSeries, ["le-cafe-des-questions"]);
+  raw.settings.selectedProverbSeries = ["no-such-series", "le-mauvais-colis"];
+  assert.deepEqual(loadFull(null, false).sanitize(raw).settings.selectedProverbSeries, ["no-such-series", "le-mauvais-colis"], "shape only without the data");
+});
 test("café storage: export → parseImport keeps lastAt, prov: stats and selectedProverbActs; an export without them imports with defaults", function () {
   var STORE = loadFull();
   var state = cafeState(STORE);

@@ -52,6 +52,7 @@
   var selectAll = null;    // "Select all" for the empty practice-set message (set by buildFilter)
   var selectAllThemes = null; // "Select all themes" for the empty expression practice set (set by buildFilter)
   var selectAllActs = null;   // "Select all acts" for the empty proverb practice set (set by buildFilter)
+  var selectAllProverbSeries = null; // "Select all series" for the same, when no proverb series is picked
   var syncFilter = null;   // the current filter's sync(), set at the end of every buildFilter()
   var filterPlacedIn = null; // the view the practice-set filter sits in (null when hidden)
 
@@ -101,6 +102,14 @@
     var sel = state.settings.selectedProverbActs;
     return Array.isArray(sel) ? sel.slice() : PROV.allActs(PROV_DATA);   // absent: every act
   }
+  /* Proverb series for the active flashcards route: every series on a proverbs route, else the practice set's series. */
+  function scopeProverbSeries() {
+    var r = currentRouteInfo;
+    if (!PROV_DATA || !r || r.scope === "lesson" || r.scope === "expressions") return [];
+    var sel = state.settings.selectedProverbSeries;
+    return r.scope !== "proverbs" && Array.isArray(sel) ? sel.slice() : PROV.allSeries(PROV_DATA);   // absent: every series
+  }
+  function scopeProverbItems(deck) { return PROV.flashItems(PROV_DATA, scopeProverbActs(), deck, scopeProverbSeries()); }
 
   /* Expression themes for the active flashcards route: the route's theme (or all), the practice set's themes, none for a lesson. */
   function scopeThemeIds() {
@@ -131,7 +140,8 @@
     var flash = currentRouteInfo && currentRouteInfo.name === "flashcards";
     var deck = flash ? effectiveDeck(currentRouteInfo) : null;
     if (flash && isSexprDeck(deck)) return location.hash.slice(1) + "#sexpr:" + scopeStorySeries().slice().sort().join(",") + "|" + deck;
-    if (flash && isProvDeck(deck)) return location.hash.slice(1) + "#prov:" + scopeProverbActs().slice().sort().join(",") + "|" + deck;
+    if (flash && isProvDeck(deck)) return location.hash.slice(1) + "#prov:" + scopeProverbActs().slice().sort().join(",") + "/" +
+      scopeProverbSeries().slice().sort().join(",") + "|" + deck;
     if (flash && isExprDeck(deck)) return location.hash.slice(1) + "#expr:" + scopeThemeIds().slice().sort().join(",") + "|" + deck;
     var k = location.hash.slice(1) + "#" + scopeVerbs().map(function (v) { return v.id; }).sort().join(",");
     if (flash) k += "|" + deck;
@@ -546,28 +556,63 @@
       });
     }
 
-    // Proverb acts (Le Café des Questions; same placement as the themes). Absent setting = every act.
-    var actBoxes = [];
+    // Proverb acts (same placement as the themes). Absent setting = every act. With one proverb series the legend
+    // and the act labels name it; with several, an act checkbox covers that act of every series.
+    var actBoxes = [], seriesBoxes = [];
     if (PROV_DATA) {
       var allActs = el("button", { type: "button", className: "btn btn-small", text: "All acts" });
       var noActs = el("button", { type: "button", className: "btn btn-small", text: "No acts" });
-      var provSer = window.VT_DLG.seriesById(PROV_DATA, PROV.list(PROV_DATA)[0].series);
+      var provIds = PROV.allSeries(PROV_DATA);
+      var provSer = provIds.length === 1 ? window.VT_DLG.seriesById(PROV_DATA, provIds[0]) : null;
       var actSet = el("fieldset", { className: "filter-themes", id: "filter-proverbs" }, [
-        el("legend", { text: "Proverbs (" + provSer.titleFr + ")" }),
+        el("legend", { text: provSer ? "Proverbs (" + provSer.titleFr + ")" : "Proverbs: acts" }),
         el("div", { className: "actions" }, [allActs, noActs])
       ]);
       var actCounts = {};
       PROV.list(PROV_DATA).forEach(function (it) { actCounts[it.act] = (actCounts[it.act] || 0) + 1; });
       PROV.allActs(PROV_DATA).forEach(function (n) {
-        var act = (provSer.acts || []).filter(function (a) { return a.number === n; })[0];
+        var act = provSer ? (provSer.acts || []).filter(function (a) { return a.number === n; })[0] : null;
         var id = "flt-prov-act-" + n;
         var cb = el("input", { type: "checkbox", id: id, "data-act": String(n) });
         actBoxes.push(cb);
-        actSet.appendChild(el("div", { className: "check" }, [cb, el("label", { "for": id }, ["Act " + n + " · ",
-          el("span", { lang: "fr", text: act ? act.titleFr : "" }), " (" + actCounts[n] + ")"])]));
+        actSet.appendChild(el("div", { className: "check" }, [cb, el("label", { "for": id }, act ? ["Act " + n + " · ",
+          el("span", { lang: "fr", text: act.titleFr }), " (" + actCounts[n] + ")"] : ["Act " + n + " (" + actCounts[n] + ")"])]));
       });
       actSet.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
       body.appendChild(actSet);
+      // Proverb series (only when more than one series has proverbs). Absent setting = every series.
+      if (provIds.length > 1) {
+        var serCounts = {};
+        PROV.list(PROV_DATA).forEach(function (it) { serCounts[it.series] = (serCounts[it.series] || 0) + 1; });
+        var serSet = el("fieldset", { className: "filter-themes", id: "filter-proverb-series" }, [el("legend", { text: "Proverbs: series" })]);
+        provIds.forEach(function (sid) {
+          var ser = window.VT_DLG.seriesById(PROV_DATA, sid), id = "flt-prov-series-" + sid;
+          var cb = el("input", { type: "checkbox", id: id, "data-series": sid });
+          seriesBoxes.push(cb);
+          serSet.appendChild(el("div", { className: "check" }, [cb, el("label", { "for": id }, [
+            el("span", { lang: "fr", text: ser ? ser.titleFr : sid }), " (" + serCounts[sid] + ")"])]));
+        });
+        serSet.hidden = actSet.hidden;
+        body.appendChild(serSet);
+        var setSeries = function (ids) {
+          state.settings.selectedProverbSeries = provIds.filter(function (sid) { return ids.indexOf(sid) !== -1; });
+          save();
+          sync();
+          filterKeys.forEach(function (k) { window.VT_SESSION.drop(k); });
+          filterKeys = [];
+          if (PRACTICE.indexOf(currentRoute) !== -1) showMode(currentRoute);
+          if (currentRoute === "practice") showRegistered("practice");
+        };
+        selectAllProverbSeries = function () { setSeries(provIds); };
+        seriesBoxes.forEach(function (cb) {
+          cb.addEventListener("change", function () {
+            var sid = cb.getAttribute("data-series");
+            var cur = Array.isArray(state.settings.selectedProverbSeries) ? state.settings.selectedProverbSeries : provIds;
+            var sel = cur.filter(function (x) { return x !== sid; });
+            setSeries(cb.checked ? sel.concat([sid]) : sel);
+          });
+        });
+      }
       var setActs = function (acts) {
         state.settings.selectedProverbActs = PROV.allActs(PROV_DATA).filter(function (n) { return acts.indexOf(n) !== -1; });
         save();
@@ -602,6 +647,10 @@
       if (actBoxes.length) {
         var acts = Array.isArray(state.settings.selectedProverbActs) ? state.settings.selectedProverbActs : PROV.allActs(PROV_DATA);
         actBoxes.forEach(function (cb) { cb.checked = acts.indexOf(Number(cb.getAttribute("data-act"))) !== -1; });
+      }
+      if (seriesBoxes.length) {
+        var sers = Array.isArray(state.settings.selectedProverbSeries) ? state.settings.selectedProverbSeries : PROV.allSeries(PROV_DATA);
+        seriesBoxes.forEach(function (cb) { cb.checked = sers.indexOf(cb.getAttribute("data-series")) !== -1; });
       }
       $("filter-summary").textContent = filterSummaryText({ themes: filterPlacedIn === "flashcards" || filterPlacedIn === "practice" });
     }
@@ -646,7 +695,7 @@
     var provDeck = route === "flashcards" && isProvDeck(effectiveDeck(currentRouteInfo));
     var sexprDeck = route === "flashcards" && isSexprDeck(effectiveDeck(currentRouteInfo));
     var empty = sexprDeck ? SEXPR.flashItems(SEXPR_DATA, scopeStorySeries(), "sexpr-fr-en").length === 0
-      : provDeck ? PROV.flashItems(PROV_DATA, scopeProverbActs(), "prov-fr-en").length === 0
+      : provDeck ? scopeProverbItems("prov-fr-en").length === 0
       : exprDeck ? scopeExpressions().length === 0 : scopeVerbs().length === 0;
     var box = section.querySelector(".empty-msg");
     section.querySelector(".practice-area").hidden = empty;
@@ -655,7 +704,12 @@
       box.appendChild(el("p", { text: "There are no story expressions to practise here." }));
       box.appendChild(el("a", { className: "btn", href: "#dialogues", text: "Open the stories" }));
     } else if (empty && provDeck) {
-      if (!currentRouteInfo || currentRouteInfo.scope === "filter") {
+      if ((!currentRouteInfo || currentRouteInfo.scope === "filter") && !scopeProverbSeries().length) {
+        var sbtn = el("button", { type: "button", className: "btn btn-primary", text: "Select all series" });
+        sbtn.addEventListener("click", function () { if (selectAllProverbSeries) selectAllProverbSeries(); });
+        box.appendChild(el("p", { text: "Your practice set has no proverb series. Pick at least one series above." }));
+        box.appendChild(sbtn);
+      } else if (!currentRouteInfo || currentRouteInfo.scope === "filter") {
         var abtn = el("button", { type: "button", className: "btn btn-primary", text: "Select all acts" });
         abtn.addEventListener("click", function () { if (selectAllActs) selectAllActs(); });
         box.appendChild(el("p", { text: "Your practice set has no proverb acts. Pick at least one act above." }));
@@ -718,6 +772,8 @@
     if (themes) themes.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
     var provActs = $("filter-proverbs");
     if (provActs) provActs.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
+    var provSeries = $("filter-proverb-series");
+    if (provSeries) provSeries.hidden = !(filterPlacedIn === "flashcards" || filterPlacedIn === "practice");
     if (syncFilter) syncFilter();
     if (showFilter) {
       $("view-" + name).querySelector(".filter-slot").appendChild(filter);
@@ -1843,7 +1899,7 @@
     function items() {
       var deck = effectiveDeck(currentRouteInfo);
       if (isSexprDeck(deck)) return SEXPR.flashItems(SEXPR_DATA, scopeStorySeries(), deck);
-      if (isProvDeck(deck)) return PROV.flashItems(PROV_DATA, scopeProverbActs(), deck);
+      if (isProvDeck(deck)) return scopeProverbItems(deck);
       if (isExprDeck(deck)) return EXPR.flashItems(EXPR_DATA, scopeThemeIds(), deck);
       var out = [];
       scopeVerbs().forEach(function (v) {
@@ -2324,7 +2380,8 @@
     // Proverbs deck: its own totals (also part of the overall Answered / Accuracy above).
     if (PROV_DATA) {
       var ps = PROV.stats(state, PROV_DATA);
-      var pser = window.VT_DLG.seriesById(PROV_DATA, PROV.list(PROV_DATA)[0].series);
+      var pids = PROV.allSeries(PROV_DATA);
+      var pser = pids.length === 1 ? window.VT_DLG.seriesById(PROV_DATA, pids[0]) : null;   // several series: acts unnamed
       body.appendChild(el("h3", { text: "Proverbs" }));
       body.appendChild(el("dl", { className: "totals" }, [
         el("div", null, [el("dt", { text: "Proverb answers" }), el("dd", { text: String(ps.answered) })]),
@@ -2332,13 +2389,13 @@
         el("div", null, [el("dt", { text: "Cards mastered" }), el("dd", { text: ps.mastered + " of " + ps.total })])
       ]));
       body.appendChild(tableRegion("Accuracy by proverb act", el("table", { className: "stats-table" }, [
-        el("caption", { text: "Proverb flashcard answers per act of " + pser.titleFr + ", across the two decks" }),
+        el("caption", { text: "Proverb flashcard answers per act" + (pser ? " of " + pser.titleFr : " of every proverb series") + ", across the two decks" }),
         el("thead", null, [el("tr", null, ["Act", "Answered", "Correct", "Accuracy", "Mastered cards", "Practise"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
         el("tbody", null, PROV.allActs(PROV_DATA).map(function (n) {
           var p = ps.byAct[n];
-          var act = (pser.acts || []).filter(function (a) { return a.number === n; })[0];
+          var act = pser ? (pser.acts || []).filter(function (a) { return a.number === n; })[0] : null;
           return el("tr", null, [
-            el("th", { scope: "row" }, ["Act " + n + " · ", el("span", { lang: "fr", text: act ? act.titleFr : "" })]),
+            el("th", { scope: "row" }, act ? ["Act " + n + " · ", el("span", { lang: "fr", text: act.titleFr })] : ["Act " + n]),
             el("td", { text: String(p.answered) }),
             el("td", { text: String(p.correct) }),
             el("td", { text: p.answered ? Math.round((100 * p.correct) / p.answered) + "%" : "–" }),
