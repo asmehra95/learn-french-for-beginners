@@ -3492,6 +3492,7 @@
       title: "The rule", titleFr: "La règle",
       summary: "Thomas rushes in for a quick coffee, but Madame Rose serves you only after one question.",
       scene: "On Monday at half past eight, Thomas rushes into a tiny café in Montmartre with a phone in each hand. Madame Rose puts a white cup on her side of the counter and taps the slate by the door, signed O. When a phone rings, Thomas answers it, and Socrate, the grey parrot by the window, turns his back on him. Later Thomas puts both phones down, and Rose slides the cup across.",
+      sceneImages: [{ afterLine: "l7", image: "cafe-ep01-i1", alt: "Thomas lowers his two phones and thinks hard about Rose's question while she waits patiently at the counter." }, { afterLine: "l9", image: "cafe-ep01-i2", alt: "Thomas puts both phones face down on the counter and smiles as Rose slides the white cup across to him." }],
       keywords: ["pressé", "presse", "in a hurry", "règle", "regle", "rule", "ardoise", "slate", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "thomas", name: "Thomas", role: "customer in a hurry", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -3570,6 +3571,7 @@
       recap: "Thomas, always late, answered Rose's question and stayed five minutes. The slate's rule is signed O., but Rose won't say who O. is.",
       summary: "Paul's wedding speech is twelve pages long, until Rose asks him why he loves Léa.",
       scene: "On Thursday Paul sits at one of Madame Rose's three little tables with twelve pages and a pen: on Saturday he marries Léa. Rose drinks from her own blue cup with an O painted on it; customers get white ones. She puts Paul's white cup on her side of the counter. Later Socrate, the grey parrot, nibbles page twelve.",
+      sceneImages: [{ afterLine: "l6", image: "cafe-ep02-i1", alt: "Paul puts down his pen and gazes dreamily at the window as Rose, holding his tea, waits beside the table." }, { afterLine: "l9", image: "cafe-ep02-i2", alt: "Rose sets a cup of tea in front of Paul, who laughs with relief and pushes his pile of pages aside." }],
       keywords: ["discours", "speech", "wedding", "mariage", "léa", "lea", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -3652,6 +3654,7 @@
       recap: "Paul's twelve-page speech became three sentences about why he loves Léa. Rose's rule is forty years old, and her own cup is blue, with an O.",
       summary: "On his first day at work, Hugo wants a free coffee, but the rule is the rule, even for family.",
       scene: "On Saturday at five past eight, Hugo, Rose's 22-year-old great-nephew, runs into the café for his first day at work, in an apron that is too short, and drops a white cup. Socrate, the grey parrot by the window, fluffs up, offended. Hugo sweeps up the pieces, and Rose puts a new white cup on her side of the counter and looks at him over her glasses.",
+      sceneImages: [{ afterLine: "l6", image: "cafe-ep03-i1", alt: "In his too-short apron, Hugo sweeps up the broken cup and talks happily while Rose listens behind the counter." }, { afterLine: "l10", image: "cafe-ep03-i2", alt: "Hugo leans towards the perch by the window and stares in amazement at Socrate, who puffs up proudly." }],
       keywords: ["neveu", "petit-neveu", "great-nephew", "nephew", "hugo", "tata", "gâteaux", "gateaux", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "hugo", name: "Hugo", role: "Rose's great-nephew", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -3736,6 +3739,7 @@
       recap: "On his first day at work, Hugo told Rose he likes baking cakes; his parents like law. Socrate is fifty, older than the Café des Questions.",
       summary: "Emma wants to see all of Paris in one day, until Hugo asks her what she can see right now.",
       scene: "On Tuesday at ten, Madame Rose is at the market, so Hugo is alone behind the counter. Emma, an English tourist, comes in with a printed plan: Paris in one day, minute by minute. Hugo puts her white cup on his side, like Rose, and when Emma looks at her plan he points at the window; she crosses out half of it. Socrate steals a sugar cube from her saucer, and behind the counter hangs a row of postcards of the sea.",
+      sceneImages: [{ afterLine: "l6", image: "cafe-ep04-i1", alt: "Emma stands at the window, pen in hand, gazing at the Paris rooftops and the Sacré-Cœur while Hugo watches." }, { afterLine: "l8", image: "cafe-ep04-i2", alt: "Hugo points at the row of sea postcards behind the counter as Emma, coffee in hand, leans in to look." }],
       keywords: ["touriste", "tourist", "one day", "un jour", "plan", "paris", "sacré-cœur", "sacre-coeur", "hugo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "emma", name: "Emma", role: "tourist", initial: "E", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -3818,6 +3822,7 @@
       recap: "Alone on a Tuesday, Hugo asked Emma what she could see, and she saw Paris. Rose gets a postcard from Saint-Malo every year, but who sends it?",
       summary: "Antoine says yes to everyone, until Rose asks him what he wants and he says his first no.",
       scene: "On Friday morning Antoine comes into Madame Rose's café with his neighbour's dog on a lead, his boss's files and his sister's shopping. He says yes before anyone speaks, and he even says sorry to Socrate, the grey parrot by the window. Rose puts the white cup on her side of the counter and taps the slate.",
+      sceneImages: [{ afterLine: "l3", image: "cafe-ep05-i1", alt: "Loaded with folders and a dog on a lead, Antoine bows politely to Socrate, who stares back unimpressed." }, { afterLine: "l8", image: "cafe-ep05-i2", alt: "Antoine puts down his folders and bags and laughs with relief while Rose claps behind the counter." }],
       keywords: ["dire non", "say no", "monsieur oui", "mister yes", "oui", "non", "chien", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "antoine", name: "Antoine", role: "customer", initial: "A", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -3903,6 +3908,7 @@
       recap: "Antoine, who never says no, said his first non when Rose offered him tart. Rose said the rule isn't hers: it belongs to a friend.",
       summary: "Léo, seventeen, has just failed his driving test; Rose asks him what he learnt this morning.",
       scene: "On a Thursday morning Léo, seventeen, drops into a chair in Rose's tiny Montmartre café: he has just failed his driving test. Rose puts a white cup on her side of the counter and points at the slate by the door. When Léo tells the truth, Socrate the grey parrot fluffs up his feathers.",
+      sceneImages: [{ afterLine: "l6", image: "cafe-ep06-i1", alt: "At the table Léo acts out his driving test, pulling a face like the shouting examiner, while Rose hides a smile." }, { afterLine: "l10", image: "cafe-ep06-i2", alt: "Léo sits up straight with a determined smile and drinks his hot chocolate as Socrate fluffs up his feathers." }],
       keywords: ["permis", "driving test", "learner driver", "examen", "exam", "léo", "leo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions", "passé composé", "passe compose"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -3984,6 +3990,7 @@
       recap: "Léo failed his driving test but learnt to look right; he will retake it in June. Rose said she once failed an exam too.",
       summary: "Max, an influencer, films everything; Rose asks him what he has really seen today.",
       scene: "On a Saturday afternoon Max, an influencer, walks into Rose's tiny Montmartre café filming himself. Rose waits behind the counter while Hugo works in the small kitchen. When Max holds up his phone for a selfie with Socrate, the grey parrot turns his back. Rose keeps the white cup on her side until Max answers.",
+      sceneImages: [{ afterLine: "l8", image: "cafe-ep07-i1", alt: "Max slowly lowers his phone and looks at Rose, who calmly points to the window behind the counter." }, { afterLine: "l10", image: "cafe-ep07-i2", alt: "Max stands at the window, his phone put away, gazing at the Paris rooftops and the Sacré-Cœur with a coffee." }],
       keywords: ["influenceur", "influencer", "abonnés", "abonnes", "followers", "selfie", "vidéo", "video", "max", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "max", name: "Max", role: "influencer", initial: "M", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4065,6 +4072,7 @@
       recap: "Max saw only his phone all day, so he stayed to look at Paris without a video. Rose said Socrate knew the café's first owner.",
       summary: "Bruno hates Mondays and his office job; Rose asks him when he was happy last week.",
       scene: "On a Monday morning Bruno, in a grey suit, stares into his white cup at the counter of Rose's Montmartre café before it is even full. There is a little black bike grease on his hands. Rose keeps the cup on her side until he answers, and Socrate the parrot steals Bruno's sugar cube.",
+      sceneImages: [{ afterLine: "l6", image: "cafe-ep08-i1", alt: "Bruno mimes turning a bicycle pedal with his greasy hands, his face lit up, as Rose leans forward, delighted." }, { afterLine: "l8", image: "cafe-ep08-i2", alt: "Rose slides the full white cup across the counter to Bruno, who smiles for the first time." }],
       keywords: ["vélo", "velo", "bicycle", "bike", "assurances", "insurance", "lundi", "monday", "bruno", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -4145,6 +4153,7 @@
       recap: "Bruno was happy repairing a bike, so he's going to visit the bike shop on rue Lepic. Rose said she changed her life long ago.",
       summary: "On a Tuesday Hugo runs the counter; Inès, a nurse, is waiting for her mother to call.",
       scene: "On a Tuesday morning Rose is at the market, so Hugo runs the counter of the Montmartre café, wearing his great-aunt's reading glasses to look serious; they keep slipping down his nose. Inès, a nurse still in her tunic after a night shift, puts her phone on the table, picks it up and puts it down again. When she says ma mère, Socrate the parrot fluffs up his feathers, and Hugo glances at the slate signed O. Later Inès steps outside with her phone and comes back with red eyes and a smile.",
+      sceneImages: [{ afterLine: "l5", image: "cafe-ep09-i1", alt: "Inès picks up her phone, looks at the dark screen and puts it down again while Hugo watches kindly." }, { afterLine: "l10", image: "cafe-ep09-i2", alt: "Inès gets up with her phone to her ear and walks to the door as Hugo gives her a thumbs-up." }],
       keywords: ["appel", "phone call", "téléphone", "telephone", "mère", "mere", "maman", "mother", "infirmière", "infirmiere", "nurse", "hugo", "montmartre", "rose", "socrate", "question"],
       speakers: [
         { id: "hugo", name: "Hugo", role: "Rose's stand-in", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4226,6 +4235,7 @@
       recap: "Inès finally called her mother, and they both cried. Hugo said the rule comes from a lady, Odette, and Rose never talks about her.",
       summary: "Victor, an amateur historian, asks ten questions a minute; Rose asks him one, and he finds Odette.",
       scene: "On a Wednesday Victor, an amateur historian with a notebook, walks into Rose's Montmartre café already asking questions. Rose puts the white cup on her side of the counter and counts his questions on her fingers, and after the fifth one Socrate the parrot turns his back. In his bag Victor has a photo from 1975 that he bought at a flea market on Sunday: a woman in a big hat in front of this door. Above the door, the old name is still faint under the new sign.",
+      sceneImages: [{ afterLine: "l4", image: "cafe-ep10-i1", alt: "Rose counts Victor's questions on her raised fingers while he stops mid-sentence, notebook under his arm." }, { afterLine: "l9", image: "cafe-ep10-i2", alt: "Victor bows his head, embarrassed, as Rose looks at him over her glasses and slides the white cup to him." }],
       keywords: ["vieille photo", "old photo", "photo", "historien", "historian", "blog", "chez odette", "odette", "écouter", "ecouter", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question"],
       speakers: [
         { id: "victor", name: "Victor", role: "amateur historian", initial: "V", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4310,6 +4320,7 @@
       recap: "Victor found a 1975 photo of the café when it was called Chez Odette. Rose, moved, said: « Vous avez trouvé Odette. »",
       summary: "Albert, 82, the street's old postman, remembers young Rose, and Rose's question reminds him he loved to dance.",
       scene: "On a Monday morning in June, an old man with a cane stops at the door of the tiny Montmartre café and stares at the slate. Albert, 82, used to deliver the post on this street, and he recognises Madame Rose before she recognises him. He orders a white coffee; Rose puts the white cup on her side of the counter and taps the slate. On his perch, Socrate fluffs up his feathers for Albert.",
+      sceneImages: [{ afterLine: "l2", image: "cafe-ep11-i1", alt: "Rose hurries round the counter, hands raised in joyful surprise, towards Albert, who beams in the doorway." }, { afterLine: "l7", image: "cafe-ep11-i2", alt: "Albert hooks his cane over his arm and takes a few light dance steps while Socrate bobs his head." }],
       keywords: ["bal", "dance", "danser", "albert", "facteur", "postman", "souvenirs", "memories", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "albert", name: "Albert", role: "old customer", initial: "A", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4394,6 +4405,7 @@
       recap: "Albert, the old postman, remembered young Rose drinking her coffee standing up. Rose told him he should dance again on Saturday.",
       summary: "Nadia's perfect birthday cake is burnt; Hugo's question reminds her that her daughter loves a simple apple tart.",
       scene: "On Tuesday morning, while Rose is at the market, Hugo runs the tiny Montmartre café alone. Nadia, a pharmacist, puts a black, burnt three-tier cake on the counter. On his perch, Socrate turns his back on the cake, and Hugo puts the white cup on his side of the counter, just like his great-aunt. At the end, Nadia ties on an apron and Socrate helps himself to the apples.",
+      sceneImages: [{ afterLine: "l9", image: "cafe-ep12-i1", alt: "Hugo holds up a green apple with a grin, and Nadia laughs as she pushes her burnt cake aside." }, { afterLine: "l12", image: "cafe-ep12-i2", alt: "At the counter Hugo rolls out pastry while Nadia, in a spare apron, peels an apple beside him." }],
       keywords: ["gâteau", "gateau", "cake", "burnt", "brûlé", "brule", "tarte", "apple tart", "hugo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "nadia", name: "Nadia", role: "mother", initial: "N", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -4482,6 +4494,7 @@
       recap: "Hugo asked Nadia what Lina liked as a child: her grandmother's apple tart. Hugo bakes Odette's tart; Rose taught him.",
       summary: "Samuel's son asks why all day; Rose's question shows Samuel he answers 'because', just like his father.",
       scene: "On Friday at eight, Samuel collapses at one of the three little tables of the Montmartre café. Every morning he walks past the window with his son Noé, six, who asks 'why' from seven o'clock. Rose puts the white cup on her side of the counter and looks at him over her glasses. Socrate, silent as always, watches from his perch by the window.",
+      sceneImages: [{ afterLine: "l8", image: "cafe-ep13-i1", alt: "Samuel sits up at the table and slaps his forehead with a rueful laugh while Rose raises her eyebrows." }, { afterLine: "l12", image: "cafe-ep13-i2", alt: "Rose points through the window at the blue sky over the rooftops, and Samuel turns to look, curious." }],
       keywords: ["pourquoi", "why", "parce que", "because", "father", "père", "pere", "noé", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -4568,6 +4581,7 @@
       recap: "Samuel will ask his son questions back. Rose said that when she was young, she didn't ask questions: she ran.",
       summary: "On Rose's 70th birthday a postcard comes from Odette; Hugo asks the postwoman about her dream, and she asks him back.",
       scene: "On Tuesday 23 June, Madame Rose's seventieth birthday, Rose is at the market and Hugo runs the Montmartre café alone. Juliette, the street's postwoman, comes in with the post, a camera hanging from her bag. Hugo's thick law textbook (Droit civil) lies open on the counter next to the till; later, Juliette sees it and turns Hugo's question back on him. Socrate tries to eat the postcard, so Hugo hides it in the sugar bowl, then puts the white cup on his side of the counter.",
+      sceneImages: [{ afterLine: "l3", image: "cafe-ep14-i1", alt: "Behind the counter Hugo holds a postcard of the sea, open-mouthed with excitement, as Juliette leans in, curious." }, { afterLine: "l11", image: "cafe-ep14-i2", alt: "Hugo shyly mimes whisking a cake batter behind the counter while Juliette listens, chin in hand." }],
       keywords: ["carte postale", "postcard", "factrice", "postwoman", "photographe", "photographer", "anniversaire", "birthday", "odette", "saint-malo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question"],
       speakers: [
         { id: "juliette", name: "Juliette", role: "postwoman", initial: "J", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -4656,6 +4670,7 @@
       recap: "On Rose's 70th birthday a postcard came from Saint-Malo: Odette is alive and asks « Tu cours encore ? ». Juliette asked Hugo if he likes law.",
       summary: "Karim, a painter who no longer wants to paint, starts drawing Rose and finds the desire again while he draws.",
       scene: "On a Thursday in July, at half past five, the Montmartre café is almost closing. Karim, a portrait painter from the place du Tertre, sits at a table with his box of pencils closed. Rose puts the white cup on her side of the counter and looks at him over her glasses. While he draws her, Socrate sits perfectly still on her shoulder, posing like a statue.",
+      sceneImages: [{ afterLine: "l4", image: "cafe-ep15-i1", alt: "Karim slumps at a table behind his closed box of pencils while Rose studies him over her glasses." }, { afterLine: "l12", image: "cafe-ep15-i2", alt: "Karim holds out his finished sketch to Rose, who presses her hands to her cheeks with delight." }],
       keywords: ["portrait", "painter", "peintre", "dessin", "drawing", "place du tertre", "tertre", "karim", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -4743,6 +4758,7 @@
       recap: "Karim drew Rose while Socrate posed on her shoulder, and his wish to draw came back. Rose said a lady once stopped her running.",
       summary: "A rich man offers Rose a hundred euros to skip her question; the question finds the call he would like to make.",
       scene: "On a Thursday in September Frédéric, in a perfect coat, walks into Madame Rose's tiny Montmartre café and puts a hundred-euro note on the counter: he has heard about the rule and would like to skip it. Socrate the grey parrot hops down from his perch and nibbles one corner of the note. Rose pulls the white cup back to her side of the counter and looks at him over her glasses.",
+      sceneImages: [{ afterLine: "l7", image: "cafe-ep16-i1", alt: "Frédéric sits down slowly at the counter, shoulders dropping, staring at his silent phone while Rose listens." }, { afterLine: "l11", image: "cafe-ep16-i2", alt: "Rose slides the white cup across the counter to Frédéric, who gives a small grateful smile." }],
       keywords: ["cent euros", "hundred euros", "argent", "money", "frère", "frere", "brother", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "frederic", name: "Frédéric", role: "rich customer", initial: "F", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4831,6 +4847,7 @@
       recap: "Frédéric tried to pay a hundred euros to skip the question. Rose asked who he'd like to call: his brother Marc. Her best present was a question.",
       summary: "Paul, the groom from March, is going to be a father, and he is afraid of becoming like his own.",
       scene: "On a Friday in September Paul, the groom from March, comes back to Madame Rose's tiny Montmartre café. He is holding a small black-and-white scan picture: his wife Léa is expecting a baby in December. Rose puts the white cup on her side of the counter, and Socrate watches from his perch by the window.",
+      sceneImages: [{ afterLine: "l5", image: "cafe-ep17-i1", alt: "Paul lowers his head, turning the small scan picture in his fingers, as Rose lays a comforting hand on his arm." }, { afterLine: "l13", image: "cafe-ep17-i2", alt: "Paul grins shyly across the counter as Rose, deeply touched, puts a hand on her heart." }],
       keywords: ["bébé", "bebe", "baby", "père", "pere", "father", "tel père tel fils", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "paul", name: "Paul", role: "father-to-be", initial: "P", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -4920,6 +4937,7 @@
       recap: "Paul is going to be a father and feared being like his own. Rose said her father wanted a lawyer but came every Sunday for the tart.",
       summary: "At closing time Hugo dusts forty postcards from Saint-Malo, and Rose finally tells him why she kept the rule.",
       scene: "On Friday at six, closing time, the chairs are up on the three little tables of Madame Rose's Montmartre café. Hugo, her great-nephew, has taken down the postcards to dust them: forty cards of the sea, all signed O. Rose sits down with her blue cup, and Socrate sleeps on the counter.",
+      sceneImages: [{ afterLine: "l1", image: "cafe-ep18-i1", alt: "At closing time Hugo stands on a stool and takes down the sea postcards to dust them while Rose watches." }, { afterLine: "l12", image: "cafe-ep18-i2", alt: "Across the table Hugo holds up a sea postcard with a questioning look, and Rose turns away towards the window." }],
       keywords: ["odette", "histoire de rose", "rose's story", "cartes postales", "postcards", "saint-malo", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "hugo", name: "Hugo", role: "Rose's great-nephew", initial: "H", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5010,6 +5028,7 @@
       recap: "At closing time Rose told Hugo her story: Odette's question in 1978, leaving law, the café in 1986. But why has she never gone to Saint-Malo?",
       summary: "Hugo runs in late after a night of law revision, and Rose asks him the question Odette once asked her.",
       scene: "On Saturday at a quarter past eight Hugo runs into the café with a law textbook under his arm: he revised all night for Monday's exam. Madame Rose is waiting at the counter with her blue cup and a white one. She pours his coffee and keeps it on her side. Later she takes a card from the drawer under the till.",
+      sceneImages: [{ afterLine: "l7", image: "cafe-ep19-i1", alt: "Hugo stands frozen at the counter, his law book under his arm, as Socrate turns his back on him." }, { afterLine: "l9", image: "cafe-ep19-i2", alt: "Hugo drops his law book on the counter and spreads his arms with a huge smile while Rose beams at him." }],
       keywords: ["pâtissier", "patissier", "pastry chef", "pourquoi tu cours", "running", "recette", "recipe", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "rose", name: "Rose", role: "café owner", initial: "R", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5097,6 +5116,7 @@
       recap: "Rose asked Hugo Odette's question, Pourquoi tu cours ? He chose pastry school over law, and Rose gave him Odette's recipe card.",
       summary: "Thomas, the man in a hurry from the first episode, comes back calm and asks Rose the question nobody asks her.",
       scene: "On Saturday 17 October Thomas, the man in a hurry from the first episode, walks slowly into Madame Rose's Montmartre café, with no phone. Hugo, silent behind the counter, has told him Rose's story, and Thomas pushes the white cup across to Rose's side. When Thomas says that Socrate likes travelling, the grey parrot whistles for the first time in years: his yes to Saint-Malo. At the end Rose picks up the chalk and writes two sentences on the slate, under Odette's rule.",
+      sceneImages: [{ afterLine: "l7", image: "cafe-ep20-i1", alt: "Rose sits beside Thomas at the counter and gazes at a sea postcard, her eyes shining with hope and fear." }, { afterLine: "l13", image: "cafe-ep20-i2", alt: "Rose unties her apron and hands it across the counter to Hugo, who holds it proudly against his chest." }],
       keywords: ["saint-malo", "la mer", "the sea", "odette", "ardoise", "slate", "voyage", "montmartre", "rose", "socrate", "perroquet", "proverbe", "question", "questions"],
       speakers: [
         { id: "thomas", name: "Thomas", role: "regular", initial: "T", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5187,6 +5207,7 @@
       title: "The parcel", titleFr: "Le colis",
       summary: "A huge drum box goes to the wrong door, and Gabriel meets his loud neighbour Zoé.",
       scene: "On Monday at a quarter past nine in the evening, Gabriel, in his buttoned navy cardigan and slippers, carries a huge round parcel across the sixth-floor landing in Belleville to the apple-green door, where drums are booming. Zoé opens with soil on her hands, fairy lights and plants behind her. When they say good night, both doors open again at the same moment, and the music behind the green door is a little softer.",
+      sceneImages: [{ afterLine: "l2", image: "colis-ep01-i1", alt: "Zoé opens the green door with soil on her hands, fairy lights behind her; Gabriel holds out the big box." }, { afterLine: "l11", image: "colis-ep01-i2", alt: "Zoé and Gabriel lean out of their facing doors at the same moment, both surprised." }],
       keywords: ["tambour", "drum", "garnier", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5273,6 +5294,7 @@
       recap: "Gabriel brought Zoé her drum at bedtime; they are opposites in everything, and both are called Garnier.",
       summary: "After a short night, Zoé storms over with Gabriel's polite note, and they strike a deal about the noise.",
       scene: "On Tuesday at half past seven in the morning, Zoé, hair wild after three hours of sleep, knocks on the navy door holding a tiny brown-paper parcel and a folded white card. Gabriel opens, dressed and shaved, his blue-band mug of tea in hand. They argue on the landing, haggle like at a market, and seal the deal with a stiff handshake.",
+      sceneImages: [{ afterLine: "l4", image: "colis-ep02-i1", alt: "Zoé holds Gabriel's folded white card at arm's length with a mock-serious face." }, { afterLine: "l11", image: "colis-ep02-i2", alt: "Zoé and Gabriel shake hands stiffly in the middle of the landing to seal their deal." }],
       keywords: ["petit mot", "note", "accord", "deal", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5359,6 +5381,7 @@
       recap: "Zoé read Gabriel's note aloud in anger, and they made a deal: no music after half past ten.",
       summary: "At midnight both neighbours are caught sticking notes on each other's doors, and they laugh for the first time.",
       scene: "On Saturday at twenty to midnight, the two doors of the landing are covered: plain white folded cards on Zoé's green door, crooked yellow squares on Gabriel's navy one. Both doors open at the same moment, Gabriel holding a white card, Zoé a yellow square. Caught, they argue about red-pen corrections, then laugh for the first time, and in the middle of the landing they swap their notes by hand.",
+      sceneImages: [{ afterLine: "l2", image: "colis-ep03-i1", alt: "Zoé points an accusing finger at Gabriel, who clutches his white card like a guilty schoolboy." }, { afterLine: "l11", image: "colis-ep03-i2", alt: "Zoé and Gabriel laugh as they swap their notes by hand in the middle of the landing." }],
       keywords: ["dispute", "petits mots", "notes", "chien et chat", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5446,6 +5469,7 @@
       recap: "Caught sticking notes late at night, Zoé and Gabriel laughed for the first time and swapped notes by hand.",
       summary: "In the courtyard, Zoé asks the delivery rider why her parcels always go to the wrong door.",
       scene: "On Tuesday at eleven in the morning, Zoé, in dungarees and green gardening gloves, is repotting by the fig tree in the cobbled courtyard when Yanis rolls in on his electric cargo bike, its red box stacked with parcels. He explains the two Garniers on the sixth floor, then hands her a tiny, heavy parcel for Gabriel and rides off. Zoé shakes it next to her ear, curious.",
+      sceneImages: [{ afterLine: "l5", image: "colis-ep04-i1", alt: "Yanis holds up two fingers as he and Zoé look up at two top-floor windows, one full of plants." }, { afterLine: "l11", image: "colis-ep04-i2", alt: "Zoé, alone by the fig tree, shakes a tiny brown-paper parcel next to her ear." }],
       keywords: ["livreur", "delivery rider", "courier", "cour", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5533,6 +5557,7 @@
       recap: "Yanis explained the two Garniers to Zoé, and she is now curious about her neighbour's tiny, heavy parcels.",
       summary: "In a power cut, Zoé knocks on Gabriel's door and discovers his workshop full of music boxes by candlelight.",
       scene: "On Friday at half past nine at night, the whole building has a power cut. Zoé, her phone dead, feels her way across the dark landing and knocks on the navy door. Gabriel opens with a candle; behind him, shelves of wooden music boxes glow. He winds one, and a tiny tune plays in the dark. They agree on first names, and the lights come back while they are still shaking hands.",
+      sceneImages: [{ afterLine: "l5", image: "colis-ep05-i1", alt: "In the candlelit workshop, Zoé turns around amazed at shelves full of music boxes." }, { afterLine: "l8", image: "colis-ep05-i2", alt: "Gabriel winds a small open music box; Zoé leans in by the candle, eyes closed, listening." }],
       keywords: ["panne", "power cut", "bougie", "boîte à musique", "boite a musique", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5620,6 +5645,7 @@
       recap: "In the power cut, Gabriel showed Zoé his music boxes by candlelight, and they started using first names.",
       summary: "Zoé opens Gabriel's parcel by mistake and finds two hundred orange earplugs bought because of her drums.",
       scene: "On Monday at seven in the evening, Zoé knocks on the navy door, mortified, holding a small open box spilling two hundred tiny orange earplugs. She was waiting for flower seeds in the same size and paper. Gabriel turns red at his door. She says sorry first, he says sorry for his notes, and they end up laughing, Gabriel with one orange earplug in his ear as a joke.",
+      sceneImages: [{ afterLine: "l5", image: "colis-ep06-i1", alt: "Close-up of Zoé's palm holding the small box of tiny orange earplugs, like sweets." }, { afterLine: "l11", image: "colis-ep06-i2", alt: "Zoé and Gabriel laugh on the landing; he has put one orange earplug in his ear as a joke." }],
       keywords: ["bouchons d'oreille", "earplugs", "pardon", "sorry", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5706,6 +5732,7 @@
       recap: "Zoé opened Gabriel's parcel of earplugs by mistake; she said sorry first, he said sorry for his notes, and they made a truce.",
       summary: "Gabriel comes to Zoé's dinner in a suit and tie; her chili is far too hot, but the evening is a success.",
       scene: "On Saturday at eight in the evening, Gabriel arrives at Zoé's flat in a dark grey suit and a burgundy tie, holding a tiny cactus in a pot; Zoé is in her dungarees. At the small round table under the fairy lights, her chili is very hot and he drinks the whole water jug. The djembe rolls off its stand, the dinner fails, and they laugh anyway.",
+      sceneImages: [{ afterLine: "l8", image: "colis-ep07-i1", alt: "At the little table, Gabriel, red-faced, drinks from the water jug while Zoé stares." }],
       keywords: ["dîner", "diner", "dinner", "chili", "cravate", "tie", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5793,6 +5820,7 @@
       recap: "Zoé's chili was too hot and the dinner failed, but the evening didn't; now they take turns cooking every Saturday.",
       summary: "The lift is broken, so Gabriel helps Zoé carry thirty kilos of soil up six floors, and they start saying tu.",
       scene: "On Saturday at ten in the morning, the cage lift is broken again and Zoé's thirty-kilo sack of potting soil waits at the bottom of the stairs. Gabriel, coming down with his shopping bag, takes one end. On the fourth-floor half-landing they sit on the steps and Zoé proposes tu. At the top they drop the sack and lie on the chequered tiles under the skylight, laughing.",
+      sceneImages: [{ afterLine: "l6", image: "colis-ep08-i1", alt: "Resting on the stairs with the sack between them, Zoé holds out her hand to Gabriel." }, { afterLine: "l11", image: "colis-ep08-i2", alt: "Zoé and Gabriel lie on the chequered tiles under the skylight, laughing, the sack beside them." }],
       keywords: ["escalier", "stairs", "tutoyer", "ascenseur", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -5879,6 +5907,7 @@
       recap: "The lift was broken; Gabriel helped Zoé carry thirty kilos of soil up six floors, and they started saying tu.",
       summary: "Gabriel goes down to complain about the Wednesday noise, and Fatou tells him about Zoé's free drum lessons.",
       scene: "On Wednesday at three in the afternoon, drums and children's laughter come down from the sixth floor. Gabriel crosses the cobbled courtyard with his blue-band mug to Fatou, who is sweeping by the lace-curtained loge. She tells him about Zoé's free lessons, counting on her fingers. Afterwards Gabriel sits alone on the bottom step, turning the small box of orange earplugs over in his hand.",
+      sceneImages: [{ afterLine: "l6", image: "colis-ep09-i1", alt: "Fatou counts on her fingers as she talks; Gabriel listens, his mug forgotten." }, { afterLine: "l11", image: "colis-ep09-i2", alt: "Gabriel sits alone on a step, turning the little box of orange earplugs in his hands." }],
       keywords: ["gardienne", "concierge", "mercredi", "wednesday", "fatou", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -5965,6 +5994,7 @@
       recap: "Fatou told Gabriel about Zoé's free Wednesday drum lessons, and he decided to go and hear her play in the park.",
       summary: "Before her concert in the park, the loudest woman in the building has stage fright, and Gabriel comes to help.",
       scene: "On Sunday at four in the afternoon, behind the small wooden stage of the winter festival in the Parc de Belleville, Zoé, in a gold sequinned jacket over her dungarees, holds her drumsticks, pale. Gabriel arrives in his navy coat and grey scarf with a small pale-wood music box. He sits in the front row while she plays, and after the concert she kisses him on the cheek; he goes red, his scarf crooked.",
+      sceneImages: [{ afterLine: "l7", image: "colis-ep10-i1", alt: "Close-up: Zoé's hands hold a small pale-wood music box, and Gabriel's hands rest around hers." }, { afterLine: "l10", image: "colis-ep10-i2", alt: "Seen from the front row behind Gabriel, Zoé plays a big drum on stage, smiling." }],
       keywords: ["trac", "stage fright", "concert", "parc", "bisou", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6051,6 +6081,7 @@
       recap: "Gabriel came to Zoé's concert with a small music box to calm her stage fright, and she kissed him on the cheek.",
       summary: "In the workshop, Gabriel tells Zoé about his grandmother's broken music box, and she sings its missing note.",
       scene: "On a snowy Friday evening in January, Zoé, waiting for the tea in Gabriel's workshop, reaches for a small walnut music box alone on a high shelf. Gabriel stops her and tells her its story under the green lamp. While he pours the tea, Zoé looks closely at the broken tooth of the comb. When he winds the box, she sings the missing note.",
+      sceneImages: [{ afterLine: "l8", image: "colis-ep11-i1", alt: "Under the green lamp, Gabriel studies the open walnut box and its comb with one gap." }, { afterLine: "l12", image: "colis-ep11-i2", alt: "Zoé sings with eyes closed and a finger raised; Gabriel stares at her over the open box." }],
       keywords: ["boîte à musique", "boite a musique", "music box", "grand-mère", "jura", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -6141,6 +6172,7 @@
       recap: "Gabriel showed Zoé his grandmother's broken music box, and Zoé sang its missing note.",
       summary: "Repotting tomato seedlings, Zoé and Gabriel talk about their very loud and very quiet childhoods.",
       scene: "On a sunny Sunday afternoon in January, on an old blue tarp in Zoé's flat full of plants, she teaches Gabriel to repot tomato seedlings; his sleeves are rolled up and he holds a seedling at arm's length, soil up to his wrists. They talk about their childhoods, Zoé shows him her saucepan drums, and then they sit side by side on the mustard-yellow sofa for five quiet minutes, eyes closed.",
+      sceneImages: [{ afterLine: "l7", image: "colis-ep12-i1", alt: "Zoé holds up two saucepans like cymbals while Gabriel grins." }, { afterLine: "l11", image: "colis-ep12-i2", alt: "Zoé and Gabriel sit side by side on the yellow sofa, eyes closed, in a quiet moment." }],
       keywords: ["enfance", "childhood", "sardines", "silence", "marseille", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6231,6 +6263,7 @@
       recap: "Repotting seedlings, Zoé and Gabriel shared their loud and quiet childhoods, then five minutes of silence together.",
       summary: "Zoé saw Gabriel hug a woman with a green suitcase, and the delivery rider tells her she's imagining things.",
       scene: "On a grey Tuesday morning in February, Yanis rides into the courtyard on his cargo bike with parcels. Zoé, in her mustard cardigan, arms crossed, tells him what she saw through her peephole the night before: Gabriel hugging a tall woman with a brown bob and a green wheeled suitcase. Yanis, a cinema student, frames her with his fingers like a film director, and she half laughs despite herself.",
+      sceneImages: [{ afterLine: "l7", image: "colis-ep13-i1", alt: "Through a round peephole: Gabriel hugs a tall woman in a green coat beside a green suitcase." }, { afterLine: "l11", image: "colis-ep13-i2", alt: "Yanis frames Zoé with his fingers like a film director, and she half laughs." }],
       keywords: ["jalousie", "jealousy", "valise", "suitcase", "yanis", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "yanis", name: "Yanis", role: "delivery rider", initial: "Y", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -6320,6 +6353,7 @@
       recap: "Zoé told Yanis about the woman with the green suitcase; he said she was imagining a film and should ask Gabriel.",
       summary: "Gabriel's sister finds the tin where he keeps all of Zoé's notes, and explains Zoé's cold hello.",
       scene: "On Wednesday at seven in the evening, in Gabriel's workshop, his sister Hélène, her bottle-green coat thrown over the armchair and her red scarf still around her neck, opens a round blue tin on the workbench: it is full of Zoé's yellow notes, stacked in order. Gabriel tries to grab it. Later she laughs, hands on hips, while he sits on his stool with his head in his hands, ears red.",
+      sceneImages: [{ afterLine: "l4", image: "colis-ep14-i1", alt: "Close-up of the blue tin in Hélène's hands, yellow squares stacked neatly inside." }, { afterLine: "l10", image: "colis-ep14-i2", alt: "Hélène laughs, hands on hips, while Gabriel sits with his head in his hands, ears red." }],
       keywords: ["sœur", "soeur", "sister", "boîte en fer", "tin", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "helene", name: "Hélène", role: "Gabriel's sister", initial: "H", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6410,6 +6444,7 @@
       recap: "Hélène found the tin of Zoé's notes Gabriel kept, and told him Zoé thinks she is his fiancée.",
       summary: "Gabriel brings Zoé a parcel and clears up the misunderstanding: the woman with the suitcase was his sister.",
       scene: "On Thursday at half past seven in the evening, Yanis has left Zoé's big lumpy parcel at the navy door, of course. Gabriel knocks on the half-open green door with it; Zoé, arms crossed, is cold. He tells her the woman was his sister, and she laughs into her hands. Then they stand very close under the skylight, until a door bangs downstairs and they step back, smiling.",
+      sceneImages: [{ afterLine: "l8", image: "colis-ep15-i1", alt: "Zoé covers her face with both hands, laughing; Gabriel grins beside the parcel." }, { afterLine: "l12", image: "colis-ep15-i2", alt: "Standing very close under the skylight, Zoé and Gabriel turn towards the stairs at a sound." }],
       keywords: ["malentendu", "misunderstanding", "pendules", "sœur", "soeur", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },
@@ -6500,6 +6535,7 @@
       recap: "Gabriel told Zoé the woman was his sister Hélène; the film in her head was over, and she invited him to dinner.",
       summary: "A letter says the building may ban instruments, and Zoé could move away; Gabriel almost says he'd miss her.",
       scene: "On Monday evening in March, two identical thick white envelopes lie on the two doormats: on Thursday the building votes on banning musical instruments in the flats. Zoé holds hers, pale; Gabriel opens his door with the other. They sit on the top stair, the envelope on her knees, and their hands almost touch as he says the landing would be too quiet without her.",
+      sceneImages: [{ afterLine: "l7", image: "colis-ep16-i1", alt: "Zoé sits on the top stair with the envelope on her knees; Gabriel sits down beside her." }, { afterLine: "l12", image: "colis-ep16-i2", alt: "Close-up: Zoé's and Gabriel's hands rest on the stair, almost touching." }],
       keywords: ["lettre", "letter", "réunion", "reunion", "vote", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6593,6 +6629,7 @@
       recap: "A letter announced a vote to ban instruments; Gabriel almost told Zoé the landing would be too quiet without her.",
       summary: "The day before the vote, Fatou tells Gabriel how a postman's mistake gave her a husband, and shows him the cellar.",
       scene: "On Wednesday at four in the afternoon, faint drums and children's laughter drift down from Zoé's sixth-floor class. Gabriel has been pacing the courtyard; Fatou, in her headwrap, waves him over to the loge with a big ring of old iron keys. She tells him her story, then leads him down to the vaulted stone cellar under the courtyard, lit by one bulb, where he presses his palms to the thick walls. At her last question he blushes and says nothing.",
+      sceneImages: [{ afterLine: "l10", image: "colis-ep17-i1", alt: "In the vaulted stone cellar under one bulb, Fatou holds a flashlight; Gabriel presses his palms to the wall." }, { afterLine: "l13", image: "colis-ep17-i2", alt: "Gabriel stands in the arched cellar doorway, arms spread wide as if measuring it, determined." }],
       keywords: ["cave", "cellar", "salle de musique", "courage", "fatou", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "fatou", name: "Fatou", role: "concierge", initial: "F", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6686,6 +6723,7 @@
       recap: "Fatou told Gabriel how a postman's mistake brought her Moussa; in the old cellar, Gabriel found his plan for the vote.",
       summary: "After the meeting where Gabriel spoke up for her music, Zoé climbs the stairs with him, and the light goes out.",
       scene: "On Thursday at half past nine at night, after the building meeting in the ground-floor hall, Zoé and Gabriel climb the old staircase. He stood up in front of everyone in his suit and burgundy tie, and the cellar music room won the vote. Zoé, two steps above him, turns back, amazed; his tie is loosened. Just as he starts to tell her something, the stair light's timer clicks off, and they laugh in the dark.",
+      sceneImages: [{ afterLine: "l5", image: "colis-ep18-i1", alt: "In the hall full of folding chairs, residents raise their hands as Gabriel stands at the front in his suit." }, { afterLine: "l13", image: "colis-ep18-i2", alt: "The stair light is out: Zoé and Gabriel are two silhouettes laughing on the dark staircase." }],
       keywords: ["réunion", "reunion", "meeting", "vote", "escalier", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6779,6 +6817,7 @@
       recap: "Gabriel defended Zoé's drums at the meeting and won the vote; then the stair light went out before he could speak.",
       summary: "A new comb arrives from the Jura, Gabriel repairs his grandmother's music box, and he finally says it.",
       scene: "On Saturday at eleven in the morning, in the workshop, a small wooden box tied with red string from the Jura lies open on the workbench; a gleaming steel comb shines in Gabriel's palm and Zoé beams beside him. With his loupe and tiny screwdriver he fits it while she holds the green lamp closer. The walnut box plays the whole song at last, Gabriel says what he feels, and they share a gentle first kiss, foreheads together above the box.",
+      sceneImages: [{ afterLine: "l8", image: "colis-ep19-i1", alt: "Gabriel, loupe over his glasses, fits the comb with a tiny screwdriver; Zoé holds the lamp closer." }, { afterLine: "l13", image: "colis-ep19-i2", alt: "The walnut music box plays on the bench as Zoé and Gabriel rest their foreheads together." }],
       keywords: ["déclaration", "declaration", "peigne", "comb", "bisou", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "zoe", name: "Zoé", role: "drummer", initial: "Z", side: "start", voice: "qwen3-fr-bf16", gender: "female" },
@@ -6872,6 +6911,7 @@
       recap: "The comb from the Jura made Mamie Jeanne's box whole again; Gabriel told Zoé what he feels, and they kissed.",
       summary: "A parcel for both Garniers waits in the middle of the landing, and the two doors stay open.",
       scene: "On Saturday at ten in the morning, spring sun falls through the skylight onto the landing. Both doors stand wide open, and exactly in the middle of the chequered tiles waits a square wooden box tied with red string, left there by Yanis. Gabriel and Zoé crouch on either side of it and open it together: Mamie Jeanne's very first music box, with two mother-of-pearl birds. Later the landing becomes a tiny living room between the open doors.",
+      sceneImages: [{ afterLine: "l6", image: "colis-ep20-i1", alt: "Close-up: Zoé holds a pale-wood music box with two pearly birds; Gabriel's hand rests on hers." }, { afterLine: "l13", image: "colis-ep20-i2", alt: "The landing is now a tiny living room; Zoé and Gabriel laugh over tea as Yanis grins up from the stairs." }],
       keywords: ["cadeau", "gift", "portes ouvertes", "oiseaux", "birds", "colis", "parcel", "voisin", "voisine", "neighbour", "belleville", "zoé", "zoe", "gabriel", "expression"],
       speakers: [
         { id: "gabriel", name: "Gabriel", role: "music-box repairer", initial: "G", side: "start", voice: "qwen3-fr-m-bf16", gender: "male" },

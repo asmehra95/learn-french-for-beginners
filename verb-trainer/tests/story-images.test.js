@@ -8,18 +8,23 @@ var path = require("path");
 var ROOT = path.join(__dirname, "..");
 var REPO = path.join(ROOT, "..");
 var ALL = require("../js/story-images.js");
-var LYON = "la-lettre-de-lyon", CAFE = "le-cafe-des-questions";
+var LYON = "la-lettre-de-lyon", CAFE = "le-cafe-des-questions", COLIS = "le-mauvais-colis";
 var SI = ALL.series[LYON];
 var SC = ALL.series[CAFE];
 var MANIFEST = JSON.parse(fs.readFileSync(path.join(REPO, "tools", "story-images", "manifest.json"), "utf8"));
 var MCAFE = JSON.parse(fs.readFileSync(path.join(REPO, "tools", "story-images", "manifest-cafe.json"), "utf8"));
+var MCOLIS = JSON.parse(fs.readFileSync(path.join(REPO, "tools", "story-images", "manifest-colis.json"), "utf8"));
 var D = require("../js/dialogues-data.js");
 var MAX_BYTES = 250 * 1024;
-// Dialogues 41-60 whose chosen take passed image QA: 12 from the first run (reviews/image-selection.json) and
-// 41, 43, 45, 51, 55, 60 from the regeneration (reviews/regen-selection.json). 54 and 58 were regenerated too, but
-// their takes failed the site review (pseudo-lettering), so they have no picture.
-var CAFE_PASSED = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 57, 59, 60];
-var CAFE_REGEN = [41, 43, 45, 51, 54, 55, 58, 60];
+// Dialogues 41-60 whose chosen take passed image QA: all 20. 12 from the first run (reviews/image-selection.json),
+// 41, 43, 45, 51, 55, 60 from the regeneration (reviews/regen-selection.json), and 54 and 58 (whose regenerated
+// takes had failed the site review) from the multi-image pass `multi`, which also painted the 40 scene images.
+var CAFE_PASSED = Array.from({ length: 20 }, function (_, k) { return 41 + k; });
+var CAFE_REGEN = [41, 43, 45, 51, 55, 60];
+var CAFE_MULTI = [54, 58];
+function cafeEp(n) { return MCAFE.images.filter(function (i) { return i.number === n && i.insert === undefined; })[0]; }
+function cafeEpisodes() { return MCAFE.images.filter(function (i) { return i.insert === undefined; }); }
+function cafeInserts() { return MCAFE.images.filter(function (i) { return i.insert !== undefined; }); }
 
 function published(m) { return (m || MANIFEST).images.filter(function (i) { return i.published !== false; }); }
 function webpSize(buf) {
@@ -62,11 +67,12 @@ test("manifest: 21 entries (cover + 20 episodes), each with model, seed, prompt 
 
 test("every published image exists as a WebP at its manifest size, under the size cap, with no metadata", function () {
   var files = fs.readdirSync(path.join(ROOT, "images", "story")).sort();
-  var both = published().concat(published(MCAFE));
-  assert.deepEqual(files, both.map(function (i) { return i.file; }).sort(), "exactly the published files of both series");
+  var both = published().concat(published(MCAFE), published(MCOLIS));
+  assert.deepEqual(files, both.map(function (i) { return i.file; }).sort(), "exactly the published files of every illustrated series");
   both.forEach(function (i) {
     var buf = fs.readFileSync(path.join(ROOT, "images", "story", i.file));
-    assert.ok(buf.length > 20 * 1024 && buf.length <= MAX_BYTES, i.file + " " + buf.length + " bytes");
+    // 12 KB floor: a dark night scene (colis-ep18-i2, silhouettes on an unlit staircase) compresses to about 16 KB
+    assert.ok(buf.length > 12 * 1024 && buf.length <= MAX_BYTES, i.file + " " + buf.length + " bytes");
     assert.deepEqual(webpSize(buf), { w: i.width, h: i.height }, i.file);
     var s = buf.toString("latin1");
     ["EXIF", "Exif", "XMP ", "ICCP", "prompt", "stability", "parameters", "Bedrock", "Qwen", "seed"].forEach(function (k) {
@@ -77,7 +83,7 @@ test("every published image exists as a WebP at its manifest size, under the siz
 
 test("story-images.js matches the manifest: cover + one entry per published episode", function () {
   assert.deepEqual(Object.keys(ALL), ["series"]);
-  assert.deepEqual(Object.keys(ALL.series), [LYON, CAFE]);
+  assert.deepEqual(Object.keys(ALL.series), [LYON, CAFE, COLIS]);
   assert.match(SI.credit, /Stable Diffusion 3\.5 Large and Stable Image Ultra/);
   assert.match(SI.credit, /Not covered by the CC BY-SA/);
   var cover = MANIFEST.images[0];
@@ -101,9 +107,17 @@ function genSite(args, input) {
   assert.ok(a !== -1 && b > a, "generate.py site output");
   return out.slice(a, b + "})(typeof window !== \"undefined\" ? window : null);\n".length);
 }
-test("generate.py site: story-images.js is byte-identical to a regeneration from the current manifests (no inserts key)", function () {
+test("generate.py site: story-images.js is byte-identical to a regeneration from the current manifests; inserts = published scene images", function () {
   assert.equal(genSite([]), fs.readFileSync(path.join(ROOT, "js", "story-images.js"), "utf8"));
-  Object.keys(ALL.series).forEach(function (sid) { assert.ok(!("inserts" in ALL.series[sid]), sid + " has no scene images yet"); });
+  assert.ok(!("inserts" in SI), LYON + " has no scene images");
+  [[CAFE, MCAFE, 40], [COLIS, MCOLIS, 39]].forEach(function (x) {
+    var want = {};
+    published(x[1]).filter(function (i) { return i.insert !== undefined; }).forEach(function (i) {
+      want[i.id] = { src: "images/story/" + i.file, width: i.width, height: i.height };
+    });
+    assert.equal(Object.keys(want).length, x[2], x[0] + " scene images");
+    assert.deepEqual(JSON.parse(JSON.stringify(ALL.series[x[0]].inserts)), want, x[0]);
+  });
 });
 test("generate.py site: manifest entries with an insert key become series[<id>].inserts[<image id>] = { src, width, height } (published only)", function () {
   var m = { series: "fake-x", credit: "Illustrations: test credit.", images: [
@@ -172,11 +186,14 @@ test("story printables: a published scene image follows its line in the Markdown
     d.sceneImages = [{ afterLine: d.lines[3].id, image: "cafe-ep01-i1", alt: alt }, { afterLine: d.lines[7].id, image: "cafe-ep01-i2", alt: alt }];
     return { site: s, d: d };
   }
+  // the real scene images are set aside, so only the test's own inserts change the output
+  var realInserts = SC.inserts;
+  delete SC.inserts;
+  try {
   var plainMd = B.markdown(undefined, CAFE), plainHtml = B.printHtml(undefined, CAFE);
   var t = site();
   assert.equal(B.markdown(t.site, CAFE), plainMd, "no inserts in story-images.js: output unchanged");
   SC.inserts = { "cafe-ep01-i1": { src: src.src, width: src.width, height: src.height } };
-  try {
     t = site();
     var md = B.markdown(t.site, CAFE);
     var line = t.d.lines[3];
@@ -190,19 +207,31 @@ test("story printables: a published scene image follows its line in the Markdown
     assert.ok(figs[0].indexOf("alt=\"" + alt + "\"") !== -1);
     assert.ok(html.indexOf(".ins-img {") !== -1 && plainHtml.indexOf(".ins-img {") === -1, "scene CSS only when needed");
     assert.ok(html.indexOf(require(path.join(REPO, "tools", "build-grammar-tables.js")).esc(line.en)) < html.indexOf(figs[0]), "after its line");
-  } finally { delete SC.inserts; }
+  } finally { if (realInserts) SC.inserts = realInserts; else delete SC.inserts; }
 });
 
 /* ---------- Le Café des Questions (dialogues 41-60): Qwen-Image-Edit-2511, tools/story-images/manifest-cafe.json ---------- */
-test("café manifest: 20 entries (cafe-ep01..20, dialogues 41-60) with model, revision, seed, prompt, refs and alt; only QA-passed takes published", function () {
+test("café manifest: 20 episode entries (cafe-ep01..20, dialogues 41-60) and 40 scene images with model, revision, seed, prompt, refs and alt; only QA-passed takes published", function () {
   assert.equal(MCAFE.series, CAFE);
   assert.equal(MCAFE.model, "Qwen/Qwen-Image-Edit-2511");
   assert.equal(MCAFE.license, "Apache-2.0");
   assert.match(MCAFE.revision, /^[0-9a-f]{40}$/);
-  assert.deepEqual(MCAFE.images.map(function (i) { return i.id; }), Array.from({ length: 20 }, function (_, k) { return "cafe-ep" + String(k + 1).padStart(2, "0"); }));
-  MCAFE.images.forEach(function (i, k) {
+  assert.deepEqual(cafeEpisodes().map(function (i) { return i.id; }), Array.from({ length: 20 }, function (_, k) { return "cafe-ep" + String(k + 1).padStart(2, "0"); }));
+  cafeEpisodes().forEach(function (i, k) {
     assert.equal(i.episode, k + 1);
     assert.equal(i.number, 41 + k);
+  });
+  var ins = cafeInserts();
+  assert.equal(ins.length, 40, "two scene images per episode");
+  ins.forEach(function (i) {
+    assert.equal(i.id, "cafe-ep" + String(i.episode).padStart(2, "0") + "-i" + i.insert);
+    assert.equal(i.number, 40 + i.episode);
+    assert.match(i.afterLine, /^l\d+$/);
+    assert.equal(i.batch, "cafe-multi");
+    // an insert with one person and no portrait is a single-reference edit of its anchor (cafe-ep07-i2)
+    assert.equal(i.mode, i.refs.length === 1 ? "image-edit" : "multi-image-edit", i.id + " mode");
+  });
+  MCAFE.images.forEach(function (i) {
     assert.equal(i.file, i.id + ".webp");
     assert.equal(i.model, MCAFE.model);
     assert.equal(i.revision, MCAFE.revision);
@@ -216,11 +245,14 @@ test("café manifest: 20 entries (cafe-ep01..20, dialogues 41-60) with model, re
     if (i.published === false) assert.ok(/no take passed QA/.test(i.note), i.id + " says why it is not published");
     else assert.ok(/^(pass|PASS|PASS-notes)$/.test(i.qa) && i.accepted === true, i.id + " passed QA");
   });
-  assert.deepEqual(published(MCAFE).map(function (i) { return i.number; }), CAFE_PASSED);
-  // the regenerated episodes come from the regen batches; episode 20 is a multi-image edit (3 refs)
-  CAFE_REGEN.forEach(function (n) { assert.match(MCAFE.images[n - 41].batch, /^cafe-regen/, n + " batch"); });
-  assert.equal(MCAFE.images[19].mode, "multi-image-edit");
-  assert.equal(MCAFE.images[19].refs.length, 3);
+  assert.deepEqual(published(MCAFE).filter(function (i) { return i.insert === undefined; }).map(function (i) { return i.number; }), CAFE_PASSED);
+  assert.equal(published(MCAFE).length, 60, "every episode picture and scene image is published");
+  // the regenerated episodes come from the regen batches; episode 20 is a multi-image edit (3 refs);
+  // episodes 14 and 18 come from the multi-image pass
+  CAFE_REGEN.forEach(function (n) { assert.match(cafeEp(n).batch, /^cafe-regen/, n + " batch"); });
+  CAFE_MULTI.forEach(function (n) { assert.equal(cafeEp(n).batch, "cafe-multi", n + " batch"); assert.equal(cafeEp(n).mode, "multi-image-edit"); });
+  assert.equal(cafeEp(60).mode, "multi-image-edit");
+  assert.equal(cafeEp(60).refs.length, 3);
 });
 
 test("café: every dialogue 41-60 with a QA-passed take maps to an existing image with English alt text; the others have none", function () {
@@ -232,7 +264,7 @@ test("café: every dialogue 41-60 with a QA-passed take maps to an existing imag
     var rec = SC.episodes[String(d.episode)];
     if (CAFE_PASSED.indexOf(n) === -1) { assert.equal(rec, undefined, "dialogue " + n + " has no placeholder"); continue; }
     assert.ok(rec, "dialogue " + n + " has a picture");
-    var m = MCAFE.images[n - 41];
+    var m = cafeEp(n);
     assert.deepEqual(rec, { src: "images/story/" + m.file, width: 1200, height: 686, alt: m.alt });
     var buf = fs.readFileSync(path.join(ROOT, rec.src));
     assert.deepEqual(webpSize(buf), { w: 1200, h: 686 }, rec.src);
@@ -266,6 +298,18 @@ test("café credits: story-images.js, Credits page, LICENSE-CONTENT.md and both 
     assert.match(t, /Qwen-Image-Edit-2511 \(Apache-2\.0\)/, p);
     assert.match(t, /own AWS GPU/, p);
   });
+});
+
+test("colis credits: Credits page and LICENSE-CONTENT.md name Qwen-Image-Edit-2511 and manifest-colis.json", function () {
+  assert.equal(MCOLIS.series, COLIS);
+  assert.equal(ALL.series[COLIS].credit, MCOLIS.credit);
+  var a = fs.readFileSync(path.join(ROOT, "js", "app.js"), "utf8");
+  assert.match(a, /SIS\["le-mauvais-colis"\]/);
+  assert.match(a, /Illustrations \(Le Mauvais Colis\)/);
+  assert.match(a, /tools\/story-images\/manifest-colis\.json/);
+  var lic = fs.readFileSync(path.join(REPO, "LICENSE-CONTENT.md"), "utf8");
+  assert.match(lic, /### Le Mauvais Colis/);
+  assert.match(lic, /manifest-colis\.json/);
 });
 
 test("café: views read story-images.js by series id, and the café PDF embeds its pictures and credit", function () {

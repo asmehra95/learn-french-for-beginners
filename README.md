@@ -240,10 +240,12 @@ Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU with the gpu-
 `generate.py generate`. Their prompts, seeds, cast-sheet hashes and model revision are in
 `tools/story-images/manifest-cafe.json`; episodes 1, 3, 5, 11, 14, 15, 18 and 20 were regenerated later with
 stricter prompts (episode 20 as a multi-image edit), and their entries record the batch, seed and refs used.
-Episodes 14 and 18 still have no passing take and are marked `"published": false`.
+All 20 episodes are published, and 40 scene pictures (`cafe-epNN-iK.webp`) sit between dialogue lines.
+The *Le Mauvais Colis* pictures (`colis-epNN[-iK].webp`, manifest `tools/story-images/manifest-colis.json`) were
+made the same way: 20 episode pictures and 39 scene pictures (`colis-ep07-i2` had no passing take).
 From the chosen 1344×768 PNGs (`cafe-epNN__s<seed>.png` in one folder), `generate.py --manifest
 tools/story-images/manifest-cafe.json webp --src DIR` and `… printjpg --dest DIR` work as above; `site` reads
-both manifests and writes one `series` table per story into `story-images.js`.
+every manifest and writes one `series` table per story into `story-images.js`.
 
 ## Regenerating audio
 

@@ -1,0 +1,2818 @@
+{
+ "about": "Illustrations for Le Mauvais Colis (dialogues 61-80). AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU (one EC2 g7e.2xlarge instance, kit gpu-batch); character designs by the project author. Each episode picture is a multi-image edit of an approved picture of the same place (or its empty setting) plus the character portraits, with the scene prompt.",
+ "series": "le-mauvais-colis",
+ "model": "Qwen/Qwen-Image-Edit-2511",
+ "model_name": "Qwen-Image-Edit-2511",
+ "model_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+ "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+ "license": "Apache-2.0",
+ "provider": "self-hosted on the author's own AWS account (Amazon EC2 GPU)",
+ "profile": "qwen-edit-2511",
+ "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+ "no_text": "No text, no lettering, no words, no numbers, no signs with writing, no speech bubbles anywhere in the image; any paper, card, book cover, screen or slate shows no readable marks.",
+ "setting": "The setting is the narrow sixth-floor landing of an old pale-stone Paris building in Belleville: black-and-white chequered floor tiles under a square skylight, on the left an apple-green door with chipped corners, a trailing pothos plant and a round coir doormat, on the right, facing it, a navy-blue door with a polished round brass knob and a plain grey doormat set perfectly straight, the top of a worn wooden staircase with a red carpet runner and a small wrought-iron cage lift; neither door shows any number, name plate or bell.",
+ "models": {
+  "Qwen/Qwen-Image-Edit-2511": "Qwen-Image-Edit-2511"
+ },
+ "credit": "Illustrations: AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU; character designs by the project author. Not covered by the CC BY-SA licence of the text.",
+ "images": [
+  {
+   "id": "colis-ep01",
+   "episode": 1,
+   "number": 61,
+   "file": "colis-ep01.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6111,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 2) in a buttoned navy cardigan and slippers stands stiffly before the apple-green door, holding a huge round brown cardboard box almost wider than his chest, eyebrows raised. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "df960240dcadc7be5ffb5fb602179ef37816f2e3e9e6815d105fcb87e3e93a5e",
+   "alt": "Gabriel, in his cardigan and slippers, holds a huge round cardboard box in front of the green door.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep01-i1",
+   "episode": 1,
+   "number": 61,
+   "file": "colis-ep01-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11211,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) beams in the open green doorway, soil on her hands, plants and warm fairy lights behind her, while Gabriel (Picture 3) stands stiffly holding the huge round box. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "f112590015ca51764474866135f5e1c36fa569522830ecb197cc9c62ed7d0fc3",
+   "alt": "Zoé opens the green door with soil on her hands, fairy lights behind her; Gabriel holds out the big box.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l2",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep01-i2",
+   "episode": 1,
+   "number": 61,
+   "file": "colis-ep01-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11222,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Both doors half open, facing each other across the landing: Zoé (Picture 2) leans out of the green door and Gabriel (Picture 3) leans out of the navy door at the same moment, both surprised. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "a9b1bc6194d31cc1053ea6e385d3a6977c008a2fae847d39742a329440fbf074",
+   "alt": "Zoé and Gabriel lean out of their facing doors at the same moment, both surprised.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep02",
+   "episode": 2,
+   "number": 62,
+   "file": "colis-ep02.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6121,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2), hair wild, in dungarees and a striped T-shirt, holds up a matchbox-sized brown-paper parcel and a folded white card at the navy door; Gabriel (Picture 3), neat and shaved, holds a blue-band mug. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "bafe42cb8ff5c24fa15617d0065e26e3462377f1876ba495ff5eb12baef279a4",
+   "alt": "Zoé, hair wild, holds up a tiny parcel and a folded card at the navy door; Gabriel holds his mug of tea.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep02-i1",
+   "episode": 2,
+   "number": 62,
+   "file": "colis-ep02-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11312,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) holds a small folded white card at arm's length with mock solemnity, one eyebrow raised, the hanging pothos plant beside her green door. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "2ff066c8bf3665b1835c2e088e01e5f35eaa4630107b5f08390adce97bd9bd9d",
+   "alt": "Zoé holds Gabriel's folded white card at arm's length with a mock-serious face.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l4",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep02-i2",
+   "episode": 2,
+   "number": 62,
+   "file": "colis-ep02-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11321,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. In the middle of the chequered landing, Zoé (Picture 2) and Gabriel (Picture 3) shake hands stiffly, arms straight, each trying hard to look serious. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "b8bc2f8b660235948afcefa68b415e3bd823f998047e78410d746286a088639f",
+   "alt": "Zoé and Gabriel shake hands stiffly in the middle of the landing to seal their deal.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep03",
+   "episode": 3,
+   "number": 63,
+   "file": "colis-ep03.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6131,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Seen from across the landing, both doors open at once: Gabriel (Picture 3) holds a plain white folded card and Zoé (Picture 2) holds a plain blank yellow square, both frozen, eyes wide; rows of blank cards and yellow squares cover the doors. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0d498e35e0e3f94a6c69f8f8e85d848046f153fb6c9ebf3a044cfcf5a8a58989",
+   "alt": "Both doors open at midnight: Gabriel with a folded card, Zoé with a yellow note, both caught and frozen.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep03-i1",
+   "episode": 3,
+   "number": 63,
+   "file": "colis-ep03-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11412,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view: Zoé (Picture 2) points an accusing finger at Gabriel (Picture 3), who clutches his folded white card to his chest like a guilty schoolboy. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "f21522b1f7e1b34470c5c47352f382c91f08a2e4066bfc92c17406071379074a",
+   "alt": "Zoé points an accusing finger at Gabriel, who clutches his white card like a guilty schoolboy.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l2",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep03-i2",
+   "episode": 3,
+   "number": 63,
+   "file": "colis-ep03-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11422,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. In the middle of the landing, Zoé (Picture 2) and Gabriel (Picture 3) hand each other their folded notes, both laughing for the first time. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "6e09875f928943290c9eae69b389db168fd0a800bfff543106e0f39fbf3a85aa",
+   "alt": "Zoé and Gabriel laugh as they swap their notes by hand in the middle of the landing.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep04",
+   "episode": 4,
+   "number": 64,
+   "file": "colis-ep04.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6142,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-yanis",
+     "sha256": "e492b5d20df7fcfdbaac69840969182775fde326f2276ab209edc95e868eae49"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Yanis (Picture 3) rolls in on an electric cargo bike with a plain red box stacked with parcels; Zoé (Picture 2), in dungarees and green gardening gloves, steps in front of him by the fig tree. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "1dd15bdbfe0fd0c6622307f7a01be6423a48ec7ae1dbeab82d1952324f4b6007",
+   "alt": "Yanis arrives on his cargo bike full of parcels; Zoé, in gardening gloves, stops him by the fig tree.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep04-i1",
+   "episode": 4,
+   "number": 64,
+   "file": "colis-ep04-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11512,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "yanis"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-yanis",
+     "sha256": "e492b5d20df7fcfdbaac69840969182775fde326f2276ab209edc95e868eae49"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Yanis (Picture 3) holds up two fingers while Zoé (Picture 2) and he both look up at two top-floor windows, one spilling plants, one with neat white curtains. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "5604504269cf3c1f925c35808f9e124e5f31860d8a33aa3c54ff94d27ebb8a0b",
+   "alt": "Yanis holds up two fingers as he and Zoé look up at two top-floor windows, one full of plants.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep04-i2",
+   "episode": 4,
+   "number": 64,
+   "file": "colis-ep04-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11522,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) stands alone by the fig tree, holding a tiny brown-paper parcel tied with white string next to her ear, shaking it, curious. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "3f9c33b66150b6562f05b4d8a23eead59ff1f43e634dda6fa5958d624e563110",
+   "alt": "Zoé, alone by the fig tree, shakes a tiny brown-paper parcel next to her ear.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep05",
+   "episode": 5,
+   "number": 65,
+   "file": "colis-ep05.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6151,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. The dark landing in a power cut: Gabriel (Picture 3) holds up a candle at the navy door, its glow lighting his face and the worried face of Zoé (Picture 2). Warm flickering candlelight in the dark. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "d758169e892dc0618f8f28c5f70968a2a787714aec5620f336bfdfb7c65ffc42",
+   "alt": "In the dark, Gabriel holds a candle at his door, lighting his face and Zoé's worried face.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep05-i1",
+   "episode": 5,
+   "number": 65,
+   "file": "colis-ep05-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11611,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Inside the workshop by candlelight, shelves of wooden music boxes glow; Zoé (Picture 2) turns around amazed while Gabriel (Picture 3) holds the candle behind her. Warm flickering candlelight in the dark. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "7fa0882b1725a4dd8d6699602cee75fe620442eea7b706541acf179ca97574a5",
+   "alt": "In the candlelit workshop, Zoé turns around amazed at shelves full of music boxes.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep05-i2",
+   "episode": 5,
+   "number": 65,
+   "file": "colis-ep05-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11621,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 3) winds a small open music box with a brass cylinder on the workbench; Zoé (Picture 2) leans in beside the candle, eyes closed, listening. Warm flickering candlelight in the dark. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0a503fcd28c85b8631d62994effdcec7777b2447a90e826b6537bd26dab33135",
+   "alt": "Gabriel winds a small open music box; Zoé leans in by the candle, eyes closed, listening.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep06",
+   "episode": 6,
+   "number": 66,
+   "file": "colis-ep06.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6162,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) holds an open small box spilling tiny orange earplugs and hides half her face behind her other hand; Gabriel (Picture 3), red-faced, stands at the navy door. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "a82c97f6f5bf91b27a3bc9e6f23e0b2f344a1f4d0e5a2a495381293dfd2d62a9",
+   "alt": "Zoé holds an open box spilling orange earplugs and hides her face; Gabriel blushes at his door.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep06-i1",
+   "episode": 6,
+   "number": 66,
+   "file": "colis-ep06-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11712,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view of the open palm of Zoé (Picture 2) holding the small box, tiny orange foam earplugs heaped like sweets, torn brown paper and string around it. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "f8111388f69a4d4e1b9e67b67aea9514242d3b9763d363be6050e96656e8143e",
+   "alt": "Close-up of Zoé's palm holding the small box of tiny orange earplugs, like sweets.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep06-i2",
+   "episode": 6,
+   "number": 66,
+   "file": "colis-ep06-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11722,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) and Gabriel (Picture 3) laugh together on the landing; he has pushed one orange earplug into one ear as a joke. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "73a6c9c3c259af03d76e96013c64e7a402f85a83bbb0586a3b6d2c90b3bb6be5",
+   "alt": "Zoé and Gabriel laugh on the landing; he has put one orange earplug in his ear as a joke.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep07",
+   "episode": 7,
+   "number": 67,
+   "file": "colis-ep07.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6172,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. At the open door, Gabriel (Picture 3) in a dark grey suit and burgundy tie holds out a tiny cactus in a pot; Zoé (Picture 2) in dungarees laughs, a hand over her mouth. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "dcf2fe33922ab1375e1d653d7f60da395ec65a1a72b1655004da8f75999e56a3",
+   "alt": "Gabriel, in a suit and tie, holds out a tiny cactus; Zoé, in dungarees, laughs with her hand over her mouth.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep07-i1",
+   "episode": 7,
+   "number": 67,
+   "file": "colis-ep07-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11812,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. At the small round table under fairy lights, a steaming orange cast-iron pot; Gabriel (Picture 3), red-faced, drinks straight from a big glass water jug while Zoé (Picture 2) stares. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "355417e9f264e2d0513a67d16b6385ed89912f8bb0e9560242c76b1cf8c96f70",
+   "alt": "At the little table, Gabriel, red-faced, drinks from the water jug while Zoé stares.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep07-i2",
+   "episode": 7,
+   "number": 67,
+   "file": "colis-ep07-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11821,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. The djembe lies on its side on the woven rug; Gabriel (Picture 3), tie loosened, and Zoé (Picture 2) laugh helplessly beside the table. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "bcea8ae1d566780c3bc012ac1751f5607262a5a5a2c177d42acf62327fca0761",
+   "alt": "The djembe has rolled onto the rug; Gabriel, tie loosened, and Zoé laugh helplessly.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "FAIL",
+   "qa_notes": "both takes draw Zoe twice (one lying on the rug, one standing): duplicate",
+   "published": false,
+   "note": "Not published: no take passed QA (2 takes; both draw Zoe twice). A retry round or acceptance is the human call"
+  },
+  {
+   "id": "colis-ep08",
+   "episode": 8,
+   "number": 68,
+   "file": "colis-ep08.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6181,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. On the spiralling wooden staircase with its red runner, Zoé (Picture 2) and Gabriel (Picture 3) carry a huge soft brown sack of potting soil between them, faces red with effort. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4e7d8abcca03ff9352745d2764ebe122722a2e45b8cb9e66cba085afcbc0a9d9",
+   "alt": "Zoé and Gabriel carry a huge sack of potting soil up the spiral staircase, faces red.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep08-i1",
+   "episode": 8,
+   "number": 68,
+   "file": "colis-ep08-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11911,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. On a half-landing with a tall window, Zoé (Picture 2) and Gabriel (Picture 3) sit on the steps with the sack between them; she holds out her hand to shake. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "edd5922fd71cfe162ca2dcc9472cbf8c4f8d9a5bec32b9baeb95ceefcff260ec",
+   "alt": "Resting on the stairs with the sack between them, Zoé holds out her hand to Gabriel.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep08-i2",
+   "episode": 8,
+   "number": 68,
+   "file": "colis-ep08-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 11921,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. The sack dropped beside them, Zoé (Picture 2) and Gabriel (Picture 3) lie flat on their backs on the chequered tiles under the skylight, laughing. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "f5c80790332212023295793722d5c27d02e5c7d054cbed34119dd9f9f769d72e",
+   "alt": "Zoé and Gabriel lie on the chequered tiles under the skylight, laughing, the sack beside them.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l11",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep09",
+   "episode": 9,
+   "number": 69,
+   "file": "colis-ep09.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6192,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-fatou",
+     "sha256": "183ba9ea003606e143d5b947c084dd14979d56cbef95baac86179e988e561a50"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Fatou (Picture 3), holding a long broom by the lace-curtained lodge door, and Gabriel (Picture 2), holding a blue-band mug, both look up at a high window full of plants. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "a44674b5110345eb558084d608ca5008be6b183b6a0b3d56f59ea99cbeb6dc2a",
+   "alt": "Fatou, with her broom, and Gabriel, with his mug, look up at a high window full of plants.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep09-i1",
+   "episode": 9,
+   "number": 69,
+   "file": "colis-ep09-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12011,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel",
+    "fatou"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-fatou",
+     "sha256": "183ba9ea003606e143d5b947c084dd14979d56cbef95baac86179e988e561a50"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Fatou (Picture 3) counts on her fingers with a proud smile while Gabriel (Picture 2) listens closely, his mug forgotten in his hand. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "5504c198006510adb7c39f2f010d8c5717f9e429a4b559acae83112e7b748390",
+   "alt": "Fatou counts on her fingers as she talks; Gabriel listens, his mug forgotten.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep09-i2",
+   "episode": 9,
+   "number": 69,
+   "file": "colis-ep09-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12022,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 2) sits alone on a stone step in the courtyard, turning a small box of orange earplugs over in his hands, thoughtful. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "e8fb7d4d4b7bfe392ac6f23dd0cf4d5dc02e25101f85e2bee6fb3ecc661f7fff",
+   "alt": "Gabriel sits alone on a step, turning the little box of orange earplugs in his hands.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep10",
+   "episode": 10,
+   "number": 70,
+   "file": "colis-ep10.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6201,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Behind a small wooden stage in a winter hillside park above the rooftops, pale Zoé (Picture 2) in a gold sequinned jacket grips her drumsticks; Gabriel (Picture 3) arrives in a navy coat and grey scarf. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4182f9c1668883b66cc38cef282eae2f61308ab740fd468b5e98b10bf7dd3b52",
+   "alt": "Behind a small stage in the winter park, Zoé in a gold jacket grips her drumsticks; Gabriel arrives.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep10-i1",
+   "episode": 10,
+   "number": 70,
+   "file": "colis-ep10-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12112,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view: the hands of Zoé (Picture 2) cup a small open pale-wood music box painted with a blue flower, and the hands of Gabriel (Picture 3) rest around hers. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0d7ede7c6fad3c4006f81ceda830d7c4879408548f575d37c6e4abdbcb572e2c",
+   "alt": "Close-up: Zoé's hands hold a small pale-wood music box, and Gabriel's hands rest around hers.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep10-i2",
+   "episode": 10,
+   "number": 70,
+   "file": "colis-ep10-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12121,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Seen from behind Gabriel (Picture 3) in the front row, Zoé (Picture 2) plays a big drum on the small wooden stage, smiling, a soft blurred crowd around. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4f24ba862f4e4303283d5ef013b2fa3e7b2880b75ee90afb38b0858e50ec1616",
+   "alt": "Seen from the front row behind Gabriel, Zoé plays a big drum on stage, smiling.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep11",
+   "episode": 11,
+   "number": 71,
+   "file": "colis-ep11.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6212,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Snow falls past the window; Zoé (Picture 2) stands on tiptoe reaching for a small walnut box with a mother-of-pearl bird on a high shelf, while Gabriel (Picture 3) raises a warning hand. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "97ae5258d8d98445af367b3b48e99059ed64ced461bc74ff72aededc1be07d18",
+   "alt": "Zoé reaches on tiptoe for a small walnut music box on a high shelf; Gabriel raises a warning hand.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep11-i1",
+   "episode": 11,
+   "number": 71,
+   "file": "colis-ep11-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12211,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Under the green lamp, Gabriel (Picture 2) looks through his jeweller's loupe at the open walnut box on the workbench: a brass cylinder and a steel comb with one gap. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0c6f1f5bbd85589468ae95499b8c7ffc0672ae8f81d7902a659885fe33ab156d",
+   "alt": "Under the green lamp, Gabriel studies the open walnut box and its comb with one gap.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep11-i2",
+   "episode": 11,
+   "number": 71,
+   "file": "colis-ep11-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12222,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) sings with her eyes closed, one finger raised; Gabriel (Picture 3) stares at her, the open walnut box between them on the workbench. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c24aac52f114312fc8958ec04f93ab772594e6872340c3a719389fbd31b13b11",
+   "alt": "Zoé sings with eyes closed and a finger raised; Gabriel stares at her over the open box.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep12",
+   "episode": 12,
+   "number": 72,
+   "file": "colis-ep12.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6221,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. On an old blue tarp, Gabriel (Picture 3), sleeves rolled up and soil to his wrists, holds a tomato seedling at arm's length while Zoé (Picture 2) kneels beside him, laughing. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "417aa8df99d5c5fe29198e730cad5539d539771ae27399208ad81471cb115c6f",
+   "alt": "On a blue tarp, Gabriel holds a seedling at arm's length, soil to his wrists, while Zoé laughs.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep12-i1",
+   "episode": 12,
+   "number": 72,
+   "file": "colis-ep12-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12312,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) holds up two saucepans like cymbals, mid-clash, as Gabriel (Picture 3) grins from the tarp. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "300910c0d51120fd9c03d2cf75230fc037a7f5f1ac29d9a50219901737eddc0b",
+   "alt": "Zoé holds up two saucepans like cymbals while Gabriel grins.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep12-i2",
+   "episode": 12,
+   "number": 72,
+   "file": "colis-ep12-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12321,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-2",
+     "sha256": "82e1e6eee3c11ef1d840f637cdae3b8465249f4954257a16380a4d3a0711fd62"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) and Gabriel (Picture 3) sit side by side on the mustard-yellow sofa, eyes closed, calm, plants and pale sun around them. Pale winter afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "839fedf140bdcd8a71cb97bcbacc106022e4098cfa11116ac7b6a149f73a1707",
+   "alt": "Zoé and Gabriel sit side by side on the yellow sofa, eyes closed, in a quiet moment.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l11",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep13",
+   "episode": 13,
+   "number": 73,
+   "file": "colis-ep13.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6231,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-yanis",
+     "sha256": "e492b5d20df7fcfdbaac69840969182775fde326f2276ab209edc95e868eae49"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Grey winter morning: Yanis (Picture 3) on his cargo bike holds out a parcel; Zoé (Picture 2), in a long mustard-yellow cardigan over her dungarees, stands with arms crossed. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "07ef2e4d756027ecb3323f4f3bf2da95ce29442b766dbdaf18f16fab407979cc",
+   "alt": "On a grey morning Yanis holds out a parcel from his cargo bike; Zoé stands with her arms crossed.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep13-i1",
+   "episode": 13,
+   "number": 73,
+   "file": "colis-ep13-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12411,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel",
+    "helene"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-helene",
+     "sha256": "e29e4685451e2fde3f64fd8baa8a120d7d70ac2503ba91fcbc5355301d4a4f95"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Framed in a round peephole circle, Gabriel (Picture 2) hugs tall Hélène (Picture 3) in a bottle-green coat on the landing, a bottle-green wheeled suitcase beside them. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "3845deaa4e02c06ed30e94be5012047c09365e5a2153d28238978c936d36c726",
+   "alt": "Through a round peephole: Gabriel hugs a tall woman in a green coat beside a green suitcase.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep13-i2",
+   "episode": 13,
+   "number": 73,
+   "file": "colis-ep13-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12422,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "yanis"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-yanis",
+     "sha256": "e492b5d20df7fcfdbaac69840969182775fde326f2276ab209edc95e868eae49"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Yanis (Picture 3) frames Zoé (Picture 2) between his fingers like a film director; she half laughs despite herself, arms still crossed. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "13ae3355974a647dd09e216d2e2048f82a5216b4279d602b11292c9740dec24c",
+   "alt": "Yanis frames Zoé with his fingers like a film director, and she half laughs.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l11",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep14",
+   "episode": 14,
+   "number": 74,
+   "file": "colis-ep14.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6242,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-helene",
+     "sha256": "e29e4685451e2fde3f64fd8baa8a120d7d70ac2503ba91fcbc5355301d4a4f95"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hélène (Picture 3), red scarf around her neck, her green coat thrown over the armchair, holds open a round blue tin full of yellow squares seen edge-on; Gabriel (Picture 2) reaches to grab it. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "8b633b2294e96d195ec3265252d438707f6e443217cbbb06c0177660859330cf",
+   "alt": "Hélène holds open a round blue tin full of yellow notes; Gabriel reaches out to grab it.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep14-i1",
+   "episode": 14,
+   "number": 74,
+   "file": "colis-ep14-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12512,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "helene"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-helene",
+     "sha256": "e29e4685451e2fde3f64fd8baa8a120d7d70ac2503ba91fcbc5355301d4a4f95"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view: the hands of Hélène (Picture 2) tilt the round blue tin, plain blank yellow squares stacked neatly inside, seen edge-on. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "25e9c46dcd6a6017f412a3d6ac45a15945fffd2f89d0234f305d3fab4ef6b30b",
+   "alt": "Close-up of the blue tin in Hélène's hands, yellow squares stacked neatly inside.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l4",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep14-i2",
+   "episode": 14,
+   "number": 74,
+   "file": "colis-ep14-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12521,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel",
+    "helene"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-helene",
+     "sha256": "e29e4685451e2fde3f64fd8baa8a120d7d70ac2503ba91fcbc5355301d4a4f95"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hélène (Picture 3) laughs with her hands on her hips while Gabriel (Picture 2) sits on his stool, head in his hands, ears red. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "1590d4a4e08791b678b6f06573f76708208a58d52307af8dbe146f2f5868f27e",
+   "alt": "Hélène laughs, hands on hips, while Gabriel sits with his head in his hands, ears red.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep15",
+   "episode": 15,
+   "number": 75,
+   "file": "colis-ep15.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6251,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 3) holds out a big lumpy parcel taped with green tape at the half-open green door; Zoé (Picture 2), half behind it, stands with arms crossed. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "167190c86a02a3d16c0529fb64ae589bdfc2cc9e13dd868a066f5cde49a72b39",
+   "alt": "Gabriel holds out a big lumpy parcel at the half-open green door; Zoé stands behind it, arms crossed.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep15-i1",
+   "episode": 15,
+   "number": 75,
+   "file": "colis-ep15-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12611,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) covers her face with both hands, laughing, while Gabriel (Picture 3) grins beside the lumpy parcel. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "741f7bc74ff56062361ff90879e5bd5586976c95ce95c9a294719fbc1693e2ca",
+   "alt": "Zoé covers her face with both hands, laughing; Gabriel grins beside the parcel.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep15-i2",
+   "episode": 15,
+   "number": 75,
+   "file": "colis-ep15-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12621,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) and Gabriel (Picture 3) stand very close under the skylight, both turning their heads towards the stairwell at a sudden sound. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "1bb4854b2e34d9f7c0ae4d63cf332bb2b63c9aec711cce08d5f9cc87785babf6",
+   "alt": "Standing very close under the skylight, Zoé and Gabriel turn towards the stairs at a sound.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l13",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep16",
+   "episode": 16,
+   "number": 76,
+   "file": "colis-ep16.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6261,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Two identical thick plain white envelopes: Zoé (Picture 2), pale, holds one by the green door; Gabriel (Picture 3) holds the other in the navy doorway. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "e8270dce6b276ac71cf0815e02710f5e26d7626ab55e1769bbc21c80b4de0a04",
+   "alt": "Zoé, pale, holds a thick white envelope; Gabriel holds an identical one in his doorway.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep16-i1",
+   "episode": 16,
+   "number": 76,
+   "file": "colis-ep16-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12711,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Zoé (Picture 2) sits on the top stair, the envelope on her knees; Gabriel (Picture 3) sits down beside her. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "76e19402e572b79ea50c6b99764b76d922651125708331021b16290000e4a07b",
+   "alt": "Zoé sits on the top stair with the envelope on her knees; Gabriel sits down beside her.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep16-i2",
+   "episode": 16,
+   "number": 76,
+   "file": "colis-ep16-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12721,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view of the top stair: the hand of Zoé (Picture 2) and the hand of Gabriel (Picture 3) rest on the red runner, almost touching. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "da7ccbe40b311eaa44a8a98325a3d2d3e4649f7f667c6f61adc80d6fc47bab05",
+   "alt": "Close-up: Zoé's and Gabriel's hands rest on the stair, almost touching.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep17",
+   "episode": 17,
+   "number": 77,
+   "file": "colis-ep17.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6271,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-fatou",
+     "sha256": "183ba9ea003606e143d5b947c084dd14979d56cbef95baac86179e988e561a50"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. At the lodge door, Fatou (Picture 3) in her orange-and-green headwrap holds up a big ring of old iron keys; Gabriel (Picture 2) bends down to listen. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "fadc748fa875468320e4a615a2be2b1a3fe2434d90ebd01a3b10cab9e116a3e7",
+   "alt": "Fatou holds up a big ring of old iron keys at the lodge door; Gabriel bends down to listen.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep17-i1",
+   "episode": 17,
+   "number": 77,
+   "file": "colis-ep17-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12811,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel",
+    "fatou"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    },
+    {
+     "name": "ref-fatou",
+     "sha256": "183ba9ea003606e143d5b947c084dd14979d56cbef95baac86179e988e561a50"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Down in a vaulted pale stone cellar lit by one hanging bulb, old wooden crates around; Fatou (Picture 3) holds a small flashlight while Gabriel (Picture 2) presses both palms to the thick wall. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0521306bddbbf585030b91b8abdfbbfa95bcc68dda39e51daee1626c3eddf352",
+   "alt": "In the vaulted stone cellar under one bulb, Fatou holds a flashlight; Gabriel presses his palms to the wall.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep17-i2",
+   "episode": 17,
+   "number": 77,
+   "file": "colis-ep17-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12822,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-4",
+     "sha256": "86865f90948a2e2c4360b50f23048194296032055443152d0e92d10e05371409"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 2) stands alone in the arched cellar doorway, arms spread wide between the stone jambs as if measuring, determined. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "d019e97d458ba717351a33c6a210f88dc1739e4b66ef6189acdf1f2d47b5d4e0",
+   "alt": "Gabriel stands in the arched cellar doorway, arms spread wide as if measuring it, determined.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l13",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep18",
+   "episode": 18,
+   "number": 78,
+   "file": "colis-ep18.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6282,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. On the old staircase at night, Zoé (Picture 2) turns back from two steps above Gabriel (Picture 3), amazed; he wears a dark grey suit, his burgundy tie loosened. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "bfe996a796538dcfc31f9501ab70b6bcfda387ad573ee2dc8bf65476ab5a5633",
+   "alt": "On the stairs at night, Zoé turns back to Gabriel, amazed; he wears his suit, tie loosened.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep18-i1",
+   "episode": 18,
+   "number": 78,
+   "file": "colis-ep18-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12912,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. A ground-floor hall with rows of folding chairs and residents as soft silhouettes with raised hands; Gabriel (Picture 2) stands at the front in his suit and burgundy tie. Golden early-evening lamp light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "b7f14aa7b20b94dd699de7cfca4df89186b1c67656c5eef4c409f4823f0fd61f",
+   "alt": "In the hall full of folding chairs, residents raise their hands as Gabriel stands at the front in his suit.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep18-i2",
+   "episode": 18,
+   "number": 78,
+   "file": "colis-ep18-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 12922,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. The stair light has gone out: Zoé (Picture 2) and Gabriel (Picture 3) are two dark silhouettes on the staircase, laughing, a faint blue glow from above. Warm wall-lamp light at night, dark blue in the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "5c392d93934d22faac8826a16bd51a66bdf1f106e0107dbc9df82be941b8d9d1",
+   "alt": "The stair light is out: Zoé and Gabriel are two silhouettes laughing on the dark staircase.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l13",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep19",
+   "episode": 19,
+   "number": 79,
+   "file": "colis-ep19.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6291,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. A small wooden box tied with red string lies open on the workbench; Gabriel (Picture 3) holds a gleaming steel comb in his palm while Zoé (Picture 2) beams beside him. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "2855cb97c421e74b44f80f98fc0a0b6bd0e9a89dc8811a92b64338094b1b8f0d",
+   "alt": "A small box tied with red string lies open; Gabriel holds a shiny new comb while Zoé beams.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep19-i1",
+   "episode": 19,
+   "number": 79,
+   "file": "colis-ep19-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 13012,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Gabriel (Picture 3), loupe down over his glasses, fits the comb with a tiny screwdriver; Zoé (Picture 2) holds the green-shaded lamp closer. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "ea5ef099220586930fbbdf1b2d50951330d8a54eed077fe82560c54488888a87",
+   "alt": "Gabriel, loupe over his glasses, fits the comb with a tiny screwdriver; Zoé holds the lamp closer.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep19-i2",
+   "episode": 19,
+   "number": 79,
+   "file": "colis-ep19-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 13021,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-3",
+     "sha256": "b985aa692f72676e96f5316963faf7cff321b5b111c109a47a2a0321f293caed"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. The walnut music box plays open on the bench; above it, Zoé (Picture 2) and Gabriel (Picture 3) rest their foreheads together, eyes closed. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "34ee1d98af18124187ef1e985c7c595abc0b532199bc7a35694b30280b986996",
+   "alt": "The walnut music box plays on the bench as Zoé and Gabriel rest their foreheads together.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l14",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep20",
+   "episode": 20,
+   "number": 80,
+   "file": "colis-ep20.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 6301,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel",
+    "yanis"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Spring sun through the skylight; both doors stand wide open; a square wooden box tied with red string sits in the middle of the tiles, with Zoé (Picture 2) and Gabriel (Picture 3) crouching on either side of it. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "8937895f92950c4388bb160effeea9400881ca5282cb608ec0ef04eec3606eb2",
+   "alt": "Both doors wide open in the spring sun; Zoé and Gabriel crouch on either side of a box in the middle of the landing.",
+   "attempts": 2,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep20-i1",
+   "episode": 20,
+   "number": 80,
+   "file": "colis-ep20-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 13111,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Close view: Zoé (Picture 2) holds a small pale-wood music box with two mother-of-pearl birds on the lid; the hand of Gabriel (Picture 3) rests on hers. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0ad8d1981ea7d96a4cf6a172cb1273b888354ab61833db7c988f4f08a533f125",
+   "alt": "Close-up: Zoé holds a pale-wood music box with two pearly birds; Gabriel's hand rests on hers.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "colis-ep20-i2",
+   "episode": 20,
+   "number": 80,
+   "file": "colis-ep20-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "colis-eps",
+   "seed": 13122,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "zoe",
+    "gabriel"
+   ],
+   "refs": [
+    {
+     "name": "setting-place-1",
+     "sha256": "50814193f743471316691186f871fbdcb9d73fabe3009566a1d5be65ce60a5fc"
+    },
+    {
+     "name": "ref-zoe",
+     "sha256": "390a9df83e427e2f85d5880f31116889a9856bc797b21de9b9569f74df9c2858"
+    },
+    {
+     "name": "ref-gabriel",
+     "sha256": "d69bed55295a951ad57db0f806d5c10668c052ffa8ba5eec696f02f11ca634ea"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Wide view: the landing is a tiny living room between the open doors, two chairs and a small table; Zoé (Picture 2) and Gabriel (Picture 3) laugh over tea, while far below in the stairwell a slim young man in a red backwards cap looks up and grins. Soft morning light from the skylight. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, sign, poster, label, address label, door number, name plate, clock numerals, sheet music, screen, logo, watermark, signature, scribbles, duplicate person, twins, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "da665f92aff912f3ae4a88b8ef8460ec77482dec952489a9a5f185acdf7d242c",
+   "alt": "The landing is now a tiny living room; Zoé and Gabriel laugh over tea as Yanis grins up from the stairs.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l14",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA (relaxed rule): no letter-like marks, no duplicated character, anatomy fine, key action shown",
+   "accepted": true
+  }
+ ]
+}

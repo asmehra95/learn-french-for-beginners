@@ -219,6 +219,12 @@
        "height": 686,
        "alt": "Samuel, in a grey parka, slumps at a table with a hand over his eyes while Rose stands nearby with a cup; Socrate watches from his perch by the window."
       },
+      "14": {
+       "src": "images/story/cafe-ep14.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Juliette the postwoman raises her camera to photograph Hugo, who holds up a postcard of the sea; Socrate reaches for the card."
+      },
       "15": {
        "src": "images/story/cafe-ep15.webp",
        "width": 1200,
@@ -237,6 +243,12 @@
        "height": 686,
        "alt": "Paul holds up a small black-and-white baby scan picture at the counter; Rose clasps her hands with joy while Socrate watches from his perch by the window."
       },
+      "18": {
+       "src": "images/story/cafe-ep18.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "At closing time, chairs upside down on the tables, Rose tells Hugo her story over postcards of the sea; Socrate sleeps on the counter."
+      },
       "19": {
        "src": "images/story/cafe-ep19.webp",
        "width": 1200,
@@ -248,6 +260,531 @@
        "width": 1200,
        "height": 686,
        "alt": "Thomas, on a stool at the zinc counter, slides a white cup across; behind it Hugo holds a cloth and Rose smiles with her hands on her chest."
+      }
+     },
+     "inserts": {
+      "cafe-ep01-i1": {
+       "src": "images/story/cafe-ep01-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep01-i2": {
+       "src": "images/story/cafe-ep01-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep02-i1": {
+       "src": "images/story/cafe-ep02-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep02-i2": {
+       "src": "images/story/cafe-ep02-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep03-i1": {
+       "src": "images/story/cafe-ep03-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep03-i2": {
+       "src": "images/story/cafe-ep03-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep04-i1": {
+       "src": "images/story/cafe-ep04-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep04-i2": {
+       "src": "images/story/cafe-ep04-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep05-i1": {
+       "src": "images/story/cafe-ep05-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep05-i2": {
+       "src": "images/story/cafe-ep05-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep06-i1": {
+       "src": "images/story/cafe-ep06-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep06-i2": {
+       "src": "images/story/cafe-ep06-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep07-i1": {
+       "src": "images/story/cafe-ep07-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep07-i2": {
+       "src": "images/story/cafe-ep07-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep08-i1": {
+       "src": "images/story/cafe-ep08-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep08-i2": {
+       "src": "images/story/cafe-ep08-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep09-i1": {
+       "src": "images/story/cafe-ep09-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep09-i2": {
+       "src": "images/story/cafe-ep09-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep10-i1": {
+       "src": "images/story/cafe-ep10-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep10-i2": {
+       "src": "images/story/cafe-ep10-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep11-i1": {
+       "src": "images/story/cafe-ep11-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep11-i2": {
+       "src": "images/story/cafe-ep11-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep12-i1": {
+       "src": "images/story/cafe-ep12-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep12-i2": {
+       "src": "images/story/cafe-ep12-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep13-i1": {
+       "src": "images/story/cafe-ep13-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep13-i2": {
+       "src": "images/story/cafe-ep13-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep14-i1": {
+       "src": "images/story/cafe-ep14-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep14-i2": {
+       "src": "images/story/cafe-ep14-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep15-i1": {
+       "src": "images/story/cafe-ep15-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep15-i2": {
+       "src": "images/story/cafe-ep15-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep16-i1": {
+       "src": "images/story/cafe-ep16-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep16-i2": {
+       "src": "images/story/cafe-ep16-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep17-i1": {
+       "src": "images/story/cafe-ep17-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep17-i2": {
+       "src": "images/story/cafe-ep17-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep18-i1": {
+       "src": "images/story/cafe-ep18-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep18-i2": {
+       "src": "images/story/cafe-ep18-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep19-i1": {
+       "src": "images/story/cafe-ep19-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep19-i2": {
+       "src": "images/story/cafe-ep19-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep20-i1": {
+       "src": "images/story/cafe-ep20-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "cafe-ep20-i2": {
+       "src": "images/story/cafe-ep20-i2.webp",
+       "width": 1200,
+       "height": 686
+      }
+     }
+    },
+    "le-mauvais-colis": {
+     "credit": "Illustrations: AI-generated with Qwen-Image-Edit-2511 (Apache-2.0), run on the author's own AWS GPU; character designs by the project author. Not covered by the CC BY-SA licence of the text.",
+     "cover": null,
+     "episodes": {
+      "1": {
+       "src": "images/story/colis-ep01.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Gabriel, in his cardigan and slippers, holds a huge round cardboard box in front of the green door."
+      },
+      "2": {
+       "src": "images/story/colis-ep02.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Zoé, hair wild, holds up a tiny parcel and a folded card at the navy door; Gabriel holds his mug of tea."
+      },
+      "3": {
+       "src": "images/story/colis-ep03.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Both doors open at midnight: Gabriel with a folded card, Zoé with a yellow note, both caught and frozen."
+      },
+      "4": {
+       "src": "images/story/colis-ep04.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Yanis arrives on his cargo bike full of parcels; Zoé, in gardening gloves, stops him by the fig tree."
+      },
+      "5": {
+       "src": "images/story/colis-ep05.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "In the dark, Gabriel holds a candle at his door, lighting his face and Zoé's worried face."
+      },
+      "6": {
+       "src": "images/story/colis-ep06.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Zoé holds an open box spilling orange earplugs and hides her face; Gabriel blushes at his door."
+      },
+      "7": {
+       "src": "images/story/colis-ep07.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Gabriel, in a suit and tie, holds out a tiny cactus; Zoé, in dungarees, laughs with her hand over her mouth."
+      },
+      "8": {
+       "src": "images/story/colis-ep08.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Zoé and Gabriel carry a huge sack of potting soil up the spiral staircase, faces red."
+      },
+      "9": {
+       "src": "images/story/colis-ep09.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Fatou, with her broom, and Gabriel, with his mug, look up at a high window full of plants."
+      },
+      "10": {
+       "src": "images/story/colis-ep10.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Behind a small stage in the winter park, Zoé in a gold jacket grips her drumsticks; Gabriel arrives."
+      },
+      "11": {
+       "src": "images/story/colis-ep11.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Zoé reaches on tiptoe for a small walnut music box on a high shelf; Gabriel raises a warning hand."
+      },
+      "12": {
+       "src": "images/story/colis-ep12.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "On a blue tarp, Gabriel holds a seedling at arm's length, soil to his wrists, while Zoé laughs."
+      },
+      "13": {
+       "src": "images/story/colis-ep13.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "On a grey morning Yanis holds out a parcel from his cargo bike; Zoé stands with her arms crossed."
+      },
+      "14": {
+       "src": "images/story/colis-ep14.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Hélène holds open a round blue tin full of yellow notes; Gabriel reaches out to grab it."
+      },
+      "15": {
+       "src": "images/story/colis-ep15.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Gabriel holds out a big lumpy parcel at the half-open green door; Zoé stands behind it, arms crossed."
+      },
+      "16": {
+       "src": "images/story/colis-ep16.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Zoé, pale, holds a thick white envelope; Gabriel holds an identical one in his doorway."
+      },
+      "17": {
+       "src": "images/story/colis-ep17.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Fatou holds up a big ring of old iron keys at the lodge door; Gabriel bends down to listen."
+      },
+      "18": {
+       "src": "images/story/colis-ep18.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "On the stairs at night, Zoé turns back to Gabriel, amazed; he wears his suit, tie loosened."
+      },
+      "19": {
+       "src": "images/story/colis-ep19.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "A small box tied with red string lies open; Gabriel holds a shiny new comb while Zoé beams."
+      },
+      "20": {
+       "src": "images/story/colis-ep20.webp",
+       "width": 1200,
+       "height": 686,
+       "alt": "Both doors wide open in the spring sun; Zoé and Gabriel crouch on either side of a box in the middle of the landing."
+      }
+     },
+     "inserts": {
+      "colis-ep01-i1": {
+       "src": "images/story/colis-ep01-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep01-i2": {
+       "src": "images/story/colis-ep01-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep02-i1": {
+       "src": "images/story/colis-ep02-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep02-i2": {
+       "src": "images/story/colis-ep02-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep03-i1": {
+       "src": "images/story/colis-ep03-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep03-i2": {
+       "src": "images/story/colis-ep03-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep04-i1": {
+       "src": "images/story/colis-ep04-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep04-i2": {
+       "src": "images/story/colis-ep04-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep05-i1": {
+       "src": "images/story/colis-ep05-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep05-i2": {
+       "src": "images/story/colis-ep05-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep06-i1": {
+       "src": "images/story/colis-ep06-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep06-i2": {
+       "src": "images/story/colis-ep06-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep07-i1": {
+       "src": "images/story/colis-ep07-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep08-i1": {
+       "src": "images/story/colis-ep08-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep08-i2": {
+       "src": "images/story/colis-ep08-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep09-i1": {
+       "src": "images/story/colis-ep09-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep09-i2": {
+       "src": "images/story/colis-ep09-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep10-i1": {
+       "src": "images/story/colis-ep10-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep10-i2": {
+       "src": "images/story/colis-ep10-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep11-i1": {
+       "src": "images/story/colis-ep11-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep11-i2": {
+       "src": "images/story/colis-ep11-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep12-i1": {
+       "src": "images/story/colis-ep12-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep12-i2": {
+       "src": "images/story/colis-ep12-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep13-i1": {
+       "src": "images/story/colis-ep13-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep13-i2": {
+       "src": "images/story/colis-ep13-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep14-i1": {
+       "src": "images/story/colis-ep14-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep14-i2": {
+       "src": "images/story/colis-ep14-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep15-i1": {
+       "src": "images/story/colis-ep15-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep15-i2": {
+       "src": "images/story/colis-ep15-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep16-i1": {
+       "src": "images/story/colis-ep16-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep16-i2": {
+       "src": "images/story/colis-ep16-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep17-i1": {
+       "src": "images/story/colis-ep17-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep17-i2": {
+       "src": "images/story/colis-ep17-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep18-i1": {
+       "src": "images/story/colis-ep18-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep18-i2": {
+       "src": "images/story/colis-ep18-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep19-i1": {
+       "src": "images/story/colis-ep19-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep19-i2": {
+       "src": "images/story/colis-ep19-i2.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep20-i1": {
+       "src": "images/story/colis-ep20-i1.webp",
+       "width": 1200,
+       "height": 686
+      },
+      "colis-ep20-i2": {
+       "src": "images/story/colis-ep20-i2.webp",
+       "width": 1200,
+       "height": 686
       }
      }
     }

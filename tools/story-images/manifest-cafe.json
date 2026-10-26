@@ -55,6 +55,102 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep01-i1",
+   "episode": 1,
+   "number": 41,
+   "file": "cafe-ep01-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70102,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "thomas",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep01",
+     "sha256": "013a166a6757e191a0be641385341ef700c2c3f471b18593710f8c2c71182408"
+    },
+    {
+     "name": "ref-thomas",
+     "sha256": "7c6be5e887e1b3c0669f5018c71bcef5aa4e81252566d9fbcb564b21c535f518"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Thomas (Picture 2) lowers both phones and stares at the ceiling, thinking hard about the question, while Rose (Picture 3) leans on the zinc counter beside the white cup and waits patiently. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c739163c38965edb1cea87931b32ed7bf8edbfdb9245ca926f8a8eb3f7278253",
+   "alt": "Thomas lowers his two phones and thinks hard about Rose's question while she waits patiently at the counter.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep01-i2",
+   "episode": 1,
+   "number": 41,
+   "file": "cafe-ep01-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80101,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "thomas",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep01",
+     "sha256": "013a166a6757e191a0be641385341ef700c2c3f471b18593710f8c2c71182408"
+    },
+    {
+     "name": "ref-thomas",
+     "sha256": "7c6be5e887e1b3c0669f5018c71bcef5aa4e81252566d9fbcb564b21c535f518"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Thomas (Picture 2) lays both phones face down on the counter and smiles at last, while Rose (Picture 3) slides the steaming white cup across the zinc to him. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "03c44de98671dfa9c212ca823db4a6524c55b8e04653473b370533648fbc5175",
+   "alt": "Thomas puts both phones face down on the counter and smiles as Rose slides the white cup across to him.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l9",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep02",
    "episode": 2,
    "number": 42,
@@ -91,6 +187,102 @@
    "attempts": 2,
    "qa": "pass",
    "qa_notes": "Paul, Rose and Socrate match the cast sheet; Socrate on the table edge by the pages; pages show only faint lines. Minor: no second tea cup for Paul, faint marks on the slate.",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep02-i1",
+   "episode": 2,
+   "number": 42,
+   "file": "cafe-ep02-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70202,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "paul",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep02",
+     "sha256": "4052ea3c6bbaea61756ab1bed68b1032b2ec2315410e6d3b2d2a3b5d1c5e2fa6"
+    },
+    {
+     "name": "ref-paul",
+     "sha256": "6b341e550051236c4d7124e2a8c34775e07fa81b882a2f092a53734b0e01838c"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Paul (Picture 2) puts down his pen at the small round table and gazes at the tall window with a soft, dreamy smile, while Rose (Picture 3) stands beside him holding a cup of tea. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "bba6ff23909a928c02610375225929a492889e5f5a09d6cec3b65ad902cc2979",
+   "alt": "Paul puts down his pen and gazes dreamily at the window as Rose, holding his tea, waits beside the table.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep02-i2",
+   "episode": 2,
+   "number": 42,
+   "file": "cafe-ep02-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80202,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "paul"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep02",
+     "sha256": "4052ea3c6bbaea61756ab1bed68b1032b2ec2315410e6d3b2d2a3b5d1c5e2fa6"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    },
+    {
+     "name": "ref-paul",
+     "sha256": "6b341e550051236c4d7124e2a8c34775e07fa81b882a2f092a53734b0e01838c"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) sets a steaming cup of tea in front of Paul (Picture 3), who laughs with relief and pushes his thick pile of blank pages to the edge of the round table. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "a431910afe935e55ccff3e5eb29c6e02d2805d02991636b8e1235cf375b82819",
+   "alt": "Rose sets a cup of tea in front of Paul, who laughs with relief and pushes his pile of pages aside.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l9",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -133,6 +325,102 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep03-i1",
+   "episode": 3,
+   "number": 43,
+   "file": "cafe-ep03-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70301,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep03",
+     "sha256": "1b23ca0fa563e3be7fd66db4e1840ad9557680d2a60a1f9b4831fc751df29ccf"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2), in an apron that is too short, sweeps the broken pieces of a white cup into a dustpan and talks happily, while Rose (Picture 3) listens behind the counter, her arms folded. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4887eaa887a0001a929478e4c2ee2f4024cd1ce902abfff17cbe0249ce006b55",
+   "alt": "In his too-short apron, Hugo sweeps up the broken cup and talks happily while Rose listens behind the counter.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep03-i2",
+   "episode": 3,
+   "number": 43,
+   "file": "cafe-ep03-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80301,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep03",
+     "sha256": "1b23ca0fa563e3be7fd66db4e1840ad9557680d2a60a1f9b4831fc751df29ccf"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) leans close to the parrot perch by the tall window and stares in amazement at Socrate (Picture 3), who puffs up his grey feathers proudly. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "64fa6a47adf4b712d36c4645f9c512a5a3f4f6cf84b1f05d0b0ee6fd512cbae0",
+   "alt": "Hugo leans towards the perch by the window and stares in amazement at Socrate, who puffs up proudly.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep04",
    "episode": 4,
    "number": 44,
@@ -169,6 +457,94 @@
    "attempts": 3,
    "qa": "PASS-notes",
    "qa_notes": "no slate; faint unreadable marks on door glass; Hugo at window counter not behind main counter; Emma looks toward Hugo rather than out window",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep04-i1",
+   "episode": 4,
+   "number": 44,
+   "file": "cafe-ep04-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70402,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "emma",
+    "hugo"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep04",
+     "sha256": "e4afb02da185692a656e318617a00a96f0fe2884b04e4c30e489e96b51cacf83"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Emma (a 35-year-old tourist with auburn hair in a ponytail, a yellow rain jacket and a canvas tote bag) stands at the tall window with a pen in her hand, gazing at the grey Paris rooftops and the white dome of the Sacré-Cœur, while Hugo (Picture 2) watches from behind the counter. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c9b3c7f16985de1549b74827568bc6c942b5d868b1294e4e4ceca0235ecfce78",
+   "alt": "Emma stands at the window, pen in hand, gazing at the Paris rooftops and the Sacré-Cœur while Hugo watches.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep04-i2",
+   "episode": 4,
+   "number": 44,
+   "file": "cafe-ep04-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80401,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "emma"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep04",
+     "sha256": "e4afb02da185692a656e318617a00a96f0fe2884b04e4c30e489e96b51cacf83"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) points proudly at a row of small postcards of the blue sea pinned behind the counter, and Emma (a 35-year-old tourist with auburn hair in a ponytail, a yellow rain jacket and a canvas tote bag), coffee cup in hand, leans forward to look at them. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "d61e46f95f815f4c143ddb11d532a9bf4d85d61a0aea58eb0df2f1e09318d02e",
+   "alt": "Hugo points at the row of sea postcards behind the counter as Emma, coffee in hand, leans in to look.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -211,6 +587,94 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep05-i1",
+   "episode": 5,
+   "number": 45,
+   "file": "cafe-ep05-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70501,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "antoine",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep05",
+     "sha256": "a64a1287666add44e72a7fcee81cc09653bf1bf60ea03c3cc48495c5c55a92ef"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Antoine (a thin 40-year-old man with thinning light-brown hair and a beige raincoat), a dachshund on a red lead and folders under his arm, bows politely to Socrate (Picture 2) on his perch by the window, and the parrot stares back, unimpressed. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "3198ee6c6d29555ff97cdb8588cd0ffa67a62fdd3f2bfb4637dc47931888c2d9",
+   "alt": "Loaded with folders and a dog on a lead, Antoine bows politely to Socrate, who stares back unimpressed.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l3",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep05-i2",
+   "episode": 5,
+   "number": 45,
+   "file": "cafe-ep05-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80501,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "antoine",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep05",
+     "sha256": "a64a1287666add44e72a7fcee81cc09653bf1bf60ea03c3cc48495c5c55a92ef"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Antoine (a thin 40-year-old man with thinning light-brown hair and a beige raincoat) sets down his folders and shopping bag and bursts out laughing with relief, while Rose (Picture 2) claps her hands behind the counter and the little dachshund wags its tail. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "e50b766286bdf5652051f03d612d3abdcdf0b8e0a6570486ce3927d1841c704e",
+   "alt": "Antoine puts down his folders and bags and laughs with relief while Rose claps behind the counter.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep06",
    "episode": 6,
    "number": 46,
@@ -247,6 +711,94 @@
    "attempts": 3,
    "qa": "PASS",
    "qa_notes": "no text; Léo head in hands, Rose standing with cup, Socrate on window perch; odd small Panthéon model behind counter (harmless)",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep06-i1",
+   "episode": 6,
+   "number": 46,
+   "file": "cafe-ep06-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70601,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "leo",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep06",
+     "sha256": "77881adb713469b30b5f23bb7ce9dfde0c71b58a08584e4ec4179d6628ca859e"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Léo (a 17-year-old boy with light-brown skin, messy black hair, a grey hoodie and jeans) waves his arms as he acts out the driving test at the small round table, pulling a face like a shouting examiner, while Rose (Picture 2) hides a smile behind her hand. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "692c455e33a318499d8613c28a44f037ef2fc5d22a198804dd3dd8e42f7fae6c",
+   "alt": "At the table Léo acts out his driving test, pulling a face like the shouting examiner, while Rose hides a smile.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep06-i2",
+   "episode": 6,
+   "number": 46,
+   "file": "cafe-ep06-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80602,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "leo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep06",
+     "sha256": "77881adb713469b30b5f23bb7ce9dfde0c71b58a08584e4ec4179d6628ca859e"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Léo (a 17-year-old boy with light-brown skin, messy black hair, a grey hoodie and jeans) sits up straight with a determined smile and drinks his big cup of hot chocolate, while Socrate (Picture 2) on his perch fluffs up his grey feathers. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "353e2a0c79982c2e88203b4deaba9b46c9b70c377d7543d94b404b12aa227b7a",
+   "alt": "Léo sits up straight with a determined smile and drinks his hot chocolate as Socrate fluffs up his feathers.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -289,6 +841,89 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep07-i1",
+   "episode": 7,
+   "number": 47,
+   "file": "cafe-ep07-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70701,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "max",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep07",
+     "sha256": "8515b8eba60286078cf1356c6b9f3d37165de61b9e9fc8e8db44b82c85977d58"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Max (a stylish 26-year-old man with a dark quiff, light stubble, a denim jacket and white trainers) slowly lowers his smartphone, its screen dark, and looks uncertainly at Rose (Picture 2), who stands behind the zinc counter and points calmly to the tall window. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c716125b5800bddd72c612f48f76656733a03b80bff0c42d538f6cea19fc975d",
+   "alt": "Max slowly lowers his phone and looks at Rose, who calmly points to the window behind the counter.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep07-i2",
+   "episode": 7,
+   "number": 47,
+   "file": "cafe-ep07-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "image-edit",
+   "batch": "cafe-multi",
+   "seed": 80701,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "max"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep07",
+     "sha256": "8515b8eba60286078cf1356c6b9f3d37165de61b9e9fc8e8db44b82c85977d58"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Max (a stylish 26-year-old man with a dark quiff, light stubble, a denim jacket and white trainers) stands at the tall window, his phone in his pocket and a white cup of coffee in his hand, gazing at the grey Paris rooftops and the white dome of the Sacré-Cœur. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "718722aab965112cf384ee7474e769b51404efcc6a5920f2879748d2df41e47a",
+   "alt": "Max stands at the window, his phone put away, gazing at the Paris rooftops and the Sacré-Cœur with a coffee.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep08",
    "episode": 8,
    "number": 48,
@@ -325,6 +960,94 @@
    "attempts": 2,
    "qa": "pass",
    "qa_notes": "Bruno is sad with greasy fingers; Rose leans in and points; sugar cube on the saucer. No readable text. Minor: Socrate stands on a table, not the counter, and a grease smudge appears on Rose's hand.",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep08-i1",
+   "episode": 8,
+   "number": 48,
+   "file": "cafe-ep08-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70802,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "bruno",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep08",
+     "sha256": "515bfa0843338f7835e648eb5d4a15688f619906215a1425ee1de89e4d3c1580"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Bruno (a 52-year-old man with a round face, thinning grey hair and a plain grey suit) straightens up at the counter and mimes turning a bicycle pedal with his greasy hands, his sad face suddenly lit up, while Rose (Picture 2) leans forward, delighted. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4102c7ae71cc1e86fe7ce5c4ccc983535c97161c87f738b7402cce783cb96ec6",
+   "alt": "Bruno mimes turning a bicycle pedal with his greasy hands, his face lit up, as Rose leans forward, delighted.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l6",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep08-i2",
+   "episode": 8,
+   "number": 48,
+   "file": "cafe-ep08-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80801,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "bruno"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep08",
+     "sha256": "515bfa0843338f7835e648eb5d4a15688f619906215a1425ee1de89e4d3c1580"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) slides the full white cup of coffee across the zinc counter to Bruno (a 52-year-old man with a round face, thinning grey hair and a plain grey suit), who smiles for the first time and wipes his fingers on a paper napkin. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "51e376f272f9b581c3dd909d632dd0c8d8d407df5bfef351788338faeef0a9bb",
+   "alt": "Rose slides the full white cup across the counter to Bruno, who smiles for the first time.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -367,6 +1090,94 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep09-i1",
+   "episode": 9,
+   "number": 49,
+   "file": "cafe-ep09-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 70901,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "ines",
+    "hugo"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep09",
+     "sha256": "a42b988bc463a19361487d41975caad06ebb7cf509355c6112a3d6900f53e67f"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Inès (a 31-year-old nurse with warm brown skin and dark hair tied back, in a pale-blue tunic) picks up her phone from the small round table, looks at its dark screen and puts it down again, while Hugo (Picture 2), small reading glasses slipping down his nose, watches her kindly. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "0b2907d6a959b2b027f8f4bcb68a7fc94e19ca3cc463d3cc2d4448ac23e67336",
+   "alt": "Inès picks up her phone, looks at the dark screen and puts it down again while Hugo watches kindly.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep09-i2",
+   "episode": 9,
+   "number": 49,
+   "file": "cafe-ep09-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 80902,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "ines",
+    "hugo"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep09",
+     "sha256": "a42b988bc463a19361487d41975caad06ebb7cf509355c6112a3d6900f53e67f"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Inès (a 31-year-old nurse with warm brown skin and dark hair tied back, in a pale-blue tunic) stands up from the table with her phone pressed to her ear and walks towards the café door, while Hugo (Picture 2) gives her an encouraging thumbs-up from behind the counter. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c169cc0538d5c184a4df5c956ca0265dd04750732e4cdddb6070d76a4369a864",
+   "alt": "Inès gets up with her phone to her ear and walks to the door as Hugo gives her a thumbs-up.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l10",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep10",
    "episode": 10,
    "number": 50,
@@ -403,6 +1214,94 @@
    "attempts": 4,
    "qa": "PASS-notes",
    "qa_notes": "Rose wears a black hat (not in cast sheet); photo woman has no hat; notebook on counter not under arm; one Socrate, no lettering",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep10-i1",
+   "episode": 10,
+   "number": 50,
+   "file": "cafe-ep10-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71001,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "victor"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep10",
+     "sha256": "d4faefd3ca8c545fccf39e47ecfbe7df3d1de218e409d36ee06615a4f6035faa"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) counts on the raised fingers of one hand behind the counter, eyebrows up, while Victor (a 44-year-old man with round tortoiseshell glasses, a short dark beard and a brown tweed jacket) stops mid-sentence with his notebook under his arm, and the grey parrot turns its back. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "3074ca57a772271a82b1dc783c64090b25df918e4a2da39f635b5acbbfa378b5",
+   "alt": "Rose counts Victor's questions on her raised fingers while he stops mid-sentence, notebook under his arm.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l4",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep10-i2",
+   "episode": 10,
+   "number": 50,
+   "file": "cafe-ep10-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81002,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "victor",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep10",
+     "sha256": "d4faefd3ca8c545fccf39e47ecfbe7df3d1de218e409d36ee06615a4f6035faa"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Victor (a 44-year-old man with round tortoiseshell glasses, a short dark beard and a brown tweed jacket) sits at the counter with his head bowed, embarrassed, his notebook shut, while Rose (Picture 2) looks at him over her glasses and slides the white cup towards him. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "322fd56df204c4933dbf7cee40fa60c7a70757c3d0588a0a7f2a0233c967fc77",
+   "alt": "Victor bows his head, embarrassed, as Rose looks at him over her glasses and slides the white cup to him.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l9",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -445,6 +1344,94 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep11-i1",
+   "episode": 11,
+   "number": 51,
+   "file": "cafe-ep11-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71101,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "albert"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep11",
+     "sha256": "a3f97bd72bc7f9d9b4231d4e1ed53029a368554108567609efd2ac9f15d4f9eb"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) hurries round the end of the zinc counter with both hands raised in joyful surprise towards Albert (a tall, thin 82-year-old man, bald with a white fringe, round wire glasses, a navy jacket and a wooden cane), who stands in the doorway leaning on his cane, beaming. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "9bc047c158df121fa6afaa55a3771334f32f2134c2e30f64badc712a51be6e08",
+   "alt": "Rose hurries round the counter, hands raised in joyful surprise, towards Albert, who beams in the doorway.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l2",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep11-i2",
+   "episode": 11,
+   "number": 51,
+   "file": "cafe-ep11-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81101,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "albert",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep11",
+     "sha256": "a3f97bd72bc7f9d9b4231d4e1ed53029a368554108567609efd2ac9f15d4f9eb"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Albert (a tall, thin 82-year-old man, bald with a white fringe, round wire glasses, a navy jacket and a wooden cane) hooks his cane over his arm and takes a few light dance steps on the worn wooden floor, eyes shining, while Socrate (Picture 2) bobs his head on his perch. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "51bee14499fb07201d35ac1f5147daa199883834feb0ae54c0ac0fc6902d5dc8",
+   "alt": "Albert hooks his cane over his arm and takes a few light dance steps while Socrate bobs his head.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep12",
    "episode": 12,
    "number": 52,
@@ -481,6 +1468,94 @@
    "attempts": 3,
    "qa": "PASS-notes",
    "qa_notes": "no text; cake two tiers not three; Hugo's folded white apron reads like paper; Nadia near counter end",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep12-i1",
+   "episode": 12,
+   "number": 52,
+   "file": "cafe-ep12-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71201,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "nadia"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep12",
+     "sha256": "15f441407b94114592864dc74aaa8b973a9e24f6d1e1977c9b432102a7816bab"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) holds up a shiny green apple with a big grin, and Nadia (a 41-year-old woman with olive skin, a neat black bob and a white blouse) laughs in surprise, pushing the burnt black cake to the far end of the zinc counter. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "25a8f87a33d7cbf616371767d7ecc315cd672e17853cc1eb58e743dd1fb158a7",
+   "alt": "Hugo holds up a green apple with a grin, and Nadia laughs as she pushes her burnt cake aside.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l9",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep12-i2",
+   "episode": 12,
+   "number": 52,
+   "file": "cafe-ep12-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81201,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "nadia"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep12",
+     "sha256": "15f441407b94114592864dc74aaa8b973a9e24f6d1e1977c9b432102a7816bab"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. On the zinc counter Hugo (Picture 2) rolls out pastry on a floured wooden board, and Nadia (a 41-year-old woman with olive skin, a neat black bob and a white blouse), in a spare apron, peels a green apple beside him, laughing. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "42acf94599945029196d78430fccdd366e5964318eeeff620f54e4194383766f",
+   "alt": "At the counter Hugo rolls out pastry while Nadia, in a spare apron, peels an apple beside him.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -523,6 +1598,94 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep13-i1",
+   "episode": 13,
+   "number": 53,
+   "file": "cafe-ep13-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71301,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "samuel",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep13",
+     "sha256": "c7a85f2098bb8bdaf88116b43a38abab49f79b5db6ca32276f5cb4a0614ac8b9"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Samuel (a 38-year-old man with dark-brown skin, short black hair and stubble, in a grey parka) sits up at the small round table and slaps his forehead with a rueful laugh, while Rose (Picture 2), sitting opposite him, raises her eyebrows over her glasses. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "ad860ba9e76b4a6c9d0689cb492317172d14acc5228094871c3ecaceafab9b7d",
+   "alt": "Samuel sits up at the table and slaps his forehead with a rueful laugh while Rose raises her eyebrows.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l8",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep13-i2",
+   "episode": 13,
+   "number": 53,
+   "file": "cafe-ep13-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81301,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "samuel"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep13",
+     "sha256": "c7a85f2098bb8bdaf88116b43a38abab49f79b5db6ca32276f5cb4a0614ac8b9"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) points through the tall window at the blue sky over the Paris rooftops, and Samuel (a 38-year-old man with dark-brown skin, short black hair and stubble, in a grey parka), turning in his chair, follows her finger with a thoughtful, curious face. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "9a62530725ee6595d132c77f9e4fe355ffe394eb3202760d41bcf36434a90f33",
+   "alt": "Rose points through the window at the blue sky over the rooftops, and Samuel turns to look, curious.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep14",
    "episode": 14,
    "number": 54,
@@ -530,9 +1693,9 @@
    "model": "Qwen/Qwen-Image-Edit-2511",
    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
    "profile": "qwen-edit-2511",
-   "mode": "image-edit",
-   "batch": "cafe-regen-r1",
-   "seed": 51406,
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 61402,
    "steps": 40,
    "true_cfg_scale": 4.0,
    "raw_width": 1344,
@@ -547,20 +1710,115 @@
    ],
    "refs": [
     {
-     "name": "hugo-socrate",
-     "sha256": "29bacac0bd8536abaac94411d5c67cb9772c979023e9c405c09f6bc8f967ef45"
+     "name": "scene-cafe-ep11",
+     "sha256": "a3f97bd72bc7f9d9b4231d4e1ed53029a368554108567609efd2ac9f15d4f9eb"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
     }
    ],
-   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, Hugo, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, Socrate, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: Behind the zinc counter on the left there is only Hugo, smiling shyly and holding up one postcard at chest height, its picture side facing us and showing only blue sea and sky. A thick closed book with a plain blank cloth cover lies flat on the counter. Socrate, the only parrot, stands on the counter beside the young man and stretches his beak towards the postcard. The only customer, Juliette, a 27-year-old postwoman with fair skin, freckles and a long red braid, stands on the customer side on the right in a completely plain navy jacket: no patch, flag, badge or emblem on the sleeves or chest. She holds a small camera up against her face with both hands, the camera covering one eye, to take his photo. There are exactly three figures in the whole picture: two people and one parrot. Every wall, including the upper left and upper right corners above the shelves, is bare cream plaster; nothing hangs on any wall. The setting is the inside of a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, smooth plain cream plastered walls, simple wooden shelves holding only white cups, a teapot and small green potted plants, and a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left. The walls, shelves and door carry no writing surface of any kind: no chalkboard, no slate, no blackboard, no sign, no poster, no menu, no framed pictures or framed text, no books with titled spines and no labels. Bright late-morning light. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers and no pseudo-letters anywhere in the image; every paper, card, cover, screen and object is blank.",
-   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, label, speech bubble, signage, sign, door sign, chalkboard, blackboard, slate, menu board, menu, poster, framed text, framed document, book spine titles, newspaper, logo, brand name, watermark, signature, scribbles, duplicate person, twins, clone, two parrots, second parrot, extra bird, bird figurine, extra person, crowd, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, headless, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders",
+   "prompt": "Use the room, light and painting style of Picture 1. Juliette (a freckled young postwoman with a long red braid and a plain navy jacket) raises a small camera to her eye at the zinc counter. Behind it Hugo (Picture 2) smiles shyly and holds up one postcard of blue sea. Socrate (Picture 3) stands on the counter and stretches his beak towards the postcard. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
-   "raw_sha256": "49e7938280c11fbdfe4f29822dd03234730a0d4a06b2ff912f7b0d81a6358cde",
-   "alt": "Hugo holds up a sea postcard at the counter, Socrate the parrot leans towards it, and Juliette, with a red braid, raises her camera to her eye.",
-   "attempts": 12,
-   "qa": "FAIL",
-   "qa_notes": "site review: Juliette's sleeve patch (yellow with a red flag corner) carries black glyph-like marks; otherwise on brief",
-   "published": false,
-   "note": "Not published: no take passed QA (12 takes: 4 in the first run, 8 regenerated). Best take recorded: s51406 is on brief except glyph-like marks on Juliette's sleeve patch, found in the site review"
+   "raw_sha256": "abffe2e4b0ec64290a7ce9c048fd99e05729b1428e8bb4904b1432ffcc8374a9",
+   "alt": "Juliette the postwoman raises her camera to photograph Hugo, who holds up a postcard of the sea; Socrate reaches for the card.",
+   "attempts": 16,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep14-i1",
+   "episode": 14,
+   "number": 54,
+   "file": "cafe-ep14-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71402,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "juliette"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep12",
+     "sha256": "15f441407b94114592864dc74aaa8b973a9e24f6d1e1977c9b432102a7816bab"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) holds a postcard of the blue sea in both hands behind the counter, its picture facing us, his mouth open in excitement, while Juliette (a freckled young postwoman with a long red braid and a plain navy jacket) leans on the zinc with her post bag, curious. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "720d73fa8473e2eeb2ac2006e634c94de7eb84e4e14f12c958ebb7d0c0175382",
+   "alt": "Behind the counter Hugo holds a postcard of the sea, open-mouthed with excitement, as Juliette leans in, curious.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l3",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep14-i2",
+   "episode": 14,
+   "number": 54,
+   "file": "cafe-ep14-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81401,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "juliette"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep12",
+     "sha256": "15f441407b94114592864dc74aaa8b973a9e24f6d1e1977c9b432102a7816bab"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) shyly mimes whisking batter in a bowl behind the counter, smiling about his dream, while Juliette (a freckled young postwoman with a long red braid and a plain navy jacket) listens, chin in hand, at the zinc counter. Bright late-morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "8617cf8927299f25dfe9f6ed95f5a6fdb314f951b8b9848e2eb536bc26aae7f8",
+   "alt": "Hugo shyly mimes whisking a cake batter behind the counter while Juliette listens, chin in hand.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l11",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
   },
   {
    "id": "cafe-ep15",
@@ -599,6 +1857,94 @@
    "attempts": 12,
    "qa": "pass",
    "qa_notes": "checked at full size: Karim sketches at the same table as Rose, Socrate still on her shoulder; sketchpad page blank; bare walls; no lettering (QA rule: no garbled or readable text, no duplicated character, the brief's key action.)",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep15-i1",
+   "episode": 15,
+   "number": 55,
+   "file": "cafe-ep15-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71501,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "karim",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep15",
+     "sha256": "beade68aa4c39f354c471110957fc953d6916ad93427085b8ec2ce6c3162263e"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Karim (a 45-year-old painter with olive skin, greying black curls, a short beard and a paint-stained smock) sits slumped at a small round table, his closed box of pencils in front of him, while Rose (Picture 2) stands beside the table with a white cup and studies him over her glasses. Golden early-evening light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "7bf47643c98e1b986a81a227a4925a8296542a856f06e3c6e89cec27f6e68b25",
+   "alt": "Karim slumps at a table behind his closed box of pencils while Rose studies him over her glasses.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l4",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep15-i2",
+   "episode": 15,
+   "number": 55,
+   "file": "cafe-ep15-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81501,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "karim",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep15",
+     "sha256": "beade68aa4c39f354c471110957fc953d6916ad93427085b8ec2ce6c3162263e"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Karim (a 45-year-old painter with olive skin, greying black curls, a short beard and a paint-stained smock) holds out a finished sketch, its drawing turned towards Rose (Picture 2), who presses her hands to her cheeks with delight; the grey parrot sits on her shoulder. Golden early-evening light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "4e1d0c326f29b677c0d17bc1aa52da5dfb2ef24aa20ddd50a9ba5888bd8bd65a",
+   "alt": "Karim holds out his finished sketch to Rose, who presses her hands to her cheeks with delight.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -641,6 +1987,94 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep16-i1",
+   "episode": 16,
+   "number": 56,
+   "file": "cafe-ep16-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71601,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "frederic",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep16",
+     "sha256": "9ccfe9da2c8642974385c478f647cf7137657191b6652abb19ca8acdeb8bbfcd"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Frédéric (a tall 50-year-old man with swept-back silver hair, a camel coat and a grey scarf) sits down slowly on a stool at the counter, his stiff shoulders dropping, and looks at his silent phone, its screen dark, while Rose (Picture 2) listens with gentle eyes. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "93b17089357710e27cbcbe0a08fda8819a0384d42d1454cbbae00b317a7285ea",
+   "alt": "Frédéric sits down slowly at the counter, shoulders dropping, staring at his silent phone while Rose listens.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep16-i2",
+   "episode": 16,
+   "number": 56,
+   "file": "cafe-ep16-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81602,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "frederic"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep16",
+     "sha256": "9ccfe9da2c8642974385c478f647cf7137657191b6652abb19ca8acdeb8bbfcd"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) slides the white cup of coffee across the zinc counter to Frédéric (a tall 50-year-old man with swept-back silver hair, a camel coat and a grey scarf), who gives a small, grateful smile and loosens his grey scarf. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "ae15dcea4cf27a3a8abbff2f458029bcc2a33dc334872af378f0fb2e75d43672",
+   "alt": "Rose slides the white cup across the counter to Frédéric, who gives a small grateful smile.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l11",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep17",
    "episode": 17,
    "number": 57,
@@ -680,6 +2114,102 @@
    "accepted": true
   },
   {
+   "id": "cafe-ep17-i1",
+   "episode": 17,
+   "number": 57,
+   "file": "cafe-ep17-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71701,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "paul",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep17",
+     "sha256": "10fcce4938aa9f60362ec111d5be1a8f12642ec7fcbff1a14e6f9df9178806cd"
+    },
+    {
+     "name": "ref-paul",
+     "sha256": "6b341e550051236c4d7124e2a8c34775e07fa81b882a2f092a53734b0e01838c"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Paul (Picture 2) sits at the counter with his head lowered, turning a small grey baby scan picture in his fingers, worried, while Rose (Picture 3) lays a comforting hand on his arm. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "081e640e8473af58e15164f9a702f20e9e2f6f27be22d8ff4ebe034d39b610e7",
+   "alt": "Paul lowers his head, turning the small scan picture in his fingers, as Rose lays a comforting hand on his arm.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l5",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep17-i2",
+   "episode": 17,
+   "number": 57,
+   "file": "cafe-ep17-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81701,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "paul",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep17",
+     "sha256": "10fcce4938aa9f60362ec111d5be1a8f12642ec7fcbff1a14e6f9df9178806cd"
+    },
+    {
+     "name": "ref-paul",
+     "sha256": "6b341e550051236c4d7124e2a8c34775e07fa81b882a2f092a53734b0e01838c"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Paul (Picture 2) grins shyly across the counter, and Rose (Picture 3), deeply touched, puts one hand on her heart, her eyes shining behind her reading glasses. Warm afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "c2120590be7e111b687713c69415e8562d973dae6e60cfb7505cbe3c7b79ea56",
+   "alt": "Paul grins shyly across the counter as Rose, deeply touched, puts a hand on her heart.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l13",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
    "id": "cafe-ep18",
    "episode": 18,
    "number": 58,
@@ -687,9 +2217,9 @@
    "model": "Qwen/Qwen-Image-Edit-2511",
    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
    "profile": "qwen-edit-2511",
-   "mode": "image-edit",
-   "batch": "cafe-regen",
-   "seed": 51804,
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 61802,
    "steps": 40,
    "true_cfg_scale": 4.0,
    "raw_width": 1344,
@@ -704,20 +2234,123 @@
    ],
    "refs": [
     {
-     "name": "rose-hugo-socrate",
-     "sha256": "5c342b27b21aed442d86550db0abdcdff5f958dab2a6ef9e63e846e123a7922d"
+     "name": "scene-cafe-ep15",
+     "sha256": "beade68aa4c39f354c471110957fc953d6916ad93427085b8ec2ce6c3162263e"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
     }
    ],
-   "prompt": "Picture 1 is a reference sheet of the recurring characters, painted on plain paper: on the left, Rose, a small 70-year-old woman with fair skin, rosy cheeks and a kind, finely wrinkled face, bright dark eyes, white hair in a neat bun, small reading glasses on a thin chain, a red wool cardigan over a cream blouse and a knee-length charcoal-grey skirt; in the middle, Hugo, a tall, slim 22-year-old man with fair skin, short dark-brown curly hair, clean-shaven, a friendly, slightly clumsy smile, a moss-green crew-neck jumper with the sleeves pushed up, dark jeans and a navy-blue apron that is clearly too short for him; on the right, Socrate, a grumpy-looking African grey parrot with soft scalloped grey feathers, a pale whitish face patch, pale yellow eyes, a black hooked beak and a bright red tail. Keep each character's face, hair, build, clothes and colours exactly as in Picture 1, but paint a completely new full scene; do not copy the sheet's layout, poses or plain background. Scene: Closing time. On the two marble tables at the back, the bentwood chairs have been lifted and turned upside down, each chair resting seat-down on the tabletop with its four legs pointing up at the ceiling. At the third table, in the foreground, exactly one Rose sits on the left with her chipped blue cup with a white ring, telling a story with a faraway, gentle look, and exactly one Hugo sits directly across the same table on the right, listening intently. Between them small postcards lie spread out on the table, picture side up, each picture showing only the blue sea. Exactly one parrot, Socrate, sleeps on the zinc counter in the background, his head tucked into his feathers. There are exactly three figures in the whole picture: two people and one parrot. The setting is the inside of a tiny old café in Montmartre, Paris: a short zinc-topped counter with white cups and a sugar bowl, three small round marble tables with bentwood chairs, a worn wooden floor, smooth plain cream plastered walls, simple wooden shelves holding only white cups, a teapot and small green potted plants, and a wooden parrot perch beside a tall window that looks out over grey Paris rooftops with the white dome of the Sacré-Cœur on the left. The walls, shelves and door carry no writing surface of any kind: no chalkboard, no slate, no blackboard, no sign, no poster, no menu, no framed pictures or framed text, no books with titled spines and no labels. Warm lamp light at closing time, dusk blue in the window. Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly. No text, no lettering, no words, no numbers and no pseudo-letters anywhere in the image; every paper, card, cover, screen and object is blank.",
-   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, label, speech bubble, signage, sign, door sign, chalkboard, blackboard, slate, menu board, menu, poster, framed text, framed document, book spine titles, newspaper, logo, brand name, watermark, signature, scribbles, duplicate person, twins, clone, two parrots, second parrot, extra bird, bird figurine, extra person, crowd, extra fingers, missing fingers, deformed hands, deformed face, distorted eyes, extra limbs, headless, blurry, photorealistic, photograph, 3d render, anime, flat vector art, glossy, nsfw, violence, character sheet, reference sheet layout, row of standing figures, plain white background, collage, split screen, panel borders, separate tables",
+   "prompt": "Use the room, light and painting style of Picture 1. Closing time, chairs upside down on two tables. At the third table Rose (Picture 2) holds a chipped blue cup and tells a story; Hugo (Picture 3) listens opposite her. Sea postcards lie between them. The grey parrot sleeps on the counter, head tucked in his feathers. Warm lamp light at closing time, dusk blue in the window. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
    "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
-   "raw_sha256": "39068a8b32b4120fc140dd290f79d1617f1e147f76cf9fea284091feb203b69f",
-   "alt": "At night, Rose and Hugo sit at a marble table with three sea postcards; Rose holds a blue cup, and Socrate lies on the counter.",
-   "attempts": 12,
-   "qa": "FAIL",
-   "qa_notes": "site review: a chalkboard with rows of letter-like chalk lines above the cup shelf (top left); Socrate's eye is open, not dozing",
-   "published": false,
-   "note": "Not published: no take passed QA (12 takes: 4 in the first run, 8 regenerated). Best take recorded: s51804 is on brief except a chalkboard with letter-like chalk lines (top left), found in the site review"
+   "raw_sha256": "0ff6168cbc70c344e146f0892f6bb3561dffe5c856fb2236106a4302284d2ffb",
+   "alt": "At closing time, chairs upside down on the tables, Rose tells Hugo her story over postcards of the sea; Socrate sleeps on the counter.",
+   "attempts": 16,
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep18-i1",
+   "episode": 18,
+   "number": 58,
+   "file": "cafe-ep18-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71802,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep19",
+     "sha256": "f83b2423c2a973a2d53f3c8dc121b0fb2bad8377838e89b3f81820d9abaa0750"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) stands on a small stool and takes down a row of sea postcards from the wall behind the counter, dusting each one, while Rose (Picture 3) watches from a chair with her chipped blue cup. Warm lamp light at closing time, dusk blue in the window. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "6c634f28bb238efd945585fda8d205baf396fceb33b165bc57dd174596349bde",
+   "alt": "At closing time Hugo stands on a stool and takes down the sea postcards to dust them while Rose watches.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l1",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep18-i2",
+   "episode": 18,
+   "number": 58,
+   "file": "cafe-ep18-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81802,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep19",
+     "sha256": "f83b2423c2a973a2d53f3c8dc121b0fb2bad8377838e89b3f81820d9abaa0750"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) holds up one postcard of the blue sea across the little round table with a gentle, questioning look, and Rose (Picture 3) turns her face away towards the dark window. Warm lamp light at closing time, dusk blue in the window. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "182b1965c2c116aa5535a25c00a768477cd484307a0d250a3257126e6a979fea",
+   "alt": "Across the table Hugo holds up a sea postcard with a questioning look, and Rose turns away towards the window.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l12",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
   },
   {
    "id": "cafe-ep19",
@@ -756,6 +2389,102 @@
    "attempts": 3,
    "qa": "PASS-notes",
    "qa_notes": "card and book blank; one Socrate; faint unreadable lines on a wall notice; good match",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep19-i1",
+   "episode": 19,
+   "number": 59,
+   "file": "cafe-ep19-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 71901,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "socrate"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep19",
+     "sha256": "f83b2423c2a973a2d53f3c8dc121b0fb2bad8377838e89b3f81820d9abaa0750"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-socrate",
+     "sha256": "7cf3dc014e5de5b9fad10bd63bfb41396aa021dd6de37d6f1dfb6627fe67e055"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) stands frozen at the counter with a plain law textbook under his arm, staring at Socrate (Picture 3), who has turned his grey back on him on the perch by the window. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "510d460e57cce30ec0b77b53afbda8714c6c05e3ae116fef52e10786b092086f",
+   "alt": "Hugo stands frozen at the counter, his law book under his arm, as Socrate turns his back on him.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep19-i2",
+   "episode": 19,
+   "number": 59,
+   "file": "cafe-ep19-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 81901,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "hugo",
+    "rose"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep19",
+     "sha256": "f83b2423c2a973a2d53f3c8dc121b0fb2bad8377838e89b3f81820d9abaa0750"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Hugo (Picture 2) drops his plain law textbook on the counter and spreads his arms wide with a huge, relieved smile, while Rose (Picture 3), holding her chipped blue cup, beams at him. Soft morning light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "5d5b5be484c768fbd7bf0a94fee69f0f35ede32a0950b6d502fec545ad9e65a7",
+   "alt": "Hugo drops his law book on the counter and spreads his arms with a huge smile while Rose beams at him.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l9",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   },
   {
@@ -804,6 +2533,102 @@
    "attempts": 16,
    "qa": "pass",
    "qa_notes": "checked at full size: one Thomas calm on a stool at the counter with a white cup, Rose behind the counter with a hand-to-chest smile, Hugo (green sweater, curly hair) behind the counter holding a cloth by the cup, one Socrate on the window perch; chalkboard blank; no lettering. Minor: Hugo holds the cloth rather than visibly drying a cup (QA rule: no garbled or readable text, no duplicated character, the brief's key action.)",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep20-i1",
+   "episode": 20,
+   "number": 60,
+   "file": "cafe-ep20-i1.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 72001,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "thomas"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep20",
+     "sha256": "efaf96cbd3e2894e1e18238077633448c5c66135b1e9dfae2f08fcec2ceba1f3"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    },
+    {
+     "name": "ref-thomas",
+     "sha256": "7c6be5e887e1b3c0669f5018c71bcef5aa4e81252566d9fbcb564b21c535f518"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) sits beside Thomas (Picture 3) at the zinc counter and gazes at a postcard of the blue sea in her hands, her eyes shining with a mixture of hope and fear. Soft warm autumn afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "383050f77afb3970f0e7629cd2bb2bee9623eb15bef21200ff39becc92e560c8",
+   "alt": "Rose sits beside Thomas at the counter and gazes at a sea postcard, her eyes shining with hope and fear.",
+   "attempts": 2,
+   "insert": 1,
+   "afterLine": "l7",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
+   "accepted": true
+  },
+  {
+   "id": "cafe-ep20-i2",
+   "episode": 20,
+   "number": 60,
+   "file": "cafe-ep20-i2.webp",
+   "model": "Qwen/Qwen-Image-Edit-2511",
+   "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+   "profile": "qwen-edit-2511",
+   "mode": "multi-image-edit",
+   "batch": "cafe-multi",
+   "seed": 82001,
+   "steps": 40,
+   "true_cfg_scale": 4.0,
+   "raw_width": 1344,
+   "raw_height": 768,
+   "aspect": "16:9",
+   "width": 1200,
+   "height": 686,
+   "people": [
+    "rose",
+    "hugo"
+   ],
+   "refs": [
+    {
+     "name": "scene-cafe-ep20",
+     "sha256": "efaf96cbd3e2894e1e18238077633448c5c66135b1e9dfae2f08fcec2ceba1f3"
+    },
+    {
+     "name": "ref-rose",
+     "sha256": "1426e1f19d448da25f3be06a75c4dfab25890e0f998ce08333d8750216465587"
+    },
+    {
+     "name": "ref-hugo",
+     "sha256": "8210116d0c6d7bc3702b30c1e97b740c187a4ff2ed582890f96b646635810e23"
+    }
+   ],
+   "prompt": "Use the room, light and painting style of Picture 1. Rose (Picture 2) unties her apron and hands it across the counter to Hugo (Picture 3), laughing, and he holds it proudly against his chest. Soft warm autumn afternoon light. Gouache storybook illustration, matte brush strokes, warm colours, gently stylised faces.",
+   "negative_prompt": "text, letters, words, writing, handwriting, numbers, typography, caption, chalkboard, blackboard, slate, sign, poster, menu, label, patch, badge, logo, watermark, signature, scribbles, duplicate person, twins, two parrots, second parrot, extra fingers, deformed hands, deformed face, extra limbs, blurry, photorealistic, 3d render, anime",
+   "style_suffix": "Style: hand-painted gouache storybook illustration on textured paper, visible opaque matte brush strokes, rich warm colours, gently stylised faces, classic European picture-book look, family-friendly.",
+   "raw_sha256": "79e09c90bf5d424678a75878e7c5a9c40b24671c25378aa3ed040ab45f5a3a47",
+   "alt": "Rose unties her apron and hands it across the counter to Hugo, who holds it proudly against his chest.",
+   "attempts": 2,
+   "insert": 2,
+   "afterLine": "l13",
+   "qa": "pass",
+   "qa_notes": "agent contact-sheet QA, relaxed rule: contact-sheet QA (relaxed rule): no letters, no duplicate, anatomy fine, key action shown",
    "accepted": true
   }
  ]

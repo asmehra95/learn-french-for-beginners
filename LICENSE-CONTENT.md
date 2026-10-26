@@ -91,10 +91,21 @@ under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), run
 author. Each episode picture is an edit of a cast sheet of the recurring characters, which the same model
 painted from text descriptions on a blank canvas. Every prompt, negative prompt, seed, reference-sheet hash and
 the model revision is in tools/story-images/manifest-cafe.json. They show fictional characters only.
-18 of the 20 episodes have a picture (dialogues 41-53, 55-57, 59 and 60); the other 2 (dialogues 54 and 58)
-had no take that passed review and have none. The pictures for episodes 1, 3, 5, 11, 15 and 20 were
-regenerated later with stricter prompts; episode 20 is a multi-image edit of the published episode 16 picture
-and two character portraits.
+All 20 episodes have a picture (dialogues 41-60), and 40 scene pictures (cafe-epNN-i1/-i2) sit between
+dialogue lines. The pictures for episodes 1, 3, 5, 11, 15 and 20 were regenerated later with stricter prompts;
+episode 20 is a multi-image edit of the published episode 16 picture and two character portraits. The pictures
+for episodes 14 and 18 and the 40 scene pictures are multi-image edits of a published episode picture and
+character portraits.
+
+### Le Mauvais Colis
+The *Le Mauvais Colis* pictures (verb-trainer/images/story/colis-ep*.webp and the copies embedded in
+verb-trainer/reference/le-mauvais-colis.pdf) are **not** covered by the CC BY-SA licence above. They were made
+the same way as the *Le Café des Questions* pictures, with the same model and licence, on the author's own AWS
+GPU: character portraits and empty settings painted from text, then multi-image edits of those. Every prompt,
+negative prompt, seed, reference hash and the model revision is in tools/story-images/manifest-colis.json. They
+show fictional characters only. All 20 episodes have a picture (dialogues 61-80), and 39 scene pictures sit
+between dialogue lines; the second scene picture of episode 7 had no take that passed review and has none. The
+terms and the plain-language summary below apply to them as to the café pictures.
 
 **Public.** Like the other pictures, they are published publicly with the site on GitHub Pages and in the
 public repository.

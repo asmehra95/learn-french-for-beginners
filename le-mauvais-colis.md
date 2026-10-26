@@ -84,6 +84,8 @@ Tips: final consonants are usually silent (*parlent* = "parl"). A hyphen joins s
 **Zoé:** Mon tambour ! Enfin ! Merci, voisin !
 > *My drum! At last! Thanks, neighbour!* (surprised)
 
+![Zoé opens the green door with soil on her hands, fairy lights behind her; Gabriel holds out the big box.](../images/story/colis-ep01-i1.webp)
+
 **Gabriel:** Il est très lourd. Et il fait « boum ».
 > *It's very heavy. And it goes "boom".* (neutral)
 
@@ -110,6 +112,8 @@ Tips: final consonants are usually silent (*parlent* = "parl"). A hyphen joins s
 
 **Gabriel:** Bonne nuit, madame… ? Moi, c'est Gabriel Garnier.
 > *Good night, Ms…? I'm Gabriel Garnier.* (curious)
+
+![Zoé and Gabriel lean out of their facing doors at the same moment, both surprised.](../images/story/colis-ep01-i2.webp)
 
 **Zoé:** Garnier ? Moi aussi ! Zoé Garnier !
 > *Garnier? Me too! Zoé Garnier!* (surprised)
@@ -148,6 +152,8 @@ Gabriel says « Je me couche à neuf heures et demie » and « je me lève à si
 **Zoé:** « Madame, le soir, la musique est trop forte. Merci. »
 > *"Madam, in the evening the music is too loud. Thank you."* (teasing)
 
+![Zoé holds Gabriel's folded white card at arm's length with a mock-serious face.](../images/story/colis-ep02-i1.webp)
+
 **Gabriel:** C'est vrai. Je ne dors pas. Je ne travaille pas.
 > *It's true. I can't sleep. I can't work.* (neutral)
 
@@ -168,6 +174,8 @@ Gabriel says « Je me couche à neuf heures et demie » and « je me lève à si
 
 **Gabriel:** Dix heures et demie ?
 > *Half past ten?* (neutral)
+
+![Zoé and Gabriel shake hands stiffly in the middle of the landing to seal their deal.](../images/story/colis-ep02-i2.webp)
 
 **Zoé:** Marché conclu ! Dix heures et demie. Pas une minute avant !
 > *Deal! Half past ten. Not a minute before!* (proud)
@@ -200,6 +208,8 @@ Zoé says « Je ne suis pas debout » and Gabriel answers « Je ne dors pas. Je 
 **Zoé:** Encore vous ! Vous aussi, vous avez un petit mot ?
 > *You again! You've got a note too?* (surprised)
 
+![Zoé points an accusing finger at Gabriel, who clutches his white card like a guilty schoolboy.](../images/story/colis-ep03-i1.webp)
+
 **Zoé:** Vous corrigez mes fautes ? En rouge ?
 > *You correct my spelling mistakes? In red?* (annoyed)
 
@@ -226,6 +236,8 @@ Zoé says « Je ne suis pas debout » and Gabriel answers « Je ne dors pas. Je 
 
 **Zoé:** Vous ! Vous grognez tout le temps.
 > *You! You growl all the time.* (teasing)
+
+![Zoé and Gabriel laugh as they swap their notes by hand in the middle of the landing.](../images/story/colis-ep03-i2.webp)
 
 **Gabriel:** Bon. Je prends votre mot. Vous prenez mon mot ?
 > *Fine. I'll take your note. Will you take mine?* (amused)
@@ -268,6 +280,8 @@ Zoé asks « Vous corrigez mes fautes ? » and Gabriel says « votre tambour » 
 **Zoé:** Oui. Deux Garnier, deux portes. La porte verte, c'est moi.
 > *Yes. Two Garniers, two doors. The green door is me.* (neutral)
 
+![Yanis holds up two fingers as he and Zoé look up at two top-floor windows, one full of plants.](../images/story/colis-ep04-i1.webp)
+
 **Yanis:** Je choisis une porte. Et c'est toujours la mauvaise !
 > *I pick a door. And it's always the wrong one!* (amused)
 
@@ -285,6 +299,8 @@ Zoé asks « Vous corrigez mes fautes ? » and Gabriel says « votre tambour » 
 
 **Zoé:** Des vis ? Des bonbons ? Je donne ma langue au chat.
 > *Screws? Sweets? I give up.* (amused)
+
+![Zoé, alone by the fig tree, shakes a tiny brown-paper parcel next to her ear.](../images/story/colis-ep04-i2.webp)
 
 **Yanis:** Tenez, pour monsieur Garnier. La porte bleue, madame !
 > *Here, for Mr Garnier. The blue door, madam!* (teasing)
@@ -327,6 +343,8 @@ Zoé asks « Pourquoi ? », « Qu'est-ce qu'il achète ? » and « Qu'est-ce que
 **Zoé:** Oh ! Qu'est-ce que c'est, toutes ces boîtes ?
 > *Oh! What are all these boxes?* (surprised)
 
+![In the candlelit workshop, Zoé turns around amazed at shelves full of music boxes.](../images/story/colis-ep05-i1.webp)
+
 **Gabriel:** Des boîtes à musique. Je répare les boîtes à musique.
 > *Music boxes. I repair music boxes.* (proud)
 
@@ -335,6 +353,8 @@ Zoé asks « Pourquoi ? », « Qu'est-ce qu'il achète ? » and « Qu'est-ce que
 
 **Gabriel:** J'aime la petite musique. Écoutez.
 > *I like little music. Listen.* (teasing)
+
+![Gabriel winds a small open music box; Zoé leans in by the candle, eyes closed, listening.](../images/story/colis-ep05-i2.webp)
 
 **Zoé:** Oh… C'est tout petit. Et très joli.
 > *Oh… It's so tiny. And very pretty.* (moved)
@@ -390,6 +410,8 @@ Zoé says « Je n'ai pas de bougie. Pas de téléphone. » and Gabriel answers �
 **Zoé:** Oui. Deux cents bouchons d'oreille. Orange.
 > *Yes. Two hundred earplugs. Orange ones.* (amused)
 
+![Close-up of Zoé's palm holding the small box of tiny orange earplugs, like sweets.](../images/story/colis-ep06-i1.webp)
+
 **Gabriel:** Je les ai achetés pour vous. Enfin, pour votre tambour.
 > *I bought them for you. Well, for your drum.* (sad)
 
@@ -407,6 +429,8 @@ Zoé says « Je n'ai pas de bougie. Pas de téléphone. » and Gabriel answers �
 
 **Gabriel:** Ça ne fait rien. Et moi aussi, pardon. Pour mes petits mots.
 > *Never mind. And I'm sorry too. For my notes.* (moved)
+
+![Zoé and Gabriel laugh on the landing; he has put one orange earplug in his ear as a joke.](../images/story/colis-ep06-i2.webp)
 
 **Zoé:** Ce soir, je vais jouer plus doucement. Promis.
 > *Tonight I'm going to play more softly. Promise.* (hopeful)
@@ -456,6 +480,8 @@ Zoé says « Votre colis est arrivé » (arriver takes être) but « je l'ai ouv
 
 **Gabriel:** De l'eau… Encore de l'eau, s'il vous plaît !
 > *Water… More water, please!* (worried)
+
+![At the little table, Gabriel, red-faced, drinks from the water jug while Zoé stares.](../images/story/colis-ep07-i1.webp)
 
 **Zoé:** Vous avez bu toute la carafe ! Bon… le dîner est raté.
 > *You've drunk the whole jug! Well… the dinner's a disaster.* (sad)
@@ -510,6 +536,8 @@ Gabriel begs « De l'eau… Encore de l'eau ! »: du, de la and de l' mean some 
 **Zoé:** Alors… on se tutoie ?
 > *So… shall we say tu?* (hopeful)
 
+![Resting on the stairs with the sack between them, Zoé holds out her hand to Gabriel.](../images/story/colis-ep08-i1.webp)
+
 **Gabriel:** Se tutoyer ? Je… je n'ai pas l'habitude.
 > *Say tu? I… I'm not used to it.* (surprised)
 
@@ -524,6 +552,8 @@ Gabriel begs « De l'eau… Encore de l'eau ! »: du, de la and de l' mean some 
 
 **Zoé:** Six étages ! Merci pour le coup de main, Gabriel.
 > *Six floors! Thanks for the help, Gabriel.* (relieved)
+
+![Zoé and Gabriel lie on the chequered tiles under the skylight, laughing, the sack beside them.](../images/story/colis-ep08-i2.webp)
 
 **Gabriel:** Et ce soir, c'est ton chili. Je vais apporter le dessert.
 > *And tonight it's your chili. I'll bring dessert.* (amused)
@@ -568,6 +598,8 @@ Up to « Vous êtes fort », they say vous. Then Zoé asks « On se tutoie ? » 
 **Fatou:** Depuis deux ans. Le petit Adam du troisième a retrouvé le sourire.
 > *For two years. Little Adam on the third floor is smiling again.* (proud)
 
+![Fatou counts on her fingers as she talks; Gabriel listens, his mug forgotten.](../images/story/colis-ep09-i1.webp)
+
 **Fatou:** Et l'hiver dernier, elle a porté mes courses. Tous les jours.
 > *And last winter, she carried my shopping. Every day.* (teasing)
 
@@ -582,6 +614,8 @@ Up to « Vous êtes fort », they say vous. Then Zoé asks « On se tutoie ? » 
 
 **Gabriel:** Le treize, elle va jouer au parc. Je vais aller l'écouter.
 > *On the thirteenth she's playing in the park. I'm going to go and listen.* (hopeful)
+
+![Gabriel sits alone on a step, turning the little box of orange earplugs in his hands.](../images/story/colis-ep09-i2.webp)
 
 **Fatou:** Avec une cravate, monsieur Gabriel ?
 > *In a tie, Monsieur Gabriel?* (teasing)
@@ -629,6 +663,8 @@ Fatou says « le mercredi » (every Wednesday), « au début », « depuis deux 
 **Zoé:** C'est doux… Mon cœur va moins vite.
 > *It's gentle… My heart's slowing down.* (moved)
 
+![Close-up: Zoé's hands hold a small pale-wood music box, and Gabriel's hands rest around hers.](../images/story/colis-ep10-i1.webp)
+
 **Gabriel:** Tu vas jouer. Et moi, je vais être au premier rang.
 > *You're going to play. And I'm going to be in the front row.* (hopeful)
 
@@ -637,6 +673,8 @@ Fatou says « le mercredi » (every Wednesday), « au début », « depuis deux 
 
 **Gabriel:** Je les ai jetés mercredi.
 > *I threw them away on Wednesday.* (amused)
+
+![Seen from the front row behind Gabriel, Zoé plays a big drum on stage, smiling.](../images/story/colis-ep10-i2.webp)
 
 **Zoé:** Tu as vu ? Je n'ai rien raté ! C'est génial !
 > *Did you see? I didn't mess anything up! It's amazing!* (proud)
@@ -694,6 +732,8 @@ Zoé panics: « Je vais tout rater. » Gabriel answers: « Tu vas jouer. Et moi,
 **Gabriel:** À dix ans, je l'ai trop remontée. Une dent du peigne s'est cassée.
 > *When I was ten, I wound it too tight. A tooth of the comb broke.* (sad)
 
+![Under the green lamp, Gabriel studies the open walnut box and its comb with one gap.](../images/story/colis-ep11-i1.webp)
+
 **Gabriel:** Depuis, il manque une note. J'ai peur de la casser encore.
 > *Since then, one note has been missing. I'm afraid of breaking it again.* (worried)
 
@@ -705,6 +745,8 @@ Zoé panics: « Je vais tout rater. » Gabriel answers: « Tu vas jouer. Et moi,
 
 **Zoé:** Écoute. Je chante la note qui manque… Là !
 > *Listen. I'll sing the missing note… There!* (hopeful)
+
+![Zoé sings with eyes closed and a finger raised; Gabriel stares at her over the open box.](../images/story/colis-ep11-i2.webp)
 
 **Gabriel:** Tu as trouvé la note. Bon… je devrais peut-être la réparer.
 > *You found the note. Well… maybe I should repair it.* (moved)
@@ -753,6 +795,8 @@ Gabriel remembers: « j'habitais chez elle », « Elle réparait des boîtes à 
 **Zoé:** Tout le temps. Personne ne m'écoutait. Alors je tapais sur les casseroles.
 > *All the time. Nobody listened to me. So I banged on the saucepans.* (neutral)
 
+![Zoé holds up two saucepans like cymbals while Gabriel grins.](../images/story/colis-ep12-i1.webp)
+
 **Zoé:** Maintenant, la nuit, le silence… ça me fait un peu peur.
 > *Now, at night, the silence… it scares me a little.* (sad)
 
@@ -764,6 +808,8 @@ Gabriel remembers: « j'habitais chez elle », « Elle réparait des boîtes à 
 
 **Gabriel:** Tu devrais essayer le silence. Cinq minutes. Avec moi.
 > *You should try silence. Five minutes. With me.* (hopeful)
+
+![Zoé and Gabriel sit side by side on the yellow sofa, eyes closed, in a quiet moment.](../images/story/colis-ep12-i2.webp)
 
 **Zoé:** Cinq minutes… Avec toi, le silence, c'est doux. Ça me plaît.
 > *Five minutes… With you, silence is soft. I like it.* (surprised)
@@ -815,6 +861,8 @@ Gabriel says « Tu devrais essayer le silence » and Zoé answers « Et toi, tu 
 **Zoé:** Il la serrait dans ses bras. Ils avaient l'air très contents.
 > *He was hugging her. They looked very happy.* (sad)
 
+![Through a round peephole: Gabriel hugs a tall woman in a green coat beside a green suitcase.](../images/story/colis-ep13-i1.webp)
+
 **Zoé:** Elle va rester. Ils vont se marier. Et moi, je vais déménager !
 > *She's going to stay. They're going to get married. And I'm going to move out!* (worried)
 
@@ -826,6 +874,8 @@ Gabriel says « Tu devrais essayer le silence » and Zoé answers « Et toi, tu 
 
 **Yanis:** Vous avez vu une valise. Le reste, c'est votre film.
 > *You saw a suitcase. The rest is your film.* (teasing)
+
+![Yanis frames Zoé with his fingers like a film director, and she half laughs.](../images/story/colis-ep13-i2.webp)
 
 **Yanis:** Vous devriez lui demander. C'est plus simple.
 > *You should ask him. It's simpler.* (neutral)
@@ -867,6 +917,8 @@ Zoé describes the woman: « Grande, très belle » and « une valise verte ». 
 **Gabriel:** Oui. Tous. Dans l'ordre.
 > *Yes. All of them. In order.* (sad)
 
+![Close-up of the blue tin in Hélène's hands, yellow squares stacked neatly inside.](../images/story/colis-ep14-i1.webp)
+
 **Hélène:** Quand tu étais petit, tu étais déjà fleur bleue.
 > *When you were little, you were already a big romantic.* (amused)
 
@@ -884,6 +936,8 @@ Zoé describes the woman: « Grande, très belle » and « une valise verte ». 
 
 **Hélène:** Elle ne le savait pas, gros malin.
 > *She didn't know that, you big genius.* (amused)
+
+![Hélène laughs, hands on hips, while Gabriel sits with his head in his hands, ears red.](../images/story/colis-ep14-i2.webp)
 
 **Hélène:** Tu devrais aller lui expliquer. Et lui dire le reste.
 > *You should go and explain. And tell her the rest.* (hopeful)
@@ -941,6 +995,8 @@ Hélène asks « Tu les as tous gardés ? » (les = the notes) and says « Elle 
 **Zoé:** Ta sœur ? Mais elle riait si fort… comme moi !
 > *Your sister? But she laughed so loudly… like me!* (surprised)
 
+![Zoé covers her face with both hands, laughing; Gabriel grins beside the parcel.](../images/story/colis-ep15-i1.webp)
+
 **Zoé:** Oh là là. Je me faisais un film.
 > *Oh dear. I was imagining a whole film.* (relieved)
 
@@ -952,6 +1008,8 @@ Hélène asks « Tu les as tous gardés ? » (les = the notes) and says « Elle 
 
 **Gabriel:** Et toi, la prochaine fois, tu devrais me demander.
 > *And you, next time, should just ask me.* (hopeful)
+
+![Standing very close under the skylight, Zoé and Gabriel turn towards the stairs at a sound.](../images/story/colis-ep15-i2.webp)
 
 **Zoé:** Demain soir, je fais un chili. Ça te dit ? Hélène aussi est invitée.
 > *Tomorrow night I'm making chili. Do you fancy it? Hélène's invited too.* (hopeful)
@@ -1004,6 +1062,8 @@ Zoé tells one event in the passé composé: « je t'ai vu sur le palier ». Wha
 **Zoé:** Je pourrais partir. Il y a un studio à Montreuil, avec un garage.
 > *I could leave. There's a studio in Montreuil, with a garage.* (worried)
 
+![Zoé sits on the top stair with the envelope on her knees; Gabriel sits down beside her.](../images/story/colis-ep16-i1.webp)
+
 **Gabriel:** Partir ? Tu aimerais partir d'ici ?
 > *Leave? Would you like to leave this place?* (surprised)
 
@@ -1018,6 +1078,8 @@ Zoé tells one event in the passé composé: « je t'ai vu sur le palier ». Wha
 
 **Gabriel:** Ce palier, sans toi, ce serait trop calme. Beaucoup trop calme.
 > *This landing, without you, would be too quiet. Far too quiet.* (moved)
+
+![Close-up: Zoé's and Gabriel's hands rest on the stair, almost touching.](../images/story/colis-ep16-i2.webp)
 
 **Zoé:** Tu pourrais venir jeudi ? À la réunion ?
 > *Could you come on Thursday? To the meeting?* (moved)
@@ -1078,6 +1140,8 @@ Zoé says « Je pourrais partir » and « J'aimerais rester. Mais je voudrais au
 **Fatou:** Il y a la vieille cave, sous la cour, où personne ne va.
 > *There's the old cellar, under the courtyard, where nobody goes.* (curious)
 
+![In the vaulted stone cellar under one bulb, Fatou holds a flashlight; Gabriel presses his palms to the wall.](../images/story/colis-ep17-i1.webp)
+
 **Gabriel:** Les murs sont épais… On pourrait en faire une salle de musique !
 > *The walls are thick… We could turn it into a music room!* (hopeful)
 
@@ -1086,6 +1150,8 @@ Zoé says « Je pourrais partir » and « J'aimerais rester. Mais je voudrais au
 
 **Gabriel:** Demain, je vais prendre mon courage à deux mains.
 > *Tomorrow, I'm going to pluck up my courage.* (hopeful)
+
+![Gabriel stands in the arched cellar doorway, arms spread wide as if measuring it, determined.](../images/story/colis-ep17-i2.webp)
 
 **Fatou:** Et après la réunion, vous allez lui dire le reste ?
 > *And after the meeting, are you going to tell her the rest?* (teasing)
@@ -1128,6 +1194,8 @@ Gabriel asks « Un facteur qui se trompe ? » (qui is the subject of the verb). 
 **Gabriel:** Et que les enfants du mercredi méritaient une vraie salle. La cave.
 > *And that the Wednesday children deserved a real room. The cellar.* (neutral)
 
+![In the hall full of folding chairs, residents raise their hands as Gabriel stands at the front in his suit.](../images/story/colis-ep18-i1.webp)
+
 **Zoé:** Ils ont voté oui. Même monsieur Perrot ! Je n'en reviens pas !
 > *They voted yes. Even Monsieur Perrot! I can't believe it!* (moved)
 
@@ -1151,6 +1219,8 @@ Gabriel asks « Un facteur qui se trompe ? » (qui is the subject of the verb). 
 
 **Gabriel:** Zoé… je voudrais te dire quelque chose. Depuis longtemps.
 > *Zoé… I'd like to tell you something. I've wanted to for a long time.* (hopeful)
+
+![The stair light is out: Zoé and Gabriel are two silhouettes laughing on the dark staircase.](../images/story/colis-ep18-i2.webp)
 
 **Zoé:** Le noir, encore ! Tu vas me le dire demain, alors.
 > *The dark, again! You'll have to tell me tomorrow, then.* (amused)
@@ -1202,6 +1272,8 @@ Zoé asks « Qu'est-ce que tu leur as dit ? » and Gabriel answers « Je leur ai
 **Zoé:** Alors on va en trouver un autre. Vas-y, je tiens la lampe.
 > *Then we'll find another one. Go on, I'll hold the lamp.* (teasing)
 
+![Gabriel, loupe over his glasses, fits the comb with a tiny screwdriver; Zoé holds the lamp closer.](../images/story/colis-ep19-i1.webp)
+
 **Zoé:** Elle est complète… Tu connais les paroles ?
 > *It's complete… Do you know the words?* (moved)
 
@@ -1216,6 +1288,8 @@ Zoé asks « Qu'est-ce que tu leur as dit ? » and Gabriel answers « Je leur ai
 
 **Gabriel:** Depuis le tambour. Ou depuis tes fautes d'orthographe.
 > *Since the drum. Or since your spelling mistakes.* (amused)
+
+![The walnut music box plays on the bench as Zoé and Gabriel rest their foreheads together.](../images/story/colis-ep19-i2.webp)
 
 **Zoé:** Moi aussi. Depuis la bougie.
 > *Me too. Since the candle.* (moved)
@@ -1261,6 +1335,8 @@ Zoé says « on va en trouver un autre »: en stands for « of them » (another 
 **Gabriel:** C'est sa toute première boîte. Elle nous la donne.
 > *It's her very first box. She's giving it to us.* (moved)
 
+![Close-up: Zoé holds a pale-wood music box with two pearly birds; Gabriel's hand rests on hers.](../images/story/colis-ep20-i1.webp)
+
 **Zoé:** Et elle joue quoi ?
 > *And what does it play?* (curious)
 
@@ -1281,6 +1357,8 @@ Zoé says « on va en trouver un autre »: en stands for « of them » (another 
 
 **Zoé:** Tu sais, j'ai trouvé chaussure à mon pied. Une chaussure très bien rangée.
 > *You know, I've found my perfect match. A very tidy one.* (amused)
+
+![The landing is now a tiny living room; Zoé and Gabriel laugh over tea as Yanis grins up from the stairs.](../images/story/colis-ep20-i2.webp)
 
 **Gabriel:** La mauvaise porte, c'était la bonne.
 > *The wrong door was the right one.* (moved)

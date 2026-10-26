@@ -111,11 +111,15 @@ Tips: final consonants are usually silent (*parlent* = "parl"). A hyphen joins s
 **Rose:** Qu'est-ce que vous aimez, le matin ?
 > *What do you like, in the morning?* (curious)
 
+![Thomas lowers his two phones and thinks hard about Rose's question while she waits patiently at the counter.](../images/story/cafe-ep01-i1.webp)
+
 **Thomas:** Le matin ? Je cours. Je travaille. Avec mon café.
 > *In the morning? I rush around. I work. Coffee in hand.* (worried)
 
 **Thomas:** J'aime… le café. Et le silence.
 > *I like… coffee. And silence.* (surprised)
+
+![Thomas puts both phones face down on the counter and smiles as Rose slides the white cup across to him.](../images/story/cafe-ep01-i2.webp)
 
 **Thomas:** Merci. Je m'assois. Je reste cinq minutes.
 > *Thanks. I'll sit down. I'll stay five minutes.* (relieved)
@@ -170,6 +174,8 @@ Rose asks Qu'est-ce que vous aimez, le matin ? and Thomas answers J'aime… le c
 **Rose:** Pourquoi vous aimez Léa ?
 > *Why do you love Léa?* (curious)
 
+![Paul puts down his pen and gazes dreamily at the window as Rose, holding his tea, waits beside the table.](../images/story/cafe-ep02-i1.webp)
+
 **Paul:** Parce qu'elle rit tout le temps. Parce qu'elle est gentille.
 > *Because she laughs all the time. Because she's kind.* (moved)
 
@@ -178,6 +184,8 @@ Rose asks Qu'est-ce que vous aimez, le matin ? and Thomas answers J'aime… le c
 
 **Rose:** Voilà votre discours. Et voilà votre thé.
 > *There's your speech. And here's your tea.* (proud)
+
+![Rose sets a cup of tea in front of Paul, who laughs with relief and pushes his pile of pages aside.](../images/story/cafe-ep02-i2.webp)
 
 **Paul:** Ouf ! Et Socrate mange la page douze. Onze pages, alors !
 > *Phew! And Socrate's eating page twelve. Eleven pages, then!* (amused)
@@ -236,6 +244,8 @@ Rose asks Pourquoi vous aimez Léa ? and Paul answers three times with parce que
 **Hugo:** J'aime faire des gâteaux. Mes parents aiment le droit.
 > *I like baking cakes. My parents like law.* (sad)
 
+![In his too-short apron, Hugo sweeps up the broken cup and talks happily while Rose listens behind the counter.](../images/story/cafe-ep03-i1.webp)
+
 **Hugo:** D'abord la tasse. Puis le café.
 > *First the cup. Then the coffee.* (proud)
 
@@ -247,6 +257,8 @@ Rose asks Pourquoi vous aimez Léa ? and Paul answers three times with parce que
 
 **Rose:** Cinquante ans ! Plus vieux que le Café des Questions.
 > *Fifty! Older than the Café des Questions.* (neutral)
+
+![Hugo leans towards the perch by the window and stares in amazement at Socrate, who puffs up proudly.](../images/story/cafe-ep03-i2.webp)
 
 **Hugo:** Plus vieux que le café ? Le café a quel âge ?
 > *Older than the café? How old is the café?* (surprised)
@@ -304,11 +316,15 @@ Hugo and Rose are family, so they say tu: Qu'est-ce que tu aimes faire, toi ?, s
 **Emma:** Oh… Je vois les toits. Et le Sacré-Cœur. C'est beau.
 > *Oh… I can see the roofs. And the Sacré-Cœur. It's beautiful.* (moved)
 
+![Emma stands at the window, pen in hand, gazing at the Paris rooftops and the Sacré-Cœur while Hugo watches.](../images/story/cafe-ep04-i1.webp)
+
 **Emma:** Et ces cartes postales de la mer, là ? C'est où ?
 > *And those postcards of the sea, over there? Where is that?* (curious)
 
 **Hugo:** À Saint-Malo. Tata Rose reçoit une carte chaque année.
 > *In Saint-Malo. Auntie Rose gets a card every year.* (neutral)
+
+![Hugo points at the row of sea postcards behind the counter as Emma, coffee in hand, leans in to look.](../images/story/cafe-ep04-i2.webp)
 
 **Emma:** De qui ?
 > *Who from?* (curious)
@@ -361,6 +377,8 @@ Emma's plan uses à + the time: À dix heures douze, une photo du Sacré-Cœur. 
 **Antoine:** Ah… oui. Pardon. Pardon aussi, monsieur le perroquet !
 > *Ah… right. Sorry. Sorry to you too, Mr Parrot!* (worried)
 
+![Loaded with folders and a dog on a lead, Antoine bows politely to Socrate, who stares back unimpressed.](../images/story/cafe-ep05-i1.webp)
+
 **Rose:** Vous dites pardon à Socrate ?
 > *You're saying sorry to Socrate?* (amused)
 
@@ -375,6 +393,8 @@ Emma's plan uses à + the time: À dix heures douze, une photo du Sacré-Cœur. 
 
 **Antoine:** Moi ? Je… Je ne veux pas garder le chien !
 > *Me? I… I don't want to look after the dog!* (surprised)
+
+![Antoine puts down his folders and bags and laughs with relief while Rose claps behind the counter.](../images/story/cafe-ep05-i2.webp)
 
 **Antoine:** Et je n'aime pas les chiens.
 > *And I don't like dogs.* (relieved)
@@ -443,6 +463,8 @@ Antoine finally says Je ne veux pas garder le chien ! and Je n'aime pas les chie
 **Léo:** Je suis parti trop vite. L'examinateur a crié. J'en ai marre !
 > *I pulled away too fast. The examiner shouted. I'm fed up!* (annoyed)
 
+![At the table Léo acts out his driving test, pulling a face like the shouting examiner, while Rose hides a smile.](../images/story/cafe-ep06-i1.webp)
+
 **Rose:** Alors, ma question. Qu'est-ce que vous avez appris ce matin ?
 > *So, my question. What did you learn this morning?* (curious)
 
@@ -454,6 +476,8 @@ Antoine finally says Je ne veux pas garder le chien ! and Je n'aime pas les chie
 
 **Léo:** Je vais repasser le permis en juin. Et vous, alors ?
 > *I'm going to retake the test in June. And what about you, then?* (hopeful)
+
+![Léo sits up straight with a determined smile and drinks his hot chocolate as Socrate fluffs up his feathers.](../images/story/cafe-ep06-i2.webp)
 
 **Rose:** Alors ? Je suis là. Et je suis contente.
 > *Then? I'm here. And I'm happy.* (proud)
@@ -514,11 +538,15 @@ Léo says J'ai raté mon permis and J'ai appris à regarder, but Je suis parti t
 **Rose:** Non, vous la vivez. Qu'avez-vous vu aujourd'hui ? Pas filmé : vu.
 > *No, you live it. What have you seen today? Not filmed: seen.* (curious)
 
+![Max slowly lowers his phone and looks at Rose, who calmly points to the window behind the counter.](../images/story/cafe-ep07-i1.webp)
+
 **Max:** J'ai vu… mon téléphone. Je n'ai pas regardé Paris.
 > *I saw… my phone. I didn't look at Paris.* (sad)
 
 **Rose:** Votre café, monsieur. Paris est là, derrière la fenêtre.
 > *Your coffee, sir. Paris is right there, behind the window.* (neutral)
+
+![Max stands at the window, his phone put away, gazing at the Paris rooftops and the Sacré-Cœur with a coffee.](../images/story/cafe-ep07-i2.webp)
 
 **Max:** Je vais rester un peu. Sans vidéo.
 > *I'm going to stay a while. No video.* (relieved)
@@ -573,11 +601,15 @@ Max says Je n'ai pas regardé Paris. In the passé composé, ne… pas goes arou
 **Bruno:** Samedi, j'ai réparé le vélo de mon voisin. Quatre heures !
 > *On Saturday I repaired my neighbour's bike. Four hours! (US: neighbor's)* (surprised)
 
+![Bruno mimes turning a bicycle pedal with his greasy hands, his face lit up, as Rose leans forward, delighted.](../images/story/cafe-ep08-i1.webp)
+
 **Bruno:** C'est bête, quand même. Un vélo… Mais j'ai été heureux.
 > *It's silly, though. A bike… But I was happy.* (moved)
 
 **Rose:** Pas bête. Moi aussi, j'ai changé de vie. Il y a longtemps.
 > *Not silly. I changed my life too. A long time ago.* (neutral)
+
+![Rose slides the full white cup across the counter to Bruno, who smiles for the first time.](../images/story/cafe-ep08-i2.webp)
 
 **Bruno:** Ah bon ? Pourquoi ?
 > *Really? Why?* (curious)
@@ -634,6 +666,8 @@ Bruno says Je travaille dans les assurances depuis vingt-cinq ans: depuis + the 
 **Hugo:** Vous attendez un appel de qui ?
 > *Whose call are you waiting for?* (curious)
 
+![Inès picks up her phone, looks at the dark screen and puts it down again while Hugo watches kindly.](../images/story/cafe-ep09-i1.webp)
+
 **Inès:** De ma mère. On s'est disputées il y a trois mois.
 > *My mother's. We had a row three months ago. (US: a fight)* (sad)
 
@@ -648,6 +682,8 @@ Bruno says Je travaille dans les assurances depuis vingt-cinq ans: depuis + the 
 
 **Inès:** Je vais l'appeler tout de suite. Et je vais lui dire pardon.
 > *I'm going to call her right now. And I'm going to say sorry to her.* (hopeful)
+
+![Inès gets up with her phone to her ear and walks to the door as Hugo gives her a thumbs-up.](../images/story/cafe-ep09-i2.webp)
 
 **Inès:** Elle a pleuré. Moi aussi. Et maintenant, mon café, s'il vous plaît !
 > *She cried. So did I. And now, my coffee, please!* (relieved)
@@ -696,6 +732,8 @@ Inès says Je vais l'appeler and Je vais lui dire pardon. Appeler takes a direct
 **Rose:** Cinq. Regardez, Socrate vous tourne le dos.
 > *Five. Look, Socrate is turning his back on you.* (amused)
 
+![Rose counts Victor's questions on her raised fingers while he stops mid-sentence, notebook under his arm.](../images/story/cafe-ep10-i1.webp)
+
 **Victor:** Pardon ! J'écris un blog sur le vieux Montmartre.
 > *Sorry! I write a blog about old Montmartre.* (proud)
 
@@ -710,6 +748,8 @@ Inès says Je vais l'appeler and Je vais lui dire pardon. Appeler takes a direct
 
 **Rose:** Votre café, monsieur. Vous l'avez mérité.
 > *Your coffee, sir. You've earned it.* (teasing)
+
+![Victor bows his head, embarrassed, as Rose looks at him over her glasses and slides the white cup to him.](../images/story/cafe-ep10-i2.webp)
 
 **Victor:** Merci. Regardez ! Sur la photo, le café s'appelle Chez Odette.
 > *Thank you. Look! In the photo, the café is called Chez Odette.* (curious)
@@ -762,6 +802,8 @@ Victor ends with Ce soir, je vais écouter ma femme: the present of aller (je va
 **Rose:** Albert ! Le facteur ! Ça fait presque cinquante ans !
 > *Albert! The postman! It's been almost fifty years!* (moved)
 
+![Rose hurries round the counter, hands raised in joyful surprise, towards Albert, who beams in the doorway.](../images/story/cafe-ep11-i1.webp)
+
 **Albert:** Vous étiez toujours pressée. Vous buviez votre café debout.
 > *You were always in a hurry. You drank your coffee standing up.* (amused)
 
@@ -776,6 +818,8 @@ Victor ends with Ce soir, je vais écouter ma femme: the present of aller (je va
 
 **Albert:** Je dansais ! Au bal, place des Abbesses. Je dansais très bien.
 > *I used to dance! At the dance, on the place des Abbesses. I danced very well.* (proud)
+
+![Albert hooks his cane over his arm and takes a few light dance steps while Socrate bobs his head.](../images/story/cafe-ep11-i2.webp)
 
 **Albert:** Mais maintenant, j'ai quatre-vingt-deux ans. Je suis trop vieux.
 > *But now I'm eighty-two. I'm too old.* (sad)
@@ -851,6 +895,8 @@ Albert remembers: Vous étiez toujours pressée. Vous buviez votre café debout.
 **Hugo:** Il faut faire simple. Vous devriez faire une tarte aux pommes.
 > *You have to keep it simple. You should make an apple tart.* (hopeful)
 
+![Hugo holds up a green apple with a grin, and Nadia laughs as she pushes her burnt cake aside.](../images/story/cafe-ep12-i1.webp)
+
 **Nadia:** Une tarte ? Mais je ne sais pas faire les tartes !
 > *A tart? But I don't know how to make tarts!* (worried)
 
@@ -859,6 +905,8 @@ Albert remembers: Vous étiez toujours pressée. Vous buviez votre café debout.
 
 **Hugo:** Ce n'est pas la mer à boire. Je vous montre ?
 > *It's not that hard. Shall I show you? (literally: it's not the sea to drink)* (hopeful)
+
+![At the counter Hugo rolls out pastry while Nadia, in a spare apron, peels an apple beside him.](../images/story/cafe-ep12-i2.webp)
 
 **Nadia:** D'accord ! Mais regardez Socrate : il mange déjà les pommes !
 > *All right! But look at Socrate: he's already eating the apples!* (amused)
@@ -920,6 +968,8 @@ Hugo gives advice two ways: Il faut faire simple and Vous devriez faire une tart
 **Samuel:** Je n'aimais pas ça… Et moi, je dis la même chose !
 > *I didn't like that… And I say the same thing!* (surprised)
 
+![Samuel sits up at the table and slaps his forehead with a rueful laugh while Rose raises her eyebrows.](../images/story/cafe-ep13-i1.webp)
+
 **Rose:** Quand j'étais jeune, je ne posais pas de questions. Je courais.
 > *When I was young, I didn't ask questions. I ran.* (moved)
 
@@ -931,6 +981,8 @@ Hugo gives advice two ways: Il faut faire simple and Vous devriez faire une tart
 
 **Rose:** « Et toi, pourquoi tu penses que le ciel est bleu ? »
 > *'And you, why do you think the sky is blue?'* (teasing)
+
+![Rose points through the window at the blue sky over the rooftops, and Samuel turns to look, curious.](../images/story/cafe-ep13-i2.webp)
 
 **Samuel:** Alors, moi, je vais lui demander : « Et toi ? »
 > *So I'm going to ask him: 'And you?'* (hopeful)
@@ -975,6 +1027,8 @@ Rose asks Et vous, quand vous étiez petit… ? and Samuel answers Et moi, je di
 **Hugo:** O… Odette ! Elle est à Saint-Malo ! Elle écrit chaque année !
 > *O… Odette! She's in Saint-Malo! She writes every year!* (surprised)
 
+![Behind the counter Hugo holds a postcard of the sea, open-mouthed with excitement, as Juliette leans in, curious.](../images/story/cafe-ep14-i1.webp)
+
 **Juliette:** Attention ! Socrate veut manger la carte !
 > *Watch out! Socrate wants to eat the card!* (amused)
 
@@ -998,6 +1052,8 @@ Rose asks Et vous, quand vous étiez petit… ? and Samuel answers Et moi, je di
 
 **Hugo:** Moi, j'aime faire des gâteaux…
 > *What I like is making cakes…* (sad)
+
+![Hugo shyly mimes whisking a cake batter behind the counter while Juliette listens, chin in hand.](../images/story/cafe-ep14-i2.webp)
 
 **Juliette:** C'est génial ! Vous devriez essayer, vous aussi.
 > *That's great! You should try too.* (hopeful)
@@ -1050,6 +1106,8 @@ Juliette describes her childhood dream: Je voulais être photographe. Je prenais
 **Karim:** Je peins dix touristes par jour. Je ne veux plus peindre.
 > *I paint ten tourists a day. I don't want to paint any more. (US: anymore)* (annoyed)
 
+![Karim slumps at a table behind his closed box of pencils while Rose studies him over her glasses.](../images/story/cafe-ep15-i1.webp)
+
 **Rose:** Quand vous aviez dix ans, qui est-ce que vous dessiniez ?
 > *When you were ten, who did you draw?* (curious)
 
@@ -1073,6 +1131,8 @@ Juliette describes her childhood dream: Je voulais être photographe. Je prenais
 
 **Rose:** C'est pour moi ?
 > *Is it for me?* (moved)
+
+![Karim holds out his finished sketch to Rose, who presses her hands to her cheeks with delight.](../images/story/cafe-ep15-i2.webp)
 
 **Karim:** Oui. Je vous le donne. Ça me fait plaisir.
 > *Yes. I'm giving it to you. It's my pleasure.* (proud)
@@ -1133,6 +1193,8 @@ Karim says Je la dessinais tous les dimanches: la replaces ma grand-mère and go
 **Frédéric:** Mon frère, Marc, habite à Lyon. On ne s'appelle plus depuis dix ans.
 > *My brother, Marc, lives in Lyon. We haven't phoned each other for ten years.* (sad)
 
+![Frédéric sits down slowly at the counter, shoulders dropping, staring at his silent phone while Rose listens.](../images/story/cafe-ep16-i1.webp)
+
 **Frédéric:** Une histoire d'argent. La maison de nos parents. C'est bête.
 > *It was about money. Our parents' house. It's silly.* (annoyed)
 
@@ -1144,6 +1206,8 @@ Karim says Je la dessinais tous les dimanches: la replaces ma grand-mère and go
 
 **Rose:** On pourrait commencer par un café, non ?
 > *We could start with a coffee, couldn't we?* (teasing)
+
+![Rose slides the white cup across the counter to Frédéric, who gives a small grateful smile.](../images/story/cafe-ep16-i2.webp)
 
 **Frédéric:** Merci, madame. Je paie : deux euros. Et… mon billet ?
 > *Thank you. I'm paying: two euros. And… my note? (US: bill)* (relieved)
@@ -1199,6 +1263,8 @@ Frédéric orders with Je voudrais un café and later says J'aimerais lui dire p
 **Paul:** Merci. Mais j'ai peur. Mon père n'était jamais là. Il travaillait tout le temps.
 > *Thank you. But I'm scared. My father was never there. He worked all the time.* (worried)
 
+![Paul lowers his head, turning the small scan picture in his fingers, as Rose lays a comforting hand on his arm.](../images/story/cafe-ep17-i1.webp)
+
 **Paul:** Tel père, tel fils, non ?
 > *Like father, like son, right?* (sad)
 
@@ -1222,6 +1288,8 @@ Frédéric orders with Je voudrais un café and later says J'aimerais lui dire p
 
 **Paul:** J'aimerais l'appeler Rose… si c'est une fille.
 > *I'd like to call her Rose… if it's a girl.* (moved)
+
+![Paul grins shyly across the counter as Rose, deeply touched, puts a hand on her heart.](../images/story/cafe-ep17-i2.webp)
 
 **Rose:** Regardez Socrate, il vous tourne le dos ! Socrate voudrait Socrate.
 > *Look at Socrate, he's turning his back on you! Socrate would rather it was called Socrate.* (amused)
@@ -1261,6 +1329,8 @@ Paul says Le père que je voudrais être ? Un père qui est là. Qui is the subj
 **Hugo:** Quarante cartes, Tata. Et toujours la même question ?
 > *Forty cards, Auntie. And always the same question?* (curious)
 
+![At closing time Hugo stands on a stool and takes down the sea postcards to dust them while Rose watches.](../images/story/cafe-ep18-i1.webp)
+
 **Rose:** Ici, c'est moi qui pose les questions.
 > *Here, I'm the one who asks the questions.* (teasing)
 
@@ -1293,6 +1363,8 @@ Paul says Le père que je voudrais être ? Un père qui est là. Qui is the subj
 
 **Hugo:** Il faut partir à point. Mais pourquoi tu n'y es jamais allée, à Saint-Malo ?
 > *You have to set off at the right time. But why have you never been there, to Saint-Malo?* (curious)
+
+![Across the table Hugo holds up a sea postcard with a questioning look, and Rose turns away towards the window.](../images/story/cafe-ep18-i2.webp)
 
 **Rose:** Je… Le café ne peut pas attendre.
 > *I… The café can't wait.* (surprised)
@@ -1353,11 +1425,15 @@ Hugo says Tu n'en dis jamais rien: en stands for 'about it' (de cette histoire).
 **Rose:** Regarde Socrate. Il te tourne le dos.
 > *Look at Socrate. He's turning his back on you.* (teasing)
 
+![Hugo stands frozen at the counter, his law book under his arm, as Socrate turns his back on him.](../images/story/cafe-ep19-i1.webp)
+
 **Hugo:** Attends… Tu m'as posé la question d'Odette.
 > *Wait… You've just asked me Odette's question.* (surprised)
 
 **Hugo:** J'aimerais être pâtissier. Je voudrais faire un CAP. Mais mes parents…
 > *I'd like to be a pastry chef. I'd like to do a CAP (a vocational diploma). But my parents…* (sad)
+
+![Hugo drops his law book on the counter and spreads his arms with a huge smile while Rose beams at him.](../images/story/cafe-ep19-i2.webp)
 
 **Rose:** C'est ta vie, mon grand. Et c'est une bonne idée.
 > *It's your life, my boy. And it's a good idea.* (hopeful)
@@ -1424,6 +1500,8 @@ Rose says C'est ta vie and C'est une bonne idée: c'est comes before a determine
 **Rose:** J'aimerais revoir Odette. Lui dire merci. Et voir la mer.
 > *I'd like to see Odette again. To say thank you. And to see the sea.* (moved)
 
+![Rose sits beside Thomas at the counter and gazes at a sea postcard, her eyes shining with hope and fear.](../images/story/cafe-ep20-i1.webp)
+
 **Thomas:** Saint-Malo, c'est à deux heures et demie de train.
 > *Saint-Malo is two and a half hours by train.* (neutral)
 
@@ -1441,6 +1519,8 @@ Rose says C'est ta vie and C'est une bonne idée: c'est comes before a determine
 
 **Thomas:** À huit heures.
 > *At eight o'clock.* (neutral)
+
+![Rose unties her apron and hands it across the counter to Hugo, who holds it proudly against his chest.](../images/story/cafe-ep20-i2.webp)
 
 **Rose:** Lundi, c'est Hugo. Je vais répondre à une question. Votre café. Aujourd'hui, sans question.
 > *On Monday, Hugo's in charge. I'm going to answer a question. Your coffee. Today, no question.* (amused)
